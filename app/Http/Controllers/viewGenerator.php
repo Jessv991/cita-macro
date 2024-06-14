@@ -8,7 +8,7 @@ class viewGenerator extends Controller
 {
     public function index(){
 
-        return view('layouts/header');
+        return view('pages.body.revision_audio');
         
     }
 }
