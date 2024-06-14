@@ -144,4 +144,10 @@ class Empresas extends Model
     // Functions ...
 
     // Relations ...
+
+    public function getEmpresa($weblogin){
+
+        ->select 
+
+    }
 }
