@@ -2,19 +2,19 @@
 
 return [
 
-    'titulo-1'    => 'recomendaciones',
-    'subTitulo-1'    => 'para el cuidado de tu salud auditiva',
-    'card-1-1'      => 'Aléjate de la',
-    'card-1-2'      => 'contaminación acústica',
-    'card-text-1'      => 'Evita exponerte a ruidos fuertes (conciertos, áreas de alta concentración de tráfico u obras) o bien toma medidas preventivas, como el uso de protectores para los oídos.',
-    'card-2-1'      => 'Escoge un',
-    'card-2-2'      => 'volumen adecuado',
-    'card-text-2'      => 'Tanto si usas auriculares como si no, evita el volumen excesivo. Acostúmbrate a escuchar a un volumen moderado.',
-    'card-3-1'      => 'Revisiones periódicas',
-    'card-text-3'      => 'Acude a tu centro Natural Audio para realizar revisiones auditivas regulares y detectar cualquier anomalía o pérdida de audición.',
-    'card-4-1'      => 'Cuida la audición de',
-    'card-4-2'      => 'los más pequeños',
-    'card-text-4'      => 'La pérdida auditiva durante los primeros años puede afectar de manera importante al desarrollo intelectual y del lenguaje del niño, y a su capacidad de socialización.',
-    'titulo-2'      => 'nuestros centros',
+    'titulo-1'    => 'recommendations',
+    'subTitulo-1'    => 'for the care of your hearing health',
+    'card-1-1'      => 'Stay away from',
+    'card-1-2'      => 'noise pollution',
+    'card-text-1'      => 'Avoid exposure to loud noises (concerts, high-traffic areas, or construction sites) or take preventive measures, such as using ear protection.',
+    'card-2-1'      => 'Choose an',
+    'card-2-2'      => 'appropriate volume',
+    'card-text-2'      => 'Whether you use headphones or not, avoid excessive volume. Get used to listening at a moderate volume.',
+    'card-3-1'      => 'Periodic check-ups',
+    'card-text-3'      => 'Visit your Natural Audio center for regular hearing check-ups to detect any abnormalities or hearing loss.',
+    'card-4-1'      => 'Take care of the hearing of',
+    'card-4-2'      => 'the little ones',
+    'card-text-4'      => "Hearing loss during the early years can significantly affect a child's intellectual and language development, as well as their socialization skills.",
+    'titulo-2'      => 'our centers',
 
 ];
