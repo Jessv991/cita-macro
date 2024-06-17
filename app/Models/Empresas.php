@@ -267,10 +267,57 @@ class Empresas extends Model
     }
 
 
+    /* 
     
+     █████╗ ██╗   ██╗██████╗ ██╗ ██████╗ 
+    ██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗
+    ███████║██║   ██║██║  ██║██║██║   ██║
+    ██╔══██║██║   ██║██║  ██║██║██║   ██║
+    ██║  ██║╚██████╔╝██████╔╝██║╚██████╔╝
+    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝ 
+                              
+    */
 
 
+    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO================
+    public function getOnlyAllAudiosByWeblogin($weblogin)
+    {
 
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('d29', 'like','%Audio%')
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
+
+    //================OBTENER SÓLO LOS DATOS DE LA TIENDA QUE SE PASO================
+    public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda)
+    {
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('tienda', $tienda)
+            ->where('d29', 'like','%Audio%')
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        dd($datos);
+        return $datos;
+    }
 
 
 }

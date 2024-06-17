@@ -8,12 +8,13 @@ use App\Models\Empresas;
 
 class viewGenerator extends Controller
 {
-    public function index($origen, $weblogin=null, $tienda=null, $locale){
+    public function index($locale, $origen, $weblogin=null, $tienda=null){
         
         /* 
         echo($tienda); 
+        echo($origen);
         echo($weblogin);
-        echo($origen);die; 
+        die; 
         */
         
 
@@ -33,11 +34,16 @@ class viewGenerator extends Controller
         //OPTICAS
         //consultas todas las tiendas de la regín que sean opticas
         $empresas->getOnlyAllOpticsByWeblogin($weblogin);
-
+        
         //consulta la tienda en específico que sea optica y coincida su numero de tienda
         $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);
-
-
+        
+        //AUDIOS
+        //consultas todas las tiendas de la regín que sean audio
+        $empresas->getOnlyAllAudiosByWeblogin($weblogin);
+        
+        //consulta la tienda en específico que sea audio y coincida su numero de tienda
+        $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
 
 
 
