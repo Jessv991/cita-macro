@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @property int    $codigo
@@ -110,9 +111,7 @@ class Empresas extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be casted to native types.
@@ -128,9 +127,7 @@ class Empresas extends Model
      *
      * @var array
      */
-    protected $dates = [
-        
-    ];
+    protected $dates = [];
 
     /**
      * Indicates if the model should be timestamped.
@@ -145,9 +142,89 @@ class Empresas extends Model
 
     // Relations ...
 
-    public function getEmpresa($weblogin){
 
-        ->select 
 
+    /* 
+
+     ██████╗ ███████╗███╗   ██╗███████╗██████╗  █████╗ ██╗     
+    ██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔══██╗██╔══██╗██║     
+    ██║  ███╗█████╗  ██╔██╗ ██║█████╗  ██████╔╝███████║██║     
+    ██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ██╔══██╗██╔══██║██║     
+    ╚██████╔╝███████╗██║ ╚████║███████╗██║  ██║██║  ██║███████╗
+    ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝
+                                                            
+    */
+
+
+    //================OBTENER LOS DATOS DE TODAS LAS EMPRESA SEGÚN WEB LOGIN================
+    public function getCompaniesByWeblogin($weblogin)
+    {
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)  // Condición 1: weblogin igual a $weblogin
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')           // Condición 4: CRM igual a 'si'
+            ->get();
+
+        //dd($datos);
+
+        return $datos; 
     }
+
+
+    //================OBTENER TODAS LAS TIENDAS SEGÚN EL WEBLOGIN================
+    public function getStoresByWeblogin($weblogin)
+    {
+
+        $datos = DB::table('empresas')
+            ->select('weblogin', 'tienda')
+            ->where('weblogin', $weblogin)
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
+    /* 
+
+     ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗ ███████╗
+    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝██╔══██╗██╔════╝
+    ██║   ██║██████╔╝   ██║   ██║██║     ███████║███████╗
+    ██║   ██║██╔═══╝    ██║   ██║██║     ██╔══██║╚════██║
+    ╚██████╔╝██║        ██║   ██║╚██████╗██║  ██║███████║
+    ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
+                                                     
+    */
+
+
+    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN OPTICAS================
+    public function getOnlyAllOptics($weblogin)
+    {
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('d29', 'like','%Optics%')
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        dd($datos);
+        return $datos;
+    }
+
+    
+
 }
