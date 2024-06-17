@@ -141,7 +141,7 @@ class Empresas extends Model
     // Functions ...
 
     // Relations ...
-    
+
 
 
     /* 
@@ -156,38 +156,34 @@ class Empresas extends Model
     */
 
 
-    //================OBTENER LOS DATOS DE TODAS LAS EMPRESA SEGÚN WEB LOGIN================
-    public function getCompaniesByWeblogin($weblogin)
-    {
-        $datos = DB::table('empresas')
-            ->where('weblogin', $weblogin)  // Condición 1: weblogin igual a $weblogin
-            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
-            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
-                $query->where('d9', '0')
-                    ->orWhere('d9', '1');
-            })
-            ->where('CRM', 'si')           // Condición 4: CRM igual a 'si'
-            ->get();
-
-        //dd($datos);
-
-        return $datos; 
-    }
-
-
     //================OBTENER TODAS LAS TIENDAS SEGÚN EL WEBLOGIN================
     public function getStoresByWeblogin($weblogin)
     {
 
         $datos = DB::table('empresas')
-            ->select('weblogin', 'tienda')
             ->where('weblogin', $weblogin)
             ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
             ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
+    public function getWebloginAll()
+    {
+
+        $datos = DB::table('empresas')
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')
             ->get();
 
         //dd($datos);
@@ -207,7 +203,7 @@ class Empresas extends Model
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
             ->get();
 
         //dd($datos);
@@ -232,13 +228,13 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('weblogin', $weblogin)
-            ->where('d29', 'like','%Optics%')
+            ->where('d29', 'like', '%Optics%')
             ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
             ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
             ->get();
 
         //dd($datos);
@@ -253,13 +249,13 @@ class Empresas extends Model
         $datos = DB::table('empresas')
             ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
-            ->where('d29', 'like','%Optics%')
+            ->where('d29', 'like', '%Optics%')
             ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
             ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
             ->get();
 
         //dd($datos);
@@ -284,40 +280,61 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
+            ->select('codigo', 'd1')
             ->where('weblogin', $weblogin)
-            ->where('d29', 'like','%Audio%')
             ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
             ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
             ->get();
 
-        //dd($datos);
-        return $datos;
+        // dd($datos);
+
+        $servicios_audios = ['42', '19', '17', '43', '21', '39', '44', '45'];
+        $codigo=[];
+
+        $servicios = [];
+        foreach ($datos as $dato) {
+            $servicios[$dato->codigo] = $dato->d1;
+        }
+
+        foreach ($servicios as $key => $dato) {
+            $is_audio = false;
+            $id_servicios = explode('-', $dato);
+
+            foreach ($id_servicios as $id) {
+                if (in_array($id, $servicios_audios)) {
+                    $is_audio = true;
+                    break;
+                }
+            }
+
+            if(!$is_audio){
+                unset($servicios[$key]);
+            }else {
+                $codigo[] = $key; // Agregar la clave $key al arreglo $codigo
+            }
+        }
+
+        $this->getStoreByCode($codigo);
+        
     }
 
 
-    //================OBTENER SÓLO LOS DATOS DE LA TIENDA QUE SE PASO================
-    public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda)
-    {
+    public function getStoreByCode($codigo){
 
         $datos = DB::table('empresas')
-            ->where('weblogin', $weblogin)
-            ->where('tienda', $tienda)
-            ->where('d29', 'like','%Audio%')
+            ->whereIn('codigo', $codigo)
             ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
             ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
-            ->where('CRM', 'si')   
+            ->where('CRM', 'si')
             ->get();
 
-        //dd($datos);
-        return $datos;
+        dd($datos);
     }
-
-
 }

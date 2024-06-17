@@ -103,7 +103,7 @@ class Zonas extends Model
             ->orderBy('nombre', 'asc')           
             ->get();
 
-        dd($datos);
+        //dd($datos);
 
         return $datos; 
     }
