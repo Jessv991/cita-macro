@@ -8,24 +8,35 @@ use App\Models\Empresas;
 
 class viewGenerator extends Controller
 {
-    public function index($locale, $origen, $weblogin=null, $tienda=null){
+    public function index($origen, $weblogin=null, $tienda=null, $locale){
         
         /* 
         echo($tienda); 
         echo($weblogin);
-        echo($origen); 
+        echo($origen);die; 
         */
         
 
         $empresas = new Empresas();
 
 
-        //consulta a la base de datos directamente en el modelo para tener los datos 
+        //GENERAL
+        //consulta a la base de datos directamente en el modelo para tener los datos completos 
         $empresas->getCompaniesByWeblogin($weblogin);
 
-
+        //consulta sólo las tiendas del weblogin pasado
         $empresas->getStoresByWeblogin($weblogin);
-        $empresas->getOnlyAllOptics($weblogin);
+
+        //comsulta sólo la tienda que el weblogin y el número de tienda coincidan
+        $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
+
+        //OPTICAS
+        //consultas todas las tiendas de la regín que sean opticas
+        $empresas->getOnlyAllOpticsByWeblogin($weblogin);
+
+        //consulta la tienda en específico que sea optica y coincida su numero de tienda
+        $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);
+
 
 
 

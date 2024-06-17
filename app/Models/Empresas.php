@@ -194,6 +194,26 @@ class Empresas extends Model
         return $datos;
     }
 
+
+    //================OBTENER TODAS LAS TIENDAS SEGÚN EL WEBLOGIN================
+    public function getStoresByWebloginAndCode($weblogin, $tienda)
+    {
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('tienda', $tienda)
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
     /* 
 
      ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗ ███████╗
@@ -207,7 +227,7 @@ class Empresas extends Model
 
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN OPTICAS================
-    public function getOnlyAllOptics($weblogin)
+    public function getOnlyAllOpticsByWeblogin($weblogin)
     {
 
         $datos = DB::table('empresas')
@@ -221,10 +241,36 @@ class Empresas extends Model
             ->where('CRM', 'si')   
             ->get();
 
-        dd($datos);
+        //dd($datos);
         return $datos;
     }
 
+
+    //================OBTENER SÓLO LOS DATOS DE LA TIENDA QUE SE PASO================
+    public function getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda)
+    {
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('tienda', $tienda)
+            ->where('d29', 'like','%Optics%')
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')   
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
+
     
+
+
+
+
 
 }

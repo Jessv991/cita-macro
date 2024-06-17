@@ -4,7 +4,7 @@ use App\Http\Controllers\viewGenerator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 
-Route::get('{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null) {
+Route::get('{origen}/{weblogin?}/{tienda?}/{locale}', function  ($origen, $weblogin = null, $tienda = null, $locale) {
 
 
     if (! in_array($locale, ['en', 'es', 'ca'])) {
@@ -12,6 +12,6 @@ Route::get('{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $orige
     }
     App::setLocale($locale);
 
-    return app(ViewGenerator::class)->index($origen, $weblogin, $tienda);
+    return app(ViewGenerator::class)->index($origen, $weblogin, $tienda, $locale);
     
 });
