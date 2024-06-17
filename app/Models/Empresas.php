@@ -141,7 +141,7 @@ class Empresas extends Model
     // Functions ...
 
     // Relations ...
-
+    
 
 
     /* 
@@ -315,7 +315,7 @@ class Empresas extends Model
             ->where('CRM', 'si')   
             ->get();
 
-        dd($datos);
+        //dd($datos);
         return $datos;
     }
 

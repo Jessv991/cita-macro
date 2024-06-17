@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empresas;
-
+use App\Models\Zonas;
 
 class viewGenerator extends Controller
 {
@@ -19,6 +19,13 @@ class viewGenerator extends Controller
         
 
         $empresas = new Empresas();
+        $zonas = new Zonas();
+        $provincias= '';
+
+
+        //PROVINCIA
+
+        $provincias=$zonas->getProvincias();
 
 
         //GENERAL
