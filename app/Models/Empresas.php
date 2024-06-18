@@ -351,7 +351,7 @@ class Empresas extends Model
             ->get();
 
         //dd($datos);
-
+        return $datos;
     }
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO PASANDOLE WEBLOGIN================
@@ -371,7 +371,8 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        dd($datos);
+        //dd($datos);
+        return $datos;
     }
 
 //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================
@@ -392,6 +393,7 @@ class Empresas extends Model
             ->get();
 
         //dd($datos);
+        return $datos;
     }
 }
 

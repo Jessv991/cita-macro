@@ -8,7 +8,7 @@ use App\Models\Zonas;
 
 class view_generator_controller extends Controller
 {
-    public function index($locale, $origen, $weblogin = null, $tienda = null)
+    public function index($locale, $origen, $weblogin = null, $tienda = null, $test_r = null)
     {
 
         /* 
@@ -18,29 +18,26 @@ class view_generator_controller extends Controller
         die; 
         */
 
+        $test = request()->query('test');//pendiente OJO
 
         $empresas = new Empresas();
         $zonas = new Zonas();
         $data = [];
-
-
-
-        //PROVINCIA
-
-        $data['provincias'] = $zonas->getProvincias();
+        $centros = array();
+         
 
 
         //===============GENERAL==================
 
         if (isset($weblogin) && isset($tienda)) {
             //obtener tienda específica según weblogin y tienda
-            $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
+            $centros = $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
         } elseif (isset($weblogin)) {
             //consulta sólo las tiendas del weblogin pasado
-            $stores = $empresas->getStoresByWeblogin($weblogin);
+            $centros = $stores = $empresas->getStoresByWeblogin($weblogin);
         } else {
             //nos arroja todas las tiendas
-            $stores = $empresas->getWebloginAll();
+            $centros = $stores = $empresas->getWebloginAll();
         }
 
 
@@ -48,17 +45,14 @@ class view_generator_controller extends Controller
 
         if (isset($weblogin) && isset($tienda)) {
             //consulta la tienda específica que sea audio
-            $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+            $centros_audio = $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
         } elseif (isset($weblogin)) {
             //consultas todas las tiendas por weblogin que sean audio
-            $empresas->getStoreByCodeAndWeblogin($weblogin);
+            $centros_audio = $empresas->getStoreByCodeAndWeblogin($weblogin);
         } else {
             //consulta las tiendas de aodio
-            $empresas->getStoreAllAudio();
+            $centros_audio = $empresas->getStoreAllAudio();
         }
-
-
-
 
 
         /*/==================OPTICAS==================
@@ -67,6 +61,36 @@ class view_generator_controller extends Controller
 
         //consulta la tienda en específico que sea optica y coincida su numero de tienda
         $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);*/
+
+        
+        //==================aquí conservamos las tiendas que nos devuelve la consulta a la base de datos==================
+        $data['centros'] = $centros->toArray();
+        $data['centros'] = array_merge($data['centros'], $centros_audio->toArray());
+
+        $data['centros'] = [
+            'general' => $centros,
+            'audios' => $centros_audio,
+        ];
+
+        //=====================IDIOMA==========================
+        $data['idioma'] = $locale;
+
+        //============================GUARDAR RUTA ACTUAL DEL CLIENTE============================
+        $data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+
+        /*/=====================MAPAS=====================
+        $data['mapa'] = file_get_contents("https://www.audio.naturaloptics.com/mapa/features.json");
+		$data['mapaUgo'] = file_get_contents("https://www.audio.naturaloptics.com/mapa/featuresShamirUgo.json");*/
+
+        //================LANDING NOMBRE CARPETA DE LA VISTA=================
+        $data['landing'] = $origen;
+
+        //=====================TEST=====================
+        $data['test'] = $test;
+        
+        //=====================PROVINCIA=====================
+        $data['provincias'] = $zonas->getProvincias();
+        
 
 
 
