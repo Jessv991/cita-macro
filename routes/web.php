@@ -1,10 +1,10 @@
 <?php
 
-use App\Http\Controllers\viewGenerator;
+use App\Http\Controllers\view_generator_controller;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 
-Route::get('{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null) {
+Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null) {
 
 
     if (! in_array($locale, ['en', 'es', 'ca'])) {
@@ -12,6 +12,6 @@ Route::get('{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $orige
     }
     App::setLocale($locale);
 
-    return app(ViewGenerator::class)->index($locale, $origen, $weblogin, $tienda);
+    return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
     
 });

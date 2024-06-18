@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\Zonas;
 
-class viewGenerator extends Controller
+class view_generator_controller extends Controller
 {
     public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
@@ -38,8 +38,11 @@ class viewGenerator extends Controller
             $stores = $empresas->getWebloginAll();
         }
 
-        //obtener tienda específica según weblogin y tienda
-        $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
+        /* if(isset($weblogin) &&){
+            //obtener tienda específica según weblogin y tienda
+            $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
+        } */
+
 
         //==================AUDIOS==================
         //consulta las tiendas de aodio
