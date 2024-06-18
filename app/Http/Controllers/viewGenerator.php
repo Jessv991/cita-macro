@@ -38,22 +38,29 @@ class viewGenerator extends Controller
             $stores = $empresas->getWebloginAll();
         }
 
-        //comsulta sólo la tienda que el weblogin y el número de tienda coincidan
+        //obtener tienda específica según weblogin y tienda
         $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
 
-        //==================OPTICAS==================
+        //==================AUDIOS==================
+        //consulta las tiendas de aodio
+        $empresas->getStoreAllAudio();
+
+        //consultas todas las tiendas por weblogin que sean audio
+        $empresas->getStoreByCodeAndWeblogin($weblogin);
+
+        //consulta la tienda específica que sea audio
+        $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+
+
+
+
+
+         /*/==================OPTICAS==================
         //consultas todas las tiendas de la regín que sean opticas
         $empresas->getOnlyAllOpticsByWeblogin($weblogin);
 
         //consulta la tienda en específico que sea optica y coincida su numero de tienda
-        $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);
-
-        //==================AUDIOS==================
-        //consultas todas las tiendas de la regín que sean audio
-        $empresas->getOnlyAllAudiosByWeblogin($weblogin);
-
-        //consulta la tienda en específico que sea audio y coincida su numero de tienda
-        $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+        $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);*/
 
 
 
