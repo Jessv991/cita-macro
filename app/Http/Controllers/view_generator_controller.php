@@ -11,6 +11,7 @@ class view_generator_controller extends Controller
     public function index($locale, $origen, $weblogin = null, $tienda = null, $test_r = null)
     {
 
+        //hacer test en ruta: ?test=false
         /* 
         echo($tienda); 
         echo($origen);
@@ -89,8 +90,13 @@ class view_generator_controller extends Controller
         $data['test'] = $test;
         
         //=====================PROVINCIA=====================
+        $data['logo'] = $empresas->getLogos($weblogin);
+
+        
+
         $data['provincias'] = $zonas->getProvincias();
         
+
 
 
 

@@ -279,8 +279,8 @@ class Empresas extends Model
                               
     */
 
-    
-    protected $codigo;//variable para almacenar los datos de las tiendas que ofrecen el servicio de audiología
+
+    protected $codigo; //variable para almacenar los datos de las tiendas que ofrecen el servicio de audiología
 
 
     //================FUNCIÓN PARA FILTRAR TODAS LAS TIENDAS QUE OFREZCAN EL SERVICIO DE AUDIO================
@@ -300,10 +300,10 @@ class Empresas extends Model
         // dd($datos);
 
         $servicios_audios = ['42', '19', '17', '43', '21', '39', '44', '45'];
-        
+
 
         $servicios = [];
-        $codigo=[];
+        $codigo = [];
         foreach ($datos as $dato) {
             $servicios[$dato->codigo] = $dato->d1;
         }
@@ -320,9 +320,9 @@ class Empresas extends Model
                 }
             }
 
-            if(!$is_audio){
+            if (!$is_audio) {
                 unset($servicios[$key]);
-            }else {
+            } else {
                 $codigo[] = $key; // Agregar la clave $key al arreglo $codigo
             }
         }
@@ -330,13 +330,14 @@ class Empresas extends Model
         $this->codigo = $codigo;
 
         //$this->getStoreByCode();
-        
+
     }
 
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO================
 
-    public function getStoreAllAudio(){
+    public function getStoreAllAudio()
+    {
 
         $codigo = $this->codigo;
 
@@ -356,7 +357,8 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO PASANDOLE WEBLOGIN================
 
-    public function getStoreByCodeAndWeblogin($weblogin){
+    public function getStoreByCodeAndWeblogin($weblogin)
+    {
 
         $codigo = $this->codigo;
 
@@ -375,8 +377,9 @@ class Empresas extends Model
         return $datos;
     }
 
-//================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================
-    public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda){
+    //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================
+    public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda)
+    {
 
         $codigo = $this->codigo;
 
@@ -395,5 +398,37 @@ class Empresas extends Model
         //dd($datos);
         return $datos;
     }
-}
 
+    /* 
+    ██╗      ██████╗  ██████╗  ██████╗ ███████╗
+    ██║     ██╔═══██╗██╔════╝ ██╔═══██╗██╔════╝
+    ██║     ██║   ██║██║  ███╗██║   ██║███████╗
+    ██║     ██║   ██║██║   ██║██║   ██║╚════██║
+    ███████╗╚██████╔╝╚██████╔╝╚██████╔╝███████║
+    ╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ╚══════╝                                         
+    */
+
+
+    public function getLogos($weblogin)
+    {
+        $datos = DB::table("empresas as e")
+
+            ->select("e.f1")
+            ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
+            ->where("e.weblogin", $weblogin)
+            ->where("e.d22", "=", 'si')
+            ->where(function ($query) {
+                $query->where('e.d9', '0')
+                    ->orWhere('e.d9', '1');
+            })
+            ->where("e.crm", "=", 'si')
+            ->whereNotNull("e.f1")
+            ->limit(1)
+            ->get();
+
+    
+        //dd($datos);
+
+        return $datos;
+    }
+}
