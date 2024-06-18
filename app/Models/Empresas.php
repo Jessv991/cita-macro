@@ -142,6 +142,11 @@ class Empresas extends Model
 
     // Relations ...
 
+    public function __construct()
+    {
+        $this->getOnlyAllAudios();
+    }
+
 
 
     /* 
@@ -333,8 +338,6 @@ class Empresas extends Model
 
     public function getStoreAllAudio(){
 
-        $this->getOnlyAllAudios();
-
         $codigo = $this->codigo;
 
         $datos = DB::table('empresas')
@@ -355,8 +358,6 @@ class Empresas extends Model
 
     public function getStoreByCodeAndWeblogin($weblogin){
 
-        $this->getOnlyAllAudios();
-
         $codigo = $this->codigo;
 
         $datos = DB::table('empresas')
@@ -370,7 +371,7 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        //dd($datos);
+        dd($datos);
     }
 
 //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================

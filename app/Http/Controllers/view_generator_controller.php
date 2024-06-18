@@ -31,34 +31,37 @@ class view_generator_controller extends Controller
 
 
         //===============GENERAL==================
-        //consulta sólo las tiendas del weblogin pasado
-        if (isset($weblogin)) {
+
+        if (isset($weblogin) && isset($tienda)) {
+            //obtener tienda específica según weblogin y tienda
+            $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
+        } elseif (isset($weblogin)) {
+            //consulta sólo las tiendas del weblogin pasado
             $stores = $empresas->getStoresByWeblogin($weblogin);
         } else {
+            //nos arroja todas las tiendas
             $stores = $empresas->getWebloginAll();
         }
 
-        /* if(isset($weblogin) &&){
-            //obtener tienda específica según weblogin y tienda
-            $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
-        } */
-
 
         //==================AUDIOS==================
-        //consulta las tiendas de aodio
-        $empresas->getStoreAllAudio();
 
-        //consultas todas las tiendas por weblogin que sean audio
-        $empresas->getStoreByCodeAndWeblogin($weblogin);
+        if (isset($weblogin) && isset($tienda)) {
+            //consulta la tienda específica que sea audio
+            $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+        } elseif (isset($weblogin)) {
+            //consultas todas las tiendas por weblogin que sean audio
+            $empresas->getStoreByCodeAndWeblogin($weblogin);
+        } else {
+            //consulta las tiendas de aodio
+            $empresas->getStoreAllAudio();
+        }
 
-        //consulta la tienda específica que sea audio
-        $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
 
 
 
 
-
-         /*/==================OPTICAS==================
+        /*/==================OPTICAS==================
         //consultas todas las tiendas de la regín que sean opticas
         $empresas->getOnlyAllOpticsByWeblogin($weblogin);
 
