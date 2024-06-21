@@ -15,3 +15,6 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda, $test);
     
 });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

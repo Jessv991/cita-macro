@@ -1,6 +1,5 @@
-@extends('layouts.header')
 
-
+<link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
 
 <div class="container mt-5">
     <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
