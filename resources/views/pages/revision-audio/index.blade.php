@@ -8,7 +8,7 @@
         <h1>hola</h1>
     </div>
 
-    <div class="col-12 col-xl-4 col-lg-4">
+    <div class="col-12 col-xl-4 col-lg-4 w-20 p-0">
         @include('form.boxed')
     </div>
 
