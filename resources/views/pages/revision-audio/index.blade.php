@@ -1,14 +1,23 @@
 @extends('layouts.header')
 
-<div class="container mt-5">
-    <div class="card text-white bg-danger mb-3" style="max-width: 18rem;">
-        <div class="card-header">{{ __('translation.titulo-1') }}</div>
-        <div class="card-body">
-            <h5 class="card-title"></h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        </div>
+
+
+<div class="row w-100">
+
+    <div class="col-12 col-xl-8 col-lg-8 p-0">
+        <h1>hola</h1>
     </div>
+
+    <div class="col-12 col-xl-4 col-lg-4">
+        @include('form.boxed')
+    </div>
+
 </div>
+
+{{-- 
+<div class="card-header">{{ __('translation.titulo-1') }}</div>
+<img src="{{ __($data['logo']->f1) }}" alt=""> --}}
+
 
 
 {{-- @include('form.boxed') --}}

@@ -282,6 +282,9 @@ class Empresas extends Model
 
     protected $codigo; //variable para almacenar los datos de las tiendas que ofrecen el servicio de audiología
 
+    public function getCodeService(){
+        return $codigo = $this->codigo;
+    }
 
     //================FUNCIÓN PARA FILTRAR TODAS LAS TIENDAS QUE OFREZCAN EL SERVICIO DE AUDIO================
     public function getOnlyAllAudios()
@@ -328,8 +331,6 @@ class Empresas extends Model
         }
 
         $this->codigo = $codigo;
-
-        //$this->getStoreByCode();
 
     }
 
@@ -423,10 +424,13 @@ class Empresas extends Model
             })
             ->where("e.crm", "=", 'si')
             ->whereNotNull("e.f1")
-            ->limit(1)
-            ->get();
+            ->first();
 
     
+            /* 
+            ->limit(1)
+            ->get();
+            */
         //dd($datos);
 
         return $datos;

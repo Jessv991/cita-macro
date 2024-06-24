@@ -19,7 +19,7 @@ class view_generator_controller extends Controller
         die; 
         */
 
-        $test = request()->query('test');//pendiente OJO
+        $test = request()->query('test');//pendiente OJO (esto está recibiendo test por get)
 
         $empresas = new Empresas();
         $zonas = new Zonas();
@@ -92,9 +92,12 @@ class view_generator_controller extends Controller
         //=====================PROVINCIA=====================
         $data['logo'] = $empresas->getLogos($weblogin);
 
-        
+        $codigo= $empresas->getCodeService();
+       
 
-        $data['provincias'] = $zonas->getProvincias();
+        $data['provincias'] = $zonas->getProvincias($codigo);
+
+        //dd($data['provincias']);
         
 
 
