@@ -151,11 +151,10 @@ class view_generator_controller extends Controller
 
 
         if (view()->exists('pages.' . $origen . '.index')) {
-            return view('pages.' . $origen . '.index', compact('data', 'stores', 'imagen'));
+            return view('pages.' . $origen . '.index', ['data' => $data]);
         } else {
-            return redirect('https://www.naturaloptics.com/cita-commodity/'); //CORREGIR LA RUTA por defecto
+            return redirect('https://www.naturaloptics.com/cita-commodity/');
         }
-
         // Retorno de la vista
 
 
@@ -178,6 +177,7 @@ class view_generator_controller extends Controller
 
         $codigoProvincia = $request->input('provincias');
 
+        //dd($codigoProvincia);
         $localidades = $empresas->getCityByProvincia($codigoProvincia); 
 
         return response()->json($localidades);

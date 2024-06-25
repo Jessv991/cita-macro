@@ -3,7 +3,7 @@
 return [
 
     'Pide_cita_rellenando'=> "Request an appointment by filling out the form with your details and we will contact you to schedule a day.",
-    'Selecciona_una_provincia'=> "Select a province",
+    'Selecciona_una_provincia'=> "Select a stated",
     'Selecciona_una_ciudad'=> "Select a city",
     'Selecciona_una_optica'=> "Select an optical shop",
     'Nombre'=> "Name",
