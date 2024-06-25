@@ -1,5 +1,5 @@
 </body>
 <footer>
-    <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/cita-macro/public/js/bootstrap.bundle.min.js') }}"></script>
 </footer>
 </html>
