@@ -282,7 +282,8 @@ class Empresas extends Model
 
     protected $codigo; //variable para almacenar los datos de las tiendas que ofrecen el servicio de audiología
 
-    public function getCodeService(){
+    public function getCodeService()
+    {
         return $codigo = $this->codigo;
     }
 
@@ -331,7 +332,6 @@ class Empresas extends Model
         }
 
         $this->codigo = $codigo;
-
     }
 
 
@@ -426,13 +426,48 @@ class Empresas extends Model
             ->whereNotNull("e.f1")
             ->first();
 
-    
-            /* 
+
+        /* 
             ->limit(1)
             ->get();
             */
         //dd($datos);
 
         return $datos;
+    }
+
+
+    /* 
+     ██████╗██╗██╗   ██╗██████╗  █████╗ ██████╗ ███████╗███████╗
+    ██╔════╝██║██║   ██║██╔══██╗██╔══██╗██╔══██╗██╔════╝██╔════╝
+    ██║     ██║██║   ██║██║  ██║███████║██║  ██║█████╗  ███████╗
+    ██║     ██║██║   ██║██║  ██║██╔══██║██║  ██║██╔══╝  ╚════██║
+    ╚██████╗██║╚██████╔╝██████╔╝██║  ██║██████╔╝███████╗███████║
+    ╚═════╝╚═╝ ╚═════╝ ╚═════╝ ╚═╝  ╚═╝╚═════╝ ╚══════╝╚══════╝
+                                                                
+    */
+
+
+    public function getCityByProvincia($codigoProvincia)
+    {
+
+        $datos = DB::table("empresas as e")
+
+                ->select('e.d3')
+                ->distinct()
+                ->join("zonas as z", 'z.id', '=', 'e.d2')
+                ->where('z.id', $codigoProvincia)
+                ->where("e.d22", "=", 'si')
+                ->where(function ($query) {
+                    $query->where('e.d9', '0')
+                        ->orWhere('e.d9', '1');
+                })
+                ->where("e.crm", "=", 'si')
+                ->orderBy('e.d3', 'asc')
+                ->get();
+
+        return $datos;
+
+        //dd($datos);
     }
 }

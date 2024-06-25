@@ -8,6 +8,7 @@ use App\Models\Zonas;
 
 class view_generator_controller extends Controller
 {
+
     public function index($locale, $origen, $weblogin = null, $tienda = null, $test_r = null)
     {
 
@@ -158,7 +159,17 @@ class view_generator_controller extends Controller
         // Retorno de la vista
 
 
+    }
 
+    public function getLocalidadByProvincia(Request $request){
+
+        $empresas = new Empresas();
+
+        $codigoProvincia = $request->input('provincias');
+
+        $localidades = $empresas->getCityByProvincia($codigoProvincia); 
+
+        return response()->json($localidades);
 
     }
 }

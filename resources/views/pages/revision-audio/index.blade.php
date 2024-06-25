@@ -1,7 +1,4 @@
-@extends('layouts.header')
-
-
-
+@include('layouts.header')
 <div class="row w-100">
 
     <div class="col-12 col-xl-8 col-lg-8 p-0">
@@ -23,4 +20,4 @@
 {{-- @include('form.boxed') --}}
 
 
-@extends('layouts.footer')
+@include('layouts.footer')
