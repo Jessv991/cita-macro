@@ -470,4 +470,22 @@ class Empresas extends Model
 
         //dd($datos);
     }
+
+    public function getStoresByProvincia($localidad){
+
+        $datos = DB::table("empresas")
+                ->select('codigo', 'd29', 'd23')
+                ->where('d3', $localidad)
+                ->where("d22", "=", 'si')
+                ->where(function ($query) {
+                    $query->where('d9', '0')
+                        ->orWhere('d9', '1');
+                })
+                ->where("crm", "=", 'si')
+                ->get();
+        //dd($datos);
+        return $datos;
+
+    }
+
 }

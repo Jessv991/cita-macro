@@ -72,7 +72,6 @@
     </div>
 
     <script>
-
         $('#provincias').on('change', function() {
             var provinciaId = $(this).val();
             if (provinciaId) {
@@ -88,7 +87,7 @@
                         // Agregar opción por defecto
                         $('#ciudad').append(
                             '<option value="">{{ __('form_translation.Selecciona_una_ciudad') }}</option>'
-                            );
+                        );
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function(key, value) {
                             $('#ciudad').append('<option value="' + value.d3 + '">' + value.d3 +
@@ -101,7 +100,7 @@
                 $('#ciudad').empty();
                 // Agregar opción por defecto
                 $('#ciudad').append(
-                '<option value="">{{ __('form_translation.Selecciona_una_ciudad') }}</option>');
+                    '<option value="">{{ __('form_translation.Selecciona_una_ciudad') }}</option>');
             }
         });
 
@@ -109,7 +108,47 @@
         $(document).ready(function() {
             $('#ciudad').append('<option value="">{{ __('form_translation.Selecciona_una_ciudad') }}</option>');
         });
-        
+
+
+        $('#ciudad').on('change', function() {
+            var ciudadId = $(this).val();
+            if (ciudadId) {
+                $.ajax({
+                    url: '{{ route('getOpticasByProvincia') }}',
+                    type: 'POST',
+                    data: {
+                        ciudad: ciudadId,
+                        _token: '{{ csrf_token() }}'
+                    },
+                    success: function(data) {
+
+                        if (data.length == 1) {
+                            $('#optica').empty();
+                            // Agregar opciones de ciudades obtenidas del servidor
+                            $.each(data, function(key, value) {
+                                $('#optica').append('<option value="' + value.codigo + '">' +
+                                    value.d29 + ' - ' + value.d23 + '</option>');
+                            });
+
+                        } else {
+
+                            $('#optica').empty();
+
+                            // Agregar opción por defecto
+                            $('#optica').append(
+                                '<option value="">{{ __('form_translation.Selecciona_una_optica') }}</option>'
+                                );
+                            // Agregar opciones de ciudades obtenidas del servidor
+                            $.each(data, function(key, value) {
+                                $('#optica').append('<option value="' + value.codigo + '">' +
+                                    value.d29 + ' - ' + value.d23 + '</option>');
+                            });
+
+                        }
+                    }
+                });
+            }
+        });
     </script>
 
 </form>

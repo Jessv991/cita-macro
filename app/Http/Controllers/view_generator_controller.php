@@ -160,7 +160,7 @@ class view_generator_controller extends Controller
 
 
     }
-    
+
 
     /* 
     ██████╗  ██████╗ ███████╗████████╗     ██████╗██╗██╗   ██╗██████╗  █████╗ ██████╗ 
@@ -181,6 +181,19 @@ class view_generator_controller extends Controller
         $localidades = $empresas->getCityByProvincia($codigoProvincia); 
 
         return response()->json($localidades);
+
+    }
+
+    public function getOpticasByProvincia(Request $request){
+
+        $empresas = new Empresas();
+
+        $localidad = $request->input('ciudad');
+
+        //dd($localidad);
+        $optica = $empresas->getStoresByProvincia($localidad); 
+
+        return response()->json($optica);
 
     }
 }
