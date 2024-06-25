@@ -17,7 +17,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
 });
 
 
-Route::post('/get-localidad-by-provincia', [view_generator_controller::class, 'getLocalidadByProvincia'])->name('getLocalidadByProvincia');
+Route::post('cita-macro/get-localidad-by-provincia', [view_generator_controller::class, 'getLocalidadByProvincia'])->name('getLocalidadByProvincia');
 
 /* Auth::routes();
 
