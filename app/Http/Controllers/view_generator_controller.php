@@ -225,6 +225,6 @@ class view_generator_controller extends Controller
         ]);
 
         // Redirigir a la vista principal pasando los parámetros dinámicos
-        return redirect()->route('vistaLanding');
+       //return redirect()->route('vistaLanding');
     }
 }
