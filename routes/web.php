@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\App;
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝      ╚═══╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
                                                                            
 */
-Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null, $test = null) {
+Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null) {
 
 
     if (! in_array($locale, ['en', 'es', 'ca'])) {
@@ -22,9 +22,11 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     }
     App::setLocale($locale);
 
-    return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda, $test);
+    return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
     
-});
+})->name('vistaLanding');
+
+
 
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -44,6 +46,7 @@ Route::post('cita-macro/get-localidad-by-provincia', [view_generator_controller:
 Route::post('cita-macro/get-store-by-provincia', [view_generator_controller::class, 'getOpticasByProvincia'])->name('getOpticasByProvincia');
 
 
+Route::post('/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
 
 /* Auth::routes();
 

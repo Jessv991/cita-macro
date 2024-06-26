@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\Zonas;
@@ -9,7 +11,7 @@ use App\Models\Zonas;
 class view_generator_controller extends Controller
 {
 
-    public function index($locale, $origen, $weblogin = null, $tienda = null, $test_r = null)
+    public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
 
         //hacer test en ruta: ?test=false
@@ -20,13 +22,13 @@ class view_generator_controller extends Controller
         die; 
         */
 
-        $test = request()->query('test');//pendiente OJO (esto está recibiendo test por get)
+        $test = request()->query('test'); //pendiente OJO (esto está recibiendo test por get)
 
         $empresas = new Empresas();
         $zonas = new Zonas();
         $data = [];
         $centros = array();
-         
+
 
 
         //===============GENERAL==================
@@ -64,7 +66,7 @@ class view_generator_controller extends Controller
         //consulta la tienda en específico que sea optica y coincida su numero de tienda
         $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);*/
 
-        
+
         //==================aquí conservamos las tiendas que nos devuelve la consulta a la base de datos==================
         $data['centros'] = $centros->toArray();
         $data['centros'] = array_merge($data['centros'], $centros_audio->toArray());
@@ -87,19 +89,22 @@ class view_generator_controller extends Controller
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
         $data['landing'] = $origen;
 
+        //================OPTICA=================
+        $data['optica'] = $tienda;
+
         //=====================TEST=====================
         $data['test'] = $test;
-        
+
         //=====================PROVINCIA=====================
         $data['logo'] = $empresas->getLogos($weblogin);
 
-        $codigo= $empresas->getCodeService();
-       
+        $codigo = $empresas->getCodeService();
+
 
         $data['provincias'] = $zonas->getProvincias($codigo);
 
         //dd($data['provincias']);
-        
+
 
 
 
@@ -171,29 +176,55 @@ class view_generator_controller extends Controller
                                                                                     
     */
 
-    public function getLocalidadByProvincia(Request $request){
+    public function getLocalidadByProvincia(Request $request)
+    {
 
         $empresas = new Empresas();
 
         $codigoProvincia = $request->input('provincias');
 
         //dd($codigoProvincia);
-        $localidades = $empresas->getCityByProvincia($codigoProvincia); 
+        $localidades = $empresas->getCityByProvincia($codigoProvincia);
 
         return response()->json($localidades);
-
     }
 
-    public function getOpticasByProvincia(Request $request){
+    public function getOpticasByProvincia(Request $request)
+    {
 
         $empresas = new Empresas();
 
         $localidad = $request->input('ciudad');
 
         //dd($localidad);
-        $optica = $empresas->getStoresByProvincia($localidad); 
+        $optica = $empresas->getStoresByProvincia($localidad);
 
         return response()->json($optica);
+    }
 
+    /* 
+    ██╗   ██╗ █████╗ ██╗     ██╗██████╗  █████╗ ██████╗     ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██║   ██║██╔══██╗██║     ██║██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    ██║   ██║███████║██║     ██║██║  ██║███████║██║  ██║    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ╚██╗ ██╔╝██╔══██║██║     ██║██║  ██║██╔══██║██║  ██║    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+     ╚████╔╝ ██║  ██║███████╗██║██████╔╝██║  ██║██████╔╝    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+      ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═════╝     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                                                                            
+    */
+
+    public function store(Request $request): RedirectResponse
+    {
+
+        $validated = $request->validate([
+            'provincia' => 'bail|required',
+            'ciudad' => 'bail|required',
+            'optica' => 'bail|required',
+            'nombre' => 'bail|required',
+            'apellidos' => 'bail|required',
+            'email' => 'bail|required',
+            'movil' => 'bail|required',
+        ]);
+
+        // Redirigir a la vista principal pasando los parámetros dinámicos
+        return redirect()->route('vistaLanding');
     }
 }
