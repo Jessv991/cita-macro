@@ -101,7 +101,7 @@
             <span class="">{{ __('form_translation.parrafo-2') }}</span>
 
             <hr>
-            
+
             <button class="btn btn-success" id="volver-form">{{ __('form_translation.volver') }}</button>
 
         </div>
@@ -133,16 +133,21 @@
                     var errors = xhr.responseJSON.errors;
 
                     // Limpiar mensajes de error anteriores
-                    $('#formMacroContactologia .error').remove();//remueve los msj de error
-                    $('input').removeClass('border-1 border-bottom border-danger');//remueve el style de los input
-                    $('select').removeClass('border-1 border-bottom border-danger');//remueve el style de los select
+                    $('#formMacroContactologia .error').remove(); //remueve los msj de error
+                    $('input').removeClass(
+                    'border-1 border-bottom border-danger'); //remueve el style de los input
+                    $('select').removeClass(
+                    'border-1 border-bottom border-danger'); //remueve el style de los select
 
                     // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
                     $.each(errors, function(key, value) {
-                        var $input = $('#formMacroContactologia').find('[name="' + key + '"]');
+                        var $input = $('#formMacroContactologia').find('[name="' + key +
+                            '"]');
                         $input.addClass('border-1 border-bottom border-danger');
                         $input.next('.error').remove();
-                        $input.after('<span class="error text-danger" style="font-size: 12px;">' + value[0] + '</span>');//este es el msj de error
+                        $input.after(
+                            '<span class="error text-danger" style="font-size: 12px;">' +
+                            value[0] + '</span>'); //este es el msj de error
                     });
                 } else {
                     console.error(error); // Manejar otros tipos de errores si es necesario
@@ -150,4 +155,17 @@
             }
         });
     });
+
+    $('#volver-form').on('click', function(e) {
+        e.preventDefault();
+
+        $('#gracias').addClass('d-none');
+        $('#formMacroContactologia').removeClass('d-none');
+
+        // Limpiar los campos del formulario
+        $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
+        // Para los selects, también se puede usar:
+        // $('#formMacroContactologia').find('select').prop('selectedIndex', 0);
+
+    })
 </script>
