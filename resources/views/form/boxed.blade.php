@@ -134,10 +134,8 @@
 
                     // Limpiar mensajes de error anteriores
                     $('#formMacroContactologia .error').remove(); //remueve los msj de error
-                    $('input').removeClass(
-                    'border-1 border-bottom border-danger'); //remueve el style de los input
-                    $('select').removeClass(
-                    'border-1 border-bottom border-danger'); //remueve el style de los select
+                    $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
+                    $('select').removeClass('border-1 border-bottom border-danger'); //remueve el style de los select
 
                     // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
                     $.each(errors, function(key, value) {
@@ -160,7 +158,9 @@
         e.preventDefault();
 
         $('#gracias').addClass('d-none');
+        $('#formMacroContactologia .error').remove();//remuevo los msjs de error que hayan quedado
         $('#formMacroContactologia').removeClass('d-none');
+        $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
 
         // Limpiar los campos del formulario
         $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
