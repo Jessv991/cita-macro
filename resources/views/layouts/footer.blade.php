@@ -11,6 +11,7 @@
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
     </script>
+    
     {{-- ruta del documento jQuery --}}
     @php
         $baseUrl = url('/'); //esta es la base url

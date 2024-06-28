@@ -75,21 +75,23 @@
         <!-- Tu formulario aquí -->
 
         <div class="b-pedir-citas mt-5">
-            
-                <button type="submit" class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
-            
+
+            <button type="submit" id="form"
+                class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
+
         </div>
 
     </div>
 
     <script>
-        function validateForm() {
+        $('#form').on('click', function(e) {
+            e.preventDefault();
             var formData = $('#formMacroContactologia').serialize();
-            
+
             $.ajax({
                 url: '{{ route('validateForm') }}', // Ruta de Laravel que maneja la validación
                 type: 'POST',
-                data: formData,
+                data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
                 success: function(response) {
                     // Manejar la respuesta del servidor, por ejemplo, redirigir
                     window.location.href = response.redirectTo; // Ejemplo de redirección
@@ -99,7 +101,7 @@
                     console.error(error);
                 }
             });
-        }
+        });
     </script>
 
 </form>
