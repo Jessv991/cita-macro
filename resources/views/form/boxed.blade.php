@@ -90,7 +90,23 @@
 
 </form>
 
-<div class="">
+<div id="gracias" class="text-dark d-none">
+
+    <div class="">
+
+        <div class="d-flex flex-column text-center w-100">
+
+            <span class="">{{ __('form_translation.titol-gracias') }}</span>
+            <span class="">{{ __('form_translation.parrafo-1') }}</span>
+            <span class="">{{ __('form_translation.parrafo-2') }}</span>
+
+            <hr>
+            
+            <button class="btn btn-success" id="volver-form">{{ __('form_translation.volver') }}</button>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -104,6 +120,8 @@
             type: 'POST',
             data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
             success: function(response) {
+                $('#formMacroContactologia').addClass('d-none');
+                $('#gracias').removeClass('d-none');
                 // Manejar la respuesta del servidor, por ejemplo, redirigir
                 //console.log(response);
                 //window.location.href = response.redirectTo; // Ejemplo de redirección
