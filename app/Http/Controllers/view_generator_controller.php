@@ -218,13 +218,13 @@ class view_generator_controller extends Controller
     {
 
         $validated = $request->validate([
-            'provincia' => 'bail|required',
-            'ciudad' => 'bail|required',
-            'optica' => 'bail|required',
-            'nombre' => 'bail|required',
-            'apellidos' => 'bail|required',
-            'email' => 'bail|required',
-            'movil' => 'bail|required',
+            'provincias' => 'required',
+            'ciudad' => 'required',
+            'optica' => 'required',
+            'nombre' => 'required',
+            'apellidos' => 'required',
+            'email' => 'required',
+            'movil' => 'required',
         ]);
 
        return redirect()->route('vistaLanding');

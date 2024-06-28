@@ -1,13 +1,25 @@
 <form id="formMacroContactologia" class="w-100 p-0" action="" method="POST">
 
-    @dump($errors)
+    @csrf
+
     <div class="input-box">
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
 
         <p class="lead fs-5">{{ __('form_translation.Pide_cita_rellenando') }}</p>
 
+
         <div class="provincias_div">
 
-            <select class="form-select @error('provincia') is-invalid @enderror" name="provincias" id="provincias">
+            <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
 
                 <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
 
@@ -37,29 +49,25 @@
 
         <div class="nombre_div mt-2">
 
-            <input class="form-control @error('nombre') is-invalid @enderror" type="text"
-                placeholder='{{ __('form_translation.Nombre') }}'>
+            <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre" id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
 
         </div>
 
         <div class="apellidos_div mt-2">
 
-            <input class="form-control @error('apellido') is-invalid @enderror" type="text"
-                placeholder='{{ __('form_translation.Apellidos') }}'>
+            <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos" id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
 
         </div>
 
         <div class="email_div mt-2">
 
-            <input class="form-control @error('email') is-invalid @enderror" type="text"
-                placeholder='{{ __('form_translation.Email') }}'>
+            <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="email" placeholder='{{ __('form_translation.Email') }}'>
 
         </div>
 
         <div class="movil_div mt-2">
 
-            <input class="form-control @error('movil') is-invalid @enderror" type="text"
-                placeholder='{{ __('form_translation.Telefono') }}'>
+            <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil" id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
 
         </div>
 
