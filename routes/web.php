@@ -46,7 +46,7 @@ Route::post('cita-macro/get-localidad-by-provincia', [view_generator_controller:
 Route::post('cita-macro/get-store-by-provincia', [view_generator_controller::class, 'getOpticasByProvincia'])->name('getOpticasByProvincia');
 
 
-Route::post('/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
+Route::post('cita-macro/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
 
 /* Auth::routes();
 

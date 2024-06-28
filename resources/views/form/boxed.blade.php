@@ -37,6 +37,7 @@
 
             </select>
 
+
         </div>
 
         <div class="optica_div mt-2">
@@ -49,25 +50,29 @@
 
         <div class="nombre_div mt-2">
 
-            <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre" id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
+            <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
+                id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
 
         </div>
 
         <div class="apellidos_div mt-2">
 
-            <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos" id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
+            <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
+                id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
 
         </div>
 
         <div class="email_div mt-2">
 
-            <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="email" placeholder='{{ __('form_translation.Email') }}'>
+            <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
+                id="email" placeholder='{{ __('form_translation.Email') }}'>
 
         </div>
 
         <div class="movil_div mt-2">
 
-            <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil" id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
+            <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
+                id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
 
         </div>
 
@@ -102,11 +107,27 @@
                 data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
                 success: function(response) {
                     // Manejar la respuesta del servidor, por ejemplo, redirigir
+                    //console.log(response);
                     window.location.href = response.redirectTo; // Ejemplo de redirección
                 },
                 error: function(xhr, status, error) {
+
+                    // Limpiar mensajes de error anteriores
+                    $('#formMacroContactologia .error').remove();
                     // Manejar errores si es necesario
-                    console.error(error);
+                    if (xhr.status === 422) {
+                        var errors = xhr.responseJSON.errors;
+
+                        // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
+                        $.each(errors, function(key, value) {
+                            $('#formMacroContactologia').find('[name="' + key + '"]').next(
+                                '.error').remove();
+                            $('#formMacroContactologia').find('[name="' + key + '"]').after(
+                                '<span class="error">' + value[0] + '</span>');
+                        });
+                    } else {
+                        console.error(error); // Manejar otros tipos de errores si es necesario
+                    }
                 }
             });
         });

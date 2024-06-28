@@ -214,7 +214,7 @@ class view_generator_controller extends Controller
 
     
 
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
 
         $validated = $request->validate([
@@ -227,6 +227,6 @@ class view_generator_controller extends Controller
             'movil' => 'required',
         ]);
 
-       return redirect()->route('vistaLanding');
+        return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 }
