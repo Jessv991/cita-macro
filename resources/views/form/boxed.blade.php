@@ -4,15 +4,6 @@
 
     <div class="input-box">
 
-        @if ($errors->any())
-            <div class="alert alert-danger">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif
 
         <p class="lead fs-5">{{ __('form_translation.Pide_cita_rellenando') }}</p>
 
@@ -96,41 +87,49 @@
 
     </div>
 
-    <script>
-        $('#form').on('click', function(e) {
-            e.preventDefault();
-            var formData = $('#formMacroContactologia').serialize();
-
-            $.ajax({
-                url: '{{ route('validateForm') }}', // Ruta de Laravel que maneja la validación
-                type: 'POST',
-                data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
-                success: function(response) {
-                    // Manejar la respuesta del servidor, por ejemplo, redirigir
-                    //console.log(response);
-                    window.location.href = response.redirectTo; // Ejemplo de redirección
-                },
-                error: function(xhr, status, error) {
-
-                    // Limpiar mensajes de error anteriores
-                    $('#formMacroContactologia .error').remove();
-                    // Manejar errores si es necesario
-                    if (xhr.status === 422) {
-                        var errors = xhr.responseJSON.errors;
-
-                        // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
-                        $.each(errors, function(key, value) {
-                            $('#formMacroContactologia').find('[name="' + key + '"]').next(
-                                '.error').remove();
-                            $('#formMacroContactologia').find('[name="' + key + '"]').after(
-                                '<span class="error">' + value[0] + '</span>');
-                        });
-                    } else {
-                        console.error(error); // Manejar otros tipos de errores si es necesario
-                    }
-                }
-            });
-        });
-    </script>
 
 </form>
+
+<div class="">
+
+</div>
+
+<script>
+    $('#form').on('click', function(e) {
+        e.preventDefault();
+        var formData = $('#formMacroContactologia').serialize();
+
+        $.ajax({
+            url: '{{ route('validateForm') }}', // Ruta de Laravel que maneja la validación
+            type: 'POST',
+            data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
+            success: function(response) {
+                // Manejar la respuesta del servidor, por ejemplo, redirigir
+                //console.log(response);
+                //window.location.href = response.redirectTo; // Ejemplo de redirección
+            },
+            error: function(xhr, status, error) {
+
+                // Manejar errores si es necesario
+                if (xhr.status === 422) {
+                    var errors = xhr.responseJSON.errors;
+
+                    // Limpiar mensajes de error anteriores
+                    $('#formMacroContactologia .error').remove();//remueve los msj de error
+                    $('input').removeClass('border-1 border-bottom border-danger');//remueve el style de los input
+                    $('select').removeClass('border-1 border-bottom border-danger');//remueve el style de los select
+
+                    // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
+                    $.each(errors, function(key, value) {
+                        var $input = $('#formMacroContactologia').find('[name="' + key + '"]');
+                        $input.addClass('border-1 border-bottom border-danger');
+                        $input.next('.error').remove();
+                        $input.after('<span class="error text-danger" style="font-size: 12px;">' + value[0] + '</span>');//este es el msj de error
+                    });
+                } else {
+                    console.error(error); // Manejar otros tipos de errores si es necesario
+                }
+            }
+        });
+    });
+</script>
