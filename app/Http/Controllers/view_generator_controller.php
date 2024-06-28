@@ -227,6 +227,8 @@ class view_generator_controller extends Controller
             'movil' => 'required',
         ]);
 
+        
+
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 }
