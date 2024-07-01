@@ -218,13 +218,14 @@ class view_generator_controller extends Controller
     {
 
         $validated = $request->validate([
-            'provincias' => 'required',
-            'ciudad' => 'required',
-            'optica' => 'required',
-            'nombre' => 'required',
-            'apellidos' => 'required',
-            'email' => 'required',
-            'movil' => 'required',
+            'provincias' => 'bail|required',
+            'ciudad' => 'bail|required',
+            'optica' => 'bail|required',
+            'nombre' => 'bail|required|max:20',
+            'apellidos' => 'bail|required|max:20',
+            'email' => 'bail|required|email:rfc,dns',
+            'movil' => 'bail|required|digits:9|integer',
+            'check-poli' => 'accepted',
         ]);
 
         

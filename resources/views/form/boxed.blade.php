@@ -71,12 +71,12 @@
             <label class="form-check-label"
                 for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
                     style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
-            <input class="form-check-input" type="checkbox" value="" id="reverseCheck1">
+            <input class="form-check-input" type="checkbox" value="1" name="check-poli" id="reverseCheck1">
         </div>
 
 
 
-        <!-- Tu formulario aquí -->
+
 
         <div class="b-pedir-citas mt-5">
 
@@ -89,6 +89,16 @@
 
 
 </form>
+
+{{-- 
+███╗   ███╗███████╗     ██╗     ██████╗ ██████╗  █████╗  ██████╗██╗ █████╗ ███████╗
+████╗ ████║██╔════╝     ██║    ██╔════╝ ██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██╔════╝
+██╔████╔██║███████╗     ██║    ██║  ███╗██████╔╝███████║██║     ██║███████║███████╗
+██║╚██╔╝██║╚════██║██   ██║    ██║   ██║██╔══██╗██╔══██║██║     ██║██╔══██║╚════██║
+██║ ╚═╝ ██║███████║╚█████╔╝    ╚██████╔╝██║  ██║██║  ██║╚██████╗██║██║  ██║███████║
+╚═╝     ╚═╝╚══════╝ ╚════╝      ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝╚═╝  ╚═╝╚══════╝
+                                                                                   
+--}}
 
 <div id="gracias" class="text-dark d-none">
 
@@ -134,8 +144,10 @@
 
                     // Limpiar mensajes de error anteriores
                     $('#formMacroContactologia .error').remove(); //remueve los msj de error
-                    $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
-                    $('select').removeClass('border-1 border-bottom border-danger'); //remueve el style de los select
+                    $('input').removeClass(
+                    'border-1 border-bottom border-danger'); //remueve el style de los input
+                    $('select').removeClass(
+                    'border-1 border-bottom border-danger'); //remueve el style de los select
 
                     // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
                     $.each(errors, function(key, value) {
@@ -158,7 +170,7 @@
         e.preventDefault();
 
         $('#gracias').addClass('d-none');
-        $('#formMacroContactologia .error').remove();//remuevo los msjs de error que hayan quedado
+        $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
         $('#formMacroContactologia').removeClass('d-none');
         $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
 
@@ -166,6 +178,9 @@
         $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
         // Para los selects, también se puede usar:
         // $('#formMacroContactologia').find('select').prop('selectedIndex', 0);
+
+        // Limpiar el checkbox
+        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
 </script>
