@@ -20,6 +20,8 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     if (! in_array($locale, ['en', 'es', 'ca'])) {
         $locale= 'es'; //si el deferente a los del arry, locale cambia su valor a 'es'
     }
+
+    //dd(session());
     App::setLocale($locale);
 
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);

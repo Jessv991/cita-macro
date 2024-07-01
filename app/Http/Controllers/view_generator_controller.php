@@ -10,6 +10,7 @@ use App\Models\Zonas;
 
 class view_generator_controller extends Controller
 {
+    
 
     public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
@@ -212,10 +213,12 @@ class view_generator_controller extends Controller
                                                                                                                                                                                               
     */
 
-    
+
 
     public function store(Request $request)
     {
+        $locale = $request->input('language'); 
+        App::setLocale($locale); 
 
         $validated = $request->validate([
             'provincias' => 'bail|required',
@@ -228,7 +231,7 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ]);
 
-        
+
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }

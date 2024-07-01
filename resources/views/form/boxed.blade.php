@@ -1,7 +1,7 @@
 <form id="formMacroContactologia" class="w-100 p-0" action="" method="POST">
 
     @csrf
-
+<input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
     <div class="input-box">
 
 
@@ -183,4 +183,9 @@
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
+
+    /* $(document).ready(function() {
+        let language = $('#language').val();
+        localStorage.setItem('locale', JSON.stringify(language));
+    }); */
 </script>

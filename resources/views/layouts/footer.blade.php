@@ -21,6 +21,7 @@
         <script src="{{ asset('js/jQuery/' . $data['landing'] . '.js') }}"></script>
     @else
         <script src="{{ asset('cita-macro/js/jQuery/' . $data['landing'] . '.js') }}"></script>
+        
     @endif
 
 
