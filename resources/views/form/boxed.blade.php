@@ -1,7 +1,11 @@
 <form id="formMacroContactologia" class="w-100 p-0" action="" method="POST">
 
     @csrf
-<input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
+    <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
+    <input type="hidden" id="origen" name="origen" value="{{ $data['landing'] }}">
+    <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
+    <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">
+    <input type="hidden" id="ip" name="ip" value="{{ $data['ip'] }}">
     <div class="input-box">
 
 
@@ -24,9 +28,7 @@
 
         <div class="ciudad_div mt-2">
 
-            <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad">
-
-            </select>
+            <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad"></select>
 
 
         </div>
@@ -145,9 +147,9 @@
                     // Limpiar mensajes de error anteriores
                     $('#formMacroContactologia .error').remove(); //remueve los msj de error
                     $('input').removeClass(
-                    'border-1 border-bottom border-danger'); //remueve el style de los input
+                        'border-1 border-bottom border-danger'); //remueve el style de los input
                     $('select').removeClass(
-                    'border-1 border-bottom border-danger'); //remueve el style de los select
+                        'border-1 border-bottom border-danger'); //remueve el style de los select
 
                     // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
                     $.each(errors, function(key, value) {
@@ -184,8 +186,10 @@
 
     })
 
-    /* $(document).ready(function() {
-        let language = $('#language').val();
-        localStorage.setItem('locale', JSON.stringify(language));
-    }); */
+    var locale = {!! json_encode($data) !!};
+    $(document).ready(function() {
+        localStorage.setItem('locale', JSON.stringify(locale));
+    });
+
+    
 </script>

@@ -48,14 +48,14 @@ $(document).ready(function() {
                     $('#optica').empty();
                     if (data.length == 1) {
                         $.each(data, function(key, value) {
-                            $('#optica').append('<option value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                            $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
                         });
                     } else {
                         // Agregar opción por defecto
                         $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function(key, value) {
-                            $('#optica').append('<option value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                            $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
                         });
                     }
                 }

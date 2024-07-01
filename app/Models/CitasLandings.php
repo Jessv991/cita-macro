@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 /**
  * @property int      $id_cita
@@ -54,9 +55,7 @@ class CitasLandings extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be casted to native types.
@@ -88,4 +87,26 @@ class CitasLandings extends Model
     // Functions ...
 
     // Relations ...
+
+
+    public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip)
+    {
+
+        //dd($url);
+
+        $datos = DB::table('CitasLandings')
+            ->insert([
+                'nombre_cliente' => $validated['nombre'],
+                'apellido1_cliente' => $validated['apellidos'],
+                'email_cliente' => $validated['email'],
+                'telefono_cliente' => $validated['movil'],
+                'fecha_peticion' => date("Y-m-d H:i:s"),
+                'id_empresa' => $codigo,
+                'origin' => $origen,
+                'url_cita' => $url,
+                'ip' => $ip,
+                'tipo_dispositivo' => $tipo_dispositivo,
+                'dispositivo' => $dispositivo,
+            ]);
+    }
 }

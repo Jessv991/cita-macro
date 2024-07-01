@@ -21,6 +21,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
         $locale= 'es'; //si el deferente a los del arry, locale cambia su valor a 'es'
     }
 
+
     //dd(session());
     App::setLocale($locale);
 
