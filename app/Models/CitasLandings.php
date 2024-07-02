@@ -91,11 +91,8 @@ class CitasLandings extends Model
 
     public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip)
     {
-
-        //dd($url);
-
-        $datos = DB::table('CitasLandings')
-            ->insert([
+        try {
+            $this->fill([
                 'nombre_cliente' => $validated['nombre'],
                 'apellido1_cliente' => $validated['apellidos'],
                 'email_cliente' => $validated['email'],
@@ -108,5 +105,11 @@ class CitasLandings extends Model
                 'tipo_dispositivo' => $tipo_dispositivo,
                 'dispositivo' => $dispositivo,
             ]);
+            $this->save();
+        } catch (\Exception $e) {
+            // Manejo de la excepción
+            echo('No se han guardado los datos correctamente');
+        }
     }
+
 }

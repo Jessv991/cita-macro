@@ -2,6 +2,7 @@
 
     @csrf
     <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
+    <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
     <input type="hidden" id="origen" name="origen" value="{{ $data['landing'] }}">
     <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
     <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">

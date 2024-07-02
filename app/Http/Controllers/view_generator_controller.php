@@ -258,11 +258,10 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ]);
 
-        dd($ip);
-
-
+        
+        
         $url = $request->input('url_landing');
-
+        
         $Citas->saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
 
