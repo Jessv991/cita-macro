@@ -330,7 +330,7 @@ class Empresas extends Model
                 $codigo[] = $key; // Agregar la clave $key al arreglo $codigo
             }
         }
-
+        //dd($codigo);
         $this->codigo = $codigo;
     }
 
@@ -378,6 +378,7 @@ class Empresas extends Model
         return $datos;
     }
 
+
     //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================
     public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda)
     {
@@ -396,7 +397,7 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        //dd($datos);
+        dd($datos);
         return $datos;
     }
 

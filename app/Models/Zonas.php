@@ -109,4 +109,24 @@ class Zonas extends Model
 
         return $datos; 
     }
+    public function getProvinciasByWeblogin($weblogin)
+    {
+        $datos = DB::table('zonas as z')
+            ->select('z.nombre', 'z.id')
+            ->where('z.nombre', $weblogin)  
+            ->distinct()
+            ->join('empresas as e', 'e.d2', '=', 'z.id')
+            ->where('z.id', '!=', 53)        
+            ->where('d22', 'si')           
+            ->where(function ($query) {     
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')           
+            ->get();
+
+        //dd($datos);
+
+        return $datos; 
+    }
 }

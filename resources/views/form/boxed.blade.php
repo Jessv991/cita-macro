@@ -7,40 +7,54 @@
     <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
     <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">
     <input type="hidden" id="ip" name="ip" value="{{ $data['ip'] }}">
+    <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
+    <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
     <div class="input-box">
 
 
         <p class="lead fs-5">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+        
+
+        @if ($data['weblogin'] == null)
+            <div class="provincias_div">
+
+                <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
+                    <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
+                    @foreach ($data['provincias'] as $provincia)
+                        <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
+                    @endforeach
+                </select>
 
 
-        <div class="provincias_div">
 
-            <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
+            </div>
 
-                <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
+            <div class="ciudad_div mt-2">
 
-                @foreach ($data['provincias'] as $provincia)
-                    <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
-                @endforeach
-
-            </select>
-
-        </div>
-
-        <div class="ciudad_div mt-2">
-
-            <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad"></select>
+                <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
+                    id="ciudad"></select>
 
 
-        </div>
+            </div>
 
-        <div class="optica_div mt-2">
+            <div class="optica_div mt-2">
+    
+                <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
+                    <option value=""></option>
+                </select>
+    
+            </div>
 
-            <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
+        @else
+
+        <div class="optica_url_div mt-2">
+    
+            <select class="form-select @error('optica_url') is-invalid @enderror" name="optica_url" id="optica_url">
                 <option value=""></option>
             </select>
 
         </div>
+        @endif
 
         <div class="nombre_div mt-2">
 
@@ -191,6 +205,4 @@
     $(document).ready(function() {
         localStorage.setItem('locale', JSON.stringify(locale));
     });
-
-    
 </script>

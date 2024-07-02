@@ -24,6 +24,7 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
         $zonas = new Zonas();
         $centros = array();
+        $centros_audio = array();
 
 
 
@@ -72,6 +73,8 @@ class view_generator_controller extends Controller
             'audios' => $centros_audio,
         ];
 
+        //dd($this->data['centros']['audios']);
+
         //=====================IDIOMA==========================
         $this->data['idioma'] = $locale;
 
@@ -93,13 +96,17 @@ class view_generator_controller extends Controller
 
         //=====================PROVINCIA=====================
         $this->data['logo'] = $empresas->getLogos($weblogin);
+        $this->data['weblogin'] = $weblogin;
 
         $codigo = $empresas->getCodeService();
 
 
         $this->data['provincias'] = $zonas->getProvincias($codigo);
 
-        //dd($data['provincias']);
+        $this->data['provincia_url'] = $zonas->getProvinciasByWeblogin($weblogin);
+
+
+        //dd($this->data['provincia_url']);
 
 
 
@@ -202,7 +209,6 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
 
         $codigoProvincia = $request->input('provincias');
-
         //dd($codigoProvincia);
         $localidades = $empresas->getCityByProvincia($codigoProvincia);
 
@@ -222,13 +228,46 @@ class view_generator_controller extends Controller
         return response()->json($optica);
     }
 
+
+    public function getOpticas(Request $request)
+    {
+
+        $localidad = $request->input('weblogig');
+
+        //dd($localidad);
+
+        $empresas = new Empresas();
+
+        $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
+
+        return response()->json($optica);
+    }
+
+    public function getOptica(Request $request)
+    {
+
+        $localidad = $request->input('weblogig');
+        $tienda = $request->input('optica');
+
+        //dd($tienda);
+
+        $empresas = new Empresas();
+
+        $optica = $empresas->getStoreOnlyAudioByWebloginAndCode($localidad, $tienda);
+
+        return response()->json($optica);
+    }
+
+
     /* 
-   ██╗   ██╗ █████╗ ██╗██████╗  █████╗ ██████╗  ██████╗ ██████╗     ███████╗ ██████╗ ██████╗ ███╗   ███╗
-   ██║   ██║██╔══██╗██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
-   ██║   ██║███████║██║██║  ██║███████║██║  ██║██║   ██║██████╔╝    █████╗  ██║   ██║██████╔╝██╔████╔██║
-   ╚██╗ ██╔╝██╔══██║██║██║  ██║██╔══██║██║  ██║██║   ██║██╔══██╗    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
-    ╚████╔╝ ██║  ██║██║██████╔╝██║  ██║██████╔╝╚██████╔╝██║  ██║    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
-     ╚═══╝  ╚═╝  ╚═╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+    
+        ██╗   ██╗ █████╗ ██╗     ██╗██████╗  █████╗ ██████╗  ██████╗ ██████╗     ███████╗ ██████╗ ██████╗ ███╗   ███╗
+        ██║   ██║██╔══██╗██║     ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔══██╗    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+        ██║   ██║███████║██║     ██║██║  ██║███████║██║  ██║██║   ██║██████╔╝    █████╗  ██║   ██║██████╔╝██╔████╔██║
+        ╚██╗ ██╔╝██╔══██║██║     ██║██║  ██║██╔══██║██║  ██║██║   ██║██╔══██╗    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+         ╚████╔╝ ██║  ██║███████╗██║██████╔╝██║  ██║██████╔╝╚██████╔╝██║  ██║    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+          ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═════╝  ╚═════╝ ╚═╝  ╚═╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                                                                                             
                                                                                                                                                                                               
     */
 
