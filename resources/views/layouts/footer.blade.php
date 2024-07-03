@@ -1,7 +1,7 @@
 </body>
 <footer>
     {{-- style bootstrap --}}
-    <script src="{{ asset('/cita-macro/public/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('/cita-macro/public/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
     {{-- variables del jQuery --}}
     <script>
