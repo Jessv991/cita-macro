@@ -397,7 +397,7 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        dd($datos);
+        //dd($datos);
         return $datos;
     }
 
