@@ -37,10 +37,10 @@ $(document).ready(function () {
 
     $('#optica')
 
-    var _weblogig = $('#_weblogin').val();
+    var _weblogin = $('#_weblogin').val();
     var _optica = $('#_optica').val();
 
-    if (_weblogig && _optica) {
+    if (_weblogin && _optica) {
 
         $.ajax({
 
@@ -48,7 +48,7 @@ $(document).ready(function () {
             type: 'POST',
             data: {
                 _token: csrfToken, // Asegúrate de incluir el token CSRF en los datos de la solicitud
-                weblogig: _weblogig,
+                weblogin: _weblogin,
                 optica: _optica
             },
             success: function (data) {
@@ -67,8 +67,10 @@ $(document).ready(function () {
                 }
             }
         });
+        localStorage.setItem('weblogin', JSON.stringify(_weblogin));
+        localStorage.setItem('optica', JSON.stringify(_optica));
 
-    } else if (_weblogig){
+    } else if (_weblogin){
 
         $.ajax({
 
@@ -76,7 +78,7 @@ $(document).ready(function () {
             type: 'POST',
             data: {
                 _token: csrfToken, // Asegúrate de incluir el token CSRF en los datos de la solicitud
-                weblogig: _weblogig
+                weblogin: _weblogin
             },
             success: function (data) {
                 $('#optica').empty();
@@ -94,6 +96,7 @@ $(document).ready(function () {
                 }
             }
         });
+        localStorage.setItem('weblogin', JSON.stringify(_weblogin));
     }else{
         $('#ciudad').on('change', function () {
             var ciudadId = $(this).val();
@@ -128,4 +131,10 @@ $(document).ready(function () {
         $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
     
     }
+
+    var valWeblogin=JSON.parse(localStorage.getItem('weblogin'));
+
+    var weblogin = $('#weblogin_json').val(valWeblogin); 
+    
+
 });

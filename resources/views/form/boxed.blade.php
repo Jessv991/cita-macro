@@ -4,10 +4,8 @@
     <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
     <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
     <input type="hidden" id="origen" name="origen" value="{{ $data['landing'] }}">
-    <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
-    <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">
-    <input type="hidden" id="ip" name="ip" value="{{ $data['ip'] }}">
     <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
+    <input type="hidden" id="weblogin_json" name="weblogin_json" value="">
     <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
     <div class="input-box">
 
@@ -20,6 +18,7 @@
 
                 <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
                     <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
+                    @if ($data['weblogin'] == null)
                     @foreach ($data['provincias'] as $provincia)
                         <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
                     @endforeach
@@ -130,6 +129,16 @@
 
 </div>
 
+{{-- 
+██╗   ██╗ █████╗ ██╗     ██╗██████╗  █████╗ ██████╗     ███████╗██████╗ ██████╗  ██████╗ ██████╗ ███████╗███████╗
+██║   ██║██╔══██╗██║     ██║██╔══██╗██╔══██╗██╔══██╗    ██╔════╝██╔══██╗██╔══██╗██╔═══██╗██╔══██╗██╔════╝██╔════╝
+██║   ██║███████║██║     ██║██║  ██║███████║██████╔╝    █████╗  ██████╔╝██████╔╝██║   ██║██████╔╝█████╗  ███████╗
+╚██╗ ██╔╝██╔══██║██║     ██║██║  ██║██╔══██║██╔══██╗    ██╔══╝  ██╔══██╗██╔══██╗██║   ██║██╔══██╗██╔══╝  ╚════██║
+ ╚████╔╝ ██║  ██║███████╗██║██████╔╝██║  ██║██║  ██║    ███████╗██║  ██║██║  ██║╚██████╔╝██║  ██║███████╗███████║
+  ╚═══╝  ╚═╝  ╚═╝╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝
+                                                                                                                 
+--}}
+
 <script>
     $('#form').on('click', function(e) {
         e.preventDefault();
@@ -194,8 +203,8 @@
 
     })
 
-    var locale = {!! json_encode($data) !!};
+    /* var locale = {!! json_encode($data) !!};
     $(document).ready(function() {
         localStorage.setItem('locale', JSON.stringify(locale));
-    });
+    }); */
 </script>

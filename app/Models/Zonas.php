@@ -41,9 +41,7 @@ class Zonas extends Model
      *
      * @var array
      */
-    protected $hidden = [
-        
-    ];
+    protected $hidden = [];
 
     /**
      * The attributes that should be casted to native types.
@@ -59,9 +57,7 @@ class Zonas extends Model
      *
      * @var array
      */
-    protected $dates = [
-        
-    ];
+    protected $dates = [];
 
     /**
      * Indicates if the model should be timestamped.
@@ -91,42 +87,44 @@ class Zonas extends Model
     public function getProvincias($codigo)
     {
         $datos = DB::table('zonas as z')
-            ->select('z.nombre', 'z.id')  
+            ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->whereIn('codigo', $codigo)
-            ->where('z.id', '!=', 53)        
-            ->where('d22', 'si')           
-            ->where(function ($query) {     
+            ->where('z.id', '!=', 53)
+            ->where('d22', 'si')
+            ->where(function ($query) {
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
             })
             ->where('CRM', 'si')
-            ->orderBy('nombre', 'asc')           
+            ->orderBy('nombre', 'asc')
             ->get();
 
         //dd($datos);
 
-        return $datos; 
+        return $datos;
     }
-    public function getProvinciasByWeblogin($weblogin)
+
+    public function getProvinciasByWeblogin($weblogin_json)
     {
         $datos = DB::table('zonas as z')
-            ->select('z.nombre', 'z.id')
-            ->where('z.nombre', $weblogin)  
+            ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->where('z.id', '!=', 53)        
-            ->where('d22', 'si')           
-            ->where(function ($query) {     
-                $query->where('d9', '0')
-                    ->orWhere('d9', '1');
+            ->where('e.weblogin', $weblogin_json)
+            ->where('z.id', '!=', 53)
+            ->where('e.d22', 'si')
+            ->where(function ($query) {
+                $query->where('e.d9', '0')
+                    ->orWhere('e.d9', '1');
             })
-            ->where('CRM', 'si')           
+            ->where('e.CRM', 'si')
             ->get();
 
-        //dd($datos);
+        // Para depuración, puedes descomentar la siguiente línea:
+        dd($datos);
 
-        return $datos; 
+        return $datos;
     }
 }
