@@ -400,6 +400,7 @@ class Empresas extends Model
         //dd($datos);
         return $datos;
     }
+    
 
     /* 
     ██╗      ██████╗  ██████╗  ██████╗ ███████╗

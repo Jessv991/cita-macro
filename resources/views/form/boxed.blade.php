@@ -37,6 +37,8 @@
 
             </div>
 
+            @endif
+
             <div class="optica_div mt-2">
     
                 <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
@@ -45,16 +47,7 @@
     
             </div>
 
-        @else
-
-        <div class="optica_url_div mt-2">
-    
-            <select class="form-select @error('optica_url') is-invalid @enderror" name="optica_url" id="optica_url">
-                <option value=""></option>
-            </select>
-
-        </div>
-        @endif
+        
 
         <div class="nombre_div mt-2">
 
