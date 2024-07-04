@@ -293,6 +293,10 @@ class view_generator_controller extends Controller
     {
 
         $Citas = new CitasLandings();
+        $empresas = new Empresas();
+
+        $optica=$request->input('optica');
+        $ciudad= $empresas->getCityByoptica($optica);//ciudad
 
         //$weblogin = $request->input('weblogin');
         //dd($weblogin);

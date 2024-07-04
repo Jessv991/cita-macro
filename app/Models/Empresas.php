@@ -401,6 +401,26 @@ class Empresas extends Model
         return $datos;
     }
 
+    //================OBTENER CIUDAD POR LA TIENDA================
+
+    public function getCityByoptica($optica){
+
+        $datos = DB::table('empresas')
+            ->select('d3')
+            ->where('codigo', $optica)
+            ->where('d22', 'si')           
+            ->where(function ($query) {     
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')
+            ->get();
+
+        //dd($datos);
+        return $datos;
+
+    }
+
 
     /* 
     ██╗      ██████╗  ██████╗  ██████╗ ███████╗

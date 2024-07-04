@@ -67,8 +67,6 @@ $(document).ready(function () {
                 }
             }
         });
-        localStorage.setItem('weblogin', JSON.stringify(_weblogin));
-        localStorage.setItem('optica', JSON.stringify(_optica));
 
     } else if (_weblogin){
 
@@ -96,7 +94,7 @@ $(document).ready(function () {
                 }
             }
         });
-        localStorage.setItem('weblogin', JSON.stringify(_weblogin));
+        
     }else{
         $('#ciudad').on('change', function () {
             var ciudadId = $(this).val();
@@ -131,8 +129,6 @@ $(document).ready(function () {
         $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
     
     }
-
-    var valWeblogin=JSON.parse(localStorage.getItem('weblogin'));
 
     var weblogin = $('#weblogin_json').val(valWeblogin); 
     
