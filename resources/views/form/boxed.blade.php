@@ -18,9 +18,8 @@
 
                 <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
                     <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
-                    @if ($data['weblogin'] == null)
                     @foreach ($data['provincias'] as $provincia)
-                        <option value="{{ $provincia->id }}">{{ $provincia->nombre }}</option>
+                        <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
                     @endforeach
                 </select>
 
@@ -36,7 +35,7 @@
 
             </div>
 
-            @endif
+        @endif
 
             <div class="optica_div mt-2">
     
