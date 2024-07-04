@@ -253,9 +253,6 @@ class view_generator_controller extends Controller
         $localidad = $request->input('weblogin');
 
         $empresas = new Empresas();
-        $zonas= new Zonas();
-
-        $this->data['provincia_weblogin'] = $zonas->getProvinciasByWeblogin($localidad);
 
         $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
 
