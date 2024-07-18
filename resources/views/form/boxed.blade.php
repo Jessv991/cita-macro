@@ -25,16 +25,13 @@
                         <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
                     @endforeach
                 </select>
-        @endif
+
+                <div class="ciudad_div mt-2">
     
-    
-        @if (!$data['optica'])
-            <div class="ciudad_div mt-2">
-    
-                <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad"></select>
-    
-    
-            </div>
+                    <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad"></select>
+        
+        
+                </div>
         @endif
     
     
@@ -127,7 +124,7 @@
         </div>
     
     </div>
-    
+
 </div>
 
 
