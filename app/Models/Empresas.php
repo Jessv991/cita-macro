@@ -488,9 +488,9 @@ class Empresas extends Model
                 ->orderBy('e.d3', 'asc')
                 ->get();
 
+        //dd($datos);
         return $datos;
 
-        //dd($datos);
     }
 
     public function getStoresByProvincia($localidad){

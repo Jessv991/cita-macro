@@ -106,13 +106,14 @@ class Zonas extends Model
         return $datos;
     }
 
-    public function getProvinciasByWeblogin($weblogin_json)
+    public function getProvinciasByWeblogin($weblogin, $codigo)
     {
         $datos = DB::table('zonas as z')
             ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->where('e.weblogin', $weblogin_json)
+            ->whereIn('codigo', $codigo)
+            ->where('e.weblogin', $weblogin)
             ->where('z.id', '!=', 53)
             ->where('e.d22', 'si')
             ->where(function ($query) {
@@ -123,7 +124,7 @@ class Zonas extends Model
             ->get();
 
         // Para depuración, puedes descomentar la siguiente línea:
-        dd($datos);
+        //dd($datos);
 
         return $datos;
     }

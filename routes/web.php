@@ -49,10 +49,10 @@ Route::post('cita-macro/get-localidad-by-provincia', [view_generator_controller:
 Route::post('cita-macro/get-store-by-provincia', [view_generator_controller::class, 'getOpticasByProvincia'])->name('getOpticasByProvincia');
 
 //===============================POST PASANDO WEBLOGIN===============================
-Route::post('cita-macro/get-store-by-weblogin', [view_generator_controller::class, 'getOpticas'])->name('getOpticas');
+Route::post('cita-macro/get-store-by-weblogin', [view_generator_controller::class, 'getCityByWeblogin'])->name('getCityByWeblogin');
 
 //===============================POST PASANDO WEBLOGIN Y TIENDA===============================
-Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controller::class, 'getOptica'])->name('getOptica');
+Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controller::class, 'getOpticaByWebloginAndOptica'])->name('getOpticaByWebloginAndOptica');
 
 
 Route::post('cita-macro/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');

@@ -222,18 +222,19 @@ class view_generator_controller extends Controller
                                                                                     
     */
 
+    //esta función da la ciudad de la provincia seleccionada
     public function getLocalidadByProvincia(Request $request)
     {
         $empresas = new Empresas();
 
-
         $codigoProvincia = $request->input('provincias');
-        //dd($codigoProvincia);
+
         $localidades = $empresas->getCityByProvincia($codigoProvincia);
 
         return response()->json($localidades);
     }
 
+    //esta función me da las opticas o la optica de la ciudad seleccionada
     public function getOpticasByProvincia(Request $request)
     {
 
@@ -247,8 +248,9 @@ class view_generator_controller extends Controller
         return response()->json($optica);
     }
 
+    
 
-    public function getOpticas(Request $request)
+    public function getCityByWeblogin(Request $request)
     {
         $localidad = $request->input('weblogin');
 
@@ -256,20 +258,21 @@ class view_generator_controller extends Controller
 
         $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
 
+        //dd($optica);
         return response()->json($optica);
     }
 
-    public function getOptica(Request $request)
+
+    public function getOpticaByWebloginAndOptica(Request $request)
     {
 
-        $localidad = $request->input('weblogi');
+        $localidad = $request->input('weblogin');
         $tienda = $request->input('optica');
-
-        //dd($tienda);
-
+        
         $empresas = new Empresas();
-
+        
         $optica = $empresas->getStoreOnlyAudioByWebloginAndCode($localidad, $tienda);
+        //dd($optica);
 
         return response()->json($optica);
     }
@@ -295,6 +298,8 @@ class view_generator_controller extends Controller
         $Citas = new CitasLandings();
         $empresas = new Empresas();
 
+        $weblogin=$request->input('_weblogin');
+        $_optica=$request->input('_optica');
         $optica=$request->input('optica');
         $ciudad= $empresas->getCityByoptica($optica);//ciudad
 
@@ -308,16 +313,35 @@ class view_generator_controller extends Controller
         $ip = $this->data['ip'];
         App::setLocale($locale);
 
-        $validated = $request->validate([
-            'provincias' => 'bail|required',
-            'ciudad' => 'bail|required',
-            'optica' => 'bail|required',
+
+        $baseRules = [
             'nombre' => 'bail|required|max:20',
             'apellidos' => 'bail|required|max:20',
             'email' => 'bail|required|email:rfc,dns',
             'movil' => 'bail|required|digits:9|integer',
             'check-poli' => 'accepted',
-        ]);
+        ];
+        
+        if ($weblogin && $_optica) {
+            $specificRules = [
+                'optica' => 'bail|required',
+            ];
+        } elseif ($weblogin) {
+            $specificRules = [
+                'ciudad' => 'bail|required',
+                'optica' => 'bail|required',
+            ];
+        } else {
+            $specificRules = [
+                'provincias' => 'bail|required',
+                'ciudad' => 'bail|required',
+                'optica' => 'bail|required',
+            ];
+        }
+        
+        $rules = array_merge($baseRules, $specificRules);
+        $validated = $request->validate($rules);        
+
 
         //dd($validated);
 

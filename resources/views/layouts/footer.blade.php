@@ -7,11 +7,12 @@
     <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
-        var getOpticasByWeblogin = '{{ route('getOpticas') }}';
-        var getOpticasByWebloginAndOptica = '{{ route('getOptica') }}';
+        var getOpticasByWeblogin = '{{ route('getCityByWeblogin') }}';
+        var getOpticasByWebloginAndOptica = '{{ route('getOpticaByWebloginAndOptica') }}';
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
+       
     </script>
     
     {{-- ruta del documento jQuery --}}

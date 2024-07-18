@@ -11,9 +11,9 @@
 
 
         <p class="lead fs-5">{{ __('form_translation.Pide_cita_rellenando') }}</p>
-        
 
-        @if ($data['weblogin'] == null)
+
+        @if (!$data['weblogin'])
             <div class="provincias_div">
 
                 <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
@@ -22,76 +22,74 @@
                         <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
                     @endforeach
                 </select>
-
-
-
-            </div>
-
-            <div class="ciudad_div mt-2">
-
-                <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
-                    id="ciudad"></select>
-
-
-            </div>
-
         @endif
 
-            <div class="optica_div mt-2">
-    
-                <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
-                    <option value=""></option>
-                </select>
-    
-            </div>
 
-        
+    </div>
 
-        <div class="nombre_div mt-2">
+    <div class="ciudad_div mt-2">
 
-            <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
-                id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
+        <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad" id="ciudad"></select>
 
-        </div>
 
-        <div class="apellidos_div mt-2">
-
-            <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
-                id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
-
-        </div>
-
-        <div class="email_div mt-2">
-
-            <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                id="email" placeholder='{{ __('form_translation.Email') }}'>
-
-        </div>
-
-        <div class="movil_div mt-2">
-
-            <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
-                id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
-
-        </div>
-
-        <div class="form-check form-check-reverse mt-5">
-            <label class="form-check-label"
-                for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
-                    style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
-            <input class="form-check-input" type="checkbox" value="1" name="check-poli" id="reverseCheck1">
-        </div>
+    </div>
 
 
 
+    <div class="optica_div mt-2">
+
+        <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
+            <option value=""></option>
+        </select>
+
+    </div>
 
 
-        <div class="b-pedir-citas mt-5">
 
-            <button type="submit" id="form"
-                class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
+    <div class="nombre_div mt-2">
 
-        </div>
+        <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre" id="nombre"
+            placeholder='{{ __('form_translation.Nombre') }}'>
+
+    </div>
+
+    <div class="apellidos_div mt-2">
+
+        <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
+            id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
+
+    </div>
+
+    <div class="email_div mt-2">
+
+        <input class="form-control @error('email') is-invalid @enderror" type="text" name="email" id="email"
+            placeholder='{{ __('form_translation.Email') }}'>
+
+    </div>
+
+    <div class="movil_div mt-2">
+
+        <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil" id="movil"
+            placeholder='{{ __('form_translation.Telefono') }}'>
+
+    </div>
+
+    <div class="form-check form-check-reverse mt-5">
+        <label class="form-check-label"
+            for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
+                style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
+        <input class="form-check-input" type="checkbox" value="1" name="check-poli" id="reverseCheck1">
+    </div>
+
+
+
+
+
+    <div class="b-pedir-citas mt-5">
+
+        <button type="submit" id="form" class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
+
+    </div>
 
     </div>
 
