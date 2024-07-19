@@ -31,40 +31,6 @@ YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P
     animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
-@-webkit-keyframes rotate-in-center {
-    0% {
-        -webkit-transform: rotate(-360deg);
-        transform: rotate(-360deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-        opacity: 1;
-    }
-}
-
-@keyframes rotate-in-center {
-    0% {
-        -webkit-transform: rotate(-360deg);
-        transform: rotate(-360deg);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: rotate(0);
-        transform: rotate(0);
-        opacity: 1;
-    }
-}
-
-
-.scale-in-center {
-    -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-    animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
 @-webkit-keyframes scale-in-center {
     0% {
         -webkit-transform: scale(0);

@@ -242,8 +242,8 @@ class view_generator_controller extends Controller
 
         $localidad = $request->input('ciudad');
 
-        //dd($localidad);
         $optica = $empresas->getStoresByProvincia($localidad);
+        //dd($optica);
 
         return response()->json($optica);
     }

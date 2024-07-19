@@ -85,6 +85,7 @@ $(document).ready(function () {
 
 
         $('#optica')
+
     }
 
     //si pasan el weblogin se coloca automáticamente 
@@ -104,6 +105,7 @@ $(document).ready(function () {
                 if (response.length == 1) {
                     $.each(response, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
                         $('#animationdivIcon').removeClass('d-none');
                         $(".icon-map").removeClass("rotate-in-center");
@@ -115,6 +117,7 @@ $(document).ready(function () {
                     // Agregar opciones de ciudades obtenidas del servidor
                     $.each(response, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                     });
                 }
 
@@ -160,6 +163,7 @@ $(document).ready(function () {
                                 $('#optica').addClass('readonly-select');
                                 $('#animationdivIcon').removeClass('d-none');
                                 $(".icon-map").removeClass("rotate-in-center");
+                                $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                             });
                         } else {
                             $('#animationdivIcon').addClass('d-none');
@@ -196,6 +200,7 @@ $(document).ready(function () {
                 if (data.length == 1) {
                     $.each(data, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
                         $('#animationdivIcon').removeClass('d-none');
                         $(".icon-map").removeClass("rotate-in-center");
@@ -232,6 +237,8 @@ $(document).ready(function () {
                 if (response.length == 1) {
                     $.each(response, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        console.log(value);
+                        $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
                         $('#animationdivIcon').removeClass('d-none');
                         $(".icon-map").removeClass("rotate-in-center");

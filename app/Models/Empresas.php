@@ -496,7 +496,7 @@ class Empresas extends Model
     public function getStoresByProvincia($localidad){
 
         $datos = DB::table("empresas")
-                ->select('codigo', 'd29', 'd23')
+                ->select('codigo', 'd29', 'd23', 'd3')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
                 ->where(function ($query) {
