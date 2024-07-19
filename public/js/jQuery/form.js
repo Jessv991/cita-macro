@@ -88,23 +88,22 @@ $(document).ready(function () {
 
     }
 
-    //si pasan el weblogin se coloca automáticamente 
-    function putOpticaByweblogi() {
 
+     //En caso que haya una unica tienda se ejecuta esta función llamada en la función getCityBySelectState()
+     function putOpticasByProvincia(city) {
         $.ajax({
-            url: getOpticasByWeblogin,
-            method: 'POST',
+            url: getOpticasByProvinciaRoute, // Ruta definida en el archivo Blade
+            type: 'POST',
             data: {
-                'weblogin': $('#_weblogin').val(),
-                _token: csrfToken
+                ciudad: city,
+                _token: csrfToken // Token CSRF definido en el archivo Blade
             },
-            success: function (response) {
+            success: function (data) {
 
-                console.log(response);
                 $('#optica').empty();
-                if (response.length == 1) {
-                    $.each(response, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                if (data.length == 1) {
+                    $.each(data, function (key, value) {
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                         $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
                         $('#animationdivIcon').removeClass('d-none');
@@ -115,21 +114,15 @@ $(document).ready(function () {
                     // Agregar opción por defecto
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
-                    $.each(response, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
-                        $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
+                    $.each(data, function (key, value) {
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                     });
                 }
 
-            },
-            error: function (error) {
-                console.error('Error', error);
             }
         });
-
-        // Para agregar la opción por defecto cuando se carga la página por primera vez
-        $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
     }
+
 
     /* 
     ███████╗███████╗██╗     ███████╗ ██████╗ ██████╗██╗ ██████╗ ███╗   ██╗     ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗ 
@@ -159,7 +152,7 @@ $(document).ready(function () {
                         $('#optica').empty();
                         if (data.length == 1) {
                             $.each(data, function (key, value) {
-                                $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                                $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                                 $('#optica').addClass('readonly-select');
                                 $('#animationdivIcon').removeClass('d-none');
                                 $(".icon-map").removeClass("rotate-in-center");
@@ -171,8 +164,9 @@ $(document).ready(function () {
                             $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                             // Agregar opciones de ciudades obtenidas del servidor
                             $.each(data, function (key, value) {
-                                $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                                $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                             });
+
                         }
 
                     }
@@ -185,21 +179,31 @@ $(document).ready(function () {
 
     }
 
-    //En caso que haya una unica tienda se ejecuta esta función llamada en la función getCityBySelectState()
-    function putOpticasByProvincia(city) {
-        $.ajax({
-            url: getOpticasByProvinciaRoute, // Ruta definida en el archivo Blade
-            type: 'POST',
-            data: {
-                ciudad: city,
-                _token: csrfToken // Token CSRF definido en el archivo Blade
-            },
-            success: function (data) {
+    /*  ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗     ██████╗  ██████╗ ██████╗     ██╗    ██╗███████╗██████╗ ██╗      ██████╗  ██████╗ ██╗███╗   ██╗
+       ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝██╔══██╗    ██╔══██╗██╔═══██╗██╔══██╗    ██║    ██║██╔════╝██╔══██╗██║     ██╔═══██╗██╔════╝ ██║████╗  ██║
+       ██║   ██║██████╔╝   ██║   ██║██║     ███████║    ██████╔╝██║   ██║██████╔╝    ██║ █╗ ██║█████╗  ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║
+       ██║   ██║██╔═══╝    ██║   ██║██║     ██╔══██║    ██╔═══╝ ██║   ██║██╔══██╗    ██║███╗██║██╔══╝  ██╔══██╗██║     ██║   ██║██║   ██║██║██║╚██╗██║
+       ╚██████╔╝██║        ██║   ██║╚██████╗██║  ██║    ██║     ╚██████╔╝██║  ██║    ╚███╔███╔╝███████╗██████╔╝███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║
+       ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝     ╚══╝╚══╝ ╚══════╝╚═════╝ ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝
+                                                                                                                                                    */
 
+    //si pasan el weblogin se coloca automáticamente 
+    function putOpticaByweblogi() {
+
+        $.ajax({
+            url: getOpticasByWeblogin,
+            method: 'POST',
+            data: {
+                'weblogin': $('#_weblogin').val(),
+                _token: csrfToken
+            },
+            success: function (response) {
+
+                console.log(response);
                 $('#optica').empty();
-                if (data.length == 1) {
-                    $.each(data, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                if (response.length == 1) {
+                    $.each(response, function (key, value) {
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                         $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
                         $('#animationdivIcon').removeClass('d-none');
@@ -210,14 +214,29 @@ $(document).ready(function () {
                     // Agregar opción por defecto
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
-                    $.each(data, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                    $.each(response, function (key, value) {
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                     });
                 }
 
+            },
+            error: function (error) {
+                console.error('Error', error);
             }
         });
+
+        // Para agregar la opción por defecto cuando se carga la página por primera vez
+        $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
     }
+
+
+    /*  ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗     ██████╗  ██████╗ ██████╗     ██╗    ██╗███████╗██████╗              ██╗   ██╗    ████████╗██╗███████╗███╗   ██╗██████╗  █████╗ 
+       ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝██╔══██╗    ██╔══██╗██╔═══██╗██╔══██╗    ██║    ██║██╔════╝██╔══██╗             ╚██╗ ██╔╝    ╚══██╔══╝██║██╔════╝████╗  ██║██╔══██╗██╔══██╗
+       ██║   ██║██████╔╝   ██║   ██║██║     ███████║    ██████╔╝██║   ██║██████╔╝    ██║ █╗ ██║█████╗  ██████╔╝              ╚████╔╝        ██║   ██║█████╗  ██╔██╗ ██║██║  ██║███████║
+       ██║   ██║██╔═══╝    ██║   ██║██║     ██╔══██║    ██╔═══╝ ██║   ██║██╔══██╗    ██║███╗██║██╔══╝  ██╔══██╗               ╚██╔╝         ██║   ██║██╔══╝  ██║╚██╗██║██║  ██║██╔══██║
+       ╚██████╔╝██║        ██║   ██║╚██████╗██║  ██║    ██║     ╚██████╔╝██║  ██║    ╚███╔███╔╝███████╗██████╔╝██╗██╗██╗       ██║          ██║   ██║███████╗██║ ╚████║██████╔╝██║  ██║
+       ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝    ╚═╝      ╚═════╝ ╚═╝  ╚═╝     ╚══╝╚══╝ ╚══════╝╚═════╝ ╚═╝╚═╝╚═╝       ╚═╝          ╚═╝   ╚═╝╚══════╝╚═╝  ╚═══╝╚═════╝ ╚═╝  ╚═╝
+                                                                                                                                                                                    */
 
 
     //si pasamos la optica se colocará por esta función
@@ -236,7 +255,7 @@ $(document).ready(function () {
                 $('#optica').empty();
                 if (response.length == 1) {
                     $.each(response, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                         console.log(value);
                         $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                         $('#optica').addClass('readonly-select');
@@ -249,7 +268,7 @@ $(document).ready(function () {
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
                     $.each(response, function (key, value) {
-                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                     });
                 }
 
@@ -267,6 +286,22 @@ $(document).ready(function () {
     $('#optica').on('change', function () {
         var opticaId = $(this).val();
         if (opticaId) {
+            $('#animationdivIcon').removeClass('d-none');
+            $(".icon-map").removeClass("rotate-in-center");
+        } else {
+            $('#animationdivIcon').addClass('d-none');
+        }
+    });
+
+
+    // Agregar evento change para capturar la opción seleccionada y cambiar la dirección del mapa
+    $('#optica').off('change').on('change', function() {
+        var selectedOption = $(this).find('option:selected');//capturo la selección
+        var value = selectedOption.val();//cogemos elvalor, para validar que ya haya un valor y hacer condicional
+        var text = selectedOption.text();// cogemos el texto de la selección
+        if (value) {
+            var address = text.split(' - ')[0];//lo spliteyamos y le quitamos los '-'
+            $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + address);
             $('#animationdivIcon').removeClass('d-none');
             $(".icon-map").removeClass("rotate-in-center");
         } else {
