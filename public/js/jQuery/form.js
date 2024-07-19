@@ -36,6 +36,8 @@ $(document).ready(function () {
 
             $('#optica').empty();//limpia el select ciudad
             $('#animationdivIcon').addClass('d-none');//aplica el d-none al icono de mapa
+            $('#ciudad').removeClass('readonly-select');
+            $('#optica').removeClass('readonly-select');
 
             if (provinciaId) {
                 $.ajax({
@@ -53,6 +55,7 @@ $(document).ready(function () {
                             // Si solo hay una ciudad, seleccionarla automáticamente
                             $.each(data, function (key, value) {
                                 $('#ciudad').append('<option value="' + value.d3 + '" selected>' + value.d3 + '</option>');
+                                $('#ciudad').addClass('readonly-select');
 
                                 //en caso de que haya sólo una tienda ejecutamos esta función
                                 putOpticasByProvincia(value.d3);

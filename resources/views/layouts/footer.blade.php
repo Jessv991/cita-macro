@@ -29,10 +29,10 @@
     @endphp
 
     @if ($baseUrl !== 'https://www.audio.naturaloptics.com'){{-- si es difernte a  www.audio.naturaloptics.com--}}
-        <script src="{{ asset('js/jQuery/' . $data['landing'] . '.js') }}"></script>
+        <script src="{{ asset('js/jQuery/form.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     @else
-        <script src="{{ asset('cita-macro/js/jQuery/' . $data['landing'] . '.js') }}"></script>
+        <script src="{{ asset('cita-macro/js/jQuery/form.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/app.css') }}">
         
     @endif
