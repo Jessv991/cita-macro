@@ -3,11 +3,19 @@
     {{-- style bootstrap --}}
     <script src="{{ asset('/cita-macro/public/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
+    {{-- animación aos --}}
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    {{-- inicializamos aos --}}
+    <script>
+        AOS.init();
+    </script>
+
     {{-- variables del jQuery --}}
     <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
-        var getOpticasByWeblogin = '{{ route('getCityByWeblogin') }}';
+        var getOpticasByWeblogin = '{{ route('getOpticasByWeblogin') }}';
         var getOpticasByWebloginAndOptica = '{{ route('getOpticaByWebloginAndOptica') }}';
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
@@ -26,7 +34,6 @@
         <script src="{{ asset('cita-macro/js/jQuery/' . $data['landing'] . '.js') }}"></script>
         
     @endif
-
 
 </footer>
 

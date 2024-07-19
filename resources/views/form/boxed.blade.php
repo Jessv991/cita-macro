@@ -16,7 +16,8 @@
 
 
         @if (!$data['weblogin'])
-            <div class="provincias_div">
+            <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="1000">
 
                 <select class="form-select @error('provincias') is-invalid @enderror" name="provincias" id="provincias">
                     <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
@@ -24,31 +25,34 @@
                         <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
                     @endforeach
                 </select>
+            </div>
 
-                <div class="ciudad_div mt-2">
+            <div class="ciudad_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="1400">
 
-                    <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
-                        id="ciudad"></select>
+                <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
+                    id="ciudad"></select>
 
-
-                </div>
+            </div>
         @endif
 
 
         <div class="row">
             <div class="d-flex align-items-center">
-                <div class="optica_div mt-1">
-        
+                <div class="optica_div mt-1" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="1800">
+
                     <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
                         <option value=""></option>
                     </select>
-        
+
                 </div>
-        
+
                 <div class="ms-auto d-none" id="animationdivIcon">
                     <a href="" id="coordsGoogleMaps" target="_blank">
                         <svg class="icon-map" viewBox="0 0 49 49">
-                            <g style="transform-origin: 50% 50%; transform: rotate(0deg) scale(1, 1);" class="ldl-scale">
+                            <g style="transform-origin: 50% 50%; transform: rotate(0deg) scale(1, 1);"
+                                class="ldl-scale">
                                 <g class="ldl-ani">
                                     <g class="ldl-layer">
                                         <g style="transform-origin: 24px 0px; transform: rotate(0deg); animation: 3.22581s linear -3.16935s infinite normal forwards running jingle-3d825006-3cda-4950-a58b-3018f9321a57;"
@@ -75,7 +79,8 @@
                                     <g class="ldl-layer">
                                         <g style="transform-origin: 24px 0px; transform: rotate(0deg); animation: 3.22581s linear -3.19355s infinite normal forwards running jingle-3d825006-3cda-4950-a58b-3018f9321a57;"
                                             class="ldl-ani">
-                                            <path d="M39,42c1.657,0,3-1.343,3-3v-0.245L26.245,23L23,26.245L38.755,42H39z"
+                                            <path
+                                                d="M39,42c1.657,0,3-1.343,3-3v-0.245L26.245,23L23,26.245L38.755,42H39z"
                                                 fill="#efefef" style="fill: rgb(239, 239, 239);"></path>
                                         </g>
                                     </g>
@@ -98,8 +103,8 @@
                                     <g class="ldl-layer">
                                         <g style="transform-origin: 24px 0px; transform: rotate(0deg); animation: 3.22581s linear -3.21774s infinite normal forwards running jingle-3d825006-3cda-4950-a58b-3018f9321a57;"
                                             class="ldl-ani">
-                                            <path d="M36 8.5A3.5 3.5 0 1 0 36 15.5A3.5 3.5 0 1 0 36 8.5Z" fill="#752622"
-                                                style="fill: rgb(117, 38, 34);"></path>
+                                            <path d="M36 8.5A3.5 3.5 0 1 0 36 15.5A3.5 3.5 0 1 0 36 8.5Z"
+                                                fill="#752622" style="fill: rgb(117, 38, 34);"></path>
                                         </g>
                                     </g>
                                     <g class="ldl-layer">
@@ -120,51 +125,60 @@
 
 
 
-        <div class="nombre_div mt-2">
+        <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+            data-aos-duration="2200">
 
             <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
                 id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
 
         </div>
 
-        <div class="apellidos_div mt-2">
+        <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+            data-aos-duration="2600">
 
             <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
                 id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
 
         </div>
 
-        <div class="email_div mt-2">
+        <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+            data-aos-duration="3000">
 
             <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
                 id="email" placeholder='{{ __('form_translation.Email') }}'>
 
         </div>
 
-        <div class="movil_div mt-2">
+        <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+            data-aos-duration="3000">
 
             <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
                 id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
 
         </div>
 
-        <div class="form-check form-check-reverse mt-5">
-            <label class="form-check-label"
-                for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
-                    style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
-            <input class="form-check-input" type="checkbox" value="1" name="check-poli" id="reverseCheck1">
+        <div data-aos="zoom-in">
+
+            <div class="form-check form-check-reverse mt-5">
+                <label class="form-check-label"
+                    for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
+                        style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
+                <input class="form-check-input" type="checkbox" value="1" name="check-poli"
+                    id="reverseCheck1">
+            </div>
+
+
+
+
+
+            <div class="b-pedir-citas mt-5">
+
+                <button type="submit" id="form"
+                    class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
+
+            </div>
         </div>
 
-
-
-
-
-        <div class="b-pedir-citas mt-5">
-
-            <button type="submit" id="form"
-                class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
-
-        </div>
 
 </div>
 
@@ -265,11 +279,24 @@
 
         $('#gracias').addClass('d-none');
         $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
-        $('#formMacroContactologia').removeClass('d-none');
         $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
 
+        $('#formMacroContactologia').removeClass('d-none');
+
+        var weblogin = $('#_weblogin').val();
+        var optica = $('#_optica').val();
+
         // Limpiar los campos del formulario
-        $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
+        if (optica && weblogin) {
+            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
+        } else {
+            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
+            //quita la invalidación del select cuando es un sólo campo
+            $('#optica').removeClass('readonly-select');
+
+            //oculta el icono del mapa
+            $('#animationdivIcon').addClass('d-none');
+        }
         // Para los selects, también se puede usar:
         // $('#formMacroContactologia').find('select').prop('selectedIndex', 0);
 

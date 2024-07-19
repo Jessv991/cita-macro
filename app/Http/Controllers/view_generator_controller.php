@@ -250,7 +250,7 @@ class view_generator_controller extends Controller
 
     
 
-    public function getCityByWeblogin(Request $request)
+    public function getOpticasByWeblogin(Request $request)
     {
         $localidad = $request->input('weblogin');
 
@@ -328,7 +328,6 @@ class view_generator_controller extends Controller
             ];
         } elseif ($weblogin) {
             $specificRules = [
-                'ciudad' => 'bail|required',
                 'optica' => 'bail|required',
             ];
         } else {

@@ -20,7 +20,7 @@ $(document).ready(function () {
     if (weblogin && optica) {
         putOpticasByWeblogin();
     } else if (weblogin) {
-        putCityByweblogi();
+        putOpticaByweblogi();
         //getOpticaSelectCity();
     } else {
         getCityBySelectState();
@@ -33,7 +33,10 @@ $(document).ready(function () {
 
         $('#provincias').on('change', function () {
             var provinciaId = $(this).val();
-            $('#optica').empty();
+
+            $('#optica').empty();//limpia el select ciudad
+            $('#animationdivIcon').addClass('d-none');//aplica el d-none al icono de mapa
+
             if (provinciaId) {
                 $.ajax({
                     url: getLocalidadByProvinciaRoute, // Ruta definida en el archivo Blade
@@ -82,7 +85,7 @@ $(document).ready(function () {
     }
 
     //si pasan el weblogin se coloca automáticamente 
-    function putCityByweblogi() {
+    function putOpticaByweblogi() {
 
         $.ajax({
             url: getOpticasByWeblogin,
@@ -93,13 +96,17 @@ $(document).ready(function () {
             },
             success: function (response) {
 
-                 console.log(response);
+                console.log(response);
                 $('#optica').empty();
                 if (response.length == 1) {
                     $.each(response, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('#optica').addClass('readonly-select');
+                        $('#animationdivIcon').removeClass('d-none');
+                        $(".icon-map").removeClass("rotate-in-center");
                     });
                 } else {
+                    $('#animationdivIcon').addClass('d-none');
                     // Agregar opción por defecto
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
@@ -147,8 +154,12 @@ $(document).ready(function () {
                         if (data.length == 1) {
                             $.each(data, function (key, value) {
                                 $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                                $('#optica').addClass('readonly-select');
+                                $('#animationdivIcon').removeClass('d-none');
+                                $(".icon-map").removeClass("rotate-in-center");
                             });
                         } else {
+                            $('#animationdivIcon').addClass('d-none');
                             // Agregar opción por defecto
                             $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                             // Agregar opciones de ciudades obtenidas del servidor
@@ -182,8 +193,12 @@ $(document).ready(function () {
                 if (data.length == 1) {
                     $.each(data, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('#optica').addClass('readonly-select');
+                        $('#animationdivIcon').removeClass('d-none');
+                        $(".icon-map").removeClass("rotate-in-center");
                     });
                 } else {
+                    $('#animationdivIcon').addClass('d-none');
                     // Agregar opción por defecto
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
@@ -214,8 +229,12 @@ $(document).ready(function () {
                 if (response.length == 1) {
                     $.each(response, function (key, value) {
                         $('#optica').append('<option name="optica" value="' + value.codigo + '">' + value.d29 + ' - ' + value.d23 + '</option>');
+                        $('#optica').addClass('readonly-select');
+                        $('#animationdivIcon').removeClass('d-none');
+                        $(".icon-map").removeClass("rotate-in-center");
                     });
                 } else {
+                    $('#animationdivIcon').addClass('d-none');
                     // Agregar opción por defecto
                     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                     // Agregar opciones de ciudades obtenidas del servidor
@@ -233,6 +252,17 @@ $(document).ready(function () {
         // Para agregar la opción por defecto cuando se carga la página por primera vez
         $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
     }
+
+    //animación del icono de mapa
+    $('#optica').on('change', function () {
+        var opticaId = $(this).val();
+        if (opticaId) {
+            $('#animationdivIcon').removeClass('d-none');
+            $(".icon-map").removeClass("rotate-in-center");
+        } else {
+            $('#animationdivIcon').addClass('d-none');
+        }
+    });
 
 
 });
