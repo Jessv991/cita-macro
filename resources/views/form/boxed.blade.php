@@ -157,9 +157,9 @@
 
         </div>
 
-        @php
+       {{--  @php
             $locale = $data['idioma'] ?? 'es'; // O de cualquier otra forma que estés obteniendo el idioma
-        @endphp
+        @endphp --}}
 
         <div data-aos="zoom-in">
 

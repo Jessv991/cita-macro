@@ -26,13 +26,16 @@
     {{-- ruta del documento jQuery --}}
     @php
         $baseUrl = url('/'); //esta es la base url
+        $locale = $data['idioma'];
     @endphp
 
     @if ($baseUrl !== 'https://www.audio.naturaloptics.com'){{-- si es difernte a  www.audio.naturaloptics.com--}}
         <script src="{{ asset('js/jQuery/form.js') }}"></script>
+        <script src="{{ asset('js/cookies/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/style/form.css') }}">
     @else
         <script src="{{ asset('cita-macro/js/jQuery/form.js') }}"></script>
+        <script src="{{ asset('cita-macro/js/cookies/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/style/form.css') }}">
         
     @endif
