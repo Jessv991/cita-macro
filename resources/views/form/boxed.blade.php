@@ -166,7 +166,7 @@
             <div class="form-check form-check-reverse mt-5">
                 <label class="form-check-label" for="reverseCheck1">
                     <span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span>
-                    <a href="{{ url('politicas-de-privacidad/' . $locale) }}"
+                    <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
                         style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                         {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
                     </a>

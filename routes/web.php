@@ -41,7 +41,7 @@ Route::get('politicas-de-privacidad/{locale}', function ($locale) {
 
     return view('pages/policy/index'); 
     
-});
+})->name('politicas.privacidad');
 
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
