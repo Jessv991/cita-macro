@@ -17,17 +17,17 @@
             <div class="row align-items-center">
                 <div class="col-12 text-center p-3"><img width="250px" src="{{ asset('assets/logos/logo_black_03.png') }}" /></div>
 
-                <div class="col-12 text-center mb-5">{{ __('policy.Legal-titulo') }}</div>
+                <div class="col-12 text-center mb-5">{!! __('policy.Legal-titulo') !!}</div>
 
                 <div class="col-12 ">
-                {{ __('policy.Legal-aviso-1') }}
-                {{ __('policy.Legal-aviso-2') }}
-                {{ __('policy.Legal-aviso-3') }}
-                {{ __('policy.Legal-aviso-4') }}
-                {{ __('policy.Legal-aviso-5') }}
-                {{ __('policy.Legal-aviso-6') }}
-                {{ __('policy.Legal-aviso-7') }}
-                {{ __('policy.Legal-aviso-8') }}
+                {!! __('policy.Legal-aviso-1') !!}
+                {!! __('policy.Legal-aviso-2') !!}
+                {!! __('policy.Legal-aviso-3') !!}
+                {!! __('policy.Legal-aviso-4') !!}
+                {!! __('policy.Legal-aviso-5') !!}
+                {!! __('policy.Legal-aviso-6') !!}
+                {!! __('policy.Legal-aviso-7') !!}
+                {!! __('policy.Legal-aviso-8') !!}
                 </div>
             </div>
         </div>

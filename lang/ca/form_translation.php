@@ -20,5 +20,6 @@ return [
     'parrafo-1' => "La seva sol·licitud s'ha enviat. Aviat un dels nostres operadors es posarà a contacte amb vostè.",
     'parrafo-2' => "Moltes gràcies!",
     'volver' => "Tornar",
+    'politicas-de-privacidad' => 'politicas-de-privacidad/ca',
 
 ];

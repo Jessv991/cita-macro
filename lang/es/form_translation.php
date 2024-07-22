@@ -20,4 +20,6 @@ return [
     'parrafo-1'=> "Su solicitud ha sido enviada. Pronto uno de nuestros operadores se pondrá en contacto con usted.",
     'parrafo-2'=> "¡Muchas gracias!",
     'volver' => "Volver",
+    'politicas-de-privacidad' => 'politicas-de-privacidad/es',
+
 ];

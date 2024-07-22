@@ -16,5 +16,6 @@ return [
     'card-4-2'      => 'dels més petits',
     'card-text-4'      => 'La pèrdua auditiva durant els primers anys pot afectar de manera important el desenvolupament intel·lectual i de llenguatge del nen, i la seva capacitat de socialització.',
     'titulo-2'      => 'els nostres centres',
+    'Link-bases' => "Volver",
     
 ];

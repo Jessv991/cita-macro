@@ -160,15 +160,16 @@
         <div data-aos="zoom-in">
 
             <div class="form-check form-check-reverse mt-5">
-                <label class="form-check-label"
-                    for="reverseCheck1"><span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span><span
-                        style="margin-left: 5px; text-decoration: underline; cursor: pointer;">{{ __('form_translation.Aceptar_politicas_privacidad_2') }}</span></label>
+                <label class="form-check-label" for="reverseCheck1">
+                    <span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span>
+                    <a href="{{ url(__('form_translation.politicas-de-privacidad')) }}"
+                        style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
+                        {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
+                    </a>
+                </label>
                 <input class="form-check-input" type="checkbox" value="1" name="check-poli"
                     id="reverseCheck1">
             </div>
-
-
-
 
 
             <div class="b-pedir-citas mt-5">

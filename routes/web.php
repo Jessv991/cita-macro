@@ -18,7 +18,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
 
 
     if (! in_array($locale, ['en', 'es', 'ca'])) {
-        $locale= 'es'; //si el deferente a los del arry, locale cambia su valor a 'es'
+        $locale= 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
     }
 
 
@@ -29,7 +29,19 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     
 })->name('vistaLanding');
 
+//ruta politcas de privacidad
 
+Route::get('politicas-de-privacidad/{locale}', function ($locale) {
+
+    if (! in_array($locale, ['en', 'es', 'ca'])) {
+        $locale= 'es';
+    }
+
+    App::setLocale($locale);
+
+    return view('pages/policy/index'); 
+    
+});
 
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
