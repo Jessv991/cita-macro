@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://www.audio.naturaloptics.com/cita-macro'),
+    'url' => env('APP_URL', 'https://www.audio.naturaloptics.com/'),
 
     /*
     |--------------------------------------------------------------------------
