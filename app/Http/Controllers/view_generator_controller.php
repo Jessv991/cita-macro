@@ -354,4 +354,12 @@ class view_generator_controller extends Controller
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
+
+    
+
+    public function viewPoliticasPrivacidad($locale){
+
+        return view('pages.policy.index');
+        
+    }
 }

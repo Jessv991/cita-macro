@@ -29,6 +29,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     
 })->name('vistaLanding');
 
+
 //ruta politcas de privacidad
 
 Route::get('politicas-de-privacidad/{locale}', function ($locale) {
