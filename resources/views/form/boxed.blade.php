@@ -157,12 +157,16 @@
 
         </div>
 
+        @php
+            $locale = $data['idioma'] ?? 'es'; // O de cualquier otra forma que estés obteniendo el idioma
+        @endphp
+
         <div data-aos="zoom-in">
 
             <div class="form-check form-check-reverse mt-5">
                 <label class="form-check-label" for="reverseCheck1">
                     <span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span>
-                    <a href="{{ url(__('form_translation.politicas-de-privacidad')) }}"
+                    <a href="{{ url(__('form_translation.politicas-de-privacidad') . '/' . $locale) }}"
                         style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                         {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
                     </a>
