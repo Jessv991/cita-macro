@@ -3,6 +3,9 @@ window.addEventListener('load', function () {
     // obtain plugin
     var cc = initCookieConsent();
 
+    var baseUrl = window.location.origin;
+    var idioma = $('#language').val();
+
     // run plugin with your configuration
     cc.run({
         current_lang: 'es',
@@ -113,7 +116,7 @@ window.addEventListener('load', function () {
                             }
                         }, {
                             title: 'Más información',
-                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a class="cc-link" href="http://127.0.0.1:8000/politicas-de-cookies/es">contáctenos</a>.',
+                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a class="cc-link" href="'+baseUrl+'/politicas-de-privacidad/'+idioma+'">contáctenos</a>.',
                         }
                     ]
                 }
