@@ -113,7 +113,7 @@ window.addEventListener('load', function () {
                             }
                         }, {
                             title: 'Más información',
-                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a class="cc-link" href="https://www.naturaloptics.com/cita-macro/policy/legal">contáctenos</a>.',
+                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a class="cc-link" href="http://127.0.0.1:8000/politicas-de-cookies/es">contáctenos</a>.',
                         }
                     ]
                 }

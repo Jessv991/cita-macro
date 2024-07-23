@@ -31,11 +31,13 @@
 
     @if ($baseUrl !== 'https://www.audio.naturaloptics.com'){{-- si es difernte a  www.audio.naturaloptics.com--}}
         <script src="{{ asset('js/jQuery/form.js') }}"></script>
-        <script src="{{ asset('js/cookies/cookies-'.$locale.'.js') }}"></script>
+        <script src="{{ asset('js/Cookies/cookieconsent.js') }}"></script>
+        <script src="{{ asset('js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/style/form.css') }}">
     @else
         <script src="{{ asset('cita-macro/js/jQuery/form.js') }}"></script>
-        <script src="{{ asset('cita-macro/js/cookies/cookies-'.$locale.'.js') }}"></script>
+        <script src="{{ asset('cita-macro/js/Cookies/cookieconsent.js') }}"></script>
+        <script src="{{ asset('cita-macro/js/Cookie_Templates/cookies/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/style/form.css') }}">
         
     @endif

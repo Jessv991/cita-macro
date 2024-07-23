@@ -44,6 +44,20 @@ Route::get('politicas-de-privacidad/{locale}', function ($locale) {
     
 })->name('politicas.privacidad');
 
+
+//ruta cookies
+Route::get('politicas-de-cookies/{locale}', function ($locale) {
+
+    if (! in_array($locale, ['en', 'es', 'ca'])) {
+        $locale= 'es';
+    }
+
+    App::setLocale($locale);
+
+    return view('pages/cookies/index'); 
+    
+})->name('politicas.cookies');
+
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔══██╗██║   ██║╚══██╔══╝██╔══██╗██╔════╝    ██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
