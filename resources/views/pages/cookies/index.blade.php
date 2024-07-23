@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <title>Política de cookies</title>
     <meta name="author" content="Natural Optics">
-    <link rel="icon" href="{{ asset('cita-macro/assets/iconos_landings/N_1.png') }}">
+    <link rel="icon" href="{{ asset('cita-macro/assets/iconos_landings/N_2.png') }}">
 </head>
 
 <body>
