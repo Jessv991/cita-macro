@@ -8,11 +8,14 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\Zonas;
+use App\Services\email_service;//SERVICIO
 
 class view_generator_controller extends Controller
 {
-    public function __construct(Request $request) {
+    protected $Email_service;
+    public function __construct(Request $request, email_service $Email_service) {
         $this->getTypeDispositive($request);
+        $this->Email_service = $Email_service;//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
     }
 
     protected $data = [];
@@ -348,6 +351,7 @@ class view_generator_controller extends Controller
         
         $url = $request->input('url_landing');
         
+        $sent = $this->Email_service->sendEmail($validated, $origen);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
         
         $Citas->saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
