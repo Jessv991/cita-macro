@@ -40,7 +40,7 @@ Route::get('politicas-de-privacidad/{locale}', function ($locale) {
 
     App::setLocale($locale);
 
-    return view('pages/policy/index'); 
+    return app(view_generator_controller::class)->viewPoliticasPrivacidad($locale);
     
 })->name('politicas.privacidad');
 
