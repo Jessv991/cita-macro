@@ -14,11 +14,12 @@ use Illuminate\Support\Facades\App;
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝      ╚═══╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
                                                                            
 */
-Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($locale, $origen, $weblogin = null, $tienda = null) {
+
+Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($locale, $origen, $weblogin = null, $tienda = null) {
 
 
-    if (! in_array($locale, ['en', 'es', 'ca'])) {
-        $locale= 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
     }
 
 
@@ -26,21 +27,17 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function  ($loc
     App::setLocale($locale);
 
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
-    
 })->name('vistaLanding');
 
 
 //ruta politcas de privacidad
 
 Route::get('politicas-de-privacidad/{locale}', function ($locale) {
-
-    if (! in_array($locale, ['en', 'es', 'ca'])) {
-        $locale= 'es';
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
     }
-
     App::setLocale($locale);
-
-    return app(view_generator_controller::class)->viewPoliticasPrivacidad($locale);
+    return view('pages.policy.index');
     
 })->name('politicas.privacidad');
 
@@ -48,14 +45,13 @@ Route::get('politicas-de-privacidad/{locale}', function ($locale) {
 //ruta cookies
 Route::get('politicas-de-cookies/{locale}', function ($locale) {
 
-    if (! in_array($locale, ['en', 'es', 'ca'])) {
-        $locale= 'es';
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
     }
 
     App::setLocale($locale);
 
-    return view('pages/cookies/index'); 
-    
+    return view('pages/cookies/index');
 })->name('politicas.cookies');
 
 /* 
