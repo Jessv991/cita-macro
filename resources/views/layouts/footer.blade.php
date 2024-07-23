@@ -34,11 +34,13 @@
         <script src="{{ asset('js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/style/form.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('css/style/cookieconsent.css') }}">
     @else
         <script src="{{ asset('cita-macro/js/jQuery/form.js') }}"></script>
         <script src="{{ asset('cita-macro/js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('cita-macro/js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/style/form.css') }}">
+        <link type="text/css" rel="stylesheet" href="{{ asset('cita-macro/css/style/cookieconsent.css') }}">
         
     @endif
 
