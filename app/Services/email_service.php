@@ -41,10 +41,12 @@ class email_service
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
 
+            
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Asunto del correo';
+            dd($mail);
 
-            $archivo = resource_path('Views\pages\mail\index.html');
+            $archivo = resource_path('Views/pages/mail/index.html');
 
             //dd($archivo);
 
@@ -66,7 +68,7 @@ class email_service
                 '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LANDINGIMG}', '{FACEBOOK}', '{TWITTER}', '{INSTAGRAM}', '{BLOG}'
             );
 
-            
+
             $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $iamgeHeader, $iconFacebook, $iconTwitter, $iconInstagram, $iconBlog);
 			$actual = file_get_contents($archivo);
 			$actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
@@ -75,7 +77,8 @@ class email_service
             if($test){
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             }else{
-                $mail->addAddress($email_optica);
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                //$mail->addAddress($email_optica);
 				$mail->addCC('crm@naturalopticsgroup.com');
             }
 
