@@ -401,6 +401,28 @@ class Empresas extends Model
         return $datos;
     }
 
+    //================OBTENER TIENDA POR CÓDIGO PARA ENVÍO EMAIL=================
+
+    public function getStoreByCodestrore($code_store)
+    {
+
+        $codigo = $this->codigo;
+
+        $datos = DB::table('empresas')
+            ->whereIn('codigo', $codigo)
+            ->where('tienda', $code_store)
+            ->where('d22', 'si')           // Condición 2: d22 igual a 'si'
+            ->where(function ($query) {     // Condición 3: d9 igual a '0' o '1'
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')
+            ->get();
+
+        //dd($datos);
+        return $datos;
+    }
+
     //================OBTENER CIUDAD POR LA TIENDA================
 
     public function getCityByoptica($optica){

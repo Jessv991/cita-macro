@@ -110,7 +110,7 @@ return [
 
     'from' => [
         'address' => env('MAIL_FROM_ADDRESS', 'cita-online@naturaloptics.com'),
-        'name' => env('MAIL_FROM_NAME', 'Natural Optics'),
+        'name' => env('MAIL_FROM_NAME', 'NaturalOptics'),
     ],
 
 ];

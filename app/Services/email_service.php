@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Services;
+
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
+use App\Models\Empresas;
 
 use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen)
+    public function sendEmailOptica($validated, $origen, $tienda, $url)
     {
         //hacer test en ruta: ?test=false
         $test = request()->query('test'); //pendiente OJO (esto está recibiendo test por get)
@@ -17,10 +19,17 @@ class email_service
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
         $movil = $validated['movil'];
-
-        $mail = new PHPMailer(true);
+        $iamgeHeader = $url.'/assets/logos/Natural_Optics_Mail.png';
+        $iconFacebook= $url.'/assets/iconos/redes_sociales/facebook.png';
+        $iconInstagram= $url.'/assets/iconos/redes_sociales/instagram.png';
+        $iconTwitter= $url.'/assets/iconos/redes_sociales/instagram.png';
+        $iconBlog= $url.'/assets/iconos/redes_sociales/instagram.png';
         
-        try{
+
+        $empresas = new Empresas();
+        $mail = new PHPMailer(true);
+
+        try {
 
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
@@ -33,20 +42,53 @@ class email_service
             $mail->isHTML(true);
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->addAddress($email, $nombre . ' ' . $apellidos);
-
             $mail->Subject = 'Asunto del correo';
+
+            $archivo = resource_path('Views\pages\mail\index.html');
+
+            //dd($archivo);
+
+            $optica = $empresas->getStoreByCodestrore($tienda);
+
+            if (!empty($optica) && isset($optica[0])) {
+
+                $tlf_optica = $optica[0]->d6;
+                $email_optica = $optica[0]->d5;
+                $direccion_optica = $optica[0]->d23;
+
+            } else {
+                echo "No se encontró la óptica.";
+            }
+
+
+            $palabrasBuscar = array(
+                '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
+                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LANDINGIMG}', '{FACEBOOK}', '{TWITTER}', '{INSTAGRAM}', '{BLOG}'
+            );
+
+            
+            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $iamgeHeader, $iconFacebook, $iconTwitter, $iconInstagram, $iconBlog);
+			$actual = file_get_contents($archivo);
+			$actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
+			$mail->Body = $actual;
+
+            if($test){
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+            }else{
+                $mail->addAddress($email_optica);
+				$mail->addCC('crm@naturalopticsgroup.com');
+            }
+
             $mail->Body = 'Contenido del correo';
 
             $mail->send();
 
             return true;
+        } catch (Exception $e) {
 
-        }catch (Exception $e) {
+            echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
+        }
 
-			echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
-		}
-        
         //return "Email enviado!"; 
     }
 }

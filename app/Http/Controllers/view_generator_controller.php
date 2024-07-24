@@ -309,7 +309,7 @@ class view_generator_controller extends Controller
         //$weblogin = $request->input('weblogin');
         //dd($weblogin);
         $locale = $request->input('language');
-        $codigo = $request->input('optica');
+        $tienda = $request->input('optica');
         $origen = $request->input('origen');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
@@ -345,19 +345,19 @@ class view_generator_controller extends Controller
         $validated = $request->validate($rules);        
 
 
-        //dd($validated);
+        //dd($codigo, $_optica);
 
         
         
         $url = $request->input('url_landing');
         
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $url);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         if ($sent) {
 
             //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
-            $Citas->saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip);
+            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
             return response()->json(['message' => 'Email sent successfully.']);
 
