@@ -351,9 +351,21 @@ class view_generator_controller extends Controller
         
         $url = $request->input('url_landing');
         
-        $sent = $this->Email_service->sendEmail($validated, $origen);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
-        
-        $Citas->saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip);
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+
+
+        if ($sent) {
+
+            //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
+            $Citas->saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip);
+
+            return response()->json(['message' => 'Email sent successfully.']);
+
+        } else {
+
+            return response()->json(['message' => 'Failed to send email.'], 500);
+            
+        }
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
