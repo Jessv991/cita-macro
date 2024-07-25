@@ -5,7 +5,6 @@ namespace App\Services;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\Empresas;
-use Illuminate\Support\Facades\URL;
 
 use Illuminate\Support\Facades\Mail;
 use Psy\Readline\Hoa\Console;
@@ -48,18 +47,9 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Asunto del correo';
 
-            $baseUrlUrlGenerator = URL::to('/');
+            $archivo = resource_path('Views/pages/mail/index.html');
 
-            
-            if($baseUrlUrlGenerator){
-                
-                $archivo = resource_path('cita-macro/views/pages/mail/index.html');
-
-            }else{
-
-                $archivo = resource_path('views/pages/mail/index.html');
-
-            }
+            //dd($archivo);
 
             $optica = $empresas->getStoreByCodestrore($tienda);
 
