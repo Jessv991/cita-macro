@@ -47,7 +47,7 @@ class email_service
             $mail->Subject = 'Asunto del correo';
             //dd($mail);
 
-            $archivo = resource_path('Views/pages/mail/index.html');
+            $archivo = resource_path('views/pages/mail/index.html');
 
             //dd($archivo);
 
@@ -133,7 +133,7 @@ class email_service
             $mail->Subject = 'Confirmación de solicitud de cita previa';
             //dd($mail);
 
-            $archivo = resource_path('Views/pages/mail/templateCitaClienteComprobante.html');
+            $archivo = resource_path('views/pages/mail/templateCitaClienteComprobante.html');
 
 
             $palabrasBuscar = array(
