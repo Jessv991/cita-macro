@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Peticion cita</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+
+            .main {
+                width:600px!important;
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+                display:block;
+            }
+
+            .main560 {
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+                display:block;
+            }
+
+            .sub270 {
+                width:270px!important;	
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+            }
+
+            .sub170 {
+                width:160px!important;	
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+            }
+
+            .coveronmobile {
+                width:auto;
+            }
+
+            .address {
+                width:295px!important;
+                height:295!important;	
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+            }
+
+            img {
+                border:0;
+                height:auto !important;
+                line-height:100%;
+                outline:none;
+                text-decoration:none;
+            }
+
+            .logofoot {
+                width:80px;
+            }
+
+            .SQ {
+                width:100%;
+                border-collapse:collapse;
+                mso-table-lspace:0pt;
+                mso-table-rspace:0pt;
+                display:block;
+            }
+
+            .hide {
+                display:table;
+                border:0;
+                border-style:none;
+            }
+
+
+            .show {
+                display: none;
+                font-size: 0;
+                max-height: 0;
+                line-height: 0;
+                padding: 0;
+            }
+
+            .SQ-desk {
+                display: block!important;
+                border:0;
+                border-style:none;
+                width:100%;
+            }
+
+            .SQ-resp {
+                display: none!important;
+                border:0;
+                border-style:none;
+                width:0px;
+                mso-hide: all; /* hide elements in Outlook 2007-2013 */
+            }
+
+            .btn:hover {
+                background-color:#f6f6f6;
+                border-color:#f6f6f6!important;
+            }
+
+            .btn:hover .icon {
+                background-color:#f6f6f6;
+                border-color:#f6f6f6!important;
+            }
+
+            .textbtn {
+                font-size:20px;
+            }
+
+            .title {
+                font-size:45px;
+            }
+
+            a {
+                text-decoration:none;
+                color:#009BAB;
+            }
+
+            .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td {line-height: 100%}
+
+            .ExternalClass {width: 100%;}
+
+            .logotop{
+              width: 360px !important;
+        height: 92px !important;
+            }
+
+            @media all and (max-width:580px) {
+
+                .title {
+                    font-size:40px!important;
+                }
+
+                .main {
+                    width:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .main560 {
+                    width:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .sub270 {
+                    width:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .sub160 {
+                    width:100%!important;
+                    height:180px!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .coveronmobile {
+                    width:100%!important;
+                }
+
+                .show {
+                    display:block!important;
+                    visibility:visible!important;
+                    font-size:16px!important;
+                    line-height: 1.5 !important;
+                    max-height: none !important;
+                }
+
+                .address {
+                    width:100%!important;
+                    height:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .textbox {
+                    width:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .column {
+                    width:100%!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    display:block;
+                }
+
+
+                .SQ {
+                    width:100%!important;	
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                }
+
+                .hide {
+                    display:none!important;
+                    visibility:hidden!important;
+                    border:0;
+                    border-style:none;
+                }
+
+                .SQ-desk {
+                    display: none!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    border:0;
+                    border-style:none;
+                }
+
+                .SQ-resp {
+                    display: block!important;
+                    visibility:visible!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    border:0;
+                    border-style:none;
+                    width:100%!important;
+                }
+
+                .logofoot {
+                    width:100%;
+                }
+
+            }
+
+            @media all and (max-width:445px){	
+                .title {
+                    font-size:29px!important;
+                }
+
+                .main {
+                    width:100%!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    display:block;
+                    alignment-adjust:central!important;
+                }
+
+
+                .SQ {
+                    width:100%!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    display:block;
+                }
+
+                .lateral {
+                    width:100%!important;
+                    height:130px!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    display:block;
+                }
+
+                .column {
+                    width:100%!important;
+                    border-collapse:collapse;
+                    mso-table-lspace:0pt;
+                    mso-table-rspace:0pt;
+                    display:block;
+                }
+
+                .textbtn {
+                    font-size:16px!important;
+                }
+
+            }
+
+            @media all and (max-width:300px){
+                .logotop {
+                  width: 360px !important;
+        height: 92px !important;
+                }
+
+                .title {
+                    font-size:26px!important;
+                }
+            }
+            .promo{
+                width: 100%;
+                float: left;
+                margin-bottom: 12px;
+            }
+            .alineacion{
+                padding-right: 35px;
+            }
+            @media  (min-width:992px){
+                .promo{
+                    width: 250px;
+                }
+                .alineacion{
+                    padding-left: 53.33333%;
+                }
+            }
+
+
+            th.column {
+                padding: 0
+            }
+
+            a[x-apple-data-detectors] {
+                color: inherit !important;
+                text-decoration: inherit !important;
+            }
+
+            #MessageViewBody a {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            p {
+                line-height: inherit
+            }
+
+            @media(max-width:615px) {
+                .icons-inner {
+                    text-align: center;
+                }
+
+                .icons-inner td {
+                    margin: 0 auto;
+                }
+
+                .row-content {
+                    width: 100% !important;
+                }
+
+                .stack .column {
+                    width: 100%;
+                    display: block;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <table style="width:100%; max-width:600px; min-width:480px;"  width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <table style=" width:100%; max-width:600px; min-width:480px; height:100px; margin-left:-8px; overflow:hidden; margin: auto;text-align: center;align-items: center;justify-content: center;" border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="center">
+                  <table align="center" border="0" cellpadding="0" cellspacing="0" class="row row-1" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <table align="center" border="0" cellpadding="0" cellspacing="0" class="row-content stack" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="560">
+                                    <tbody>
+                                        <tr>
+                                            <th class="column" style="mso-table-lspace: 0; mso-table-rspace: 0; font-weight: 400; text-align: left; vertical-align: top;" width="100%">
+                                                <table border="0" cellpadding="0" cellspacing="0" class="image_block" role="presentation" style="mso-table-lspace: 0; mso-table-rspace: 0;" width="100%">
+                                                    <tr>
+                                                        <td style="width:100%;padding-right:0px;padding-left:0px;padding-top:30px;padding-bottom:30px;">
+                                                            <!-- <div align="center" style="line-height:10px"><img src="https://tienda.naturaloptics.com/fidelizacion/icons/2021/logo-Natural-2021.png" style="display: block; height: auto; border: 0; width: 268px; max-width: 100%;" width="268"/></div> -->
+                                                            <div align="center" style="line-height:10px"><img src="https://www.naturalopticsgroup.com/opticas/fotos/{IMAGENOPTICA}" style="display: block; height: auto; border: 0; width: 268px; max-width: 100%;" width="268"/></div>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td align="center">
+                    <table border="0" cellspacing="0" cellpadding="0" width="600" class="main">
+                        <tr><td width="3%">&nbsp;</td>
+                            <td class="main560" width="560">&nbsp;</td>
+                            <td width="3%">&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td align="center">
+                                <table border="0" cellspacing="0" cellpadding="0" width="560" class="main560">
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td align="center">
+                                            <h3>Solicitud de cita previa recibida</h3>
+                                            <h3>
+                                            </h3>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>&nbsp;</td>
+                                        <td align="center">
+                                            <table width="560" class="main560" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td align="center">
+                                                        <span>Gracias por confiar en nuestro centro para cuidar de tu salud. En breve nos pondremos en contacto contigo para concertar una cita.</span>
+                                                    </td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                        <td>&nbsp;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                    <td>&nbsp;</td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                        <td>&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr><td width="3%">&nbsp;</td>
+                            <td class="main560" width="560">&nbsp;</td>
+                            <td width="3%">&nbsp;</td>
+                        </tr>
+                    </table>
+                </td>
+                <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+      </tr>
+            <tr>
+                  
+                <table style=" width:100%; max-width:600px; min-width:480px; height:100px; margin-left:-8px; overflow:hidden; margin: auto;" border="0" cellspacing="0" cellpadding="0">
+                    <tbody>
+                      <tr>
+                        <td>&nbsp;</td>
+                        <td align="center">
+                
+                          <table class="main" border="0" cellspacing="0" cellpadding="0" width="600">
+                            <tr bgcolor="#444">
+                              <td bgcolor="#444">&nbsp;</td>
+                              <td bgcolor="#444" class="main560" width="100%" align="center">
+                                <table bgcolor="#444" border="0" cellspacing="0" cellpadding="0" width="100%">
+                                  <tr>
+                                    <td bgcolor="#444" colspan="5">
+                                      <table border="0" width="270" class="sub270" cellspacing="0" cellpadding="0" align="center">
+                                        <tr>
+                                          <td>
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                              <tr>
+                                                <td width="15">&nbsp;</td>
+                                                <td><span
+                                                    style="font-size:13px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300;">&nbsp;</span>
+                                                </td>
+                                                <td width="15">&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td>&nbsp;</td>
+                                                <td align="center"><span
+                                                    style="font-size:11px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300;">
+                                                    <font color="#f6f6f6">{DIRECIONOPTICA}</font>
+                                                  </span></td>
+                                                <td>&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td>&nbsp;</td>
+                                                <td align="center"><span
+                                                    style="font-size:11px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300;">
+                                                    <font color="#f6f6f6">{TELEFONOPTICA}</font>
+                                                  </span></td>
+                                                <td>&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td>&nbsp;</td>
+                                                <td align="center"><span
+                                                    style="font-size:11px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300;">
+                                                    <font color="#f6f6f6">{EMAILOPTICA}</font>
+                                                  </span></td>
+                                                <td>&nbsp;</td>
+                                              </tr>
+                                              <tr>
+                                                <td>&nbsp;</td>
+                                                <td><span
+                                                    style="font-size:11px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300;">&nbsp;</span>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                              </tr>
+                                            </table>
+                                          </td>
+                                        </tr>
+                                      </table>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td bgcolor="#444">&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" align="right">
+                                  <tr bgcolor="f0f0f0">
+                                    <td>&nbsp;</td>
+                                    <td align="center"><a href="https://www.instagram.com/antoniomiroeyewear/?hl=es" target="_blank"> <img src="https://tienda.naturaloptics.com/fidelizacion/icons/antoniomiro-icon.png" class="antoniomiro"/></a></td>
+                                    <td align="center"><a href="https://www.instagram.com/mirojeanseyewear/?hl=es" target="_blank"> <img src="https://tienda.naturaloptics.com/fidelizacion/icons/mirojeans-icon.png" class="mirojeans"/></a></td>
+                                    <td align="center"><a href="https://www.instagram.com/monsineeyewear/?hl=es" target="_blank"> <img src="https://tienda.naturaloptics.com/fidelizacion/icons/monsine-icon.png" class="monsine"/></a></td>
+                                    <td align="center"><a href="https://www.naturaloptics.com" target="_blank"> <img src="https://tienda.naturaloptics.com/fidelizacion/icons/papimundi-icon.png" class="papimundi"/></a></td>
+                                    <td align="center"><a href="https://www.naturaloptics.com" target="_blank"> <img src="https://tienda.naturaloptics.com/fidelizacion/icons/benatural-icon.png" class="benatural"/></a></td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td style="border-top: 2px solid #ffffff;">&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>
+                                <table border="0" cellpadding="0" cellspacing="0" width="100%" align="right">
+                                  <tr bgcolor="f0f0f0">
+                                    <td>&nbsp;</td>
+                                    <td align="center">
+                                      <a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img
+                                          src="https://tienda.naturaloptics.com/fidelizacion/icons/facebook-icon.png" /></a>
+                                    </td>
+                                    <td align="center">
+                                      <a href="https://twitter.com/naturalopticsg" target="_blank"><img
+                                          src="https://tienda.naturaloptics.com/fidelizacion/icons/twitter-icon.png" /></a>
+                                    </td>
+                                    <td align="center">
+                                      <a href="https://www.instagram.com/naturalopticsoficial/" target="_blank">
+                                        <img src="https://tienda.naturaloptics.com/fidelizacion/icons/instagram-icon.png" /></a>
+                                    </td>
+                                    <td align="center">
+                                      <a href="https://www.naturaloptics.com/blog/" target="_blank"><img
+                                          src="https://tienda.naturaloptics.com/fidelizacion/icons/blog-icon.png" /></a>
+                                    </td>
+                                    <td>&nbsp;</td>
+                                  </tr>
+                                </table>
+                              </td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td style="border-top: 2px solid #ffffff;">&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td align="center">
+                                <p align="justify"
+                                  style="margin:0px; font-size:11px; font-family:'HelveticaNeue-Light','Helvetica Neue Light',Helvetica,Arial,sans-serif; font-weight:300">
+                                  <font color="#333333">Este correo electr&oacute;nico comercial es conforme a la legislaci&oacute;n
+                                    en vigor sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo
+                                    en calidad de cliente de {NOMBREOPTICA} o bien por haberse registrado en nuestra
+                                    p&aacute;gina web, <a style="text-decoration:none; color:#009BAB"
+                                      href="https://www.naturaloptics.com">www.naturaloptics.com</a>. De acuerdo con lo dispuesto en
+                                    el art&iacute;culo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Informaci&oacute;n y de
+                                    Comercio Electr&oacute;nico, as&iacute; como en el Reglamento (UE) 2016/679 del Parlamento Europeo
+                                    y del Consejo, por el que se aprueba el Reglamento General de Protecci&oacute;n de Datos, dispone
+                                    de los derechos de: acceso, rectificaci&oacute;n, supresi&oacute;n, limitaci&oacute;n del
+                                    tratamiento, portabilidad y oposici&oacute;n de sus datos.</font>
+                                </p>
+                              </td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr bgcolor="f0f0f0">
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                              <td>&nbsp;</td>
+                            </tr>
+                          </table>
+                        </td>
+                        <td>&nbsp;</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </tr>
+        </table>
+    </body>
+</html>
