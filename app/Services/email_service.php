@@ -79,7 +79,7 @@ class email_service
             if($test == 'true'){
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             }else{
-                $mail->addAddress('jessikavasquez1991@gmail.com');
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
                 //$mail->addAddress($email_optica);
 				$mail->addCC('crm@naturalopticsgroup.com');
             }
@@ -94,6 +94,8 @@ class email_service
                 // Manejo de errores
                 return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
             }
+
+            return true;
 
         } catch (Exception $e) {
 
