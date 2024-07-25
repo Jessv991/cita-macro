@@ -7,13 +7,12 @@ use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\Empresas;
 
 use Illuminate\Support\Facades\Mail;
+use Psy\Readline\Hoa\Console;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $url)
+    public function sendEmailOptica($validated, $origen, $tienda, $url, $test)
     {
-        //hacer test en ruta: ?test=false
-        $test = request()->query('test'); //pendiente OJO (esto está recibiendo test por get)
 
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
@@ -32,6 +31,9 @@ class email_service
         try {
 
             // SMTP configuration
+            $mail->isSMTP();
+            $mail->SMTPDebug = 3; // Para mostrar información detallada
+            $mail->Debugoutput = 'html'; // Opcional: para una salida HTML más legible
             $mail->CharSet = 'UTF-8';
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
@@ -44,7 +46,6 @@ class email_service
             
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Asunto del correo';
-            dd($mail);
 
             $archivo = resource_path('Views/pages/mail/index.html');
 
@@ -73,20 +74,27 @@ class email_service
 			$actual = file_get_contents($archivo);
 			$actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
 			$mail->Body = $actual;
-
-            if($test){
+            
+            
+            if($test == 'true'){
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             }else{
-                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                $mail->addAddress('jessikavasquez1991@gmail.com');
                 //$mail->addAddress($email_optica);
 				$mail->addCC('crm@naturalopticsgroup.com');
             }
+            
 
-            $mail->Body = 'Contenido del correo';
 
-            $mail->send();
+            try {
+                // Enviar el correo
+                $mail->send();
+                return response()->json(['message' => 'Email enviado correctamente.']);
+            } catch (Exception $e) {
+                // Manejo de errores
+                return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
+            }
 
-            return true;
         } catch (Exception $e) {
 
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";

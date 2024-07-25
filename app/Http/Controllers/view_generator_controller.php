@@ -75,7 +75,7 @@ class view_generator_controller extends Controller
 
     public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
-        //hacer test en ruta: ?test=false
+        //hacer test en ruta: ?test=true
 
         $test = request()->query('test'); //pendiente OJO (esto está recibiendo test por get)
 
@@ -311,6 +311,7 @@ class view_generator_controller extends Controller
         $locale = $request->input('language');
         $tienda = $request->input('optica');
         $origen = $request->input('origen');
+        $test = $request->input('_test');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
@@ -351,7 +352,7 @@ class view_generator_controller extends Controller
         
         $url = $request->input('url_landing');
         
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $url);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $url, $test);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         if ($sent) {
@@ -359,11 +360,11 @@ class view_generator_controller extends Controller
             //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
-            return response()->json(['message' => 'Email sent successfully.']);
+            return response()->json(['message' => 'Email enviado correctamente.']);
 
         } else {
 
-            return response()->json(['message' => 'Failed to send email.'], 500);
+            return response()->json(['message' => 'Error en el envío del email.'], 500);
             
         }
 
