@@ -7,7 +7,6 @@ use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\Empresas;
 
 use Illuminate\Support\Facades\Mail;
-use Psy\Readline\Hoa\Console;
 
 class email_service
 {
@@ -31,10 +30,8 @@ class email_service
         try {
 
             // SMTP configuration
-            $mail->isSMTP();
-            $mail->SMTPDebug = 3; // Para mostrar información detallada
-            $mail->Debugoutput = 'html'; // Opcional: para una salida HTML más legible
             $mail->CharSet = 'UTF-8';
+            $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
             $mail->Username = config('mail.mailers.smtp.username');
@@ -46,8 +43,9 @@ class email_service
             
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Asunto del correo';
+            //dd($mail);
 
-            $archivo = resource_path('views/pages/mail/index.html');
+            $archivo = resource_path('Views/pages/mail/index.html');
 
             //dd($archivo);
 
