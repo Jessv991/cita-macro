@@ -47,7 +47,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Asunto del correo';
 
-            $archivo = resource_path('Views/pages/mail/index.html');
+            $archivo = resource_path('views/pages/mail/index.html');
 
             //dd($archivo);
 
