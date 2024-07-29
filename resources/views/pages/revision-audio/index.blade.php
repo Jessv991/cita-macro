@@ -6,7 +6,7 @@
     </div>
 
     <div class="col-12 col-xl-4 col-lg-4 w-20 p-0 m-0">
-        @include('form.boxed')
+        @include('form.pide_cita')
     </div>
 
 </div>

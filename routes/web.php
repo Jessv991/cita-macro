@@ -14,6 +14,8 @@ use Illuminate\Support\Facades\App;
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝      ╚═══╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
                                                                            
 */
+
+//ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'es', 'ca'])) {
         $locale = 'es';
@@ -51,7 +53,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
 })->name('vistaLanding');
 
 
-//ruta politcas de privacidad
+
 
 
 /* 
