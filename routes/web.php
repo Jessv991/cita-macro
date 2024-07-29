@@ -14,6 +14,27 @@ use Illuminate\Support\Facades\App;
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝      ╚═══╝  ╚═╝╚══════╝   ╚═╝   ╚═╝  ╚═╝
                                                                            
 */
+Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
+    }
+    App::setLocale($locale);
+    return view('pages.policy.index');
+    
+})->name('politicas.privacidad');
+
+
+//ruta cookies
+Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
+
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
+    }
+
+    App::setLocale($locale);
+
+    return view('pages/cookies/index');
+})->name('politicas.cookies');
 
 Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($locale, $origen, $weblogin = null, $tienda = null) {
 
@@ -32,27 +53,6 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
 
 //ruta politcas de privacidad
 
-Route::get('politicas-de-privacidad/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
-        $locale = 'es';
-    }
-    App::setLocale($locale);
-    return view('pages.policy.index');
-    
-})->name('politicas.privacidad');
-
-
-//ruta cookies
-Route::get('politicas-de-cookies/{locale}', function ($locale) {
-
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
-        $locale = 'es';
-    }
-
-    App::setLocale($locale);
-
-    return view('pages/cookies/index');
-})->name('politicas.cookies');
 
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
