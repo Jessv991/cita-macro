@@ -362,7 +362,13 @@ class view_generator_controller extends Controller
         $url = $request->input('url_landing');
         
         $getLogo = $this->generadorImg->index($logo);
-        $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
+
+        if($getLogo){
+
+            $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
+        }else{
+            $logoOptica = asset('cita-macro/assets/logos/audio_white.png');
+        }
         
         $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
