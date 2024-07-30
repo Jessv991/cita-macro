@@ -18,7 +18,6 @@ class email_service
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
         $movil = $validated['movil'];
-        $iamgeHeader = public_path('/assets/logos/Natural_Optics_Mail.png');
 
 
         $empresas = new Empresas();
@@ -41,7 +40,7 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Asunto del correo';
+            $mail->Subject = 'Cita previa con '. $origen;
             //dd($mail);
 
             $archivo = resource_path('views/pages/mail/templateOpticaComprobante.blade.php');
@@ -63,11 +62,11 @@ class email_service
 
             $palabrasBuscar = array(
                 '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LANDINGIMG}'
+                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}'
             );
 
 
-            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $iamgeHeader);
+            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -108,7 +107,6 @@ class email_service
     {
 
         $mail = new PHPMailer(true);
-        $imagenOptica = public_path('assets/logos/audio_white.png');
 
         try {
 
@@ -135,10 +133,10 @@ class email_service
 
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{IMAGENOPTICA}', '{LOGO}'
+                '{NOMBREOPTICA}', '{LOGO}'
             );
 
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $imagenOptica, $logoOptica);
+            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;

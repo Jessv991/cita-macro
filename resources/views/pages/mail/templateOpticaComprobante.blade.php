@@ -1090,7 +1090,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-image es-infoblock made_with" style="font-size:0">
                                               <a target="_blank" href="https://viewstripo.email/?utm_source=templates&utm_medium=email&utm_campaign=software&utm_content=thanksgiving">
-                                                <img src="{LANDINGIMG}" alt="" width="125">
+                                                <img src="{LOGO}" alt="" width="125">
                                               </a>
                                             </td>
                                           </tr>
