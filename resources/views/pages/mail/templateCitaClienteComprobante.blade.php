@@ -951,7 +951,7 @@ button.es-button {
                   <td align="left" style="padding:0;Margin:0;width:560px">
                    <table width="100%" role="presentation" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;font-size:0"><img src="{LOGO}" alt="" width="100" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none"></td>
+                      <td align="center" style="padding:0;Margin:0;font-size:0"><img src="{LOGO}" alt="" width="125" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none"></td>
                      </tr>
                    </table></td>
                  </tr>
