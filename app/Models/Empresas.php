@@ -460,7 +460,7 @@ class Empresas extends Model
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            ->where("e.weblogin", $weblogin)
+            //->where("e.weblogin", $weblogin)
             ->where("e.d22", "=", 'si')
             ->where(function ($query) {
                 $query->where('e.d9', '0')
@@ -468,7 +468,7 @@ class Empresas extends Model
             })
             ->where("e.crm", "=", 'si')
             ->whereNotNull("e.f1")
-            ->first();
+            ->get();
 
 
         /* 
