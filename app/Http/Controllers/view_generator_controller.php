@@ -9,14 +9,17 @@ use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\Zonas;
 use App\Services\email_service;//SERVICIO
+use App\Http\Controllers\imageGenerator;//controller generador de imagen
 
 class view_generator_controller extends Controller
 {
     protected $Email_service;
+    protected $generadorImg;
     
-    public function __construct(Request $request, email_service $Email_service) {
+    public function __construct(Request $request, email_service $Email_service, imageGenerator $generadorImg) {
         $this->getTypeDispositive($request);
         $this->Email_service = $Email_service;//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->generadorImg = $generadorImg;//controller generador de imagen
     }
 
     protected $data = [];
@@ -164,7 +167,15 @@ class view_generator_controller extends Controller
         $this->data['test'] = $test;
 
         //=====================PROVINCIA=====================
-        $this->data['logo'] = $empresas->getLogos($weblogin);
+        $logo = $empresas->getLogos($weblogin);
+
+        // Verificar que $logo no sea null antes de pasarlo a la vista
+        if ($logo) {
+            $this->data['logo'] = $logo->f1;
+        } else {
+            $this->data['logo'] = ''; // O cualquier valor predeterminado
+        }
+
         $this->data['weblogin'] = $weblogin;
 
         $codigo = $empresas->getCodeService();
@@ -301,6 +312,7 @@ class view_generator_controller extends Controller
 
         $Citas = new CitasLandings();
         $empresas = new Empresas();
+        
 
         $weblogin=$request->input('_weblogin');
         $_optica=$request->input('_optica');
@@ -313,6 +325,7 @@ class view_generator_controller extends Controller
         $tienda = $request->input('optica');
         $origen = $request->input('origen');
         $test = $request->input('_test');
+        $logo = $request->input('_logo');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
@@ -343,13 +356,15 @@ class view_generator_controller extends Controller
         $validated = $request->validate($rules);        
 
 
-        //dd($codigo, $_optica);
-
+        
         
         
         $url = $request->input('url_landing');
         
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $url, $test);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $getLogo = $this->generadorImg->index($logo);
+        $logoOptica = 'http://127.0.0.1:8000/puplic/assets/logos/opticas/' . $getLogo;
+        
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         if ($sent) {

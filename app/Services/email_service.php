@@ -10,18 +10,15 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $url, $test)
+    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica)
     {
 
+        //dd($logoOptica);
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
         $movil = $validated['movil'];
         $iamgeHeader = public_path('/assets/logos/Natural_Optics_Mail.png');
-        $iconFacebook = $url . '/assets/iconos/redes_sociales/facebook.png';
-        $iconInstagram = $url . '/assets/iconos/redes_sociales/instagram.png';
-        $iconTwitter = $url . '/assets/iconos/redes_sociales/instagram.png';
-        $iconBlog = $url . '/assets/iconos/redes_sociales/instagram.png';
 
 
         $empresas = new Empresas();
@@ -47,7 +44,7 @@ class email_service
             $mail->Subject = 'Asunto del correo';
             //dd($mail);
 
-            $archivo = resource_path('views/pages/mail/index.html');
+            $archivo = resource_path('views/pages/mail/templateOpticaComprobante.blade.php');
 
             //dd($archivo);
 
@@ -66,11 +63,11 @@ class email_service
 
             $palabrasBuscar = array(
                 '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LANDINGIMG}', '{FACEBOOK}', '{TWITTER}', '{INSTAGRAM}', '{BLOG}'
+                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LANDINGIMG}'
             );
 
 
-            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $iamgeHeader, $iconFacebook, $iconTwitter, $iconInstagram, $iconBlog);
+            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $iamgeHeader);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -84,7 +81,7 @@ class email_service
                 //$mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $url);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica);
             }
 
 
@@ -107,7 +104,7 @@ class email_service
         //return "Email enviado!"; 
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $url)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica)
     {
 
         $mail = new PHPMailer(true);
@@ -138,10 +135,10 @@ class email_service
 
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{IMAGENOPTICA}'
+                '{NOMBREOPTICA}', '{IMAGENOPTICA}', '{LOGO}'
             );
 
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $imagenOptica);
+            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $imagenOptica, $logoOptica);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;

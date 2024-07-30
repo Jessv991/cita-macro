@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\view_generator_controller;
+use App\Http\Controllers\imageGenerator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
 
@@ -82,6 +83,8 @@ Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controlle
 
 Route::post('cita-macro/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
 
+//===============================POST GENERADOR DE IMAGENES===============================
+Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name('imageGenerator');
 /* Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

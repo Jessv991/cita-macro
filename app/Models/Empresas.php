@@ -456,11 +456,13 @@ class Empresas extends Model
 
     public function getLogos($weblogin)
     {
+        $codigo = $this->codigo;
         $datos = DB::table("empresas as e")
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            //->where("e.weblogin", $weblogin)
+            ->whereIn('codigo', $codigo)
+            ->where("e.weblogin", $weblogin)
             ->where("e.d22", "=", 'si')
             ->where(function ($query) {
                 $query->where('e.d9', '0')
@@ -468,14 +470,36 @@ class Empresas extends Model
             })
             ->where("e.crm", "=", 'si')
             ->whereNotNull("e.f1")
-            ->get();
+            ->first();
 
 
         /* 
             ->limit(1)
             ->get();
             */
-        dd($datos);
+        //dd($datos);
+
+        /* 
+        empresa36587553-1.png"
+    }
+    53 => {#317 ▼
+      +"f1": "empresa357322418-1.png"
+    }
+    54 => {#316 ▼
+      +"f1": "empresa367312522-1.png"
+    }
+    55 => {#315 ▼
+      +"f1": ""
+    }
+    56 => {#314 ▼
+      +"f1": "empresa374290130-1.png"
+    }
+    57 => {#313 ▼
+      +"f1": "empresa37446214-1.png"
+    }
+    58 => {#312 ▼
+      +"f1": "empresa37451071-1.png"
+        */
 
         return $datos;
     }
