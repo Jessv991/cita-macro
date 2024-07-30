@@ -475,7 +475,7 @@ class Empresas extends Model
             ->limit(1)
             ->get();
             */
-        //dd($datos);
+        dd($datos);
 
         return $datos;
     }
