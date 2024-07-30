@@ -133,7 +133,7 @@ class email_service
             $mail->Subject = 'Confirmación de solicitud de cita previa';
             //dd($mail);
 
-            $archivo = resource_path('views/pages/mail/templateCitaClienteComprobante.html');
+            $archivo = resource_path('views/pages/mail/templateCitaClienteComprobante.blade.php');
 
 
             $palabrasBuscar = array(
