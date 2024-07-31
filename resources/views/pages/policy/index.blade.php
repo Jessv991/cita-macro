@@ -15,7 +15,7 @@
     <div class="container-fluid">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12 text-center p-3"><img width="250px" src="{{ asset('assets/logos/logo_black_03.png') }}" /></div>
+                <div class="col-12 text-center p-3"><img width="250px" src="{{ asset('assets/logos/basicos/logo_black_03.png') }}" /></div>
 
                 <div class="col-12 text-center mb-5">{!! __('policy.Legal-titulo') !!}</div>
 
