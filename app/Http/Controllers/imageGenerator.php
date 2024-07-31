@@ -14,15 +14,8 @@ class imageGenerator extends Controller
 
         $baseUrl = url('/');
 
-        if($baseUrl !== 'https://www.audio.naturaloptics.com'){
-
-            $localDirectory = public_path('assets/logos/opticas/');
-            
-        }else{
-            
-            $localDirectory = public_path('cita-macro/assets/logos/opticas/');
-
-        }
+        
+        $localDirectory = public_path('assets/logos/opticas/');
 
         $localImagen = $localDirectory . $imagen;
 
