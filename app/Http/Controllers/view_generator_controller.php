@@ -210,7 +210,7 @@ class view_generator_controller extends Controller
             'orejas3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas3.png',
         );
 
-        if ($baseUrl == 'https://www.audio.naturaloptics.com/') {
+        if ($baseUrl === 'https://www.audio.naturaloptics.com') {
 
             $prefixedImagen = array();
 
