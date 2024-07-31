@@ -220,11 +220,11 @@ class view_generator_controller extends Controller
 
             $this->data['img'] = $prefixedImagen;
 
+            dd( $this->data['img']);
         } else {
             $this->data['img'] = $imagen;
         }
 
-        //dd( $this->data['img']);
 
 
 
