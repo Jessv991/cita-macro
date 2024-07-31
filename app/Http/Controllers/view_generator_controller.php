@@ -85,7 +85,7 @@ class view_generator_controller extends Controller
 
         $empresas = new Empresas();
         $zonas = new Zonas();
-        $centros = array();
+        //$centros = array();
         $centros_audio = array();
 
         /* 
@@ -100,7 +100,7 @@ class view_generator_controller extends Controller
                                                       
         */
 
-        //===============GENERAL==================
+        /* //===============GENERAL==================
 
         if (isset($weblogin) && isset($tienda)) {
             //obtener tienda específica según weblogin y tienda
@@ -111,7 +111,7 @@ class view_generator_controller extends Controller
         } else {
             //nos arroja todas las tiendas
             $centros = $stores = $empresas->getWebloginAll();
-        }
+        } */
 
 
         //==================AUDIOS==================
@@ -137,13 +137,10 @@ class view_generator_controller extends Controller
 
 
         //==================aquí conservamos las tiendas que nos devuelve la consulta a la base de datos==================
-        $this->data['centros'] = $centros->toArray();
-        $this->data['centros'] = array_merge($this->data['centros'], $centros_audio->toArray());
+        //$this->data['centros'] = $centros->toArray();
+        //$this->data['centros'] = array_merge($this->data['centros'], $centros_audio->toArray());
 
-        $this->data['centros'] = [
-            'general' => $centros,
-            'audios' => $centros_audio,
-        ];
+        $this->data['centros'] = $centros_audio;
 
         //dd($this->data['centros']['audios']);
 
@@ -311,18 +308,18 @@ class view_generator_controller extends Controller
     {
 
         $Citas = new CitasLandings();
-        $empresas = new Empresas();
+        //$empresas = new Empresas();
         
 
         $weblogin=$request->input('_weblogin');
-        $_optica=$request->input('_optica');
-        $optica=$request->input('optica');
+        //$_optica=$request->input('_optica');
+        /* $optica=$request->input('optica');
         $ciudad= $empresas->getCityByoptica($optica);//ciudad
-
+ */
         //$weblogin = $request->input('weblogin');
-        //dd($weblogin);
         $locale = $request->input('language');
         $tienda = $request->input('optica');
+        //dd($tienda);
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');

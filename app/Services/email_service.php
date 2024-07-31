@@ -13,7 +13,6 @@ class email_service
     public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale)
     {
 
-        //dd($locale);
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
@@ -48,6 +47,7 @@ class email_service
             //dd($archivo);
 
             $optica = $empresas->getStoreByCodestrore($tienda);
+            //dd($optica);
 
             if (!empty($optica) && isset($optica[0])) {
 
@@ -58,6 +58,7 @@ class email_service
             } else {
                 echo "No se encontró la óptica.";
             }
+
 
 
             $palabrasBuscar = array(
@@ -75,7 +76,7 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
-                $mail->addAddress('a.arroyo@naturalopticsgroup.com');
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
                 //$mail->addAddress($email_optica);
                 //$mail->addCC('crm@naturalopticsgroup.com');
 

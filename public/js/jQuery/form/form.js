@@ -127,7 +127,7 @@ function putOpticasByProvincia(city) {
         type: 'POST',
         data: {
             ciudad: city,
-            _token: csrfToken // Token CSRF definido en el archivo Blade
+            _token: csrfToken 
         },
         success: function (data) {
 

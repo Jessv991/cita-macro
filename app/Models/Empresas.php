@@ -161,7 +161,7 @@ class Empresas extends Model
     */
 
 
-    //================OBTENER TODAS LAS TIENDAS SEGÚN EL WEBLOGIN================
+    /* //================OBTENER TODAS LAS TIENDAS SEGÚN EL WEBLOGIN================
     public function getStoresByWeblogin($weblogin)
     {
 
@@ -177,9 +177,9 @@ class Empresas extends Model
 
         //dd($datos);
         return $datos;
-    }
+    } */
 
-    public function getWebloginAll()
+    /* public function getWebloginAll()
     {
 
         $datos = DB::table('empresas')
@@ -193,10 +193,10 @@ class Empresas extends Model
 
         //dd($datos);
         return $datos;
-    }
+    } */
 
 
-    //================OBTENER TIENDA ESPECÍFICA SEGÚN SU WEBLOGIN Y EL NÚMERO DE TIENDA================
+    /* //================OBTENER TIENDA ESPECÍFICA SEGÚN SU WEBLOGIN Y EL NÚMERO DE TIENDA================
     public function getStoresByWebloginAndCode($weblogin, $tienda)
     {
 
@@ -213,7 +213,7 @@ class Empresas extends Model
 
         //dd($datos);
         return $datos;
-    }
+    } */
 
     /* 
 
@@ -227,7 +227,7 @@ class Empresas extends Model
     */
 
 
-    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN OPTICAS================
+    /* //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN OPTICAS================
     public function getOnlyAllOpticsByWeblogin($weblogin)
     {
 
@@ -244,10 +244,10 @@ class Empresas extends Model
 
         //dd($datos);
         return $datos;
-    }
+    } */
 
 
-    //================OBTENER SÓLO LOS DATOS DE LA TIENDA QUE SE PASO================
+    /* //================OBTENER SÓLO LOS DATOS DE LA TIENDA QUE SE PASO================
     public function getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda)
     {
 
@@ -265,7 +265,7 @@ class Empresas extends Model
 
         //dd($datos);
         return $datos;
-    }
+    } */
 
 
     /* 
@@ -472,34 +472,7 @@ class Empresas extends Model
             ->whereNotNull("e.f1")
             ->first();
 
-
-        /* 
-            ->limit(1)
-            ->get();
-            */
         //dd($datos);
-
-        /* 
-        empresa36587553-1.png"
-    }
-    53 => {#317 ▼
-      +"f1": "empresa357322418-1.png"
-    }
-    54 => {#316 ▼
-      +"f1": "empresa367312522-1.png"
-    }
-    55 => {#315 ▼
-      +"f1": ""
-    }
-    56 => {#314 ▼
-      +"f1": "empresa374290130-1.png"
-    }
-    57 => {#313 ▼
-      +"f1": "empresa37446214-1.png"
-    }
-    58 => {#312 ▼
-      +"f1": "empresa37451071-1.png"
-        */
 
         return $datos;
     }
@@ -542,7 +515,7 @@ class Empresas extends Model
     public function getStoresByProvincia($localidad){
 
         $datos = DB::table("empresas")
-                ->select('codigo', 'd29', 'd23', 'd3')
+                ->select('tienda', 'd29', 'd23', 'd3')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
                 ->where(function ($query) {
