@@ -3,9 +3,6 @@ window.addEventListener('load', function () {
     // obtain plugin
     var cc = initCookieConsent();
 
-    var baseUrl = window.location.origin;
-    var idioma = $('#language').val();
-
     // run plugin with your configuration
     cc.run({
         current_lang: 'es',

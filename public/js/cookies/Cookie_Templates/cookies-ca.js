@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
                     ],
                     blocks: [{
                         title: 'Utilització de cookies 📢',
-                        description: 'Utilitzo cookies per garantir les funcionalitats bàsiques del lloc web i millorar la teva experiència en línia. Pot triar si desitges acceptar cada categoria de cookie o no. Per a obtenir més detalls sobre les cookies i altres dades confidencials, llegeixi la <a href="#" class="cc-link">política de privacitat</a> completa.'
+                        description: 'Utilitzo cookies per garantir les funcionalitats bàsiques del lloc web i millorar la teva experiència en línia. Pot triar si desitges acceptar cada categoria de cookie o no. Per a obtenir més detalls sobre les cookies i altres dades confidencials, llegeixi la <a href="https://www.audio.naturaloptics.com/cita-macro/politicas-de-privacidad/ca" target="_blank" class="cc-link">política de privacitat</a> i <a href="https://www.audio.naturaloptics.com/cita-macro/politicas-de-cookies/ca" target="_blank" class="cc-link">Cookies </a>completa.'
                     }, {
                         title: 'Cookies tècniques',
                         description: "Aquestes cookies són essencials per al correcte funcionament d'aquest lloc web, carregar contingut multimèdia i protegir la teva seguretat. Sense aquestes cookies, el lloc web no funcionaria correctament.",
@@ -113,7 +113,7 @@ window.addEventListener('load', function () {
                         }
                     }, {
                         title: 'Més informació',
-                        description: 'Per a qualsevol consulta en relació amb la nostra política sobre cookies i les seves opcions, <a class="cc-link" href="https://www.naturaloptics.com/cita-macro/policy/legal">contáctenos</a>.',
+                        description: 'Per a qualsevol consulta en relació amb la nostra política sobre cookies i les seves opcions, <a href="https://www.audio.naturaloptics.com/cita-macro/politicas-de-privacidad/es" target="_blank" class="cc-link">contáctenos</a>.',
                     }
                     ]
                 }
