@@ -1,3 +1,4 @@
+/* ===================================EFECTO DE ANULAR EL SELECT DEL FORM SI HAY SÓLO UNA OPCIÓN=================================== */
 .optica_div {
     width: 100% !important;
     /* cuando aparezca el mapa debe colocarse en 91% */
@@ -8,6 +9,33 @@
     /* Desactiva la interacción del ratón */
     background-color: #f0f0f0;
     /* Color de fondo para indicar que es solo lectura */
+}
+
+/* ===================================BUTTON STYLE=================================== */
+
+.btn-color{
+    background-color: #0086c4;
+    color: #f0f0f0;
+}
+
+.btn-color:hover{
+    background-color: #8da5b1;
+    color: #f0f0f0;
+}
+
+
+/*  ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+                                     
+
+.contenedor-form{
+    padding: 4%;
+    position: absolute;
 }
 
 

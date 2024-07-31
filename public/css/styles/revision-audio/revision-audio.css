@@ -1,0 +1,36 @@
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+.main {
+    width: 100%;
+}
+
+.bg-custom {
+    background-color: var(--natural-4);
+}
+
+.cont {
+    width: 100%;
+    padding: 0;
+    margin-left: 0.05%;
+    /* Asegúrate de que no haya padding extra en el contenedor */
+}
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel-inner img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.carrusel-inner img.active {
+    opacity: 1;
+}
+
+.carrusel-inner {
+    position: relative;
+    height: 500px; /* Ajusta esto según el tamaño de tus imágenes */
+}

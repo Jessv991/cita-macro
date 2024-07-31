@@ -201,15 +201,30 @@ class view_generator_controller extends Controller
 
         //imagenes dependiendo del idioma 
 
+        $baseUrl = url('/');
+
+
         $imagen = array(
-            $origen => array('generic' => 'assets/img/' . $origen . '/' . $this->data['dispositivo'] . '/' . $locale . '/img1.png'),
+            'orejas' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas.png',
+            'orejas2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas2.png',
+            'orejas3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas3.png',
         );
 
-        //dd( $this->data);
+        if ($baseUrl == 'https://www.audio.naturaloptics.com/') {
 
+            $prefixedImagen = array();
 
+            foreach ($imagen as $key => $path) {
+                $prefixedImagen[$key] = 'cita-macro/' . $path;
+            }
 
-        //return view('user.index', ['users' => $users]);
+            $this->data['img'] = $prefixedImagen;
+
+        } else {
+            $this->data['img'] = $imagen;
+        }
+
+        //dd( $this->data['img']);
 
 
 

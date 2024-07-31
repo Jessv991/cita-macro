@@ -1,4 +1,4 @@
-<div>
+<div class="contenedor-form">
 
     <form id="formMacroContactologia" class="w-100 p-0" action="" method="POST">
 
@@ -181,7 +181,7 @@
             <div class="b-pedir-citas mt-5">
 
                 <button type="submit" id="form"
-                    class="btn btn-success">{{ __('form_translation.Pedir_cita') }}</button>
+                    class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
 
             </div>
         </div>
