@@ -941,7 +941,7 @@ li {
                                               </p>
                                               <p style="color:#0086c4;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Correo electrónico: {EMAILCLIENTE}
+                                                  E-mail: {EMAILCLIENTE}
                                                 </em>
                                               </p>
                                               <p style="color:#0086c4;font-size:16px">

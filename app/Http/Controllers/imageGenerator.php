@@ -12,7 +12,17 @@ class imageGenerator extends Controller
 
         //dd($imagen);
 
-        $localDirectory = public_path('assets/logos/opticas/');
+        $baseUrl = url('/');
+
+        if($baseUrl !== 'https://www.audio.naturaloptics.com'){
+
+            $localDirectory = public_path('assets/logos/opticas/');
+            
+        }else{
+            
+            $localDirectory = public_path('cita-macro/assets/logos/opticas/');
+
+        }
 
         $localImagen = $localDirectory . $imagen;
 
@@ -22,7 +32,7 @@ class imageGenerator extends Controller
         // Verificar si la imagen existe en el directorio local
         if (!file_exists($localImagen)) {
 
-            // Si la imagen no existe localmente, descargarla desde la URL remota
+            // Si la imagen no existe localmente, se descarga desde la URL remota
             $imageContent = @file_get_contents($remoteImageUrl);
 
             file_put_contents($localImagen, $imageContent);

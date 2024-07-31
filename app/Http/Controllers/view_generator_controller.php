@@ -363,6 +363,7 @@ class view_generator_controller extends Controller
         
         $getLogo = $this->generadorImg->index($logo);
 
+
         if($getLogo){
 
             $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
@@ -378,8 +379,6 @@ class view_generator_controller extends Controller
             //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
-            return response()->json(['message' => 'Email enviado correctamente.']);
-
         } else {
 
             return response()->json(['message' => 'Error en el envío del email.'], 500);
@@ -391,10 +390,4 @@ class view_generator_controller extends Controller
     }
 
     
-
-   /*  public function viewPoliticasPrivacidad($locale){
-
-        return view('pages.policy.index');
-        
-    } */
 }
