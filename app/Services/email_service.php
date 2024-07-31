@@ -10,10 +10,10 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica)
+    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale)
     {
 
-        //dd($logoOptica);
+        //dd($locale);
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
@@ -43,7 +43,7 @@ class email_service
             $mail->Subject = 'Cita previa con '. $origen;
             //dd($mail);
 
-            $archivo = resource_path('views/pages/mail/templateOpticaComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
             //dd($archivo);
 
@@ -75,12 +75,12 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
-                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                $mail->addAddress('a.arroyo@naturalopticsgroup.com');
                 //$mail->addAddress($email_optica);
                 //$mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale);
             }
 
 
@@ -103,7 +103,7 @@ class email_service
         //return "Email enviado!"; 
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale)
     {
 
         $mail = new PHPMailer(true);
@@ -128,7 +128,7 @@ class email_service
             $mail->Subject = 'Confirmación de solicitud de cita previa';
             //dd($mail);
 
-            $archivo = resource_path('views/pages/mail/templateCitaClienteComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
 
 
             $palabrasBuscar = array(

@@ -823,7 +823,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Coloque el texto del preencabezado aquí
+                                                Natural Audio
                                               </p>
                                             </td>
                                           </tr>
@@ -843,8 +843,8 @@ li {
                                           <tr>
                                             <td align="right" class="es-infoblock esd-block-text">
                                               <p>
-                                                <a href="https://viewstripo.email" target="_blank" class="view">
-                                                  Ver en el navegador
+                                                <a href="https://www.naturaloptics.com/" target="_blank" class="view">
+                                                  www.naturaloptics.com
                                                 </a>
                                               </p>
                                             </td>

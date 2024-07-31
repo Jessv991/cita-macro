@@ -371,7 +371,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
         
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         if ($sent) {
