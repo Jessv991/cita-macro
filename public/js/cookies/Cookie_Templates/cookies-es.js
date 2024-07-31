@@ -116,7 +116,7 @@ window.addEventListener('load', function () {
                             }
                         }, {
                             title: 'Más información',
-                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a class="cc-link" href="'+baseUrl+'/politicas-de-privacidad/'+idioma+'">contáctenos</a>.',
+                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a href="'+baseUrl+'/politicas-de-privacidad/'+idioma+'" target="_blank" class="cc-link">contáctenos</a>.',
                         }
                     ]
                 }
