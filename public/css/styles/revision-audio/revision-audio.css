@@ -1,3 +1,20 @@
+.lado-izq{
+
+    background-image: linear-gradient(to left, rgba(0, 134, 196, 0.103), rgba(116,202,231,1));
+       
+}
+
+.lado-der{
+    background-color: #0086C4;
+}
+
+.cont-form-principal{
+    width: 95%;
+    height: 95%;
+    border: solid 1px #74cae7;
+    border-radius: 5%;
+}
+
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 .main {

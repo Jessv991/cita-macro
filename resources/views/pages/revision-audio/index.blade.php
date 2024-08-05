@@ -1,7 +1,7 @@
 @include('layouts.header')
-<div class="row w-100">
+<div class="row w-100 cont-all vh-100">
 
-    <div class="col-12 col-xl-8 col-lg-8 p-0 m-0">
+    <div class="col-12 col-xl-8 col-lg-8 p-0 m-0 lado-izq">
         <div class="d-flex justify-content-center align-items-center mt-5 mb-5 w-100 p-0">
             <div class="carrusel w-100">
                 <div class="carrusel-inner">
@@ -13,8 +13,10 @@
         </div> 
     </div>
 
-    <div class="col-12 col-xl-4 col-lg-4 w-20 p-0 m-0">
-        @include('form.pide_cita')
+    <div class="col-12 col-xl-4 col-lg-4 w-20 p-0 m-0 lado-der d-flex justify-content-center align-items-center">
+        <div class="cont-form-principal d-flex justify-content-center align-items-center">
+            @include('form.pide_cita')
+        </div>
     </div>
 
 </div>
