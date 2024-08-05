@@ -11,8 +11,9 @@
 .cont-form-principal{
     width: 95%;
     height: 95%;
-    border: solid 1px #74cae7;
+    border: solid 0.1px #74cae7;
     border-radius: 5%;
+    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
 }
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
