@@ -15,8 +15,6 @@
         </div>
     </div>
     
-       
-
 
     <div class="col-12 col-xl-4 col-lg-4 w-20 p-0 m-0 lado-der d-flex justify-content-center align-items-center">
         <div class="cont-form-principal position-relative d-flex justify-content-center align-items-center">
