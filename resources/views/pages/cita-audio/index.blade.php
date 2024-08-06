@@ -1,7 +1,7 @@
 @include('layouts.header')
 <div class="row w-100 cont-all vh-100 w-100 p-0 m-0">
 
-    <div class="col-lg-8 col-12 w-100 p-0 m-0 lado-izq position-relative d-flex justify-content-center align-items-lg-center align-items-start">
+    <div class="col-lg-8 col-12 p-0 m-0 lado-izq position-relative d-flex justify-content-center align-items-lg-center align-items-start">
         <div class="position-absolute top-0 end-0 d-flex justify-content-center m-3">
             <img class="img-izq me-2" src="{{ asset('cita-macro/assets/logos/basicos/audio_white.png') }}" alt="">
             <img class="img-der" src="{{ asset('cita-macro/assets/logos/basicos/logo_black_03.png') }}" alt="">
