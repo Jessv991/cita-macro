@@ -85,7 +85,6 @@ class view_generator_controller extends Controller
 
         $empresas = new Empresas();
         $zonas = new Zonas();
-        //$centros = array();
         $centros_audio = array();
 
         /* 
@@ -142,8 +141,6 @@ class view_generator_controller extends Controller
 
         $this->data['centros'] = $centros_audio;
 
-        //dd($this->data['centros']['audios']);
-
         //=====================IDIOMA==========================
         $this->data['idioma'] = $locale;
 
@@ -179,11 +176,6 @@ class view_generator_controller extends Controller
 
 
         $this->data['provincias'] = $zonas->getProvincias($codigo);
-
-
-        //dd($this->data['provincia_weblogin']);
-
-
 
        
 
@@ -223,8 +215,6 @@ class view_generator_controller extends Controller
         } else {
             $this->data['img'] = $imagen;
         }
-        
-        //dd( $this->data['img']);
 
 
 
@@ -270,7 +260,6 @@ class view_generator_controller extends Controller
         $localidad = $request->input('ciudad');
 
         $optica = $empresas->getStoresByProvincia($localidad);
-        //dd($optica);
 
         return response()->json($optica);
     }
@@ -285,7 +274,6 @@ class view_generator_controller extends Controller
 
         $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
 
-        //dd($optica);
         return response()->json($optica);
     }
 
@@ -299,7 +287,6 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
         
         $optica = $empresas->getStoreOnlyAudioByWebloginAndCode($localidad, $tienda);
-        //dd($optica);
 
         return response()->json($optica);
     }
@@ -323,18 +310,11 @@ class view_generator_controller extends Controller
     {
 
         $Citas = new CitasLandings();
-        //$empresas = new Empresas();
         
 
         $weblogin=$request->input('_weblogin');
-        //$_optica=$request->input('_optica');
-        /* $optica=$request->input('optica');
-        $ciudad= $empresas->getCityByoptica($optica);//ciudad
- */
-        //$weblogin = $request->input('weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
-        //dd($tienda);
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');

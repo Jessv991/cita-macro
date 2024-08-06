@@ -13,12 +13,12 @@
 
 /* ===================================BUTTON STYLE=================================== */
 
-.btn-color{
+.btn-color {
     background-color: #0086c4;
     color: #f0f0f0;
 }
 
-.btn-color:hover{
+.btn-color:hover {
     background-color: #8da5b1;
     color: #f0f0f0;
 }
@@ -31,9 +31,9 @@
     ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
-                                     
 
-.contenedor-form{
+
+.contenedor-form {
     padding: 4%;
     position: absolute;
 }
@@ -131,4 +131,59 @@ YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P
     100% {
         transform: rotate(-0.28deg);
     }
+}
+
+/* Hide the default checkbox */
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.form-check-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    font-size: 18px;
+    user-select: none;
+}
+
+/* Create the custom checkbox indicator (the circular box) */
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* When the checkbox is checked, add the checkmark (tick) */
+.custom-checkbox:checked + .form-check-label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 14px;
+    border: solid #555;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Optional: Add some hover and focus styles */
+.custom-checkbox:hover + .form-check-label::before,
+.custom-checkbox:focus + .form-check-label::before {
+    border-color: #000;
+}
+
+input{
+    margin-top: 4%;
+}
+
+select{
+    margin-top: 4%;
 }
