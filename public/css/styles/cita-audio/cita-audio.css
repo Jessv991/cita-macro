@@ -146,3 +146,34 @@ div#animationdivIcon {
  ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
                                            
  */
+
+
+
+ @media (min-width: 0px) and (max-width: 991px) {
+    .cont-form-principal {
+        width: 91% !important;
+    }
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%; 
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select{
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 20px !important;
+    }
+
+ }

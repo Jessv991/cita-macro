@@ -221,7 +221,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) {
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else {
-            return redirect('https://www.naturaloptics.com/cita-commodity/');
+            return redirect('https://www.audio.naturaloptics.com/cita-macro/es/cita-audio');
         }
         // Retorno de la vista
 
