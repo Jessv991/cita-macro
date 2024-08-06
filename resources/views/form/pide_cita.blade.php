@@ -183,8 +183,7 @@
 
                 <div class="b-pedir-citas mt-5">
 
-                    <button type="submit" id="form"
-                        class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
+                    <button type="submit" id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
 
                 </div>
 
@@ -216,7 +215,9 @@
 
                 <hr>
 
-                <button class="btn btn-color" id="volver-form">{{ __('form_translation.volver') }}</button>
+                <div class="b-volver mt-5">
+                    <button class="btn btn-color" id="volver-form">{{ __('form_translation.volver') }}</button>
+                </div>
 
             </div>
 
