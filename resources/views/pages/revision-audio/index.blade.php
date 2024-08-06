@@ -3,8 +3,8 @@
 
     <div class="col-12 col-xl-8 col-lg-8 p-0 m-0 lado-izq position-relative d-flex justify-content-center align-items-center">
         <div class="position-absolute top-0 end-0 d-flex justify-content-center m-3">
-            <img class="img-izq me-2" src="{{ asset('assets/logos/basicos/audio_white.png') }}" alt="">
-            <img class="img-der" src="{{ asset('assets/logos/basicos/logo_black_03.png') }}" alt="">
+            <img class="img-izq me-2" src="{{ asset('cita-macro/assets/logos/basicos/audio_white.png') }}" alt="">
+            <img class="img-der" src="{{ asset('cita-macro/assets/logos/basicos/logo_black_03.png') }}" alt="">
         </div>
         <div class="carrusel w-100">
             <div class="carrusel-inner">
