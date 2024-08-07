@@ -16,7 +16,7 @@
     </div>
     
 
-    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center">
+    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-lg-start justify-content-center align-items-center">
         <div class="cont-form-principal position-relative d-flex justify-content-center align-items-center">
             @include('form.pide_cita')
         </div>
