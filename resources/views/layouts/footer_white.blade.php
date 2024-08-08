@@ -4,7 +4,7 @@
         <img class="img-t med-img svg-color" src="{{ asset('assets/iconos/redes_sociales/twitter-footer.svg') }}" alt="">
         <img class="img-f med-img svg-color" src="{{ asset('assets/iconos/redes_sociales/facebook-footer.svg') }}" alt="">
         <img class="img-i med-img svg-color" src="{{ asset('assets/iconos/redes_sociales/instagram-footer.svg') }}" alt="">
-        <img class="img-b svg-color" src="{{ asset('assets/iconos/blog/negro.svg') }}" alt="">
+        <img class="img-b svg-color" src="{{ asset('assets/iconos/blog/blog.svg') }}" alt="">
         <div class="line-bottom"></div>
     </div>
     
