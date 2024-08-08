@@ -157,29 +157,23 @@ div#animationdivIcon {
     width: 3.6% !important;
 }
 
-/* .color-interior{
-    fill: #fff;
+.color-exterior:hover{
+    fill: #0086c4;
 }
 
-.color-exterior{
-    fill: red;
+.letras-logo:hover{
+    fill: #0086c4;
 }
 
-.letras-logo{
-    fill: red;
+.logo-circulo-audio:hover{
+    fill: #0086c4;
 }
 
-.logo-circulo-audio{
-    fill: red;
+.bordes-logo:hover{
+   fill: #0086c4;
 }
 
-.color-line {
-    border-bottom: solid 2px red !important;
-}
 
-.bordes-logo {
-   fill: red;
-}  */
  
 
 

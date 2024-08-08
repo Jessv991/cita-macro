@@ -12,7 +12,7 @@
     justify-content: center; 
     align-items: center; 
     gap: 10px;
-    width: 100%; 
+    width: 100%;
 }
 
 .redes-style {
@@ -30,6 +30,11 @@
 
 .logo-natural-optic {
     width: 98%;
+}
+
+.line-center{
+    border-left: 1px solid black;
+    height: 33px;
 }
 
 .cuerpo-poli {
