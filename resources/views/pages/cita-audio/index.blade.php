@@ -14,7 +14,9 @@
                     <img class="w-100 h-100" src="{{ asset($data['img']['orejas3']) }}">
                 </div>
             </div>
-            @include('layouts.footer_view')
+            <div class="w-100 d-none  d-lg-block">
+                @include('layouts.footer_view')
+            </div>
         </div>
     </div>
     
@@ -22,6 +24,10 @@
         <div class="cont-form-principal position-relative d-flex justify-content-center align-items-center">
             @include('form.pide_cita')
         </div>
+    </div>
+
+    <div class="w-100 d-block  d-lg-none">
+        @include('layouts.footer_view')
     </div>
 </div>
 

@@ -217,4 +217,37 @@ div#animationdivIcon {
         border-radius: 20px !important;
     }
 
+    /* 
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
+
+    .cuerpo {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+        margin-top: 14%;
+    }
+    
+    .redes-style {
+        width: 11.8% !important;
+    }
+    
+    .blog-style {
+        width: 9.6% !important;
+    }
+
+    .logo-natural-optic {
+        width: 57% !important;
+    }
+
+    .cuerpo-poli {
+        font-size: 84%;
+    }
+
+    .line-center {
+        height: 20px;
+    }
+
  }
