@@ -1,5 +1,4 @@
-</body>
-<footer>
+<footer class="esto">
     {{-- style bootstrap --}}
     <script src="{{ asset('/cita-macro/public/js/bootstrap/bootstrap.bundle.min.js') }}"></script>
 
@@ -36,6 +35,7 @@
         <script src="{{ asset('js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/styles/form/form.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles/footer/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles/'.$landing.'/'.$landing.'.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/styles/cookies/cookieconsent.css') }}">
     @else
@@ -44,11 +44,14 @@
         <script src="{{ asset('cita-macro/js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('cita-macro/js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/form/form.css') }}">
+        <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/footer/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/'.$landing.'/'.$landing.'.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('cita-macro/css/styles/cookies/cookieconsent.css') }}">
         
     @endif
 
 </footer>
+
+</body>
 
 </html>

@@ -9,7 +9,7 @@
 } */
 
 .cont-form-principal {
-    width: 99%;
+    width: 95%;
     height: 90%;
     border-radius: 2%;
     box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
@@ -133,6 +133,28 @@ div#animationdivIcon {
     width: 234px !important;
     border-radius: 20px !important;
     font-size: 20px;
+}
+
+/* 
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                   
+*/
+
+.cuerpo {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+    margin-top: 16%;
+}
+
+.img-b {
+    width: 2.8% !important;
+}
+
+.med-img {
+    width: 3.7% !important;
 }
 
 
