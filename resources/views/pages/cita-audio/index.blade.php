@@ -14,7 +14,7 @@
                     <img class="w-100 h-100" src="{{ asset($data['img']['orejas3']) }}">
                 </div>
             </div>
-            @include('layouts.footer_white')
+            @include('layouts.footer_view')
         </div>
     </div>
     

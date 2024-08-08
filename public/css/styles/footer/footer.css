@@ -11,29 +11,25 @@
     display: flex;
     justify-content: center; 
     align-items: center; 
-    gap: 10px; 
+    gap: 10px;
+    width: 100%; 
 }
 
 .redes-style {
-    width: 2.7%;
+    width: 4.7%;
 }
 
 .blog-style {
-    width: 2.1%;
+    width: 3.6%;
 }
 
-.line-top, .line-bottom {
+.color-line {
     border-bottom: solid 2px black;
     width: 35%;
 }
 
 .logo-natural-optic {
     width: 98%;
-}
-
-.line-center{
-    border-left: solid 2px black;
-    height: 137%;
 }
 
 .cuerpo-poli {

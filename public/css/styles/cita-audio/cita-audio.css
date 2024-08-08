@@ -146,18 +146,41 @@ div#animationdivIcon {
 */
 
 .cuerpo {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
-    margin-top: 16%;
+    margin-top: 14%;
 }
 
-.redes-style {
+/* .redes-style {
     width: 4.8% !important;
 }
 
 .blog-style {
     width: 3.6% !important;
+} */
+
+/* .color-interior{
+    fill: #fff;
 }
 
+.color-exterior{
+    fill: red;
+}
 
+.letras-logo{
+    fill: red;
+}
+
+.logo-circulo-audio{
+    fill: red;
+}
+
+.color-line {
+    border-bottom: solid 2px red !important;
+}
+
+.bordes-logo {
+   fill: red;
+}  */
+ 
 
 
 
