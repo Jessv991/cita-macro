@@ -27,28 +27,27 @@
         $baseUrl = url('/'); //esta es la base url
         $locale = $data['idioma'];
         $landing = $data['landing'];
-        $dispositivo = $data['tipo_dispositivo'];
     @endphp
 
     @if ($baseUrl !== 'https://www.audio.naturaloptics.com'){{-- si es difernte a  www.audio.naturaloptics.com--}}
         <script src="{{ asset('js/jQuery/form/form.js') }}"></script>
-        <script src="{{ asset('js/jQuery/'.$landing.'/'.$landing.'.js') }}"></script>
+        {{-- <script src="{{ asset('js/jQuery/'.$landing.'/'.$landing.'.js') }}"></script> --}}
         <script src="{{ asset('js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('css/styles/form/form.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles/footer/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('css/styles/'.$landing.'/'.$landing.'.css') }}">
-        <link rel="stylesheet" href="{{ asset('css/styles/Mapbox/'.$dispositivo.'/map.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/styles/Mapbox/map.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('css/styles/cookies/cookieconsent.css') }}">
     @else
         <script src="{{ asset('cita-macro/js/jQuery/form/form.js') }}"></script>
-        <script src="{{ asset('cita-macro/js/jQuery/'.$landing.'/'.$landing.'.js') }}"></script>
+        {{-- <script src="{{ asset('cita-macro/js/jQuery/'.$landing.'/'.$landing.'.js') }}"></script> --}}
         <script src="{{ asset('cita-macro/js/cookies/cookieconsent.js') }}"></script>
         <script src="{{ asset('cita-macro/js/cookies/Cookie_Templates/cookies-'.$locale.'.js') }}"></script>
         <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/form/form.css') }}">
         <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/footer/footer.css') }}">
         <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/'.$landing.'/'.$landing.'.css') }}">
-        <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/Mapbox/'.$dispositivo.'/map.css') }}">
+        <link rel="stylesheet" href="{{ asset('cita-macro/css/styles/Mapbox/map.css') }}">
         <link type="text/css" rel="stylesheet" href="{{ asset('cita-macro/css/styles/cookies/cookieconsent.css') }}">
         
     @endif

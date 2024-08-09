@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center p-0">
-    <div id="map"></div>
-</div>
+
+<div id="map"></div>
+
 
 <script>
     const baseUrl = "{{ url('/') }}"; // Base URL de la aplicación
@@ -13,10 +13,7 @@
         rutaPng = assetUrl + 'assets/iconos/map/ubi-nat.png';
     } else {
         rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';
-    }
-
-    console.log({!! json_encode($data) !!});
-    
+    } 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaXZ2bGcyZHUiLCJhIjoiY2t3ZGN1Ym42MXVrbzJucW1teXpnY3h0ZyJ9.IdLdcvriRQugWA6kDWivUA';
     const map = new mapboxgl.Map({
@@ -42,7 +39,7 @@
                     'type': 'geojson',
                     'data': {
                         'type': 'FeatureCollection',
-                        'features': {!! json_encode($data['mapa']) !!}
+                        'features': {!! $data['mapa'] !!}
                     }
                 });
 
