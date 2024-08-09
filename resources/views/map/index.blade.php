@@ -3,6 +3,18 @@
 </div>
 
 <script>
+    const baseUrl = "{{ url('/') }}"; // Base URL de la aplicación
+    const assetUrl = "{{ asset('/') }}"; // URL base para los assets
+
+    // Definir la URL del PNG basado en la base URL
+    let rutaPng;
+
+    if (baseUrl !== 'https://www.audio.naturaloptics.com') {
+        rutaPng = assetUrl + 'assets/iconos/map/ubi-nat.png';
+    } else {
+        rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';
+    }
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiaXZ2bGcyZHUiLCJhIjoiY2t3ZGN1Ym42MXVrbzJucW1teXpnY3h0ZyJ9.IdLdcvriRQugWA6kDWivUA';
     const map = new mapboxgl.Map({
         container: 'map',
@@ -17,7 +29,7 @@
     map.addControl(language);
     map.on('load', () => {
         map.loadImage(
-            'https://www.audio.naturaloptics.com/cita-macro/assets/iconos/map/ubi-nat.svg',
+            rutaPng,
             function(error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
