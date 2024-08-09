@@ -1,0 +1,105 @@
+.container_map {
+  display        : flex;
+  justify-content: center;
+  padding        : 30px 0px 20px 0px;
+  border-radius  : 20px;
+}
+
+#map {
+  display      : block;
+  /* height    : 68vh; */
+  width        : 96%;
+  /* box-shadow   : 20px 20px 60px #bebebe; */
+  border-radius: 20px;
+}
+
+.mapboxgl-popup-content .info {
+  font-size  : 18px;
+  padding    : 10px;
+  font-weight: 600;
+}
+
+.marker {
+  border          : none;
+  cursor          : pointer;
+  height          : 50px;
+  width           : 50px;
+  background-image: url('../../assets/icons/ubi-nat.svg');
+}
+
+.mapboxgl-popup-close-button:hover {
+  font-size: 30px;
+  outline  : none;
+}
+
+.mapboxgl-popup-close-button {
+  transition      : 1s all;
+  right           : 0px;
+  top             : 3px;
+  font-size       : 25px;
+  color           : #fff;
+  /* border-radius: 50px; */
+}
+
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  display: none;
+}
+
+.mapboxgl-popup-content {
+  font           : 400 15px/22px 'Source Sans Pro', 'Helvetica Neue', sans-serif;
+  padding        : 0;
+  min-width      : 270px;
+  width          : 270px;
+  border-radius  : 10px;
+  background     : rgba(147, 154, 170, 0.8);
+  backdrop-filter: blur(7.5px);
+  color          : white;
+}
+
+.mapboxgl-popup-content {
+  font-size    : 15px;
+  background   : #00ABA1;
+  color        : #fff;
+  margin       : -15px 0 0;
+  padding      : 2px;
+  border-radius: 10px 10px 10px 10px;
+  font-weight  : 700;
+}
+
+.mapboxgl-popup-content .info {
+  font-size  : 18px;
+  padding    : 10px;
+  font-weight: 600;
+}
+
+.mapboxgl-popup-content div {
+  padding: 4px;
+}
+
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  align-self      : center;
+  border-bottom   : none;
+  border-top-color: #00ABA1 !important;
+}
+
+
+
+
+canvas {
+  height       : 100% !important;
+  width        : 100% !important;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.pedirCitaMap {
+  background-color: #00ABA1;
+  border          : none;
+  border-radius   : 10px;
+  color           : white !important;
+  padding         : 10px;
+  text-align      : center;
+  text-decoration : none;
+  display         : inline-block;
+  font-size       : 16px;
+  cursor          : pointer;
+}

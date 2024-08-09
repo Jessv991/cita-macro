@@ -15,7 +15,7 @@
     <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
-    <script src="https://www.audio.naturaloptics.com/cita-macro/js/Mapbox/mapbox-gl.js"></script>
+    <script src="{{ asset('js/Mapbox/mapbox-gl.js') }}"></script>
 </head>
 
 <body>

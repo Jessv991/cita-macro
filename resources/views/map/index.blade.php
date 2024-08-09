@@ -18,7 +18,6 @@
     map.on('load', () => {
         map.loadImage(
             'https://www.audio.naturaloptics.com/cita-macro/assets/iconos/map/ubi-nat.svg',
-',
             function(error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
