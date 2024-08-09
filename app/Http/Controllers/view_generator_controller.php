@@ -160,6 +160,9 @@ class view_generator_controller extends Controller
         //=====================TEST=====================
         $this->data['test'] = $test;
 
+        //=====================MAPA=====================
+        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/features.json");
+
         //=====================PROVINCIA=====================
         $logo = $empresas->getLogos($weblogin);
 

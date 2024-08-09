@@ -17,7 +17,7 @@
     map.addControl(language);
     map.on('load', () => {
         map.loadImage(
-            '<?php echo base_url('/assets/icons/ubi-nat.png') ?>',
+            '{{ asset("/assets/iconos/map/ubi-nat.svg") }}',
             function(error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
@@ -26,7 +26,7 @@
                     'type': 'geojson',
                     'data': {
                         'type': 'FeatureCollection',
-                        'features': <?php echo $mapa ?>
+                        'features': {!! json_encode($data['mapa']) !!}
                     }
                 });
 
