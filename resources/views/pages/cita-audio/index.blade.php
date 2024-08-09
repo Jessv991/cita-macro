@@ -3,10 +3,6 @@
 
     <div class="col-lg-8 col-12 p-0 m-0 lado-izq position-relative">
         <div class="d-flex flex-column justify-content-center align-items-lg-center align-items-start w-100">
-            <div class="position-absolute top-0 end-0 d-flex justify-content-center m-3">
-                <img class="img-izq me-2" src="{{ asset('cita-macro/assets/logos/basicos/audio_white.png') }}" alt="">
-                <img class="img-der" src="{{ asset('cita-macro/assets/logos/basicos/logo_black_03.png') }}" alt="">
-            </div>
             <div class="carrusel w-100">
                 <div class="carrusel-inner w-100">
                     <img class="w-100 h-100 active" src="{{ asset($data['img']['orejas']) }}">
@@ -26,7 +22,7 @@
         </div>
     </div>
 
-    <div class="w-100 d-block  d-lg-none">
+    <div class="w-100 d-flex justify-content-center d-block  d-lg-none">
         @include('layouts.footer_view')
     </div>
 </div>
