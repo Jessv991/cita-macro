@@ -8,25 +8,27 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\Zonas;
-use App\Services\email_service;//SERVICIO
-use App\Http\Controllers\imageGenerator;//controller generador de imagen
+use App\Services\email_service; //SERVICIO
+use App\Http\Controllers\imageGenerator; //controller generador de imagen
 
 class view_generator_controller extends Controller
 {
     protected $Email_service;
     protected $generadorImg;
-    
-    public function __construct(Request $request, email_service $Email_service, imageGenerator $generadorImg) {
+
+    public function __construct(Request $request, email_service $Email_service, imageGenerator $generadorImg)
+    {
         $this->getTypeDispositive($request);
-        $this->Email_service = $Email_service;//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
-        $this->generadorImg = $generadorImg;//controller generador de imagen
+        $this->Email_service = $Email_service; //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->generadorImg = $generadorImg; //controller generador de imagen
     }
 
     protected $data = [];
 
-    public function getTypeDispositive($request){
+    public function getTypeDispositive($request)
+    {
 
-         /* 
+        /* 
         
         ██████╗ ██╗███████╗██████╗  ██████╗ ███████╗██╗████████╗██╗██╗   ██╗ ██████╗     
         ██╔══██╗██║██╔════╝██╔══██╗██╔═══██╗██╔════╝██║╚══██╔══╝██║██║   ██║██╔═══██╗    
@@ -70,11 +72,8 @@ class view_generator_controller extends Controller
             $ip = $_SERVER['REMOTE_ADDR'];
         }
 
-        
+
         $this->data['ip'] = $ip;
-
-        
-
     }
 
     public function index($locale, $origen, $weblogin = null, $tienda = null)
@@ -117,13 +116,13 @@ class view_generator_controller extends Controller
 
         if (isset($weblogin) && isset($tienda)) {
             //consulta la tienda específica que sea audio
-            $centros_audio = $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+            $this->data['centros'] = $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
         } elseif (isset($weblogin)) {
             //consultas todas las tiendas por weblogin que sean audio
-            $centros_audio = $empresas->getStoreByCodeAndWeblogin($weblogin);
+            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin);
         } else {
             //consulta las tiendas de aodio
-            $centros_audio = $empresas->getStoreAllAudio();
+            $this->data['centros'] = $empresas->getStoreAllAudio();
         }
 
 
@@ -139,7 +138,7 @@ class view_generator_controller extends Controller
         //$this->data['centros'] = $centros->toArray();
         //$this->data['centros'] = array_merge($this->data['centros'], $centros_audio->toArray());
 
-        $this->data['centros'] = $centros_audio;
+        //$this->data['centros'] = $centros_audio;
 
         //=====================IDIOMA==========================
         $this->data['idioma'] = $locale;
@@ -161,7 +160,8 @@ class view_generator_controller extends Controller
         $this->data['test'] = $test;
 
         //=====================MAPA=====================
-        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/features.json");
+
+        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //=====================PROVINCIA=====================
         $logo = $empresas->getLogos($weblogin);
@@ -180,7 +180,7 @@ class view_generator_controller extends Controller
 
         $this->data['provincias'] = $zonas->getProvincias($codigo);
 
-       
+
 
         /* 
 
@@ -214,7 +214,6 @@ class view_generator_controller extends Controller
             }
 
             $this->data['img'] = $prefixedImagen;
-
         } else {
             $this->data['img'] = $imagen;
         }
@@ -267,7 +266,7 @@ class view_generator_controller extends Controller
         return response()->json($optica);
     }
 
-    
+
 
     public function getOpticasByWeblogin(Request $request)
     {
@@ -286,9 +285,9 @@ class view_generator_controller extends Controller
 
         $localidad = $request->input('weblogin');
         $tienda = $request->input('optica');
-        
+
         $empresas = new Empresas();
-        
+
         $optica = $empresas->getStoreOnlyAudioByWebloginAndCode($localidad, $tienda);
 
         return response()->json($optica);
@@ -313,9 +312,9 @@ class view_generator_controller extends Controller
     {
 
         $Citas = new CitasLandings();
-        
 
-        $weblogin=$request->input('_weblogin');
+
+        $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
         $origen = $request->input('origen');
@@ -334,7 +333,7 @@ class view_generator_controller extends Controller
             'movil' => 'bail|required|digits:9|integer',
             'check-poli' => 'accepted',
         ];
-        
+
         if ($weblogin) {
             $specificRules = [
                 'optica' => 'bail|required',
@@ -346,43 +345,39 @@ class view_generator_controller extends Controller
                 'optica' => 'bail|required',
             ];
         }
-        
+
         $rules = array_merge($baseRules, $specificRules);
-        $validated = $request->validate($rules);        
+        $validated = $request->validate($rules);
 
 
-        
-        
-        
+
+
+
         $url = $request->input('url_landing');
-        
+
         $getLogo = $this->generadorImg->index($logo);
 
 
-        if($getLogo){
+        if ($getLogo) {
 
             $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
-        }else{
+        } else {
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
-        
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale);//SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+
+        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         if ($sent) {
 
             //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
-
         } else {
 
             return response()->json(['message' => 'Error en el envío del email.'], 500);
-            
         }
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
-
-    
 }

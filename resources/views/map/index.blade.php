@@ -17,7 +17,8 @@
     map.addControl(language);
     map.on('load', () => {
         map.loadImage(
-            '{{ asset("/assets/iconos/map/ubi-nat.svg") }}',
+            'https://www.audio.naturaloptics.com/cita-macro/assets/iconos/map/ubi-nat.svg',
+',
             function(error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);
