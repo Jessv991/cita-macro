@@ -1,4 +1,4 @@
-<div class="d-flex justify-content-center p-0 mb-5">
+<div class="d-flex justify-content-center p-0">
     <div id="map"></div>
 </div>
 
@@ -15,6 +15,9 @@
         rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';
     }
 
+    console.log({!! json_encode($data) !!});
+    
+
     mapboxgl.accessToken = 'pk.eyJ1IjoiaXZ2bGcyZHUiLCJhIjoiY2t3ZGN1Ym42MXVrbzJucW1teXpnY3h0ZyJ9.IdLdcvriRQugWA6kDWivUA';
     const map = new mapboxgl.Map({
         container: 'map',
@@ -30,6 +33,7 @@
     map.on('load', () => {
         map.loadImage(
             rutaPng,
+            
             function(error, image) {
                 if (error) throw error;
                 map.addImage('custom-marker', image);

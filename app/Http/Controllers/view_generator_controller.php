@@ -161,7 +161,7 @@ class view_generator_controller extends Controller
 
         //=====================MAPA=====================
 
-        $this->data['mapa'] = curl_init("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
+        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //=====================PROVINCIA=====================
         $logo = $empresas->getLogos($weblogin);
