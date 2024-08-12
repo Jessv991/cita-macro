@@ -220,9 +220,9 @@ class view_generator_controller extends Controller
 
 
 
-        if (view()->exists('pages.' . $origen . '.index')) {
+        if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
-        } else {
+        } else {//redirigimos a vista principal si no existe la ruta
             return redirect('https://www.audio.naturaloptics.com/cita-macro/es/cita-audio');
         }
         // Retorno de la vista

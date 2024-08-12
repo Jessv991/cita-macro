@@ -1,20 +1,18 @@
 
-<div id="map"></div>
+<div id='map' style='width: 1273.33px; height: 624.906px;'></div>
 
 
 <script>
-    
     const baseUrl = "{{ url('/') }}"; // Base URL de la aplicación
-    
+    const assetUrl = "{{ asset('/') }}"; // URL base para los assets
+
     // Definir la URL del PNG basado en la base URL
     let rutaPng;
 
-    
-    
     if (baseUrl !== 'https://www.audio.naturaloptics.com') {
-        rutaPng = '{{ asset("assets/iconos/map/ubi-nat.png") }}';
+        rutaPng = assetUrl + 'assets/iconos/map/ubi-nat.png';
     } else {
-        rutaPng = '{{ asset("cita-macro/assets/iconos/map/ubi-nat.png") }}';
+        rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';
     } 
 
     mapboxgl.accessToken = 'pk.eyJ1IjoiaXZ2bGcyZHUiLCJhIjoiY2t3ZGN1Ym42MXVrbzJucW1teXpnY3h0ZyJ9.IdLdcvriRQugWA6kDWivUA';

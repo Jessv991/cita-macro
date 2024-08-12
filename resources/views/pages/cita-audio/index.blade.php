@@ -31,6 +31,8 @@
     </div>
 </div>
 
+@include('layouts.footer')
+
 {{-- 
 <div class="card-header">{{ __('translation.titulo-1') }}</div>
 <img src="{{ __($data['logo']->f1) }}" alt=""> --}}
@@ -53,4 +55,3 @@
 
 </script>
 
-@include('layouts.footer')

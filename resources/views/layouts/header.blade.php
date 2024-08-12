@@ -14,17 +14,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.6.0/mapbox-gl.css" rel="stylesheet">
-    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
-    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.4.2/mapbox-gl-geocoder.min.js"></script>
+    <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
-    @php
-        $baseUrl = url('/');
-    @endphp
-    @if ($baseUrl !== 'https://www.audio.naturaloptics.com')
-        <script src="{{ asset('js/Mapbox/mapbox-gl.js') }}"></script>
-    @else
-        <script src="{{ asset('cita-macro/js/Mapbox/mapbox-gl.js') }}"></script>
-    @endif
 </head>
 
 <body>
