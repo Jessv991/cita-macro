@@ -19,10 +19,11 @@
         </div>
     </div>
     
-    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center">
-        <div class="cont-form-principal position-relative d-flex justify-content-center align-items-center">
+    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative">
+        <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
             @include('form.pide_cita')
         </div>
+        
     </div>
 
     <div class="w-100 d-flex justify-content-center d-block  d-lg-none">
@@ -49,6 +50,7 @@
             $imgs.eq(index).addClass('active');
         }, 3000); // Cambiar de imagen cada 3 segundos
     });
+
 </script>
 
 @include('layouts.footer')

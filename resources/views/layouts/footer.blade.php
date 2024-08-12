@@ -19,7 +19,6 @@
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
-       
     </script>
     
     {{-- ruta del documento jQuery --}}
