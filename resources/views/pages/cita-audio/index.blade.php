@@ -18,12 +18,12 @@
             </div>
         </div>
     </div>
-    
+
     <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative">
         <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
             @include('form.pide_cita')
         </div>
-        
+
     </div>
 
     <div class="w-100 d-flex justify-content-center d-block  d-lg-none">
@@ -36,22 +36,3 @@
 {{-- 
 <div class="card-header">{{ __('translation.titulo-1') }}</div>
 <img src="{{ __($data['logo']->f1) }}" alt=""> --}}
-
-<script>
-    $(document).ready(function() {
-        var $imgs = $('.carrusel-inner img');
-        var index = 0;
-        setInterval(function() {
-            // Ocultar imagen actual
-            $imgs.eq(index).removeClass('active');
-
-            // Calcular el índice de la siguiente imagen circularmente
-            index = (index + 1) % $imgs.length;
-
-            // Mostrar la siguiente imagen
-            $imgs.eq(index).addClass('active');
-        }, 3000); // Cambiar de imagen cada 3 segundos
-    });
-
-</script>
-
