@@ -161,25 +161,9 @@ div#animationdivIcon {
     fill: #0086c4;
 }
 
-.letras-logo:hover {
-    fill: #0086c4;
-}
-
-.logo-circulo-audio:hover {
-    fill: #0086c4;
-}
-
 .bordes-logo:hover {
     fill: #0086c4;
 }
-
-/* .color-exterior-logo{
-    fill: red;
-}
-
-.color-circulo{
-    fill: red;
-} */
 
 /* 
 ███╗   ███╗ █████╗ ██████╗  █████╗ 
@@ -192,12 +176,7 @@ div#animationdivIcon {
 
 #map {
     margin-top: 5%;
-  }
-
-
-
-
-
+}
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -281,4 +260,3 @@ div#animationdivIcon {
 ██║ ╚═╝ ██║██║  ██║██║     
 ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     
                             */
-
