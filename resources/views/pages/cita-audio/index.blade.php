@@ -10,6 +10,9 @@
                     <img class="w-100 h-100" src="{{ asset($data['img']['orejas3']) }}">
                 </div>
             </div>
+            <div class="w-50 mt-5 style-tarj">
+                @include('test.index')
+            </div>
             <div class="w-100">
                 @include('map.index')
             </div>

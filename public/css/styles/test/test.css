@@ -1,0 +1,10 @@
+.bg-natural {
+    background-color: black !important;
+    color: #fff !important;
+    border-radius: 20px !important;
+    cursor: pointer !important;
+}
+
+.bg-natural:hover {
+    background-color: gray !important;
+}

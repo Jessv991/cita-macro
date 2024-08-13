@@ -175,7 +175,7 @@ div#animationdivIcon {
 */
 
 #map {
-    margin-top: 5%;
+    margin-top: 3rem;
 }
 
 /* 
@@ -252,11 +252,26 @@ div#animationdivIcon {
 
 }
 
-/* 
-███╗   ███╗ █████╗ ██████╗ 
-████╗ ████║██╔══██╗██╔══██╗
-██╔████╔██║███████║██████╔╝
-██║╚██╔╝██║██╔══██║██╔═══╝ 
-██║ ╚═╝ ██║██║  ██║██║     
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     
-                            */
+
+.style-tarj{
+    background-color: #0086c4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
+    padding: 20px;
+}
+
+.bg-natural {
+    background-color: #fff !important;
+    color: #0086c4 !important;
+    border-radius: 20px !important;
+}
+
+.bg-natural:hover {
+    background-color: #aecedd !important;
+}
+
+.natural{
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1;
+    font-size: 35px !important;
+}
