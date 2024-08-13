@@ -1,4 +1,4 @@
-styleMapLanding = 'mapbox://styles/mapbox/standard';
+//styleMap = 'mapbox://styles/mapbox/streets-v11';
 
 $(document).ready(function () {
     var $imgs = $('.carrusel-inner img');

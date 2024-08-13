@@ -21,14 +21,6 @@
     @endif
 
     <script>
-        let styleMapLanding = '';
-    </script>
-
-    {{--ruta jQuery según la landing NOTA: debe quedarse en esta posición para en caso de darle 
-    valor a la variable styleMapLanding en tu js llegue al jsmap con el valor ya colocado --}}
-    <script src="{{ asset($rutaAsset . 'js/jQuery/' . $landing . '/' . $landing . '.js') }}"></script>
-
-    <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
         var getOpticasByWeblogin = '{{ route('getOpticasByWeblogin') }}';
@@ -36,15 +28,8 @@
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
+        var styleMap = '';
         var appData
-        var styleMap
-
-        if(styleMapLanding){
-            
-            styleMap = styleMapLanding;
-        }else{
-            styleMap = 'mapbox://styles/dariusnatural/cl0jfj0qb001s15o8ei998bv1';
-        }
 
         appData = {
             baseUrl: "{{ url('/') }}",
@@ -54,7 +39,9 @@
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
-    
+    /*ruta jQuery según la landing NOTA: debe quedarse en esta posición para en caso de darle 
+    valor a la variable styleMapLanding en tu js llegue al jsmap con el valor ya colocado */
+    <script src="{{ asset($rutaAsset . 'js/jQuery/' . $landing . '/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">

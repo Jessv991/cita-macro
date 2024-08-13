@@ -1,3 +1,10 @@
+
+if(styleMap){
+    styleMap 
+}else{
+    styleMap = 'mapbox://styles/dariusnatural/cl0jfj0qb001s15o8ei998bv1';
+}
+
 const baseUrl = appData.baseUrl;
 const assetUrl = appData.assetUrl;
 const features = appData.mapa;
