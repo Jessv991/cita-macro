@@ -1,4 +1,4 @@
-<footer class="esto">
+<footer>
 
     {{-- ruta del documento jQuery --}}
     @php
@@ -39,8 +39,6 @@
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
-    /*ruta jQuery según la landing NOTA: debe quedarse en esta posición para en caso de darle 
-    valor a la variable styleMapLanding en tu js llegue al jsmap con el valor ya colocado */
     <script src="{{ asset($rutaAsset . 'js/jQuery/' . $landing . '/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
@@ -49,11 +47,7 @@
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/' . $landing . '/' . $landing . '.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <script src="{{ asset($rutaAsset . 'js/map/map.js') }}"></script>
-
-    //animación aos
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    // inicializamos aos
     <script>
         AOS.init();
     </script>
