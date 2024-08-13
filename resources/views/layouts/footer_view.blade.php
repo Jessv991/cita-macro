@@ -124,10 +124,12 @@
                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                 {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
             </a>
+
             <div class="line-center"></div>
-            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
+
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}" target="_blank"
                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
-                {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
+                {{ __('form_translation.Aceptar_politicas_privacidad_3') }}
             </a>
         </label>
     </div>

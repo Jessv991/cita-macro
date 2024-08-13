@@ -12,6 +12,7 @@ return [
     'Telefono' => "Phone",
     'Aceptar_politicas_privacidad_1' => "I accept the",
     'Aceptar_politicas_privacidad_2' => "Privacy Policies",
+    'Aceptar_politicas_privacidad_3' => "Privacy cookies",
     'Politicas_privacidad' => "In accordance with Regulation (EU) 2016/679 of the Parliament and of the Council, which approves the General Data Protection Regulation, we remind you that your personal data will be processed by the sender center of the communication. You can exercise the rights of access, rectification, deletion, limitation of treatment, portability, and opposition by contacting the address of the sender that appears in this communication, just as you can revoke the consent you gave at any time to stop receiving advertising.",
     'Pedir_cita' => "Request appointment",
     'Confirma_reserva' => "Confirm your reservation",
