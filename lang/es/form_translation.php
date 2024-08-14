@@ -3,9 +3,11 @@
 return [
 
     'Pide_cita_rellenando' => 'Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
+    'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
     'Selecciona_una_provincia' => 'Selecciona una provincia',
     'Selecciona_una_ciudad' => 'Selecciona una ciudad',
     'Selecciona_una_optica' => 'Selecciona una óptica',
+    'nombre_optica' => 'Nombre de la óptica',
     'Nombre' => 'Nombre',
     'Apellidos' => 'Apellidos',
     'Email' => 'Email',
@@ -22,5 +24,7 @@ return [
     'parrafo-2'=> "¡Muchas gracias!",
     'volver' => "Volver",
     'politicas-de-privacidad' => 'politicas-de-privacidad',
+    'codigo' => 'Código',
+    'kit' => 'Kit de implantación',
 
 ];

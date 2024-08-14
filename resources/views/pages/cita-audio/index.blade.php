@@ -24,7 +24,7 @@
 
     <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative">
         <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
-            @include('form.pide_cita')
+            @include('form.pedido_opticas')
         </div>
 
     </div>

@@ -83,6 +83,8 @@ Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controlle
 
 Route::post('cita-macro/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
 
+Route::post('cita-macro/postValidateKit', [view_generator_controller::class, 'validateKit'])->name('validateFormKit');
+
 //===============================POST GENERADOR DE IMAGENES===============================
 Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name('imageGenerator');
 /* Auth::routes();

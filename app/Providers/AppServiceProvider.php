@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Services\email_service;
+use App\Services\email_service_comercial;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -15,6 +16,10 @@ class AppServiceProvider extends ServiceProvider
         //registro del servicio
         $this->app->singleton(email_service::class, function ($app) {
             return new email_service();
+        });
+        
+        $this->app->singleton(email_service_comercial::class, function ($app) {
+            return new email_service_comercial();
         });
     }
 

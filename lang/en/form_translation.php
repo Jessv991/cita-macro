@@ -3,9 +3,11 @@
 return [
 
     'Pide_cita_rellenando' => "Request an appointment by filling out the form with your details and we will contact you to schedule a day.",
+    'pedido_cliente_rellenando' => 'Order your implementation kit now by filling out the following form with your information:',
     'Selecciona_una_provincia' => "Select a stated",
     'Selecciona_una_ciudad' => "Select a city",
     'Selecciona_una_optica' => "Select an optical shop",
+    'nombre_optica' => 'Name of the optician',
     'Nombre' => "Name",
     'Apellidos' => "Surname",
     'Email' => "Email",
@@ -21,5 +23,7 @@ return [
     'parrafo-1' => "Your request has been sent. Soon one of our operators will contact you.",
     'parrafo-2' => "Thank you very much!",
     'volver' => "Back",
+    'codigo' => 'Code',
+    'kit' => 'Implantation kit',
 
 ];

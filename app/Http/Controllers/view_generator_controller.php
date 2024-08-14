@@ -7,19 +7,23 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
 use App\Models\Empresas;
+use App\Models\solicitudes_comerciales;
 use App\Models\Zonas;
 use App\Services\email_service; //SERVICIO
+use App\Services\email_service_comercial; //SERVICIO COMERCIAL
 use App\Http\Controllers\imageGenerator; //controller generador de imagen
 
 class view_generator_controller extends Controller
 {
     protected $Email_service;
+    protected $Email_service_comercial;
     protected $generadorImg;
 
-    public function __construct(Request $request, email_service $Email_service, imageGenerator $generadorImg)
+    public function __construct(Request $request, Email_service_comercial $Email_service_comercial, email_service $Email_service, imageGenerator $generadorImg)
     {
         $this->getTypeDispositive($request);
         $this->Email_service = $Email_service; //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service_comercial = $Email_service_comercial; //SERVICIO COMERCIAL
         $this->generadorImg = $generadorImg; //controller generador de imagen
     }
 
@@ -379,5 +383,26 @@ class view_generator_controller extends Controller
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
+    }
+
+    public function validateKit(Request $request){
+
+        $pedido = new solicitudes_comerciales();
+        $locale = $request->input('language');
+        App::setLocale($locale);
+
+        $validated = $request->validate([
+            'optica' => 'bail|required',
+            'codigo' => 'bail|required',
+            'nombre' => 'bail|required|max:25',
+            'email' => 'bail|required|email:rfc,dns',
+            'unidad' => 'bail|required',
+            'check-poli' => 'accepted',
+        ]);
+
+        $this->Email_service_comercial->sendEmailComercial($validated);
+
+        return response()->json(['message' => 'Formulario validado correctamente.']);
+
     }
 }
