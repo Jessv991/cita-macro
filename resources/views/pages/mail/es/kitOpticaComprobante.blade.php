@@ -1002,11 +1002,6 @@ li {
                                               <table width="100%" cellspacing="0" cellpadding="0">
                                                   <tbody>
                                                       <tr>
-                                                          <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">Siguenos</h3>
-                                                          </td>
-                                                      </tr>
-                                                      <tr>
                                                           <td class="esd-block-social" align="center" style="font-size:0">
                                                               <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                                   <tbody>
