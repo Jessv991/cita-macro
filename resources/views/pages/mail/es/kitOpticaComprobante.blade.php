@@ -1002,6 +1002,9 @@ li {
                                               <table width="100%" cellspacing="0" cellpadding="0">
                                                   <tbody>
                                                       <tr>
+                                                          
+                                                      </tr>
+                                                      <tr>
                                                           <td class="esd-block-social" align="center" style="font-size:0">
                                                               <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                                   <tbody>
