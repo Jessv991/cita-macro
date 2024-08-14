@@ -63,4 +63,23 @@ class solicitudes_comerciales extends Model
     public $timestamps = false;
 
     
+    public function saveCustomerData($optica, $nombre, $email, $unidad, $fecha, $codigo, $origen)
+    {
+        try {
+            $this->fill([
+                'nombre_empresa' => $optica,
+                'codigo_empresa' => $codigo,
+                'fecha' => $fecha,
+                'nombre_contacto' => $nombre,
+                'email_contacto' => $email,
+                'origen' => $origen,
+                'unidades' => $unidad,
+            ]);
+            $this->save();
+        } catch (\Exception $e) {
+            // Manejo de la excepción
+            echo('No se han guardado los datos correctamente');
+        }
+    }
+
 }

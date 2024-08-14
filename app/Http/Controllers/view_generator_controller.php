@@ -386,10 +386,21 @@ class view_generator_controller extends Controller
     }
 
     public function validateKit(Request $request){
-
-        $pedido = new solicitudes_comerciales();
+        
+        $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
+        $origen = $request->input('origen');
         $locale = $request->input('language');
+        $test = $request->input('_test');
         App::setLocale($locale);
+
+        /* 
+        dependiendo de la landing, en el diseño de la misma deben colocar un input y en su valor colocar
+        el telefono de la persona responsable de la promoción y el id y el name de ese input debe llamarse 
+        'telefono_optica'. Se debe hacer lo mismo con el email de la persona responsable y el id y name de
+        ese input email debe ser 'mail_optica'. 
+        */
+        $telefono_optica = $request->input('telefono_optica');
+        $mail_optica = $request->input('mail_optica');
 
         $validated = $request->validate([
             'optica' => 'bail|required',
@@ -400,7 +411,7 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ]);
 
-        $this->Email_service_comercial->sendEmailComercial($validated);
+        $this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
 

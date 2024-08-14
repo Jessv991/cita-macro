@@ -39,7 +39,7 @@
                 data-aos-duration="2200">
 
                 <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
-                    id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
+                    id="nombre" placeholder='{{ __('form_translation.contacto') }}'>
 
             </div>
 
@@ -91,7 +91,7 @@
                 <div class="b-pedir-citas mt-5">
 
                     <button type="submit" id="form"
-                        class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
+                        class="btn btn-color">{{ __('form_translation.Pedir_kit') }}</button>
 
                 </div>
 

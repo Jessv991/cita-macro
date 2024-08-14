@@ -26,5 +26,7 @@ return [
     'politicas-de-privacidad' => 'politicas-de-privacidad',
     'codigo' => 'Código',
     'kit' => 'Kit de implantación',
+    'Pedir_kit' => "PEDIR KIT DE IMPLEMENTACIÓN",
+    'contacto' => "Persona de contacto",
 
 ];

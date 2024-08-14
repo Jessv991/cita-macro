@@ -25,5 +25,7 @@ return [
     'volver' => "Back",
     'codigo' => 'Code',
     'kit' => 'Implantation kit',
+    'Pedir_kit' => "ORDER IMPLEMENTATION KIT",
+    'contacto' => "Contact person",
 
 ];
