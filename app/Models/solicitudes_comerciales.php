@@ -5,6 +5,17 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+/**
+ * @property int    $id_solicitud
+ * @property string $nombre_empresa
+ * @property string $codigo_empresa
+ * @property string $fecha
+ * @property string $nombre_contacto
+ * @property string $telefono_contacto
+ * @property string $email_contacto
+ * @property string $origen
+ * @property int $unidades
+ */
 class solicitudes_comerciales extends Model
 {
     use HasFactory;
@@ -29,7 +40,7 @@ class solicitudes_comerciales extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre_empresa', 'codigo_empresa', 'fecha', 'nombre_contacto', 'telefono_contacto', 'seccion', 'convertida', 'email_contacto', 'origen', 'unidades'
+        'nombre_empresa', 'codigo_empresa', 'fecha', 'nombre_contacto', 'telefono_contacto', 'email_contacto', 'origen', 'unidades'
     ];
 
     /**
@@ -45,7 +56,15 @@ class solicitudes_comerciales extends Model
      * @var array
      */
     protected $casts = [
-        'id_solicitud' => 'int', 'nombre_empresa' => 'string', 'codigo_empresa' => 'string', 'fecha' => 'datetime', 'nombre_contacto' => 'string', 'telefono_contacto' => 'string', 'seccion' => 'string', 'convertida' => 'boolean', 'email_contacto' => 'string', 'origen' => 'string', 'unidades' => 'int'
+        'id_solicitud' => 'int', 
+        'nombre_empresa' => 'string', 
+        'codigo_empresa' => 'string', 
+        'fecha' => 'string', 
+        'nombre_contacto' => 'string', 
+        'telefono_contacto' => 'string',
+        'email_contacto' => 'string', 
+        'origen' => 'string', 
+        'unidades' => 'int'
     ];
 
     /**

@@ -946,12 +946,12 @@ li {
                                               </p>
                                               <p style="color:#0086c4;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Unidades: {UNIDAD}
+                                                  Fecha del pedido: {FECHA}
                                                 </em>
                                               </p>
                                               <p style="color:#0086c4;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Fecha del pedido: {FECHA}
+                                                  Unidades: {UNIDAD}
                                                 </em>
                                               </p>
                                               <p style="color:#0086c4;font-size:16px">

@@ -209,7 +209,7 @@
             <div class="d-flex flex-column text-center w-100">
 
                 <span class="">{{ __('form_translation.titol-gracias') }}</span>
-                <span class="">{{ __('form_translation.parrafo-1') }}</span>
+                <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
 
                 <hr>

@@ -17,7 +17,7 @@ class email_service_comercial
         $nombre = $validated['nombre'];
         $email_cliente = $validated['email'];
         $unidad = $validated['unidad'];
-        $fecha = date("Y-m-d H:i:s");
+        $fecha = date("Y-m-d");
 
         $mail = new PHPMailer(true);
 
@@ -39,7 +39,6 @@ class email_service_comercial
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Kit solicitado por '. $optica;
-
             $archivo = resource_path('views/pages/mail/'.$locale.'/kitOpticaComprobante.blade.php');
 
             $palabrasBuscar = array(
@@ -63,7 +62,7 @@ class email_service_comercial
 				//$mail->addCC('d.hernandez@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                //$this->sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica);
+                $this->sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica);
             }
 
 
@@ -87,11 +86,12 @@ class email_service_comercial
 
     }
 
-    function sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica)
+    function sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica)
     {
 
         $pedido = new solicitudes_comerciales();
         $mail = new PHPMailer(true);
+        $fechaBD = date("Y-m-d H:i:s");
 
         try {
 
@@ -110,24 +110,22 @@ class email_service_comercial
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Confirmación de solicitud de cita previa';
-            //dd($mail);
-
-            $archivo = resource_path('views/pages/mail/'.$locale.'/kitOpticaComprobante.blade.php');
+            $mail->Subject = 'Confirmación de su pedido';
+            $archivo = resource_path('views/pages/mail/'.$locale.'/kitClienteComprobante.blade.php');
 
 
             $palabrasBuscar = array(
-                '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{LOGO}'
+                '{NOMBREOPTICA}', '{CONTACTO}', '{EMAIL}', '{CODIGO}', '{FECHA}', 
+                '{UNIDAD}', '{ORIGIN}', '{TELEFONOPTICA}', '{EMAILOPTICA}', '{LOGO}'
             );
 
-            $palabrasReemplazar = array($optica, $nombre, $email, $unidad, $locale);
+            $palabrasReemplazar = array($optica, $nombre, $email_cliente, $codigo, $fecha, $unidad, $origen, $telefono_optica, $mail_optica, $logoOptica);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
             
-            $mail->addAddress($email);
-            $pedido->saveCustomerData($optica, $nombre, $email, $unidad, $fecha, $codigo, $origen);
+            $mail->addAddress($email_cliente);
+            $pedido->saveCustomerData($optica, $nombre, $email_cliente, $unidad, $fechaBD, $codigo, $origen);
 
 
             try {

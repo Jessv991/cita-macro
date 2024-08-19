@@ -836,32 +836,91 @@ button.es-button {
            </table></td>
          </tr>
        </table>
-       <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important">
-         <tr style="border-collapse:collapse">
-          <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
-             <tr style="border-collapse:collapse">
-              <td align="left" style="Margin:0;padding-top:30px;padding-right:40px;padding-bottom:10px;padding-left:40px">
-               <table width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                 <tr style="border-collapse:collapse">
-                  <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
-                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#0086c4">Solicitud de cita previa recibida</h3></td>
-                     </tr>
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">Gracias por confiar en nuestro centro para cuidar de tu salud. Apreciamos tu elección y nos comprometemos a ofrecerte el mejor servicio posible. En breve, uno de nuestros especialistas se pondrá en contacto contigo para concertar una cita que se ajuste a tus necesidades y horarios. Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos. Estamos aquí para ayudarte en todo lo que necesites.</p></td>
-                     </tr>
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table></td>
-             </tr>
-           </table></td>
-         </tr>
-       </table>
+       <table cellspacing="0" cellpadding="0" align="center" class="es-content">
+        <tbody>
+          <tr>
+            <td align="center" class="esd-stripe">
+              <table width="600" cellspacing="0" cellpadding="0" bgcolor="#ffffff" align="center" esd-img-prev-src class="es-content-body">
+                <tbody>
+                  <tr>
+                    <td align="left" class="esd-structure es-p30t es-p10b es-p40r es-p40l">
+                      <table width="100%" cellspacing="0" cellpadding="0">
+                        <tbody>
+                          <tr>
+                            <td width="520" valign="top" align="center" class="esd-container-frame">
+                              <table width="100%" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                  <tr>
+                                    <td align="center" class="esd-block-text">
+                                      <h3 style="color:#0086c4">
+                                        Detalles de tú pedido
+                                      </h3>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td align="center" class="esd-block-text es-p15t es-p15b">
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Óptica: {NOMBREOPTICA}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Persona contacto: {CONTACTO}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          E-mail: {EMAIL}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Código de la óptica: {CODIGO}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Fecha del pedido: {FECHA}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Unidades: {UNIDAD}
+                                        </em>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%"></em>
+                                        <br>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Este pedido se ha hecho a través de:
+                                        </em>
+                                        <br>
+                                      </p>
+                                      <p style="color:#0086c4;font-size:16px">
+                                        <em style="line-height:150%">
+                                          Natural Audio {ORIGIN}
+                                        </em>
+                                        <br>
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+        </tbody>
+      </table>
        <table cellpadding="0" cellspacing="0" align="center" class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
@@ -911,7 +970,7 @@ button.es-button {
                                             <td class="esd-block-text es-p10b" align="center">
                                                 <h3 style="color: #ffffff;">o encuéntranos</h3>
                                                 <p style="color: #ffffff;"><br></p>
-                                                <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
+                                                <p style="color: #ffffff;">Carrer de la Variant, 21, 25123 Torrefarrera, Lleida</p>
                                                 <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
                                                 <p style="color: #ffffff;">{EMAILOPTICA}</p>
                                             </td>
