@@ -22,6 +22,8 @@ return [
     'titol-gracias' => "Sol·licitud de cita prèvia enviada",
     'parrafo-1' => "La seva sol·licitud s'ha enviat. Aviat un dels nostres operadors es posarà a contacte amb vostè.",
     'parrafo-2' => "Moltes gràcies!",
+    'titol-gracias-pedido' => "Sol·licitud de comanda enviada",
+    'parrafo-1-pedido' => "El nostre equip ja l'està preparant per a la seva entrega, ens posarem en contacte amb tu si hi hagués algun problema.",
     'volver' => "Tornar",
     'politicas-de-privacidad' => 'politicas-de-privacidad',
     'codigo' => 'Codi',

@@ -22,6 +22,8 @@ return [
     'titol-gracias' => "Appointment request sent",
     'parrafo-1' => "Your request has been sent. Soon one of our operators will contact you.",
     'parrafo-2' => "Thank you very much!",
+    'titol-gracias-pedido' => "Order request sent",
+    'parrafo-1-pedido' => "Our team is already preparing it for delivery, we will contact you if there is any problem.",
     'volver' => "Back",
     'codigo' => 'Code',
     'kit' => 'Implantation kit',
