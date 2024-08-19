@@ -916,14 +916,14 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#0086c4">
-                                                T'hem aconseguit una nova cita!
+                                                Nova comanda de KIT Netejadors!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
                                               <p style="color:#0086c4;font-size:16px;line-height:150%">
-                                                Contacta amb el client per acordar-la:
+                                                Contacta amb el client per acordar-ho tot:
                                               </p>
                                             </td>
                                           </tr>
