@@ -10,7 +10,7 @@
                     <img class="w-100 h-100" src="{{ asset($data['img']['orejas3']) }}">
                 </div>
             </div>
-            <div class="w-50 mt-5 style-tarj">
+            <div class="w-50 mt-5 style-tarj" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 @include('test.index')
             </div>
             <div class="w-100">
