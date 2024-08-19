@@ -17,6 +17,31 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
+
+    @php
+        $baseUrl = url('/'); //esta es la base url
+        $locale = $data['idioma'];
+        $landing = $data['landing'];
+        $rutaAsset;
+    @endphp
+
+    @if ($baseUrl !== 'https://www.audio.naturaloptics.com')
+       {{-- si es difernte a  www.audio.naturaloptics.com --}} 
+
+        @php
+            $rutaAsset = '';
+        @endphp
+    @else
+        @php
+            $rutaAsset = 'cita-macro/';
+        @endphp
+    @endif
+
+    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
+    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
+    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/' . $landing . '/' . $landing . '.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
 </head>
 
 <body>

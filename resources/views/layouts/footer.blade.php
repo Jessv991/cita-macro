@@ -42,11 +42,6 @@
     <script src="{{ asset($rutaAsset . 'js/jQuery/' . $landing . '/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
-    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
-    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
-    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/' . $landing . '/' . $landing . '.css') }}">
-    <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <script src="{{ asset($rutaAsset . 'js/jQuery/map/map.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/test/test.js') }}"></script>
     <script>
