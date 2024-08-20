@@ -23,10 +23,9 @@ class email_service_comercial
 
         try {
 
-            // SMTP configuration
             $mail->CharSet = 'UTF-8';
-            $mail->SMTPDebug = 3; // O 4 para más detalle
-            $mail->Debugoutput = 'html'; // Para salida HTML
+            $mail->SMTPDebug = 3;
+            $mail->Debugoutput = 'html';
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
@@ -56,10 +55,7 @@ class email_service_comercial
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
-                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
-
-                //$mail->addAddress('a.debeascoa@naturalopticsgroup.com');
-				//$mail->addCC('d.hernandez@naturalopticsgroup.com');
+                $mail->addAddress($mail_optica);
 
                 //función que envía email al cliente 
                 $this->sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica);
