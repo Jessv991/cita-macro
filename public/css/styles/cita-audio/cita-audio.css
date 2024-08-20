@@ -63,12 +63,12 @@
 }
 
 .med-img-circle {
-    width: 46%;
+    width: 64%;
 }
 
 .t-img-circle {
     color: #0086c4;
-    font-size: 28px;
+    font-size: 24px;
     line-height: 29px;
 }
 
@@ -86,6 +86,36 @@
 .text-centre {
     color: #0086c4;
     line-height: 40px;
+}
+
+/* botón flotante */
+
+.btn-flotante {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    bottom: 40px;
+    right: 22px;
+    background-color: #d6e0eb;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.646);
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Efecto hover */
+.btn-flotante:hover {
+    background-color: #95c3f4;
+    transform: scale(1.1);
+}
+.bfi{
+    width: 55px;
 }
 
 
@@ -218,9 +248,9 @@ div#animationdivIcon {
 
 
 @media (max-width: 2000px) {
-    .cont-form-principal {
+    /* .cont-form-principal {
         width: 91% !important;
-    }
+    } */
 
     .text-top-form {
         font-size: 20px;
@@ -246,18 +276,18 @@ div#animationdivIcon {
 
     .cont-text-black {
         color: #000;
-        font-size: 26px;
+        font-size: 22px;
         margin-top: 4%;
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
     .fz-1 {
-        font-size: 68px;
+        font-size: 55px;
     }
 
     .fz-2 {
-        font-size: 58px;
+        font-size: 45px;
     }
 
     /* 
@@ -274,11 +304,11 @@ div#animationdivIcon {
     }
 
     .redes-style {
-        width: 3.5% !important;
+        width: 4.5% !important;
     }
 
     .blog-style {
-        width: 2.6% !important;
+        width: 3.4% !important;
     }
 
     .logo-natural-optic {

@@ -24,7 +24,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/transito.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
@@ -35,7 +35,7 @@
                     </div>
                 </div>
             
-                <div class="col-12 col-md-6 col-lg-3 mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/revision.png') }}" />
                     <div class="mt-3">
                         @if ($locale === 'es')
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             
-                <div class="col-12 col-md-6 col-lg-3 mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/girl.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
@@ -68,7 +68,7 @@
                     </div>
                 </div>
             
-                <div class="col-12 col-md-6 col-lg-3 mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/baby.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
@@ -82,7 +82,7 @@
             </div>
             
 
-            <div class="style-tarj" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+            <div class="style-tarj w-50" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 @include('test.index')
             </div>
 
@@ -98,11 +98,11 @@
                 @include('layouts.footer_view')
             </div>
         </div>
+
     </div>
 
-    <div
-        class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
-        <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center d-none">
+    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
+        <div class="cont-form-principal formulario position-fixed d-flex justify-content-center align-items-center d-none">
             @include('form.pedido_opticas')
         </div>
 
@@ -112,6 +112,8 @@
         @include('layouts.footer_view')
     </div>
 </div>
+
+<a href="#" class="btn-flotante" id="btn-flotante"><img class="bfi" src="{{ asset('assets/iconos_landings/N_2.png') }}" alt="Icono"></a>
 
 @include('layouts.footer')
 
