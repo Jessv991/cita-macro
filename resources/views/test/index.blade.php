@@ -1,7 +1,7 @@
 <div id="test" class="d-flex flex-column justify-content-center align-items-center p-4 rounded-20 bg-blue text-center w-100">
 
     <div id="quest" class="d-flex flex-column justify-content-center align-items-center">
-        <div class="text-center mb-3 mb-md-5">
+        <div class="text-center mb-3 mb-md-5 efect-test">
             <span class="lead fs-1 natural">{{ __('test.haz-test') }}</span>
         </div>
 
@@ -14,7 +14,7 @@
     </div>
 
     <div class="text-center d-none" id="quest-1">
-        <div class="text-center mb-5">
+        <div class="text-center efect-test mb-5">
             <span class="lead fs-1 natural">{{ __('test.question1') }}</span>
         </div>
 
@@ -29,7 +29,7 @@
     </div>
 
     <div class="text-center d-none" id="quest-2">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 efect-test">
             <span class="lead fs-1 natural">{{ __('test.question2') }}</span>
         </div>
 
@@ -44,7 +44,7 @@
     </div>
 
     <div class="text-center d-none" id="quest-3">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 efect-test">
             <span class="lead fs-1 natural">{{ __('test.question3') }}</span>
         </div>
 
@@ -59,7 +59,7 @@
     </div>
 
     <div class="text-center d-none" id="quest-4">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 efect-test">
             <span class="lead fs-1 natural">{{ __('test.question4') }}</span>
         </div>
         
@@ -74,7 +74,7 @@
     </div>
 
     <div class="text-center d-none" id="quest-5">
-        <div class="text-center mb-5">
+        <div class="text-center mb-5 efect-test">
             <span class="lead fs-1 natural">{{ __('test.question5') }}</span>
         </div>
 
@@ -90,7 +90,7 @@
 
     <div class="text-center d-none" id="resultado-1">
         <div class="row m-2 mb-5 text-center w-100">
-            <div class="col-12 col-xl-8 col-lg-8 w-100">
+            <div class="col-12 col-xl-8 col-lg-8 w-100 efect-test">
                 <div class="lead fs-3 natural w-100">{{ __('test.respuesta_neg') }}</div>
             </div>
         </div>
@@ -103,7 +103,7 @@
 
     <div class="text-center d-none" id="resultado-2">
         <div class="row m-2 mb-5 text-center w-100">
-            <div class="col-12 col-xl-8 col-lg-8 w-100">
+            <div class="col-12 col-xl-8 col-lg-8 w-100 efect-test">
                 <div class="lead fs-3 natural w-100">{{ __('test.respuesta_pos') }}</div>
             </div>
         </div>
