@@ -4,7 +4,7 @@ var correcta = 0;
 // START
 $('#quest-button').on('click', () => {
     $('#quest').addClass('d-none');
-    $('#quest-1').removeClass('d-none').addClass('fade-in');
+    $('#quest-1').removeClass('d-none').hide().fadeIn(800);
 });
 
 // QUEST 1

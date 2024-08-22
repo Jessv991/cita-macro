@@ -42,8 +42,8 @@ $(document).ready(function () {
 
         $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
         $('.lado-izq').addClass('col-lg-8');
-        $('.lado-der').removeClass('d-none');
-        $('.formulario').removeClass('d-none');
+        $('.lado-der').removeClass('d-none').hide().show(800);
+        //$('.formulario').hide().show(800);//desaparición y aparición del formulario
         $('.carrusel').removeClass('w-75').addClass('w-100');
         $('.redes-style').attr('style', 'width: 5.5% !important');
         $('.blog-style').attr('style', 'width: 4.3% !important');

@@ -104,7 +104,7 @@
     </div>
 
     <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
-        <div class="cont-form-principal formulario position-fixed d-flex justify-content-center align-items-center d-none">
+        <div class="cont-form-principal formulario position-fixed d-flex justify-content-center align-items-center">
             <button class="btn-close">×</button>
             @include('form.pedido_opticas')
         </div>
@@ -120,6 +120,8 @@
 
 @include('layouts.footer')
 
-{{-- col-lg-8 col-12
+{{-- 
+col-lg-8 col-12
 <div class="card-header">{{ __('translation.titulo-1') }}</div>
-<img src="{{ __($data['logo']->f1) }}" alt=""> --}}
+<img src="{{ __($data['logo']->f1) }}" alt=""> 
+--}}

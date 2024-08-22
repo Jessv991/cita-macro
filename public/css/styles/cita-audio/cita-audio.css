@@ -89,7 +89,14 @@
     line-height: 40px;
 }
 
-/* botón flotante */
+/* 
+██████╗  ██████╗ ████████╗███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔══██╗██╔═══██╗╚══██╔══╝████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+██████╔╝██║   ██║   ██║   ██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══██╗██║   ██║   ██║   ██║╚██╗██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██████╔╝╚██████╔╝   ██║   ██║ ╚████║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═════╝  ╚═════╝    ╚═╝   ╚═╝  ╚═══╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                              */
 
 .btn-flotante {
     position: fixed;
@@ -143,33 +150,23 @@
 
 .cont-form-principal {
     position: relative;
-    /* Necesario para posicionar el botón de cierre */
 }
 
 .btn-close {
     position: absolute;
     top: 10px;
-    /* Ajusta según el diseño deseado */
     right: 10px;
-    /* Ajusta según el diseño deseado */
     background: none;
     border: none;
     font-size: 34px;
-    /* Ajusta el tamaño de la 'X' */
     color: #ffffff;
-    /* Cambia el color de la 'X' según tu diseño */
     cursor: pointer;
     opacity: 1;
 }
 
 .btn-close:hover {
     color: black;
-    /* Cambia el color al pasar el mouse, si deseas */
 }
-
-
-
-
 
 
 /* 
