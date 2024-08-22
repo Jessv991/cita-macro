@@ -10,9 +10,11 @@
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
+        <input type="hidden" id="telefono_optica" name="telefono_optica" value="{{ $telefonoOptica }}">
+        <input type="hidden" id="mail_optica" name="mail_optica" value="{{ $mailOptica }}">
 
 
-        <div class="d-flex justify-content-center align-items-start mb-5">
+        <div class="d-flex justify-content-center align-items-start">
             <p class="text-top-form">{{ __('form_translation.pedido_cliente_rellenando') }}</p>
         </div>
 
@@ -141,19 +143,15 @@
         var formData = $('#formMacroContactologia').serialize();
 
         $.ajax({
-            url: '{{ route('validateFormKit') }}', // Ruta de Laravel que maneja la validación
+            url: '{{ route('validateFormKit') }}',
             type: 'POST',
-            data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
+            data: formData + '&_token={{ csrf_token() }}', 
             success: function(response) {
                 $('#formMacroContactologia').addClass('d-none');
                 $('#gracias').removeClass('d-none');
-                // Manejar la respuesta del servidor, por ejemplo, redirigir
-                //console.log(response);
-                //window.location.href = response.redirectTo; // Ejemplo de redirección
             },
             error: function(xhr, status, error) {
 
-                // Manejar errores si es necesario
                 if (xhr.status === 422) {
                     var errors = xhr.responseJSON.errors;
 

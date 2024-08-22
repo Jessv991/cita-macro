@@ -40,42 +40,30 @@ $(document).ready(function () {
 
         e.preventDefault();
 
-        if (flotanteActivo === false) {
-            $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
-            $('.lado-izq').addClass('col-lg-8');
-            $('.lado-der').removeClass('d-none');
-            $('.formulario').removeClass('d-none');
-            $('.carrusel').removeClass('w-75').addClass('w-100');
-            $('.btn-flotante').css({
-                'width': '60px',
-                'height': '60px',
-                'right': '427px'
-            });
-            $('.bfi').css('width', '40px');
-            $('.redes-style').attr('style', 'width: 5.5% !important');
-            $('.blog-style').attr('style', 'width: 4.3% !important');
-            $('.style-tarj').removeClass('w-50').addClass('w-75');
+        $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
+        $('.lado-izq').addClass('col-lg-8');
+        $('.lado-der').removeClass('d-none');
+        $('.formulario').removeClass('d-none');
+        $('.carrusel').removeClass('w-75').addClass('w-100');
+        $('.redes-style').attr('style', 'width: 5.5% !important');
+        $('.blog-style').attr('style', 'width: 4.3% !important');
+        $('.style-tarj').removeClass('w-50').addClass('w-75');
+        $('.btn-flotante').addClass('d-none');
+        $('.med-img-circle').attr('style', 'width: 38% !important');
 
-            flotanteActivo = true;
-        } else {
-            $('.card-style').removeClass('col-lg-6').addClass('col-lg-3');
-            $('.lado-izq').removeClass('col-lg-8');
-            $('.lado-der').addClass('d-none');
-            $('.formulario').addClass('d-none');
-            $('.carrusel').removeClass('w-100').addClass('w-75');
-            $('.btn-flotante').css({
-                'width': '80px',
-                'height': '80px',
-                'right': '22px'
-            });
-            $('.bfi').css('width', '55px');
-            $('.redes-style').attr('style', 'width: 3.5% !important');
-            $('.blog-style').attr('style', 'width: 2.6% !important');
-            $('.style-tarj').removeClass('w-75').addClass('w-50');
+    });
 
-            flotanteActivo = false;
-        }
-
+    $('.btn-close').on('click', function (e) {
+        $('.btn-flotante').removeClass('d-none');
+        $('.card-style').removeClass('col-lg-6').addClass('col-lg-3');
+        $('.lado-izq').removeClass('col-lg-8');
+        $('.lado-der').addClass('d-none');
+        $('.formulario').addClass('d-none');
+        $('.carrusel').removeClass('w-100').addClass('w-75');
+        $('.redes-style').attr('style', 'width: 3.5% !important');
+        $('.blog-style').attr('style', 'width: 2.6% !important');
+        $('.style-tarj').removeClass('w-75').addClass('w-50');
+        $('.med-img-circle').attr('style', 'width: 64% !important');
     });
 
 });

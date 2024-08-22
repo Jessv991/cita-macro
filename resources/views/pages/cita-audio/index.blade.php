@@ -1,5 +1,7 @@
 @php
     $locale = $data['idioma'];
+    $telefonoOptica = '681329383'; 
+    $mailOptica = 'j.vasquez@naturalopticsgroup.com';
 @endphp
 
 @include('layouts.header')
@@ -34,29 +36,29 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/revision.png') }}" />
                     <div class="mt-3">
                         @if ($locale === 'es')
-                        <div class="p-titol-card3">
-                            <span class="t-img-circle">{{ __('cita_audio.card-3-1') }}</span><br>
-                            <span class="t-img-circle fw-bold">{{ __('cita_audio.card-3-2') }}</span>
-                        </div>
-                        @endif 
-            
-                        @if ($locale === 'cat')
-                        <div class="p-titol-card3-cat d-flex justify-content-center align-items-center">
-                            <span class="fw-bold">{{ __('cita_audio.card-3-2') }}</span>
-                        </div>
+                            <div class="p-titol-card3">
+                                <span class="t-img-circle">{{ __('cita_audio.card-3-1') }}</span><br>
+                                <span class="t-img-circle fw-bold">{{ __('cita_audio.card-3-2') }}</span>
+                            </div>
                         @endif
-            
+
+                        @if ($locale === 'cat')
+                            <div class="p-titol-card3-cat d-flex justify-content-center align-items-center">
+                                <span class="fw-bold">{{ __('cita_audio.card-3-2') }}</span>
+                            </div>
+                        @endif
+
                         <div class="text-center cont-text-black">
                             <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-3') }}</span>
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/girl.png') }}" />
                     <div class="mt-3">
@@ -67,7 +69,7 @@
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/baby.png') }}" />
                     <div class="mt-3">
@@ -78,9 +80,9 @@
                         </div>
                     </div>
                 </div>
-            
+
             </div>
-            
+
 
             <div class="style-tarj w-50" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                 @include('test.index')
@@ -103,6 +105,7 @@
 
     <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
         <div class="cont-form-principal formulario position-fixed d-flex justify-content-center align-items-center d-none">
+            <button class="btn-close">×</button>
             @include('form.pedido_opticas')
         </div>
 
@@ -113,7 +116,7 @@
     </div>
 </div>
 
-<a href="#" class="btn-flotante" id="btn-flotante"><img class="bfi" src="{{ asset('assets/iconos_landings/N_2.png') }}" alt="Icono"></a>
+<a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset('assets/iconos/form/icon-form3.png') }}" alt="Icono"></a>
 
 @include('layouts.footer')
 

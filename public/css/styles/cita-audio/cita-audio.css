@@ -11,9 +11,10 @@
 .cont-form-principal {
     width: 31%;
     height: 90%;
-    border-radius: 2%;
+    border-radius: 5px;
     box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
     background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(0, 134, 196, 1));
+    transition: width 0.3s;
 }
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
@@ -92,31 +93,83 @@
 
 .btn-flotante {
     position: fixed;
-    width: 80px;
-    height: 80px;
-    bottom: 40px;
-    right: 22px;
-    background-color: #d6e0eb;
+    width: 55px;
+    height: 55px;
+    right: 0px;
+    top: 45%;
+    background-color: #95c3f4;
+    /* d6e0eb */
     color: white;
-    border-radius: 50%;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.646);
     font-size: 24px;
     z-index: 1000;
-    transition: background-color 0.3s, transform 0.3s;
+    transition: background-color 0.3s, transform 0.3s, width 0.3s;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: none;
+}
+
+.textPC {
+    margin-right: 5px;
+    font-size: 1px;
+    transition: font-size 0.3s;
+    visibility: hidden;
 }
 
 /* Efecto hover */
 .btn-flotante:hover {
-    background-color: #95c3f4;
+    background-color: #0086c4;
     transform: scale(1.1);
+    width: 120px;
 }
-.bfi{
-    width: 55px;
+
+.btn-flotante:hover .bfi {
+    margin-left: 0px;
 }
+
+.btn-flotante:hover .textPC {
+    font-size: 15px;
+    visibility: visible;
+    color: #fff;
+}
+
+
+.bfi {
+    width: 42px;
+    margin-left: -5px;
+}
+
+.cont-form-principal {
+    position: relative;
+    /* Necesario para posicionar el botón de cierre */
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    /* Ajusta según el diseño deseado */
+    right: 10px;
+    /* Ajusta según el diseño deseado */
+    background: none;
+    border: none;
+    font-size: 34px;
+    /* Ajusta el tamaño de la 'X' */
+    color: #ffffff;
+    /* Cambia el color de la 'X' según tu diseño */
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    color: black;
+    /* Cambia el color al pasar el mouse, si deseas */
+}
+
+
+
+
 
 
 /* 
@@ -139,7 +192,6 @@
 
 input {
     margin-top: 3% !important;
-    border-radius: 16px !important;
     font-size: 19px !important;
     border-color: #fff !important;
     box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
@@ -151,7 +203,6 @@ input:hover {
 
 select {
     margin-top: 3% !important;
-    border-radius: 16px !important;
     font-size: 19px !important;
     border-color: #fff !important;
     box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
@@ -271,7 +322,7 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 20px !important;
+        border-radius: 5px !important;
     }
 
     .cont-text-black {
@@ -342,12 +393,12 @@ div#animationdivIcon {
 @media (min-width: 0px) and (max-width: 480px) {}
 
 
-.style-tarj{
+.style-tarj {
     background-color: #0086c4;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
     padding: 20px;
     width: 30%;
-    
+
 }
 
 .bg-natural {
@@ -360,7 +411,7 @@ div#animationdivIcon {
     background-color: #aecedd !important;
 }
 
-.natural{
+.natural {
     color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1;
