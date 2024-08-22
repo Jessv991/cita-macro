@@ -41,7 +41,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
-        $('.lado-izq').addClass('col-lg-8');
+        $('.lado-izq').addClass('col-lg-8').hide().show(800);
         $('.lado-der').removeClass('d-none').hide().show(800);
         //$('.formulario').hide().show(800);//desaparición y aparición del formulario
         $('.carrusel').removeClass('w-75').addClass('w-100');
