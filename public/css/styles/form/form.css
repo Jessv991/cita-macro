@@ -1,3 +1,23 @@
+/* ===================================SCROLL=================================== */
+
+@media (min-width: 769px) and (max-width: 2000px) {
+    #formMacroContactologia {
+        height: 104% !important;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    #formMacroContactologia::-webkit-scrollbar {
+        width: 8px;
+        /* Ancho del scroll */
+    }
+
+    #formMacroContactologia::-webkit-scrollbar-track {
+        background: transparent;
+        /* Color de fondo del track (pista del scroll) */
+    }
+}
+
 /* ===================================EFECTO DE ANULAR EL SELECT DEL FORM SI HAY SÓLO UNA OPCIÓN=================================== */
 .optica_div {
     width: 100% !important;
@@ -162,7 +182,7 @@ YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P
 }
 
 /* When the checkbox is checked, add the checkmark (tick) */
-.custom-checkbox:checked + .form-check-label::after {
+.custom-checkbox:checked+.form-check-label::after {
     content: "";
     position: absolute;
     left: 7px;
@@ -175,15 +195,15 @@ YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P
 }
 
 /* Optional: Add some hover and focus styles */
-.custom-checkbox:hover + .form-check-label::before,
-.custom-checkbox:focus + .form-check-label::before {
+.custom-checkbox:hover+.form-check-label::before,
+.custom-checkbox:focus+.form-check-label::before {
     border-color: #000;
 }
 
-input{
+input {
     margin-top: 4%;
 }
 
-select{
+select {
     margin-top: 4%;
 }

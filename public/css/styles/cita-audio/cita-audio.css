@@ -1,21 +1,29 @@
-/* .lado-izq{
 
-    background-image: linear-gradient(to left, rgba(0, 134, 196, 0.103), rgba(116,202,231,1));
-       
-} */
-
-/* .lado-der{
-    background-color: #0086C4;
-} */
-
-.cont-form-principal {
-    width: 31%;
-    height: 90%;
-    border-radius: 5px;
-    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
-    background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(0, 134, 196, 1));
-    transition: width 0.3s;
+/* 
+███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
+██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
+╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
+███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
+*/
+body {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+    width: 1px;
+    /* Ancho del scroll */
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+    /* Color de fondo del track (pista del scroll) */
+}
+
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
@@ -51,7 +59,8 @@
 
 .carrusel-inner {
     position: relative;
-    height: 620px;
+    height: 704px;
+    transition: height 2s ease;
     /* Ajusta esto según el tamaño de tus imágenes */
 }
 
@@ -168,6 +177,31 @@
     color: black;
 }
 
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                             
+*/
+
+.form_flotante {
+    position: fixed; /* El div se fija en la pantalla y no se desplaza al hacer scroll */
+    top: 50%; /* Posiciona el div al 50% del alto de la pantalla */
+    left: 50%; /* Posiciona el div al 50% del ancho de la pantalla */
+    transform: translate(-50%, -50%); /* Ajusta el div para que esté exactamente en el centro */
+    background-color: rgba(0, 134, 196, 0.75); /* Fondo semi-transparente para destacar el div */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio interno del div */
+    border-radius: 8px; /* Esquinas redondeadas */
+    z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle un efecto de profundidad */
+    width: 90%;
+    height: 90%;
+}
+
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -177,6 +211,15 @@
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+.cont-form-principal {
+    width: 31%;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
+    background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(0, 134, 196, 1));
+    transition: width 0.3s;
+}
 
 .text-top-form {
     color: #fff;
@@ -385,17 +428,24 @@ div#animationdivIcon {
 
 }
 
-@media (min-width: 767px) and (max-width: 992px) {}
+@media (min-width: 767px) and (max-width: 992px) {
+    .carrusel-inner {
+        height: 500px;
+    }
+
+    .text-sub {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
 
 @media (min-width: 0px) and (max-width: 480px) {}
-
 
 .style-tarj {
     background-color: #0086c4;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
     padding: 20px;
-    width: 30%;
-
+    height: 333px;
 }
 
 .bg-natural {
