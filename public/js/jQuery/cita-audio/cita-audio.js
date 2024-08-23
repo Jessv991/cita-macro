@@ -40,17 +40,14 @@ $(document).ready(function () {
 
         e.preventDefault();
 
-        if(formActivo === false){
-            $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
-            $('.lado-izq').addClass('col-lg-8').css({ position: 'relative', width: '100%', right: '0%' }).animate({ width: '66.66666667%', right: '0%' }, 800);
-            $('.lado-der').removeClass('d-none').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 2000);
-            $('.redes-style').attr('style', 'width: 5.5% !important');
-            $('.blog-style').attr('style', 'width: 4.3% !important');
-            $('.style-tarj').removeClass('w-50').addClass('w-75');
-            $('.btn-flotante').addClass('d-none');
-            $('.med-img-circle').attr('style', 'width: 38% !important');
-            formActivo = true;
-        }
+        $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
+        $('.lado-izq').addClass('col-lg-8').css({ position: 'relative', width: '100%', right: '0%' }).animate({ width: '66.66666667%', right: '0%' }, 800);
+        $('.lado-der').removeClass('d-none').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 2000);
+        $('.redes-style').attr('style', 'width: 5.5% !important');
+        $('.blog-style').attr('style', 'width: 4.3% !important');
+        $('.style-tarj').removeClass('w-50').addClass('w-75');
+        $('.btn-flotante').addClass('d-none');
+        $('.med-img-circle').attr('style', 'width: 38% !important');
 
     });
 

@@ -1,8 +1,20 @@
 @php
     $locale = $data['idioma'];
-    $telefonoOptica = '681329383'; 
+    $telefonoOptica = '681329383';
     $mailOptica = 'j.vasquez@naturalopticsgroup.com';
+    $baseUrl = url('/');
+    $rutaAsset;
 @endphp
+
+@if ($baseUrl !== 'https://www.audio.naturaloptics.com')
+    @php
+        $rutaAsset = '';
+    @endphp
+@else
+    @php
+        $rutaAsset = 'cita-macro/';
+    @endphp
+@endif
 
 @include('layouts.header')
 <div class="row w-100 cont-all vh-100 w-100 p-0 m-0 h-100">
@@ -27,7 +39,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
-                    <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/transito.png') }}" />
+                    <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
                         <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
@@ -38,7 +50,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
-                    <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/revision.png') }}" />
+                    <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" />
                     <div class="mt-3">
                         @if ($locale === 'es')
                             <div class="p-titol-card3">
@@ -60,7 +72,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
-                    <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/girl.png') }}" />
+                    <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
                         <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
@@ -71,7 +83,7 @@
                 </div>
 
                 <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
-                    <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/baby.png') }}" />
+                    <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
                         <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>
@@ -103,7 +115,8 @@
 
     </div>
 
-    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
+    <div
+        class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
         <div class="cont-form-principal formulario position-fixed d-flex justify-content-center align-items-center">
             <button class="btn-close">×</button>
             @include('form.pedido_opticas')
@@ -116,7 +129,8 @@
     </div>
 </div>
 
-<a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset('assets/iconos/form/icon-form3.png') }}" alt="Icono"></a>
+<a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi"
+        src="{{ asset($rutaAsset . 'assets/iconos/form/icon-form3.png') }}" alt="Icono"></a>
 
 @include('layouts.footer')
 
