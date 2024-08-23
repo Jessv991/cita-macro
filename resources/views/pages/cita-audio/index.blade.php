@@ -135,7 +135,7 @@
 
 <a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset($rutaAsset . 'assets/iconos/form/icon-form3.png') }}" alt="Icono"></a>
 
-<div class="form_flotante d-flex justify-content-center align-items-center d-lg-none">
+<div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-md-none">
     <button class="btn-close">×</button>
     @include('form.pedido_opticas')
 </div>
