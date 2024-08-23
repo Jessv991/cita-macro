@@ -98,6 +98,15 @@ body::-webkit-scrollbar-track {
     line-height: 40px;
 }
 
+.card-style {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos hacia la parte superior */
+    text-align: center; /* Alinea el texto al centro */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
 /* 
 ██████╗  ██████╗ ████████╗███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
 ██╔══██╗██╔═══██╗╚══██╔══╝████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
