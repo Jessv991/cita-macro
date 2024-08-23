@@ -76,7 +76,7 @@
                 $locale = $data['idioma'] 
             @endphp --}}
 
-            <div class="cont-botton-police" data-aos="zoom-in">
+            <div class="cont-botton-police">
 
                 <div class="form-check form-check-reverse mt-5 p-0">
                     <input class="custom-checkbox" type="checkbox" value="1" name="check-poli" id="reverseCheck1">
