@@ -9,7 +9,7 @@
 
     <div class="col-12 p-0 m-0 lado-izq position-relative h-100">
         <div class="d-flex flex-column justify-content-center align-items-lg-center align-items-start w-100">
-            <div class="carrusel w-75">
+            <div class="carrusel w-100">
                 <div class="carrusel-inner w-100">
                     <img class="w-100 h-100 active" src="{{ asset($data['img']['orejas']) }}">
                     <img class="w-100 h-100" src="{{ asset($data['img']['orejas2']) }}">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/transito.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
@@ -37,7 +37,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/revision.png') }}" />
                     <div class="mt-3">
                         @if ($locale === 'es')
@@ -59,7 +59,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/girl.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
@@ -70,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5">
+                <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="fade-up-left">
                     <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/baby.png') }}" />
                     <div class="mt-3">
                         <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
