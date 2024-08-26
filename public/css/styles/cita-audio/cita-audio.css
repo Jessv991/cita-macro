@@ -16,12 +16,10 @@ body {
 
 body::-webkit-scrollbar {
     width: 1px;
-    /* Ancho del scroll */
 }
 
 body::-webkit-scrollbar-track {
     background: transparent;
-    /* Color de fondo del track (pista del scroll) */
 }
 
 
@@ -39,7 +37,6 @@ body::-webkit-scrollbar-track {
     width: 100%;
     padding: 0;
     margin-left: 0.05%;
-    /* Asegúrate de que no haya padding extra en el contenedor */
 }
 
 .carrusel {
@@ -61,7 +58,6 @@ body::-webkit-scrollbar-track {
     position: relative;
     height: 704px;
     transition: height 2s ease;
-    /* Ajusta esto según el tamaño de tus imágenes */
 }
 
 .img-izq {
@@ -398,10 +394,7 @@ div#animationdivIcon {
 
 
 @media (max-width: 2000px) {
-    /* .cont-form-principal {
-        width: 91% !important;
-    } */
-
+    
     .text-top-form {
         font-size: 20px;
         padding: 2%;
