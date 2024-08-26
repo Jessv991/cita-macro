@@ -130,7 +130,7 @@
         class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
         <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
             <button class="btn-close">×</button>
-            @include('form.pedido_opticas')
+            @include('form.pide_cita')
         </div>
 
     </div>
@@ -141,7 +141,7 @@
 
 <div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-none">
     <button class="btn-close-flotante">×</button>
-    @include('form.pedido_opticas')
+    @include('form.pide_cita')
 </div>
 
 
