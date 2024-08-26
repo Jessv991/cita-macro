@@ -562,7 +562,8 @@ div#animationdivIcon {
     }
 
     #formMacroContactologia.p-0 {
-        padding: 3rem !important;
+        padding-top: 4rem !important;
+        padding-bottom: 3rem !important;
     }
 
 }
