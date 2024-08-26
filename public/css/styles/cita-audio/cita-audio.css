@@ -217,7 +217,7 @@ body::-webkit-scrollbar-track {
     top: 50%; /* Posiciona el div al 50% del alto de la pantalla */
     left: 50%; /* Posiciona el div al 50% del ancho de la pantalla */
     transform: translate(-50%, -50%); /* Ajusta el div para que esté exactamente en el centro */
-    background-color: rgba(106, 131, 160, 0.7); /* Fondo semi-transparente para destacar el div */
+    background-color: rgba(106, 131, 160, 0.877); /* Fondo semi-transparente para destacar el div */
     color: white; /* Color del texto */
     padding: 20px; /* Espacio interno del div */
     border-radius: 8px; /* Esquinas redondeadas */
