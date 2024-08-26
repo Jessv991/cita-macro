@@ -29,7 +29,7 @@
                 </div>
             </div>
 
-            <div class="row w-100 text-center p-5 d-flex justify-content-center align-items-center">
+            <div class="row w-100 text-center p-md-5 p-2 d-flex justify-content-center align-items-center">
 
                 <div class="text-center colr-text mt-5 p-0">
                     <span class="fz-1 fw-bold lead text-uppercase">{{ __('cita_audio.titulo-1') }}</span><br>
@@ -103,8 +103,8 @@
             </div>
 
 
-            <div class="w-100 d-flex justify-content-center align-items-center">
-                <div class="style-tarj w-50 d-flex justify-content-center align-items-center" data-aos="flip-left"
+            <div class="w-100 d-flex justify-content-center align-items-center mt-lg-0 mt-5">
+                <div class="style-tarj w-md-50 w-75 d-flex justify-content-center align-items-center" data-aos="flip-left"
                     data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     @include('test.index')
                 </div>

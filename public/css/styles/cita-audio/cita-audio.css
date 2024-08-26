@@ -352,6 +352,40 @@ div#animationdivIcon {
 }
 
 /* 
+████████╗███████╗███████╗████████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+   ██║   █████╗  ███████╗   ██║   
+   ██║   ██╔══╝  ╚════██║   ██║   
+   ██║   ███████╗███████║   ██║   
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                  
+*/
+
+.style-tarj {
+    background-color: #0086c4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
+    padding: 20px;
+    height: 333px;
+}
+
+.bg-natural {
+    background-color: #fff !important;
+    color: #0086c4 !important;
+    border-radius: 20px !important;
+}
+
+.bg-natural:hover {
+    background-color: #aecedd !important;
+}
+
+.natural {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1;
+    font-size: 35px !important;
+}
+
+/* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
 ██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
 ██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
@@ -464,28 +498,63 @@ div#animationdivIcon {
     }
 }
 
-@media (min-width: 0px) and (max-width: 480px) {}
+@media (min-width: 0px) and (max-width: 480px) {
 
-.style-tarj {
-    background-color: #0086c4;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
-    padding: 20px;
-    height: 333px;
+    .fz-1 {
+        font-size: 28px;
+    }
+
+    .colr-text {
+        line-height: 24px;
+    }
+
+    .fz-2 {
+        font-size: 24px;
+    }
+
+    .text-sub {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    .carrusel-inner {
+        height: 300px;
+    }
+
+    #test.p-4 {
+        padding: .5rem !important;
+    }
+
+    .natural {
+        font-size: 24px !important;
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + -1.1vw) !important;
+    }
+
+    .bg-natural {
+        border-radius: 12px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .redes-style {
+        width: 10.5% !important;
+    }
+
+    .blog-style {
+        width: 7.5% !important;
+    }
+    
+    .color-line {
+        width: 21%;
+    }
+
+    .logo-natural-optic {
+        width: 74% !important;
+    }
 }
 
-.bg-natural {
-    background-color: #fff !important;
-    color: #0086c4 !important;
-    border-radius: 20px !important;
-}
-
-.bg-natural:hover {
-    background-color: #aecedd !important;
-}
-
-.natural {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
-    line-height: 1;
-    font-size: 35px !important;
-}
