@@ -1,3 +1,5 @@
+var dispositivo = $('#tipo_dispositivo').val();
+
 $(document).ready(function () {
     /* 
      ██████╗ █████╗ ██████╗ ██████╗ ██╗   ██╗███████╗███████╗██╗     
@@ -34,37 +36,57 @@ $(document).ready(function () {
                                                                                                                           
     */
 
-    var formActivo = false;
+    if(dispositivo === 'desktop'){
 
-    $('#btn-flotante').on('click', function (e) {
+        $('#btn-flotante').on('click', function (e) {
+    
+            e.preventDefault();
+            
+            $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
+            $('.lado-izq').addClass('col-lg-8').css({ position: 'relative', width: '100%', right: '0%' }).animate({ width: '66.66666667%', right: '0%' }, 1000);
+            $('.lado-der').removeClass('d-none').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 1500);
+            $('.carrusel-inner').attr('style', 'height: 500px !important');
+            $('.redes-style').attr('style', 'width: 5.5% !important');
+            $('.blog-style').attr('style', 'width: 4.3% !important');
+            $('.style-tarj').removeClass('w-50').addClass('w-75');
+            $('.btn-flotante').addClass('d-none');
+            $('.med-img-circle').attr('style', 'width: 38% !important');
+        });
+    
+        $('.btn-close').on('click', function (e) {
+    
+            e.preventDefault();
+    
+            $('.btn-flotante').removeClass('d-none');
+            $('.card-style').removeClass('col-lg-6').addClass('col-lg-3');
+            $('.lado-der').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 1500);
+            $('.lado-izq').css({ position: 'relative', width: '66.66666667%', left: '0%' }).animate({ width: '100%', left: '0%' }, 1000);
+            $('.carrusel-inner').attr('style', 'height: 704px !important');
+            $('.redes-style').attr('style', 'width: 3.5% !important');
+            $('.blog-style').attr('style', 'width: 2.6% !important');
+            $('.style-tarj').removeClass('w-75').addClass('w-50');
+            $('.med-img-circle').attr('style', 'width: 64% !important');
+        });
 
-        e.preventDefault();
+    }else{
+
+        $('#btn-flotante').on('click', function (e) {
+    
+            e.preventDefault();
+            
+            $('.form_flotante').removeClass('d-none');
+            
+        });
+    
+        $('.btn-close-flotante').on('click', function (e) {
+    
+            e.preventDefault();
+    
+            $('.form_flotante').addClass('d-none');
+            
+        });
         
-        $('.card-style').removeClass('col-lg-3').addClass('col-lg-6');
-        $('.lado-izq').addClass('col-lg-8').css({ position: 'relative', width: '100%', right: '0%' }).animate({ width: '66.66666667%', right: '0%' }, 1000);
-        $('.lado-der').removeClass('d-none').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 1500);
-        $('.carrusel-inner').attr('style', 'height: 500px !important');
-        $('.redes-style').attr('style', 'width: 5.5% !important');
-        $('.blog-style').attr('style', 'width: 4.3% !important');
-        $('.style-tarj').removeClass('w-50').addClass('w-75');
-        $('.btn-flotante').addClass('d-none');
-        $('.med-img-circle').attr('style', 'width: 38% !important');
-    });
+    }
 
-    $('.btn-close').on('click', function (e) {
-
-        e.preventDefault();
-
-        $('.btn-flotante').removeClass('d-none');
-        $('.card-style').removeClass('col-lg-6').addClass('col-lg-3');
-        $('.lado-der').css({ position: 'relative', right: '-100%' }).show().animate({ right: '0%' }, 1500);
-        $('.lado-izq').css({ position: 'relative', width: '66.66666667%', left: '0%' }).animate({ width: '100%', left: '0%' }, 1000);
-        $('.carrusel-inner').attr('style', 'height: 704px !important');
-        $('.redes-style').attr('style', 'width: 3.5% !important');
-        $('.blog-style').attr('style', 'width: 2.6% !important');
-        $('.style-tarj').removeClass('w-75').addClass('w-50');
-        $('.med-img-circle').attr('style', 'width: 64% !important');
-        formActivo = false;
-    });
 
 });

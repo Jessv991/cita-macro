@@ -17,6 +17,7 @@
 @endif
 
 @include('layouts.header')
+<input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
 <div class="row w-100 cont-all vh-100 w-100 p-0 m-0 h-100">
 
     <div class="col-12 p-0 m-0 lado-izq position-relative h-100">
@@ -139,7 +140,7 @@
 <a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset($rutaAsset . 'assets/iconos/form/icon-form3.png') }}" alt="Icono"></a>
 
 <div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-none">
-    <button class="btn-close">×</button>
+    <button class="btn-close-flotante">×</button>
     @include('form.pedido_opticas')
 </div>
 
