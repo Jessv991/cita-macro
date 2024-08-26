@@ -1,4 +1,4 @@
-var dispositivo = $('#tipo_dispositivo').val();
+var dispositivo = window.screen.width;
 
 $(document).ready(function () {
     /* 
@@ -36,7 +36,7 @@ $(document).ready(function () {
                                                                                                                           
     */
 
-    if (dispositivo === 'desktop') {
+    if (dispositivo >= 992) {
 
         $('#btn-flotante').on('click', function (e) {
 

@@ -17,7 +17,6 @@
 @endif
 
 @include('layouts.header')
-<input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
 <div class="row w-100 cont-all vh-100 w-100 p-0 m-0 h-100">
 
     <div class="col-12 p-0 m-0 lado-izq position-relative h-100">
