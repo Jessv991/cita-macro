@@ -560,5 +560,10 @@ div#animationdivIcon {
     .form_flotante {
         height: 98%;
     }
+
+    .p-0 {
+        padding-top: 1rem !important;
+    }
+
 }
 
