@@ -556,5 +556,9 @@ div#animationdivIcon {
     .logo-natural-optic {
         width: 74% !important;
     }
+
+    .form_flotante {
+        height: 90%;
+    }
 }
 
