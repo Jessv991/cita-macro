@@ -111,8 +111,6 @@ class email_service
 
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
-            $mail->SMTPDebug = 3; // O 4 para más detalle
-            $mail->Debugoutput = 'html'; // Para salida HTML
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
