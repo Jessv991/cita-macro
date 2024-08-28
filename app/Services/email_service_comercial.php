@@ -24,8 +24,8 @@ class email_service_comercial
         try {
 
             $mail->CharSet = 'UTF-8';
-            $mail->SMTPDebug = 3;
-            $mail->Debugoutput = 'html';
+            /* $mail->SMTPDebug = 3;
+            $mail->Debugoutput = 'html'; */
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
@@ -93,8 +93,6 @@ class email_service_comercial
 
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
-            $mail->SMTPDebug = 3; // O 4 para más detalle
-            $mail->Debugoutput = 'html'; // Para salida HTML
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');

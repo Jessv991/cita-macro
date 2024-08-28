@@ -239,7 +239,7 @@
 --}}
 
 <script>
-    $('#form').on('click', function(e) {
+    $('#form').off().on('click', function(e) {
         e.preventDefault();
         var formData = $('#formMacroContactologia').serialize();
 
