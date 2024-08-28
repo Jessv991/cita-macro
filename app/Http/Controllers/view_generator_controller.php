@@ -168,6 +168,16 @@ class view_generator_controller extends Controller
         $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //=====================PROVINCIA=====================
+
+        $this->data['weblogin'] = $weblogin;
+
+        $codigo = $empresas->getCodeService();
+
+        //=====================LOGO=====================
+
+        $this->data['provincias'] = $zonas->getProvincias($codigo);
+
+
         $logo = $empresas->getLogos($weblogin);
 
         // Verificar que $logo no sea null antes de pasarlo a la vista
@@ -177,12 +187,13 @@ class view_generator_controller extends Controller
             $this->data['logo'] = ''; // O cualquier valor predeterminado
         }
 
-        $this->data['weblogin'] = $weblogin;
+        $getLogo = $this->generadorImg->index($this->data['logo']);
 
-        $codigo = $empresas->getCodeService();
-
-
-        $this->data['provincias'] = $zonas->getProvincias($codigo);
+        if ($getLogo) {
+            $logoOptica = asset('/assets/logos/opticas/' . $getLogo);
+        }
+        
+        $this->data['logoOptica'] = $logoOptica;
 
 
 

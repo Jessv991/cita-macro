@@ -116,6 +116,7 @@
             <path transform="translate(1425,671)" d="m0 0h1v12l-3 3 1-14z" fill="#fff"/>
             <path transform="translate(1024,297)" d="m0 0h1v5h10l-2 2-7 2-2-2z" fill="#fff"/>
         </svg>
+        <img src="{{ __($data['logoOptica']) }}" alt="">
     </div>
 
     <div class="cuerpo-poli">
