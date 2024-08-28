@@ -88,7 +88,7 @@ class view_generator_controller extends Controller
 
         $empresas = new Empresas();
         $zonas = new Zonas();
-        $centros_audio = array();
+        $baseUrl = url('/');
 
         /* 
             ████████╗██╗███████╗███╗   ██╗██████╗  █████╗ ███████╗
@@ -173,10 +173,38 @@ class view_generator_controller extends Controller
 
         $codigo = $empresas->getCodeService();
 
-        //=====================LOGO=====================
-
         $this->data['provincias'] = $zonas->getProvincias($codigo);
 
+        //=====================IMAGENES=====================
+
+        $imagen = array(
+            'orejas' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas.png',
+            'orejas2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas2.png',
+            'orejas3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas3.png',
+        );
+
+        //=====================RUTAS SEGÚN BASEURL=====================
+
+        if ($baseUrl !== 'https://www.audio.naturaloptics.com'){
+
+            $rutaAsset = '';
+
+            $prefixedImagen = array();
+
+            foreach ($imagen as $key => $path) {
+                $prefixedImagen[$key] = 'cita-macro/' . $path;
+            }
+
+            $this->data['img'] = $prefixedImagen;
+
+        }else{
+
+            $rutaAsset = 'cita-macro/';
+
+            $this->data['img'] = $imagen;
+        }
+
+        //=====================LOGO=====================
 
         $logo = $empresas->getLogos($weblogin);
 
@@ -190,48 +218,10 @@ class view_generator_controller extends Controller
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = '/assets/logos/opticas/' . $getLogo;
+            $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
         }
         
         $this->data['logoOptica'] = $logoOptica;
-
-
-
-        /* 
-
-        ██╗███╗   ███╗ █████╗  ██████╗ ███████╗███╗   ██╗███████╗███████╗
-        ██║████╗ ████║██╔══██╗██╔════╝ ██╔════╝████╗  ██║██╔════╝██╔════╝
-        ██║██╔████╔██║███████║██║  ███╗█████╗  ██╔██╗ ██║█████╗  ███████╗
-        ██║██║╚██╔╝██║██╔══██║██║   ██║██╔══╝  ██║╚██╗██║██╔══╝  ╚════██║
-        ██║██║ ╚═╝ ██║██║  ██║╚██████╔╝███████╗██║ ╚████║███████╗███████║
-        ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚═╝  ╚═══╝╚══════╝╚══════╝
-                                                                  
-        */
-
-
-        //imagenes dependiendo del idioma 
-
-        $baseUrl = url('/');
-
-
-        $imagen = array(
-            'orejas' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas.png',
-            'orejas2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas2.png',
-            'orejas3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas3.png',
-        );
-
-        if ($baseUrl === 'https://www.audio.naturaloptics.com') {
-
-            $prefixedImagen = array();
-
-            foreach ($imagen as $key => $path) {
-                $prefixedImagen[$key] = 'cita-macro/' . $path;
-            }
-
-            $this->data['img'] = $prefixedImagen;
-        } else {
-            $this->data['img'] = $imagen;
-        }
 
 
 
