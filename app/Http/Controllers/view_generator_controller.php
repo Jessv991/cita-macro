@@ -190,7 +190,7 @@ class view_generator_controller extends Controller
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = asset('/assets/logos/opticas/' . $getLogo);
+            $logoOptica = '/assets/logos/opticas/' . $getLogo;
         }
         
         $this->data['logoOptica'] = $logoOptica;
