@@ -189,6 +189,12 @@ class view_generator_controller extends Controller
 
             $rutaAsset = '';
 
+            $this->data['img'] = $imagen;
+
+        }else{
+
+            $rutaAsset = 'cita-macro/';
+
             $prefixedImagen = array();
 
             foreach ($imagen as $key => $path) {
@@ -196,12 +202,7 @@ class view_generator_controller extends Controller
             }
 
             $this->data['img'] = $prefixedImagen;
-
-        }else{
-
-            $rutaAsset = 'cita-macro/';
-
-            $this->data['img'] = $imagen;
+            
         }
 
         //=====================LOGO=====================
