@@ -26,7 +26,6 @@ class email_service
 
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
-            $mail->Debugoutput = 'html'; // Para salida HTML
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
