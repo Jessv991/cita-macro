@@ -790,6 +790,12 @@ li {
       .h-auto {
           height: auto !important;
       }
+
+      .f12rj61f {
+        background-color: #00a091 !important;
+        color: white !important;
+      }
+
   }
   
   </style>
