@@ -220,6 +220,8 @@ class view_generator_controller extends Controller
 
         if ($getLogo) {
             $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
+        }else{
+            $logoOptica = null;
         }
         
         $this->data['logoOptica'] = $logoOptica;

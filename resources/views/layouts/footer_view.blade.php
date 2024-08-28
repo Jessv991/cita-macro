@@ -1,3 +1,6 @@
+@php
+    $logoOptica = $data['logoOptica'];
+@endphp
 <div class="cuerpo p-0 ml-0 mr-0">
 
     <div class="redes p-0 m-0">
@@ -116,7 +119,9 @@
             <path transform="translate(1425,671)" d="m0 0h1v12l-3 3 1-14z" fill="#fff"/>
             <path transform="translate(1024,297)" d="m0 0h1v5h10l-2 2-7 2-2-2z" fill="#fff"/>
         </svg>
-        <img src="{{ __($data['logoOptica']) }}" alt="">
+        @if($logoOptica)
+            <img src="{{ __($data['logoOptica']) }}" alt="">
+        @endif
     </div>
 
     <div class="cuerpo-poli">
