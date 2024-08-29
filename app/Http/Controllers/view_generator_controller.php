@@ -177,7 +177,11 @@ class view_generator_controller extends Controller
 
         $logo = $empresas->getLogos($weblogin);
 
-        $this->data['logo'] = $logo->f1;
+        if($logo){
+            $this->data['logo'] = $logo->f1;
+        }else {
+            $this->data['logo'] = ''; 
+        }
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
