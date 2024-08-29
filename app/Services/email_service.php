@@ -99,7 +99,6 @@ class email_service
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
         }
 
-        //return "Email enviado!"; 
     }
 
     function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale)

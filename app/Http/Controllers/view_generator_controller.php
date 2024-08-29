@@ -78,6 +78,7 @@ class view_generator_controller extends Controller
 
 
         $this->data['ip'] = $ip;
+
     }
 
     public function index($locale, $origen, $weblogin = null, $tienda = null)
@@ -102,20 +103,6 @@ class view_generator_controller extends Controller
                                                       
         */
 
-        /* //===============GENERAL==================
-
-        if (isset($weblogin) && isset($tienda)) {
-            //obtener tienda específica según weblogin y tienda
-            $centros = $empresas->getStoresByWebloginAndCode($weblogin, $tienda);
-        } elseif (isset($weblogin)) {
-            //consulta sólo las tiendas del weblogin pasado
-            $centros = $stores = $empresas->getStoresByWeblogin($weblogin);
-        } else {
-            //nos arroja todas las tiendas
-            $centros = $stores = $empresas->getWebloginAll();
-        } */
-
-
         //==================AUDIOS==================
 
         if (isset($weblogin) && isset($tienda)) {
@@ -129,21 +116,6 @@ class view_generator_controller extends Controller
             $this->data['centros'] = $empresas->getStoreAllAudio();
         }
 
-
-        /*/==================OPTICAS==================
-        //consultas todas las tiendas de la regín que sean opticas
-        $empresas->getOnlyAllOpticsByWeblogin($weblogin);
-
-        //consulta la tienda en específico que sea optica y coincida su numero de tienda
-        $empresas->getStoreOnlyOpticsByWebloginAndCode($weblogin, $tienda);*/
-
-
-        //==================aquí conservamos las tiendas que nos devuelve la consulta a la base de datos==================
-        //$this->data['centros'] = $centros->toArray();
-        //$this->data['centros'] = array_merge($this->data['centros'], $centros_audio->toArray());
-
-        //$this->data['centros'] = $centros_audio;
-
         //=====================IDIOMA==========================
         $this->data['idioma'] = $locale;
 
@@ -151,8 +123,8 @@ class view_generator_controller extends Controller
         $this->data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         /*/=====================MAPAS=====================
-        $data['mapa'] = file_get_contents("https://www.audio.naturaloptics.com/mapa/features.json");
 		$data['mapaUgo'] = file_get_contents("https://www.audio.naturaloptics.com/mapa/featuresShamirUgo.json");*/
+        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
         $this->data['landing'] = $origen;
@@ -162,10 +134,6 @@ class view_generator_controller extends Controller
 
         //=====================TEST=====================
         $this->data['test'] = $test;
-
-        //=====================MAPA=====================
-
-        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //=====================PROVINCIA=====================
 
@@ -209,12 +177,7 @@ class view_generator_controller extends Controller
 
         $logo = $empresas->getLogos($weblogin);
 
-        // Verificar que $logo no sea null antes de pasarlo a la vista
-        if ($logo) {
-            $this->data['logo'] = $logo->f1;
-        } else {
-            $this->data['logo'] = ''; // O cualquier valor predeterminado
-        }
+        $this->data['logo'] = $logo->f1;
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
@@ -233,7 +196,6 @@ class view_generator_controller extends Controller
         } else {//redirigimos a vista principal si no existe la ruta
             return redirect('https://www.audio.naturaloptics.com/cita-macro/es/cita-audio');
         }
-        // Retorno de la vista
 
 
     }
@@ -398,10 +360,8 @@ class view_generator_controller extends Controller
         App::setLocale($locale);
 
         /* 
-        dependiendo de la landing, en el diseño de la misma deben colocar un input y en su valor colocar
-        el telefono de la persona responsable de la promoción y el id y el name de ese input debe llamarse 
-        'telefono_optica'. Se debe hacer lo mismo con el email de la persona responsable y el id y name de
-        ese input email debe ser 'mail_optica'. 
+        El formulario cuenta con con estos dos input que estabamos cogiendo sus datos aquí, lo único que se debe hacer
+        es declarar las variables que hemos explicado en el gitBook. 
         */
         $telefono_optica = $request->input('telefono_optica');
         $mail_optica = $request->input('mail_optica');

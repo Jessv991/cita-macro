@@ -10,7 +10,6 @@ $(document).ready(function () {
         putOpticasByWeblogin();
     } else if (weblogin) {
         putOpticaByweblogin();
-        //getOpticaSelectCity();
     } else {
         getCityBySelectState();
         getOpticaSelectCity()
@@ -176,7 +175,7 @@ function getOpticaSelectCity() {
                 type: 'POST',
                 data: {
                     ciudad: ciudadId,
-                    _token: csrfToken // Token CSRF definido en el archivo Blade
+                    _token: csrfToken 
                 },
                 success: function (data) {
 

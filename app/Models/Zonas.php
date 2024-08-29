@@ -101,8 +101,6 @@ class Zonas extends Model
             ->orderBy('nombre', 'asc')
             ->get();
 
-        //dd($datos);
-
         return $datos;
     }
 
@@ -122,9 +120,6 @@ class Zonas extends Model
             })
             ->where('e.CRM', 'si')
             ->get();
-
-        // Para depuración, puedes descomentar la siguiente línea:
-        //dd($datos);
 
         return $datos;
     }

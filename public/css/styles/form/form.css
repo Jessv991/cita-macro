@@ -21,14 +21,11 @@
 /* ===================================EFECTO DE ANULAR EL SELECT DEL FORM SI HAY SÓLO UNA OPCIÓN=================================== */
 .optica_div {
     width: 100% !important;
-    /* cuando aparezca el mapa debe colocarse en 91% */
 }
 
 .readonly-select {
     pointer-events: none;
-    /* Desactiva la interacción del ratón */
     background-color: #f0f0f0;
-    /* Color de fondo para indicar que es solo lectura */
 }
 
 /* ===================================BUTTON STYLE=================================== */
@@ -67,7 +64,7 @@ d8' `8b 888o  88   `88'   88'YbdP`88 d8' `8b `~~88~~'   `88'   .8P  Y8. 888o  88
 88   88 88  V888   .88.   88  88  88 88   88    88      .88.   `8b  d8' 88  V888 db   8D 
 YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P `8888Y' 
                                                                                         
-                                                                                         */
+*/
 
 
 #animationdivIcon {

@@ -72,10 +72,6 @@
 
             </div>
 
-            {{--  @php
-                $locale = $data['idioma'] 
-            @endphp --}}
-
             <div class="cont-botton-police">
 
                 <div class="form-check form-check-reverse mt-5 p-0">

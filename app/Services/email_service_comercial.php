@@ -78,8 +78,6 @@ class email_service_comercial
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
         }
 
-        //return "Email enviado!"; 
-
     }
 
     function sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica)

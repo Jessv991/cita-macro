@@ -161,10 +161,6 @@
 
             </div>
 
-            {{--  @php
-                $locale = $data['idioma'] 
-            @endphp --}}
-
             <div class="cont-botton-police">
 
                 <div class="form-check form-check-reverse mt-5 p-0">
@@ -250,9 +246,6 @@
             success: function(response) {
                 $('#formMacroContactologia').addClass('d-none');
                 $('#gracias').removeClass('d-none');
-                // Manejar la respuesta del servidor, por ejemplo, redirigir
-                //console.log(response);
-                //window.location.href = response.redirectTo; // Ejemplo de redirección
             },
             error: function(xhr, status, error) {
 
@@ -307,16 +300,10 @@
             //oculta el icono del mapa
             $('#animationdivIcon').addClass('d-none');
         }
-        // Para los selects, también se puede usar:
-        // $('#formMacroContactologia').find('select').prop('selectedIndex', 0);
 
         // Limpiar el checkbox
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
 
-    /* var locale = {!! json_encode($data) !!};
-    $(document).ready(function() {
-        localStorage.setItem('locale', JSON.stringify(locale));
-    }); */
 </script>

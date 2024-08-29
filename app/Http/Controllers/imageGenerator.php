@@ -10,11 +10,6 @@ class imageGenerator extends Controller
     public function index($imagen)
     {
 
-        //dd($imagen);
-
-        $baseUrl = url('/');
-
-        
         $localDirectory = public_path('assets/logos/opticas/');
 
         $localImagen = $localDirectory . $imagen;
