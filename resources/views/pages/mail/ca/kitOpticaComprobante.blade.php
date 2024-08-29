@@ -999,29 +999,24 @@ li {
                                   <tbody>
                                       <tr>
                                           <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                              <table width="100%" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                      <tr>
-                                                          <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">Segueix-nos</h3>
-                                                          </td>
-                                                      </tr>
-                                                      <tr>
-                                                          <td class="esd-block-social" align="center" style="font-size:0">
-                                                              <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                                  <tbody>
-                                                                      <tr>
-                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://stripo.email/static/assets/img/social-icons/circle-white/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://stripo.email/static/assets/img/social-icons/circle-white/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://stripo.email/static/assets/img/social-icons/circle-white/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://demo.stripocdn.email/content/guids/40e7d02f-684e-4c23-9246-32d006d6c8d9/images/blanco.png" alt width="32" height="32"></a></td>
-                                                                      </tr>
-                                                                  </tbody>
-                                                              </table>
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
+                                            <table width="100%" cellspacing="0" cellpadding="0">
+                                              <tbody>
+                                                  <tr>
+                                                      
+                                                  </tr>
+                                                  <tr>
+                                                      <td class="esd-block-social" align="center" style="font-size:0">
+                                                          <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
+                                                              <tbody>
+                                                                  <tr>
+                                                                    <td class="es-p10r" valign="top" align="center"><img src="{LOGO}" alt="" width="125"></td>
+                                                                  </tr>
+                                                              </tbody>
+                                                          </table>
+                                                      </td>
+                                                  </tr>
+                                              </tbody>
+                                          </table>
                                           </td>
                                       </tr>
                                   </tbody>
