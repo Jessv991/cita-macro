@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://fnirdjw.stripocdn.email/content/guids/bannerImgGuid/images/image17223372104049153.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
+                                                <img src="https://www.audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
                                               </a>
                                             </td>
                                           </tr>

@@ -42,11 +42,11 @@ class email_service_comercial
 
             $palabrasBuscar = array(
                 '{NOMBREOPTICA}', '{CONTACTO}', '{ORIGIN}', '{CODIGO}',
-                '{UNIDAD}', '{FECHA}', '{EMAILOPTICO}', '{LOGO}'
+                '{UNIDAD}', '{FECHA}', '{EMAILOPTICO}', '{LOGO}', '{LOCAL}'
             );
 
 
-            $palabrasReemplazar = array($optica, $nombre, $origen, $codigo, $unidad, $fecha, $email_cliente, $logoOptica);
+            $palabrasReemplazar = array($optica, $nombre, $origen, $codigo, $unidad, $fecha, $email_cliente, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -108,10 +108,10 @@ class email_service_comercial
 
             $palabrasBuscar = array(
                 '{NOMBREOPTICA}', '{CONTACTO}', '{EMAIL}', '{CODIGO}', '{FECHA}', 
-                '{UNIDAD}', '{ORIGIN}', '{TELEFONOPTICA}', '{EMAILOPTICA}', '{LOGO}'
+                '{UNIDAD}', '{ORIGIN}', '{TELEFONOPTICA}', '{EMAILOPTICA}', '{LOGO}', '{LOCAL}'
             );
 
-            $palabrasReemplazar = array($optica, $nombre, $email_cliente, $codigo, $fecha, $unidad, $origen, $telefono_optica, $mail_optica, $logoOptica);
+            $palabrasReemplazar = array($optica, $nombre, $email_cliente, $codigo, $fecha, $unidad, $origen, $telefono_optica, $mail_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;

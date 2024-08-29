@@ -145,9 +145,3 @@
 
 
 @include('layouts.footer')
-
-{{-- 
-col-lg-8 col-12
-<div class="card-header">{{ __('translation.titulo-1') }}</div>
-<img src="{{ __($data['logo']->f1) }}" alt=""> 
---}}

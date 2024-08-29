@@ -61,11 +61,11 @@ class email_service
 
             $palabrasBuscar = array(
                 '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}'
+                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}'
             );
 
 
-            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica);
+            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -129,10 +129,10 @@ class email_service
 
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{LOGO}'
+                '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}'
             );
 
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica);
+            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
