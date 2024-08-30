@@ -120,7 +120,7 @@
             <path transform="translate(1024,297)" d="m0 0h1v5h10l-2 2-7 2-2-2z" fill="#fff"/>
         </svg>
         @if($logoOptica)
-            <img src="{{ __($data['logoOptica']) }}" alt="">
+            <img class="logo-optica-data" src="{{ __($data['logoOptica']) }}" alt="">
         @endif
     </div>
 
