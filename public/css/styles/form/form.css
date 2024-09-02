@@ -204,3 +204,98 @@ input {
 select {
     margin-top: 4%;
 }
+
+/* 
+██████╗  ██████╗ ████████╗███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔══██╗██╔═══██╗╚══██╔══╝████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+██████╔╝██║   ██║   ██║   ██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══██╗██║   ██║   ██║   ██║╚██╗██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██████╔╝╚██████╔╝   ██║   ██║ ╚████║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═════╝  ╚═════╝    ╚═╝   ╚═╝  ╚═══╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                              */
+
+.btn-flotante {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    right: 0px;
+    top: 45%;
+    background-color: #95c3f4;
+    /* d6e0eb */
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.646);
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s, width 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.textPC {
+    margin-right: 5px;
+    font-size: 1px;
+    transition: font-size 0.3s;
+    visibility: hidden;
+}
+
+/* Efecto hover */
+.btn-flotante:hover {
+    background-color: #0086c4;
+    transform: scale(1.1);
+    width: 120px;
+}
+
+.btn-flotante:hover .bfi {
+    margin-left: 0px;
+}
+
+.btn-flotante:hover .textPC {
+    font-size: 15px;
+    visibility: visible;
+    color: #fff;
+}
+
+
+.bfi {
+    width: 42px;
+    margin-left: -5px;
+}
+
+.cont-form-principal {
+    position: relative;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 34px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    color: black;
+}
+
+.btn-close-flotante {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 34px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-close-flotante:hover {
+    color: black;
+}

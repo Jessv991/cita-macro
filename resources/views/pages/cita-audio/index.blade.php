@@ -136,7 +136,7 @@
 
 </div>
 
-<a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset($rutaAsset . 'assets/iconos/form/FORM-icon.svg') }}" alt="Icono"></a>
+@include('form.boton_flotante')
 
 <div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-none">
     <button class="btn-close-flotante">×</button>

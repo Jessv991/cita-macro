@@ -1,0 +1,1 @@
+<a href="#" class="btn-flotante" id="btn-flotante"><span class="textPC">Pide cita</span><img class="bfi" src="{{ asset($rutaAsset . 'assets/iconos/form/FORM-icon.svg') }}" alt="Icono"></a>
