@@ -39,7 +39,7 @@
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/jQuery/' . $landing . '/' . $landing . '.js') }}"></script>
+    <script src="{{ asset($rutaAsset . 'js/jQuery/landings/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/map/map.js') }}"></script>

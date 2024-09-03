@@ -40,7 +40,7 @@
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
-    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/' . $landing . '/' . $landing . '.css') }}">
+    <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/landings/' . $landing . '.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
 </head>
 

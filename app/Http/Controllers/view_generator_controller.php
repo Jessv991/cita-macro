@@ -146,9 +146,9 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'orejas' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas.png',
-            'orejas2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas2.png',
-            'orejas3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/orejas3.png',
+            'auditiva' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva.png',
+            'auditiva2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva2.png',
+            'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
         );
 
         //=====================RUTAS SEGÚN BASEURL=====================
@@ -282,7 +282,7 @@ class view_generator_controller extends Controller
 
 
 
-    public function store(Request $request)
+    public function validatePideCita(Request $request)
     {
 
         $Citas = new CitasLandings();

@@ -81,7 +81,7 @@ Route::post('cita-macro/get-store-by-weblogin', [view_generator_controller::clas
 Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controller::class, 'getOpticaByWebloginAndOptica'])->name('getOpticaByWebloginAndOptica');
 
 
-Route::post('cita-macro/postValidate', [view_generator_controller::class, 'store'])->name('validateForm');
+Route::post('cita-macro/postValidate', [view_generator_controller::class, 'validatePideCita'])->name('validateForm');
 
 Route::post('cita-macro/postValidateKit', [view_generator_controller::class, 'validateKit'])->name('validateFormKit');
 
