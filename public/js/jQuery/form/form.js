@@ -30,7 +30,7 @@ $(document).ready(function () {
     // Agregar evento change para capturar la opción seleccionada y cambiar la dirección del mapa
     $('#optica').off('change').on('change', function () {
         var selectedOption = $(this).find('option:selected');//capturo la selección
-        var value = selectedOption.val();//cogemos elvalor, para validar que ya haya un valor y hacer condicional
+        var value = selectedOption.val();//cogemos el valor, para validar que ya haya un valor y hacer condicional
         var text = selectedOption.text();// cogemos el texto de la selección
         if (value) {
             var address = text.split(' - ')[0];//lo spliteyamos y le quitamos los '-'

@@ -118,6 +118,12 @@
             <div class="w-100">
                 @include('map.index')
             </div>
+            
+            <div class="form_flotante d-flex justify-content-center align-items-center d-none">
+                @include('form.pide_cita')
+                <button class="btn-close-flotante">×</button>
+            </div>
+
             <div class="w-100 ">
                 @include('layouts.footer_view')
             </div>
@@ -125,8 +131,8 @@
 
     </div>
 
-    <div
-        class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
+    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
+        
         <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
             <button class="btn-close">×</button>
             @include('form.pide_cita')
@@ -137,11 +143,6 @@
 </div>
 
 @include('form.boton_flotante')
-
-<div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-none">
-    <button class="btn-close-flotante">×</button>
-    @include('form.pide_cita')
-</div>
 
 
 @include('layouts.footer')
