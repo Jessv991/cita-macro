@@ -92,6 +92,16 @@ $(document).ready(function () {
         });
         
     }
+
+    /* 
+    ██╗     ██╗██████╗ ██████╗ ███████╗██████╗ ██╗ █████╗      █████╗  ██████╗ ███████╗
+    ██║     ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝
+    ██║     ██║██████╔╝██████╔╝█████╗  ██████╔╝██║███████║    ███████║██║   ██║███████╗
+    ██║     ██║██╔══██╗██╔══██╗██╔══╝  ██╔══██╗██║██╔══██║    ██╔══██║██║   ██║╚════██║
+    ███████╗██║██████╔╝██║  ██║███████╗██║  ██║██║██║  ██║    ██║  ██║╚██████╔╝███████║
+    ╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+        aplicamos el tiempo de la animación dependiendo del tamaño de la pantalla                                                                            
+    */
     
     if(dispositivo >= 992){
 
@@ -105,6 +115,12 @@ $(document).ready(function () {
         $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
         $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
         $('#card4').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+
+    }else {
+        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card2').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card4').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
     }
 
 });
