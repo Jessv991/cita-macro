@@ -45,7 +45,7 @@
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
-                            <div class="text-center cont-text-black">
+                            <div class="text-center cont-text-black pmp">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-1') }}</span>
                             </div>
                         </div>
@@ -68,7 +68,7 @@
                                 </div>
                             @endif
     
-                            <div class="text-center cont-text-black">
+                            <div class="text-center cont-text-black pmp">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-3') }}</span>
                             </div>
                         </div>
@@ -80,7 +80,7 @@
                         <div class="mt-3">
                             <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
-                            <div class="text-center cont-text-black m-text-card2">
+                            <div class="text-center cont-text-black pmp m-text-card2">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-2') }}</span>
                             </div>
                         </div>
@@ -92,7 +92,7 @@
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>
-                            <div class="text-center cont-text-black">
+                            <div class="text-center cont-text-black pmp">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-4') }}</span>
                             </div>
                         </div>
