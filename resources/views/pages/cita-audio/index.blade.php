@@ -39,8 +39,7 @@
                 </div>
 
                 <div class="row w-100 p-0">
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="100"
-                        data-aos-duration="1000">
+                    <div id="card1" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
@@ -51,8 +50,7 @@
                         </div>
                     </div>
     
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
-                        data-aos-duration="1000">
+                    <div id="card2" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" />
                         <div class="mt-3">
                             @if ($locale === 'es')
@@ -74,8 +72,7 @@
                         </div>
                     </div>
     
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
-                        data-aos-duration="1000">
+                    <div id="card3" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
@@ -86,8 +83,7 @@
                         </div>
                     </div>
     
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1500"
-                        data-aos-duration="1000">
+                    <div id="card4" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>

@@ -88,9 +88,23 @@ $(document).ready(function () {
             });
 
             $('#btn-flotante').removeClass('d-none');
-
+            
         });
+        
+    }
+    
+    if(dispositivo >= 992){
 
+        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+        $('#card3').attr('data-aos-delay', '1000').attr('data-aos-duration', '1000');
+        $('#card4').attr('data-aos-delay', '1500').attr('data-aos-duration', '1000');
+
+    }else if(dispositivo >= 768 && dispositivo <= 991){
+        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+        $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+        $('#card4').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
     }
 
 });
