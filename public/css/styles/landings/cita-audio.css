@@ -579,7 +579,7 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .fz-1 {
-        font-size: 28px;
+        font-size: 38px;
     }
 
     .colr-text {
@@ -587,12 +587,24 @@ div#animationdivIcon {
     }
 
     .fz-2 {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .text-sub {
-        padding-left: 9%;
-        padding-right: 9%;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .med-img-circle {
+        width: 45%;
+    }
+
+    .t-img-circle {
+        font-size: 28px;
+    }
+
+    .fz-4 {
+        font-size: 23px;
     }
 
     .carrusel-inner {
@@ -637,7 +649,12 @@ div#animationdivIcon {
 
     .form_flotante {
         height: 98%;
-    }   
+    }
+    
+    .pmp{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
     
 }
 
@@ -645,7 +662,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .fz-1 {
-        font-size: 28px;
+        font-size: 38px;
     }
 
     .colr-text {
@@ -653,12 +670,24 @@ div#animationdivIcon {
     }
 
     .fz-2 {
-        font-size: 24px;
+        font-size: 30px;
     }
 
     .text-sub {
-        padding-left: 9%;
-        padding-right: 9%;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .med-img-circle {
+        width: 45%;
+    }
+
+    .t-img-circle {
+        font-size: 28px;
+    }
+
+    .fz-4 {
+        font-size: 23px;
     }
 
     .carrusel-inner {
@@ -703,7 +732,12 @@ div#animationdivIcon {
 
     .form_flotante {
         height: 98%;
-    }   
+    }
+    
+    .pmp{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
     
 }
 
