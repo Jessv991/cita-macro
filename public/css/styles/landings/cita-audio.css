@@ -662,7 +662,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .fz-1 {
-        font-size: 8px;
+        font-size: 38px;
     }
 
     .colr-text {
@@ -735,8 +735,8 @@ div#animationdivIcon {
     }
     
     .pmp{
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
     
 }
