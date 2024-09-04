@@ -51,6 +51,8 @@ $(document).ready(function () {
             $('.style-tarj').removeClass('w-50').addClass('w-75');
             $('.btn-flotante').addClass('d-none');
             $('.med-img-circle').attr('style', 'width: 38% !important');
+            $('.fz-1').css('font-size', '70px');
+            $('.fz-2').css('font-size', '50px');
         });
 
         $('.btn-close').on('click', function (e) {
@@ -66,6 +68,8 @@ $(document).ready(function () {
             $('.blog-style').attr('style', 'width: 2.6% !important');
             $('.style-tarj').removeClass('w-75').addClass('w-50');
             $('.med-img-circle').attr('style', 'width: 64% !important');
+            $('.fz-1').css('font-size', '90px');
+            $('.fz-2').css('font-size', '60px');
         });
 
     } else {
