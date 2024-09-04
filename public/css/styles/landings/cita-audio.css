@@ -662,7 +662,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .fz-1 {
-        font-size: 38px;
+        font-size: 32px;
     }
 
     .colr-text {
@@ -670,7 +670,7 @@ div#animationdivIcon {
     }
 
     .fz-2 {
-        font-size: 30px;
+        font-size: 23px;
     }
 
     .text-sub {
