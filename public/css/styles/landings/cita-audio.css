@@ -424,7 +424,7 @@ div#animationdivIcon {
     
 }
 
-/* Pantallas Medianas TABLET (992px a 1199px) */
+/* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
@@ -500,11 +500,11 @@ div#animationdivIcon {
     
 }
 
-/* Pantallas Pequeñas (768px a 991px) */
+/* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     
     .fz-1 {
-        font-size: 1px;
+        font-size: 55px;
     }
 
     .colr-text {
@@ -529,7 +529,7 @@ div#animationdivIcon {
     }
 
     .natural {
-        font-size: 24px !important;
+        font-size: 30px !important;
     }
 
     .fs-2 {
@@ -545,15 +545,15 @@ div#animationdivIcon {
     }
 
     .redes-style {
-        width: 10.5% !important;
+        width: 7.5% !important;
     }
 
     .blog-style {
-        width: 7.5% !important;
+        width: 5.8% !important;
     }
     
     .color-line {
-        width: 21%;
+        width: 28%;
     }
 
     .logo-natural-optic {
