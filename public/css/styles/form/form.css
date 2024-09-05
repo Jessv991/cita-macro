@@ -299,3 +299,19 @@ select {
 .btn-close-flotante:hover {
     color: black;
 }
+
+/* 
+efecto hover table y celular
+*/
+
+.btn-flotante-table {
+    background-color: #0086c4;
+    transform: scale(1.1);
+    width: 120px;
+}
+
+.textPC-table {
+    font-size: 15px;
+    visibility: visible;
+    color: #fff;
+}
