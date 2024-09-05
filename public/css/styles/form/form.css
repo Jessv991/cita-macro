@@ -234,6 +234,10 @@ select {
     text-decoration: none;
 }
 
+.cls-1{
+   fill: #0086c4 !important; 
+}
+
 .textPC {
     margin-right: 5px;
     font-size: 1px;
@@ -258,6 +262,9 @@ select {
     color: #fff;
 }
 
+.btn-flotante:hover .cls-1{
+    fill: #95c3f4 !important; 
+ }
 
 .bfi {
     width: 42px;
@@ -315,3 +322,7 @@ efecto hover table y celular
     visibility: visible;
     color: #fff;
 }
+
+.cls-1-table{
+    fill: #95c3f4 !important; 
+ }
