@@ -8,7 +8,7 @@ $('#quest-button').on('click', () => {
 
     if(dispositivo <= 991){
         $('.btn-flotante').addClass('d-none');
-        $('.style-tarj').addClass('position-fixed');
+        $('.style-tarj').addClass('text-fixed');
     }
 
     $('#quest').addClass('d-none');
