@@ -6,7 +6,7 @@ var dispositivo = window.screen.width;
 // START
 $('#quest-button').on('click', () => {
 
-    if (dispositivo <= 991) {
+    if(dispositivo <= 991){
         $('.btn-flotante').addClass('d-none');
         $('.style-tarj').addClass('text-fixed');
     }
@@ -90,6 +90,12 @@ $('#quest-button-5-f').on('click', () => {
 function questReset(value) {
     $('#resultado-' + value).addClass('d-none');
     $('#quest').removeClass('d-none').addClass('fade-in').addClass('efect-test');
+    
+    if(dispositivo <= 991){
+        $('.btn-flotante').removeClass('d-none');
+        $('.style-tarj').removeClass('text-fixed');
+    }
+
     problema = 0;
     correcta = 0;
 }
@@ -99,5 +105,5 @@ function resultado(problema, correcta) {
         $('#resultado-1').removeClass('d-none').addClass('fade-in').addClass('efect-test');
     } else {
         $('#resultado-2').removeClass('d-none').addClass('fade-in').addClass('efect-test');
-    }
+    } 
 }
