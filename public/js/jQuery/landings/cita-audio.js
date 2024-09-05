@@ -51,8 +51,20 @@ $(document).ready(function () {
             $('.style-tarj').removeClass('w-50').addClass('w-75');
             $('.btn-flotante').addClass('d-none');
             $('.med-img-circle').attr('style', 'width: 38% !important');
-            $('.fz-1').css('font-size', '70px');
-            $('.fz-2').css('font-size', '50px');
+
+            if(dispositivo >= 992){
+        
+                $('.fz-1').css('font-size', '70px');
+                $('.fz-2').css('font-size', '50px');
+
+            }else if(dispositivo >= 768 && dispositivo <= 991){
+                
+                $('.fz-1').css('font-size', '56px');
+                $('.fz-2').css('font-size', '50px');
+                $('.text-sub').css({ 'padding-left': '20%', 'padding-right': '20%' });
+        
+            }
+
         });
 
         $('.btn-close').on('click', function (e) {
@@ -70,6 +82,7 @@ $(document).ready(function () {
             $('.med-img-circle').attr('style', 'width: 64% !important');
             $('.fz-1').css('font-size', '90px');
             $('.fz-2').css('font-size', '60px');
+            
         });
 
     } else {
