@@ -11,11 +11,15 @@
 
 .text-fixed {
     position: fixed;
-    top: 0; /* Ajusta esta propiedad según lo necesites */
-    left: 0; /* Ajusta esta propiedad según lo necesites */
-    z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
-    width: 100%; /* Si quieres que tome todo el ancho */
-    background-color: white; /* O el color que prefieras para diferenciar */
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
+    width: auto; 
+    background-color: white; 
+    padding: 20px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px; 
 }
 
 .efect-test{
