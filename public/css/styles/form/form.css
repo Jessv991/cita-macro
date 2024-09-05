@@ -311,6 +311,7 @@ efecto hover table y celular
 }
 
 .textPC-table {
+    margin-right: 5px;
     font-size: 15px;
     visibility: visible;
     color: #fff;
