@@ -84,6 +84,8 @@ $(document).ready(function () {
                 
                 $('.fz-1').css('font-size', '78px');
                 $('.fz-2').css('font-size', '57px');
+                $('.redes-style').attr('style', 'width: 5.5% !important');
+                $('.blog-style').attr('style', 'width: 4.4% !important');
         
             }
             
