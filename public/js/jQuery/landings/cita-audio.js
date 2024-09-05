@@ -145,6 +145,7 @@ $(document).ready(function () {
             // Añade la clase para simular hover
             $('.btn-flotante').addClass('btn-flotante-table');
             $('.textPC').addClass('textPC-table');
+            $('.bfi').attr('style', 'margin-left: -2px !important');
 
             // Remueve la clase después de un pequeño tiempo para simular el fin del hover
             setTimeout(function() {
@@ -163,6 +164,7 @@ $(document).ready(function () {
             // Añade la clase para simular hover
             $('.btn-flotante').addClass('btn-flotante-table');
             $('.textPC').addClass('textPC-table');
+            $('.bfi').attr('style', 'margin-left: -2px !important');
 
             // Remueve la clase después de un pequeño tiempo para simular el fin del hover
             setTimeout(function() {
