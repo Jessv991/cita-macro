@@ -1,8 +1,16 @@
 var problema = 0;
 var correcta = 0;
 
+var dispositivo = window.screen.width;
+
 // START
 $('#quest-button').on('click', () => {
+
+    if(dispositivo <= 991){
+
+        $('.btn-flotante').addClass('d-none');
+    }
+
     $('#quest').addClass('d-none');
     $('#quest-1').removeClass('d-none').addClass('efect-test');
 });
