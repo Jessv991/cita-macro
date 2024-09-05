@@ -350,6 +350,11 @@ div#animationdivIcon {
         padding-left: 30%;
         padding-right: 30%;
     }
+
+    .content-poli {
+        font-size: 17px;
+    }
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -420,6 +425,10 @@ div#animationdivIcon {
     .text-sub {
         padding-left: 20%;
         padding-right: 20%;
+    }
+
+    .content-poli {
+        font-size: 17px;
     }
     
 }
@@ -497,6 +506,10 @@ div#animationdivIcon {
     .color-line {
         width: 31%;
     }
+
+    .content-poli {
+        font-size: 17px;
+    }
     
 }
 
@@ -571,6 +584,10 @@ div#animationdivIcon {
 
     .fz-4{
         font-size: 22px;
+    }
+
+    .content-poli {
+        font-size: 13px;
     }
 
 }
