@@ -58,6 +58,7 @@ $(document).ready(function () {
                 
                 $('.fz-1').css('font-size', '56px');
                 $('.fz-2').css('font-size', '50px');
+                $('.logo-natural-optic').attr('style','width: 77% !important');
                 $('.text-sub').css({ 'padding-left': '20%', 'padding-right': '20%' });
         
             }
@@ -84,8 +85,9 @@ $(document).ready(function () {
                 
                 $('.fz-1').css('font-size', '78px');
                 $('.fz-2').css('font-size', '57px');
-                $('.redes-style').attr('style', 'width: 5.5% !important');
-                $('.blog-style').attr('style', 'width: 4.4% !important');
+                $('.logo-natural-optic').attr('style','width: 100% !important');
+                $('.redes-style').attr('style', 'width: 5% !important');
+                $('.blog-style').attr('style', 'width: 4 % !important');
         
             }
             
