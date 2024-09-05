@@ -50,14 +50,11 @@ $(document).ready(function () {
             $('.blog-style').attr('style', 'width: 4.3% !important');
             $('.style-tarj').removeClass('w-50').addClass('w-75');
             $('.btn-flotante').addClass('d-none');
-            $('.med-img-circle').attr('style', 'width: 38% !important');
+            $('.med-img-circle').attr('style', 'width: 38% !important');    
+            $('.fz-1').css('font-size', '70px');
+            $('.fz-2').css('font-size', '50px');
 
-            if(dispositivo >= 992){
-        
-                $('.fz-1').css('font-size', '70px');
-                $('.fz-2').css('font-size', '50px');
-
-            }else if(dispositivo >= 768 && dispositivo <= 991){
+            if(dispositivo >= 1200 && dispositivo <= 1499){
                 
                 $('.fz-1').css('font-size', '56px');
                 $('.fz-2').css('font-size', '50px');
@@ -82,6 +79,13 @@ $(document).ready(function () {
             $('.med-img-circle').attr('style', 'width: 64% !important');
             $('.fz-1').css('font-size', '90px');
             $('.fz-2').css('font-size', '60px');
+
+            if(dispositivo >= 1200 && dispositivo <= 1499){
+                
+                $('.fz-1').css('font-size', '78px');
+                $('.fz-2').css('font-size', '57px');
+        
+            }
             
         });
 

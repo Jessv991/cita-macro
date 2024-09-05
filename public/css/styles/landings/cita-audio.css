@@ -386,11 +386,11 @@ div#animationdivIcon {
     }
 
     .fz-1 {
-        font-size: 55px;
+        font-size: 78px;
     }
 
     .fz-2 {
-        font-size: 45px;
+        font-size: 57px;
     }
 
     .cuerpo {
@@ -418,8 +418,8 @@ div#animationdivIcon {
     }
 
     .text-sub {
-        padding-left: 30%;
-        padding-right: 30%;
+        padding-left: 20%;
+        padding-right: 20%;
     }
     
 }
