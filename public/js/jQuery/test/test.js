@@ -7,8 +7,8 @@ var dispositivo = window.screen.width;
 $('#quest-button').on('click', () => {
 
     if(dispositivo <= 991){
-
         $('.btn-flotante').addClass('d-none');
+        $('.style-tarj').addClass('position-fixed');
     }
 
     $('#quest').addClass('d-none');
