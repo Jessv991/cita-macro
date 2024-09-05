@@ -6,10 +6,10 @@ var dispositivo = window.screen.width;
 // START
 $('#quest-button').on('click', () => {
 
-    if(dispositivo <= 991){
+    /* if (dispositivo <= 991) {
         $('.btn-flotante').addClass('d-none');
         $('.style-tarj').addClass('text-fixed');
-    }
+    } */
 
     $('#quest').addClass('d-none');
     $('#quest-1').removeClass('d-none').addClass('efect-test');
@@ -99,5 +99,5 @@ function resultado(problema, correcta) {
         $('#resultado-1').removeClass('d-none').addClass('fade-in').addClass('efect-test');
     } else {
         $('#resultado-2').removeClass('d-none').addClass('fade-in').addClass('efect-test');
-    } 
+    }
 }
