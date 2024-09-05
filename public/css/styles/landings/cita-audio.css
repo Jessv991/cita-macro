@@ -662,7 +662,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .fz-1 {
-        font-size: 32px;
+        font-size: 27px;
     }
 
     .colr-text {
@@ -674,8 +674,8 @@ div#animationdivIcon {
     }
 
     .text-sub {
-        padding-left: 20%;
-        padding-right: 20%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 
     .med-img-circle {
