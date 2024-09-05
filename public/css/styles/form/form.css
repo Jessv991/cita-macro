@@ -308,6 +308,7 @@ efecto hover table y celular
     background-color: #0086c4;
     transform: scale(1.1);
     width: 120px;
+    margin-left: 5px;
 }
 
 .textPC-table {
