@@ -141,6 +141,18 @@ $(document).ready(function () {
         $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
         $('#card4').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
 
+        setInterval(function() {
+            // Añade la clase para simular hover
+            $('.btn-flotante').addClass('btn-flotante-table');
+            $('.textPC').addClass('textPC-table');
+
+            // Remueve la clase después de un pequeño tiempo para simular el fin del hover
+            setTimeout(function() {
+                $('.btn-flotante').removeClass('btn-flotante-table');
+                $('.textPC').removeClass('textPC-table');
+            }, 1000); // Ajusta el tiempo que el hover permanece activo
+        }, 5000); // Cada 5 segundos
+
     }else {
         $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
         $('#card2').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
