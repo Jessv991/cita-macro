@@ -14,9 +14,6 @@
     top: 50%; 
     left: center; 
     z-index: 1000; 
-    width: 90%; 
-    max-width: 300px; 
-    padding: 20px; 
     text-align: center; 
 }
 
