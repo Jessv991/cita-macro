@@ -88,6 +88,7 @@
     </div>
 
     <div class="text-center d-none d-none" id="resultado-1">
+        
         <div class="row m-2 mb-5 text-center w-100">
             <div class="col-12 col-xl-8 col-lg-8 w-100">
                 <div class="lead fs-3 natural w-100">{{ __('test.respuesta_neg') }}</div>
@@ -100,10 +101,10 @@
             </div>
         </div>
 
-
     </div>
 
     <div class="text-center d-none" id="resultado-2">
+
         <div class="row m-2 mb-5 text-center w-100">
             <div class="col-12 col-xl-8 col-lg-8 w-100">
                 <div class="lead fs-3 natural w-100">{{ __('test.respuesta_pos') }}</div>
@@ -115,7 +116,6 @@
                 <div class="lead fs-2 colr-text fw-bold"><i class="bi bi-arrow-repeat"></i> {{ __('test.b-reboot') }}</div>
             </div>
         </div>
-
 
     </div>
 
