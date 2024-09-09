@@ -122,11 +122,6 @@ function questReset(value) {
     if(dispositivo <= 991){
         $('#quest').removeClass('d-none').addClass('fade-in').addClass('efect-tablet');
     }
-    
-    if(dispositivo <= 991){
-        $('.btn-flotante').removeClass('d-none');
-        $('.style-tarj').removeClass('text-fixed');
-    }
 
     problema = 0;
     correcta = 0;

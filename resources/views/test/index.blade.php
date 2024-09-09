@@ -6,7 +6,7 @@
         </div>
 
         <div class="d-block">
-            <div class="py-2 px-5 m-2 mb-4 bg-natural rounded-3" id="quest-button">
+            <div class="py-2 px-5 m-2 bg-natural rounded-3" id="quest-button">
                 <div class="test-buttons lead fs-2 fw-bold text-uppercase">{{ __('test.b-test') }}</div>
             </div>
         </div>
@@ -87,16 +87,19 @@
         </div>
     </div>
 
-    <div class="text-center d-none" id="resultado-1">
+    <div class="text-center d-none d-none" id="resultado-1">
         <div class="row m-2 mb-5 text-center w-100">
             <div class="col-12 col-xl-8 col-lg-8 w-100">
                 <div class="lead fs-3 natural w-100">{{ __('test.respuesta_neg') }}</div>
             </div>
         </div>
 
-        <div class="py-2 px-5  m-2 bg-natural rounded-3 reset" onclick="questReset(1)">
-            <div class="lead fs-2 colr-text fw-bold"><i class="bi bi-arrow-repeat"></i> {{ __('test.b-reboot') }}</div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="py-2 px-5  m-2 bg-natural rounded-3 reset" onclick="questReset(1)">
+                <div class="lead fs-2 colr-text fw-bold"><i class="bi bi-arrow-repeat"></i> {{ __('test.b-reboot') }}</div>
+            </div>
         </div>
+
 
     </div>
 
@@ -107,9 +110,12 @@
             </div>
         </div>
 
-        <div class="py-2 px-5  m-2 bg-natural rounded-3 reset" onclick="questReset(2)">
-            <div class="lead fs-2 colr-text fw-bold"><i class="bi bi-arrow-repeat"></i> {{ __('test.b-reboot') }}</div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="py-2 px-5  m-2 bg-natural rounded-3 reset" onclick="questReset(2)">
+                <div class="lead fs-2 colr-text fw-bold"><i class="bi bi-arrow-repeat"></i> {{ __('test.b-reboot') }}</div>
+            </div>
         </div>
+
 
     </div>
 
