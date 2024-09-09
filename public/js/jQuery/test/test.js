@@ -8,7 +8,6 @@ $('#quest-button').on('click', () => {
 
     $('#quest').addClass('d-none');
     $('#quest-1').removeClass('d-none').addClass('efect-test');
-
     if(dispositivo <= 991){
         $('#quest-1').removeClass('d-none').addClass('efect-tablet');
     }
@@ -94,10 +93,6 @@ $('#quest-button-4-f').on('click', () => {
 $('#quest-button-5-v').on('click', () => {
     problema++;
     $('#quest-5').addClass('d-none');
-    $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-test');
-    if(dispositivo <= 991){
-        $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-tablet');
-    }
 
     // Llamar a la función resultado al final del cuestionario
     resultado(problema, correcta);
@@ -106,10 +101,6 @@ $('#quest-button-5-v').on('click', () => {
 $('#quest-button-5-f').on('click', () => {
     correcta++;
     $('#quest-5').addClass('d-none');
-    $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-test');
-    if(dispositivo <= 991){
-        $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-tablet');
-    }
 
     // Llamar a la función resultado al final del cuestionario
     resultado(problema, correcta);
