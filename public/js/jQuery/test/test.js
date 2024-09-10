@@ -13,12 +13,10 @@ $('#quest-button').on('click', () => {
 
     $('#quest').addClass('d-none');
     $('#quest-1').removeClass('d-none').addClass('efect-test');
-<<<<<<< HEAD
     if(dispositivo <= 991){
         $('#quest-1').removeClass('d-none').addClass('efect-tablet');
     }
-=======
->>>>>>> parent of 2bb54cd (ajuste efecto test según la vista)
+
 });
 
 // QUEST 1
@@ -77,10 +75,7 @@ $('#quest-button-4-f').on('click', () => {
 $('#quest-button-5-v').on('click', () => {
     problema++;
     $('#quest-5').addClass('d-none');
-<<<<<<< HEAD
-=======
     $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-test');
->>>>>>> parent of 2bb54cd (ajuste efecto test según la vista)
 
     // Llamar a la función resultado al final del cuestionario
     resultado(problema, correcta);
@@ -89,10 +84,7 @@ $('#quest-button-5-v').on('click', () => {
 $('#quest-button-5-f').on('click', () => {
     correcta++;
     $('#quest-5').addClass('d-none');
-<<<<<<< HEAD
-=======
     $('#quest-6').removeClass('d-none').addClass('fade-in').addClass('efect-test');
->>>>>>> parent of 2bb54cd (ajuste efecto test según la vista)
 
     // Llamar a la función resultado al final del cuestionario
     resultado(problema, correcta);
@@ -102,19 +94,16 @@ $('#quest-button-5-f').on('click', () => {
 function questReset(value) {
     $('#resultado-' + value).addClass('d-none');
     $('#quest').removeClass('d-none').addClass('fade-in').addClass('efect-test');
-<<<<<<< HEAD
     if(dispositivo <= 991){
         $('#quest').removeClass('d-none').addClass('fade-in').addClass('efect-tablet');
-=======
-    
     if(dispositivo <= 991){
         $('.btn-flotante').removeClass('d-none');
         $('.style-tarj').removeClass('text-fixed');
->>>>>>> parent of 2bb54cd (ajuste efecto test según la vista)
     }
 
     problema = 0;
     correcta = 0;
+    }
 }
 
 function resultado(problema, correcta) {
