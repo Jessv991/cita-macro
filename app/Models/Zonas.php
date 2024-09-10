@@ -87,22 +87,23 @@ class Zonas extends Model
     public function getProvincias($codigo)
     {
         $datos = DB::table('zonas as z')
-        ->select('z.a1', 'z.id')
-        ->distinct()
-        ->join('empresas as e', 'e.d2', '=', 'z.id')
-        ->whereIn('codigo', $codigo)
-        ->where('z.id', '!=', 53)
-        ->where('d22', 'si')
-        ->where(function ($query) {
-            $query->where('d9', '0')
-            ->orWhere('d9', '1');
-        })
-        ->where('CRM', 'si')
-        ->orderBy('nombre', 'asc')
-        ->get();
-        
+            ->select('z.a1', 'z.id')
+            ->distinct()
+            ->join('empresas as e', 'e.d2', '=', 'z.id')
+            ->whereIn('codigo', $codigo)
+            ->where('z.id', '!=', 53)
+            ->where('d22', 'si')
+            ->where(function ($query) {
+                $query->where('d9', '0')
+                    ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')
+            ->orderBy('nombre', 'asc')
+            ->get();
+
         return $datos;
 
+        dd($datos);
     }
 
     public function getProvinciasByWeblogin($weblogin, $codigo)

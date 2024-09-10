@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<<<<<<< HEAD
+<hea  
+=======
 <head>
 
     @php
@@ -22,6 +25,7 @@
         @endphp
     @endif
 
+>>>>>>> 24be8ce3e61c71545b014ff19836dc3cecc8ac3e
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natural Audio</title>
@@ -38,6 +42,30 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
 
+<<<<<<< HEAD
+    @php
+        $baseUrl = url('/'); //esta es la base url
+        $locale = $data['idioma'];
+        $landing = $data['landing'];
+        $rutaAsset;
+    @endphp
+
+    @if ($baseUrl !== 'https://www.audio.naturaloptics.com')
+       {{-- si es difernte a  www.audio.naturaloptics.com --}} 
+
+        @php
+            $rutaAsset = '';
+        @endphp
+    @else
+        @php
+            $rutaAsset = 'cita-macro/';
+        @endphp
+    @endif
+0/mapbox-gl-language.js'></script>
+0/mapbox-gl-language.js'></script>
+
+=======
+>>>>>>> 24be8ce3e61c71545b014ff19836dc3cecc8ac3e
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
