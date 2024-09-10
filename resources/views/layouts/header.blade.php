@@ -5,6 +5,7 @@
 <hea  
 =======
 <head>
+<<<<<<< HEAD
 
     @php
         $baseUrl = url('/'); //esta es la base url
@@ -26,10 +27,12 @@
     @endif
 
 >>>>>>> 24be8ce3e61c71545b014ff19836dc3cecc8ac3e
+=======
+>>>>>>> parent of 24be8ce (Update header.blade.php)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natural Audio</title>
-    <link rel="icon" href="{{ asset($rutaAsset . '/assets/iconos_landings/N_2.png') }}">
+    <link rel="icon" href="https://www.audio.naturaloptics.com/cita-macro/assets/iconos_landings/N_2.png">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
@@ -43,6 +46,9 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 24be8ce (Update header.blade.php)
     @php
         $baseUrl = url('/'); //esta es la base url
         $locale = $data['idioma'];
@@ -61,11 +67,15 @@
             $rutaAsset = 'cita-macro/';
         @endphp
     @endif
+<<<<<<< HEAD
 0/mapbox-gl-language.js'></script>
 0/mapbox-gl-language.js'></script>
 
 =======
 >>>>>>> 24be8ce3e61c71545b014ff19836dc3cecc8ac3e
+=======
+
+>>>>>>> parent of 24be8ce (Update header.blade.php)
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
