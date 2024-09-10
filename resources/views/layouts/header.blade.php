@@ -7,6 +7,7 @@
 <head>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 
     @php
         $baseUrl = url('/'); //esta es la base url
@@ -32,6 +33,8 @@
 >>>>>>> parent of 24be8ce (Update header.blade.php)
 =======
 >>>>>>> parent of 24be8ce (Update header.blade.php)
+=======
+>>>>>>> parent of 24be8ce (Update header.blade.php)
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natural Audio</title>
@@ -51,6 +54,9 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 24be8ce (Update header.blade.php)
 =======
 >>>>>>> parent of 24be8ce (Update header.blade.php)
 =======
@@ -75,11 +81,15 @@
     @endif
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 0/mapbox-gl-language.js'></script>
 0/mapbox-gl-language.js'></script>
 
 =======
 >>>>>>> 24be8ce3e61c71545b014ff19836dc3cecc8ac3e
+=======
+
+>>>>>>> parent of 24be8ce (Update header.blade.php)
 =======
 
 >>>>>>> parent of 24be8ce (Update header.blade.php)
