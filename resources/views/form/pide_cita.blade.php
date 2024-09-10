@@ -178,7 +178,7 @@
 
                 <div class="b-pedir-citas mt-5">
 
-                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
+                    <button type="submit" id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
 
                 </div>
 
@@ -246,7 +246,6 @@
             success: function(response) {
                 $('#formMacroContactologia').addClass('d-none');
                 $('#gracias').removeClass('d-none');
-                // Manejar la respuesta del servidor, por ejemplo, redirigir
             },
             error: function(xhr, status, error) {
 
