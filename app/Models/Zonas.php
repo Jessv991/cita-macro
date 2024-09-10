@@ -102,6 +102,8 @@ class Zonas extends Model
             ->get();
 
         return $datos;
+
+        dd($datos);
     }
 
     public function getProvinciasByWeblogin($weblogin, $codigo)

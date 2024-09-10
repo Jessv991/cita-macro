@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<hea  
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natural Audio</title>
@@ -36,6 +36,8 @@
             $rutaAsset = 'cita-macro/';
         @endphp
     @endif
+0/mapbox-gl-language.js'></script>
+0/mapbox-gl-language.js'></script>
 
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
