@@ -1,3 +1,5 @@
+var dispositivo = window.screen.width;
+
 $(document).ready(function () {
     
     var weblogin = $('#_weblogin').val();
@@ -42,6 +44,36 @@ $(document).ready(function () {
             $('#animationdivIcon').addClass('d-none');
         }
     });
+
+    /* 
+    ███████╗███████╗███████╗ ██████╗████████╗ ██████╗     ██╗  ██╗ ██████╗ ██╗   ██╗███████╗██████╗ 
+    ██╔════╝██╔════╝██╔════╝██╔════╝╚══██╔══╝██╔═══██╗    ██║  ██║██╔═══██╗██║   ██║██╔════╝██╔══██╗
+    █████╗  █████╗  █████╗  ██║        ██║   ██║   ██║    ███████║██║   ██║██║   ██║█████╗  ██████╔╝
+    ██╔══╝  ██╔══╝  ██╔══╝  ██║        ██║   ██║   ██║    ██╔══██║██║   ██║╚██╗ ██╔╝██╔══╝  ██╔══██╗
+    ███████╗██║     ███████╗╚██████╗   ██║   ╚██████╔╝    ██║  ██║╚██████╔╝ ╚████╔╝ ███████╗██║  ██║
+    ╚══════╝╚═╝     ╚══════╝ ╚═════╝   ╚═╝    ╚═════╝     ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚══════╝╚═╝  ╚═╝
+    
+    para botón flotante pantallas pequeñas
+    */
+
+    if(dispositivo <= 991){
+
+        setInterval(function() {
+            // Añade la clase para simular hover
+            $('.btn-flotante').addClass('btn-flotante-table');
+            $('.textPC').addClass('textPC-table');
+            $('.cls-1').addClass('cls-1-table');
+            $('.bfi').attr('style', 'margin-left: -2px !important');
+
+            // Remueve la clase después de un pequeño tiempo para simular el fin del hover
+            setTimeout(function() {
+                $('.btn-flotante').removeClass('btn-flotante-table');
+                $('.textPC').removeClass('textPC-table');
+                $('.cls-1').removeClass('cls-1-table');
+            }, 1000); // Ajusta el tiempo que el hover permanece activo
+        }, 5000); // Cada 5 segundos
+
+    }
     
 });
 
