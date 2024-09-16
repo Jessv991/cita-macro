@@ -12,7 +12,7 @@
     @endphp
 @else
     @php
-        $rutaAsset = 'cita-macro/';
+        $rutaAsset = 'cita-macro-nog-audio/';
     @endphp
 @endif
 
@@ -39,18 +39,20 @@
                 </div>
 
                 <div class="row w-100 p-0">
-                    <div id="card1" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
+                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="100"
+                        data-aos-duration="1000">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
-                            <div class="text-center cont-text-black pmp">
+                            <div class="text-center cont-text-black">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-1') }}</span>
                             </div>
                         </div>
                     </div>
     
-                    <div id="card2" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
+                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
+                        data-aos-duration="1000">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" />
                         <div class="mt-3">
                             @if ($locale === 'es')
@@ -66,29 +68,31 @@
                                 </div>
                             @endif
     
-                            <div class="text-center cont-text-black pmp">
+                            <div class="text-center cont-text-black">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-3') }}</span>
                             </div>
                         </div>
                     </div>
     
-                    <div id="card3" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
+                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
+                        data-aos-duration="1000">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
-                            <div class="text-center cont-text-black pmp m-text-card2">
+                            <div class="text-center cont-text-black m-text-card2">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-2') }}</span>
                             </div>
                         </div>
                     </div>
     
-                    <div id="card4" class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in">
+                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1500"
+                        data-aos-duration="1000">
                         <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>
-                            <div class="text-center cont-text-black pmp">
+                            <div class="text-center cont-text-black">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-4') }}</span>
                             </div>
                         </div>
@@ -114,12 +118,6 @@
             <div class="w-100">
                 @include('map.index')
             </div>
-            
-            <div class="form_flotante d-flex justify-content-center align-items-center d-none">
-                @include('form.pide_cita')
-                <button class="btn-close-flotante">×</button>
-            </div>
-
             <div class="w-100 ">
                 @include('layouts.footer_view')
             </div>
@@ -127,18 +125,23 @@
 
     </div>
 
-    <div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
-        
+    <div
+        class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
         <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
             <button class="btn-close">×</button>
             @include('form.pide_cita')
         </div>
-
+        
     </div>
-
+    
 </div>
 
 @include('form.boton_flotante')
+
+<div class="form_flotante d-flex justify-content-center align-items-center d-lg-none d-none">
+    <button class="btn-close-flotante">×</button>
+    @include('form.pide_cita')
+</div>
 
 
 @include('layouts.footer')

@@ -315,8 +315,7 @@ class Empresas extends Model
             })
             ->where('CRM', 'si')
             ->get();
-
-        dd($datos);
+        
         return $datos;
 
     }
@@ -384,7 +383,7 @@ class Empresas extends Model
                 ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
                 ->get();
-
+dd($datos);
         
         return $datos;
 
