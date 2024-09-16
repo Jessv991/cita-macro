@@ -404,8 +404,7 @@ class Empresas extends Model
                 ->get();
         
         return $datos;
-        dd($datos);
-
+    
     }
 
 }
