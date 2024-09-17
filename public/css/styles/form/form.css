@@ -1,0 +1,328 @@
+/* ===================================SCROLL=================================== */
+
+
+#formMacroContactologia {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#formMacroContactologia::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho del scroll */
+}
+
+#formMacroContactologia::-webkit-scrollbar-track {
+    background: transparent;
+    /* Color de fondo del track (pista del scroll) */
+}
+
+
+/* ===================================EFECTO DE ANULAR EL SELECT DEL FORM SI HAY SÓLO UNA OPCIÓN=================================== */
+.optica_div {
+    width: 100% !important;
+}
+
+.readonly-select {
+    pointer-events: none;
+    background-color: #f0f0f0;
+}
+
+/* ===================================BUTTON STYLE=================================== */
+
+.btn-color {
+    background-color: #0086c4;
+    color: #f0f0f0;
+}
+
+.btn-color:hover {
+    background-color: #8da5b1;
+    color: #f0f0f0;
+}
+
+
+/*  ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+
+.contenedor-form {
+    padding: 4%;
+    position: absolute;
+}
+
+
+/* 
+.d8b.  d8b   db d888888b .88b  d88.  .d8b.  d888888b d888888b  .d88b.  d8b   db .d8888. 
+d8' `8b 888o  88   `88'   88'YbdP`88 d8' `8b `~~88~~'   `88'   .8P  Y8. 888o  88 88'  YP 
+88ooo88 88V8o 88    88    88  88  88 88ooo88    88       88    88    88 88V8o 88 `8bo.   
+88~~~88 88 V8o88    88    88  88  88 88~~~88    88       88    88    88 88 V8o88   `Y8b. 
+88   88 88  V888   .88.   88  88  88 88   88    88      .88.   `8b  d8' 88  V888 db   8D 
+YP   YP VP   V8P Y888888P YP  YP  YP YP   YP    YP    Y888888P  `Y88P'  VP   V8P `8888Y' 
+                                                                                        
+*/
+
+
+#animationdivIcon {
+    width: 8%;
+}
+
+.rotate-in-center {
+    -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes scale-in-center {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes jingle-3d825006-3cda-4950-a58b-3018f9321a57 {
+    0% {
+        animation-timing-function: cubic-bezier(0.146, 0.2111, 0.5902, 1.3204);
+        transform: rotate(0deg);
+    }
+
+    11% {
+        animation-timing-function: cubic-bezier(0.1079, 0.1992, -0.6462, 0.828);
+        transform: rotate(7.61deg);
+    }
+
+    23% {
+        animation-timing-function: cubic-bezier(0.0504, 0.0951, 0.0163, 0.9677);
+        transform: rotate(-5.789999999999999deg);
+    }
+
+    36% {
+        animation-timing-function: cubic-bezier(0.0475, 0.0921, 0.3134, 1.0455);
+        transform: rotate(3.35deg);
+    }
+
+    49% {
+        animation-timing-function: cubic-bezier(0.0789, 0.1565, 0.3413, 1.0972);
+        transform: rotate(-1.9300000000000002deg);
+    }
+
+    62% {
+        animation-timing-function: cubic-bezier(0.141, 0.2885, 0.406, 1.1519);
+        transform: rotate(1.12deg);
+    }
+
+    75% {
+        animation-timing-function: cubic-bezier(0.226, 0.4698, 0.5031, 1.1722);
+        transform: rotate(-0.64deg);
+    }
+
+    88% {
+        animation-timing-function: cubic-bezier(0.3121, 0.5521, 0.5655, 0.8997);
+        transform: rotate(0.37deg);
+    }
+
+    100% {
+        transform: rotate(-0.28deg);
+    }
+}
+
+/* Hide the default checkbox */
+.custom-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.form-check-label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 30px;
+    font-size: 18px;
+    user-select: none;
+}
+
+/* Create the custom checkbox indicator (the circular box) */
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+/* When the checkbox is checked, add the checkmark (tick) */
+.custom-checkbox:checked+.form-check-label::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 2px;
+    width: 7px;
+    height: 14px;
+    border: solid #555;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+/* Optional: Add some hover and focus styles */
+.custom-checkbox:hover+.form-check-label::before,
+.custom-checkbox:focus+.form-check-label::before {
+    border-color: #000;
+}
+
+input {
+    margin-top: 4%;
+}
+
+select {
+    margin-top: 4%;
+}
+
+/* 
+██████╗  ██████╗ ████████╗███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔══██╗██╔═══██╗╚══██╔══╝████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+██████╔╝██║   ██║   ██║   ██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══██╗██║   ██║   ██║   ██║╚██╗██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██████╔╝╚██████╔╝   ██║   ██║ ╚████║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═════╝  ╚═════╝    ╚═╝   ╚═╝  ╚═══╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                              */
+
+.btn-flotante {
+    position: fixed;
+    width: 55px;
+    height: 55px;
+    right: 0px;
+    top: 45%;
+    background-color: #95c3f4;
+    /* d6e0eb */
+    color: white;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.646);
+    font-size: 24px;
+    z-index: 1000;
+    transition: background-color 0.3s, transform 0.3s, width 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cls-1{
+   fill: #0086c4 !important; 
+}
+
+.textPC {
+    margin-right: 5px;
+    font-size: 1px;
+    transition: font-size 0.3s;
+    visibility: hidden;
+}
+
+/* Efecto hover */
+.btn-flotante:hover {
+    background-color: #0086c4;
+    transform: scale(1.1);
+    width: 120px;
+}
+
+.btn-flotante:hover .bfi {
+    margin-left: 0px;
+}
+
+.btn-flotante:hover .textPC {
+    font-size: 15px;
+    visibility: visible;
+    color: #fff;
+}
+
+.btn-flotante:hover .cls-1{
+    fill: #95c3f4 !important; 
+ }
+
+.bfi {
+    width: 42px;
+    margin-left: -5px;
+}
+
+.cont-form-principal {
+    position: relative;
+}
+
+.btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 34px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-close:hover {
+    color: black;
+}
+
+.btn-close-flotante {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 34px;
+    color: #ffffff;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.btn-close-flotante:hover {
+    color: black;
+}
+
+/* 
+efecto hover table y celular
+*/
+
+.btn-flotante-table {
+    background-color: #0086c4;
+    transform: scale(1.1);
+    width: 120px;
+}
+
+.textPC-table {
+    font-size: 15px;
+    visibility: visible;
+    color: #fff;
+}
+
+.cls-1-table{
+    fill: #95c3f4 !important; 
+ }
