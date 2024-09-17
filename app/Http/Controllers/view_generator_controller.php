@@ -28,6 +28,7 @@ class view_generator_controller extends Controller
     }
 
     protected $data = [];
+    //probando cosas
 
     public function getTypeDispositive($request)
     {
