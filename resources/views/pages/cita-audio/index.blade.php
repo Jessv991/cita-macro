@@ -2,19 +2,7 @@
     $locale = $data['idioma'];
     $telefonoOptica = '681329383';
     $mailOptica = 'j.vasquez@naturalopticsgroup.com';
-    $baseUrl = url('/');
-    $rutaAsset;
 @endphp
-
-@if ($baseUrl !== 'https://www.audio.naturaloptics.com')
-    @php
-        $rutaAsset = '';
-    @endphp
-@else
-    @php
-        $rutaAsset = 'cita-macro/';
-    @endphp
-@endif
 
 @include('layouts.header')
 <div class="row w-100 cont-all vh-100 w-100 p-0 m-0 h-100">
@@ -41,7 +29,7 @@
                 <div class="row w-100 p-0">
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="100"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" />
+                        <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/transito.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
@@ -53,7 +41,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" />
+                        <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/revision.png') }}" />
                         <div class="mt-3">
                             @if ($locale === 'es')
                                 <div class="p-titol-card3">
@@ -76,7 +64,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" />
+                        <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/girl.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
@@ -88,7 +76,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1500"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" />
+                        <img class="med-img-circle" src="{{ asset('assets/img/cita-audio/baby.png') }}" />
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>

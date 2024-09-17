@@ -2,23 +2,9 @@
 
     {{-- ruta del documento jQuery --}}
     @php
-        $baseUrl = url('/'); //esta es la base url
         $locale = $data['idioma'];
         $landing = $data['landing'];
-        $rutaAsset;
     @endphp
-
-    @if ($baseUrl !== 'https://www.audio.naturaloptics.com')
-        {{-- si es difernte a  www.audio.naturaloptics.com --}}
-
-        @php
-            $rutaAsset = '';
-        @endphp
-    @else
-        @php
-            $rutaAsset = 'cita-macro/';
-        @endphp
-    @endif
 
     <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
@@ -36,14 +22,15 @@
             assetUrl: "{{ asset('/') }}",
             mapa: {!! $data['mapa'] !!}
         };
+        
     </script>
 
-    <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/jQuery/landings/' . $landing . '.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/jQuery/map/map.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'js/jQuery/test/test.js') }}"></script>
+    <script src="{{ asset('js/jQuery/form/form.js') }}"></script>
+    <script src="{{ asset('js/jQuery/landings/' . $landing . '.js') }}"></script>
+    <script src="{{ asset('js/cookies/cookieconsent.js') }}"></script>
+    <script src="{{ asset('js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
+    <script src="{{ asset('js/jQuery/map/map.js') }}"></script>
+    <script src="{{ asset('js/jQuery/test/test.js') }}"></script>
     <script>
         AOS.init();
     </script>

@@ -5,18 +5,10 @@ if(styleMap){
     styleMap = 'mapbox://styles/dariusnatural/cl0jfj0qb001s15o8ei998bv1';
 }
 
-const baseUrl = appData.baseUrl;
-const assetUrl = appData.assetUrl;
 const features = appData.mapa;
 
+let rutaPng = 'assets/iconos/map/ubi-nat.png';
 
-let rutaPng;
-
-if (baseUrl !== 'https://www.audio.naturaloptics.com') {
-    rutaPng = assetUrl + 'assets/iconos/map/ubi-nat.png';
-} else {
-    rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';
-} 
 
 mapboxgl.accessToken = 'pk.eyJ1IjoiaXZ2bGcyZHUiLCJhIjoiY2t3ZGN1Ym42MXVrbzJucW1teXpnY3h0ZyJ9.IdLdcvriRQugWA6kDWivUA';
 const map = new mapboxgl.Map({
