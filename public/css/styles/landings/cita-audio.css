@@ -284,6 +284,7 @@ div#animationdivIcon {
 
  /* Pantallas Muy Grandes (1500px en adelante) */
 @media (min-width: 1500px) {
+    
     .text-top-form {
         font-size: 20px;
         padding: 2%;
@@ -353,6 +354,14 @@ div#animationdivIcon {
 
     .content-poli {
         font-size: 17px;
+    }
+
+    #test.p-4 {
+        padding: 3.5rem!important;
+    }
+
+    #card_test.w-75{
+        width: 55% !important;
     }
 
 }

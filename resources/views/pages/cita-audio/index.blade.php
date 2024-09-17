@@ -104,7 +104,7 @@
 
 
             <div class="w-100 d-flex justify-content-center align-items-center mt-lg-0 mt-5">
-                <div class="style-tarj w-md-50 w-75 d-flex justify-content-center align-items-center" data-aos="flip-left"
+                <div id="card_test" class="style-tarj w-md-50 w-75 d-flex justify-content-center align-items-center" data-aos="flip-left"
                     data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     @include('test.index')
                 </div>

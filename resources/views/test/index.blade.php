@@ -1,4 +1,4 @@
-<div id="test" class="d-flex flex-column justify-content-center align-items-center p-4 rounded-20 bg-blue text-center w-100">
+<div id="test" class="d-flex flex-column justify-content-center align-items-center p-4 rounded-20 text-center w-100">
 
     <div id="quest" class="d-flex flex-column justify-content-center align-items-center">
         <div class="text-center mb-3 mb-md-5">
