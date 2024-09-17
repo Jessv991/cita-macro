@@ -1,1 +1,0 @@
-<div class="w-100" id='map' style='width: 1273.33px; height: 624.906px;'></div>
