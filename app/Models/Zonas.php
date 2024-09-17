@@ -66,12 +66,6 @@ class Zonas extends Model
      */
     public $timestamps = false;
 
-    // Scopes...
-
-    // Functions ...
-
-    // Relations ...
-
     /*
 
     ██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗██╗ █████╗ ███████╗

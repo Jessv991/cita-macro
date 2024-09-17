@@ -46,8 +46,6 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
         $locale = 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
     }
 
-
-    //dd(session());
     App::setLocale($locale);
 
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
@@ -87,7 +85,3 @@ Route::post('cita-macro/postValidateKit', [view_generator_controller::class, 'va
 
 //===============================POST GENERADOR DE IMAGENES===============================
 Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name('imageGenerator');
-/* Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
- */

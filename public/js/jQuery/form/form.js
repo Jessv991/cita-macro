@@ -12,7 +12,6 @@ $(document).ready(function () {
         putOpticasByWeblogin();
     } else if (weblogin) {
         putOpticaByweblogin();
-        //getOpticaSelectCity();
     } else {
         getCityBySelectState();
         getOpticaSelectCity()
@@ -106,14 +105,14 @@ function getCityBySelectState() {
                 type: 'POST',
                 data: {
                     provincias: provinciaId,
-                    _token: csrfToken // Token CSRF definido en el archivo Blade
+                    _token: csrfToken // Token CSRF definido en el archivo Blade llamado foorte
                 },
                 success: function (data) {
 
                     $('#ciudad').empty();
 
                     if (data.length == 1) {
-                        // Si solo hay una ciudad, seleccionarla automáticamente
+                        // Si solo hay una ciudad, se selecciona automáticamente
                         $.each(data, function (key, value) {
                             $('#ciudad').append('<option value="' + value.d3 + '" selected>' + value.d3 + '</option>');
                             $('#ciudad').addClass('readonly-select');

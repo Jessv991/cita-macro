@@ -24,8 +24,6 @@ class email_service_comercial
         try {
 
             $mail->CharSet = 'UTF-8';
-            /* $mail->SMTPDebug = 3;
-            $mail->Debugoutput = 'html'; */
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');

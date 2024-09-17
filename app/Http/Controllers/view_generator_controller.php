@@ -112,7 +112,7 @@ class view_generator_controller extends Controller
             //consultas todas las tiendas por weblogin que sean audio
             $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin);
         } else {
-            //consulta las tiendas de aodio
+            //consulta las tiendas de audio
             $this->data['centros'] = $empresas->getStoreAllAudio();
         }
 
@@ -122,8 +122,7 @@ class view_generator_controller extends Controller
         //============================GUARDAR RUTA ACTUAL DEL CLIENTE============================
         $this->data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
-        /*/=====================MAPAS=====================
-		$data['mapaUgo'] = file_get_contents("https://www.audio.naturaloptics.com/mapa/featuresShamirUgo.json");*/
+        //=====================MAPAS=====================
         $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
@@ -364,7 +363,7 @@ class view_generator_controller extends Controller
         App::setLocale($locale);
 
         /* 
-        El formulario cuenta con con estos dos input que estabamos cogiendo sus datos aquí, lo único que se debe hacer
+        El formulario cuenta con estos dos input que estabamos cogiendo sus datos aquí, lo único que se debe hacer
         es declarar las variables que hemos explicado en el gitBook. 
         */
         $telefono_optica = $request->input('telefono_optica');

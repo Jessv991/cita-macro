@@ -82,11 +82,6 @@ class CitasLandings extends Model
      */
     public $timestamps = false;
 
-    // Scopes...
-
-    // Functions ...
-
-    // Relations ...
 
 
     public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip)

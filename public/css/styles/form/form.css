@@ -221,7 +221,6 @@ select {
     right: 0px;
     top: 45%;
     background-color: #95c3f4;
-    /* d6e0eb */
     color: white;
     text-align: center;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.646);
@@ -308,7 +307,7 @@ select {
 }
 
 /* 
-efecto hover table y celular
+clases para efecto hover table y celular
 */
 
 .btn-flotante-table {

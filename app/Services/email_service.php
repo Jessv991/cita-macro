@@ -38,14 +38,10 @@ class email_service
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa con '. $origen;
-            //dd($mail);
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
-            //dd($archivo);
-
             $optica = $empresas->getStoreByCodestrore($tienda);
-            //dd($optica);
 
             if (!empty($optica) && isset($optica[0])) {
 
@@ -122,7 +118,6 @@ class email_service
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Confirmación de solicitud de cita previa';
-            //dd($mail);
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
 
@@ -138,7 +133,6 @@ class email_service
             $mail->Body = $actual;
             
             $mail->addAddress($email);
-            //dd($mail);
 
 
             try {
