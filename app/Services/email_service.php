@@ -37,7 +37,7 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa con '. $origen;
+            $mail->Subject = 'Cita previa con '. $nombre . ' ' . $apellidos;
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
@@ -116,8 +116,8 @@ class email_service
             $mail->isHTML(true);
 
 
-            $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Confirmación de solicitud de cita previa';
+            $mail->setFrom(config('mail.from.address'), $nombre_optica);
+            $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
 
