@@ -5,12 +5,13 @@ namespace App\Services;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\Empresas;
+use App\Models\CitasLandings;
 
 use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale)
+    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
     {
 
         $nombre = $validated['nombre'];
@@ -75,7 +76,7 @@ class email_service
                 //$mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen);
             }
 
 
@@ -97,9 +98,10 @@ class email_service
 
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen)
     {
 
+        $Citas = new CitasLandings();
         $mail = new PHPMailer(true);
 
         try {
@@ -133,6 +135,7 @@ class email_service
             $mail->Body = $actual;
             
             $mail->addAddress($email);
+            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
 
             try {

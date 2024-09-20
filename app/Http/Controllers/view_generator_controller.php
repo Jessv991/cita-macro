@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\CitasLandings;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
@@ -284,9 +283,6 @@ class view_generator_controller extends Controller
     public function validatePideCita(Request $request)
     {
 
-        $Citas = new CitasLandings();
-
-
         $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
@@ -335,16 +331,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $sent = $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
-
-
-        if ($sent) {
-            //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
-            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
-        } else {
-
-            return response()->json(['message' => 'Error en el envío del email.'], 500);
-        }
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
