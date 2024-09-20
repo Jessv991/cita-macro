@@ -37,7 +37,7 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa con '. $nombre . ' ' . $apellidos;
+            $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
