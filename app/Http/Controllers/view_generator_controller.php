@@ -323,9 +323,6 @@ class view_generator_controller extends Controller
         $validated = $request->validate($rules);
 
 
-
-
-
         $url = $request->input('url_landing');
 
         $getLogo = $this->generadorImg->index($logo);
@@ -342,7 +339,6 @@ class view_generator_controller extends Controller
 
 
         if ($sent) {
-
             //una vez enviado el email, si se hizo correctamente se guardan los datos del cliente 
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
         } else {
