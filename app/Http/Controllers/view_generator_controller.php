@@ -157,15 +157,17 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'auditiva' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva.png',
-            'auditiva2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva2.png',
-            'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
+            'cita-audio' => array(
+                'auditiva' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva.png',
+                'auditiva2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva2.png',
+                'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
+            )
         );
 
         //clave de las imagenes en el array data
-        $this->data['auditiva'] = $rutaAsset . $imagen['auditiva'];
-        $this->data['auditiva2'] = $rutaAsset . $imagen['auditiva2'];
-        $this->data['auditiva3'] = $rutaAsset . $imagen['auditiva3'];
+        $this->data['auditiva'] = $rutaAsset . $imagen['cita-audio']['auditiva'];
+        $this->data['auditiva2'] = $rutaAsset . $imagen['cita-audio'] ['auditiva2'];
+        $this->data['auditiva3'] = $rutaAsset . $imagen['cita-audio'] ['auditiva3'];
 
         //=====================LOGO=====================
 
