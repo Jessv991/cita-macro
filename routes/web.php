@@ -52,9 +52,6 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
 })->name('vistaLanding');
 
 
-
-
-
 /* 
 ██████╗ ██╗   ██╗████████╗ █████╗ ███████╗    ██████╗  ██████╗ ███████╗████████╗    ███████╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔══██╗██║   ██║╚══██╔══╝██╔══██╗██╔════╝    ██╔══██╗██╔═══██╗██╔════╝╚══██╔══╝    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
@@ -64,7 +61,6 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
 ╚═╝  ╚═╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚══════╝    ╚═╝      ╚═════╝ ╚══════╝   ╚═╝       ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                                                                                                         
 */
-
 
 //===============================POST CIUDAD===============================
 Route::post('cita-macro/get-localidad-by-provincia', [view_generator_controller::class, 'getLocalidadByProvincia'])->name('getLocalidadByProvincia');
@@ -77,7 +73,6 @@ Route::post('cita-macro/get-store-by-weblogin', [view_generator_controller::clas
 
 //===============================POST PASANDO WEBLOGIN Y TIENDA===============================
 Route::post('cita-macro/get-store-by-webloginYoptica', [view_generator_controller::class, 'getOpticaByWebloginAndOptica'])->name('getOpticaByWebloginAndOptica');
-
 
 Route::post('cita-macro/postValidate', [view_generator_controller::class, 'validatePideCita'])->name('validateForm');
 

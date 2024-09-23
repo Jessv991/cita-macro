@@ -23,9 +23,9 @@
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
             <div class="carrusel w-100">
                 <div class="carrusel-inner w-100">
-                    <img class="w-100 h-100 active" src="{{ asset($data['img']['auditiva']) }}">
-                    <img class="w-100 h-100" src="{{ asset($data['img']['auditiva2']) }}">
-                    <img class="w-100 h-100" src="{{ asset($data['img']['auditiva3']) }}">
+                    <img class="w-100 h-100 active" src="{{ asset($data['auditiva']) }}">
+                    <img class="w-100 h-100" src="{{ asset($data['auditiva2']) }}">
+                    <img class="w-100 h-100" src="{{ asset($data['auditiva3']) }}">
                 </div>
             </div>
 

@@ -77,7 +77,6 @@ class view_generator_controller extends Controller
 
 
         $this->data['ip'] = $ip;
-
     }
 
     public function index($locale, $origen, $weblogin = null, $tienda = null)
@@ -141,6 +140,20 @@ class view_generator_controller extends Controller
 
         $this->data['provincias'] = $zonas->getProvincias($codigo);
 
+
+
+        //=====================RUTAS SEGÚN BASEURL=====================
+
+        if ($baseUrl !== 'https://www.audio.naturaloptics.com') {
+
+            $rutaAsset = '';
+
+        } else {
+
+            $rutaAsset = 'cita-macro/';
+
+        }
+
         //=====================IMAGENES=====================
 
         $imagen = array(
@@ -149,57 +162,38 @@ class view_generator_controller extends Controller
             'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
         );
 
-        //=====================RUTAS SEGÚN BASEURL=====================
-
-        if ($baseUrl !== 'https://www.audio.naturaloptics.com'){
-
-            $rutaAsset = '';
-
-            $this->data['img'] = $imagen;
-
-        }else{
-
-            $rutaAsset = 'cita-macro/';
-
-            $prefixedImagen = array();
-
-            foreach ($imagen as $key => $path) {
-                $prefixedImagen[$key] = 'cita-macro/' . $path;
-            }
-
-            $this->data['img'] = $prefixedImagen;
-            
-        }
+        //clave de las imagenes en el array data
+        $this->data['auditiva'] = $rutaAsset . $imagen['auditiva'];
+        $this->data['auditiva2'] = $rutaAsset . $imagen['auditiva2'];
+        $this->data['auditiva3'] = $rutaAsset . $imagen['auditiva3'];
 
         //=====================LOGO=====================
 
         $logo = $empresas->getLogos($weblogin);
 
-        if($logo){
+        if ($logo) {
             $this->data['logo'] = $logo->f1;
-        }else {
-            $this->data['logo'] = ''; 
+        } else {
+            $this->data['logo'] = '';
         }
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
-        }else{
+            $logoOptica = asset($rutaAsset . '/assets/logos/opticas/' . $getLogo);
+        } else {
             $logoOptica = null;
         }
-        
+
         $this->data['logoOptica'] = $logoOptica;
 
 
 
-        if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
+        if (view()->exists('pages.' . $origen . '.index')) { //verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
-        } else {//redirigimos a vista principal si no existe la ruta
+        } else { //redirigimos a vista principal si no existe la ruta
             return redirect('https://www.audio.naturaloptics.com/cita-macro/es/cita-audio');
         }
-
-
     }
 
 
@@ -337,8 +331,9 @@ class view_generator_controller extends Controller
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 
-    public function validateKit(Request $request){
-        
+    public function validateKit(Request $request)
+    {
+
         $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
@@ -364,6 +359,5 @@ class view_generator_controller extends Controller
         $this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
-
     }
 }
