@@ -91,7 +91,7 @@ $(document).ready(function () {
 //si el cliente selecciona la provincia se ejecuta esta función
 function getCityBySelectState() {
 
-    $('#provincias').on('change', function () {
+    $('#provincias,#provincias1').on('change', function () {
         var provinciaId = $(this).val();
 
         $('#optica').empty();//limpia el select ciudad
@@ -342,3 +342,4 @@ function putOpticasByWeblogin() {
     // Para agregar la opción por defecto cuando se carga la página por primera vez
     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
 }
+

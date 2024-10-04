@@ -36,6 +36,9 @@
             assetUrl: "{{ asset('/') }}",
             mapa: {!! $data['mapa'] !!}
         };
+
+        AOS.init();
+        
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
@@ -44,9 +47,6 @@
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/map/map.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/test/test.js') }}"></script>
-    <script>
-        AOS.init();
-    </script>
 
 </footer>
 
