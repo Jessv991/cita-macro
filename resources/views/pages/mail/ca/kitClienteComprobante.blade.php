@@ -1177,7 +1177,7 @@ END OF IMPORTANT
                                                             <tr style="border-collapse:collapse">
                                                                 <td align="center"
                                                                     style="padding:0;Margin:0;position:relative"><img
-                                                                        src="https://www.audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png"
+                                                                        src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png"
                                                                         alt="Feliz día de acción de gracias"
                                                                         title="Feliz día de acción de gracias"
                                                                         width="600" class="adapt-img"
@@ -1302,7 +1302,7 @@ END OF IMPORTANT
                                                                                                 href="https://es-la.facebook.com/naturaloptics"
                                                                                                 target="_blank"><img
                                                                                                     title="Facebook"
-                                                                                                    src="https://www.audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png"
+                                                                                                    src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png"
                                                                                                     alt="Fb"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1314,7 +1314,7 @@ END OF IMPORTANT
                                                                                                 href="https://www.instagram.com/naturalopticsoficial/"
                                                                                                 target="_blank"><img
                                                                                                     title="Instagram"
-                                                                                                    src="https://www.audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"
+                                                                                                    src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"
                                                                                                     alt="Ig"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1326,7 +1326,7 @@ END OF IMPORTANT
                                                                                                 href="https://twitter.com/naturalopticsg"
                                                                                                 target="_blank"><img
                                                                                                     title="X"
-                                                                                                    src="https://www.audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png"
+                                                                                                    src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png"
                                                                                                     alt="X"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1337,7 +1337,7 @@ END OF IMPORTANT
                                                                                             <a href="https://www.naturaloptics.com/blog/"
                                                                                                 target="_blank"><img
                                                                                                     title="Custom"
-                                                                                                    src="https://www.audio.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png"
+                                                                                                    src="https://audio.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png"
                                                                                                     alt width="32"
                                                                                                     height="32"></a>
                                                                                         </td>

@@ -83,6 +83,10 @@ class view_generator_controller extends Controller
     {
         //hacer test en ruta: ?test=true
 
+        $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
+
+        $segments = request()->segments();
+
         $test = request()->query('test'); //(esto está recibiendo test por get)
 
         $empresas = new Empresas();
@@ -140,11 +144,13 @@ class view_generator_controller extends Controller
 
         $this->data['provincias'] = $zonas->getProvincias($codigo);
 
+        //================ORIGEN NOMBRE SEGMENTOS URL====================
 
+        $this->data['origin'] = $origin;
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
-        if ($baseUrl !== 'https://www.audio.naturaloptics.com') {
+        if ($baseUrl !== 'https://audio.naturaloptics.com') {
 
             $rutaAsset = '';
 
@@ -196,7 +202,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) { //verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else { //redirigimos a vista principal si no existe la ruta
-            return redirect('https://www.audio.naturaloptics.com/cita-macro/es/cita-audio');
+            return redirect('https://audio.naturaloptics.com/cita-macro/es/cita-audio');
         }
     }
 

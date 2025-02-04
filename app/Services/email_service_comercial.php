@@ -54,6 +54,7 @@ class email_service_comercial
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
                 $mail->addAddress($mail_optica);
+                $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
                 $this->sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica);

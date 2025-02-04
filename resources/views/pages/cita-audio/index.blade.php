@@ -6,7 +6,7 @@
     $rutaAsset;
 @endphp
 
-@if ($baseUrl !== 'https://www.audio.naturaloptics.com')
+@if ($baseUrl !== 'https://audio.naturaloptics.com')
     @php
         $rutaAsset = '';
     @endphp
