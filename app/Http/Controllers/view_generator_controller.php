@@ -82,7 +82,9 @@ class view_generator_controller extends Controller
     public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
         //hacer test en ruta: ?test=true
-
+        
+        $weblogin = str_replace(' ', '', $weblogin);
+        
         $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
         $segments = request()->segments();
