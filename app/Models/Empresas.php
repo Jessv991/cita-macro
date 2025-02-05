@@ -243,7 +243,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->whereIn('codigo', $codigo)
-            ->where('weblogin', $weblogin)
+            ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('d22', 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '0')
@@ -265,7 +265,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->whereIn('codigo', $codigo)
-            ->where('weblogin', $weblogin)
+            ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('tienda', $tienda)
             ->where('d22', 'si')           
             ->where(function ($query) {     
