@@ -156,7 +156,7 @@ class view_generator_controller extends Controller
 
         } else {
 
-            $rutaAsset = 'cita-macro-nog/';
+            $rutaAsset = 'cita-macro/';
 
         }
 
@@ -198,7 +198,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else {//redirigimos a vista principal si no existe la ruta
-            return redirect('https://optica.naturalopticsgroup.com/cita-macro-nog/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
+            return redirect('https://optica.naturalopticsgroup.com/cita-macro/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
         }
 
 
@@ -328,9 +328,9 @@ class view_generator_controller extends Controller
 
         if ($getLogo) {
 
-            $logoOptica = asset('cita-macro-nog/assets/logos/opticas/' . $getLogo);
+            $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
         } else {
-            $logoOptica = asset('cita-macro-nog/assets/logos/basicos/audio_white.png');
+            $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
         $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
@@ -341,7 +341,7 @@ class view_generator_controller extends Controller
 
     public function validateKit(Request $request){
         
-        $logoOptica = asset('cita-macro-nog/assets/logos/basicos/audio_white.png');
+        $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
         $test = $request->input('_test');

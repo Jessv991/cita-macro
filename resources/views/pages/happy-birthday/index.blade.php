@@ -12,7 +12,7 @@
     @endphp
 @else
     @php
-        $rutaAsset = 'cita-macro-nog/';
+        $rutaAsset = 'cita-macro/';
     @endphp
 @endif
 
