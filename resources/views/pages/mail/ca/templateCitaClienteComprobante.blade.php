@@ -6,7 +6,7 @@
   <meta name="x-apple-disable-message-reformatting">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta content="telephone=no" name="format-detection">
-  <title>Cita audio</title><!--[if (mso 16)]>
+  <title>Cita ópticas</title><!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
     </style>
@@ -797,7 +797,7 @@ button.es-button {
                   <td align="left" style="padding:0;Margin:0;width:270px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="left" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">Natural Audio</p></td>
+                      <td align="left" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">Natural Optics</p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -827,7 +827,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" alt="Feliz día de acción de gracias" title="Feliz día de acción de gracias" width="600" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none"></td>
+                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img"></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -847,13 +847,13 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#0086c4">Solicitud de cita previa rebuda</h3></td>
+                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">Solicitud de cita previa rebuda</h3></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">Gràcies per confiar en el nostre centre per cuidar de la teva salut. Apreciam la teva elecció i ens comprometem a oferir-te el millor servei possible. Aviat, un dels nostres especialistes es posarà en contacte amb tu per concertar una cita que s'ajusti a les teves necessitats i horaris. Si tens alguna pregunta o necessites assistència addicional, no dubtis en contactar-nos. Estem aquí per ajudar-te en tot el que necessitis.</p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">Gràcies per confiar en el nostre centre per cuidar de la teva salut. Apreciam la teva elecció i ens comprometem a oferir-te el millor servei possible. Aviat, un dels nostres especialistes es posarà en contacte amb tu per concertar una cita que s'ajusti a les teves necessitats i horaris. Si tens alguna pregunta o necessites assistència addicional, no dubtis en contactar-nos. Estem aquí per ajudar-te en tot el que necessitis.</p></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -867,7 +867,7 @@ button.es-button {
           <td align="center" style="padding:0;Margin:0">
            <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
              <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
                 <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                 <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                     <tbody>
@@ -885,10 +885,10 @@ button.es-button {
                                                 <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
+                                                            <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -931,7 +931,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px">Aquest correu electrònic comercial és conforme a la legislació vigent sobre el tractament de dades amb finalitats promocionals i publicitàries. Reps aquest correu en qualitat de client de Natural {DIRECIONOPTICA} o bé per haver-te registrat a la nostra pàgina web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposa dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dels teus dades.</p></td>
+                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Aquest correu electrònic comercial és conforme a la legislació vigent sobre el tractament de dades amb finalitats promocionals i publicitàries. Reps aquest correu en qualitat de client de Natural {DIRECIONOPTICA} o bé per haver-te registrat a la nostra pàgina web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposa dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dels teus dades.</p></td>
                      </tr>
                    </table></td>
                  </tr>

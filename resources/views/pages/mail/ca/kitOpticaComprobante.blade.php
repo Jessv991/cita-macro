@@ -823,7 +823,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Natural Audio
+                                                Natural Optics
                                               </p>
                                             </td>
                                           </tr>
@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
+                                                <img src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
@@ -993,30 +993,30 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
                                       <tr>
                                           <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                            <table width="100%" cellspacing="0" cellpadding="0">
-                                              <tbody>
-                                                  <tr>
-                                                      
-                                                  </tr>
-                                                  <tr>
-                                                      <td class="esd-block-social" align="center" style="font-size:0">
-                                                          <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                              <tbody>
-                                                                  <tr>
-                                                                    <td class="es-p10r" valign="top" align="center"><img src="{LOGO}" alt="" width="125"></td>
-                                                                  </tr>
-                                                              </tbody>
-                                                          </table>
-                                                      </td>
-                                                  </tr>
-                                              </tbody>
-                                          </table>
+                                              <table width="100%" cellspacing="0" cellpadding="0">
+                                                  <tbody>
+                                                      <tr>
+                                                          
+                                                      </tr>
+                                                      <tr>
+                                                          <td class="esd-block-social" align="center" style="font-size:0">
+                                                              <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
+                                                                  <tbody>
+                                                                      <tr>
+                                                                        <td class="es-p10r" valign="top" align="center"><img src="{LOGO}" alt="" width="125"></td>
+                                                                      </tr>
+                                                                  </tbody>
+                                                              </table>
+                                                          </td>
+                                                      </tr>
+                                                  </tbody>
+                                              </table>
                                           </td>
                                       </tr>
                                   </tbody>
@@ -1054,7 +1054,7 @@ li {
                                         <tbody>
                                           <tr>
                                             <td esdev-links-color="#666666" align="center" class="es-m-txt-с esd-block-text es-p10t es-p20b">
-                                              <p style="color:#666666;line-height:120%;font-size:12px">
+                                              <p style="color:#050606;line-height:120%;font-size:12px">
                                                 Aquest correu electrònic és conforme a la legislació vigent sobre el tractament de dades amb multes promocionals i publicitàries. D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposeu dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dels vostres dades.
                                               </p>
                                               <p style="color:#666666;line-height:120%">

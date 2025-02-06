@@ -1,0 +1,963 @@
+
+/* 
+███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
+██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
+╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
+███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
+*/
+body {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#icon{
+    width: 100%;
+}
+
+
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+.main {
+    width: 100%;
+}
+
+.bg-custom {
+    background-color: var(--natural-4);
+}
+
+.cont {
+    width: 100%;
+    padding: 0;
+    margin-left: 0.05%;
+}
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel-inner img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.carrusel-inner img.active {
+    opacity: 1;
+}
+
+.carrusel-inner {
+    position: relative;
+    height: 704px;
+    transition: height 2s ease;
+}
+
+.img-izq {
+    width: 21%;
+}
+
+.img-der {
+    width: 22%;
+}
+
+.med-img-circle {
+    width: 64%;
+}
+
+.t-img-circle {
+    color: #0086c4;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.colr-text {
+    color: #0086c4;
+    line-height: 48px;
+}
+
+
+.text-sub {
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.text-centre {
+    color: #0086c4;
+    line-height: 40px;
+}
+
+.card-style {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: flex-start; /* Alinea los elementos hacia la parte superior */
+    text-align: center; /* Alinea el texto al centro */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                             
+*/
+
+.form_flotante {
+    position: fixed; /* El div se fija en la pantalla y no se desplaza al hacer scroll */
+    top: 50%; /* Posiciona el div al 50% del alto de la pantalla */
+    left: 50%; /* Posiciona el div al 50% del ancho de la pantalla */
+    transform: translate(-50%, -50%); /* Ajusta el div para que esté exactamente en el centro */
+    background-color: rgba(106, 131, 160, 0.904); /* Fondo semi-transparente para destacar el div */
+    color: white; /* Color del texto */
+    padding: 20px; /* Espacio interno del div */
+    border-radius: 8px; /* Esquinas redondeadas */
+    z-index: 1000; /* Asegura que el div esté por encima de otros elementos */
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); /* Añade una sombra para darle un efecto de profundidad */
+    width: 90%;
+    height: 80%;
+}
+
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+.contenedor-form {
+    padding: 4%;
+    position: relative !important;
+}
+
+label > span {
+    color: #fff !important;
+}
+
+a {
+    color: #5dff85 !important;
+}
+
+.btn-color {
+    background-color: #7E8968 !important;
+    color: #fff;
+}
+
+.btn-color:hover {
+    background-color: #acafa5 !important;
+    color: #0a0a0a;
+}
+
+.cont-form-principal {
+    width: 31%;
+    height: 90%;
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+    background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(0, 134, 196, 1));
+    transition: width 0.3s;
+}
+
+.text-top-form {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 25px;
+
+}
+
+input {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* input:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+select {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* select:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+div#animationdivIcon {
+    margin-top: 3% !important;
+}
+
+#gracias {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
+.b-pedir-citas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+}
+
+/* 
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                   
+*/
+
+.cuerpo {
+    margin-top: 5%;
+}
+
+.redes-style {
+    width: 4.8% !important;
+}
+
+.blog-style {
+    width: 3.6% !important;
+}
+
+/* 
+███╗   ███╗ █████╗ ██████╗  █████╗ 
+████╗ ████║██╔══██╗██╔══██╗██╔══██╗
+██╔████╔██║███████║██████╔╝███████║
+██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
+██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+*/
+
+#map {
+    margin-top: 3rem;
+}
+
+/* 
+████████╗███████╗███████╗████████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+   ██║   █████╗  ███████╗   ██║   
+   ██║   ██╔══╝  ╚════██║   ██║   
+   ██║   ███████╗███████║   ██║   
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                  
+*/
+
+.style-tarj {
+    background-color: #0086c4;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.753);
+    padding: 20px;
+    height: 333px;
+}
+
+.bg-natural {
+    background-color: #fff !important;
+    color: #0086c4 !important;
+    border-radius: 20px !important;
+}
+
+.bg-natural:hover {
+    background-color: #aecedd !important;
+}
+
+.natural {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1;
+    font-size: 35px !important;
+}
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+ @media (max-width: 2000px) {
+    
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .cont-text-black {
+        color: #000;
+        font-size: 22px;
+        margin-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .fz-1 {
+        font-size: 55px;
+    }
+
+    .fz-2 {
+        font-size: 45px;
+    }
+
+    /* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .cont-text-black {
+        color: #000;
+        font-size: 18px;
+        margin-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .fz-1 {
+        font-size: 55px;
+    }
+
+    .fz-2 {
+        font-size: 45px;
+    }
+
+    .cuerpo {
+        margin-top: 5%;
+    }
+
+    .redes-style {
+        width: 6.5% !important;
+    }
+
+    .blog-style {
+        width: 5% !important;
+    }
+
+    .logo-natural-optic {
+        width: 100% !important;
+    }
+
+    .cuerpo-poli {
+        font-size: 84%;
+    }
+
+    .line-center {
+        height: 20px;
+    }
+
+    .text-sub {
+        padding-left: 27%;
+        padding-right: 27%;
+    }
+
+    .color-line {
+        width: 31%;
+    }
+
+    .content-poli {
+        font-size: 17px;
+    }
+    
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .cont-text-black {
+        color: #000;
+        font-size: 22px;
+        margin-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .fz-1 {
+        font-size: 78px;
+    }
+
+    .fz-2 {
+        font-size: 57px;
+    }
+
+    .cuerpo {
+        margin-top: 5%;
+    }
+
+    .redes-style {
+        width: 5% !important;
+    }
+
+    .blog-style {
+        width: 4% !important;
+    }
+
+    .logo-natural-optic {
+        width: 100%;
+    }
+
+    .cuerpo-poli {
+        font-size: 84%;
+    }
+
+    .line-center {
+        height: 20px;
+    }
+
+    .text-sub {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .content-poli {
+        font-size: 17px;
+    }
+    
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .cont-text-black {
+        color: #000;
+        font-size: 18px;
+        margin-top: 4%;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .fz-1 {
+        font-size: 55px;
+    }
+
+    .fz-2 {
+        font-size: 45px;
+    }
+
+    .cuerpo {
+        margin-top: 5%;
+    }
+
+    .redes-style {
+        width: 6.5% !important;
+    }
+
+    .blog-style {
+        width: 5% !important;
+    }
+
+    .logo-natural-optic {
+        width: 100% !important;
+    }
+
+    .cuerpo-poli {
+        font-size: 84%;
+    }
+
+    .line-center {
+        height: 20px;
+    }
+
+    .text-sub {
+        padding-left: 27%;
+        padding-right: 27%;
+    }
+
+    .color-line {
+        width: 31%;
+    }
+
+    .content-poli {
+        font-size: 17px;
+    }
+    
+}
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+        margin-top: 50px;
+    }
+    
+    .fz-1 {
+        font-size: 55px;
+    }
+
+    .colr-text {
+        line-height: 30px;
+    }
+
+    .fz-2 {
+        font-size: 44px;
+    }
+
+    .text-sub {
+        padding-left: 17%;
+        padding-right: 17%;
+    }
+
+    .carrusel-inner {
+        height: 300px;
+    }
+
+    #test.p-4 {
+        padding: .5rem !important;
+    }
+
+    .natural {
+        font-size: 30px !important;
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + -1.1vw) !important;
+    }
+
+    .bg-natural {
+        border-radius: 12px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .redes-style {
+        width: 7.5% !important;
+    }
+
+    .blog-style {
+        width: 5.8% !important;
+    }
+    
+    .color-line {
+        width: 28%;
+    }
+
+    .logo-natural-optic {
+        width: 74% !important;
+    }
+
+    .form_flotante {
+        height: 98%;
+    }
+    
+    .pmp{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .fz-4{
+        font-size: 22px;
+    }
+
+    .content-poli {
+        font-size: 18px;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .fz-1 {
+        font-size: 38px;
+    }
+
+    .colr-text {
+        line-height: 24px;
+    }
+
+    .fz-2 {
+        font-size: 30px;
+    }
+
+    .text-sub {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    .med-img-circle {
+        width: 45%;
+    }
+
+    .t-img-circle {
+        font-size: 28px;
+    }
+
+    .fz-4 {
+        font-size: 23px;
+    }
+
+    .carrusel-inner {
+        height: 300px;
+    }
+
+    #test.p-4 {
+        padding: .5rem !important;
+    }
+
+    .natural {
+        font-size: 24px !important;
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + -1.1vw) !important;
+    }
+
+    .bg-natural {
+        border-radius: 12px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .redes-style {
+        width: 10.5% !important;
+    }
+
+    .blog-style {
+        width: 7.5% !important;
+    }
+    
+    .color-line {
+        width: 21%;
+    }
+
+    .logo-natural-optic {
+        width: 74% !important;
+    }
+
+    .form_flotante {
+        height: 98%;
+    }
+    
+    .pmp{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .fz-1 {
+        font-size: 30px;
+    }
+
+    .colr-text {
+        line-height: 24px;
+    }
+
+    .fz-2 {
+        font-size: 23px;
+    }
+
+    .text-sub {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+
+    .med-img-circle {
+        width: 45%;
+    }
+
+    .t-img-circle {
+        font-size: 25px;
+    }
+
+    .fz-4 {
+        font-size: 20px;
+    }
+
+    .carrusel-inner {
+        height: 300px;
+    }
+
+    #test.p-4 {
+        padding: .5rem !important;
+    }
+
+    .natural {
+        font-size: 24px !important;
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + -1.1vw) !important;
+    }
+
+    .bg-natural {
+        border-radius: 12px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .redes-style {
+        width: 10.5% !important;
+    }
+
+    .blog-style {
+        width: 7.5% !important;
+    }
+    
+    .color-line {
+        width: 21%;
+    }
+
+    .logo-natural-optic {
+        width: 60% !important;
+    }
+
+    .form_flotante {
+        height: 98%;
+    }
+    
+    .pmp{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
+
+    /* 
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
+
+    .cuerpo {
+        margin-top: 5%;
+    }
+
+    .redes-style {
+        width: 4.5% !important;
+    }
+
+    .blog-style {
+        width: 3.4% !important;
+    }
+
+    .logo-natural-optic {
+        width: 30% !important;
+    }
+
+    .cuerpo-poli {
+        font-size: 84%;
+    }
+
+    .line-center {
+        height: 20px;
+    }
+
+}
+
+@media (min-width: 767px) and (max-width: 992px) {
+    .carrusel-inner {
+        height: 500px;
+    }
+
+    .text-sub {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .fz-1 {
+        font-size: 28px;
+    }
+
+    .colr-text {
+        line-height: 24px;
+    }
+
+    .fz-2 {
+        font-size: 24px;
+    }
+
+    .text-sub {
+        padding-left: 9%;
+        padding-right: 9%;
+    }
+
+    .carrusel-inner {
+        height: 300px;
+    }
+
+    #test.p-4 {
+        padding: .5rem !important;
+    }
+
+    .natural {
+        font-size: 24px !important;
+    }
+
+    .fs-2 {
+        font-size: calc(1.325rem + -1.1vw) !important;
+    }
+
+    .bg-natural {
+        border-radius: 12px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .redes-style {
+        width: 10.5% !important;
+    }
+
+    .blog-style {
+        width: 7.5% !important;
+    }
+    
+    .color-line {
+        width: 21%;
+    }
+
+    .logo-natural-optic {
+        width: 74% !important;
+    }
+
+    .form_flotante {
+        height: 98%;
+    }    
+
+}
+

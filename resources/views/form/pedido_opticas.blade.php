@@ -206,8 +206,4 @@
 
     })
 
-    /* var locale = {!! json_encode($data) !!};
-    $(document).ready(function() {
-        localStorage.setItem('locale', JSON.stringify(locale));
-    }); */
 </script>
