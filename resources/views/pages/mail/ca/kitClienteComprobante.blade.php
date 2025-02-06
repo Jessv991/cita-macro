@@ -8,7 +8,7 @@
     <meta name="x-apple-disable-message-reformatting">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
-    <title>Cita audio</title><!--[if (mso 16)]>
+    <title>Cita óptica</title><!--[if (mso 16)]>
     <style type="text/css">
     a {text-decoration: none;}
     </style>
@@ -1119,7 +1119,7 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        Natural Audio</p>
+                                                                        Natural Optics</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -1176,12 +1176,7 @@ END OF IMPORTANT
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr style="border-collapse:collapse">
                                                                 <td align="center"
-                                                                    style="padding:0;Margin:0;position:relative"><img
-                                                                        src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png"
-                                                                        alt="Feliz día de acción de gracias"
-                                                                        title="Feliz día de acción de gracias"
-                                                                        width="600" class="adapt-img"
-                                                                        style="display:block;font-size:14px;border:0;outline:none;text-decoration:none">
+                                                                    style="padding:0;Margin:0;position:relative"><img src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -1202,56 +1197,56 @@ END OF IMPORTANT
                                     <tbody>
                                         <tr>
                                             <td align="center" class="esd-block-text">
-                                                <h3 style="color:#0086c4">
+                                                <h3 style="color:#050606">
                                                     Detalls de la teva comanda
                                                 </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Òptica: {NOMBREOPTICA}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Persona de contacte: {CONTACTO}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         E-mail: {EMAIL}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Codi de la òptica: {CODIGO}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Data de la comanda: {FECHA}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Unitats: {UNIDAD}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%"></em>
                                                     <br>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Aquesta cita s'ha aconseguit a través de:
                                                     </em>
                                                     <br>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
-                                                        Natural Audio {ORIGIN}
+                                                        Natural Optics - {ORIGIN}
                                                     </em>
                                                     <br>
                                                 </p>
@@ -1272,7 +1267,7 @@ END OF IMPORTANT
                                     role="none">
                                     <tr style="border-collapse:collapse">
                                         <td class="esd-structure es-p20" esd-general-paddings-checked="false"
-                                            esd-custom-block-id="2446" style="background-color: #74cae7;"
+                                            esd-custom-block-id="2446" style="background-color: #006ec8;"
                                             align="left" bgcolor="#74cae7">
                                             <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                                             <table class="es-left" cellspacing="0" cellpadding="0" align="left">
@@ -1302,7 +1297,7 @@ END OF IMPORTANT
                                                                                                 href="https://es-la.facebook.com/naturaloptics"
                                                                                                 target="_blank"><img
                                                                                                     title="Facebook"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png"
+                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/iconos/redes_sociales/facebook-circle-white.png"
                                                                                                     alt="Fb"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1314,7 +1309,7 @@ END OF IMPORTANT
                                                                                                 href="https://www.instagram.com/naturalopticsoficial/"
                                                                                                 target="_blank"><img
                                                                                                     title="Instagram"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"
+                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/iconos/redes_sociales/instagram-circle-white.png"
                                                                                                     alt="Ig"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1326,7 +1321,7 @@ END OF IMPORTANT
                                                                                                 href="https://twitter.com/naturalopticsg"
                                                                                                 target="_blank"><img
                                                                                                     title="X"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png"
+                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/iconos/redes_sociales/x-circle-white.png"
                                                                                                     alt="X"
                                                                                                     width="32"
                                                                                                     height="32"></a>
@@ -1337,7 +1332,7 @@ END OF IMPORTANT
                                                                                             <a href="https://www.naturaloptics.com/blog/"
                                                                                                 target="_blank"><img
                                                                                                     title="Custom"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png"
+                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/iconos/blog/blanco-azul.png"
                                                                                                     alt width="32"
                                                                                                     height="32"></a>
                                                                                         </td>
@@ -1398,7 +1393,7 @@ END OF IMPORTANT
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px">
                                                                         <br></p>
                                                                     <p
-                                                                        style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px">
+                                                                        style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">
                                                                         Aquest correu electrònic comercial és conforme a
                                                                         la legislació vigent sobre el tractament de
                                                                         dades amb finalitats promocionals i
@@ -1407,7 +1402,7 @@ END OF IMPORTANT
                                                                         haver-te registrat a la nostra pàgina web, <a
                                                                             target="_blank"
                                                                             href="https://www.naturaloptics.com/"
-                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a>
+                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#050606;font-size:12px">www.naturaloptics.com</a>
                                                                         . D'acord amb el que disposa l'article 22 de la
                                                                         Llei 34/2002 de Serveis de la Societat de la
                                                                         Informació i del Comerç Electrònic, així com al

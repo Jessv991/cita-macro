@@ -823,7 +823,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Natural Audio
+                                                Natural Optics
                                               </p>
                                             </td>
                                           </tr>
@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
+                                                <img src="https://optica.naturalopticsgroup.com/cita-macro-nog/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
@@ -915,56 +915,56 @@ li {
                                         <tbody>
                                           <tr>
                                             <td align="center" class="esd-block-text">
-                                              <h3 style="color:#0086c4">
+                                              <h3 style="color:#050606">
                                                 ¡Nuevo pedido de KIT Limpialentes!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
-                                              <p style="color:#0086c4;font-size:16px;line-height:150%">
+                                              <p style="color:#050606;font-size:16px;line-height:150%">
                                                 Contacta con el cliente para acordar todo:
                                               </p>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Óptica: {NOMBREOPTICA}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Persona contacto: {CONTACTO}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Código de la óptica: {CODIGO}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Fecha del pedido: {FECHA}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Unidades: {UNIDAD}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%"></em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Este pedido se ha hecho a través de:
                                                 </em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   {ORIGIN}
                                                 </em>
@@ -993,7 +993,7 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
@@ -1054,7 +1054,7 @@ li {
                                         <tbody>
                                           <tr>
                                             <td esdev-links-color="#666666" align="center" class="es-m-txt-с esd-block-text es-p10t es-p20b">
-                                              <p style="color:#666666;line-height:120%;font-size:12px">
+                                              <p style="color:#050606;line-height:120%;font-size:12px">
                                                 Este correo electrónico es conforme a la legislación vigente sobre el tratamiento de datos con multas promocionales y publicitarias. De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.
                                               </p>
                                               <p style="color:#666666;line-height:120%">

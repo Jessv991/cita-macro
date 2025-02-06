@@ -9,14 +9,14 @@
     @endphp
 
     @if ($baseUrl !== 'https://optica.naturalopticsgroup.com')
-        {{-- si es difernte a  audio.naturaloptics.com --}}
+       {{-- si es difernte a  www.audio.naturaloptics.com --}} 
 
         @php
             $rutaAsset = '';
         @endphp
     @else
         @php
-            $rutaAsset = 'cita-macro/';
+            $rutaAsset = 'cita-macro-nog/';
         @endphp
     @endif
 
@@ -36,9 +36,6 @@
             assetUrl: "{{ asset('/') }}",
             mapa: {!! $data['mapa'] !!}
         };
-
-        AOS.init();
-        
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
@@ -47,6 +44,9 @@
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/map/map.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/test/test.js') }}"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </footer>
 
