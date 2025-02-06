@@ -12,7 +12,7 @@ const features = appData.mapa;
 
 let rutaPng;
 
-if (baseUrl !== 'https://audio.naturaloptics.com') {
+if (baseUrl !== 'https://optica.naturalopticsgroup.com') {
     rutaPng = assetUrl + 'assets/iconos/map/ubi-nat.png';
 } else {
     rutaPng = baseUrl + '/cita-macro/assets/iconos/map/ubi-nat.png';

@@ -152,7 +152,7 @@ class view_generator_controller extends Controller
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
-        if ($baseUrl !== 'https://audio.naturaloptics.com') {
+        if ($baseUrl !== 'https://optica.naturalopticsgroup.com') {
 
             $rutaAsset = '';
 
@@ -200,7 +200,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) { //verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else { //redirigimos a vista principal si no existe la ruta
-            return redirect('https://audio.naturaloptics.com/cita-macro/es/cita-audio');
+            return redirect('https://optica.naturalopticsgroup.com/cita-macro/es/cita-audio');
         }
     }
 
