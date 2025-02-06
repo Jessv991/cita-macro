@@ -827,7 +827,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img"></td>
+                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img"></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -885,10 +885,10 @@ button.es-button {
                                                 <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturalopticsgroup.com/cita-macro-nog-audio/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
+                                                            <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>

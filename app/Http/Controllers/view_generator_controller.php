@@ -161,7 +161,7 @@ class view_generator_controller extends Controller
 
         } else {
 
-            $rutaAsset = 'cita-macro-nog-audio/';
+            $rutaAsset = 'cita-macro/';
 
         }
 
@@ -203,7 +203,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else {//redirigimos a vista principal si no existe la ruta
-            return redirect('https://audio.naturalopticsgroup.com/cita-macro-nog-audio/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
+            return redirect('https://audio.naturalopticsgroup.com/cita-macro/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
         }
 
 
@@ -348,7 +348,7 @@ class view_generator_controller extends Controller
 
     public function validateKit(Request $request){
         
-        $logoOptica = asset('cita-macro-nog-audio/assets/logos/basicos/audio_white.png');
+        $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
         $test = $request->input('_test');

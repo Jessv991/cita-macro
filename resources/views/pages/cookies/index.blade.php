@@ -8,14 +8,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <title>Política de cookies</title>
     <meta name="author" content="Natural Optics">
-    <link rel="icon" href="{{ asset('cita-macro-nog-audio/assets/iconos_landings/N_2.png') }}">
+    <link rel="icon" href="{{ asset('cita-macro/assets/iconos_landings/N_2.png') }}">
 </head>
 
 <body>
     <div class="container-fluid">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12 text-center p-3"><img width="250px" src="{{ asset('cita-macro-nog/assets/logos/basicos/logo_black_03.png') }}" /></div>
+                <div class="col-12 text-center p-3"><img width="250px" src="{{ asset('cita-macro/assets/logos/basicos/logo_black_03.png') }}" /></div>
                 <div class="col-12 text-center mb-5">
                             
                 <h1>{!! __('policy.Política-cookies') !!}</h1>

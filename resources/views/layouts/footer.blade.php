@@ -16,7 +16,7 @@
         @endphp
     @else
         @php
-            $rutaAsset = 'cita-macro-nog-audio/';
+            $rutaAsset = 'cita-macro/';
         @endphp
     @endif
 
