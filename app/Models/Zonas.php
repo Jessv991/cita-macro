@@ -66,6 +66,12 @@ class Zonas extends Model
      */
     public $timestamps = false;
 
+    // Scopes...
+
+    // Functions ...
+
+    // Relations ...
+
     /*
 
     ██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗██╗ █████╗ ███████╗
@@ -76,7 +82,7 @@ class Zonas extends Model
     ╚═╝     ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝  ╚═╝╚══════╝
                                                                           
     */
-
+    
     // ==================================FILTRADA POR SERVICIO DE AUDIO===============================================
     public function getProvincias($codigo)
     {
@@ -86,37 +92,10 @@ class Zonas extends Model
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->whereIn('codigo', $codigo)
             ->where('z.id', '!=', 53)
-            ->where('d22', 'si')
-            ->where(function ($query) {
-                $query->where('d9', '0')
-                    ->orWhere('d9', '1');
-            })
-            ->where('CRM', 'si')
             ->orderBy('nombre', 'asc')
             ->get();
 
         return $datos;
-
-        dd($datos);
     }
-
-    public function getProvinciasByWeblogin($weblogin, $codigo)
-    {
-        $datos = DB::table('zonas as z')
-            ->select('z.a1', 'z.id')
-            ->distinct()
-            ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->whereIn('codigo', $codigo)
-            ->where('e.weblogin', $weblogin)
-            ->where('z.id', '!=', 53)
-            ->where('e.d22', 'si')
-            ->where(function ($query) {
-                $query->where('e.d9', '0')
-                    ->orWhere('e.d9', '1');
-            })
-            ->where('e.CRM', 'si')
-            ->get();
-
-        return $datos;
-    }
+    
 }
