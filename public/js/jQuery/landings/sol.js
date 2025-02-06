@@ -26,7 +26,7 @@ $(document).ready(function () {
         }, 3000); // Cambiar de imagen cada 3 segundos
     });
 
-    /* 
+     /* 
     ██████╗  ██████╗ ████████╗ ██████╗ ███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
     ██╔══██╗██╔═══██╗╚══██╔══╝██╔═══██╗████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
     ██████╔╝██║   ██║   ██║   ██║   ██║██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
@@ -50,19 +50,7 @@ $(document).ready(function () {
             $('.blog-style').attr('style', 'width: 4.3% !important');
             $('.style-tarj').removeClass('w-50').addClass('w-75');
             $('.btn-flotante').addClass('d-none');
-            $('.med-img-circle').attr('style', 'width: 38% !important');    
-            $('.fz-1').css('font-size', '70px');
-            $('.fz-2').css('font-size', '50px');
-
-            if(dispositivo >= 1200 && dispositivo <= 1499){
-                
-                $('.fz-1').css('font-size', '56px');
-                $('.fz-2').css('font-size', '50px');
-                $('.logo-natural-optic').attr('style','width: 77% !important');
-                $('.text-sub').css({ 'padding-left': '20%', 'padding-right': '20%' });
-        
-            }
-
+            $('.med-img-circle').attr('style', 'width: 38% !important');
         });
 
         $('.btn-close').on('click', function (e) {
@@ -78,19 +66,6 @@ $(document).ready(function () {
             $('.blog-style').attr('style', 'width: 2.6% !important');
             $('.style-tarj').removeClass('w-75').addClass('w-50');
             $('.med-img-circle').attr('style', 'width: 64% !important');
-            $('.fz-1').css('font-size', '90px');
-            $('.fz-2').css('font-size', '60px');
-
-            if(dispositivo >= 1200 && dispositivo <= 1499){
-                
-                $('.fz-1').css('font-size', '78px');
-                $('.fz-2').css('font-size', '57px');
-                $('.logo-natural-optic').attr('style','width: 100% !important');
-                $('.redes-style').attr('style', 'width: 5% !important');
-                $('.blog-style').attr('style', 'width: 4 % !important');
-        
-            }
-            
         });
 
     } else {
@@ -113,12 +88,12 @@ $(document).ready(function () {
             });
 
             $('#btn-flotante').removeClass('d-none');
-            
+
         });
-        
+
     }
 
-    /* 
+     /* 
     ██╗     ██╗██████╗ ██████╗ ███████╗██████╗ ██╗ █████╗      █████╗  ██████╗ ███████╗
     ██║     ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝
     ██║     ██║██████╔╝██████╔╝█████╗  ██████╔╝██║███████║    ███████║██║   ██║███████╗
@@ -128,25 +103,28 @@ $(document).ready(function () {
         aplicamos el tiempo de la animación dependiendo del tamaño de la pantalla                                                                            
     */
     
-    if(dispositivo >= 992){
+        if(dispositivo >= 992){
 
-        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
-        $('#card3').attr('data-aos-delay', '1000').attr('data-aos-duration', '1000');
-        $('#card4').attr('data-aos-delay', '1500').attr('data-aos-duration', '1000');
+            $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+            $('#card3').attr('data-aos-delay', '1000').attr('data-aos-duration', '1000');
+            $('#card4').attr('data-aos-delay', '1500').attr('data-aos-duration', '1000');
+    
+        }else if(dispositivo >= 768 && dispositivo <= 991){
 
-    }else if(dispositivo >= 768 && dispositivo <= 991){
-        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
-        $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card4').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+            $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card2').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
+            $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card4').attr('data-aos-delay', '500').attr('data-aos-duration', '1000');
 
-    }else {
-        $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card2').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        $('#card4').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
-        
-    }
+        }else {
+
+            $('#card1').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card2').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card3').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            $('#card4').attr('data-aos-delay', '100').attr('data-aos-duration', '1000');
+            
+        }
+
 
 });
