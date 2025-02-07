@@ -165,19 +165,15 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'cita-audio' => array(
-                'auditiva' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva.png',
-                'auditiva2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva2.png',
-                'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
+            'cita-macro' => array(
+                'revision' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/revision.png',
+                'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.png',
             )
         );
 
         //clave de las imagenes en el array data
-
-        //===============IMAGENES CITA-AUDIO
-        $this->data['auditiva'] = $rutaAsset . $imagen['cita-audio']['auditiva'];
-        $this->data['auditiva2'] = $rutaAsset . $imagen['cita-audio'] ['auditiva2'];
-        $this->data['auditiva3'] = $rutaAsset . $imagen['cita-audio'] ['auditiva3'];
+        $this->data['revision'] = $rutaAsset . $imagen['cita-macro']['revision'];
+        $this->data['cumple'] = $rutaAsset . $imagen['cita-macro']['cumple'];
 
         //=====================LOGO=====================
 
