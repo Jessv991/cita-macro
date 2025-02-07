@@ -84,6 +84,8 @@ class view_generator_controller extends Controller
     {
         //hacer test en ruta: ?test=true
 
+        $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
+
         $weblogin = str_replace(' ', '', $weblogin);
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
@@ -140,9 +142,11 @@ class view_generator_controller extends Controller
 
         $this->data['provincias'] = $zonas->getProvincias();
 
+        $this->data['origin'] = $origin;
+
         //=====================RUTAS SEGÚN BASEURL=====================
 
-        if ($baseUrl !== 'https://www.audio.naturaloptics.com') {
+        if ($baseUrl !== 'https://www.optica.naturaloptics.com') {
 
             $rutaAsset = '';
 
@@ -155,17 +159,13 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'cita-audio' => array(
-                'auditiva' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva.png',
-                'auditiva2' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva2.png',
-                'auditiva3' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/auditiva3.png',
+            'cita-optica' => array(
+                'OPTICA' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/OPTICA.jpg'
             )
         );
 
         //clave de las imagenes en el array data
-        $this->data['auditiva'] = $rutaAsset . $imagen['cita-audio']['auditiva'];
-        $this->data['auditiva2'] = $rutaAsset . $imagen['cita-audio'] ['auditiva2'];
-        $this->data['auditiva3'] = $rutaAsset . $imagen['cita-audio'] ['auditiva3'];
+        $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
 
         //=====================LOGO=====================
 
