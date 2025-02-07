@@ -142,37 +142,23 @@ class Empresas extends Model
 
     // Relations ...
 
-    public function __construct()
-    {
-        $this->getOnlyAllAudios();
-    }
-
 
     /* 
-
-     ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗ ███████╗
-    ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝██╔══██╗██╔════╝
-    ██║   ██║██████╔╝   ██║   ██║██║     ███████║███████╗
-    ██║   ██║██╔═══╝    ██║   ██║██║     ██╔══██║╚════██║
-    ╚██████╔╝██║        ██║   ██║╚██████╗██║  ██║███████║
-    ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝
-                                                     
+    
+    ██████╗ ██████╗ ████████╗██╗ ██████╗ █████╗ ███████╗
+   ██╔═══██╗██╔══██╗╚══██╔══╝██║██╔════╝██╔══██╗██╔════╝
+   ██║   ██║██████╔╝   ██║   ██║██║     ███████║███████╗
+   ██║   ██║██╔═══╝    ██║   ██║██║     ██╔══██║╚════██║
+   ╚██████╔╝██║        ██║   ██║╚██████╗██║  ██║███████║
+    ╚═════╝ ╚═╝        ╚═╝   ╚═╝ ╚═════╝╚═╝  ╚═╝╚══════╝                                                  
     */
 
+    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS================
 
-    protected $codigo; //variable para almacenar los códigod que verifica qué tiendas qofrecen el servicio de audiología
-
-    public function getCodeService()
-    {
-        return $codigo = $this->codigo;
-    }
-
-    //================FUNCIÓN PARA FILTRAR TODAS LAS TIENDAS QUE OFREZCAN EL SERVICIO DE AUDIO================
-    public function getOnlyAllAudios()
+    public function getStore()
     {
 
         $datos = DB::table('empresas')
-            ->select('codigo', 'd1')
             ->where('d22', 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '0')
@@ -181,68 +167,15 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        $servicios_audios = ['42', '19', '17', '43', '21', '39', '44', '45'];
-
-
-        $servicios = [];
-        $codigo = [];
-        foreach ($datos as $dato) {
-            $servicios[$dato->codigo] = $dato->d1;
-        }
-
-
-        foreach ($servicios as $key => $dato) {
-            $is_audio = false;
-            $id_servicios = explode('-', $dato);
-
-            foreach ($id_servicios as $id) {
-                if (in_array($id, $servicios_audios)) {
-                    $is_audio = true;
-                    break;
-                }
-            }
-
-            if (!$is_audio) {
-                unset($servicios[$key]);
-            } else {
-                $codigo[] = $key; // Agregar la clave $key al arreglo $codigo
-            }
-        }
-        
-        $this->codigo = $codigo;
-    }
-
-
-    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO================
-
-    public function getStoreAllAudio()
-    {
-
-        $codigo = $this->codigo;
-
-        $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
-            ->where('d22', 'si')           
-            ->where(function ($query) {     
-                $query->where('d9', '0')
-                    ->orWhere('d9', '1');
-            })
-            ->where('CRM', 'si')
-            ->get();
-
-        
         return $datos;
     }
 
-    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS QUE SEAN AUDIO PASANDOLE WEBLOGIN================
+    //================OBTENER LOS DATOS DE TODAS LAS TIENDAS PASANDOLE WEBLOGIN================
 
     public function getStoreByCodeAndWeblogin($weblogin)
     {
 
-        $codigo = $this->codigo;
-
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('d22', 'si')           
             ->where(function ($query) {     
@@ -252,19 +185,15 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        
         return $datos;
     }
 
 
-    //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA QUE PRESTA EL SERVICIO DE AUDIO================
-    public function getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda)
+    //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA================
+    public function getStoreByWebloginAndCode($weblogin, $tienda)
     {
 
-        $codigo = $this->codigo;
-
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('tienda', $tienda)
             ->where('d22', 'si')           
@@ -275,7 +204,6 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        
         return $datos;
     }
 
@@ -284,10 +212,7 @@ class Empresas extends Model
     public function getStoreByCodestrore($code_store)
     {
 
-        $codigo = $this->codigo;
-
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
             ->where('tienda', $code_store)
             ->where('d22', 'si')           
             ->where(function ($query) {     
@@ -297,7 +222,6 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        
         return $datos;
     }
 
@@ -316,7 +240,6 @@ class Empresas extends Model
             ->where('CRM', 'si')
             ->get();
 
-        
         return $datos;
 
     }
@@ -334,12 +257,10 @@ class Empresas extends Model
 
     public function getLogos($weblogin)
     {
-        $codigo = $this->codigo;
         $datos = DB::table("empresas as e")
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            ->whereIn('codigo', $codigo)
             ->where("e.weblogin", $weblogin)
             ->where("e.d22", "=", 'si')
             ->where(function ($query) {
@@ -350,7 +271,6 @@ class Empresas extends Model
             ->whereNotNull("e.f1")
             ->first();
 
-        
 
         return $datos;
     }
@@ -385,7 +305,6 @@ class Empresas extends Model
                 ->orderBy('e.d3', 'asc')
                 ->get();
 
-        
         return $datos;
 
     }
@@ -402,9 +321,8 @@ class Empresas extends Model
                 })
                 ->where("crm", "=", 'si')
                 ->get();
-        
         return $datos;
-    
+
     }
 
 }

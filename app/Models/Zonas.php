@@ -66,6 +66,12 @@ class Zonas extends Model
      */
     public $timestamps = false;
 
+    // Scopes...
+
+    // Functions ...
+
+    // Relations ...
+
     /*
 
     ██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗██╗ █████╗ ███████╗
@@ -76,15 +82,12 @@ class Zonas extends Model
     ╚═╝     ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝  ╚═╝╚══════╝
                                                                           
     */
-
-    // ==================================FILTRADA POR SERVICIO DE AUDIO===============================================
-    public function getProvincias($codigo)
+    public function getProvincias()
     {
         $datos = DB::table('zonas as z')
             ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->whereIn('codigo', $codigo)
             ->where('z.id', '!=', 53)
             ->where('d22', 'si')
             ->where(function ($query) {
@@ -96,8 +99,6 @@ class Zonas extends Model
             ->get();
 
         return $datos;
-
-        dd($datos);
     }
 
     public function getProvinciasByWeblogin($weblogin, $codigo)

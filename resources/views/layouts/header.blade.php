@@ -10,8 +10,8 @@
         $rutaAsset;
     @endphp
 
-    @if ($baseUrl !== 'https://audio.naturaloptics.com')
-       {{-- si es difernte a  audio.naturaloptics.com --}} 
+    @if ($baseUrl !== 'https://optica.naturaloptics.com')
+       {{-- si es difernte a  optica.naturaloptics.com --}} 
 
         @php
             $rutaAsset = '';
