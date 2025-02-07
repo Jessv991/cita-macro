@@ -70,7 +70,7 @@ window.addEventListener('load', function () {
                     ],
                     blocks: [{
                         title: 'Utilización de cookies 📢',
-                        description: 'Utilizo cookies para garantizar las funcionalidades básicas del sitio web y mejorar tu experiencia en línea. Puede elegir si desea aceptar cada categoría de cookie o no. Para obtener más detalles sobre las cookies y otros datos confidenciales, lea la <a href="https://www.optica.naturaloptics.com/cita-macro/politicas-de-privacidad/es" target="_blank" class="cc-link">política de privacidad </a> y <a href="https://www.optica.naturaloptics.com/cita-macro/politicas-de-cookies/es" target="_blank" class="cc-link">Cookies </a>completa.'
+                        description: 'Utilizo cookies para garantizar las funcionalidades básicas del sitio web y mejorar tu experiencia en línea. Puede elegir si desea aceptar cada categoría de cookie o no. Para obtener más detalles sobre las cookies y otros datos confidenciales, lea la <a href="https://optica.naturaloptics.com/cita-macro/politicas-de-privacidad/es" target="_blank" class="cc-link">política de privacidad </a> y <a href="https://optica.naturaloptics.com/cita-macro/politicas-de-cookies/es" target="_blank" class="cc-link">Cookies </a>completa.'
                     }, {
                         title: 'Cookies técnicas ',
                         description: 'Estas cookies son esenciales para el correcto funcionamiento de este sitio web, cargar contenido multimedia y proteger tu seguridad. Sin estas cookies, el sitio web no funcionaría correctamente.',
@@ -113,7 +113,7 @@ window.addEventListener('load', function () {
                             }
                         }, {
                             title: 'Más información',
-                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a href="https://www.optica.naturaloptics.com/cita-macro/politicas-de-privacidad/es" target="_blank" class="cc-link">contáctenos</a>.',
+                            description: 'Para cualquier consulta en relación con nuestra política sobre cookies y sus opciones, <a href="https://optica.naturaloptics.com/cita-macro/politicas-de-privacidad/es" target="_blank" class="cc-link">contáctenos</a>.',
                         }
                     ]
                 }

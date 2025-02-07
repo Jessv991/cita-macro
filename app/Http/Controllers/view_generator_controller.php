@@ -146,7 +146,7 @@ class view_generator_controller extends Controller
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
-        if ($baseUrl !== 'https://www.optica.naturaloptics.com') {
+        if ($baseUrl !== 'https://optica.naturaloptics.com') {
 
             $rutaAsset = '';
 

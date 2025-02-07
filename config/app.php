@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://www.optica.naturaloptics.com/'),
+    'url' => env('APP_URL', 'https://optica.naturaloptics.com/'),
 
     /*
     |--------------------------------------------------------------------------
