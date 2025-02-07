@@ -22,15 +22,7 @@ body::-webkit-scrollbar-track {
 }
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
-/* 
-███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
-██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
-█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
-██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
-██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
-╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
-                                                                                                             
-*/
+
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
@@ -39,17 +31,28 @@ body::-webkit-scrollbar-track {
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+.form-check-label::before {
+    border: solid 1px #dbba72;
+}
+
+
+
+.style-form {
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
 .contenedor-form {
     padding: 4%;
     position: relative !important;
 }
 
 label>span {
-    color: #fff !important;
+    color: #181717 !important;
 }
 
 a {
-    color: #00eefb !important;
+    color: #0940f3 !important;
 }
 
 a:hover {
@@ -76,8 +79,8 @@ a:hover {
 }
 
 .text-top-form {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #141414;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
@@ -108,8 +111,8 @@ div#animationdivIcon {
 }
 
 #gracias {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #7e7676;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -134,32 +137,7 @@ div#animationdivIcon {
     font-size: 20px;
 }
 
-/* 
-███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
-██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
-█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
-██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
-██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
-╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
-                                                   
-*/
-/* 
-███╗   ███╗ █████╗ ██████╗  █████╗ 
-████╗ ████║██╔══██╗██╔══██╗██╔══██╗
-██╔████╔██║███████║██████╔╝███████║
-██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
-██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
-*/
-/* 
-████████╗███████╗███████╗████████╗
-╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
-   ██║   █████╗  ███████╗   ██║   
-   ██║   ██╔══╝  ╚════██║   ██║   
-   ██║   ███████╗███████║   ██║   
-   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
-                                  
-*/
+
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
 ██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
@@ -172,7 +150,7 @@ div#animationdivIcon {
 @media (max-width: 2000px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -198,7 +176,7 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2% !important;
     }
 
@@ -225,7 +203,7 @@ div#animationdivIcon {
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -252,7 +230,7 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -279,7 +257,7 @@ div#animationdivIcon {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 22px;
         padding: 2%;
         margin-top: 50px;
     }
@@ -294,6 +272,11 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
         margin-top: 65px;
     }
 
@@ -305,6 +288,11 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
 
     .text-top-form {
         margin-top: 65px;
