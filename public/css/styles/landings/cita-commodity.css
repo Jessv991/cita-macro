@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -21,6 +25,7 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
+<<<<<<< HEAD
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
@@ -31,6 +36,14 @@ a {
 a:hover {
     color: #34aace !important;
 }
+=======
+#icon{
+    width: 100%;
+}
+
+
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
@@ -57,6 +70,7 @@ a:hover {
     position: relative !important;
 }
 
+<<<<<<< HEAD
 label>span {
     color: #111010 !important;
 }
@@ -64,6 +78,29 @@ label>span {
 .text-top-form {
     color: #454242;
     font-family: 'fangsong';
+=======
+label > span {
+    color: #fff !important;
+}
+
+a {
+    color: #5dff85 !important;
+}
+
+.btn-color {
+    background-color: #7E8968 !important;
+    color: #fff;
+}
+
+.btn-color:hover {
+    background-color: #acafa5 !important;
+    color: #0a0a0a;
+}
+
+.text-top-form {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
@@ -97,8 +134,13 @@ div#animationdivIcon {
 }
 
 #gracias {
+<<<<<<< HEAD
     color: #454242;
     font-family: 'fangsong';
+=======
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -118,6 +160,7 @@ div#animationdivIcon {
 }
 
 .btn-color {
+<<<<<<< HEAD
     background-color: #0086C4 !important;
     width: 234px !important;
     border-radius: 20px !important;
@@ -130,6 +173,41 @@ div#animationdivIcon {
     font-size: 20px;
 }
 
+=======
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+}
+
+/* 
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                   
+*/
+
+/* 
+███╗   ███╗ █████╗ ██████╗  █████╗ 
+████╗ ████║██╔══██╗██╔══██╗██╔══██╗
+██╔████╔██║███████║██████╔╝███████║
+██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
+██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+*/
+
+/* 
+████████╗███████╗███████╗████████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+   ██║   █████╗  ███████╗   ██║   
+   ██║   ██╔══╝  ╚════██║   ██║   
+   ██║   ███████╗███████║   ██║   
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                  
+*/
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -141,10 +219,17 @@ div#animationdivIcon {
                                            
  */
 
+<<<<<<< HEAD
 @media (max-width: 2000px) {
 
     .text-top-form {
         font-size: 25px;
+=======
+ @media (max-width: 2000px) {
+    
+    .text-top-form {
+        font-size: 20px;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         padding: 2%;
     }
 
@@ -165,6 +250,7 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
+<<<<<<< HEAD
     .style-form {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2); 
     }
@@ -176,6 +262,13 @@ div#animationdivIcon {
 
     .text-top-form {
         font-size: 25px;
+=======
+    /* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 20px;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         padding: 2% !important;
     }
 
@@ -195,14 +288,22 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
+<<<<<<< HEAD
         font-size: 25px;
+=======
+        font-size: 20px;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         padding: 2%;
     }
 
@@ -222,14 +323,22 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
+<<<<<<< HEAD
         font-size: 25px;
+=======
+        font-size: 20px;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         padding: 2%;
     }
 
@@ -249,19 +358,27 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
+<<<<<<< HEAD
         font-size: 22px;
         padding: 2%;
     }
 
     .text-top-form {
         font-size: 25px;
+=======
+        font-size: 20px;
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         padding: 2%;
         margin-top: 50px;
     }
@@ -276,39 +393,56 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .text-top-form {
+<<<<<<< HEAD
         font-size: 22px;
         padding: 2%;
     }
 
     .text-top-form {
+=======
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         margin-top: 65px;
     }
 
     .mb-5 {
         margin-bottom: 1rem !important;
     }
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
     .text-top-form {
+<<<<<<< HEAD
         font-size: 22px;
         padding: 2%;
     }
 
     .text-top-form {
+=======
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
         margin-top: 65px;
     }
 
     .mb-5 {
         margin-bottom: 1rem !important;
     }
+<<<<<<< HEAD
 
 }
 
 /* 
+=======
+    
+}
+
+    /* 
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
     ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
     █████╗  ██║   ██║██████╔╝██╔████╔██║
@@ -317,11 +451,22 @@ div#animationdivIcon {
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
     */
 
+<<<<<<< HEAD
+=======
+}
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151
 
 @media (min-width: 0px) and (max-width: 480px) {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+<<<<<<< HEAD
     }
 
 }
+=======
+    }    
+
+}
+
+>>>>>>> da3fa4afe5b47ead2b918400ab59c91b1916e151

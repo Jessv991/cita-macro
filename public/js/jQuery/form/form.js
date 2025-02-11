@@ -12,6 +12,7 @@ $(document).ready(function () {
         putOpticasByWeblogin();
     } else if (weblogin) {
         putOpticaByweblogin();
+        //getOpticaSelectCity();
     } else {
         getCityBySelectState();
         getOpticaSelectCity()
@@ -91,7 +92,7 @@ $(document).ready(function () {
 //si el cliente selecciona la provincia se ejecuta esta función
 function getCityBySelectState() {
 
-    $('#provincias,#provincias1').on('change', function () {
+    $('#provincias').on('change', function () {
         var provinciaId = $(this).val();
 
         $('#optica').empty();//limpia el select ciudad
@@ -105,14 +106,14 @@ function getCityBySelectState() {
                 type: 'POST',
                 data: {
                     provincias: provinciaId,
-                    _token: csrfToken // Token CSRF definido en el archivo Blade llamado foorte
+                    _token: csrfToken // Token CSRF definido en el archivo Blade
                 },
                 success: function (data) {
 
                     $('#ciudad').empty();
 
                     if (data.length == 1) {
-                        // Si solo hay una ciudad, se selecciona automáticamente
+                        // Si solo hay una ciudad, seleccionarla automáticamente
                         $.each(data, function (key, value) {
                             $('#ciudad').append('<option value="' + value.d3 + '" selected>' + value.d3 + '</option>');
                             $('#ciudad').addClass('readonly-select');
@@ -342,4 +343,3 @@ function putOpticasByWeblogin() {
     // Para agregar la opción por defecto cuando se carga la página por primera vez
     $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
 }
-

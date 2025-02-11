@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CitasLandings;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\App;
 use Illuminate\Http\Request;
@@ -42,7 +43,7 @@ class view_generator_controller extends Controller
         
         */
 
-        //parametro para detectar vita movil o desktop
+        //parametro para detectar vista movil o desktop
         $useragent = $_SERVER['HTTP_USER_AGENT'];
         if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i', $useragent) || preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i', substr($useragent, 0, 4))) {
             $tipo_dispositivo = 'mobile';
@@ -55,7 +56,7 @@ class view_generator_controller extends Controller
 
 
 
-        //tipo de dispositivo me da el navegador
+        //tipo de dispositivo me da el navegador que se está usando
         $useragent = $_SERVER['HTTP_USER_AGENT'];
         if (preg_match('/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od|ad)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i', $useragent) || preg_match('/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i', substr($useragent, 0, 4))) {
             $tipo_dispositivo = "phone";
@@ -82,8 +83,10 @@ class view_generator_controller extends Controller
     public function index($locale, $origen, $weblogin = null, $tienda = null)
     {
         //hacer test en ruta: ?test=true
-        
-        $weblogin = str_replace(' ', '', $weblogin);
+
+        $landing = "vista";
+
+        $weblogin = str_replace(' ','', $weblogin);
         
         $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
@@ -107,17 +110,15 @@ class view_generator_controller extends Controller
                                                       
         */
 
-        //==================AUDIOS==================
-
         if (isset($weblogin) && isset($tienda)) {
-            //consulta la tienda específica que sea audio
-            $this->data['centros'] = $empresas->getStoreOnlyAudioByWebloginAndCode($weblogin, $tienda);
+            //consulta cuando pasan weblogin y tienda
+            $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
         } elseif (isset($weblogin)) {
-            //consultas todas las tiendas por weblogin que sean audio
+            //consultaslas tiendas por weblogin
             $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin);
         } else {
-            //consulta las tiendas de audio
-            $this->data['centros'] = $empresas->getStoreAllAudio();
+            //consulta todas las tiendas
+            $this->data['centros'] = $empresas->getStore();
         }
 
         //=====================IDIOMA==========================
@@ -127,24 +128,26 @@ class view_generator_controller extends Controller
         $this->data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         //=====================MAPAS=====================
-        $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/featuresAudio.json");
+        
+        $this->data['mapa'] = file_get_contents("https://www.plataformasit.com/mapasTiendasNOG/featuresAudio.json");
 
-        //================LANDING NOMBRE CARPETA DE LA VISTA=================
-        $this->data['landing'] = $origen;
-
+        
         //================OPTICA=================
         $this->data['optica'] = $tienda;
-
+        
         //=====================TEST=====================
         $this->data['test'] = $test;
-
+        
         //=====================PROVINCIA=====================
-
+        
         $this->data['weblogin'] = $weblogin;
-
+        
         $codigo = $empresas->getCodeService();
-
+        
         $this->data['provincias'] = $zonas->getProvincias($codigo);
+        
+        //================LANDING NOMBRE CARPETA DE LA VISTA=================
+        $this->data['landing'] = $origen;
 
         //================ORIGEN NOMBRE SEGMENTOS URL====================
 
@@ -152,7 +155,7 @@ class view_generator_controller extends Controller
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
-        if ($baseUrl !== 'https://audio.naturaloptics.com') {
+        if ($baseUrl !== 'https://audio.naturalopticsgroup.com') {
 
             $rutaAsset = '';
 
@@ -165,43 +168,47 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'cita-macro' => array(
+            'cita-macro-audio' => array(
                 'revision' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/revision.jpg',
-                'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.jpg',
+                'audio' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/audio.png',
+                'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.png'
             )
         );
 
         //clave de las imagenes en el array data
         $this->data['revision'] = $rutaAsset . $imagen['cita-macro']['revision'];
-        $this->data['cumple'] = $rutaAsset . $imagen['cita-macro']['cumple'];
+        $this->data['audio'] = $rutaAsset . $imagen['cita-macro-audio']['audio'];
+        $this->data['cumple'] = $rutaAsset . $imagen['cita-macro-audio']['cumple'];
 
         //=====================LOGO=====================
 
         $logo = $empresas->getLogos($weblogin);
 
-        if ($logo) {
+        // Verificar que $logo no sea null antes de pasarlo a la vista
+        if($logo){
             $this->data['logo'] = $logo->f1;
-        } else {
-            $this->data['logo'] = '';
+        }else {
+            $this->data['logo'] = ''; 
         }
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = asset($rutaAsset . '/assets/logos/opticas/' . $getLogo);
-        } else {
+            $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
+        }else{
             $logoOptica = null;
         }
-
+        
         $this->data['logoOptica'] = $logoOptica;
 
 
-
-        if (view()->exists('pages.' . $origen . '.index')) { //verificamos si la ruta existe
+        if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
-        } else { //redirigimos a vista principal si no existe la ruta
-            return redirect('https://audio.naturaloptics.com/cita-macro/es/cita-audio');
+        } else {//redirigimos a vista principal si no existe la ruta
+            return redirect('https://audio.naturalopticsgroup.com/cita-macro/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
         }
+
+
     }
 
 
@@ -227,7 +234,7 @@ class view_generator_controller extends Controller
         return response()->json($localidades);
     }
 
-    //esta función me da las opticas o la optica de la ciudad seleccionada
+    //esta función da las opticas o la optica de la ciudad seleccionada
     public function getOpticasByProvincia(Request $request)
     {
 
@@ -262,7 +269,7 @@ class view_generator_controller extends Controller
 
         $empresas = new Empresas();
 
-        $optica = $empresas->getStoreOnlyAudioByWebloginAndCode($localidad, $tienda);
+        $optica = $empresas->getStoreByWebloginAndCode($localidad, $tienda);
 
         return response()->json($optica);
     }
@@ -339,9 +346,10 @@ class view_generator_controller extends Controller
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 
-    public function validateKit(Request $request)
-    {
+    
 
+    public function validateKit(Request $request){
+        
         $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
@@ -349,9 +357,10 @@ class view_generator_controller extends Controller
         App::setLocale($locale);
 
         /* 
-        El formulario cuenta con estos dos input que estabamos cogiendo sus datos aquí, lo único que se debe hacer
+        El formulario cuenta con con estos dos input que estabamos cogiendo sus datos aquí, lo único que se debe hacer
         es declarar las variables que hemos explicado en el gitBook. 
         */
+
         $telefono_optica = $request->input('telefono_optica');
         $mail_optica = $request->input('mail_optica');
 
@@ -367,5 +376,7 @@ class view_generator_controller extends Controller
         $this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
+
     }
+
 }

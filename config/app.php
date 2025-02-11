@@ -52,7 +52,7 @@ return [
     |
     */
 
-    'url' => env('APP_URL', 'https://audio.naturaloptics.com/'),
+    'url' => env('APP_URL'),
 
     /*
     |--------------------------------------------------------------------------

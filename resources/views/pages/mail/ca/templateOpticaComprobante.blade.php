@@ -6,34 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="telephone=no" name="format-detection">
     <title></title>
-    <!--[if (mso 16)]>
-    <style type="text/css">
-    a {text-decoration: none;}
-    </style>
-    <![endif]-->
-    <!--[if gte mso 9]><style>sup { font-size: 100% !important; }</style><![endif]-->
-    <!--[if gte mso 9]>
-<xml>
-    <o:OfficeDocumentSettings>
-    <o:AllowPNG></o:AllowPNG>
-    <o:PixelsPerInch>96</o:PixelsPerInch>
-    </o:OfficeDocumentSettings>
-</xml>
-<![endif]-->
-    <!--[if mso]>
- <style type="text/css">
-   ul {
-  margin: 0 !important;
-}
-ol {
-  margin: 0 !important;
-}
-li {
-  margin-left: 47px !important;
-}
-
- </style><![endif]
--->
 
 <style type="text/css">
   .rollover:hover .rollover-first {
@@ -823,7 +795,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Natural Audio
+                                                Natural Optics
                                               </p>
                                             </td>
                                           </tr>
@@ -881,7 +853,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
+                                                <img src="https://audio.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
@@ -915,46 +887,46 @@ li {
                                         <tbody>
                                           <tr>
                                             <td align="center" class="esd-block-text">
-                                              <h3 style="color:#0086c4">
+                                              <h3 style="color:#050606">
                                                 T'hem aconseguit una nova cita!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
-                                              <p style="color:#0086c4;font-size:16px;line-height:150%">
+                                              <p style="color:#050606;font-size:16px;line-height:150%">
                                                 Contacta amb el client per acordar-la:
                                               </p>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Nom: {NOMBRECLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Telèfon: {TELEFONOCLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   E-mail: {EMAILCLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%"></em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Aquesta cita s'ha aconseguit a través de:
                                                 </em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
                                                   {ORIGIN}
                                                 </em>
@@ -983,7 +955,7 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
@@ -1001,10 +973,10 @@ li {
                                                               <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                                   <tbody>
                                                                       <tr>
-                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
+                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
                                                                       </tr>
                                                                   </tbody>
                                                               </table>
@@ -1051,7 +1023,7 @@ li {
                                         <tbody>
                                           <tr>
                                             <td esdev-links-color="#666666" align="center" class="es-m-txt-с esd-block-text es-p10t es-p20b">
-                                              <p style="color:#666666;line-height:120%;font-size:12px">
+                                              <p style="color:#050606;line-height:120%;font-size:12px">
                                                 Aquest correu electrònic és conforme a la legislació vigent sobre el tractament de dades amb multes promocionals i publicitàries. D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposeu dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dels vostres dades.
                                               </p>
                                               <p style="color:#666666;line-height:120%">
