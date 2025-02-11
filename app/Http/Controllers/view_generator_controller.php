@@ -168,7 +168,7 @@ class view_generator_controller extends Controller
         //=====================IMAGENES=====================
 
         $imagen = array(
-            'cita-macro-audio' => array(
+            'cita-macro' => array(
                 'revision' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/revision.jpg',
                 'audio' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/audio.png',
                 'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.png'
