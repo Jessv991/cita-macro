@@ -33,14 +33,4 @@
     </div>
 </div>
 
-
-<div class="col-lg-4 h-100 p-0 m-0 lado-der d-flex justify-content-center align-items-center position-relative d-none">
-    <div class="cont-form-principal position-fixed d-flex justify-content-center align-items-center">
-        <button class="btn-close">×</button>
-        @include('form.pide_cita')
-    </div>
-
-</div>
-
-
 @include('layouts.footer')
