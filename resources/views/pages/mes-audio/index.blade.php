@@ -28,18 +28,27 @@
     </div>
 </div>
 
-
-@include('layouts.footer')
-
 <script>
     function detectarOrientacion() {
-        if (window.innerWidth > window.innerHeight) {
-            $tipo_dispositivo = 'desktop';
-        } else {
-            $tipo_dispositivo = 'mobile';
+        const esVertical = window.innerHeight > window.innerWidth;
+
+        // Establecer la clase para manejar la orientación
+        document.body.classList.toggle('mobile', esVertical);
+        document.body.classList.toggle('desktop', !esVertical);
+
+        // Establecer orientación en una cookie para que PHP pueda usarla
+        document.cookie = `orientacion=${esVertical ? 'mobile' : 'desktop'}; path=/;`;
+
+        // Recargar la página solo si la orientación ha cambiado
+        if (localStorage.getItem('orientacionGuardada') !== (esVertical ? 'mobile' : 'desktop')) {
+            localStorage.setItem('orientacionGuardada', esVertical ? 'mobile' : 'desktop');
+            location.reload(); // Recarga la página
         }
     }
 
-    window.addEventListener("load", detectarOrientacion);
-    window.addEventListener("orientationchange", detectarOrientacion);
+    // Ejecutar la detección en carga y cuando cambie la orientación
+    window.addEventListener('load', detectarOrientacion);
+    window.addEventListener('resize', detectarOrientacion);
 </script>
+
+@include('layouts.footer')
