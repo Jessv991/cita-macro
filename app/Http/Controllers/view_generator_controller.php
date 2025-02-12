@@ -170,7 +170,7 @@ class view_generator_controller extends Controller
         $imagen = array(
             'cita-macro' => array(
                 'revision' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/revision.jpg',
-                'audio' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/audio.png',
+                'audio' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/audio.jpg',
                 'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.jpg'
             )
         );

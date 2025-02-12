@@ -1,0 +1,386 @@
+/* 
+███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
+██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
+╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
+███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
+*/
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+a {
+    color: #0e0cea  !important;
+}
+
+a:hover {
+    color: #34aace !important;
+}
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                             
+*/
+
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+.contenedor-form {
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
+    position: relative !important;
+    height: auto !important;
+}
+
+label>span {
+    color: #111010 !important;
+}
+
+.text-top-form {
+    color: #454242;
+    font-family: 'fangsong';
+    font-weight: 200;
+    line-height: 1;
+    font-size: 25px;
+
+}
+
+input {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* input:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+select {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* select:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+div#animationdivIcon {
+    margin-top: 3% !important;
+}
+
+#gracias {
+    color: #454242;
+    font-family: 'fangsong';
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
+.b-pedir-citas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    background-color: #0086C4 !important;
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+
+}
+
+.btn-color:hover {
+    background-color: #5D6569 !important;
+    font-size: 20px;
+}
+
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+@media (max-width: 2000px) {
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+    
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 20% !important;
+        position: relative !important;
+        height: 80% !important;
+    }
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 30% !important;
+        position: relative !important;
+        height: 80% !important;
+    }
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+}
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 30% !important;
+        position: relative !important;
+        height: 80% !important;
+    }
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+        margin-top: 50px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+@media (max-width: 1024px) {
+    body {
+      background-size: cover;
+    }
+}
+
+  
+@media (max-width: 600px) {
+    body {
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+/* 
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
+
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
