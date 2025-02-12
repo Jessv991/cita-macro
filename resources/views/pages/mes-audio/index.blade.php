@@ -30,3 +30,16 @@
 
 
 @include('layouts.footer')
+
+<script>
+    function detectarOrientacion() {
+        if (window.innerWidth > window.innerHeight) {
+            $tipo_dispositivo = 'desktop';
+        } else {
+            $tipo_dispositivo = 'mobile';
+        }
+    }
+
+    window.addEventListener("load", detectarOrientacion);
+    window.addEventListener("orientationchange", detectarOrientacion);
+</script>
