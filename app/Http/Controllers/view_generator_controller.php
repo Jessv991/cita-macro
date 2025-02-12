@@ -159,12 +159,14 @@ class view_generator_controller extends Controller
 
         $imagen = array(
             'cita-optica' => array(
-                'OPTICA' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/OPTICA.jpg'
+                'OPTICA' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/OPTICA.jpg',
+                'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.jpg'
             )
         );
 
         //clave de las imagenes en el array data
         $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
+        $this->data['cumple'] = $rutaAsset . $imagen['cita-optica']['cumple'];
 
         //=====================LOGO=====================
 
