@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    color: #34aace !important;
+    color: #020c0f !important;
 }
 
 /* 
@@ -284,10 +284,8 @@ div#animationdivIcon {
 @media (min-width: 768px) and (max-width: 991px) {
 
     body {
-        margin: 0 !important;
-        padding: 0 !important;
         height: auto !important;
-        width: auto !important;
+        width: auto 0 !important;
         background-size: 100% 100% !important;
         background-position: center;
     }
@@ -295,9 +293,9 @@ div#animationdivIcon {
     .contenedor-form {
         padding-left: 15%;
         padding-right: 15%;
-        padding-top: 30% !important;
+        padding-top: 80% !important;
         position: relative !important;
-        height: 80% !important;
+        height: 100% !important;
     }
 
     .text-top-form {
@@ -320,6 +318,23 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto 0 !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 80% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
     .text-top-form {
         font-size: 22px;
         padding: 2%;
@@ -337,6 +352,23 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto 0 !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 120% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
 
     .text-top-form {
         font-size: 22px;
@@ -378,6 +410,19 @@ div#animationdivIcon {
 
 
 @media (min-width: 0px) and (max-width: 480px) {
+
+    body {
+        height: auto !important;
+        width: auto !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-top: 140% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
 
     .mb-5 {
         margin-bottom: 1rem !important;
