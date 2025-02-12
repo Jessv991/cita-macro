@@ -21,6 +21,25 @@
     @endif
 
     <script>
+        function detectarOrientacion() {
+            const esVertical = window.innerHeight > window.innerWidth;
+    
+            document.body.classList.toggle('mobile', esVertical);
+            document.body.classList.toggle('desktop', !esVertical);
+    
+            document.cookie = `orientacion=${esVertical ? 'mobile' : 'desktop'}; path=/;`;
+    
+            if (localStorage.getItem('orientacionGuardada') !== (esVertical ? 'mobile' : 'desktop')) {
+                localStorage.setItem('orientacionGuardada', esVertical ? 'mobile' : 'desktop');
+                location.reload();
+            }
+        }
+    
+        window.addEventListener('load', detectarOrientacion);
+        window.addEventListener('resize', detectarOrientacion);
+    </script>
+
+    <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
         var getOpticasByWeblogin = '{{ route('getOpticasByWeblogin') }}';
