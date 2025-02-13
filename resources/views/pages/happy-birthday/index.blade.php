@@ -3,7 +3,7 @@
 
 <div class="background-container">
     <div class="background-item">
-        <div class="col-12" style="background-color: #fde1a694">
+        <div class="col-12" style="background-color: #454545">
             <div class="row">
                 <div class="col-lg-8 col-12 p-0">
                     <img class="w-100 h-100 active" src="{{ asset($data['cumple']) }}">
