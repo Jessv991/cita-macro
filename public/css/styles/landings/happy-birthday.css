@@ -21,26 +21,7 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
-
-a {
-    color: #1e151f !important;
-}
-
-a:hover {
-    color: #5a5e5f !important;
-}
-
-.btn-color {
-    background-color: #000 !important;
-}
-
-.btn-color:hover {
-    background-color: #fff !important;
-    color: #000;
-}
-
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -51,22 +32,58 @@ a:hover {
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
 
+.form-check-label::before {
+    border: solid 1px #dbba72;
+}
+
+
+
+.style-form {
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
 .contenedor-form {
     padding: 4%;
     position: relative !important;
 }
 
 label>span {
-    color: #fff !important;
+    color: #181717 !important;
+}
+
+a {
+    color: #0940f3 !important;
+}
+
+a:hover {
+    color: #000 !important;
+}
+
+.btn-color {
+    background-color: #c0acc1 !important;
+    color: #36253d;
+}
+
+.btn-color:hover {
+    background-color: #6e546e !important;
+    color: #fff;
+}
+
+.cont-form-principal {
+    width: 31%;
+    height: 90%;
+    border-radius: 5px;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+    background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(0, 134, 196, 1));
+    transition: width 0.3s;
 }
 
 .text-top-form {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #141414;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
-
 }
 
 input {
@@ -79,7 +96,6 @@ input {
 /* input:hover {
     box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
 } */
-
 select {
     margin-top: 3% !important;
     font-size: 19px !important;
@@ -90,14 +106,13 @@ select {
 /* select:hover {
     box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
 } */
-
 div#animationdivIcon {
     margin-top: 3% !important;
 }
 
 #gracias {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #7e7676;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -122,7 +137,6 @@ div#animationdivIcon {
     font-size: 20px;
 }
 
-
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
 ██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
@@ -136,7 +150,7 @@ div#animationdivIcon {
 @media (max-width: 2000px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -162,7 +176,7 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2% !important;
     }
 
@@ -189,7 +203,7 @@ div#animationdivIcon {
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -212,11 +226,10 @@ div#animationdivIcon {
 
 }
 
-/* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -243,7 +256,7 @@ div#animationdivIcon {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 22px;
         padding: 2%;
         margin-top: 50px;
     }
@@ -258,6 +271,11 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
         margin-top: 65px;
     }
 
@@ -269,6 +287,11 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
 
     .text-top-form {
         margin-top: 65px;
@@ -289,10 +312,9 @@ div#animationdivIcon {
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
     */
 
-@media (min-width: 0px) and (max-width: 480px) {
 
+@media (min-width: 0px) and (max-width: 480px) {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-
 }
