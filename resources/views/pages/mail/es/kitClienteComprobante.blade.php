@@ -901,7 +901,7 @@ button.es-button {
                                       </p>
                                       <p style="color:#050606;font-size:16px">
                                         <em style="line-height:150%">
-                                          Natural Optics {ORIGIN}
+                                          Natural Audio {ORIGIN}
                                         </em>
                                         <br>
                                       </p>
