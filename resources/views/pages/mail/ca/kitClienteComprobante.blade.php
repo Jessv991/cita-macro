@@ -1119,7 +1119,7 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        Natural Optics</p>
+                                                                        UGO Optics</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -1140,9 +1140,9 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        <a href="https://www.naturaloptics.com/"
+                                                                        <a href="https://www.naturalopticsgroup.com/"
                                                                             target="_blank" class="view"
-                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturaloptics.com</a>
+                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturalopticsgroup.com</a>
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -1246,7 +1246,7 @@ END OF IMPORTANT
                                                 </p>
                                                 <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
-                                                        Natural Optics - {ORIGIN}
+                                                        UGO Optics - {ORIGIN}
                                                     </em>
                                                     <br>
                                                 </p>
@@ -1294,7 +1294,7 @@ END OF IMPORTANT
                                                                                         <td class="es-p10r"
                                                                                             valign="top"
                                                                                             align="center"><a
-                                                                                                href="https://es-la.facebook.com/naturaloptics"
+                                                                                                href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES"
                                                                                                 target="_blank"><img
                                                                                                     title="Facebook"
                                                                                                     src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png"
@@ -1306,34 +1306,12 @@ END OF IMPORTANT
                                                                                             align="center"
                                                                                             esd-tmp-icon-type="instagram"
                                                                                             class="es-p10r"><a
-                                                                                                href="https://www.instagram.com/naturalopticsoficial/"
+                                                                                                href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/"
                                                                                                 target="_blank"><img
                                                                                                     title="Instagram"
                                                                                                     src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"
                                                                                                     alt="Ig"
                                                                                                     width="32"
-                                                                                                    height="32"></a>
-                                                                                        </td>
-                                                                                        <td valign="top"
-                                                                                            align="center"
-                                                                                            esd-tmp-icon-type="twitter"
-                                                                                            class="es-p10r"><a
-                                                                                                href="https://twitter.com/naturalopticsg"
-                                                                                                target="_blank"><img
-                                                                                                    title="X"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png"
-                                                                                                    alt="X"
-                                                                                                    width="32"
-                                                                                                    height="32"></a>
-                                                                                        </td>
-                                                                                        <td valign="top"
-                                                                                            align="center"
-                                                                                            esd-tmp-icon-type="custom">
-                                                                                            <a href="https://www.naturaloptics.com/blog/"
-                                                                                                target="_blank"><img
-                                                                                                    title="Custom"
-                                                                                                    src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png"
-                                                                                                    alt width="32"
                                                                                                     height="32"></a>
                                                                                         </td>
                                                                                     </tr>

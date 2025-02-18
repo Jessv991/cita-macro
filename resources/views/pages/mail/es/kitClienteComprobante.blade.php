@@ -797,7 +797,7 @@ button.es-button {
                   <td align="left" style="padding:0;Margin:0;width:270px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="left" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">Natural Optics</p></td>
+                      <td align="left" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">UGO Optics</p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -901,7 +901,7 @@ button.es-button {
                                       </p>
                                       <p style="color:#050606;font-size:16px">
                                         <em style="line-height:150%">
-                                          Natural Optics {ORIGIN}
+                                          UGO Optics {ORIGIN}
                                         </em>
                                         <br>
                                       </p>
@@ -944,10 +944,8 @@ button.es-button {
                                                 <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                     <tbody>
                                                         <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
+                                                            <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
+                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
                                                         </tr>
                                                     </tbody>
                                                 </table>
@@ -990,7 +988,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural {DIRECIONOPTICA} o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
+                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural {DIRECIONOPTICA} o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturalopticsgroup.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturalopticsgroup.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
                      </tr>
                    </table></td>
                  </tr>
