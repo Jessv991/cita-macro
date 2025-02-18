@@ -1119,7 +1119,7 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        Natural Optics</p>
+                                                                        UGO Audio</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -1140,9 +1140,9 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        <a href="https://www.naturaloptics.com/"
+                                                                        <a href="https://www.naturalopticsgroup.com/"
                                                                             target="_blank" class="view"
-                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturaloptics.com</a>
+                                                                            style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturalopticsgroup.com</a>
                                                                     </p>
                                                                 </td>
                                                             </tr>
@@ -1306,7 +1306,7 @@ END OF IMPORTANT
                                                                                             align="center"
                                                                                             esd-tmp-icon-type="instagram"
                                                                                             class="es-p10r"><a
-                                                                                                href="https://www.instagram.com/naturalopticsoficial/"
+                                                                                                href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/"
                                                                                                 target="_blank"><img
                                                                                                     title="Instagram"
                                                                                                     src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"

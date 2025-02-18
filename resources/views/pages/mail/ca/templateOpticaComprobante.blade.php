@@ -795,7 +795,7 @@
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Natural Optics
+                                                UGO Audio
                                               </p>
                                             </td>
                                           </tr>
@@ -815,8 +815,8 @@
                                           <tr>
                                             <td align="right" class="es-infoblock esd-block-text">
                                               <p>
-                                                <a href="https://www.naturaloptics.com/" target="_blank" class="view">
-                                                  www.naturaloptics.com
+                                                <a href="https://www.naturalopticsgroup.com/" target="_blank" class="view">
+                                                  www.naturalopticsgroup.com
                                                 </a>
                                               </p>
                                             </td>

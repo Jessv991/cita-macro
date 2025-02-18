@@ -1,7 +1,7 @@
 var dispositivo = window.screen.width;
 
 $(document).ready(function () {
-    
+
     var weblogin = $('#_weblogin').val();
     var optica = $('#_optica').val();
 
@@ -56,9 +56,9 @@ $(document).ready(function () {
     para botón flotante pantallas pequeñas
     */
 
-    if(dispositivo <= 991){
+    if (dispositivo <= 991) {
 
-        setInterval(function() {
+        setInterval(function () {
             // Añade la clase para simular hover
             $('.btn-flotante').addClass('btn-flotante-table');
             $('.textPC').addClass('textPC-table');
@@ -66,7 +66,7 @@ $(document).ready(function () {
             $('.bfi').attr('style', 'margin-left: -2px !important');
 
             // Remueve la clase después de un pequeño tiempo para simular el fin del hover
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.btn-flotante').removeClass('btn-flotante-table');
                 $('.textPC').removeClass('textPC-table');
                 $('.cls-1').removeClass('cls-1-table');
@@ -74,7 +74,7 @@ $(document).ready(function () {
         }, 5000); // Cada 5 segundos
 
     }
-    
+
 });
 
 
@@ -158,7 +158,7 @@ function putOpticasByProvincia(city) {
         type: 'POST',
         data: {
             ciudad: city,
-            _token: csrfToken 
+            _token: csrfToken
         },
         success: function (data) {
 
@@ -270,6 +270,7 @@ function putOpticaByweblogin() {
                     $('#optica').addClass('readonly-select');
                     $('#animationdivIcon').removeClass('d-none');
                     $(".icon-map").removeClass("rotate-in-center");
+                    $('#_optica').val(value.tienda);
                 });
             } else {
                 $('#animationdivIcon').addClass('d-none');
