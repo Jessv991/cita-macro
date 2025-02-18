@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
+    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
     {
 
         $nombre = $validated['nombre'];
@@ -42,7 +42,7 @@ class email_service
 
             $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
-            $optica = $empresas->getStoreByCodestrore($tienda);
+            $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
 
             if (!empty($optica) && isset($optica[0])) {
 

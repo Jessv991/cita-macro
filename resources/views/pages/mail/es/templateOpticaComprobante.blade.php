@@ -823,7 +823,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                Natural Optics
+                                                Natural Audio
                                               </p>
                                             </td>
                                           </tr>

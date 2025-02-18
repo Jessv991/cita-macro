@@ -1119,7 +1119,7 @@ END OF IMPORTANT
                                                                     style="padding:0;Margin:0">
                                                                     <p
                                                                         style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">
-                                                                        Natural Optics</p>
+                                                                        Natural Audio</p>
                                                                 </td>
                                                             </tr>
                                                         </table>
@@ -1246,7 +1246,7 @@ END OF IMPORTANT
                                                 </p>
                                                 <p style="color:#050606;font-size:16px">
                                                     <em style="line-height:150%">
-                                                        Natural Optics - {ORIGIN}
+                                                        Natural Audio - {ORIGIN}
                                                     </em>
                                                     <br>
                                                 </p>
