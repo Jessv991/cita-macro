@@ -198,7 +198,7 @@ div#animationdivIcon {
     body {
         margin: 0;
         padding: 0;
-        height: 100vh;
+        height: 150vh;
         width: auto;
         background-size: cover;
         background-position: center;
@@ -207,7 +207,7 @@ div#animationdivIcon {
     .contenedor-form {
         padding-left: 20%;
         padding-right: 20%;
-        padding-top: 20% !important;
+        padding-top: 25% !important;
         position: relative !important;
         height: 80% !important;
     }
