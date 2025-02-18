@@ -1294,7 +1294,7 @@ END OF IMPORTANT
                                                                                         <td class="es-p10r"
                                                                                             valign="top"
                                                                                             align="center"><a
-                                                                                                href="https://es-la.facebook.com/naturaloptics"
+                                                                                                href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES/"
                                                                                                 target="_blank"><img
                                                                                                     title="Facebook"
                                                                                                     src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png"
@@ -1312,28 +1312,6 @@ END OF IMPORTANT
                                                                                                     src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png"
                                                                                                     alt="Ig"
                                                                                                     width="32"
-                                                                                                    height="32"></a>
-                                                                                        </td>
-                                                                                        <td valign="top"
-                                                                                            align="center"
-                                                                                            esd-tmp-icon-type="twitter"
-                                                                                            class="es-p10r"><a
-                                                                                                href="https://twitter.com/naturalopticsg"
-                                                                                                target="_blank"><img
-                                                                                                    title="X"
-                                                                                                    src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png"
-                                                                                                    alt="X"
-                                                                                                    width="32"
-                                                                                                    height="32"></a>
-                                                                                        </td>
-                                                                                        <td valign="top"
-                                                                                            align="center"
-                                                                                            esd-tmp-icon-type="custom">
-                                                                                            <a href="https://www.naturaloptics.com/blog/"
-                                                                                                target="_blank"><img
-                                                                                                    title="Custom"
-                                                                                                    src="https://audio.naturalopticsgroup.com/cita-macro/assets/iconos/blog/blanco-azul.png"
-                                                                                                    alt width="32"
                                                                                                     height="32"></a>
                                                                                         </td>
                                                                                     </tr>
