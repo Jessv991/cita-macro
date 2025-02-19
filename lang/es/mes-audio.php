@@ -1,6 +1,6 @@
 <?php
 return [
 
-    'alert-centro' => 'Cosulta condiciones en el centro',
+    'alert-centro' => 'Consulta condiciones en el centro',
 
 ];
