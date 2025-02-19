@@ -1337,7 +1337,7 @@ END OF IMPORTANT
                                                                                             <a href="https://www.naturaloptics.com/blog/"
                                                                                                 target="_blank"><img
                                                                                                     title="Custom"
-                                                                                                    src="https://optica.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png"
+                                                                                                    src="https://optica.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-verde.png"
                                                                                                     alt width="32"
                                                                                                     height="32"></a>
                                                                                         </td>
