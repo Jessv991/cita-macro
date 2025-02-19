@@ -853,7 +853,7 @@
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
+                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/email.png" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>

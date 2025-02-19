@@ -70,6 +70,7 @@ class email_service
 
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
+                $mail->addCC('j.vasquez@naturalopticsgroup.com');
             } else {
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');

@@ -1176,7 +1176,7 @@ END OF IMPORTANT
                                                             style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                                                             <tr style="border-collapse:collapse">
                                                                 <td align="center"
-                                                                    style="padding:0;Margin:0;position:relative"><img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
+                                                                    style="padding:0;Margin:0;position:relative"><img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/email.png" alt="" width="600" class="adapt-img">
                                                                 </td>
                                                             </tr>
                                                         </table>
