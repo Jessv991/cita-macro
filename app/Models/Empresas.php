@@ -142,11 +142,11 @@ class Empresas extends Model
 
     // Relations ...
 
-    public function __construct()
+    /* public function __construct()
     {
         $this->getOnlyAllAudios();
     }
-
+ */
     /* 
     ███████╗██╗██╗  ████████╗██████╗  █████╗      █████╗ ██╗   ██╗██████╗ ██╗ ██████╗ 
     ██╔════╝██║██║  ╚══██╔══╝██╔══██╗██╔══██╗    ██╔══██╗██║   ██║██╔══██╗██║██╔═══██╗
@@ -156,7 +156,7 @@ class Empresas extends Model
     ╚═╝     ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝                                                                                   
     */
 
-    protected $codigo; //variable para almacenar los códigod que verifica qué tiendas qofrecen el servicio de audiología
+    /* protected $codigo; //variable para almacenar los códigod que verifica qué tiendas qofrecen el servicio de audiología
 
     public function getCodeService()
     {
@@ -206,7 +206,7 @@ class Empresas extends Model
         
         $this->codigo = $codigo;
 
-    }
+    } */
 
     /* 
     
