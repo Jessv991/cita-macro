@@ -171,7 +171,7 @@ class Empresas extends Model
             ->select('codigo', 'd1')
             ->where('d22', 'si')           
             ->where(function ($query) {     
-                $query->where('d9', '-9');
+                $query->whereIn('d9', ['0', '1']);
             })
             ->where('CRM', 'si')
             ->get();
@@ -285,7 +285,7 @@ class Empresas extends Model
             ->where('codigo', $optica)
             ->where('d22', 'si')           
             ->where(function ($query) {     
-                $query->where('d9', '-9');
+                $query->whereIn('d9', ['0', '1']);
             })
             ->where('CRM', 'si')
             ->get();
@@ -344,7 +344,7 @@ class Empresas extends Model
                 ->where('z.id', $codigoProvincia)
                 ->where("e.d22", "=", 'si')
                 ->where(function ($query) {
-                    $query->where('d9', '-9');
+                    $query->whereIn('d9', ['0', '1']);
                 })
                 ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
@@ -361,7 +361,7 @@ class Empresas extends Model
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
                 ->where(function ($query) {
-                    $query->where('d9', '-9');
+                    $query->whereIn('d9', ['0', '1']);
                 })
                 ->where("crm", "=", 'si')
                 ->get();
