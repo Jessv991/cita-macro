@@ -84,13 +84,13 @@ class Zonas extends Model
     */
     
     // ==================================FILTRADA POR SERVICIO DE AUDIO===============================================
-    public function getProvincias($codigo)
+    public function getProvincias()
     {
         $datos = DB::table('zonas as z')
             ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->whereIn('codigo', $codigo)
+            ->where('e.d19', 'si') 
             ->where('z.id', '!=', 53)
             ->orderBy('nombre', 'asc')
             ->get();

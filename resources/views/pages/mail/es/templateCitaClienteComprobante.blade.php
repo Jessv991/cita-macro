@@ -827,7 +827,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img"></td>
+                      <td align="center" style="padding:0;Margin:0;position:relative"><img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/email.jpg" alt="" width="600" class="adapt-img"></td>
                      </tr>
                    </table></td>
                  </tr>

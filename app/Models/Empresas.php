@@ -142,10 +142,10 @@ class Empresas extends Model
 
     // Relations ...
 
-    public function __construct()
+   /*  public function __construct()
     {
         $this->getOnlyAllAudios();
-    }
+    } */
 
     /* 
     ███████╗██╗██╗  ████████╗██████╗  █████╗      █████╗ ██╗   ██╗██████╗ ██╗ ██████╗ 
@@ -156,15 +156,15 @@ class Empresas extends Model
     ╚═╝     ╚═╝╚══════╝╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═════╝                                                                                   
     */
 
-    protected $codigo; //variable para almacenar los códigod que verifica qué tiendas qofrecen el servicio de audiología
+   /*  protected $codigo; //variable para almacenar los códigod que verifica qué tiendas qofrecen el servicio de audiología
 
     public function getCodeService()
     {
         return $codigo = $this->codigo;
-    }
+    } */
 
     //================FUNCIÓN PARA FILTRAR TODAS LAS TIENDAS QUE OFREZCAN EL SERVICIO DE AUDIO================
-    public function getOnlyAllAudios()
+   /*  public function getOnlyAllAudios()
     {
 
         $datos = DB::table('empresas')
@@ -206,7 +206,7 @@ class Empresas extends Model
         
         $this->codigo = $codigo;
 
-    }
+    } */
 
     /* 
     
@@ -223,9 +223,8 @@ class Empresas extends Model
     public function getStore()
     {
 
-        $codigo = $this->codigo;
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
+            ->where('d19', 'si') 
             ->get();
 
         return $datos;
@@ -235,10 +234,9 @@ class Empresas extends Model
 
     public function getStoreByCodeAndWeblogin($weblogin)
     {
-        $codigo = $this->codigo;
 
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
+            ->where('d19', 'si') 
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->get();
 
@@ -249,10 +247,9 @@ class Empresas extends Model
     //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA================
     public function getStoreByWebloginAndCode($weblogin, $tienda)
     {
-        $codigo = $this->codigo;
 
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
+            ->where('d19', 'si') 
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('tienda', $tienda)
             ->get();
@@ -266,10 +263,9 @@ class Empresas extends Model
 
     public function getStoreByCodestrore($code_store)
     {
-        $codigo = $this->codigo;
 
         $datos = DB::table('empresas')
-            ->whereIn('codigo', $codigo)
+            ->where('d19', 'si') 
             ->where('tienda', $code_store)
             ->get();
 
@@ -284,6 +280,7 @@ class Empresas extends Model
             ->select('d3')
             ->where('codigo', $optica)
             ->where('d22', 'si')           
+            ->where('d19', 'si')           
             ->where(function ($query) {     
                 $query->whereIn('d9', ['0', '1']);
             })
@@ -312,7 +309,7 @@ class Empresas extends Model
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            ->whereIn('codigo', $codigo)
+            ->where('d19', 'si') 
             ->where("e.weblogin", $weblogin)
             ->whereNotNull("e.f1")
             ->first();
@@ -343,6 +340,7 @@ class Empresas extends Model
                 ->join("zonas as z", 'z.id', '=', 'e.d2')
                 ->where('z.id', $codigoProvincia)
                 ->where("e.d22", "=", 'si')
+                ->where("e.d19", "=", 'si')
                 ->where(function ($query) {
                     $query->whereIn('d9', ['0', '1']);
                 })
@@ -360,6 +358,7 @@ class Empresas extends Model
                 ->select('tienda', 'd29', 'd23', 'd3')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
+                ->where("d19", "=", 'si')
                 ->where(function ($query) {
                     $query->whereIn('d9', ['0', '1']);
                 })

@@ -144,9 +144,7 @@ class view_generator_controller extends Controller
         
         $this->data['weblogin'] = $weblogin;
         
-        $codigo = $empresas->getCodeService();
-        
-        $this->data['provincias'] = $zonas->getProvincias($codigo);
+        $this->data['provincias'] = $zonas->getProvincias();
         
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
         $this->data['landing'] = $origen;

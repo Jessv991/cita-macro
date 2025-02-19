@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/gracias.png" alt="" width="600" class="adapt-img">
+                                                <img src="https://audio.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/email.jpg" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
@@ -1025,7 +1025,6 @@ li {
                                                   <tbody>
                                                       <tr>
                                                           <td class="esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">o encuéntranos</h3>
                                                               <p style="color: #ffffff;"><br></p>
                                                               <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
                                                               <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
