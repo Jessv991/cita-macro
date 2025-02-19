@@ -164,7 +164,7 @@ class Empresas extends Model
     }
 
     //================FUNCIÓN PARA FILTRAR TODAS LAS TIENDAS QUE OFREZCAN EL SERVICIO DE AUDIO================
-    /* public function getOnlyAllAudios()
+    public function getOnlyAllAudios()
     {
 
         $datos = DB::table('empresas')
@@ -206,7 +206,7 @@ class Empresas extends Model
         
         $this->codigo = $codigo;
 
-    } */
+    }
 
     /* 
     
