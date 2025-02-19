@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
+                                                <img src="https://optica.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/email.jpg" title="Feliz día de acción de gracias" alt="Feliz día de acción de gracias" class="adapt-img" width="600">
                                               </a>
                                             </td>
                                           </tr>
@@ -1025,7 +1025,6 @@ li {
                                                   <tbody>
                                                       <tr>
                                                           <td class="esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">o ens trobaràs</h3>
                                                               <p style="color: #ffffff;"><br></p>
                                                               <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
                                                               <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>

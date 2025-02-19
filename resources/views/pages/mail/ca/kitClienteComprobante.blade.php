@@ -1177,7 +1177,7 @@ END OF IMPORTANT
                                                             <tr style="border-collapse:collapse">
                                                                 <td align="center"
                                                                     style="padding:0;Margin:0;position:relative"><img
-                                                                        src="https://optica.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/p_auditiva.png"
+                                                                        src="https://optica.naturaloptics.com/cita-macro/assets/img/email/{LOCAL}/email.jpg"
                                                                         alt="Feliz día de acción de gracias"
                                                                         title="Feliz día de acción de gracias"
                                                                         width="600" class="adapt-img"
