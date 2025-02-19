@@ -915,46 +915,46 @@ li {
                                         <tbody>
                                           <tr>
                                             <td align="center" class="esd-block-text">
-                                              <h3 style="color:#0086c4">
+                                              <h3 style="color:#141516">
                                                 T'hem aconseguit una nova cita!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
-                                              <p style="color:#0086c4;font-size:16px;line-height:150%">
+                                              <p style="color:#141516;font-size:16px;line-height:150%">
                                                 Contacta amb el client per acordar-la:
                                               </p>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Nom: {NOMBRECLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Telèfon: {TELEFONOCLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   E-mail: {EMAILCLIENTE}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%"></em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Aquesta cita s'ha aconseguit a través de:
                                                 </em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   {ORIGIN}
                                                 </em>
@@ -983,7 +983,7 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #00a091;" align="left" bgcolor="#00a091">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
@@ -1004,7 +1004,7 @@ li {
                                                                         <td class="es-p10r" valign="top" align="center"><a href="https://es-la.facebook.com/naturaloptics" target="_blank"><img title="Facebook" src="https://optica.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
                                                                         <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/naturalopticsoficial/" target="_blank"><img title="Instagram" src="https://optica.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
                                                                         <td valign="top" align="center" esd-tmp-icon-type="twitter" class="es-p10r"><a href="https://twitter.com/naturalopticsg" target="_blank"><img title="X" src="https://optica.naturaloptics.com/cita-macro/assets/iconos/redes_sociales/x-circle-white.png" alt="X" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://optica.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-azul.png" alt width="32" height="32"></a></td>
+                                                                        <td valign="top" align="center" esd-tmp-icon-type="custom"><a href="https://www.naturaloptics.com/blog/" target="_blank"><img title="Custom" src="https://optica.naturaloptics.com/cita-macro/assets/iconos/blog/blanco-verde.png" alt width="32" height="32"></a></td>
                                                                       </tr>
                                                                   </tbody>
                                                               </table>

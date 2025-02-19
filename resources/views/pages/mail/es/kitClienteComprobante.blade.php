@@ -852,54 +852,54 @@ button.es-button {
                                 <tbody>
                                   <tr>
                                     <td align="center" class="esd-block-text">
-                                      <h3 style="color:#0086c4">
+                                      <h3 style="color:#141516">
                                         Detalles de tú pedido
                                       </h3>
                                     </td>
                                   </tr>
                                   <tr>
                                     <td align="center" class="esd-block-text es-p15t es-p15b">
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Óptica: {NOMBREOPTICA}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Persona contacto: {CONTACTO}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           E-mail: {EMAIL}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Código de la óptica: {CODIGO}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Fecha del pedido: {FECHA}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Unidades: {UNIDAD}
                                         </em>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%"></em>
                                         <br>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Este pedido se ha hecho a través de:
                                         </em>
                                         <br>
                                       </p>
-                                      <p style="color:#0086c4;font-size:16px">
+                                      <p style="color:#141516;font-size:16px">
                                         <em style="line-height:150%">
                                           Natural Optics {ORIGIN}
                                         </em>
@@ -924,9 +924,9 @@ button.es-button {
        <table cellpadding="0" cellspacing="0" align="center" class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
+           <table cellspacing="0" cellpadding="0" bgcolor="#00a091" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#00a091;width:600px" role="none">
              <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #00a091;" align="left" bgcolor="#00a091">
                 <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                 <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                     <tbody>

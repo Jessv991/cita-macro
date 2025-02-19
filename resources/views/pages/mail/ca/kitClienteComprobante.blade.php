@@ -1202,54 +1202,54 @@ END OF IMPORTANT
                                     <tbody>
                                         <tr>
                                             <td align="center" class="esd-block-text">
-                                                <h3 style="color:#0086c4">
+                                                <h3 style="color:#141516">
                                                     Detalls de la teva comanda
                                                 </h3>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Òptica: {NOMBREOPTICA}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Persona de contacte: {CONTACTO}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         E-mail: {EMAIL}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Codi de la òptica: {CODIGO}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Data de la comanda: {FECHA}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Unitats: {UNIDAD}
                                                     </em>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%"></em>
                                                     <br>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Aquesta cita s'ha aconseguit a través de:
                                                     </em>
                                                     <br>
                                                 </p>
-                                                <p style="color:#0086c4;font-size:16px">
+                                                <p style="color:#141516;font-size:16px">
                                                     <em style="line-height:150%">
                                                         Natural Optics {ORIGIN}
                                                     </em>
@@ -1266,14 +1266,14 @@ END OF IMPORTANT
                         style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
                         <tr style="border-collapse:collapse">
                             <td align="center" style="padding:0;Margin:0">
-                                <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center"
+                                <table cellspacing="0" cellpadding="0" bgcolor="#00a091" align="center"
                                     class="es-footer-body"
-                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px"
+                                    style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#00a091;width:600px"
                                     role="none">
                                     <tr style="border-collapse:collapse">
                                         <td class="esd-structure es-p20" esd-general-paddings-checked="false"
-                                            esd-custom-block-id="2446" style="background-color: #74cae7;"
-                                            align="left" bgcolor="#74cae7">
+                                            esd-custom-block-id="2446" style="background-color: #00a091;"
+                                            align="left" bgcolor="#00a091">
                                             <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                                             <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                                 <tbody>

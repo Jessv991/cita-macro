@@ -847,13 +847,13 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#0086c4">Solicitud de cita previa recibida</h3></td>
+                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#141516">Solicitud de cita previa recibida</h3></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">Gracias por confiar en nuestro centro para cuidar de tu salud. Apreciamos tu elección y nos comprometemos a ofrecerte el mejor servicio posible. En breve, uno de nuestros especialistas se pondrá en contacto contigo para concertar una cita que se ajuste a tus necesidades y horarios. Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos. Estamos aquí para ayudarte en todo lo que necesites.</p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">Gracias por confiar en nuestro centro para cuidar de tu salud. Apreciamos tu elección y nos comprometemos a ofrecerte el mejor servicio posible. En breve, uno de nuestros especialistas se pondrá en contacto contigo para concertar una cita que se ajuste a tus necesidades y horarios. Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos. Estamos aquí para ayudarte en todo lo que necesites.</p></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#0086c4;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -865,9 +865,9 @@ button.es-button {
        <table cellpadding="0" cellspacing="0" align="center" class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
+           <table cellspacing="0" cellpadding="0" bgcolor="#00a091" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#00a091;width:600px" role="none">
              <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #00a091;" align="left" bgcolor="#00a091">
                 <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                 <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                     <tbody>

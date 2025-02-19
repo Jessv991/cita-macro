@@ -915,56 +915,56 @@ li {
                                         <tbody>
                                           <tr>
                                             <td align="center" class="esd-block-text">
-                                              <h3 style="color:#0086c4">
+                                              <h3 style="color:#141516">
                                                 ¡Nuevo pedido de KIT Limpialentes!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
-                                              <p style="color:#0086c4;font-size:16px;line-height:150%">
+                                              <p style="color:#141516;font-size:16px;line-height:150%">
                                                 Contacta con el cliente para acordar todo:
                                               </p>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Óptica: {NOMBREOPTICA}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Persona contacto: {CONTACTO}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Código de la óptica: {CODIGO}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Fecha del pedido: {FECHA}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Unidades: {UNIDAD}
                                                 </em>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%"></em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   Este pedido se ha hecho a través de:
                                                 </em>
                                                 <br>
                                               </p>
-                                              <p style="color:#0086c4;font-size:16px">
+                                              <p style="color:#141516;font-size:16px">
                                                 <em style="line-height:150%">
                                                   {ORIGIN}
                                                 </em>
@@ -993,7 +993,7 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #74cae7;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #00a091;" align="left" bgcolor="#00a091">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
