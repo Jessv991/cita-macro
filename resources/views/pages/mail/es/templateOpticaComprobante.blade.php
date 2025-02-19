@@ -1023,7 +1023,6 @@ li {
                                                   <tbody>
                                                       <tr>
                                                           <td class="esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">o encuéntranos</h3>
                                                               <p style="color: #ffffff;"><br></p>
                                                               <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
                                                               <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
