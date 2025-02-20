@@ -90,7 +90,7 @@ class Zonas extends Model
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->where('z.id', '!=', 53)
             ->where('e.d22', 'si')
-            ->where('e.d20', 'si')
+            ->where('e.d19', 'si')
             ->where(function ($query) {
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
@@ -112,7 +112,7 @@ class Zonas extends Model
             ->where('e.weblogin', $weblogin)
             ->where('z.id', '!=', 53)
             ->where('e.d22', 'si')
-            ->where('e.d20', 'si')
+            ->where('e.d19', 'si')
             ->where(function ($query) {
                 $query->where('e.d9', '0')
                     ->orWhere('e.d9', '1');
