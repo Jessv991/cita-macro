@@ -22,7 +22,6 @@
                 </div>
                 <div class="col-lg-6 col-12 mt-lg-0 mt-3">
                     @include('form.pide_cita')
-                    <img width="20%" src="{{ url('assets/iconos/blog/esto.svg') }}" alt="">
                     <p class="p-0 m-0 text-center fs-5"><span class="text-danger">*</span>{{ __('mes-audio.alert-centro') }}</p>
                 </div>
             </div>
