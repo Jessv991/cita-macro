@@ -224,7 +224,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('d19', 'si') 
+            ->where('d20', 'si') 
             ->get();
 
         return $datos;
@@ -236,7 +236,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('d19', 'si') 
+            ->where('d20', 'si') 
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->get();
 
@@ -249,7 +249,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('d19', 'si') 
+            ->where('d20', 'si') 
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('tienda', $tienda)
             ->get();
@@ -265,7 +265,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('d19', 'si') 
+            ->where('d20', 'si') 
             ->where('tienda', $code_store)
             ->get();
 
@@ -280,7 +280,7 @@ class Empresas extends Model
             ->select('d3')
             ->where('codigo', $optica)
             ->where('d22', 'si')           
-            ->where('d19', 'si')           
+            ->where('d20', 'si')           
             ->where(function ($query) {     
                 $query->whereIn('d9', ['0', '1']);
             })
@@ -309,7 +309,7 @@ class Empresas extends Model
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            ->where('d19', 'si') 
+            ->where('d20', 'si') 
             ->where("e.weblogin", $weblogin)
             ->whereNotNull("e.f1")
             ->first();
@@ -340,7 +340,7 @@ class Empresas extends Model
                 ->join("zonas as z", 'z.id', '=', 'e.d2')
                 ->where('z.id', $codigoProvincia)
                 ->where("e.d22", "=", 'si')
-                ->where("e.d19", "=", 'si')
+                ->where("e.d20", "=", 'si')
                 ->where(function ($query) {
                     $query->whereIn('d9', ['0', '1']);
                 })
@@ -358,7 +358,7 @@ class Empresas extends Model
                 ->select('tienda', 'd29', 'd23', 'd3')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
-                ->where("d19", "=", 'si')
+                ->where("d20", "=", 'si')
                 ->where(function ($query) {
                     $query->whereIn('d9', ['0', '1']);
                 })
