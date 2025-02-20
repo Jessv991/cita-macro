@@ -160,7 +160,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d22', 'si') 
-            ->where("d20", "=", 'si')          
+            ->where("d19", "=", 'si')          
             ->where(function ($query) {     
                 $query->where('d9', '-9');
             })
@@ -178,7 +178,7 @@ class Empresas extends Model
         $datos = DB::table('empresas')
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('d22', 'si')
-            ->where("d20", "=", 'si')           
+            ->where("d19", "=", 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '-9');
             })
@@ -197,7 +197,7 @@ class Empresas extends Model
             ->where('weblogin', 'like', '%' . $weblogin . '%')
             ->where('tienda', $tienda)
             ->where('d22', 'si')
-            ->where("d20", "=", 'si')           
+            ->where("d19", "=", 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '-9');
             })
@@ -215,7 +215,7 @@ class Empresas extends Model
         $datos = DB::table('empresas')
             ->where('tienda', $code_store)
             ->where('d22', 'si')
-            ->where("d20", "=", 'si')           
+            ->where("d19", "=", 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '-9');
             })
@@ -233,7 +233,7 @@ class Empresas extends Model
             ->select('d3')
             ->where('codigo', $optica)
             ->where('d22', 'si')
-            ->where("d20", "=", 'si')           
+            ->where("d19", "=", 'si')           
             ->where(function ($query) {     
                 $query->where('d9', '-9');
             })
@@ -263,7 +263,7 @@ class Empresas extends Model
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
             ->where("e.weblogin", $weblogin)
             ->where("e.d22", "=", 'si')
-            ->where("e.d20", "=", 'si')
+            ->where("e.d19", "=", 'si')
             ->where(function ($query) {
                 $query->where('d9', '-9');
             })
@@ -297,7 +297,7 @@ class Empresas extends Model
                 ->join("zonas as z", 'z.id', '=', 'e.d2')
                 ->where('z.id', $codigoProvincia)
                 ->where("e.d22", "=", 'si')
-                ->where("e.d20", "=", 'si')
+                ->where("e.d19", "=", 'si')
                 ->where(function ($query) {
                     $query->where('d9', '-9');
                 })
@@ -315,7 +315,7 @@ class Empresas extends Model
                 ->select('tienda', 'd29', 'd23', 'd3')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
-                ->where("d20", "=", 'si')
+                ->where("d19", "=", 'si')
                 ->where(function ($query) {
                     $query->where('d9', '-9');
                 })

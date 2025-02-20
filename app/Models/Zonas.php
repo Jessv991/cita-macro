@@ -90,6 +90,7 @@ class Zonas extends Model
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->where('z.id', '!=', 53)
             ->where('d22', 'si')
+            ->where('d19', 'si')
             ->where(function ($query) {
                 $query->where('d9', '0')
                     ->orWhere('d9', '1')
