@@ -176,7 +176,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('weblogin', 'like', '%' . $weblogin . '%')
+            ->where('weblogin', $weblogin)
             ->where('d22', 'si')
             ->where("d19", "=", 'si')           
             ->where(function ($query) {     
@@ -194,7 +194,7 @@ class Empresas extends Model
     {
 
         $datos = DB::table('empresas')
-            ->where('weblogin', 'like', '%' . $weblogin . '%')
+            ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
             ->where('d22', 'si')
             ->where("d19", "=", 'si')           
