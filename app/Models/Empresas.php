@@ -237,7 +237,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where('weblogin', 'like', '%' . $weblogin . '%')
+            ->where('weblogin', $weblogin)
             ->get();
 
         return $datos;
@@ -250,7 +250,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where('weblogin', 'like', '%' . $weblogin . '%')
+            ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
             ->get();
 
