@@ -409,17 +409,40 @@ div#animationdivIcon {
     */
 
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (max-width: 480px) {
 
     body {
-        height: auto !important;
+        height: 70% !important;
         width: auto !important;
-        background-size: 100% 100% !important;
+        background-size: 100% 80% !important;
         background-position: center;
+        background-color: #E2E8E8;
     }
 
     .contenedor-form {
-        padding-top: 140% !important;
+        padding-top: 75% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+@media (max-width: 380px) {
+
+    body {
+        height: 70% !important;
+        width: 100% !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+        background-color: #E2E8E8;
+    }
+
+    .contenedor-form {
+        padding-top: 90% !important;
         position: relative !important;
         height: 100% !important;
     }
