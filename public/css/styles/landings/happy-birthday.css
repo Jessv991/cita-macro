@@ -48,15 +48,15 @@ body::-webkit-scrollbar-track {
 }
 
 label>span {
-    color: #181717 !important;
+    color: #fff !important;
 }
 
 a {
-    color: #0940f3 !important;
+    color: #b2b3b8 !important;
 }
 
 a:hover {
-    color: #000 !important;
+    color: #56aae2 !important;
 }
 
 .btn-color {
@@ -79,7 +79,7 @@ a:hover {
 }
 
 .text-top-form {
-    color: #141414;
+    color: #fff;
     font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
