@@ -1,7 +1,7 @@
 <?php
 return[
 
-'titulo-1' => 'recomendaciones',
+'regalo' => 'recomendaciones',
 'subTitulo-1' => 'para el cuidado de tu salud auditiva',
 'card-1-1' => 'Aléjate de la',
 'card-1-2' => 'contaminación acústica',
