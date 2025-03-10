@@ -165,6 +165,7 @@ class view_generator_controller extends Controller
         );
 
         //clave de las imagenes en el array data
+        $this->data['rutaAsset'] = $rutaAsset;
         $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
         $this->data['cumple'] = $rutaAsset . $imagen['cita-optica']['cumple'];
 
