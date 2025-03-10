@@ -39,7 +39,7 @@
     vertical-align: middle;
 }
 
-.t-circle{
+.t-circle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 900;
     font-size: 18px;
@@ -48,7 +48,7 @@
     vertical-align: middle;
 }
 
-.t-p-circle{
+.t-p-circle {
     font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -132,19 +132,19 @@ input.form-control::placeholder {
     animation: swing-in-top-fwd 0.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) both;
 }
 
-.form-check span{
+.form-check span {
     color: white;
 }
 
-.form-check a{
+.form-check a {
     color: white;
 }
 
-.form-check a:hover{
+.form-check a:hover {
     color: #F8D17B;
 }
 
-.btn-color{
+.btn-color {
     width: 200px;
     background-color: white;
     color: #4995C2;
@@ -152,7 +152,7 @@ input.form-control::placeholder {
     font-weight: bold;
 }
 
-.btn-color:hover{
+.btn-color:hover {
     background-color: #F8D17B;
     color: #4995C2;
 }
@@ -203,4 +203,178 @@ input.form-control::placeholder {
         transform-origin: top;
         opacity: 1;
     }
+}
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+@media (max-width: 2000px) {
+
+}
+
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .filtre-text {
+        font-size: 39px;
+    }
+
+    .text-top-form {
+        font-size: 24px;
+    }
+
+    .img-descubre{
+        width: 500px;
+    }
+    
+    .img-cards{
+        width: 300px;
+    }
+
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+
+
+}
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .img-promo{
+        margin-top: 10%;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .img-promo{
+        margin-top: 10%;
+    }
+
+    .filtre-text {
+        font-size: 20px;
+    }
+
+    .text-darkline {
+        font-size: 40px;
+        line-height: 79%;
+    }
+
+    .img-regalo{
+        width: 61% !important;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .t-p-circle {
+        font-size: 16px;
+    }
+
+    .t-circle {
+        font-size: 17px;
+    }
+
+    .text-top-form {
+        font-size: 15px;
+    }
+
+    .form-check-label {
+        font-size: 14px;
+    }
+
+    .btn-color {
+        width: 134px;
+        font-size: 15px;
+    }
+    
+    .b-pedir-citas{
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+
+    .img-promo{
+        margin-top: 10%;
+    }
+
+    .filtre-text {
+        font-size: 20px;
+        line-height: 64%;
+    }
+
+    .text-darkline {
+        font-size: 40px;
+        line-height: 79%;
+    }
+
+    .img-regalo{
+        width: 61% !important;
+    }
+
+    .p-5 {
+        padding: 1rem !important;
+    }
+
+    .t-p-circle {
+        font-size: 16px;
+    }
+
+    .t-circle {
+        font-size: 17px;
+    }
+
+    .text-top-form {
+        font-size: 15px;
+    }
+
+    .form-check-label {
+        font-size: 14px;
+    }
+
+    .btn-color {
+        width: 134px;
+        font-size: 15px;
+    }
+
+    .b-pedir-citas{
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
 }
