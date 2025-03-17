@@ -217,6 +217,10 @@ input.form-control::placeholder {
 
 @media (max-width: 2000px) {
 
+    .contenedor-form {
+        padding: 17%;
+    }
+
 }
 
 
@@ -243,10 +247,17 @@ input.form-control::placeholder {
         width: 300px;
     }
 
+    .contenedor-form {
+        padding: 17%;
+    }
+
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
 
+    .contenedor-form {
+        padding: 17%;
+    }
 
 }
 
@@ -255,6 +266,10 @@ input.form-control::placeholder {
 
     .img-promo{
         margin-top: 10%;
+    }
+
+    .img-regalo {
+        width: 48% !important;
     }
 
 }
@@ -284,12 +299,11 @@ input.form-control::placeholder {
     }
 
     .text-darkline {
-        font-size: 40px;
-        line-height: 79%;
+        font-size: 80px;
     }
 
     .img-regalo{
-        width: 61% !important;
+        width: 45% !important;
     }
 
     .p-5 {
@@ -297,7 +311,7 @@ input.form-control::placeholder {
     }
 
     .t-p-circle {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .t-circle {
@@ -321,6 +335,78 @@ input.form-control::placeholder {
         display: flex !important;
         justify-content: center !important;
         width: 100% !important;
+    }
+
+    .img-descubre {
+        width: 67% !important;
+    }
+
+    .img-cards {
+        width: 60% !important;
+    }
+
+    #girl{
+        width: 40% !important;
+    }
+    #man{
+        width: 40% !important;
+    }
+    #grandmom{
+        width: 40% !important;
+    }
+
+    #orang1{
+        width: 50% !important;
+    }
+    
+    #orang2{
+        width: 50% !important;
+    }
+
+    #yell1{
+        width: 50% !important;
+    }
+    
+    #yell2{
+        width: 50% !important;
+    }
+
+    #red1{
+        width: 50% !important;
+    }
+    
+    #red2{
+        width: 50% !important;
+    }
+
+    #green1{
+        width: 50% !important;
+    }
+    
+    #green2{
+        width: 50% !important;
+    }
+
+    #blu1{
+        width: 50% !important;
+    }
+    
+    #blu2{
+        width: 50% !important;
+    }
+
+    .p-table{
+        padding-left: 20% !important;
+        padding-right: 20% !important;
+    }
+
+    .filtre-text {
+        font-size: 33px;
+        padding: 5% !important;
+    }
+
+    .contenedor-form {
+        padding: 12%;
     }
 
 }
