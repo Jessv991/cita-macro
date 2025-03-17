@@ -1,6 +1,6 @@
 @include('layouts.header')
 
-<div class="background-container">
+<div class="background-container w-100">
     <div class="background-item">
         <div class="col-12 p-0 m-0">
             <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
