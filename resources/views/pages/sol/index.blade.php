@@ -6,12 +6,12 @@
             <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
             <div class="row p-0 m-0 mt-5">
                 <!-- Columna para la primera imagen -->
-                <div class="col-12 col-md-5 p-0 m-0 d-flex justify-content-center">
+                <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
                     <img class="w-75 img-regalo" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/regalo.png') }}">
                 </div>
             
                 <!-- Columna para la segunda imagen -->
-                <div class="col-12 col-md-7 p-0 m-0 d-flex justify-content-center">
+                <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
                     <img class="w-75 img-promo" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/promo.png') }}">
                 </div>
             </div>
@@ -26,11 +26,11 @@
             </div>
 
             <div class="row p-0 m-0 mt-5 d-lg-none d-flex justify-content-center">
-                <div class="col-12 col-md-5 p-0 m-0 d-flex justify-content-center">
+                <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
                     <img class="w-75 img-descubre" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/descubre.png') }}">
                 </div>
 
-                <div class="col-12 col-md-7 p-0 m-0 d-flex justify-content-center">
+                <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
                     <img class="w-75 img-cards" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/cards.png') }}">
                 </div>
             </div>
@@ -39,7 +39,7 @@
             <div class="col-12 w-100 p-0 m-0 mt-lg-5 d-flex justify-content-center">
                 <div class="row w-100 d-flex justify-content-center mt-5">
 
-                    <div class="col-6 col-md-2 p-0 m-0">
+                    <div class="col-6 col-lg-2 p-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="orang1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}">
@@ -51,7 +51,7 @@
                     </div>
             
                     <!-- Segunda columna -->
-                    <div class="col-6 col-md-2 p-0 m-0">
+                    <div class="col-6 col-lg-2 p-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="yell1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell1.png') }}">
@@ -64,7 +64,7 @@
                     
             
                     <!-- Tercera columna -->
-                    <div class="col-6 col-md-2 p-0 m-0 mt-lg-0 mt-3">
+                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="red1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/red1.png') }}">
@@ -76,7 +76,7 @@
                     </div>
             
                     <!-- Cuarta columna -->
-                    <div class="col-6 col-md-2 p-0 m-0 mt-lg-0 mt-3">
+                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="green1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/green1.png') }}">
@@ -88,7 +88,7 @@
                     </div>
             
                     <!-- Quinta columna -->
-                    <div class="col-6 col-md-2 p-0 m-0 mt-lg-0 mt-3">
+                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="blu1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/blu1.png') }}">
