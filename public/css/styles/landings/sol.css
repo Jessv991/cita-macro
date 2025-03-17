@@ -264,6 +264,12 @@ input.form-control::placeholder {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+    .b-pedir-citas{
+        display: flex !important;
+        justify-content: center !important;
+        width: 100% !important;
+    }
+
     .img-promo{
         margin-top: 10%;
     }
@@ -272,10 +278,120 @@ input.form-control::placeholder {
         width: 48% !important;
     }
 
+    .linea {
+        width: 75%;
+    }
+    
+    .linea2 {
+        width: 75%;
+    }
+
+    .img-descubre {
+        width: 67% !important;
+    }
+
+    .img-cards {
+        width: 60% !important;
+    }
+
+    #girl{
+        width: 50% !important;
+    }
+    #man{
+        width: 50% !important;
+    }
+    #grandmom{
+        width: 50% !important;
+    }
+
+    #orang1{
+        width: 50% !important;
+        margin-left: 3rem !important;
+    }
+    
+    #orang2{
+        width: 50% !important;
+        margin-left: 3rem !important;
+    }
+
+    #yell1{
+        width: 50% !important;
+        margin-right: 3rem !important;
+    }
+    
+    #yell2{
+        width: 50% !important;
+        margin-right: 3rem !important;
+    }
+
+    #red1{
+        width: 50% !important;
+        margin-left: 3rem !important;
+    }
+    
+    #red2{
+        width: 50% !important;
+        margin-left: 3rem !important;
+    }
+
+    #green1{
+        width: 50% !important;
+        margin-right: 3rem !important;
+    }
+    
+    #green2{
+        width: 50% !important;
+        margin-right: 3rem !important;
+    }
+
+    #blu1{
+        width: 50% !important;
+    }
+    
+    #blu2{
+        width: 50% !important;
+    }
+
+    .p-table{
+        padding-left: 20% !important;
+        padding-right: 20% !important;
+    }
+
+    .filtre-text {
+        font-size: 40px;
+        line-height: 92%; 
+        padding: 5% !important;
+    }
+
+    .contenedor-form {
+        padding: 12%;
+    }
+
+    .t-p-circle {
+        font-size: 22px;
+    }
+
+    .t-circle {
+        font-size: 23px;
+    }
+
+    .text-top-form {
+        font-size: 24px;
+    }
+
+
 }
 
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
+
+    .linea {
+        width: 80%;
+    }
+    
+    .linea2 {
+        width: 80%;
+    }
 
     .text-top-form {
         font-size: 22px;
@@ -414,6 +530,14 @@ input.form-control::placeholder {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
+    .linea {
+        width: 80%;
+    }
+    
+    .linea2 {
+        width: 80%;
+    }
+
     .img-promo{
         margin-top: 10%;
     }
@@ -463,4 +587,35 @@ input.form-control::placeholder {
         width: 100% !important;
     }
 
+}
+
+@keyframes slide-up {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+.img-hidden {
+    display: block !important;
+    animation: slide-up 0.5s ease-out forwards;
+}
+
+.img-hidden-out {
+    animation: slide-out 0.5s ease-out forwards;
 }

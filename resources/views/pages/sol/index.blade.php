@@ -3,35 +3,45 @@
 <div class="background-container w-100">
     <div class="background-item w-100">
         <div class="col-12 p-0 m-0 w-100">
-            <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+            <img class="w-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
             <div class="row p-0 m-0 mt-5">
                 <!-- Columna para la primera imagen -->
                 <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-regalo" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/regalo.png') }}">
+                    <img class="w-75 img-regalo"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/regalo.png') }}">
                 </div>
-            
+
                 <!-- Columna para la segunda imagen -->
                 <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-promo" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/promo.png') }}">
+                    <img class="w-75 img-promo"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/promo.png') }}">
                 </div>
             </div>
 
-            <div class="w-90 d-flex flex-column align-items-center">
+            <div class="w-90 d-flex flex-column align-items-center d-none d-md-flex">
                 <div class="linea mb-3" data-aos="fade-right"></div>
             </div>
-            
-            
+
+            <div class="w-90 d-flex flex-column align-items-center d-md-none d-flex">
+                <div class="linea mb-3"></div>
+            </div>
+
+
             <div class="w-100 d-flex flex-column align-items-center d-none d-lg-flex">
-                <img class="w-75" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/filtro.png') }}">
+                <img class="w-75"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/filtro.png') }}">
             </div>
 
             <div class="row p-0 m-0 mt-5 d-lg-none d-flex justify-content-center">
                 <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-descubre" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/descubre.png') }}">
+                    <img class="w-75 img-descubre"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/descubre.png') }}">
                 </div>
 
                 <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-cards" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/cards.png') }}">
+                    <img class="w-75 img-cards"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/cards.png') }}">
                 </div>
             </div>
 
@@ -40,16 +50,18 @@
                 <div class="row w-100 d-flex justify-content-center mt-5">
 
                     <div class="col-6 col-lg-2 p-0 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
+                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100">
                             <img id="orang1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}">
+                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}"
+                                onclick="switchImages(this)">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="orang2" class="w-75"
+                            <img id="orang2" class="w-75 d-none"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang2.png') }}">
                         </div>
                     </div>
-            
+
+
                     <!-- Segunda columna -->
                     <div class="col-6 col-lg-2 p-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
@@ -57,12 +69,12 @@
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="yell2" class="w-75"
+                            <img id="yell2" class="w-75 d-none"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell2.png') }}">
                         </div>
                     </div>
-                    
-            
+
+
                     <!-- Tercera columna -->
                     <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
@@ -70,11 +82,11 @@
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/red1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="red2" class="w-75"
+                            <img id="red2" class="w-75 d-none"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/red2.png') }}">
                         </div>
                     </div>
-            
+
                     <!-- Cuarta columna -->
                     <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
@@ -82,11 +94,11 @@
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/green1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="green2" class="w-75"
+                            <img id="green2" class="w-75 d-none"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/green2.png') }}">
                         </div>
                     </div>
-            
+
                     <!-- Quinta columna -->
                     <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
@@ -94,20 +106,24 @@
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/blu1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="blu2" class="w-75"
+                            <img id="blu2" class="w-75 d-none"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/blu2.png') }}">
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-5 filtre-text">
                 <p>{{ __('sol.filtro-1') }}</p>
                 <p>{{ __('sol.filtro-2') }}</p>
             </div>
 
-            <div class="w-100 d-flex justify-content-center align-items-center">
-                <div class="linea2" data-aos="fade-left"></div>
+            <div class="w-90 d-flex flex-column align-items-center d-none d-md-flex">
+                <div class="linea2 mb-3" data-aos="fade-right"></div>
+            </div>
+
+            <div class="w-90 d-flex flex-column align-items-center d-md-none d-flex">
+                <div class="linea2 mb-3"></div>
             </div>
 
             <div class="text-center mt-5">
@@ -119,7 +135,7 @@
             <div class="col-12 w-100 p-0 m-0 mt-lg-5 mt-md-0 d-flex justify-content-center">
                 <div class="row w-100 d-flex justify-content-center mt-5">
                     <!-- Primera columna (aparece en fila en dispositivos grandes, apilada en móviles) -->
-                    <div class="col-12 col-lg-3 p-5 m-0">
+                    <div class="col-12 col-lg-3 p-5 pt-md-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="girl" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/girl.png') }}">
@@ -132,7 +148,7 @@
                             <p class="t-p-circle">{{ __('sol.infancia-4') }}</p>
                         </div>
                     </div>
-            
+
                     <!-- Segunda columna -->
                     <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
@@ -148,7 +164,7 @@
                             <p class="t-p-circle">{{ __('sol.joven-5') }}</p>
                         </div>
                     </div>
-            
+
                     <!-- Tercera columna -->
                     <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
