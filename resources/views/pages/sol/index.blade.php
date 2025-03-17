@@ -1,8 +1,8 @@
 @include('layouts.header')
 
 <div class="background-container w-100">
-    <div class="background-item">
-        <div class="col-12 p-0 m-0">
+    <div class="background-item w-100">
+        <div class="col-12 p-0 m-0 w-100">
             <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
             <div class="row p-0 m-0 mt-5">
                 <!-- Columna para la primera imagen -->
