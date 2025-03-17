@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="w-100 d-flex flex-column align-items-center">
+            <div class="w-90 d-flex flex-column align-items-center">
                 <div class="linea mb-3" data-aos="fade-right"></div>
             </div>
             
@@ -119,7 +119,7 @@
             <div class="col-12 w-100 p-0 m-0 mt-lg-5 mt-md-0 d-flex justify-content-center">
                 <div class="row w-100 d-flex justify-content-center mt-5">
                     <!-- Primera columna (aparece en fila en dispositivos grandes, apilada en móviles) -->
-                    <div class="col-12 col-md-3 p-5 m-0">
+                    <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="girl" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/girl.png') }}">
@@ -134,7 +134,7 @@
                     </div>
             
                     <!-- Segunda columna -->
-                    <div class="col-12 col-md-3 p-5 m-0">
+                    <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="man" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/man.png') }}">
@@ -150,7 +150,7 @@
                     </div>
             
                     <!-- Tercera columna -->
-                    <div class="col-12 col-md-3 p-5 m-0">
+                    <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="grandmom" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/grandmom.png') }}">
