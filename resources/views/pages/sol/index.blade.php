@@ -16,9 +16,9 @@
                 </div>
             </div>
 
-            <div class="w-90 d-flex flex-column align-items-center">
+            {{-- <div class="w-90 d-flex flex-column align-items-center">
                 <div class="linea mb-3" data-aos="fade-right"></div>
-            </div>
+            </div> --}}
             
             
             <div class="w-100 d-flex flex-column align-items-center d-none d-lg-flex">
@@ -106,9 +106,9 @@
                 <p>{{ __('sol.filtro-2') }}</p>
             </div>
 
-            <div class="w-100 d-flex justify-content-center align-items-center">
+           {{--  <div class="w-100 d-flex justify-content-center align-items-center">
                 <div class="linea2" data-aos="fade-left"></div>
-            </div>
+            </div> --}}
 
             <div class="text-center mt-5">
                 <p class="filtre-text">{{ __('sol.proteger-1') }}<span class="text-darkline">
