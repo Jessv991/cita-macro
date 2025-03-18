@@ -1,0 +1,215 @@
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+.main {
+    width: 100%;
+}
+
+.bg-custom {
+    background-color: var(--natural-4);
+}
+
+.cont {
+    width: 100%;
+    padding: 0;
+    margin-left: 0.05%;
+}
+
+.carrusel {
+    overflow: hidden;
+    width: 100%;
+}
+
+.carrusel-inner img {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.carrusel-inner img.active {
+    opacity: 1;
+}
+
+.carrusel-inner {
+    position: relative;
+    height: 704px;
+    transition: height 2s ease;
+}
+
+.img-izq {
+    width: 21%;
+}
+
+.img-der {
+    width: 22%;
+}
+
+.med-img-circle {
+    width: 64%;
+}
+
+.t-img-circle {
+    color: #0086c4;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.colr-text {
+    color: #0086c4;
+    line-height: 48px;
+}
+
+
+.text-sub {
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.text-centre {
+    color: #0086c4;
+    line-height: 40px;
+}
+
+.card-style {
+    display: flex;
+    flex-direction: column;
+    /* Organiza los elementos en una columna */
+    align-items: center;
+    /* Centra los elementos horizontalmente */
+    justify-content: flex-start;
+    /* Alinea los elementos hacia la parte superior */
+    text-align: center;
+    /* Alinea el texto al centro */
+    height: 100%;
+    /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+.cont-form-principal {
+    width: 31%;
+    height: 90%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
+    background-image: linear-gradient(to top, rgba(0, 134, 196, 0.103), rgba(208, 173, 209));
+    transition: width 0.3s;
+}
+
+.text-top-form {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 25px;
+
+}
+
+input {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
+}
+
+input:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+}
+
+select {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1;
+}
+
+select:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+}
+
+div#animationdivIcon {
+    margin-top: 3% !important;
+}
+
+#gracias {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
+.b-pedir-citas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+}
+
+.btn-flotante {
+    background-color: #D0ADD1 !important;
+}
+
+.cls-1 {
+    fill: rgb(114, 113, 113) !important;
+}
+
+.btn-flotante:hover {
+    background-color: #eae1eb !important;
+}
+
+.btn-flotante:hover .cls-1 {
+    fill: rgb(114, 113, 113) !important;
+}
+
+.textPC {
+    color: rgb(114, 113, 113) !important;
+    font-weight: bold;
+}
+
+/* 
+██╗      █████╗ ███╗   ██╗██████╗ ██╗███╗   ██╗ ██████╗ 
+██║     ██╔══██╗████╗  ██║██╔══██╗██║████╗  ██║██╔════╝ 
+██║     ███████║██╔██╗ ██║██║  ██║██║██╔██╗ ██║██║  ███╗
+██║     ██╔══██║██║╚██╗██║██║  ██║██║██║╚██╗██║██║   ██║
+███████╗██║  ██║██║ ╚████║██████╔╝██║██║ ╚████║╚██████╔╝
+╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+                                                        
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
+
+.text-left{
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 92px;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text-right{
+
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 122%;
+    letter-spacing: 0;
+
+}

@@ -159,6 +159,8 @@ class view_generator_controller extends Controller
 
         }
 
+        $this->data['rutaAsset'] = $rutaAsset;
+
         //=====================IMAGENES=====================
 
         $imagen = array(

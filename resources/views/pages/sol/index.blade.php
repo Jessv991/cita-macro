@@ -3,11 +3,25 @@
 
     <div class="col-12 p-0 m-0 lado-izq position-relative h-100">
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
-            <div class="carrusel w-100">
+            <div class="col-12 p-0">
+                <div class="row">
+                    <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+                        <h1 class="text-left">¿Cómo protejo<br>mis ojos del sol?</h1>
+                    </div>
+                    <div class="col-6 p-5 d-flex justify-content-center align-items-center">
+                        <p class="text-right">Acude a tu óptica de confianza y elige unas gafas de sol que
+                            realmente protejan tu vista. Nuestro equipo de profesionales
+                            te asesorará para encontrar la mejor opción para ti.
+                            <br><span class="fw-bold">¡No pongas en riesgo tu salud visual!</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="carrusel w-75">
                 <div class="carrusel-inner w-100">
-                    <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
-                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
-                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
+                    <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.jpg') }}">
+                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/man.jpg') }}">
+                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/woman.jpg') }}">
+                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/grandpa.jpg') }}">
                 </div>
             </div>
 
@@ -36,7 +50,7 @@
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-duration="1000">
                         {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" /> --}}
-                        <div class="mt-3">
+                        {{-- <div class="mt-3">
                             @if ($locale === 'es')
                                 <div class="p-titol-card3">
                                     <span class="t-img-circle">{{ __('cita_audio.card-3-1') }}</span><br>
@@ -53,7 +67,7 @@
                             <div class="text-center cont-text-black">
                                 <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-3') }}</span>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
