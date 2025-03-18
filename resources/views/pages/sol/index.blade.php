@@ -50,7 +50,7 @@
                 <div class="row w-100 d-flex justify-content-center mt-5">
 
                     <div class="col-6 col-lg-2 p-0 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100">
+                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="orang1" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}">
                         </div>
@@ -134,8 +134,7 @@
 
             <div class="col-12 w-100 p-0 m-0 mt-lg-5 mt-md-0 d-flex justify-content-center">
                 <div class="row w-100 d-flex justify-content-center mt-5">
-                    <!-- Primera columna (aparece en fila en dispositivos grandes, apilada en móviles) -->
-                    <div class="col-12 col-lg-3 p-5 pt-md-0 m-0">
+                    <div class="col-12 col-lg-3 p-5 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
                             <img id="girl" class="w-75"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/girl.png') }}">

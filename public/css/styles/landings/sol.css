@@ -57,6 +57,27 @@
     vertical-align: middle;
 }
 
+#orang1{
+   cursor: pointer;;
+}
+
+#yell1{
+   cursor: pointer;;
+}
+
+#red1{
+   cursor: pointer;;
+}
+
+#green1{
+   cursor: pointer;;
+}
+
+#blu1{
+   cursor: pointer;;
+}
+
+
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
 ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
@@ -589,6 +610,15 @@ input.form-control::placeholder {
 
 }
 
+/* 
+ █████╗ ███╗   ██╗██╗███╗   ███╗ █████╗  ██████╗██╗ ██████╗ ███╗   ██╗
+██╔══██╗████╗  ██║██║████╗ ████║██╔══██╗██╔════╝██║██╔═══██╗████╗  ██║
+███████║██╔██╗ ██║██║██╔████╔██║███████║██║     ██║██║   ██║██╔██╗ ██║
+██╔══██║██║╚██╗██║██║██║╚██╔╝██║██╔══██║██║     ██║██║   ██║██║╚██╗██║
+██║  ██║██║ ╚████║██║██║ ╚═╝ ██║██║  ██║╚██████╗██║╚██████╔╝██║ ╚████║
+╚═╝  ╚═╝╚═╝  ╚═══╝╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝ ╚═════╝ ╚═╝  ╚═══╝
+                                                                      
+*/
 
 @keyframes slideDown {
     0% {
@@ -601,6 +631,35 @@ input.form-control::placeholder {
     }
 }
 
-#yell2 {
-    animation: slideDown 0.9s ease-out;
-}
+
+/**
+ * ----------------------------------------
+ * animation slide-out-top
+ * ----------------------------------------
+ */
+ @-webkit-keyframes slide-out-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  @keyframes slide-out-top {
+    0% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+  }
+  
+
