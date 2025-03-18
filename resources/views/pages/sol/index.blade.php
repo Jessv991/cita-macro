@@ -52,8 +52,7 @@
                     <div class="col-6 col-lg-2 p-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100">
                             <img id="orang1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}"
-                                onclick="switchImages(this)">
+                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
                             <img id="orang2" class="w-75 d-none"
@@ -65,14 +64,15 @@
                     <!-- Segunda columna -->
                     <div class="col-6 col-lg-2 p-0 m-0">
                         <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="yell1" class="w-75"
+                            <img id="yell1" class="w-75" 
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell1.png') }}">
                         </div>
                         <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="yell2" class="w-75 d-none"
+                            <img id="yell2" class="w-75 d-none" 
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell2.png') }}">
                         </div>
                     </div>
+                    
 
 
                     <!-- Tercera columna -->

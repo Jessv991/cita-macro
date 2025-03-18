@@ -1,22 +1,13 @@
-function switchImages(element) {
-    let img1 = element; // orang1
-    let img2 = document.getElementById("orang2"); // orang2
-
-    // Agregar animación de salida a img1
-    img1.classList.add("img-hidden-out");
-
-    setTimeout(() => {
-        //img1.classList.add("d-none"); // Ocultar la imagen 1 después de la animación
-        img2.classList.remove("d-none");
-        img2.classList.add("img-hidden"); // Mostrar imagen 2 con animación
-    }, 500); // Tiempo igual al de la animación CSS
-}
+$('#orang1').on('click', function (e) {
+    // Muestra la imagen de abajo con el efecto
+    $('#orang2').removeClass('d-none').addClass('animate__animated animate__slideInDown');
+});
 
 $('#yell1').on('click', function (e) {
-
-    $('#yell2').removeClass('d-none');
-
+    // Muestra la imagen de abajo con el efecto
+    $('#yell2').removeClass('d-none').addClass('animate__animated animate__slideInDown');
 });
+
 
 $('#red1').on('click', function (e) {
 
