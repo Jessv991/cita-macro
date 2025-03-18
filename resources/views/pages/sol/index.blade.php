@@ -5,9 +5,9 @@
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
             <div class="carrusel w-100">
                 <div class="carrusel-inner w-100">
-                    <img class="w-100 h-100 active" src="{{ asset($data['auditiva']) }}">
-                    <img class="w-100 h-100" src="{{ asset($data['auditiva2']) }}">
-                    <img class="w-100 h-100" src="{{ asset($data['auditiva3']) }}">
+                    <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
+                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
+                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
                 </div>
             </div>
 
@@ -23,7 +23,7 @@
                 <div class="row w-100 p-0">
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="100"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" />
+                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" /> --}}
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
@@ -35,7 +35,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" />
+                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" /> --}}
                         <div class="mt-3">
                             @if ($locale === 'es')
                                 <div class="p-titol-card3">
@@ -58,7 +58,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" />
+                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" /> --}}
                         <div class="mt-3">
                             <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
@@ -70,7 +70,7 @@
     
                     <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1500"
                         data-aos-duration="1000">
-                        <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" />
+                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" /> --}}
                         <div class="mt-3">
                             <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
                             <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>
