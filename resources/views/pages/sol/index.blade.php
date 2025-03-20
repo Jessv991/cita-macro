@@ -34,6 +34,14 @@
                 </div>
             </div>
 
+            <div class="w-100 d-flex justify-content-center align-items-center">
+
+                <div class="w-50 cont-test">
+
+                </div>
+
+            </div>
+
             <div class="cont-img">
                 <img class="w-100 h-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/playa.png') }}">

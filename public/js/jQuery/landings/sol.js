@@ -77,14 +77,19 @@ $(document).ready(function () {
 
             $('.btn-flotante').removeClass('d-none');
             $('.lado-der').addClass('d-none');
-            $('.lado-izq').css({ position: 'relative', width: '66.66666667%', left: '0%' }).animate({ width: '100%', left: '0%' }, 1000);
+            $('.lado-izq')
+                .css({ position: 'relative', width: '66.66666667%', left: '0%' })
+                .animate({ width: '100%' }, 1000, function () {
+                    // Una vez terminada la animación de .lado-izq, se cambia la altura de .cont-top
+                    $('.cont-img').css({ position: 'fixed !important', width: '100%' });
+                    $('.cont-top').css({ height: '1306px' });
+                });
+
             $('.carrusel-inner').attr('style', 'height: 704px !important');
             $('.redes-style').attr('style', 'width: 3.5% !important');
             $('.blog-style').attr('style', 'width: 2.6% !important');
             $('.text-left').attr('style', 'font-size: 92px !important');
             $('.text-right').attr('style', 'font-size: 32px !important');
-            $('.cont-img').css({ position: 'fixed !important', width: '100%' });
-            $('.cont-top').css({ height: '1306px' });
 
         });
 

@@ -4,14 +4,14 @@
 .cont-top {
     position: relative;
     background-color: #fff !important;
-    margin-bottom: 300px;
+    margin-bottom: 73px;
     height: 1306px;
 }
 
 .cont-bot {
     position: relative;
     background-color: #fff !important;
-    margin-top: 300px;
+    margin-top: 73px;
 }
 
 .cont-bot::before,
@@ -132,6 +132,12 @@
     /* Alinea el texto al centro */
     height: 100%;
     /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+.cont-test{
+    background-color: #fff;
+    height: 500px;
+    border-radius: 5px;
 }
 
 /* 
