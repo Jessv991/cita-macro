@@ -3,118 +3,103 @@
 
     <div class="col-12 p-0 m-0 lado-izq position-relative h-100">
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
-            <div class="col-12 p-0">
-                <div class="row">
-                    <div class="col-6 p-0 d-flex justify-content-center align-items-center">
-                        <h1 class="text-left">¿Cómo protejo<br>mis ojos del sol?</h1>
-                    </div>
-                    <div class="col-6 p-5 d-flex justify-content-center align-items-center">
-                        <p class="text-right">Acude a tu óptica de confianza y elige unas gafas de sol que
-                            realmente protejan tu vista. Nuestro equipo de profesionales
-                            te asesorará para encontrar la mejor opción para ti.
-                            <br><span class="fw-bold">¡No pongas en riesgo tu salud visual!</span></p>
-                    </div>
-                </div>
-            </div>
-            <div class="carrusel w-75">
-                <div class="carrusel-inner w-100">
-                    <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.jpg') }}">
-                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/man.jpg') }}">
-                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/woman.jpg') }}">
-                    <img class="w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/grandpa.jpg') }}">
-                </div>
-            </div>
-
-            <div class="row w-100 text-center p-md-5 p-2 d-flex justify-content-center align-items-center">
-
-                <div class="text-center colr-text mt-5 p-0">
-                    <span class="fz-1 fw-bold lead text-uppercase">{{ __('cita_audio.titulo-1') }}</span><br>
-                    <div class="text-sub">
-                        <span class="lead fz-2 fw-bold lead">{{ __('cita_audio.subTitulo-1') }}</span>
-                    </div>
-                </div>
-
-                <div class="row w-100 p-0">
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="100"
-                        data-aos-duration="1000">
-                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/transito.png') }}" /> --}}
-                        <div class="mt-3">
-                            <span class="t-img-circle">{{ __('cita_audio.card-1-1') }}</span><br>
-                            <span class="t-img-circle fw-bold">{{ __('cita_audio.card-1-2') }}</span>
-                            <div class="text-center cont-text-black">
-                                <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-1') }}</span>
-                            </div>
+            <div class="col-12 w-100 d-flex flex-column justify-content-center align-items-center cont-top">
+                <div class="col-12 p-0">
+                    <div class="row">
+                        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+                            <h1 class="text-left">¿Cómo protejo<br>mis ojos del sol?</h1>
                         </div>
-                    </div>
-    
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="500"
-                        data-aos-duration="1000">
-                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/revision.png') }}" /> --}}
-                        {{-- <div class="mt-3">
-                            @if ($locale === 'es')
-                                <div class="p-titol-card3">
-                                    <span class="t-img-circle">{{ __('cita_audio.card-3-1') }}</span><br>
-                                    <span class="t-img-circle fw-bold">{{ __('cita_audio.card-3-2') }}</span>
-                                </div>
-                            @endif
-    
-                            @if ($locale === 'cat')
-                                <div class="p-titol-card3-cat d-flex justify-content-center align-items-center">
-                                    <span class="fw-bold">{{ __('cita_audio.card-3-2') }}</span>
-                                </div>
-                            @endif
-    
-                            <div class="text-center cont-text-black">
-                                <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-3') }}</span>
-                            </div>
-                        </div> --}}
-                    </div>
-    
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1000"
-                        data-aos-duration="1000">
-                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/girl.png') }}" /> --}}
-                        <div class="mt-3">
-                            <span class="t-img-circle">{!! __('cita_audio.card-2-1') !!}</span><br>
-                            <span class="t-img-circle fw-bold">{{ __('cita_audio.card-2-2') }}</span>
-                            <div class="text-center cont-text-black m-text-card2">
-                                <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-2') }}</span>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <div class="col-12 col-md-6 col-lg-3 card-style mt-5 mb-5" data-aos="zoom-in" data-aos-delay="1500"
-                        data-aos-duration="1000">
-                        {{-- <img class="med-img-circle" src="{{ asset($rutaAsset . 'assets/img/cita-audio/baby.png') }}" /> --}}
-                        <div class="mt-3">
-                            <span class="t-img-circle">{{ __('cita_audio.card-4-1') }}</span><br>
-                            <span class="t-img-circle fw-bold">{{ __('cita_audio.card-4-2') }}</span>
-                            <div class="text-center cont-text-black">
-                                <span class="fz-4 fw-normal">{{ __('cita_audio.card-text-4') }}</span>
-                            </div>
+                        <div class="col-6 p-5 d-flex justify-content-center align-items-center">
+                            <p class="text-right">Acude a tu óptica de confianza y elige unas gafas de sol que
+                                realmente protejan tu vista. Nuestro equipo de profesionales
+                                te asesorará para encontrar la mejor opción para ti.
+                                <br><span class="fw-bold">¡No pongas en riesgo tu salud visual!</span>
+                            </p>
                         </div>
                     </div>
                 </div>
+                <div class="carrusel w-75 mb-5 h-100">
+                    <div class="carrusel-inner w-100">
+                        <img class="w-100 h-100 active"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
+                        <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/man.png') }}">
+                        <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/woman.png') }}">
+                        <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/grandpa.png') }}">
+                        <img class="w-100 h-100 extra-img"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol.png') }}">
+                    </div>
+                </div>
+            </div>
 
+            <div class="cont-img">
+                <img class="w-100 h-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/playa.png') }}">
+            </div>
 
+            <div class="col-12 w-100 cont-bot">
+                <div class="col-12 w-100 cont-bot1">
+
+                    <div class="col-12 p-0 d-flex justify-content-center align-items-center mt-5">
+                        <h1 class="text-left">¡Descubre los colores disponibles!</h1>
+                    </div>
+
+                    <div class="col-12 p-0 w-100 mt-5">
+
+                        <div class="row d-flex justify-content-center align-items-center">
+                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/gris.svg') }}">
+                            </div>
+                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/marron.svg') }}">
+                            </div>
+                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/azul.svg') }}">
+                            </div>
+                        </div>
+                        <div class="row d-flex justify-content-center align-items-center mt-5">
+                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/amarillo.svg') }}">
+                            </div>
+                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/verde.svg') }}">
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="w-100 mt-5 mb-5">
+                        <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/imgBottom.png') }}">
+                    </div>
+                </div>
             </div>
 
 
-            <div class="w-100 d-flex justify-content-center align-items-center mt-lg-0 mt-5">
+
+            {{-- <div class="w-100 d-flex justify-content-center align-items-center mt-lg-0 mt-5">
                 <div class="style-tarj w-md-50 w-75 d-flex justify-content-center align-items-center" data-aos="flip-left"
                     data-aos-easing="ease-out-cubic" data-aos-duration="2000">
                     @include('test.index')
                 </div>
+            </div> --}}
+
+            <div class="w-100 d-flex flex-column justify-content-center pt-5 text-left-2 bg-blaco">
+                <span class="text-center">Nuestros centros</span>
+                <span class="text-center">ópticos y auditivos</span>
             </div>
 
-            <div class="w-100 d-flex flex-column justify-content-center mt-5 pt-5 mb-5 text-centre">
-                <span class="fs-1 lead fw-bold text-uppercase text-center">{{ __('cita_audio.titulo-2') }}</span>
-                <span class="fs-1 lead fw-bold text-uppercase text-center">{{ __('cita_audio.titulo-3') }}</span>
-            </div>
-
-            <div class="w-100">
+            <div class="w-100 bg-blaco bg-blaco pt-5">
                 @include('map.index')
             </div>
-            <div class="w-100 ">
+            <div class="w-100 bg-blaco">
                 @include('layouts.footer_view')
             </div>
         </div>
@@ -127,9 +112,9 @@
             <button class="btn-close">×</button>
             @include('form.pide_cita')
         </div>
-        
+
     </div>
-    
+
 </div>
 
 @include('form.boton_flotante')
