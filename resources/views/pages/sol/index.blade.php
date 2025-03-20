@@ -93,7 +93,7 @@
 
             <div class="w-100 d-flex flex-column justify-content-center pt-5 text-left-2 bg-blaco">
                 <span class="text-center">Nuestros centros</span>
-                <span class="text-center">ópticos y auditivos</span>
+                <span class="text-center">ópticos</span>
             </div>
 
             <div class="w-100 bg-blaco bg-blaco pt-5">

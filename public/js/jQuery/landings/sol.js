@@ -11,11 +11,11 @@ $(document).ready(function () {
                                                                      
     */
 
-     $(document).ready(function () {
+    $(document).ready(function () {
         var $imgs = $('.carrusel-inner img');
         var index = 0;
         var interval;
-    
+
         function startCarousel() {
             interval = setInterval(function () {
                 $imgs.removeClass('active'); // Ocultar todas las imágenes
@@ -23,17 +23,17 @@ $(document).ready(function () {
                 $imgs.eq(index).addClass('active'); // Mostrar la siguiente imagen
             }, 3000);
         }
-    
+
         // Iniciar el carrusel automático
         startCarousel();
-    
+
         // Mostrar la imagen especial cuando el usuario pase el mouse
         $('.carrusel').mouseenter(function () {
             clearInterval(interval); // Detiene el carrusel automático
             $imgs.removeClass('active'); // Oculta todas las imágenes
             $('.extra-img').addClass('active'); // Muestra la imagen especial
         });
-    
+
         // Regresar al carrusel normal cuando se quite el mouse
         $('.carrusel').mouseleave(function () {
             $('.extra-img').removeClass('active'); // Ocultar imagen especial
@@ -41,17 +41,17 @@ $(document).ready(function () {
             startCarousel(); // Reiniciar el carrusel
         });
     });
-    
 
-     /* 
-    ██████╗  ██████╗ ████████╗ ██████╗ ███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
-    ██╔══██╗██╔═══██╗╚══██╔══╝██╔═══██╗████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
-    ██████╔╝██║   ██║   ██║   ██║   ██║██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
-    ██╔══██╗██║   ██║   ██║   ██║   ██║██║╚██╗██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
-    ██████╔╝╚██████╔╝   ██║   ╚██████╔╝██║ ╚████║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
-    ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═══╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
-                                                                                                                          
-    */
+
+    /* 
+   ██████╗  ██████╗ ████████╗ ██████╗ ███╗   ██╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+   ██╔══██╗██╔═══██╗╚══██╔══╝██╔═══██╗████╗  ██║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+   ██████╔╝██║   ██║   ██║   ██║   ██║██╔██╗ ██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+   ██╔══██╗██║   ██║   ██║   ██║   ██║██║╚██╗██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+   ██████╔╝╚██████╔╝   ██║   ╚██████╔╝██║ ╚████║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+   ╚═════╝  ╚═════╝    ╚═╝    ╚═════╝ ╚═╝  ╚═══╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                                         
+   */
 
     if (dispositivo >= 992) {
 
@@ -67,8 +67,8 @@ $(document).ready(function () {
             $('.btn-flotante').addClass('d-none');
             $('.text-left').attr('style', 'font-size: 74px !important');
             $('.text-right').attr('style', 'font-size: 22px !important');
-            $('.cont-img').css({ position: 'fixed !important', width: '66.6%'});
-            $('.cont-top').css({ height: '954px'});
+            $('.cont-img').css({ position: 'fixed !important', width: '66.6%' });
+            $('.cont-top').css({ height: '954px' });
         });
 
         $('.btn-close').on('click', function (e) {
@@ -83,8 +83,9 @@ $(document).ready(function () {
             $('.blog-style').attr('style', 'width: 2.6% !important');
             $('.text-left').attr('style', 'font-size: 92px !important');
             $('.text-right').attr('style', 'font-size: 32px !important');
-            $('.cont-img').css({ position: 'fixed !important', width: '100%'});
-            $('.cont-top').css({ height: '1306px'});
+            $('.cont-img').css({ position: 'fixed !important', width: '100%' });
+            $('.cont-top').css({ height: '1306px' });
+
         });
 
     } else {
@@ -112,15 +113,15 @@ $(document).ready(function () {
 
     }
 
-     /* 
-    ██╗     ██╗██████╗ ██████╗ ███████╗██████╗ ██╗ █████╗      █████╗  ██████╗ ███████╗
-    ██║     ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝
-    ██║     ██║██████╔╝██████╔╝█████╗  ██████╔╝██║███████║    ███████║██║   ██║███████╗
-    ██║     ██║██╔══██╗██╔══██╗██╔══╝  ██╔══██╗██║██╔══██║    ██╔══██║██║   ██║╚════██║
-    ███████╗██║██████╔╝██║  ██║███████╗██║  ██║██║██║  ██║    ██║  ██║╚██████╔╝███████║
-    ╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
-        aplicamos el tiempo de la animación dependiendo del tamaño de la pantalla                                                                            
-    */
+    /* 
+   ██╗     ██╗██████╗ ██████╗ ███████╗██████╗ ██╗ █████╗      █████╗  ██████╗ ███████╗
+   ██║     ██║██╔══██╗██╔══██╗██╔════╝██╔══██╗██║██╔══██╗    ██╔══██╗██╔═══██╗██╔════╝
+   ██║     ██║██████╔╝██████╔╝█████╗  ██████╔╝██║███████║    ███████║██║   ██║███████╗
+   ██║     ██║██╔══██╗██╔══██╗██╔══╝  ██╔══██╗██║██╔══██║    ██╔══██║██║   ██║╚════██║
+   ███████╗██║██████╔╝██║  ██║███████╗██║  ██║██║██║  ██║    ██║  ██║╚██████╔╝███████║
+   ╚══════╝╚═╝╚═════╝ ╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝  ╚═╝    ╚═╝  ╚═╝ ╚═════╝ ╚══════╝
+       aplicamos el tiempo de la animación dependiendo del tamaño de la pantalla                                                                            
+   */
     /* 
         if(dispositivo >= 992){
 
