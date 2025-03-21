@@ -252,7 +252,6 @@ div#animationdivIcon {
 .text-left{
     font-family: "Playfair Display", serif;
     font-weight: 700;
-    font-size: 67px;
     line-height: 1;
     letter-spacing: 0;
 }
@@ -260,7 +259,6 @@ div#animationdivIcon {
 .text-left-2 {
     font-family: "Playfair Display", serif;
     font-weight: 700;
-    font-size: 55px;
     line-height: 1;
     letter-spacing: 0;
 }
@@ -269,7 +267,6 @@ div#animationdivIcon {
 
     font-family: "Playfair Display", serif;
     font-weight: 400;
-    font-size: 32px;
     line-height: 122%;
     letter-spacing: 0;
 
@@ -288,23 +285,107 @@ div#animationdivIcon {
 /* Pantallas Muy Grandes (1500px en adelante) */
 @media (min-width: 1500px) {
 
-    .carrusel .h-100 {
-        height: 125% !important;
+    .carrusel-inner {
+        height: 779px;
+    }
+    
+    .cont-test {
+        height: 465px !important;
+    }
+
+    .redes-style {
+        width: 3.7%;
+    }
+
+    .blog-style {
+        width: 3%;
+    }
+
+    .text-left{
+        font-size: 85px;
+    }
+    
+    .text-left-2 {
+        font-size: 55px;
+    }
+    
+    .text-right{
+        font-size: 32px;
     }
 
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
+    
+    .text-left{
+        font-size: 57px;
+    }
+    
+    .text-left-2 {
+        font-size: 54px;
+    }
+    
+    .text-right{
+        font-size: 20px;
+    }
 
-    .carrusel .h-100 {
-        height: 125% !important;
+    .carrusel-inner {
+        height: 500px !important;
+    }
+
+    .cont-top {
+        height: 850px;
+    }
+
+    .cont-test {
+        height: 380px !important;
+    }
+
+    .redes-style {
+        width: 4.7%;
+    }
+
+    .blog-style {
+        width: 3.6%;
     }
 
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-left{
+        font-size: 57px;
+    }
+    
+    .text-left-2 {
+        font-size: 54px;
+    }
+    
+    .text-right{
+        font-size: 20px;
+    }
+
+    .carrusel-inner {
+        height: 500px !important;
+    }
+
+    .cont-top {
+        height: 1018px;
+    }
+
+    .cont-test {
+        height: 380px !important;
+    }
+
+    .redes-style {
+        width: 5.7%;
+    }
+
+    .blog-style {
+        width: 4.4%;
+    }
 
 }
 
@@ -337,6 +418,22 @@ div#animationdivIcon {
 
     .cont-test {
         height: 380px !important;
+    }
+
+    .redes-style {
+        width: 5.7%;
+    }
+
+    .blog-style {
+        width: 4.4%;
+    }
+
+    .color-line {
+        width: 28%;
+    }
+
+    .w-50.cont-test {
+        width: 75% !important;
     }
 
 }
@@ -372,9 +469,68 @@ div#animationdivIcon {
         height: 336px !important;
     }
     
+    .redes-style {
+        width: 6.7%;
+    }
+
+    .blog-style {
+        width: 5.4%;
+    }
+
+    .color-line {
+        width: 28%;
+    }
+
+    .w-50.cont-test {
+        width: 75% !important;
+    }
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
     
+    .text-left{
+        font-size: 49px;
+    }
+    
+    .text-left-2 {
+        font-size: 38px;
+    }
+    
+    .text-right{
+        font-size: 18px;
+    }
+
+    .carrusel-inner {
+        height: 350px !important;
+    }
+
+    .cont-top {
+        height: 800px !important;
+    }
+
+    .img-w{
+        width: 388px !important;
+    }
+
+    .cont-test {
+        height: 336px !important;
+    }
+    
+    .redes-style {
+        width: 6.7%;
+    }
+
+    .blog-style {
+        width: 5.4%;
+    }
+
+    .color-line {
+        width: 28%;
+    }
+
+    .w-50.cont-test {
+        width: 75% !important;
+    }
+
 }

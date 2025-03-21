@@ -36,7 +36,7 @@
 
             <div class="w-100 d-flex justify-content-center align-items-center">
 
-                <div class="w-lg-50 w-75 cont-test">
+                <div class="w-50 cont-test">
 
                 </div>
 
@@ -99,7 +99,7 @@
                 </div>
             </div> --}}
 
-            <div class="w-100 d-flex flex-column justify-content-center pt-lg-5 p-0 text-left-2 bg-blaco">
+            <div class="w-100 d-flex flex-column justify-content-center p-0 text-left-2 bg-blaco">
                 <span class="text-center">Nuestros centros ópticos</span>
             </div>
 
