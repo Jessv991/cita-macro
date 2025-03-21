@@ -11,7 +11,7 @@
     @endphp
 
     @if ($baseUrl !== 'https://optica.naturalopticsgroup.com')
-       {{-- si es difernte a  www.audio.naturaloptics.com --}} 
+        {{-- si es difernte a  www.audio.naturaloptics.com --}}
 
         @php
             $rutaAsset = '';
@@ -27,8 +27,12 @@
     <title>Natural Optics Group</title>
     <link id="icon" rel="icon" href="{{ asset($rutaAsset . '/assets/iconos_landings/UgoLogo.png') }}">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <!-- Bootstrap CSS (en el <head>) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap JS y Popper.js (antes de cerrar el </body>) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"

@@ -1,11 +1,19 @@
 .bg-blaco {
     background-color: #fff !important;
 }
+
 .cont-top {
     position: relative;
     background-color: #fff !important;
     margin-bottom: 73px;
     height: 1306px;
+}
+
+.cont-top-2 {
+    position: relative;
+    background-color: #fff !important;
+    margin-bottom: 73px;
+    height: 1082px;
 }
 
 .cont-bot {
@@ -20,29 +28,36 @@
     position: absolute;
     left: 50%;
     width: 100%;
-    height: 50px; /* Mayor altura para una transición más suave */
+    height: 50px;
+    /* Mayor altura para una transición más suave */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
     transform: translateX(-50%);
     pointer-events: none;
 }
 
 .cont-top::before {
-    bottom: -50px; /* Ajusta la sombra en la parte inferior */
+    bottom: -50px;
+    /* Ajusta la sombra en la parte inferior */
 }
 
 .cont-bot::before {
-    top: -50px; /* Ajusta la sombra en la parte superior */
+    top: -50px;
+    /* Ajusta la sombra en la parte superior */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .cont-img {
-    position: fixed; /* La imagen se mantiene fija en su lugar */
-    top: 50%; /* Centrada verticalmente */
+    position: fixed;
+    /* La imagen se mantiene fija en su lugar */
+    top: 50%;
+    /* Centrada verticalmente */
     left: 0;
     width: 100%;
     height: 853px;
-    z-index: -1; /* La imagen queda detrás del contenido */
-    transform: translateY(-50%); /* Centra la imagen */
+    z-index: -1;
+    /* La imagen queda detrás del contenido */
+    transform: translateY(-50%);
+    /* Centra la imagen */
 }
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
@@ -130,7 +145,7 @@
     /* Asegura que el contenedor ocupe toda la altura disponible */
 }
 
-.cont-test{
+.cont-test {
     background-color: #fff;
     height: 500px;
     border-radius: 5px;
@@ -249,7 +264,7 @@ div#animationdivIcon {
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap');
 
-.text-left{
+.text-left {
     font-family: "Playfair Display", serif;
     font-weight: 700;
     line-height: 1;
@@ -263,13 +278,73 @@ div#animationdivIcon {
     letter-spacing: 0;
 }
 
-.text-right{
+.text-right {
 
     font-family: "Playfair Display", serif;
     font-weight: 400;
     line-height: 122%;
     letter-spacing: 0;
 
+}
+
+.text-ret-left {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text-ret-left-2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+}
+
+.text-ret-right {
+
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 122%;
+    letter-spacing: 0;
+}
+
+.title-test {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0;
+    font-size: 54px;
+}
+
+.subtitle-test {
+
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    line-height: 122%;
+    letter-spacing: 0;
+    font-size: 16px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #fff;
+    background-color: #D0ADD1 !important;
+    box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+}
+
+.accordion-button {
+    color: #fff;
+    background-color: #D0ADD1 !important;
+    box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+    border-radius: 8px !important;
+}
+
+.brc{
+    border-bottom: solid 2px #D0ADD1;
+}
+
+.sombra{
+    background-color: #bb20206e;
 }
 
 /* 
@@ -286,9 +361,13 @@ div#animationdivIcon {
 @media (min-width: 1500px) {
 
     .carrusel-inner {
-        height: 779px;
+        height: 867px;
     }
-    
+
+    .carrusel-inner-2 {
+        height: 700px;
+    }
+
     .cont-test {
         height: 465px !important;
     }
@@ -301,37 +380,58 @@ div#animationdivIcon {
         width: 3%;
     }
 
-    .text-left{
-        font-size: 85px;
+    .text-left {
+        font-size: 85px !important;
     }
-    
+
+    .text-right {
+        font-size: 32px !important;
+    }
+
+    .text-ret-left {
+        font-size: 72px !important;
+    }
+
+    .text-ret-right {
+        font-size: 21px !important;
+    }
+
     .text-left-2 {
         font-size: 55px;
     }
-    
-    .text-right{
-        font-size: 32px;
-    }
+
 
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
-    
-    .text-left{
-        font-size: 57px;
-    }
-    
-    .text-left-2 {
-        font-size: 54px;
-    }
-    
-    .text-right{
-        font-size: 20px;
-    }
 
     .carrusel-inner {
-        height: 500px !important;
+        height: 570px !important;
+    }
+
+    .carrusel-inner-2 {
+        height: 480px !important;
+    }
+
+    .text-left {
+        font-size: 57px !important;
+    }
+
+    .text-right {
+        font-size: 20px !important;
+    }
+
+    .text-ret-left {
+        font-size: 51px !important;
+    }
+
+    .text-ret-right {
+        font-size: 18px !important;
+    }
+
+    .text-left-2 {
+        font-size: 54px !important;
     }
 
     .cont-top {
@@ -350,29 +450,57 @@ div#animationdivIcon {
         width: 3.6%;
     }
 
+    .cont-top-2 {
+        height: 910px;
+    }
+
+    .text-top-form {
+        font-size: 19px;
+    }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .text-left{
-        font-size: 57px;
-    }
-    
-    .text-left-2 {
-        font-size: 54px;
-    }
-    
-    .text-right{
-        font-size: 20px;
-    }
-
     .carrusel-inner {
         height: 500px !important;
     }
 
+    .carrusel-inner-2 {
+        height: 500px !important;
+    }
+
+    .text-left {
+        font-size: 57px !important;
+    }
+
+    .text-right {
+        font-size: 20px !important;
+    }
+
+    .text-ret-left {
+        font-size: 40px !important;
+    }
+
+    .text-ret-right {
+        font-size: 13px !important;
+    }
+
+    .text-left-2 {
+        font-size: 54px !important;
+    }
+
+    .text-left-2 {
+        font-size: 54px;
+    }
+
     .cont-top {
         height: 1018px;
+    }
+
+    .cont-top-2 {
+        height: 833px;
     }
 
     .cont-test {
@@ -387,20 +515,24 @@ div#animationdivIcon {
         width: 4.4%;
     }
 
+    .text-top-form {
+        font-size: 18px;
+    }
+
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .text-left{
+    .text-left {
         font-size: 57px;
     }
-    
+
     .text-left-2 {
         font-size: 55px;
     }
-    
-    .text-right{
+
+    .text-right {
         font-size: 26px;
     }
 
@@ -412,7 +544,7 @@ div#animationdivIcon {
         height: 1018px;
     }
 
-    .img-w{
+    .img-w {
         width: 450px !important;
     }
 
@@ -441,15 +573,15 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    .text-left{
+    .text-left {
         font-size: 49px;
     }
-    
+
     .text-left-2 {
         font-size: 38px;
     }
-    
-    .text-right{
+
+    .text-right {
         font-size: 18px;
     }
 
@@ -461,14 +593,14 @@ div#animationdivIcon {
         height: 800px !important;
     }
 
-    .img-w{
+    .img-w {
         width: 388px !important;
     }
 
     .cont-test {
         height: 336px !important;
     }
-    
+
     .redes-style {
         width: 6.7%;
     }
@@ -488,16 +620,16 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
-    
-    .text-left{
+
+    .text-left {
         font-size: 49px;
     }
-    
+
     .text-left-2 {
         font-size: 38px;
     }
-    
-    .text-right{
+
+    .text-right {
         font-size: 18px;
     }
 
@@ -509,14 +641,14 @@ div#animationdivIcon {
         height: 800px !important;
     }
 
-    .img-w{
+    .img-w {
         width: 388px !important;
     }
 
     .cont-test {
         height: 336px !important;
     }
-    
+
     .redes-style {
         width: 6.7%;
     }
