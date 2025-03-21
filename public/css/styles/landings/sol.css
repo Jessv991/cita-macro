@@ -66,10 +66,6 @@
     width: 100%;
 }
 
-.carrusel .h-100 {
-    height: 125% !important;
-}
-
 .carrusel-inner img {
     position: absolute;
     opacity: 0;
@@ -256,7 +252,7 @@ div#animationdivIcon {
 .text-left{
     font-family: "Playfair Display", serif;
     font-weight: 700;
-    font-size: 92px;
+    font-size: 67px;
     line-height: 1;
     letter-spacing: 0;
 }
@@ -277,4 +273,108 @@ div#animationdivIcon {
     line-height: 122%;
     letter-spacing: 0;
 
+}
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+*/
+
+/* Pantallas Muy Grandes (1500px en adelante) */
+@media (min-width: 1500px) {
+
+    .carrusel .h-100 {
+        height: 125% !important;
+    }
+
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .carrusel .h-100 {
+        height: 125% !important;
+    }
+
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .text-left{
+        font-size: 57px;
+    }
+    
+    .text-left-2 {
+        font-size: 55px;
+    }
+    
+    .text-right{
+        font-size: 26px;
+    }
+
+    .carrusel-inner {
+        height: 500px !important;
+    }
+
+    .cont-top {
+        height: 1018px;
+    }
+
+    .img-w{
+        width: 450px !important;
+    }
+
+    .cont-test {
+        height: 380px !important;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .text-left{
+        font-size: 49px;
+    }
+    
+    .text-left-2 {
+        font-size: 38px;
+    }
+    
+    .text-right{
+        font-size: 18px;
+    }
+
+    .carrusel-inner {
+        height: 350px !important;
+    }
+
+    .cont-top {
+        height: 800px !important;
+    }
+
+    .img-w{
+        width: 388px !important;
+    }
+
+    .cont-test {
+        height: 336px !important;
+    }
+    
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    
 }

@@ -5,11 +5,11 @@
         <div class="d-flex flex-column justify-content-center align-items-center w-100">
             <div class="col-12 w-100 d-flex flex-column justify-content-center align-items-center cont-top">
                 <div class="col-12 p-0">
-                    <div class="row">
-                        <div class="col-6 p-0 d-flex justify-content-center align-items-center">
+                    <div class="row flex-column flex-lg-row w-100"> <!-- Apila en móviles, mantiene en desktop -->
+                        <div class="col-lg-6 col-12 p-0 d-flex justify-content-center align-items-center">
                             <h1 class="text-left">¿Cómo protejo<br>mis ojos del sol?</h1>
                         </div>
-                        <div class="col-6 p-5 d-flex justify-content-center align-items-center">
+                        <div class="col-lg-6 col-12 text-center text-md-start p-5 d-flex justify-content-center align-items-center">
                             <p class="text-right">Acude a tu óptica de confianza y elige unas gafas de sol que
                                 realmente protejan tu vista. Nuestro equipo de profesionales
                                 te asesorará para encontrar la mejor opción para ti.
@@ -17,8 +17,8 @@
                             </p>
                         </div>
                     </div>
-                </div>
-                <div class="carrusel w-75 mb-5 h-100">
+                </div>                
+                <div class="carrusel w-75 mb-5 h-lg-100">
                     <div class="carrusel-inner w-100">
                         <img class="w-100 h-100 active"
                             src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
@@ -36,7 +36,7 @@
 
             <div class="w-100 d-flex justify-content-center align-items-center">
 
-                <div class="w-50 cont-test">
+                <div class="w-lg-50 w-75 cont-test">
 
                 </div>
 
@@ -48,35 +48,35 @@
             </div>
 
             <div class="col-12 w-100 cont-bot">
-                <div class="col-12 w-100 cont-bot1">
+                <div class="col-12">
 
-                    <div class="col-12 p-0 d-flex justify-content-center align-items-center mt-5">
+                    <div class="col-12 p-0 text-center d-flex justify-content-center align-items-center mt-5">
                         <h1 class="text-left">¡Descubre los colores disponibles!</h1>
                     </div>
 
-                    <div class="col-12 p-0 w-100 mt-5">
+                    <div class="col-12 p-0 mt-5">
 
-                        <div class="row d-flex justify-content-center align-items-center">
-                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
-                                <img class="w-75 h-100"
+                        <div class="row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100">
+                            <div class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                                <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/gris.svg') }}">
                             </div>
-                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
-                                <img class="w-75 h-100"
+                            <div class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                                <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/marron.svg') }}">
                             </div>
-                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
-                                <img class="w-75 h-100"
+                            <div class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                                <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/azul.svg') }}">
                             </div>
                         </div>
-                        <div class="row d-flex justify-content-center align-items-center mt-5">
-                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
-                                <img class="w-75 h-100"
+                        <div class="row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100 mt-5">
+                            <div class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center">
+                                <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/amarillo.svg') }}">
                             </div>
-                            <div class="col-3 p-0 d-flex justify-content-center align-items-center">
-                                <img class="w-75 h-100"
+                            <div class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                                <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/verde.svg') }}">
                             </div>
                         </div>
@@ -99,9 +99,8 @@
                 </div>
             </div> --}}
 
-            <div class="w-100 d-flex flex-column justify-content-center pt-5 text-left-2 bg-blaco">
-                <span class="text-center">Nuestros centros</span>
-                <span class="text-center">ópticos</span>
+            <div class="w-100 d-flex flex-column justify-content-center pt-lg-5 p-0 text-left-2 bg-blaco">
+                <span class="text-center">Nuestros centros ópticos</span>
             </div>
 
             <div class="w-100 bg-blaco bg-blaco pt-5">
