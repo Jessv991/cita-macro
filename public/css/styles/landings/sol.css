@@ -29,7 +29,6 @@
     left: 50%;
     width: 100%;
     height: 50px;
-    /* Mayor altura para una transición más suave */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), transparent);
     transform: translateX(-50%);
     pointer-events: none;
@@ -37,27 +36,21 @@
 
 .cont-top::before {
     bottom: -50px;
-    /* Ajusta la sombra en la parte inferior */
 }
 
 .cont-bot::before {
     top: -50px;
-    /* Ajusta la sombra en la parte superior */
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent);
 }
 
 .cont-img {
     position: fixed;
-    /* La imagen se mantiene fija en su lugar */
     top: 50%;
-    /* Centrada verticalmente */
     left: 0;
     width: 100%;
     height: 853px;
     z-index: -1;
-    /* La imagen queda detrás del contenido */
     transform: translateY(-50%);
-    /* Centra la imagen */
 }
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
@@ -134,15 +127,10 @@
 .card-style {
     display: flex;
     flex-direction: column;
-    /* Organiza los elementos en una columna */
     align-items: center;
-    /* Centra los elementos horizontalmente */
     justify-content: flex-start;
-    /* Alinea los elementos hacia la parte superior */
     text-align: center;
-    /* Alinea el texto al centro */
     height: 100%;
-    /* Asegura que el contenedor ocupe toda la altura disponible */
 }
 
 .cont-test {
@@ -161,6 +149,23 @@
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+#formMacroContactologia::-webkit-scrollbar-thumb {
+    background: #979697;
+    border-radius: 4px;
+}
+
+.form-select{
+    width: 98%;
+}
+
+.form-control {
+    width: 98%;
+}
+
+.form-check-reverse {
+    text-align: left;
+}
 
 .cont-form-principal {
     width: 31%;
@@ -617,7 +622,7 @@ div#animationdivIcon {
         width: 79% !important;
     }
 
-    #cont-alltest{
+    #cont-alltest {
         width: 75% !important;
     }
 
@@ -675,7 +680,7 @@ div#animationdivIcon {
         width: 28%;
     }
 
-    #cont-alltest{
+    #cont-alltest {
         width: 75% !important;
     }
 
@@ -736,7 +741,7 @@ div#animationdivIcon {
         width: 28%;
     }
 
-    #cont-alltest{
+    #cont-alltest {
         width: 80% !important;
     }
 
