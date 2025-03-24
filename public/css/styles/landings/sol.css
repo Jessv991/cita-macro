@@ -149,7 +149,9 @@
     background-color: #fff;
     height: 500px;
     border-radius: 5px;
+    overflow-y: auto;
 }
+
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -333,19 +335,65 @@ div#animationdivIcon {
 }
 
 .accordion-button {
-    color: #fff;
+    color: #000;
     background-color: #D0ADD1 !important;
     box-shadow: inset 0 calc(-1* var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
     border-radius: 8px !important;
 }
 
-.brc{
+.brc {
     border-bottom: solid 2px #D0ADD1;
 }
 
-.sombra{
-    background-color: #bb20206e;
+.sombra {
+    opacity: 0.3;
 }
+
+.grises {
+    cursor: pointer;
+}
+
+.verdes {
+    cursor: pointer;
+}
+
+.marrones {
+    cursor: pointer;
+}
+
+.amarillas {
+    cursor: pointer;
+}
+
+.azules {
+    cursor: pointer;
+}
+
+.grises:hover {
+    background-color: #efe5f0ad;
+    cursor: pointer;
+}
+
+.verdes:hover {
+    background-color: #efe5f0ad;
+    cursor: pointer;
+}
+
+.marrones:hover {
+    background-color: #efe5f0ad;
+    cursor: pointer;
+}
+
+.amarillas:hover {
+    background-color: #efe5f0ad;
+    cursor: pointer;
+}
+
+.azules:hover {
+    background-color: #efe5f0ad;
+    cursor: pointer;
+}
+
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -534,6 +582,7 @@ div#animationdivIcon {
 
     .text-right {
         font-size: 26px;
+        text-align: center;
     }
 
     .carrusel-inner {
@@ -564,8 +613,21 @@ div#animationdivIcon {
         width: 28%;
     }
 
-    .w-50.cont-test {
+    .cont-form-principal {
+        width: 79% !important;
+    }
+
+    #cont-alltest{
         width: 75% !important;
+    }
+
+    .title-test {
+        font-size: 38px;
+        margin-top: 48px;
+    }
+
+    .cont-img {
+        height: 1500px !important;
     }
 
 }
@@ -613,7 +675,20 @@ div#animationdivIcon {
         width: 28%;
     }
 
-    .w-50.cont-test {
+    #cont-alltest{
+        width: 75% !important;
+    }
+
+    .title-test {
+        font-size: 31px;
+        margin-top: 154px;
+    }
+
+    .subtitle-test {
+        font-size: 15px !important;
+    }
+
+    .cont-form-principal {
         width: 75% !important;
     }
 }
@@ -622,7 +697,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .text-left {
-        font-size: 49px;
+        font-size: 40px;
     }
 
     .text-left-2 {
@@ -630,7 +705,7 @@ div#animationdivIcon {
     }
 
     .text-right {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .carrusel-inner {
@@ -661,7 +736,20 @@ div#animationdivIcon {
         width: 28%;
     }
 
-    .w-50.cont-test {
+    #cont-alltest{
+        width: 80% !important;
+    }
+
+    .title-test {
+        font-size: 22px;
+        margin-top: 269px;
+    }
+
+    .subtitle-test {
+        font-size: 15px !important;
+    }
+
+    .cont-form-principal {
         width: 75% !important;
     }
 

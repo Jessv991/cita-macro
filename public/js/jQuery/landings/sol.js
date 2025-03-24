@@ -101,20 +101,32 @@ $(document).ready(function () {
 
         $('#btn-flotante').on('click', function (e) {
 
-            e.preventDefault();
-
+            $('.cont-img').addClass('d-none');
+            $('#view-r').addClass('d-none');
             $('#btn-flotante').addClass('d-none');
-            $('.form_flotante').removeClass('d-none').fadeOut(1).fadeIn(500);
+
+            $('.lado-izq').animate({ width: '0%' }, 1000, function () {
+                $(this).hide();
+            });
+
+            $('.lado-der').removeClass('d-none').css({
+                position: 'relative',
+                width: '0%',
+            }).show().animate({ width: '100%' }, 1500);
 
         });
 
-        $('.btn-close-flotante').on('click', function (e) {
+        $('.btn-close').on('click', function (e) {
 
             e.preventDefault();
-
-            $('.form_flotante').fadeOut(500, function () {
-                $('.form_flotante').addClass('d-none');
+            $('#view-r').removeClass('d-none');
+            $('.lado-der').addClass('d-none').animate({ width: '0%' }, 1000, function () {
+                $(this).hide(); // Oculta completamente el lado derecho
             });
+            
+            $('.lado-izq').show().animate({ width: '100%' }, 1500, function () {
+                $('.cont-img').removeClass('d-none');
+            });            
 
             $('#btn-flotante').removeClass('d-none');
 
@@ -122,11 +134,59 @@ $(document).ready(function () {
 
     }
 
-    $('#verdes').on('click', function (e) {
+    $('.verdes').on('click', function (e) {
 
         e.preventDefault();
-       
+
         $('#img-gris').addClass('sombra');
+        $('#img-marron').addClass('sombra');
+        $('#img-azul').addClass('sombra');
+        $('#img-amarillo').addClass('sombra');
+        $('#img-verde').removeClass('sombra');
+    });
+
+    $('.grises').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('#img-gris').removeClass('sombra');
+        $('#img-marron').addClass('sombra');
+        $('#img-azul').addClass('sombra');
+        $('#img-amarillo').addClass('sombra');
+        $('#img-verde').addClass('sombra');
+    });
+
+    $('.marrones').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('#img-gris').addClass('sombra');
+        $('#img-marron').removeClass('sombra');
+        $('#img-azul').addClass('sombra');
+        $('#img-amarillo').addClass('sombra');
+        $('#img-verde').addClass('sombra');
+    });
+
+    $('.amarillas').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('#img-gris').addClass('sombra');
+        $('#img-marron').addClass('sombra');
+        $('#img-azul').addClass('sombra');
+        $('#img-amarillo').removeClass('sombra');
+        $('#img-verde').addClass('sombra');
+    });
+
+    $('.azules').on('click', function (e) {
+
+        e.preventDefault();
+
+        $('#img-gris').addClass('sombra');
+        $('#img-marron').addClass('sombra');
+        $('#img-azul').removeClass('sombra');
+        $('#img-amarillo').addClass('sombra');
+        $('#img-verde').addClass('sombra');
     });
 
     /* 
