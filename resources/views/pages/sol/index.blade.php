@@ -6,7 +6,8 @@
             <div id="cont-top"
                 class="col-12 w-100 d-flex flex-column justify-content-center align-items-center cont-top">
                 <div class="col-12 p-0">
-                    <div class="ms-0 ms-sm-2 row flex-column flex-lg-row w-100"> <!-- Apila en móviles, mantiene en desktop -->
+                    <div class="ms-0 ms-sm-2 row flex-column flex-lg-row w-100">
+                        <!-- Apila en móviles, mantiene en desktop -->
                         <div class="col-lg-6 col-12 p-0 d-flex justify-content-center align-items-center">
                             <h1 id="text-left" class="text-left">¿Cómo protejo<br>mis ojos del sol?</h1>
                         </div>
@@ -21,18 +22,46 @@
                         </div>
                     </div>
                 </div>
-                <div class="carrusel w-75 mb-5 h-lg-100">
+
+                <div class="carrusel w-75 mb-5 h-lg-100 d-none d-lg-block">
                     <div id="carrusel-inner" class="carrusel-inner w-100">
-                        <img class="w-100 h-100 active"
+                        <img id="girl" class="w-100 h-100 girl active"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
+                        <img id="man" class="w-100 h-100 man"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/man.png') }}">
+                        <img id="woman" class="w-100 h-100 woman"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/woman.png') }}">
+                        <img id="grandpa" class="w-100 h-100 grandpa"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/grandpa.png') }}">
+                        <img class="w-100 h-100 extra-img1"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol1.png') }}">
+                        <img class="w-100 h-100 extra-img2"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol2.png') }}">
+                        <img class="w-100 h-100 extra-img3"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol3.png') }}">
+                        <img class="w-100 h-100 extra-img4"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol4.png') }}">
+                    </div>
+                </div>
+
+                <div class="carrusel2 w-75 mb-5 h-lg-100 d-block d-lg-none d-xl-none">
+                    <div id="carrusel-inner2" class="carrusel-inner2 w-100">
+                        <img id="girl" class="w-100 h-100 girl active"
                             src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/girl.png') }}">
                         <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol1.png') }}">
+                        <img id="man" class="w-100 h-100 man"
                             src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/man.png') }}">
                         <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol2.png') }}">
+                        <img id="woman" class="w-100 h-100 woman"
                             src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/woman.png') }}">
                         <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol3.png') }}">
+                        <img id="grandpa" class="w-100 h-100 grandpa"
                             src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/grandpa.png') }}">
-                        <img class="w-100 h-100 extra-img"
-                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol.png') }}">
+                        <img class="w-100 h-100"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/gafas-sol4.png') }}">
                     </div>
                 </div>
             </div>
@@ -61,13 +90,18 @@
 
                                     <div id="flush-collapseOne" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                        <div class="grises accordion-body brc">Conducir o ir en moto</div>
-                                        <div class="verdes accordion-body brc">Hacer deporte al aire libre</div>
-                                        <div class="marrones accordion-body brc">Ir a la playa o la montaña</div>
-                                        <div class="amarillas accordion-body brc">Usarlas en el día a día, incluso en ciudad</div>
-                                        <div class="azules accordion-body brc">Para actividades náuticas o de alta luminosidad</div>
+                                        <div id="grises-q1" class="efect-acord accordion-body brc">Conducir o ir en moto
+                                        </div>
+                                        <div id="verdes-q1" class="efect-acord accordion-body brc">Hacer deporte al aire
+                                            libre</div>
+                                        <div id="marrones-q1" class="efect-acord accordion-body brc">Ir a la playa o la
+                                            montaña</div>
+                                        <div id="amarillas-q1" class="efect-acord accordion-body brc">Usarlas en el día
+                                            a día, incluso en ciudad</div>
+                                        <div id="azules-q1" class="efect-acord accordion-body brc">Para actividades
+                                            náuticas o de alta luminosidad</div>
                                     </div>
-                                    
+
                                 </div>
                                 <div class="accordion-item mt-2">
                                     <h2 class="accordion-header" id="flush-headingTwo">
@@ -79,11 +113,16 @@
                                     </h2>
                                     <div id="flush-collapseTwo" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                        <div class="azules accordion-body brc">El deslumbramiento del sol en la carretera o en el agua</div>
-                                        <div class="verdes accordion-body brc">Fatiga visual después de varias horas expuesto al sol</div>
-                                        <div class="grises accordion-body brc">Dificultad para ver bien los colores con luz intensa</div>
-                                        <div class="amarillas accordion-body brc">Necesidad de mayor contraste en días nublados o con poca luz</div>
-                                        <div class="marrones accordion-body brc">Sensación de que la luz es demasiado intensa en todo momento</div>
+                                        <div id="azules-q2" class="efect-acord accordion-body brc">El deslumbramiento
+                                            del sol en la carretera o en el agua</div>
+                                        <div id="verdes-q2" class="efect-acord accordion-body brc">Fatiga visual
+                                            después de varias horas expuesto al sol</div>
+                                        <div id="grises-q2" class="efect-acord accordion-body brc">Dificultad para ver
+                                            bien los colores con luz intensa</div>
+                                        <div id="amarillas-q2" class="efect-acord accordion-body brc">Necesidad de
+                                            mayor contraste en días nublados o con poca luz</div>
+                                        <div id="marrones-q2" class="efect-acord accordion-body brc">Sensación de que
+                                            la luz es demasiado intensa en todo momento</div>
                                     </div>
                                 </div>
                                 <div class="accordion-item mt-2">
@@ -96,14 +135,19 @@
                                     </h2>
                                     <div id="flush-collapseThree" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                        <div class="grises accordion-body brc">Ver los colores de forma natural sin alteraciones</div>
-                                        <div class="marrones accordion-body brc">Tener una visión más cálida y relajada</div>
-                                        <div class="azules accordion-body brc">Reducir los reflejos para una visión más nítida</div>
-                                        <div class="amarillas accordion-body brc">Ver con más brillo y contraste en días nublados</div>
-                                        <div class="verdes accordion-body brc">Tener una visión más fresca y con menos fatiga</div>
+                                        <div id="grises-q3" class="efect-acord accordion-body brc">Ver los colores de
+                                            forma natural sin alteraciones</div>
+                                        <div id="marrones-q3" class="efect-acord accordion-body brc">Tener una visión
+                                            más cálida y relajada</div>
+                                        <div id="azules-q3" class="efect-acord accordion-body brc">Reducir los
+                                            reflejos para una visión más nítida</div>
+                                        <div id="amarillas-q3" class="efect-acord accordion-body brc">Ver con más
+                                            brillo y contraste en días nublados</div>
+                                        <div id="verdes-q3" class="efect-acord accordion-body brc">Tener una visión
+                                            más fresca y con menos fatiga</div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="accordion-item mt-2">
                                     <h2 class="accordion-header" id="flush-headingFour">
                                         <button class="accordion-button collapsed" type="button"
@@ -114,11 +158,16 @@
                                     </h2>
                                     <div id="flush-collapseFour" class="accordion-collapse collapse"
                                         aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-                                        <div class="marrones accordion-body brc">Senderismo o montaña</div>
-                                        <div class="verdes accordion-body brc">Deportes como ciclismo o running</div>
-                                        <div class="azules accordion-body brc">Navegación o deportes acuáticos</div>
-                                        <div class="amarillas accordion-body brc">Trabajo al aire libre o exposición prolongada al sol</div>
-                                        <div class="grises accordion-body brc">Paseos o turismo en ciudad</div>
+                                        <div id="marrones-q4" class="efect-acord accordion-body brc">Senderismo o
+                                            montaña</div>
+                                        <div id="verdes-q4" class="efect-acord accordion-body brc">Deportes como
+                                            ciclismo o running</div>
+                                        <div id="azules-q4" class="efect-acord accordion-body brc">Navegación o
+                                            deportes acuáticos</div>
+                                        <div id="amarillas-q4" class="efect-acord accordion-body brc">Trabajo al aire
+                                            libre o exposición prolongada al sol</div>
+                                        <div id="grises-q4" class="efect-acord accordion-body brc">Paseos o turismo en
+                                            ciudad</div>
                                     </div>
                                 </div>
                             </div>
@@ -144,30 +193,33 @@
 
                     <div class="col-12 p-0 mt-5">
 
-                        <div class="ms-0 ms-sm-2 row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100">
-                            <div
-                                id="img-gris" class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                        <div
+                            class="ms-0 ms-sm-2 row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100">
+                            <div id="img-gris"
+                                class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
                                 <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/gris.svg') }}">
                             </div>
-                            <div
-                                id="img-marron" class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                            <div id="img-marron"
+                                class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
                                 <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/marron.svg') }}">
                             </div>
-                            <div
-                                id="img-azul" class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                            <div id="img-azul"
+                                class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
                                 <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/azul.svg') }}">
                             </div>
                         </div>
-                        <div class="ms-0 ms-sm-2 row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100 mt-5">
-                            <div id="img-amarillo" class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center">
+                        <div
+                            class="ms-0 ms-sm-2 row flex-column flex-lg-row d-flex justify-content-center align-items-center w-100 mt-5">
+                            <div id="img-amarillo"
+                                class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center">
                                 <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/amarillo.svg') }}">
                             </div>
-                            <div
-                                id="img-verde" class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
+                            <div id="img-verde"
+                                class="col-lg-3 col-12 p-0 d-flex justify-content-center align-items-center mt-5 mt-lg-0">
                                 <img class="w-75 h-100 img-w"
                                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol/verde.svg') }}">
                             </div>
