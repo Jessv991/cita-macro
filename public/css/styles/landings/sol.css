@@ -411,10 +411,6 @@ div#animationdivIcon {
         height: 867px;
     }
 
-    .carrusel-inner-2 {
-        height: 700px;
-    }
-
     .redes-style {
         width: 3.7%;
     }
@@ -451,10 +447,6 @@ div#animationdivIcon {
 
     .carrusel-inner {
         height: 570px !important;
-    }
-
-    .carrusel-inner-2 {
-        height: 480px !important;
     }
 
     .text-left {
@@ -507,10 +499,6 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .carrusel-inner {
-        height: 500px !important;
-    }
-
-    .carrusel-inner-2 {
         height: 500px !important;
     }
 
@@ -576,7 +564,7 @@ div#animationdivIcon {
         text-align: center;
     }
 
-    .carrusel-inner {
+    .carrusel-inner2 {
         height: 500px !important;
     }
 
@@ -634,7 +622,7 @@ div#animationdivIcon {
         font-size: 18px;
     }
 
-    .carrusel-inner {
+    .carrusel-inner2 {
         height: 350px !important;
     }
 
@@ -691,7 +679,7 @@ div#animationdivIcon {
         font-size: 16px;
     }
 
-    .carrusel-inner {
+    .carrusel-inner2 {
         height: 350px !important;
     }
 
