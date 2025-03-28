@@ -5,6 +5,12 @@
         <div class="col-12 p-0 m-0 w-100">
             <img class="w-100"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+                <div class="boton-flotante d-flex justify-content-end">
+
+                    <a href="#contAllForm" id="diret-form" class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
+
+
+                </div>
             <div class="row p-0 m-0 mt-5">
                 <!-- Columna para la primera imagen -->
                 <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">

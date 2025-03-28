@@ -77,6 +77,16 @@
    cursor: pointer;;
 }
 
+.boton-flotante {
+    position: fixed; /* Esto fija el div en la pantalla */
+    top: 0; /* Se coloca en la parte superior */
+    left: 0; /* Se coloca en el borde izquierdo */
+    width: 100%; /* Asegura que el div ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el div quede encima del resto del contenido */
+    background-color: #ffffff6b; /* Puedes poner el color de fondo que prefieras */
+    padding: 10px; /* Ajusta el padding según lo necesites */
+    height: 9%;
+}
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -176,6 +186,23 @@ input.form-control::placeholder {
 .btn-color:hover {
     background-color: #F8D17B;
     color: #4995C2;
+}
+
+.btn-color2 {
+    width: 142px;
+    background-color: #F8D17B;
+    color: #4995C2;
+    font-size: 21px;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    height: 50px; 
+}
+
+.btn-color2:hover {
+    background-color: #2E82B2;
+    color: #fff;
 }
 
 /* ----------------------------------------------
@@ -546,6 +573,15 @@ input.form-control::placeholder {
         padding: 12%;
     }
 
+    .btn-color2 {
+        width: 109px;
+        font-size: 17px;
+    }
+
+    .boton-flotante {
+        padding-right: 34px !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -606,6 +642,15 @@ input.form-control::placeholder {
         display: flex !important;
         justify-content: center !important;
         width: 100% !important;
+    }
+
+    .btn-color2 {
+        width: 109px;
+        font-size: 17px;
+    }
+
+    .boton-flotante {
+        padding-right: 34px !important;
     }
 
 }
