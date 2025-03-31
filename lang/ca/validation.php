@@ -14,6 +14,7 @@ return [
     */
 
     'accepted' => 'Cal acceptar les polítiques de privadesa.',
+    'accepted_sorteo' => 'Se deben aceptar las políticas del sorteo.',
     'accepted_if' => 'The :attribute field must be accepted when :other is :value.',
     'active_url' => 'The :attribute field must be a valid URL.',
     'after' => 'The :attribute field must be a date after :date.',

@@ -306,6 +306,18 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ];
 
+        if($origen=='contactologia') {
+            $baseRules = [
+                'nombre' => 'bail|required|max:20',
+                'apellidos' => 'bail|required|max:20',
+                'email' => 'bail|required|email:rfc,dns',
+                'movil' => 'bail|required|digits:9|integer',
+                'check-poli' => 'accepted',
+                'check-sorteo' => 'required',
+            ];
+        }
+
+
         if ($weblogin) {
             $specificRules = [
                 'optica' => 'bail|required',
