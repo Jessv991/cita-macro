@@ -1,3 +1,6 @@
+@php
+    $op = $data['origin'];
+@endphp
 <div class="contenedor-form w-100 h-75 d-flex justify-content-center align-items-center">
 
     <form id="formMacroContactologia" class="w-100 p-0 m-0" action="" method="POST">
@@ -13,7 +16,11 @@
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">
-            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            @if($op=='contactologia')
+                <p class="text-top-form">{{ __('contactologia.Pide_cita_rellenando') }}</p>
+            @else
+                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            @endif
         </div>
 
 
@@ -172,14 +179,32 @@
                         <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                             {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
-                        </a>
+                        </a>                        
                     </label>
+
+                    @if($op=='contactologia')
+                    <br>
+                    <br>
+
+                    <input class="custom-checkbox" type="checkbox" value="2" name="check-poli"
+                        id="reverseCheck2">
+
+                    <label class="form-check-label" for="reverseCheck2">
+                        <span>{{ __('contactologia.Aceptar_politicas_privacidad_1') }}</span>
+                        <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
+                            style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
+                            {{ __('contactologia.Aceptar_politicas_sorteo') }}
+                        </a>                        
+                    </label>
+                    @endif
                 </div>
 
-                <div class="b-pedir-citas mt-5">
-
-                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
-
+                <div class="b-pedir-citas mt-5">         
+                    @if($op=='contactologia')
+                        <button id="form" class="btn btn-color">{{ __('contactologia.Pedir_cita') }}</button>
+                    @else
+                        <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
+                    @endif
                 </div>
 
             </div>

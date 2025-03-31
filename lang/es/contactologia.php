@@ -1,0 +1,35 @@
+<?php
+
+return [
+
+    'Pide_cita_rellenando' => 'Rellena el formulario y participa en el sorteo del viaje para 2 personas.',
+    'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
+    'Selecciona_una_provincia' => 'Selecciona una provincia',
+    'Selecciona_una_ciudad' => 'Selecciona una ciudad',
+    'Selecciona_una_optica' => 'Selecciona una óptica',
+    'nombre_optica' => 'Nombre de la óptica',
+    'Nombre' => 'Nombre',
+    'Apellidos' => 'Apellidos',
+    'Email' => 'Email',
+    'Telefono' => 'Teléfono',
+    'Aceptar_politicas_privacidad_1' => 'Acepto las',
+    'Aceptar_politicas_privacidad_2' => 'Políticas de Privacidad',
+    'Aceptar_politicas_privacidad_3' => 'Políticas de cookies',
+    'Aceptar_politicas_sorteo' => 'Bases del Sorteo',
+    'Politicas_privacidad' => 'De conformidad con el Reglamento (UE) 2016/679 del Parlamento y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos os recordamos que sus datos personales serán tratados por parte del centro remitente del comunicado. Puede ejercer los derechos de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición dirigiéndose a la dirección del remitente que aparece en esta comunicación, de la misma manera que en cualquier momento puede revocar el consentimiento que disteis para dejar de recibir publicidad.',
+    'Pedir_cita' => 'Participa en el sorteo',
+    'Confirma_reserva' => 'Confirma tu reserva',
+    'idioma' => 'es',
+    'titol-gracias'=> "Solicitud de cita previa enviada",
+    'parrafo-1'=> "Su solicitud ha sido enviada. Pronto uno de nuestros operadores se pondrá en contacto con usted.",
+    'parrafo-2'=> "¡Muchas gracias!",
+    'titol-gracias-pedido'=> "Solicitud de pedido enviada",
+    'parrafo-1-pedido'=> "Nuestro equipo ya lo está preparando para su entrega, nos pondremos en contacto contigo si hubiese algun problema.",
+    'volver' => "Volver",
+    'politicas-de-privacidad' => 'politicas-de-privacidad',
+    'codigo' => 'Código',
+    'kit' => 'Kit de implantación',
+    'Pedir_kit' => "PEDIR KIT DE IMPLEMENTACIÓN",
+    'contacto' => "Persona de contacto",
+
+];
