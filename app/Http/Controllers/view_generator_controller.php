@@ -175,6 +175,8 @@ class view_generator_controller extends Controller
             )
         );
 
+        $this->data['rutaAsset'] = $rutaAsset;
+
         //clave de las imagenes en el array data
         $this->data['revision'] = $rutaAsset . $imagen['cita-macro']['revision'];
         $this->data['audio'] = $rutaAsset . $imagen['cita-macro']['audio'];

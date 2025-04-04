@@ -12,7 +12,7 @@
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
 
 
-        <div class="d-flex justify-content-center align-items-start mb-5">
+        <div id="titol-pide-cita" class="d-flex justify-content-center align-items-start mb-5">
             <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
         </div>
 

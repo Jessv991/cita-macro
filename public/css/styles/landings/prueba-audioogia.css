@@ -205,9 +205,9 @@ div#animationdivIcon {
     }
 
     .contenedor-form {
-        padding-left: 20%;
-        padding-right: 20%;
-        padding-top: 25% !important;
+        padding-left: 8%;
+        padding-right: 8%;
+        padding-top: 34% !important;
         position: relative !important;
         height: 80% !important;
     }
@@ -233,6 +233,10 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
+
+    #titol-pide-cita.mb-5 {
+        margin-bottom: 0rem !important;
+    }    
 
 }
 
