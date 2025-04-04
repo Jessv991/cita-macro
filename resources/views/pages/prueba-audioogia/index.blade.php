@@ -4,7 +4,7 @@
         padding: 0;
         height: 100vh;
         width: 99%;
-        background-image: url("{{ asset($data['audio']) }}");
+        background-image: url("{{ asset($data['rutaAsset'] . 'assets/img/prueba-audioogia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img.jpg') }}");
         background-size: 100%;
         background-position: center;
         background-repeat: no-repeat; 
