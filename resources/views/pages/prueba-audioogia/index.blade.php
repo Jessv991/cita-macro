@@ -14,15 +14,14 @@
 
 @include('layouts.header')
 
-<div class="background-container">
-    <div class="background-item">
+<div class="background-container w-100 h-100">
+    <div class="background-item w-100 h-100">
         <div class="col-12">
-            <div class="row">
+            <div class="row w-100 h-100">
                 <div class="col-lg-6 col-12 p-0">
                 </div>
                 <div class="col-lg-6 col-12 mt-lg-0 mt-3">
                     @include('form.pide_cita')
-                    <p class="p-0 m-0 text-center fs-5"><span class="text-danger">*</span>{{ __('mes-audio.alert-centro') }}</p>
                 </div>
             </div>
         </div>    
