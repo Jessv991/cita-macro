@@ -1,4 +1,3 @@
-
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -8,11 +7,6 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
-body {
-    height: 104% !important;
-    overflow-y: auto;
-    overflow-x: hidden;
-}
 
 body::-webkit-scrollbar {
     width: 1px;
@@ -22,19 +16,15 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#icon{
-    width: 100%;
-}
-
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #44c8f1 !important;
+    color: #0e0cea  !important;
 }
 
 a:hover {
-    color: #34aace !important;
+    color: #020c0f !important;
 }
 
 /* 
@@ -58,17 +48,20 @@ a:hover {
                                      */
 
 .contenedor-form {
-    padding: 4%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 10%;
     position: relative !important;
+    height: auto !important;
 }
 
-label > span {
-    color: #fff !important;
+label>span {
+    color: #111010 !important;
 }
 
 .text-top-form {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #454242;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
@@ -102,8 +95,8 @@ div#animationdivIcon {
 }
 
 #gracias {
-    color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #454242;
+    font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -123,39 +116,18 @@ div#animationdivIcon {
 }
 
 .btn-color {
+    background-color: #0086C4 !important;
     width: 234px !important;
     border-radius: 20px !important;
     font-size: 20px;
+
 }
 
-/* 
-███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
-██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
-█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
-██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
-██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
-╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
-                                                   
-*/
+.btn-color:hover {
+    background-color: #5D6569 !important;
+    font-size: 20px;
+}
 
-/* 
-███╗   ███╗ █████╗ ██████╗  █████╗ 
-████╗ ████║██╔══██╗██╔══██╗██╔══██╗
-██╔████╔██║███████║██████╔╝███████║
-██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
-██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
-*/
-
-/* 
-████████╗███████╗███████╗████████╗
-╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
-   ██║   █████╗  ███████╗   ██║   
-   ██║   ██╔══╝  ╚════██║   ██║   
-   ██║   ███████╗███████║   ██║   
-   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
-                                  
-*/
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -167,62 +139,10 @@ div#animationdivIcon {
                                            
  */
 
- @media (max-width: 2000px) {
-    
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
-    /* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (max-width: 2000px) {
 
     .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-    
-}
-
-/* Pantallas Grandes (1200px a 1499px) */
-@media (min-width: 1200px) and (max-width: 1499px) {
-
-    .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -249,7 +169,51 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 25px;
+        padding: 2% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        height: 150vh;
+        width: auto;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 20%;
+        padding-right: 20%;
+        padding-top: 25% !important;
+        position: relative !important;
+        height: 80% !important;
+    }
+
+    .text-top-form {
+        font-size: 25px;
         padding: 2%;
     }
 
@@ -269,14 +233,78 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-    
+
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 30% !important;
+        position: relative !important;
+        height: 80% !important;
+    }
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+    body {
+        height: auto !important;
+        width: auto 0 !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 80% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
     .text-top-form {
-        font-size: 20px;
+        font-size: 22px;
+        padding: 2%;
+    }
+
+    .text-top-form {
+        font-size: 25px;
         padding: 2%;
         margin-top: 50px;
     }
@@ -290,6 +318,28 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto 0 !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 80% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
     .text-top-form {
         margin-top: 65px;
     }
@@ -297,12 +347,34 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+        height: auto !important;
+        width: auto 0 !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+    }
+
+    .contenedor-form {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 120% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
+    }
+
     .text-top-form {
         margin-top: 65px;
     }
@@ -310,10 +382,24 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
-    /* 
+@media (max-width: 1024px) {
+    body {
+      background-size: cover;
+    }
+}
+
+  
+@media (max-width: 600px) {
+    body {
+      background-size: cover;
+      background-position: center;
+    }
+}
+
+/* 
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
     ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
     █████╗  ██║   ██║██████╔╝██╔████╔██║
@@ -322,13 +408,47 @@ div#animationdivIcon {
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
     */
 
-}
 
-@media (min-width: 0px) and (max-width: 480px) {
+@media (max-width: 480px) {
+
+    body {
+        height: 70% !important;
+        width: auto !important;
+        background-size: 100% 80% !important;
+        background-position: center;
+        background-color: #E2E8E8;
+    }
+
+    .contenedor-form {
+        padding-top: 75% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    }    
+    }
 
 }
 
+@media (max-width: 380px) {
+
+    body {
+        height: 70% !important;
+        width: 100% !important;
+        background-size: 100% 100% !important;
+        background-position: center;
+        background-color: #E2E8E8;
+    }
+
+    .contenedor-form {
+        padding-top: 90% !important;
+        position: relative !important;
+        height: 100% !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
