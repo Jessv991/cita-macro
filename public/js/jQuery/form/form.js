@@ -114,6 +114,8 @@ function getCityBySelectState() {
                     if (data.length == 1) {
                         // Si solo hay una ciudad, se selecciona automáticamente
                         $.each(data, function (key, value) {
+                            $('#_weblogin').val(value.weblogin);
+                            $('#_optica').val(value.tienda);
                             $('#ciudad').append('<option value="' + value.d3 + '" selected>' + value.d3 + '</option>');
                             $('#ciudad').addClass('readonly-select');
 
@@ -126,6 +128,8 @@ function getCityBySelectState() {
 
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function (key, value) {
+                            $('#_weblogin').val(value.weblogin);
+                            $('#_optica').val(value.tienda);
                             $('#ciudad').append('<option value="' + value.d3 + '">' + value.d3 + '</option>');
                         });
                     }
@@ -164,6 +168,8 @@ function putOpticasByProvincia(city) {
             $('#optica').empty();
             if (data.length == 1) {
                 $.each(data, function (key, value) {
+                    $('#_weblogin').val(value.weblogin);
+                    $('#_optica').val(value.tienda);
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                     $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                     $('#optica').addClass('readonly-select');
@@ -176,6 +182,8 @@ function putOpticasByProvincia(city) {
                 $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
                 // Agregar opciones de ciudades obtenidas del servidor
                 $.each(data, function (key, value) {
+                    $('#_weblogin').val(value.weblogin);
+                    $('#_optica').val(value.tienda);
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                 });
             }
