@@ -8,6 +8,7 @@
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
+        <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
 
@@ -287,12 +288,12 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var weblogin = $('#_weblogin').val();
-        var optica = $('#_optica').val();
+        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
 
         // Limpiar los campos del formulario
-        if (optica && weblogin) {
+        if (opticaAndWeblogin === 'true?') {
             $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
+            $('#_opticaAndWeblogin').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
             //quita la invalidación del select cuando es un sólo campo
