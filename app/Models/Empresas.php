@@ -292,7 +292,7 @@ class Empresas extends Model
 
         $datos = DB::table("empresas as e")
 
-                ->select('e.d3')
+                ->select('e.d3', 'weblogin', 'tienda')
                 ->distinct()
                 ->join("zonas as z", 'z.id', '=', 'e.d2')
                 ->where('z.id', $codigoProvincia)
@@ -312,7 +312,7 @@ class Empresas extends Model
     public function getStoresByProvincia($localidad){
 
         $datos = DB::table("empresas")
-                ->select('tienda', 'd29', 'd23', 'd3')
+                ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
                 ->where("d19", "=", 'si')
