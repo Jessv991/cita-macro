@@ -1,11 +1,11 @@
 <style>
-    body {
+    .eso {
         margin: 0;
         padding: 0;
         height: 100vh;
         width: 99%;
-        background-image: url("{{ asset($data['rutaAsset'] . 'assets/img/prueba-audioogia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img.jpg') }}");
-        background-size: 100%;
+        background-image: url("{{ asset($data['rutaAsset'] . 'assets/img/prueba-audiologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img.jpg') }}");
+        background-size: contain;
         background-position: center;
         background-repeat: no-repeat; 
     }
@@ -14,7 +14,7 @@
 
 @include('layouts.header')
 
-<div class="background-container w-100 h-100">
+<div class="background-container w-100 h-100 eso">
     <div class="background-item w-100 h-100">
         <div class="col-12">
             <div class="row w-100 h-100">
