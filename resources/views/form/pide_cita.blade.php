@@ -292,7 +292,9 @@
 
         // Limpiar los campos del formulario
         if (optica && weblogin) {
-            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
+            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
+            $('#animationdivIcon').addClass('d-none');
+            $('#optica').removeClass('readonly-select');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
             //quita la invalidación del select cuando es un sólo campo
