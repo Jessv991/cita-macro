@@ -90,7 +90,10 @@ class Zonas extends Model
             ->select('z.a1', 'z.id')
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
-            ->where('e.d20', 'si') 
+            ->where('e.d20', 'si')
+            ->where(function ($query) {     
+                $query->whereIn('e.d9', ['0', '1']);
+            }) 
             ->where('z.id', '!=', 53)
             ->orderBy('nombre', 'asc')
             ->get();
