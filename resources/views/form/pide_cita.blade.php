@@ -8,6 +8,7 @@
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
+        <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
 
@@ -178,7 +179,7 @@
 
                 <div class="b-pedir-citas mt-5">
 
-                    <button id="form" class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</button>
+                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
 
                 </div>
 
@@ -287,20 +288,22 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var weblogin = $('#_weblogin').val();
-        var optica = $('#_optica').val();
+        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
 
         // Limpiar los campos del formulario
-        if (optica && weblogin) {
-            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-            $('#animationdivIcon').addClass('d-none');
-            $('#optica').removeClass('readonly-select');
+        if (opticaAndWeblogin === 'true') {
+            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-            //quita la invalidación del select cuando es un sólo campo
+
+            // Limpiar selects de ciudad y óptica
+            $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
+            $('#optica').html('<option value="">Selecciona una óptica</option>');
+
+            // Quita la invalidación del select cuando es un solo campo
             $('#optica').removeClass('readonly-select');
 
-            //oculta el icono del mapa
+            // Oculta el icono del mapa
             $('#animationdivIcon').addClass('d-none');
         }
 

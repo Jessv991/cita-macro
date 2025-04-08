@@ -22,6 +22,15 @@
     vertical-align: middle;
 }
 
+#gracias {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
 @font-face {
     font-family: 'Darkline';
     src: url('/fonts/Darkline.ttf') format('truetype');
