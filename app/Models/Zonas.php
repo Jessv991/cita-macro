@@ -91,6 +91,9 @@ class Zonas extends Model
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->where('e.d20', "=", 'si')
+            ->where(function ($query) {
+                $query->where('e.d9', '-9');
+            })
             ->where('z.id', '!=', 53)
             ->orderBy('nombre', 'asc')
             ->get();

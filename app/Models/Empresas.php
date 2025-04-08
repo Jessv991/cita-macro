@@ -225,6 +225,9 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
+            ->where(function ($query) {     
+                $query->where('d9', '-9');
+            })
             ->get();
 
         return $datos;
@@ -237,6 +240,9 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
+            ->where(function ($query) {     
+                $query->where('d9', '-9');
+            })
             ->where('weblogin', $weblogin)
             ->get();
 
@@ -250,6 +256,9 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
+            ->where(function ($query) {     
+                $query->where('d9', '-9');
+            })
             ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
             ->get();
@@ -266,6 +275,9 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
+            ->where(function ($query) {     
+                $query->where('d9', '-9');
+            })
             ->where('tienda', $code_store)
             ->get();
 
@@ -309,6 +321,9 @@ class Empresas extends Model
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
             ->where('e.d20', "=", 'si')
+            ->where(function ($query) {     
+                $query->where('e.d9', '-9');
+            })
             ->where("e.weblogin", $weblogin)
             ->whereNotNull("e.f1")
             ->first();
@@ -341,7 +356,7 @@ class Empresas extends Model
                 ->where("e.d22", "=", 'si')
                 ->where("e.d20", "=", 'si')
                 ->where(function ($query) {
-                    $query->where('d9', '-9');
+                    $query->where('e.d9', '-9');
                 })
                 ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
