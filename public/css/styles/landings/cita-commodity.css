@@ -82,6 +82,10 @@ input {
     /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
 
+.form-check-reverse {
+    text-align: left;
+}
+
 /* input:hover {
     box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
 } */
