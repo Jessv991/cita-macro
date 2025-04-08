@@ -291,21 +291,25 @@
         var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
 
         // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true?') {
+        if (opticaAndWeblogin === 'true') {
             $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
-            $('#_opticaAndWeblogin').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-            //quita la invalidación del select cuando es un sólo campo
+
+            // Limpiar selects de ciudad y óptica
+            $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
+            $('#optica').html('<option value="">Selecciona una óptica</option>');
+
+            // Quita la invalidación del select cuando es un solo campo
             $('#optica').removeClass('readonly-select');
 
-            //oculta el icono del mapa
+            // Oculta el icono del mapa
             $('#animationdivIcon').addClass('d-none');
         }
+
 
         // Limpiar el checkbox
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
-
 </script>
