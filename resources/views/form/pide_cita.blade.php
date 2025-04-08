@@ -8,6 +8,7 @@
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
+        <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
 
