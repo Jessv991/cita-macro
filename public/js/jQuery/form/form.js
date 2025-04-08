@@ -323,6 +323,7 @@ function putOpticasByWeblogin() {
 
             console.log(response);
             $('#optica').empty();
+            $('#_opticaAndWeblogin').val('true');
             if (response.length == 1) {
                 $.each(response, function (key, value) {
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
