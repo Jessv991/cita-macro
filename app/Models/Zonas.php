@@ -91,10 +91,8 @@ class Zonas extends Model
             ->where('z.id', '!=', 53)
             ->where('d22', 'si')
             ->where('d19', 'si')
-            ->where(function ($query) {
-                $query->where('d9', '0')
-                    ->orWhere('d9', '1')
-                    ->orWhere('d9', '-9');
+            ->where(function ($query) {     
+                $query->where('d9', '-9');
             })
             ->where('CRM', 'si')
             ->orderBy('nombre', 'asc')
