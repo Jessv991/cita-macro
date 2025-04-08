@@ -265,7 +265,7 @@ class Empresas extends Model
             ->where("e.d22", "=", 'si')
             ->where("e.d19", "=", 'si')
             ->where(function ($query) {
-                $query->where('d9', '-9');
+                $query->where('e.d9', '-9');
             })
             ->where("e.crm", "=", 'si')
             ->whereNotNull("e.f1")
@@ -299,7 +299,7 @@ class Empresas extends Model
                 ->where("e.d22", "=", 'si')
                 ->where("e.d19", "=", 'si')
                 ->where(function ($query) {
-                    $query->where('d9', '-9');
+                    $query->where('e.d9', '-9');
                 })
                 ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
