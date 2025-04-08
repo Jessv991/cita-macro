@@ -89,13 +89,13 @@ class Zonas extends Model
             ->distinct()
             ->join('empresas as e', 'e.d2', '=', 'z.id')
             ->where('z.id', '!=', 53)
-            ->where('d22', 'si')
-            ->where('d19', 'si')
+            ->where('e.d22', 'si')
+            ->where('e.d19', 'si')
             ->where(function ($query) {     
                 $query->where('e.d9', '-9');
             })
-            ->where('CRM', 'si')
-            ->orderBy('nombre', 'asc')
+            ->where('e.CRM', 'si')
+            ->orderBy('z.nombre', 'asc')
             ->get();
 
         return $datos;
