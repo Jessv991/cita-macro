@@ -181,7 +181,6 @@
                             <p class="t-p-circle">{{ __('sol.senior-1') }}</p>
                             <p class="t-p-circle">{{ __('sol.senior-2') }}</p>
                             <p class="t-p-circle">{{ __('sol.senior-3') }}</p>
-                            <p class="t-p-circle">{{ __('sol.senior-4') }}</p>
                         </div>
                     </div>
                 </div>
