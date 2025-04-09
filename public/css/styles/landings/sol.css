@@ -198,7 +198,7 @@ input.form-control::placeholder {
 }
 
 .btn-color2 {
-    width: 142px;
+    width: 169px;
     background-color: #F8D17B;
     color: #4995C2;
     font-size: 21px;
@@ -306,6 +306,10 @@ input.form-control::placeholder {
 
     .contenedor-form {
         padding: 17%;
+    }
+
+    .boton-flotante {
+        height: 13%;
     }
 
 }
