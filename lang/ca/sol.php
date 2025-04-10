@@ -11,7 +11,7 @@ return [
     'infancia-2' => "👶 Els seus ulls encara no s'han desenvolupat i deixen passar més radiació que els d'un adult.",
     'infancia-3' => '🌞 Abans dels 18 anys reben el 80% de la radiació de tota la seva vida.',
     'infancia-4' => ' 🕶️ Les ulleres de sol són essencials per a la seva salut visual.',
-    'joven' => 'JOVES Y ADULTS',
+    'joven' => 'JOVES I ADULTS',
     'joven-1' => 'Les ulleres de sol són salut. La radiació UV sempre hi és present.',
     'joven-2' => "👓 No n'hi ha prou amb portar-les només quan fa sol. Els teus ulls sempre estan exposats!",
     'joven-3' => '🚗 Evita enlluernaments en conduir. Hi ha ulleres de sol amb filtres especials.',
