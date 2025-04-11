@@ -31,13 +31,6 @@
     padding: 5%;
 }
 
-@font-face {
-    font-family: 'Darkline';
-    src: url('/fonts/Darkline.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
 .text-darkline {
     font-family: 'Darkline', sans-serif;
     font-weight: 400;

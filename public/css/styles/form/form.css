@@ -1,3 +1,12 @@
+/* ===========================FUENTE DARKLINE======================= */
+
+@font-face {
+    font-family: 'Darkline';
+    src: url('https://optica.naturaloptics.com/cita-macro/fonts/Darkline.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 /* ===================================SCROLL=================================== */
 
 @media (min-width: 769px) and (max-width: 2000px) {
