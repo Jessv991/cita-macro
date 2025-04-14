@@ -61,6 +61,11 @@
     color: #AF917D;
 }
 
+.img-mb {
+    width: 20% !important;
+    height: 35% !important;
+}
+
 .carousel-section {
     background-color: #F1ECE3;
     height: auto;
