@@ -4,6 +4,7 @@
     $mailOptica = 'j.vasquez@naturalopticsgroup.com';
     $baseUrl = url('/');
     $rutaAsset;
+    $logoOptica = $data['logoOptica'];
 @endphp
 
 @if ($baseUrl !== 'https://audio.naturalopticsgroup.com')
