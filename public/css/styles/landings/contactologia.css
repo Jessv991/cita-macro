@@ -275,10 +275,20 @@
     background-color: #BB6F3F !important;
 }
 
+.form-select {
+    background-color: #F1ECE3 !important;
+    border-radius: .60rem !important;
+}
+
+.form-control {
+    background-color: #F1ECE3 !important;
+    border-radius: .60rem !important;
+}
+
 .contenedor-form {
     padding: 4%;
-    padding-left: 30%;
-    padding-right: 30%;
+    padding-left: 28%;
+    padding-right: 28%;
     position: relative;
     background-color: #BB6F3F !important;
     height: 100% !important;
