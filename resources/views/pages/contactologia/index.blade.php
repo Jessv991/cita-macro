@@ -19,7 +19,7 @@
                         <p id="toggleCarousel2" class="option-btn w-100">{{ __('contactologia.Necesidad') }}</p>
                     </div>
                     <div class="w-75 images-btn-section" style="height: 400px; overflow: hidden;">
-                        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" style="display: none;">
+                        <div id="carouselExample1" class="carousel slide" style="display: none;">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
@@ -37,7 +37,7 @@
                                 <span class="visually-hidden">Next</span>
                             </button>
                         </div>                      
-                        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" style="display: none;">
+                        <div id="carouselExample2" class="carousel slide" style="display: none;">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
@@ -65,7 +65,7 @@
             ?>
                 <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view-mobile'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
                 <p id="toggleCarousel1" class="option-btn-mobile w-70">{{ __('contactologia.Frecuencia') }}</p>
-                <div id="carouselContactologia" class="carousel slide pl-5 pr-5 ml-5 mr-5" data-bs-ride="carousel"> 
+                <div id="carouselContactologia" class="carousel slide pl-5 pr-5 ml-5 mr-5"> 
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active ml-5 mr-5">
                             <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
@@ -84,7 +84,7 @@
                     </div>
                 </div>
                 <p id="toggleCarousel2" class="option-btn-mobile w-100 mt-5">{{ __('contactologia.Necesidad') }}</p>
-                <div id="carouselContactologia2" class="carousel slide pl-5 pr-5 ml-5 mr-5" data-bs-ride="carousel"> 
+                <div id="carouselContactologia2" class="carousel slide pl-5 pr-5 ml-5 mr-5"> 
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active">
                             <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
@@ -96,8 +96,6 @@
                             <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
                         </div>
                     </div>
-                
-                    <!-- Botones de control abajo -->
                     <div class="d-flex justify-content-center mt-3 gap-3">
                         <button class="btn carousel-control-prev-mobile" type="button" data-bs-target="#carouselContactologia2" data-bs-slide="prev">
                             &lt;
@@ -109,8 +107,7 @@
                 </div>                
             <?php
                 }
-            ?>
-                         
+            ?>                         
         </div>
         <div class="regular-questions">
             <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view">{{ __('contactologia.Frecuentes') }}</span></p>
