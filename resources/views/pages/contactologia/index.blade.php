@@ -87,13 +87,13 @@
                 <div id="carouselContactologia2" class="carousel slide pl-5 pr-5 ml-5 mr-5" data-bs-ride="carousel"> 
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active">
-                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
+                            <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-2.png') }}" alt="Imagen 2">
+                            <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-2.png') }}" alt="Imagen 2">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
+                            <img class="d-block mx-auto p-1 img-mb" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
                         </div>
                     </div>
                 
