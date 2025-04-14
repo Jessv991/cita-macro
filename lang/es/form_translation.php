@@ -2,7 +2,7 @@
 
 return [
 
-    'Pide_cita_rellenando' => 'Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
+    'Pide_cita_rellenando' => 'Pide hora rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
     'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
     'Selecciona_una_provincia' => 'Selecciona una provincia',
     'Selecciona_una_ciudad' => 'Selecciona una ciudad',
