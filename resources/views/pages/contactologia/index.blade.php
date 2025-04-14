@@ -67,14 +67,14 @@
                 <p id="toggleCarousel1" class="option-btn-mobile w-100">{{ __('contactologia.Frecuencia') }}</p>
                 <div id="carouselContactologia" class="carousel slide pl-5 pr-5 ml-5 mr-5" data-bs-ride="carousel"> 
                     <div class="carousel-inner text-center">
-                        <div class="carousel-item active">
+                        <div class="carousel-item active ml-5 mr-5">
                             <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
                         </div>
                         <div class="carousel-item">
                             <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2.png') }}" alt="Imagen 2">
                         </div>
                     </div>                
-                    <div class="d-flex justify-content-center mt-3 gap-3">
+                    <div class="d-flex justify-content-center mt-3 gap-3 mr-5 ml-5">
                         <button class="btn carousel-control-prev-mobile" type="button" data-bs-target="#carouselContactologia" data-bs-slide="prev">
                             &lt;
                         </button>
