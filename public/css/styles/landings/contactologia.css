@@ -381,4 +381,13 @@ label>a:hover{
         text-align: center;
     }
 
+    .title-regular {
+        font-size: 40px !important;
+        text-align: center;
+        color: #3f3f3f;
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.3;
+    }
+
 }
