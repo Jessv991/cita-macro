@@ -30,7 +30,9 @@
                     @include('form.pide_cita')
 
                     @if ($logoOptica)
-                        <img class="logo-optica-data" src="{{ __($data['logoOptica']) }}" alt="">
+                        <div class="w-25">
+                            <img class="logo-optica-data w-100" src="{{ __($data['logoOptica']) }}" alt="">
+                        </div>
                     @endif
                 </div>
             </div>
