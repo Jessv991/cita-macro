@@ -1,3 +1,8 @@
+
+@php
+    $logoOptica = $data['logoOptica'];
+@endphp
+
 @include('layouts.header')
 
 <div class="background-container">
