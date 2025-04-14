@@ -3,60 +3,116 @@
 <div class="background-container">
     <div class="background-item">
         <div class="banner-logo text-center">
-            <img class="d-block mx-auto logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/logo.png') }}">
+            <img class="d-block mx-auto logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
         </div>
         <div class="banner-pide-cita">
             <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-pide-cita.jpg') }}">
         </div>
         <div class="text-center carousel-section">
-            <p class="d-block mx-auto pt-5 mb-0 title-carousel">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
-            <div class="text-start btn-area d-flex">
-                <div class="text-option w-25">
-                    <p id="toggleCarousel1" class="option-btn w-100">{{ __('contactologia.Frecuencia') }}</p>
-                    <p id="toggleCarousel2" class="option-btn w-100">{{ __('contactologia.Necesidad') }}</p>
-                </div>
-                <div class="w-75 images-btn-section" style="height: 400px; overflow: hidden;">
-                    <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" style="display: none;">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
+            <?php
+                if($data['tipo_dispositivo']!='mobile') {                   
+            ?>
+                <p class="d-block mx-auto pt-5 mb-0 title-carousel">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
+                <div class="text-start btn-area d-flex">
+                    <div class="text-option w-25">
+                        <p id="toggleCarousel1" class="option-btn w-100">{{ __('contactologia.Frecuencia') }}</p>
+                        <p id="toggleCarousel2" class="option-btn w-100">{{ __('contactologia.Necesidad') }}</p>
+                    </div>
+                    <div class="w-75 images-btn-section" style="height: 400px; overflow: hidden;">
+                        <div id="carouselExample1" class="carousel slide" data-bs-ride="carousel" style="display: none;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2.png') }}" alt="Imagen 2">
+                                </div>
                             </div>
-                            <div class="carousel-item">
-                                <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2.png') }}" alt="Imagen 2">
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>                      
+                        <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" style="display: none;">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-2.png') }}" alt="Imagen 2">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
+                                </div>
                             </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>                      
+                    </div>
+                </div>  
+            <?php
+                } else {                
+            ?>
+                <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
+                <p id="toggleCarousel1" class="option-btn-mobile w-100">{{ __('contactologia.Frecuencia') }}</p>
+                <div id="carouselContactologia" class="carousel slide" data-bs-ride="carousel"> 
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
-                        </button>
-                    </div>                      
-                    <div id="carouselExample2" class="carousel slide" data-bs-ride="carousel" style="display: none;">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-2.png') }}" alt="Imagen 2">
-                            </div>
-                            <div class="carousel-item">
-                                <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
-                            </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2.png') }}" alt="Imagen 2">
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample2" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Previous</span>
+                    </div>
+                
+                    <!-- Botones de control abajo -->
+                    <div class="d-flex justify-content-center mt-3 gap-3">
+                        <button class="btn carousel-control-prev-mobile" type="button" data-bs-target="#carouselContactologia" data-bs-slide="prev">
+                            &lt;
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample2" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="visually-hidden">Next</span>
+                        <button class="btn carousel-control-next-mobile" type="button" data-bs-target="#carouselContactologia" data-bs-slide="next">
+                            &gt;
                         </button>
-                    </div>                      
+                    </div>
                 </div>
-            </div>               
+                <p id="toggleCarousel2" class="option-btn-mobile w-100 mt-5">{{ __('contactologia.Necesidad') }}</p>
+                <div id="carouselContactologia2" class="carousel slide" data-bs-ride="carousel"> 
+                    <div class="carousel-inner text-center">
+                        <div class="carousel-item active">
+                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-2.png') }}" alt="Imagen 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-3.png') }}" alt="Imagen 2">
+                        </div>
+                    </div>
+                
+                    <!-- Botones de control abajo -->
+                    <div class="d-flex justify-content-center mt-3 gap-3">
+                        <button class="btn carousel-control-prev-mobile" type="button" data-bs-target="#carouselContactologia2" data-bs-slide="prev">
+                            &lt;
+                        </button>
+                        <button class="btn carousel-control-next-mobile" type="button" data-bs-target="#carouselContactologia2" data-bs-slide="next">
+                            &gt;
+                        </button>
+                    </div>
+                </div>                
+            <?php
+                }
+            ?>
+                         
         </div>
         <div class="regular-questions">
             <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view">{{ __('contactologia.Frecuentes') }}</span></p>
@@ -134,11 +190,29 @@
         </div>
     </div>
     <footer class="row w-100">
-        <div class="d-flex footer-contact text-center col-12">
-            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity col-4">{{__('contactologia.Politicas-privacidad')}}</a>
-            <img class="d-block mx-auto logo-N col-4" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/logo-N.png') }}" alt="Logo footer">
-            <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies col-4">{{__('contactologia.Politicas-cookies')}}</a>
-        </div>
+        <?php
+            if($data['tipo_dispositivo']!='mobile') {            
+        ?>
+            <div class="d-flex footer-contact text-center col-12">
+                <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity col-4">{{__('contactologia.Politicas-privacidad')}}</a>
+                <img class="d-block mx-auto logo-N col-4" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+                <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies col-4">{{__('contactologia.Politicas-cookies')}}</a>
+            </div>            
+        <?php
+            }else{               
+        ?>
+           <div class="d-flex flex-column align-items-center footer-contact text-center mb-5">
+            <img class="d-block mx-auto logo-N mt-5" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">            
+            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2">
+                {{ __('contactologia.Politicas-privacidad') }}
+            </a>            
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1">
+                {{ __('contactologia.Politicas-cookies') }}
+            </a>
+        </div>        
+        <?php
+            }
+        ?>
     </footer>
 </div>
 

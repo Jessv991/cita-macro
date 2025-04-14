@@ -18,7 +18,22 @@
     line-height: 1.3;
 }
 
+.title-carousel-mobile {
+    font-size: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+    color: #3f3f3f;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
 
+@font-face {
+    font-family: 'Darkline';
+    src: url('/fonts/Darkline.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
 
 .line-view {
     font-family: 'Darkline', sans-serif;
@@ -33,9 +48,23 @@
     color: #AF917D;
 }
 
+.line-view-mobile {
+    font-family: 'Darkline', sans-serif;
+    font-weight: 400;
+    font-size: 88px;
+    line-height: 0.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #AF917D;
+}
+
 .carousel-section {
     background-color: #F1ECE3;
-    height: 950px;
+    height: auto;
+    padding-bottom: 40px;
 }
 
 .option-btn {
@@ -45,6 +74,16 @@
     text-decoration-thickness: 2px;
     font-weight: lighter;
     cursor: pointer;
+}
+
+.option-btn-mobile {
+    font-size: 35px !important;
+    font-weight: normal !important;
+}
+
+.option-btn-mobile::after {
+    content: ":";    
+    text-decoration-thickness: 2px;
 }
 
 .option-btn:hover {
@@ -132,6 +171,18 @@
     opacity: 1;
     transition: all 0.3s ease;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.carousel-control-prev-mobile,
+.carousel-control-next-mobile {
+    background-color: #ffffffcc;
+    border-radius: 50%;
+    opacity: 1;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 70px;
+    height: 70px;
+    font-size: 40px;
 }
 
 .carousel-control-prev-icon,
@@ -301,4 +352,28 @@ label>a:hover{
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1.3;
+}
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+@media (max-width: 1199px) {
+
+    .contenedor-form {
+        padding: 17%;
+    }
+
+    .b-pedir-citas {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
 }
