@@ -16,7 +16,7 @@ return [
     'Pregunta-ninos' => 'Els nens poden fer servir lents de contacte?',
     'Respuesta-ninos' => 'Sí, les lents de contacte són una opció excel·lent per als nens, fins i tot en casos de miopia mitjana o alta. A més, ofereixen un camp de visió més ampli, proporcionant-los més llibertat de moviment.',
     'Pregunta-graduacion' => 'Si tinc molta graduació, puc portar lents de contacte?',
-    'Respuesta-graduacion' => 'I tant! Avui dia hi ha lents de contacte per a gairebé tot tipus de graduació, fins i tot les més altes. A Natural Optics treballem per adaptar-nos a les teves necessitats, i el teu òptic de confiança t\'ajudarà a trobar l\'opció perfecta per a tu.',
+    'Respuesta-graduacion' => 'I tant! Avui dia hi ha lents de contacte per a gairebé tot tipus de graduació, fins i tot les més altes. A <strong>Natural Optics</strong> treballem per adaptar-nos a les teves necessitats, i el teu òptic de confiança t\'ajudarà a trobar l\'opció perfecta per a tu.',
     'Pregunta-ojos-secos' => 'Què passa si tinc els ulls secs o sensibles?',
     'Respuesta-ojos-secos' => 'No et preocupis, hi ha lents de contacte especialment dissenyades per a ulls secs o sensibles, fetes amb materials que retenen millor la humitat. A més, sempre pots hidratar els ulls amb gotes humectants. Consulta el teu òptic de confiança per trobar l\'opció que millor s\'adapti a tu.',
     'Politicas-privacidad' => 'Polítiques de privacitat i avís legal',

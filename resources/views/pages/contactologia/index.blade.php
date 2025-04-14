@@ -169,7 +169,7 @@
                     </h2>
                     <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
-                            {{ __('contactologia.Respuesta-graduacion') }}
+                            {!! __('contactologia.Respuesta-graduacion') !!}
                         </div>
                     </div>
                 </div>
