@@ -21,7 +21,7 @@
         <div>
             @if (!$data['weblogin'])
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                    data-aos-duration="1000">
+                    data-aos-duration="500">
 
                     <select class="form-select @error('provincias') is-invalid @enderror" name="provincias"
                         id="provincias">
@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="ciudad_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="1400">
+                    data-aos-offset="500" data-aos-duration="700">
 
                     <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
                         id="ciudad"></select>
@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="d-flex align-items-center">
                     <div class="optica_div mt-1" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                        data-aos-offset="500" data-aos-duration="1800">
+                        data-aos-offset="500" data-aos-duration="900">
 
                         <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
                             <option value=""></option>
@@ -131,7 +131,7 @@
 
 
             <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="2200">
+                data-aos-offset="500" data-aos-duration="1100">
 
                 <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
                     id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
@@ -139,7 +139,7 @@
             </div>
 
             <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="2600">
+                data-aos-offset="500" data-aos-duration="1300">
 
                 <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
                     id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
@@ -147,7 +147,7 @@
             </div>
 
             <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="3000">
+                data-aos-duration="1500">
 
                 <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
                     id="email" placeholder='{{ __('form_translation.Email') }}'>
@@ -155,7 +155,7 @@
             </div>
 
             <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="3000">
+                data-aos-duration="1700">
 
                 <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
                     id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
