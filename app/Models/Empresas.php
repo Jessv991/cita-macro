@@ -320,11 +320,13 @@ class Empresas extends Model
 
             ->select("e.f1")
             ->join("direcciones as d", 'd.empresa', '=', 'e.codigo')
-            ->where('e.d20', "=", 'si')
-            ->where(function ($query) {     
+            ->where("e.weblogin", $weblogin)
+            ->where("e.d22", "=", 'si')
+            ->where("e.d20", "=", 'si')
+            ->where(function ($query) {
                 $query->where('e.d9', '-9');
             })
-            ->where("e.weblogin", $weblogin)
+            ->where("e.crm", "=", 'si')
             ->whereNotNull("e.f1")
             ->first();
 
