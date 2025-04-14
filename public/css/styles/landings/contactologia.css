@@ -392,6 +392,12 @@ label>a:hover{
 
     .text-top-form {
         font-size: larger !important;
+        margin: 0 !important;
+    }
+
+    .logo{
+        width: 30%;
+        height: 30%;
     }
 
 }
