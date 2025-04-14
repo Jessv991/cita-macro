@@ -63,7 +63,7 @@
             <?php
                 } else {                
             ?>
-                <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
+                <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view-mobile'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
                 <p id="toggleCarousel1" class="option-btn-mobile w-70">{{ __('contactologia.Frecuencia') }}</p>
                 <div id="carouselContactologia" class="carousel slide pl-5 pr-5 ml-5 mr-5" data-bs-ride="carousel"> 
                     <div class="carousel-inner text-center">
