@@ -65,7 +65,7 @@
             ?>
                 <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">{{ __('contactologia.Tipo-lentillas') }}<span class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}</p>
                 <p id="toggleCarousel1" class="option-btn-mobile w-100">{{ __('contactologia.Frecuencia') }}</p>
-                <div id="carouselContactologia" class="carousel slide" data-bs-ride="carousel"> 
+                <div id="carouselContactologia" class="carousel slide pl-5 pr-5" data-bs-ride="carousel"> 
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active">
                             <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn1.png') }}" alt="Imagen 1">
@@ -73,9 +73,7 @@
                         <div class="carousel-item">
                             <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/btn2.png') }}" alt="Imagen 2">
                         </div>
-                    </div>
-                
-                    <!-- Botones de control abajo -->
+                    </div>                
                     <div class="d-flex justify-content-center mt-3 gap-3">
                         <button class="btn carousel-control-prev-mobile" type="button" data-bs-target="#carouselContactologia" data-bs-slide="prev">
                             &lt;
@@ -86,7 +84,7 @@
                     </div>
                 </div>
                 <p id="toggleCarousel2" class="option-btn-mobile w-100 mt-5">{{ __('contactologia.Necesidad') }}</p>
-                <div id="carouselContactologia2" class="carousel slide" data-bs-ride="carousel"> 
+                <div id="carouselContactologia2" class="carousel slide pl-5 pr-5" data-bs-ride="carousel"> 
                     <div class="carousel-inner text-center">
                         <div class="carousel-item active">
                             <img class="d-block mx-auto p-1" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/desktop'. '/' . $data['idioma'] . '/btn2-1.png') }}" alt="Imagen 1">
