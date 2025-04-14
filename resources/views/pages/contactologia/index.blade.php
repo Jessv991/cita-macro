@@ -6,7 +6,17 @@
             <img class="d-block mx-auto logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
         </div>
         <div class="banner-pide-cita">
-            <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-pide-cita.jpg') }}">
+            <?php
+                if($data['idioma']=='es'){
+            ?>
+                <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-pide-cita.jpg') }}">
+            <?php
+                }else{
+            ?>
+                <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-pide-cita.png') }}">
+            <?php
+                }
+            ?>
         </div>
         <div class="text-center carousel-section">
             <?php
