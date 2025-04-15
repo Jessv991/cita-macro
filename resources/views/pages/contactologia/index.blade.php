@@ -17,6 +17,17 @@
             <?php
                 }
             ?>
+            <?php
+                if(isset($data['sorteo']) && $data['tipo_dispositivo']!='mobile'){
+            ?>  
+                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo.png') }}">
+            <?php
+                }elseif (isset($data['sorteo'])) {
+            ?>
+                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo-movil.png') }}">
+            <?php
+                }
+            ?>
         </div>
         <div class="text-center carousel-section">
             <?php
