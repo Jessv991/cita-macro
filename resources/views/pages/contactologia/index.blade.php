@@ -131,7 +131,7 @@
             ?>                         
         </div>
         <div class="regular-questions">
-            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view">{{ __('contactologia.Frecuentes') }}</span></p>
+            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view-mobile">{{ __('contactologia.Frecuentes') }}</span></p>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -205,6 +205,16 @@
                 </div>
         </div>
     </div>
+    <?php
+        if($data['tipo_dispositivo']=='mobile') {
+    ?>
+    <button class="btn btn-participa position-fixed bottom-0 start-50 translate-middle-x w-100" onclick="scrollToForm()">
+        ¡Participa aqui!
+      </button>
+    <?php
+        }
+    ?>
+        
     <footer class="row w-100">
         <?php
             if($data['tipo_dispositivo']!='mobile') {            
@@ -235,6 +245,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+
+    function scrollToForm() {
+      const form = document.getElementById("formMacroContactologia");
+      form.scrollIntoView({ behavior: "smooth" });
+    }
+
     const carousel1 = document.getElementById("carouselExample1");
     const carousel2 = document.getElementById("carouselExample2");
     const toggleButton1 = document.getElementById("toggleCarousel1");
