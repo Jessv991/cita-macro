@@ -48,19 +48,6 @@
     color: #AF917D;
 }
 
-.line-view-mobile {
-    font-family: 'Darkline', sans-serif;
-    font-weight: 400;
-    font-size: 70px;
-    line-height: 0.2;
-    letter-spacing: -0.01em;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 0;
-    margin-bottom: 0;
-    color: #AF917D;
-}
-
 .img-mb {
     width: 80% !important;
     height: 80% !important;
@@ -431,6 +418,19 @@ label>a:hover{
 
     footer {
         margin-bottom: 10px;
+    }
+
+    .line-view {
+        font-family: 'Darkline', sans-serif;
+        font-weight: 400;
+        font-size: 70px;
+        line-height: 0.2;
+        letter-spacing: -0.01em;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 0;
+        margin-bottom: 0;
+        color: #AF917D;
     }
 
 }

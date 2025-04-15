@@ -131,7 +131,7 @@
             ?>                         
         </div>
         <div class="regular-questions">
-            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view-mobile">{{ __('contactologia.Frecuentes') }}</span></p>
+            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span class="line-view">{{ __('contactologia.Frecuentes') }}</span></p>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
