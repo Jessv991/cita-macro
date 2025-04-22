@@ -26,6 +26,15 @@ Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
     
 })->name('politicas.privacidad');
 
+//ruta politcas de privacidad
+Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
+    }
+    App::setLocale($locale);
+    return view('pages.sorteo.index');
+    
+})->name('sorteo.bases');
 
 //ruta cookies
 Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {

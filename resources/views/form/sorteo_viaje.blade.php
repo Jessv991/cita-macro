@@ -184,7 +184,7 @@
 
                     <label class="form-check-label" for="reverseCheck2">
                         <span>{{ __('contactologia.Aceptar_politicas_privacidad_1') }}</span>
-                        <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
+                        <a href="{{ route('sorteo.bases', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                             {{ __('contactologia.Aceptar_politicas_sorteo') }}
                         </a>                        
