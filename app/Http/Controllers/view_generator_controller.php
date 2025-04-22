@@ -194,7 +194,7 @@ class view_generator_controller extends Controller
         if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
         } else {//redirigimos a vista principal si no existe la ruta
-            return redirect('https://optica.naturaloptics.com/cita-macro-optica/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
+           return redirect('https://optica.naturaloptics.com/cita-macro-optica/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
         }
 
 
