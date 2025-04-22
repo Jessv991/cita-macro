@@ -109,7 +109,7 @@
             ?>
             <p class="d-block mx-auto pt-5 mb-0 title-carousel-mobile mb-5">
                 {{ __('contactologia.Tipo-lentillas') }}<span
-                    class='line-view-mobile'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}
+                    class='line-view'>{{ __('contactologia.lentillas') }}</span>{{ __('contactologia.Tipo-lentillas-2') }}
             </p>
             <p id="toggleCarousel1" class="option-btn-mobile w-70">{{ __('contactologia.Frecuencia') }}</p>
             <div id="carouselContactologia" class="carousel slide pl-5 pr-5 ml-5 mr-5">
@@ -171,8 +171,8 @@
             ?>
         </div>
         <div class="regular-questions">
-            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span
-                    class="line-view">{{ __('contactologia.Frecuentes') }}</span></p>
+            <p class="d-block mx-auto pt-5 mb-0 title-regular">{{ __('contactologia.Preguntas') }}<span 
+                    class="line-view">@if ($data['tipo_dispositivo'] == 'mobile')<br>@endif{{ __('contactologia.Frecuentes') }}</span></p>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
                     <h2 class="accordion-header" id="headingOne">
@@ -261,7 +261,7 @@
     ?>
     <button class="btn btn-participa position-fixed bottom-0 start-50 translate-middle-x w-100"
         onclick="scrollToForm()">
-        ¡Participa aqui!
+        {{ __('form_translation.Pedir_cita') }}
     </button>
     <?php
         }

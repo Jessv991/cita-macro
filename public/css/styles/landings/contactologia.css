@@ -375,6 +375,10 @@ label>a:hover{
     color: white;
   }
 
+  .salto-linea {
+    word-break: normal;
+  }
+
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
 ██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
@@ -388,8 +392,13 @@ label>a:hover{
 @media (max-width: 1199px) {
 
     .contenedor-form {
-        padding: 17%;
+        padding: 21%;
     }
+
+    .line-break::after {
+        content: "\A";
+        white-space: pre;
+      }
 
     .b-pedir-citas {
         align-items: center;
@@ -431,6 +440,10 @@ label>a:hover{
         margin-top: 0;
         margin-bottom: 0;
         color: #AF917D;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
     }
 
 }
