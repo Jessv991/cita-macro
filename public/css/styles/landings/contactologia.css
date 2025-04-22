@@ -392,7 +392,7 @@ label>a:hover{
 @media (max-width: 1199px) {
 
     .contenedor-form {
-        padding: 21%;
+        padding: 12% !important;
     }
 
     .line-break::after {
