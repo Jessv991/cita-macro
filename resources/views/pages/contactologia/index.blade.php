@@ -1,7 +1,9 @@
 @include('layouts.header')
 
 <div class="background-container">
-    @include('form.boton_flotante')
+    @if ($data['tipo_dispositivo'] == 'desktop')
+        @include('form.boton_flotante')
+    @endif
     <div class="background-item">
         <div class="banner-logo text-center">
             <img class="d-block mx-auto logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
@@ -22,12 +24,14 @@
             ?>
             <?php
                 if(isset($data['sorteo']) && $data['tipo_dispositivo']!='mobile'){
-            ?>  
-                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo.png') }}">
+            ?>
+            <img class="d-block mx-auto w-100 h-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo.png') }}">
             <?php
                 }elseif (isset($data['sorteo'])) {
             ?>
-                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo-movil.png') }}">
+            <img class="d-block mx-auto w-100 h-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo-movil.png') }}">
             <?php
                 }
             ?>
@@ -255,13 +259,14 @@
     <?php
         if($data['tipo_dispositivo']=='mobile') {
     ?>
-    <button class="btn btn-participa position-fixed bottom-0 start-50 translate-middle-x w-100" onclick="scrollToForm()">
+    <button class="btn btn-participa position-fixed bottom-0 start-50 translate-middle-x w-100"
+        onclick="scrollToForm()">
         ¡Participa aqui!
-      </button>
+    </button>
     <?php
         }
     ?>
-        
+
     <footer class="row w-100">
         <?php
             if($data['tipo_dispositivo']!='mobile') {            
@@ -296,10 +301,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-
     function scrollToForm() {
-      const form = document.getElementById("formMacroContactologia");
-      form.scrollIntoView({ behavior: "smooth" });
+        const form = document.getElementById("formMacroContactologia");
+        form.scrollIntoView({
+            behavior: "smooth"
+        });
     }
 
     const carousel1 = document.getElementById("carouselExample1");
@@ -341,6 +347,5 @@
             scrollTop: $('#formMacroContactologia').offset().top
         }, 300);
     });
-    
 </script>
 @include('layouts.footer')
