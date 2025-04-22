@@ -89,6 +89,8 @@ class view_generator_controller extends Controller
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
 
+        $sorteo = request()->query('sorteo'); //(esto está recibiendo test por get)
+
         $empresas = new Empresas();
         $zonas = new Zonas();
         $baseUrl = url('/');
@@ -134,6 +136,9 @@ class view_generator_controller extends Controller
 
         //=====================TEST=====================
         $this->data['test'] = $test;
+
+        //=====================SORTEO=====================
+        $this->data['sorteo'] = $sorteo;
 
         //=====================PROVINCIA=====================
 

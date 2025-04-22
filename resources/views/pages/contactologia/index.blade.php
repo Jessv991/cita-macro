@@ -20,6 +20,17 @@
             <?php
                 }
             ?>
+            <?php
+                if(isset($data['sorteo']) && $data['tipo_dispositivo']!='mobile'){
+            ?>  
+                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo.png') }}">
+            <?php
+                }elseif (isset($data['sorteo'])) {
+            ?>
+                    <img class="d-block mx-auto w-100 h-100" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner-sorteo-movil.png') }}">
+            <?php
+                }
+            ?>
         </div>
         <div class="text-center carousel-section">
             <?php
@@ -241,6 +252,16 @@
             </div>
         </div>
     </div>
+    <?php
+        if($data['tipo_dispositivo']=='mobile') {
+    ?>
+    <button class="btn btn-participa position-fixed bottom-0 start-50 translate-middle-x w-100" onclick="scrollToForm()">
+        ¡Participa aqui!
+      </button>
+    <?php
+        }
+    ?>
+        
     <footer class="row w-100">
         <?php
             if($data['tipo_dispositivo']!='mobile') {            
@@ -275,6 +296,12 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 <script>
+
+    function scrollToForm() {
+      const form = document.getElementById("formMacroContactologia");
+      form.scrollIntoView({ behavior: "smooth" });
+    }
+
     const carousel1 = document.getElementById("carouselExample1");
     const carousel2 = document.getElementById("carouselExample2");
     const toggleButton1 = document.getElementById("toggleCarousel1");
