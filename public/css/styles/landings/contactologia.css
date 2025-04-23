@@ -3,9 +3,24 @@
 }
 
 .logo {
-    width: 12%;
-    height: 12%;
-    padding: 10px;
+    max-width: 150px;
+    height: auto;
+}
+
+#btn-flotante {
+    margin-left: 20px;
+}
+
+.img-logo{
+    align-items: left;
+    justify-content: left;
+    display: inline-block;
+}
+
+.btn-position{
+    align-items: right;
+    justify-content: right;
+    text-align: right;
 }
 
 .title-carousel {
@@ -304,6 +319,23 @@ label>a:hover{
     border-radius: 20px;
     width: 200px;
     font-size: x-large;
+}
+
+.btn-color-cita {
+    border: 1px solid #F1ECE3;
+    color: #F1ECE3;
+    border-radius: 20px;
+    margin: 25px;
+    width: 150px;
+}
+
+.btn-color-cita:hover {
+    background-color: #774627;
+    border: 1px solid #F1ECE3;
+    color: #F1ECE3;
+    border-radius: 20px;
+    margin: 25px;
+    width: 150px;
 }
 
 .btn-color:hover {

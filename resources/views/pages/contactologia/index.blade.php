@@ -1,13 +1,21 @@
 @include('layouts.header')
 
 <div class="background-container">
-    @if ($data['tipo_dispositivo'] == 'desktop')
-        @include('form.boton_flotante')
-    @endif
     <div class="background-item">
+        @if ($data['tipo_dispositivo']=='mobile')
         <div class="banner-logo text-center">
             <img class="d-block mx-auto logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
         </div>
+        @else
+        <div class="banner-logo sticky-top d-flex justify-content-between align-items-center">
+            <div class="img-logo">
+                <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}" alt="Logo">
+            </div>
+            <div class="btn-position">
+                <button id="btn-flotante" class="btn btn-color-cita">{{ __('form_translation.Pedir_cita') }}</button>
+            </div>
+        </div> 
+        @endif
         <div class="banner-pide-cita">
             <?php
                 if($data['idioma']=='es'){
