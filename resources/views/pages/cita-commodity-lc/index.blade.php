@@ -9,7 +9,7 @@
                     <img class="w-100 h-100 active" src="{{ asset($data['LC']) }}">
                 </div>
                 <div class="style-form col-lg-4 col-12 mt-lg-0 mt-3">
-                    @include('form.pide_cita')
+                    @include('form.form_lc')
                 </div>
             </div>
         </div>

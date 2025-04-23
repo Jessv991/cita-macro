@@ -89,11 +89,17 @@ class view_generator_controller extends Controller
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
 
-        $sorteo = request()->query('sorteo'); //(esto está recibiendo test por get)
+        $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
 
         $empresas = new Empresas();
         $zonas = new Zonas();
         $baseUrl = url('/');
+
+        //=====================VARIABLES DE FORM_LC==========================
+        $clicodi = "";
+		$codimkt = "";
+		$mktid = "";
+        $item = "";
 
         /* 
             ████████╗██╗███████╗███╗   ██╗██████╗  █████╗ ███████╗
@@ -141,12 +147,16 @@ class view_generator_controller extends Controller
         $this->data['sorteo'] = $sorteo;
 
         //=====================PROVINCIA=====================
-
+        
         $this->data['weblogin'] = $weblogin;
-
+        
         $this->data['provincias'] = $zonas->getProvincias();
-
+        
         $this->data['origin'] = $origin;
+        
+        //=====================DATA PARA FORM_LC=====================
+        
+        $this->data['axaptamailparams'] = array($mktid, $codimkt, $item);
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
