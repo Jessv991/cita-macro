@@ -341,7 +341,7 @@
     });
 
     $('#btn-flotante').on('click', function(e) {
-        e.preventDefault(); // Evita comportamiento por defecto, si es un <a>
+        e.preventDefault(); //Evita comportamiento por defecto, si es un <a>
 
         $('html, body').animate({
             scrollTop: $('#formMacroContactologia').offset().top
