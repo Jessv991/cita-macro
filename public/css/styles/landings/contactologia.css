@@ -3,12 +3,12 @@
 }
 
 .logo {
-    max-width: 150px;
-    height: auto;
+    max-width: 150px !important;
+    height: auto !important;
 }
 
 #btn-flotante {
-    margin-left: 20px;
+    margin-left: 20px !important;
 }
 
 .img-logo{
@@ -322,20 +322,20 @@ label>a:hover{
 }
 
 .btn-color-cita {
-    border: 1px solid #F1ECE3;
-    color: #F1ECE3;
-    border-radius: 20px;
-    margin: 25px;
-    width: 150px;
+    border: 1px solid #F1ECE3 !important;
+    color: #F1ECE3 !important;
+    border-radius: 20px !important;
+    margin: 25px !important;
+    width: 150px !important;
 }
 
 .btn-color-cita:hover {
-    background-color: #774627;
-    border: 1px solid #F1ECE3;
-    color: #F1ECE3;
-    border-radius: 20px;
-    margin: 25px;
-    width: 150px;
+    background-color: #774627 !important;
+    border: 1px solid #F1ECE3 !important;
+    color: #F1ECE3 !important;
+    border-radius: 20px !important;
+    margin: 25px !important;
+    width: 150px !important;
 }
 
 .btn-color:hover {
