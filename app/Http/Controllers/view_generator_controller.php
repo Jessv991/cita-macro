@@ -51,8 +51,8 @@ class view_generator_controller extends Controller
             $tipo_dispositivo = isset($_COOKIE['orientacion']) ? $_COOKIE['orientacion'] : 'desktop';
         } else {
             $tipo_dispositivo = 'desktop';
-        } 
- 
+        }
+
         $this->data['tipo_dispositivo'] = $tipo_dispositivo;
 
         //tipo de dispositivo me da el navegador que se está usando
@@ -79,15 +79,26 @@ class view_generator_controller extends Controller
         $this->data['ip'] = $ip;
     }
 
-    public function index($locale, $origen, $weblogin = null, $tienda = null)
+    public function index($locale, $origen, $weblogin = null, $tienda = null, $extra1 = null, $extra2 = null, $extra3 = null, $extra4 = null, $extra5 = null, $extra6 = null)
     {
-        //hacer test en ruta: ?test=true
+
+        $segments = request()->segments();
+        //dd($segments);
+
+        if (isset($segments[5]) && isset($segments[6])) {
+            $weblogin = $segments[5];
+            $tienda = str_replace('tiecodi_', '', $segments[6]);
+        } elseif (isset($segments[5])) {
+            $weblogin = $segments[5];
+        }
+
+        //dd($segments[5], $weblogin, $tienda);
 
         $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
         $weblogin = str_replace(' ', '', $weblogin);
 
-        $test = request()->query('test'); //(esto está recibiendo test por get)
+        $test = request()->query('test'); //(esto está recibiendo test por get)  //hacer test en ruta: ?test=true
 
         $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
 
@@ -96,10 +107,18 @@ class view_generator_controller extends Controller
         $baseUrl = url('/');
 
         //=====================VARIABLES DE FORM_LC==========================
+        $typeLC = "";
         $clicodi = "";
-		$codimkt = "";
-		$mktid = "";
-        $item = "";
+        $mktid = "";
+
+        $clicodi = str_replace('clicodi_', '', $segments[7]);
+        $mktid = str_replace('mktid_', '', $segments[8]);
+        $item = str_replace('item_', '', $segments[9]);
+        
+       
+
+
+
 
         /* 
             ████████╗██╗███████╗███╗   ██╗██████╗  █████╗ ███████╗
@@ -131,11 +150,16 @@ class view_generator_controller extends Controller
         $this->data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         //=====================MAPAS=====================
-        
+
         $this->data['mapa'] = file_get_contents("https://www.naturalopticsgroup.com/mapa/features.json");
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
-        $this->data['landing'] = $origen;
+
+        if ($segments[3] === 'lc') {
+            $this->data['landing'] = 'lc';
+        } else {
+            $this->data['landing'] = $origen;
+        }
 
         //================OPTICA=================
         $this->data['optica'] = $tienda;
@@ -147,27 +171,27 @@ class view_generator_controller extends Controller
         $this->data['sorteo'] = $sorteo;
 
         //=====================PROVINCIA=====================
-        
+
         $this->data['weblogin'] = $weblogin;
-        
+
         $this->data['provincias'] = $zonas->getProvincias();
-        
+
         $this->data['origin'] = $origin;
-        
+
         //=====================DATA PARA FORM_LC=====================
-        
-        $this->data['axaptamailparams'] = array($mktid, $codimkt, $item);
+
+        $this->data['axaptamailparams'] = array($mktid, $item);
+
+        dd($item);
 
         //=====================RUTAS SEGÚN BASEURL=====================
 
         if ($baseUrl !== 'https://optica.naturaloptics.com') {
 
             $rutaAsset = '';
-
         } else {
 
             $rutaAsset = 'cita-macro/';
-
         }
 
         //=====================IMAGENES=====================
@@ -175,15 +199,17 @@ class view_generator_controller extends Controller
         $imagen = array(
             'cita-optica' => array(
                 'OPTICA' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/OPTICA.jpg',
-                'LC' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/img.jpg',
+                'LC' => 'assets/img/cita-commodity/lc/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/img.jpg',
                 'cumple' => 'assets/img/' . $origen . '/' . $this->data['tipo_dispositivo'] . '/' . $locale . '/cumple.jpg'
             )
         );
 
         //clave de las imagenes en el array data
         $this->data['rutaAsset'] = $rutaAsset;
+        $this->data['lc'] = $segments[3];
         $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
         $this->data['LC'] = $rutaAsset . $imagen['cita-optica']['LC'];
+        //dd($this->data['LC']);
         $this->data['cumple'] = $rutaAsset . $imagen['cita-optica']['cumple'];
 
         //=====================LOGO=====================
@@ -191,31 +217,71 @@ class view_generator_controller extends Controller
         $logo = $empresas->getLogos($weblogin);
 
         // Verificar que $logo no sea null antes de pasarlo a la vista
-        if($logo){
+        if ($logo) {
             $this->data['logo'] = $logo->f1;
-        }else {
-            $this->data['logo'] = ''; 
+        } else {
+            $this->data['logo'] = '';
         }
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
-        }else{
+            $logoOptica = asset($rutaAsset . '/assets/logos/opticas/' . $getLogo);
+        } else {
             $logoOptica = null;
         }
-        
+
         $this->data['logoOptica'] = $logoOptica;
 
-
-        if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
+        /* 
+        switch ($segments[2]) {
+            case 'cita-commodity':
+                switch ($segments[3]) {
+                    case 'lc':
+                        return view('pages.' . $segments[2] . '.' . $segments[3]  . '.index', ['data' => $this->data]);
+                        break;
+                    
+                    default:
+                    return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
+                        break;
+                }
+                break;
+            default:
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
-        } else {//redirigimos a vista principal si no existe la ruta
-           return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
+                break;
+        }
+        */
+
+
+        if (isset($segments[3])) {
+            $ruta = 'pages.' . $segments[2] . '.' . $segments[3]  . '.index';
+        } else {
+            $ruta = 'pages.' . $origen . '.index';
         }
 
-
+        if (view()->exists($ruta)) { //verificamos si la ruta existe
+            return view($ruta, ['data' => $this->data]);
+        } else { //redirigimos a vista principal si no existe la ruta
+            return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
+        }
     }
+
+    public function indexLC()
+    {
+
+        $segments = request()->segments();
+        dd($segments);
+
+        if (view()->exists('pages.' . $segments[2] . '.' . $segments[3] . '.index')) { //verificamos si la ruta existe
+
+            /* $esto= view('pages.' . $segments[2] .'.' . $segments[3] . '.index', ['data' => $this->data]);
+            dd($esto); */
+            return view('pages.' . $segments[2] . '.' . $segments[3]  . '.index', ['data' => $this->data]);
+        } else { //redirigimos a vista principal si no existe la ruta
+            return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
+        }
+    }
+
 
 
     /* 
@@ -352,8 +418,9 @@ class view_generator_controller extends Controller
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 
-    public function validateKit(Request $request){
-        
+    public function validateKit(Request $request)
+    {
+
         $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
@@ -380,7 +447,5 @@ class view_generator_controller extends Controller
         $this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
-
     }
-
 }

@@ -2,7 +2,6 @@
 
 return [
 
-    'Pide_cita_rellenando' => 'Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
     'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
     'Selecciona_una_provincia' => 'Selecciona una provincia',
     'Selecciona_una_ciudad' => 'Selecciona una ciudad',
@@ -37,4 +36,6 @@ return [
     'TelefonoFijo' => 'Teléfono fijo',
     'Pedir_cita' => 'Confirma tú reserva',
     'Nombre' => 'Nombre',
+    'Pide_cita_rellenando' => 'A continuación detallamos los datos de tu reserva para que nos confirmes si todos son correctos. Si deseas modificar alguno, puedes hacerlo directamente en el formulario.',
+    'Producto_adquirido' => 'Tu último producto adquirido fué:',
 ];

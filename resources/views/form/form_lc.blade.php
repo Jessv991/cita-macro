@@ -13,8 +13,9 @@
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
 
 
-        <div class="d-flex justify-content-center align-items-start mb-5">
+        <div class="d-flex flex-column justify-content-center align-items-start mb-5">
             <p class="text-top-form">{{ __('form_lc_translation.Pide_cita_rellenando') }}</p>
+            <p class="text-top-form">{{ __('form_lc_translation.Producto_adquirido') }}</p>
         </div>
 
 
@@ -137,7 +138,7 @@
                             </div>
                         </td>
                         <td>
-                            <div id="animationdivIcon"><a href="" id="coordsGoogleMaps" target="_blank"><img class="icon-map" src="{{ asset($data['rutaAsset'] . 'assets/iconos/map/maps.png') }}" /></a></div>
+                            <a href="" id="coordsGoogleMaps" target="_blank"><img class="icon-map" src="{{ asset($data['rutaAsset'] . 'assets/iconos/map/maps.png') }}" /></a>
                         </td>
                     </tr>
                 </table>

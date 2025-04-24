@@ -39,7 +39,7 @@ Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
     return view('pages/cookies/index');
 })->name('politicas.cookies');
 
-Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($locale, $origen, $weblogin = null, $tienda = null) {
+Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}/{extra1?}/{extra2?}/{extra3?}/{extra4?}/{extra5?}/{extra6?}', function ($locale, $origen, $weblogin = null, $tienda = null, $extra1 = null, $extra2 = null, $extra3 = null, $extra4 = null, $extra5 = null, $extra6 = null) {
 
 
     if (!in_array($locale, ['en', 'es', 'ca'])) {
@@ -48,7 +48,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
 
     App::setLocale($locale);
 
-    return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
+    return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda, $extra1, $extra2, $extra3, $extra4, $extra5, $extra6);
 })->name('vistaLanding');
 
 
