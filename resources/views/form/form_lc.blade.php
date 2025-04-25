@@ -4,7 +4,9 @@
 
         @csrf
         <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
-        {{-- <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}"> --}}
+        <input type="hidden" id="typeLC" name="typeLC" value="{{ $data['typeLC'] }}">
+        <input type="hidden" id="clicodi" name="clicodi" value="{{ $data['clicodi'] }}">
+        <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
@@ -27,6 +29,7 @@
 
                     <input class="form-control @error('producto') is-invalid @enderror" type="text" name="producto"
                         id="producto" disabled value="{{ $data['axaptamailparams'][1] }}">
+                    <input type="hidden" name="productoHidden" value="{{ $data['axaptamailparams'][1] }}">
                 </div>
             @endif
 

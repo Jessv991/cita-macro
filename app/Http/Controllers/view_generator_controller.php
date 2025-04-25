@@ -110,11 +110,7 @@ class view_generator_controller extends Controller
         $baseUrl = url('/');
 
         //=====================VARIABLES DE FORM_LC==========================
-        $typeLC = "";
-        $clicodi = "";
         $mktid = "";
-
-        //dd($typeLC);
 
 
 
@@ -228,14 +224,16 @@ class view_generator_controller extends Controller
         $this->data['rutaAsset'] = $rutaAsset;
 
         if(isset($segments[3])){
-            $typeLC = $segments[4];
-            $clicodi = str_replace('clicodi_', '', $segments[7]);
+            $this->data['typeLC'] = $segments[4];
+            $this->data['clicodi'] = str_replace('clicodi_', '', $segments[7]);
             $mktid = str_replace('mktid_', '', $segments[8]);
             $item = str_replace('item_', '', $segments[9]);
             $this->data['lc'] = $segments[3];
             $this->data['axaptamailparams'] = array($mktid, $item);
-
+        }else{
+            $this->data['typeLC'] = 'ordinario';
         }
+
         $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
         $this->data['LC'] = $rutaAsset . $imagen['cita-optica']['LC'];
         //dd($this->data['LC']);
@@ -262,12 +260,12 @@ class view_generator_controller extends Controller
 
         $this->data['logoOptica'] = $logoOptica;
 
-        if ($typeLC === 'email' && $weblogin && $tienda && $clicodi) {
+        if ($this->data['typeLC'] === 'email' && $weblogin && $tienda && $this->data['clicodi']) {
 
             $response = Http::asForm()->post('http://tienda.naturaloptics.com/Mailings/Contactologia/dbquery/index.php/?query=mail', [
                 'weblogin' => $weblogin,
                 'tiecodi' => $tienda,
-                'clicodi' => $clicodi,
+                'clicodi' => $this->data['clicodi'],
             ]);
 
             $serverOutput = $response->json();
@@ -305,24 +303,6 @@ class view_generator_controller extends Controller
             return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
         }
     }
-
-    public function indexLC()
-    {
-
-        $segments = request()->segments();
-        dd($segments);
-
-        if (view()->exists('pages.' . $segments[2] . '.' . $segments[3] . '.index')) { //verificamos si la ruta existe
-
-            /* $esto= view('pages.' . $segments[2] .'.' . $segments[3] . '.index', ['data' => $this->data]);
-            dd($esto); */
-            return view('pages.' . $segments[2] . '.' . $segments[3]  . '.index', ['data' => $this->data]);
-        } else { //redirigimos a vista principal si no existe la ruta
-            return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
-        }
-    }
-
-
 
     /* 
     ██████╗  ██████╗ ███████╗████████╗     ██████╗██╗██╗   ██╗██████╗  █████╗ ██████╗ 
@@ -410,6 +390,7 @@ class view_generator_controller extends Controller
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');
+        $typeLC = $request->input('typeLC');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
@@ -452,7 +433,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
@@ -507,7 +488,10 @@ class view_generator_controller extends Controller
         $test = $request->input('_test');
         $logo = $request->input('_logo');
         $locale = $request->input('language');
-        $url = $this->data['url'];
+        $url = $request->input('url_landing');
+        $typeLC = $request->input('typeLC');
+        $tlfFijo = $request->input('fijo');
+        $clicodi = $request->input('clicodi');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
@@ -521,8 +505,10 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $validated = $request->validate([
-            'producto' => 'bail|required',
+        $specificRules = [];
+
+        $baseValidated = [
+            'productoHidden' => 'bail|required',
             'nombre' => 'bail|required|max:25',
             'apellido' => 'bail|required',
             'apellido2' => 'bail|required',
@@ -533,9 +519,27 @@ class view_generator_controller extends Controller
             'movil' => 'bail|required|digits:9|integer',
             'email' => 'bail|required|email:rfc,dns',
             'check-poli' => 'accepted',
-        ]);
+        ];
 
-        //$this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip);
+        if ($tlfFijo) {
+            $specificRules = [
+                'fijo' => 'bail|required|digits:9|integer',
+            ];
+        }
+        
+        if($clicodi){
+            $specificRules = [
+                'clicodi' => 'bail|required',
+            ];
+        }
+        
+        
+        $rules = array_merge($baseValidated, $specificRules);
+        $validated = $request->validate($rules);
+    
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
+
+        return response()->json(['message' => 'Formulario validado correctamente.']);
 
     }
 }

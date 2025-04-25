@@ -11,13 +11,30 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
+    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC)
     {
 
+
         $nombre = $validated['nombre'];
-        $apellidos = $validated['apellidos'];
         $email = $validated['email'];
-        $movil = $validated['movil'];
+        
+        if ($typeLC === 'ordinario') {
+            $apellidos = $validated['apellidos'];
+            $movil = $validated['movil'];
+        } elseif ($typeLC === 'email') {
+            $apellidos = $validated['apellido'] . ' ' . $validated['apellido2'];
+            $comentario = $validated['productoHidden'];
+            $clicodi = $validated['clicodi'];
+            $direccion= $validated['direccion']. ' ' . $validated['poblacion']. ' - ' . $validated['prov_cli']. ' ' . $validated['cp_cli'];
+            if(isset($validated['fijo'])){
+                $movil = $validated['movil'] . '/' . $validated['fijo'];
+            }else{
+                $movil = $validated['movil'];
+            }
+        } else {
+        }
+
+        //dd($direccion);
 
 
         $empresas = new Empresas();
@@ -38,13 +55,12 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
+            $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
 
-            $tienda=$optica[0]->codigo;
+            $tienda = $optica[0]->codigo;
 
             if (!empty($optica) && isset($optica[0])) {
 
@@ -56,15 +72,28 @@ class email_service
                 echo "No se encontró la óptica.";
             }
 
+            if ($typeLC === 'ordinario') {
+
+                $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
+
+                $palabrasBuscar = array(
+                    '{NOMBRECLIENTE}',
+                    '{EMAILCLIENTE}',
+                    '{TELEFONOCLIENTE}',
+                    '{ORIGIN}',
+                    '{TELEFONOPTICA}',
+                    '{EMAILOPTICO}',
+                    '{DIRECIONOPTICA}',
+                    '{LOGO}',
+                    '{LOCAL}'
+                );
 
 
-            $palabrasBuscar = array(
-                '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}'
-            );
+                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
+            } elseif ($typeLC === 'email') {
+            } else {
+            }
 
-
-            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -78,7 +107,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC);
             }
 
 
@@ -97,10 +126,9 @@ class email_service
 
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
         }
-
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC)
     {
 
         $Citas = new CitasLandings();
@@ -121,23 +149,27 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
-            $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
+            $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
 
 
             $palabrasBuscar = array(
-                '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}'
+                '{DIRECIONOPTICA}',
+                '{TELEFONOPTICA}',
+                '{EMAILOPTICA}',
+                '{NOMBREOPTICA}',
+                '{LOGO}',
+                '{LOCAL}'
             );
 
             $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
-            
+
             $mail->addAddress($email);
-            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
+            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
 
 
             try {
