@@ -78,5 +78,7 @@ Route::post('cita-macro/postValidate', [view_generator_controller::class, 'valid
 
 Route::post('cita-macro/postValidateKit', [view_generator_controller::class, 'validateKit'])->name('validateFormKit');
 
+Route::post('cita-macro/postValidateLC', [view_generator_controller::class, 'validateLC'])->name('validateFormLC');
+
 //===============================POST GENERADOR DE IMAGENES===============================
 Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name('imageGenerator');

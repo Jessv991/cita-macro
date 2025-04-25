@@ -44,6 +44,8 @@ class email_service
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
 
+            $tienda=$optica[0]->codigo;
+
             if (!empty($optica) && isset($optica[0])) {
 
                 $tlf_optica = $optica[0]->d6;

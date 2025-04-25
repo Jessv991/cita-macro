@@ -4,7 +4,7 @@
 
         @csrf
         <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
-        <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
+        {{-- <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}"> --}}
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
@@ -21,33 +21,35 @@
 
         <div>
 
-            <div class="producto_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="1100">
+            @if ($data['axaptamailparams'])
+                <div class="producto_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="1100">
 
-                <input class="form-control @error('producto') is-invalid @enderror" type="text" name="producto"
-                    id="producto">
-            </div>
+                    <input class="form-control @error('producto') is-invalid @enderror" type="text" name="producto"
+                        id="producto" disabled value="{{ $data['axaptamailparams'][1] }}">
+                </div>
+            @endif
 
             <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                 data-aos-duration="1100">
 
                 <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
-                    id="nombre" placeholder='{{ __('form_lc_translation.Nombre') }}'>
+                    id="nombre" placeholder='{{ __('form_lc_translation.Nombre') }}' value="{{ $data['axaptamail']['CLI_Nom'] }}">
             </div>
 
             <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                 data-aos-duration="1300">
 
-                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
-                    id="apellidos" placeholder='{{ __('form_lc_translation.Apellidos') }}'>
+                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellido"
+                    id="apellidos" placeholder='{{ __('form_lc_translation.Apellidos') }}' value="{{ $data['axaptamail']['CLI_Cognom1'] }}">
 
             </div>
 
             <div class="apellidos2_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                 data-aos-offset="500" data-aos-duration="1300">
 
-                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos2"
-                    id="apellidos2" placeholder='{{ __('form_lc_translation.Apellidos2') }}'>
+                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellido2"
+                    id="apellidos2" placeholder='{{ __('form_lc_translation.Apellidos2') }}' value="{{ $data['axaptamail']['CLI_Cognom2'] }}">
 
             </div>
 
@@ -55,7 +57,7 @@
                 data-aos-duration="1300">
 
                 <input class="form-control @error('direccion') is-invalid @enderror" type="text" name="direccion"
-                    id="direccion" placeholder='{{ __('form_lc_translation.direccion') }}'>
+                    id="direccion" placeholder='{{ __('form_lc_translation.direccion') }}' value="{{ $data['axaptamail']['Direc'] }}">
 
             </div>
 
@@ -64,12 +66,12 @@
 
                 <div class="col-md-6">
                     <input class="form-control @error('prov_cli') is-invalid @enderror" type="text" name="prov_cli"
-                        id="prov_cli" placeholder='{{ __('form_lc_translation.provincia') }}'>
+                        id="prov_cli" placeholder='{{ __('form_lc_translation.provincia') }}' value="{{ $data['axaptamail']['CLI_Provincia'] }}">
                 </div>
 
                 <div class="col-md-6">
                     <input class="form-control @error('cp_cli') is-invalid @enderror" type="text" name="cp_cli"
-                        id="cp_cli" placeholder='{{ __('form_lc_translation.cp') }}'>
+                        id="cp_cli" placeholder='{{ __('form_lc_translation.cp') }}' value="{{ $data['axaptamail']['CLI_CodiPostal'] }}">
                 </div>
 
             </div>
@@ -78,7 +80,7 @@
                 data-aos-offset="500" data-aos-duration="1300">
 
                 <input class="form-control @error('poblacion') is-invalid @enderror" type="text" name="poblacion"
-                    id="poblacion" placeholder='{{ __('form_lc_translation.poblacion') }}'>
+                    id="poblacion" placeholder='{{ __('form_lc_translation.poblacion') }}' value="{{ $data['axaptamail']['CLI_Localitat'] }}">
 
             </div>
 
@@ -87,9 +89,9 @@
 
                 <div class="col-md-6">
                     <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
-                        id="movil" placeholder='{{ __('form_lc_translation.Telefono') }}'>
+                        id="movil" placeholder='{{ __('form_lc_translation.Telefono') }}' value="{{ $data['axaptamail']['Telf'] }}">
                 </div>
-                
+
                 <div class="col-md-6">
                     <input class="form-control @error('fijo') is-invalid @enderror" type="text" name="fijo"
                         id="fijo" placeholder='{{ __('form_lc_translation.TelefonoFijo') }}'>
@@ -100,7 +102,7 @@
                 data-aos-duration="1500">
 
                 <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                    id="email" placeholder='{{ __('form_lc_translation.Email') }}'>
+                    id="email" placeholder='{{ __('form_lc_translation.Email') }}' value="{{ $data['axaptamail']['CLI_Email'] }}">
 
             </div>
 
@@ -126,19 +128,22 @@
                             <div id="span-optica-axapta">
                                 <table class="table-optica-map">
                                     <tr>
-                                        <td id="table-input-item-name" data-name="" class="table-input-item">Centro: </td>
+                                        <td id="table-input-item-name" data-name="{{ $data['centros'][0]->d29 }}">
+                                            {{ __('form_lc_translation.centro') }}: <span class="text-uppercase">{{ $data['centros'][0]->d29 }}</span></td>
                                     </tr>
                                     <tr>
-                                        <td id="table-input-item-address" data-address="" class="table-input-item ">{{ __('form_lc_translation.direccion') }}: </td>
+                                        <td id="table-input-item-address" data-address="{{ $data['centros'][0]->d23 }}. {{ $data['centros'][0]->d3 }}" class="table-input-item ">
+                                            {{ __('form_lc_translation.direccion') }}: <span class="text-uppercase">{{ $data['centros'][0]->d23 }}. {{ $data['centros'][0]->d3 }}</span></td>
                                     </tr>
                                     <tr>
-                                        <td id="table-input-item" class="table-input-item">Teléfono: </td>
+                                        <td id="table-input-item" class="table-input-item">{{ __('form_lc_translation.telefono') }}: <span class="text-uppercase">{{ $data['centros'][0]->d6 }}</span></td>
                                     </tr>
                                 </table>
                             </div>
                         </td>
                         <td>
-                            <a href="" id="coordsGoogleMaps" target="_blank"><img class="icon-map" src="{{ asset($data['rutaAsset'] . 'assets/iconos/map/maps.png') }}" /></a>
+                            <a href="" id="coordsGoogleMaps" target="_blank"><img class="icon-map"
+                                    src="{{ asset($data['rutaAsset'] . 'assets/iconos/map/maps.png') }}" /></a>
                         </td>
                     </tr>
                 </table>
@@ -207,7 +212,7 @@
         var formData = $('#formMacroContactologia').serialize();
 
         $.ajax({
-            url: '{{ route('validateForm') }}', // Ruta de Laravel que maneja la validación
+            url: '{{ route('validateFormLC') }}', // Ruta de Laravel que maneja la validación
             type: 'POST',
             data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
             success: function(response) {

@@ -126,6 +126,11 @@ div#animationdivIcon {
     box-shadow: -5px 0 15px rgb(0 0 0 / 53%);
 }
 
+img.icon-map {
+    width: 45px;
+    margin-left: 133%;
+}
+
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗

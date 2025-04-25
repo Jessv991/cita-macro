@@ -38,4 +38,6 @@ return [
     'Nombre' => 'Nombre',
     'Pide_cita_rellenando' => 'A continuación detallamos los datos de tu reserva para que nos confirmes si todos son correctos. Si deseas modificar alguno, puedes hacerlo directamente en el formulario.',
     'Producto_adquirido' => 'Tu último producto adquirido fué:',
+    'centro' => 'Centro',
+    'telefono' => 'Teléfono',
 ];
