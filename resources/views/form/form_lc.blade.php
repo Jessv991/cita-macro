@@ -125,8 +125,9 @@
                 </div>
 
 
-                <table class="table-optica-map">
+                <table class="table-optica-map mt-5">
                     <tr>
+                        <p class="text-top-form mt-5">{{ __('form_lc_translation.title_tienda') }}</p>
                         <td id="table-input-item">
                             <div id="span-optica-axapta">
                                 <table class="table-optica-map">
@@ -263,23 +264,6 @@
         $('#formMacroContactologia').removeClass('d-none');
 
         var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
-
-        // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true') {
-            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
-        } else {
-            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-
-            // Limpiar selects de ciudad y óptica
-            $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
-            $('#optica').html('<option value="">Selecciona una óptica</option>');
-
-            // Quita la invalidación del select cuando es un solo campo
-            $('#optica').removeClass('readonly-select');
-
-            // Oculta el icono del mapa
-            $('#animationdivIcon').addClass('d-none');
-        }
 
         // Limpiar el checkbox
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);

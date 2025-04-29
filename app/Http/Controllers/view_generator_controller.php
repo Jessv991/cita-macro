@@ -87,6 +87,14 @@ class view_generator_controller extends Controller
         $segments = request()->segments();
         //dd($segments);
 
+        foreach ($segments as $segment) {
+            if ($segment == 'lc') {
+                $lc = $segment;
+            } elseif ($segment == 'email') {
+                $isEmail = $segment;
+            }
+        }
+
         if (isset($segments[5]) && isset($segments[6])) {
             $weblogin = $segments[5];
             $tienda = str_replace('tiecodi_', '', $segments[6]);
@@ -94,10 +102,14 @@ class view_generator_controller extends Controller
             $weblogin = $segments[5];
         }
 
-        //dd($segments[5], $weblogin, $tienda);
+        //dd($locale, $origen, $weblogin, $tienda, $extra1, $extra2, $extra3, $extra4, $extra5, $extra6, $segments);
 
+        if (isset($isEmail)) {
+            $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : 'crm-reposicionlc-email';
+        } else {
+            $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
+        }
 
-        $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
         $weblogin = str_replace(' ', '', $weblogin);
 
@@ -173,7 +185,7 @@ class view_generator_controller extends Controller
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
 
-        if (isset($segments[3]) === 'lc') {
+        if (isset($lc) === 'lc') {
             $this->data['landing'] = 'lc';
         } else {
             $this->data['landing'] = $origen;
@@ -223,14 +235,18 @@ class view_generator_controller extends Controller
         //clave de las imagenes en el array data
         $this->data['rutaAsset'] = $rutaAsset;
 
-        if(isset($segments[3])){
-            $this->data['typeLC'] = $segments[4];
+
+        //dd($segments[3]);
+
+
+        if (isset($lc)) {
+            $this->data['typeLC'] = $isEmail;
             $this->data['clicodi'] = str_replace('clicodi_', '', $segments[7]);
             $mktid = str_replace('mktid_', '', $segments[8]);
             $item = str_replace('item_', '', $segments[9]);
-            $this->data['lc'] = $segments[3];
+            $this->data['lc'] = $lc;
             $this->data['axaptamailparams'] = array($mktid, $item);
-        }else{
+        } else {
             $this->data['typeLC'] = 'ordinario';
         }
 
@@ -291,8 +307,8 @@ class view_generator_controller extends Controller
         }
 
 
-        if (isset($segments[3])) {
-            $ruta = 'pages.' . $segments[2] . '.' . $segments[3]  . '.index';
+        if (isset($lc)) {
+            $ruta = 'pages.' . $segments[2] . '.' . $lc  . '.index';
         } else {
             $ruta = 'pages.' . $origen . '.index';
         }
@@ -386,7 +402,7 @@ class view_generator_controller extends Controller
 
         $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
-        $tienda = $request->input('optica');
+        $tienda = $request->input('_optica');
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');
@@ -470,7 +486,8 @@ class view_generator_controller extends Controller
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 
-    public function validateLC(Request $request){
+    public function validateLC(Request $request)
+    {
 
         /* $nombre= $request->input('nombre');
         $apellido= $request->input('apellido');
@@ -482,8 +499,8 @@ class view_generator_controller extends Controller
         $movil= $request->input('movil');
         $email= $request->input('email'); */
 
-        $tienda = $request->input('optica');
-        $origen ='crm-reposicionlc-email';
+        $tienda = $request->input('_optica');
+        $origen = $request->input('origen');
         $weblogin = $request->input('_weblogin');
         $test = $request->input('_test');
         $logo = $request->input('_logo');
@@ -526,20 +543,21 @@ class view_generator_controller extends Controller
                 'fijo' => 'bail|required|digits:9|integer',
             ];
         }
-        
-        if($clicodi){
+
+        if ($clicodi) {
             $specificRules = [
                 'clicodi' => 'bail|required',
             ];
         }
-        
-        
+
+
         $rules = array_merge($baseValidated, $specificRules);
         $validated = $request->validate($rules);
-    
+
+
+
         $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
-
     }
 }

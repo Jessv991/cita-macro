@@ -9,7 +9,6 @@ return [
     'nombre_optica' => 'Nombre de la óptica',
     'Apellidos' => 'Primer Apellido',
     'Email' => 'Email',
-    'Telefono' => 'Teléfono móvil',
     'Aceptar_politicas_privacidad_1' => 'Acepto las',
     'Aceptar_politicas_privacidad_2' => 'Políticas de Privacidad',
     'Aceptar_politicas_privacidad_3' => 'Políticas de cookies',
@@ -40,4 +39,5 @@ return [
     'Producto_adquirido' => 'Tu último producto adquirido fué:',
     'centro' => 'Centro',
     'telefono' => 'Teléfono',
+    'title_tienda' => 'Recogeré mis lentes de contacto en el centro:',
 ];

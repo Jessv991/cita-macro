@@ -14,7 +14,6 @@ class email_service
     public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC)
     {
 
-
         $nombre = $validated['nombre'];
         $email = $validated['email'];
         
@@ -23,8 +22,8 @@ class email_service
             $movil = $validated['movil'];
         } elseif ($typeLC === 'email') {
             $apellidos = $validated['apellido'] . ' ' . $validated['apellido2'];
-            $comentario = $validated['productoHidden'];
             $clicodi = $validated['clicodi'];
+            $comentario = $validated['productoHidden'];
             $direccion= $validated['direccion']. ' ' . $validated['poblacion']. ' - ' . $validated['prov_cli']. ' ' . $validated['cp_cli'];
             if(isset($validated['fijo'])){
                 $movil = $validated['movil'] . '/' . $validated['fijo'];
@@ -33,8 +32,6 @@ class email_service
             }
         } else {
         }
-
-        //dd($direccion);
 
 
         $empresas = new Empresas();
@@ -57,10 +54,8 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
 
-
+            
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
-
-            $tienda = $optica[0]->codigo;
 
             if (!empty($optica) && isset($optica[0])) {
 
@@ -91,6 +86,30 @@ class email_service
 
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             } elseif ($typeLC === 'email') {
+                $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteOpticaLC.blade.php');
+
+                $opticaName = $optica[0]->d51;
+
+                $palabrasBuscar = array(
+                    '{TIENDA}',
+                    '{CLIENTE}',
+                    '{CLI_CODI}',
+                    '{PRODUCTO}',
+                    '{NOMBRE}',
+                    '{TELEFONOCLIENTE}',
+                    '{EMAILCLIENTE}',
+                    '{OPTICA}',
+                    '{DIREC_OPTICA}',
+                    '{ORIGIN}',
+                    '{TELEFONOPTICA}',
+                    '{EMAILOPTICO}',
+                    '{DIRECIONOPTICA}',
+                    '{LOGO}',
+                    '{LOCAL}'
+                );
+
+                $palabrasReemplazar = array($tienda, $nombre . " " . $apellidos, $clicodi, $comentario, $nombre . " " . $apellidos, $movil, $email, $opticaName, $direccion, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
+
             } else {
             }
 
@@ -98,12 +117,13 @@ class email_service
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
+            $tienda = $optica[0]->codigo;
 
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
-                //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                $mail->addAddress($email_optica);
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                //$mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
@@ -130,12 +150,12 @@ class email_service
 
     function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC)
     {
-
+        
         $Citas = new CitasLandings();
         $mail = new PHPMailer(true);
-
+        
         try {
-
+            
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
             $mail->isSMTP();
@@ -146,14 +166,21 @@ class email_service
             $mail->Port = config('mail.mailers.smtp.port');
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
-
-
+            
+            
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
 
-            $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
-
-
+            if($typeLC === 'email'){
+                $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteLC.blade.php');
+            }elseif($typeLC === 'ordinario'){
+                $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
+            }else{
+                return response()->json(['message' => 'Tipo de solicitud no válido.'], 400);
+            }
+            
+            
+            
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}',
                 '{TELEFONOPTICA}',
@@ -162,19 +189,21 @@ class email_service
                 '{LOGO}',
                 '{LOCAL}'
             );
-
+            
             $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
-            $mail->addAddress($email);
+            $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
 
 
             try {
                 // Enviar el correo
                 $mail->send();
+
+                //dd(response()->json(['message' => 'Email enviado correctamente.']));
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
                 // Manejo de errores
@@ -184,7 +213,9 @@ class email_service
             return true;
         } catch (Exception $e) {
 
-            echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
+            return response()->json([
+                'message' => "No se pudo enviar el email. Error: {$e->getMessage()}"
+            ], 500);
         }
     }
 }
