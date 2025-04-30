@@ -140,10 +140,10 @@ class email_service
 
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
+                //$this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
             } else {
-                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                //$mail->addAddress($email_optica);
+                //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
@@ -214,7 +214,7 @@ class email_service
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
-            $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+            $mail->addAddress($email);
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
 
 
