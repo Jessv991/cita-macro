@@ -1,4 +1,3 @@
-
 @include('layouts.header')
 
 <div class="background-container">
@@ -9,8 +8,13 @@
                     <img class="w-100 h-100 active" src="{{ asset($data['LC']) }}">
                 </div>
                 <div class="style-form col-lg-4 col-12 mt-lg-0 mt-3">
-                    @include('form.form_lc')
-                    {{-- @include('form.pide_cita') --}}
+                    @if ($data['typeLC'] === 'email')
+                        @include('form.form_lc')
+                    @elseif($data['typeLC'] === 'sms')
+                        @include('form.pide_cita')
+                    @else
+                        @include('form.pide_cita')
+                    @endif
                 </div>
             </div>
         </div>

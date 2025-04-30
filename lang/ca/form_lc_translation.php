@@ -38,12 +38,12 @@ return [
     'cp' => "Codi postal",
     'poblacion' => "Població",
     'TelefonoFijo' => "Telèfon fix",
-    'Pedir_cita' => "Confirma tu reserva",
+    'Pedir_cita' => "Confirma la teva reserva",
     'Nombre' => "Nombre",
     'Pide_cita_rellenando' => "A continuació detallem les dades de la teva reserva perquè ens confirmis si tots són correctes. Si desitges modificar algun, pots fer-ho directament en el formulari.",
     'Producto_adquirido' => "El teu últim producte adquirit va anar:",
     'centro' => "Centre",
     'telefono' => "Telèfon",
-    'title_tienda' => 'Recogeré mis lentes de contacto en el centro:',
+    'title_tienda' => 'Recolliré les meves lents de contacte en el centre:',
 
 ];

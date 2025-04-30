@@ -90,22 +90,34 @@ class view_generator_controller extends Controller
         foreach ($segments as $segment) {
             if ($segment == 'lc') {
                 $lc = $segment;
+                $this->data['commodityLC'] = $lc;
             } elseif ($segment == 'email') {
                 $isEmail = $segment;
+            } elseif ($segment == 'sms') {
+                $isSms = $segment;
             }
         }
 
-        if (isset($segments[5]) && isset($segments[6])) {
-            $weblogin = $segments[5];
-            $tienda = str_replace('tiecodi_', '', $segments[6]);
-        } elseif (isset($segments[5])) {
-            $weblogin = $segments[5];
+        //dd($weblogin);
+
+        if (isset($lc)) {
+            if (isset($segments[5]) && isset($segments[6])) {
+                $weblogin = $segments[5];
+                $tienda = str_replace('tiecodi_', '', $segments[6]);
+            } elseif (isset($segments[5])) {
+                $weblogin = $segments[5];
+            } else {
+                $weblogin = '';
+            }
         }
+
 
         //dd($locale, $origen, $weblogin, $tienda, $extra1, $extra2, $extra3, $extra4, $extra5, $extra6, $segments);
 
         if (isset($isEmail)) {
             $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : 'crm-reposicionlc-email';
+        } elseif (isset($isSms)) {
+            $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : 'crm-2reposicionlc-sms';
         } else {
             $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
         }
@@ -185,7 +197,7 @@ class view_generator_controller extends Controller
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
 
-        if (isset($lc) === 'lc') {
+        if (isset($lc)) {
             $this->data['landing'] = 'lc';
         } else {
             $this->data['landing'] = $origen;
@@ -240,15 +252,22 @@ class view_generator_controller extends Controller
 
 
         if (isset($lc)) {
-            $this->data['typeLC'] = $isEmail;
-            $this->data['clicodi'] = str_replace('clicodi_', '', $segments[7]);
-            $mktid = str_replace('mktid_', '', $segments[8]);
-            $item = str_replace('item_', '', $segments[9]);
-            $this->data['lc'] = $lc;
-            $this->data['axaptamailparams'] = array($mktid, $item);
+            if (isset($isEmail)) {
+                $this->data['typeLC'] = $isEmail;
+                $this->data['clicodi'] = str_replace('clicodi_', '', $segments[7]);
+                $mktid = str_replace('mktid_', '', $segments[8]);
+                $item = str_replace('item_', '', $segments[9]);
+                $this->data['lc'] = $lc;
+                $this->data['axaptamailparams'] = array($mktid, $item);
+            } elseif (isset($isSms)) {
+                $this->data['typeLC'] = $isSms;
+            } else {
+                $this->data['typeLC'] = 'ordinario';
+            }
         } else {
             $this->data['typeLC'] = 'ordinario';
         }
+
 
         $this->data['OPTICA'] = $rutaAsset . $imagen['cita-optica']['OPTICA'];
         $this->data['LC'] = $rutaAsset . $imagen['cita-optica']['LC'];
@@ -276,7 +295,8 @@ class view_generator_controller extends Controller
 
         $this->data['logoOptica'] = $logoOptica;
 
-        if ($this->data['typeLC'] === 'email' && $weblogin && $tienda && $this->data['clicodi']) {
+        
+        if (isset($isEmail) && $weblogin && $tienda && $this->data['clicodi']) {
 
             $response = Http::asForm()->post('http://tienda.naturaloptics.com/Mailings/Contactologia/dbquery/index.php/?query=mail', [
                 'weblogin' => $weblogin,
@@ -407,6 +427,7 @@ class view_generator_controller extends Controller
         $test = $request->input('_test');
         $logo = $request->input('_logo');
         $typeLC = $request->input('typeLC');
+        $commodityLC = $request->input('commodityLC');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
@@ -422,10 +443,12 @@ class view_generator_controller extends Controller
         ];
 
         if ($weblogin) {
+
             $specificRules = [
                 'optica' => 'bail|required',
             ];
         } else {
+
             $specificRules = [
                 'provincias' => 'bail|required',
                 'ciudad' => 'bail|required',
@@ -433,7 +456,12 @@ class view_generator_controller extends Controller
             ];
         }
 
-        $rules = array_merge($baseRules, $specificRules);
+        if ($typeLC === 'sms') {
+            $rules = array_merge($baseRules);
+        }else{
+            $rules = array_merge($baseRules, $specificRules);
+        }
+
         $validated = $request->validate($rules);
 
 
@@ -449,7 +477,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
@@ -512,6 +540,7 @@ class view_generator_controller extends Controller
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
+        $commodityLC = null;
 
         $getLogo = $this->generadorImg->index($logo);
 
@@ -556,7 +585,7 @@ class view_generator_controller extends Controller
 
 
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC);
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
