@@ -14,16 +14,11 @@
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         @if (isset($data['commodityLC']))
             <input type="hidden" id="commodityLC" name="commodityLC" value="{{ $data['commodityLC'] }}">
-            <div class="d-flex flex-column justify-content-center align-items-start mb-5">
-                <p class="text-top-form">{{ __('form_lc_translation.Pide_cita_rellenando') }}</p>
-                <p class="text-top-form">{{ __('form_lc_translation.Producto_adquirido') }}</p>
-            </div>
-        @else
-            <div class="d-flex justify-content-center align-items-start mb-5">
-                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
-            </div>
         @endif
 
+        <div class="d-flex justify-content-center align-items-start mb-5">
+            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+        </div>
 
 
 
