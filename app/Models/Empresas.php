@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 /**
  * @property int    $codigo
@@ -135,6 +136,10 @@ class Empresas extends Model
      * @var boolean
      */
     public $timestamps = false;
+
+    public $sorteo;
+
+    //$sorteo = request()->query('sorteo');
 
     // Scopes...
 
