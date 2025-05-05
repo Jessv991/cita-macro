@@ -33,7 +33,9 @@ class Zonas extends Model
      * @var array
      */
     protected $fillable = [
-        'nombre', 'a1', 'a2'
+        'nombre',
+        'a1',
+        'a2'
     ];
 
     /**
@@ -49,7 +51,10 @@ class Zonas extends Model
      * @var array
      */
     protected $casts = [
-        'id' => 'int', 'nombre' => 'string', 'a1' => 'string', 'a2' => 'string'
+        'id' => 'int',
+        'nombre' => 'string',
+        'a1' => 'string',
+        'a2' => 'string'
     ];
 
     /**
@@ -72,6 +77,13 @@ class Zonas extends Model
 
     // Relations ...
 
+    public $sorteo;
+
+    public function __construct()
+    {
+        $this->sorteo = request()->query('sorteo');
+    }
+
     /*
 
     ██████╗ ██████╗  ██████╗ ██╗   ██╗██╗███╗   ██╗ ██████╗██╗ █████╗ ███████╗
@@ -91,15 +103,16 @@ class Zonas extends Model
             ->where('z.id', '!=', 53)
             ->where('e.d22', 'si')
             ->where('e.d19', 'si')
-            ->where(function ($query) {     
+            ->where(function ($query) {
                 $query->where('e.d9', '-9');
             })
-            ->where('e.CRM', 'si')
-            ->orderBy('z.nombre', 'asc')
-            ->get();
+            ->orderBy('z.nombre', 'asc');
 
-        return $datos;
+        if ($this->sorteo !== 'true') {
+            $datos->where('e.CRM', 'si');
+        }
+
+
+        return $datos->get();
     }
-
-    
 }
