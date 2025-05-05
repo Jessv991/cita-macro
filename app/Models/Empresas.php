@@ -284,23 +284,20 @@ class Empresas extends Model
      */
     public $timestamps = false;
 
-
-    //$sorteo = request()->query('sorteo');
-
     // Scopes...
 
     // Functions ...
 
     // Relations ...
-    public $sorteo;
+    public $promocional;
 
     public function __construct()
     {
-        // Guardar el valor de 'sorteo' en la sesión si no está presente.
-        $this->sorteo = Session::get('sorteo', request()->query('sorteo')); // Si no hay 'sorteo' en la sesión, usar el query string.
+        // Guardar el valor de 'promocional' en la sesión si no está presente.
+        $this->promocional = Session::get('promocional', request()->query('promocional')); // Si no hay 'promocional' en la sesión, usar el query string.
 
-        // Almacenar el valor de 'sorteo' en la sesión para futuras solicitudes.
-        Session::put('sorteo', $this->sorteo);
+        // Almacenar el valor de 'promocional' en la sesión para futuras solicitudes.
+        Session::put('promocional', $this->promocional);
     }
 
 
@@ -325,8 +322,8 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        // Si sorteo no es exactamente 'true', agregar condición de CRM
-        if ($this->sorteo !== 'true') {
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -346,8 +343,8 @@ class Empresas extends Model
             ->where(function ($query) {
                 $query->where('d9', '-9');
             });
-        // Si sorteo no es exactamente 'true', agregar condición de CRM
-        if ($this->sorteo !== 'true') {
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -368,8 +365,8 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        // Si sorteo no es exactamente 'true', agregar condición de CRM
-        if ($this->sorteo !== 'true') {
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -389,8 +386,8 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        // Si sorteo no es exactamente 'true', agregar condición de CRM
-        if ($this->sorteo !== 'true') {
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -411,8 +408,8 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        // Si sorteo no es exactamente 'true', agregar condición de CRM
-        if ($this->sorteo !== 'true') {
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -442,8 +439,8 @@ class Empresas extends Model
                 $query->where('e.d9', '-9');
             });
 
-        // Solo incluir esta condición si sorteo NO es 'true'
-        if ($this->sorteo !== 'true') {
+        // Solo incluir esta condición si promocional NO es 'true'
+        if ($this->promocional !== 'true') {
             $datos->where("e.crm", "=", 'si');
         }
 
@@ -481,7 +478,7 @@ class Empresas extends Model
             })
             ->orderBy('e.d3', 'asc');
 
-        if ($this->sorteo !== 'true') {
+        if ($this->promocional !== 'true') {
             $datos->where("e.crm", "=", 'si');
         }
 
@@ -501,7 +498,7 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        if ($this->sorteo !== 'true') {
+        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 

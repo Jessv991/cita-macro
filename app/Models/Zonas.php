@@ -77,11 +77,11 @@ class Zonas extends Model
 
     // Relations ...
 
-    public $sorteo;
+    public $promocional;
 
     public function __construct()
     {
-        $this->sorteo = request()->query('sorteo');
+        $this->promocional = request()->query('promocional');
     }
 
     /*
@@ -108,7 +108,7 @@ class Zonas extends Model
             })
             ->orderBy('z.nombre', 'asc');
 
-        if ($this->sorteo !== 'true') {
+        if ($this->promocional !== 'true') {
             $datos->where('e.CRM', 'si');
         }
 
