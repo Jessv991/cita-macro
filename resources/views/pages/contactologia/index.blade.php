@@ -16,8 +16,4 @@
         </div>
     </div>
 </div>
-
-<div class="col-lg-8 col-12">
-    @include('layouts.footer_view')
-</div>
 @include('layouts.footer')
