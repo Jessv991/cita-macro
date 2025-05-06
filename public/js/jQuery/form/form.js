@@ -227,6 +227,7 @@ function getOpticaSelectCity() {
                             $('#animationdivIcon').removeClass('d-none');
                             $(".icon-map").removeClass("rotate-in-center");
                             $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
+                            $('#_weblogin').val(value.weblogin);
                         });
                     } else {
                         $('#animationdivIcon').addClass('d-none');
@@ -235,6 +236,7 @@ function getOpticaSelectCity() {
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function (key, value) {
                             $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
+                            $('#_weblogin').val(value.weblogin);
                         });
 
                     }
