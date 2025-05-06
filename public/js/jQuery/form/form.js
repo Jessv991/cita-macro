@@ -1,9 +1,11 @@
 var dispositivo = window.screen.width;
 
 $(document).ready(function () {
-    
+
     var weblogin = $('#_weblogin').val();
     var optica = $('#_optica').val();
+
+    console.log(promocional);
 
 
     //condicional según la ruta que se pase
@@ -55,9 +57,9 @@ $(document).ready(function () {
     para botón flotante pantallas pequeñas
     */
 
-    if(dispositivo <= 991){
+    if (dispositivo <= 991) {
 
-        setInterval(function() {
+        setInterval(function () {
             // Añade la clase para simular hover
             $('.btn-flotante').addClass('btn-flotante-table');
             $('.textPC').addClass('textPC-table');
@@ -65,7 +67,7 @@ $(document).ready(function () {
             $('.bfi').attr('style', 'margin-left: -2px !important');
 
             // Remueve la clase después de un pequeño tiempo para simular el fin del hover
-            setTimeout(function() {
+            setTimeout(function () {
                 $('.btn-flotante').removeClass('btn-flotante-table');
                 $('.textPC').removeClass('textPC-table');
                 $('.cls-1').removeClass('cls-1-table');
@@ -73,7 +75,7 @@ $(document).ready(function () {
         }, 5000); // Cada 5 segundos
 
     }
-    
+
 });
 
 
@@ -105,6 +107,7 @@ function getCityBySelectState() {
                 type: 'POST',
                 data: {
                     provincias: provinciaId,
+                    promocional: $('#promocional').val(),
                     _token: csrfToken // Token CSRF definido en el archivo Blade llamado foorte
                 },
                 success: function (data) {
@@ -161,7 +164,8 @@ function putOpticasByProvincia(city) {
         type: 'POST',
         data: {
             ciudad: city,
-            _token: csrfToken 
+            promocional: $('#promocional').val(),
+            _token: csrfToken
         },
         success: function (data) {
 
@@ -214,6 +218,7 @@ function getOpticaSelectCity() {
                 type: 'POST',
                 data: {
                     ciudad: ciudadId,
+                    promocional: $('#promocional').val(),
                     _token: csrfToken // Token CSRF definido en el archivo Blade
                 },
                 success: function (data) {
@@ -226,6 +231,7 @@ function getOpticaSelectCity() {
                             $('#animationdivIcon').removeClass('d-none');
                             $(".icon-map").removeClass("rotate-in-center");
                             $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
+                            $('#_weblogin').val(value.weblogin);
                         });
                     } else {
                         $('#animationdivIcon').addClass('d-none');
@@ -234,6 +240,7 @@ function getOpticaSelectCity() {
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function (key, value) {
                             $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
+                            $('#_weblogin').val(value.weblogin);
                         });
 
                     }
@@ -264,11 +271,11 @@ function putOpticaByweblogin() {
         method: 'POST',
         data: {
             'weblogin': $('#_weblogin').val(),
+            promocional: $('#promocional').val(),
             _token: csrfToken
         },
         success: function (response) {
 
-            console.log(response);
             $('#optica').empty();
             if (response.length == 1) {
                 $.each(response, function (key, value) {
@@ -316,6 +323,7 @@ function putOpticasByWeblogin() {
         data: {
             'weblogin': $('#_weblogin').val(),
             'optica': $('#_optica').val(),
+            promocional: $('#promocional').val(),
             _token: csrfToken
         },
         success: function (response) {

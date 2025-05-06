@@ -90,6 +90,7 @@ class view_generator_controller extends Controller
         $segments = request()->segments();
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
+        $promocional = request()->query('promocional'); //(esto está recibiendo test por get)
 
         $empresas = new Empresas();
         $zonas = new Zonas();
@@ -109,16 +110,23 @@ class view_generator_controller extends Controller
 
         if (isset($weblogin) && isset($tienda)) {
             //consulta cuando pasan weblogin y tienda
-            $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
+            $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional);
         } elseif (isset($weblogin)) {
             //consultaslas tiendas por weblogin
-            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin);
+            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $promocional);
         } else {
             //consulta todas las tiendas
-            $this->data['centros'] = $empresas->getStore();
+            $this->data['centros'] = $empresas->getStore($promocional);
         }
 
         //=====================IDIOMA==========================
+        if(isset($promocional)){
+
+            $this->data['promocional'] = $promocional;
+        }else{
+            $this->data['promocional'] = false;
+        }
+
         $this->data['idioma'] = $locale;
 
         //============================GUARDAR RUTA ACTUAL DEL CLIENTE============================
@@ -176,7 +184,7 @@ class view_generator_controller extends Controller
 
         //=====================LOGO=====================
 
-        $logo = $empresas->getLogos($weblogin);
+        $logo = $empresas->getLogos($weblogin, $promocional);
 
         // Verificar que $logo no sea null antes de pasarlo a la vista
         if($logo){
@@ -222,48 +230,52 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
 
         $codigoProvincia = $request->input('provincias');
-
-        $localidades = $empresas->getCityByProvincia($codigoProvincia);
-
+        $promocional = $request->input('promocional');
+        
+        $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional);
+        
         return response()->json($localidades);
     }
-
+    
     //esta función da las opticas o la optica de la ciudad seleccionada
     public function getOpticasByProvincia(Request $request)
     {
-
+        
         $empresas = new Empresas();
-
+        
         $localidad = $request->input('ciudad');
-
-        $optica = $empresas->getStoresByProvincia($localidad);
-
+        $promocional = $request->input('promocional');
+        
+        $optica = $empresas->getStoresByProvincia($localidad, $promocional);
+        
         return response()->json($optica);
     }
-
-
-
+    
+    
+    
     public function getOpticasByWeblogin(Request $request)
     {
         $localidad = $request->input('weblogin');
-
+        $promocional = $request->input('promocional');
+        
         $empresas = new Empresas();
-
-        $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
-
+        
+        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $promocional);
+        
         return response()->json($optica);
     }
-
-
+    
+    
     public function getOpticaByWebloginAndOptica(Request $request)
     {
-
+        
         $localidad = $request->input('weblogin');
         $tienda = $request->input('optica');
+        $promocional = $request->input('promocional');
 
         $empresas = new Empresas();
 
-        $optica = $empresas->getStoreByWebloginAndCode($localidad, $tienda);
+        $optica = $empresas->getStoreByWebloginAndCode($localidad, $tienda, $promocional);
 
         return response()->json($optica);
     }
@@ -294,6 +306,7 @@ class view_generator_controller extends Controller
         $logo = $request->input('_logo');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
+        $promocional = $request->input('promocional');
         $ip = $this->data['ip'];
         App::setLocale($locale);
 
@@ -346,7 +359,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $promocional); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);

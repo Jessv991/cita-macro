@@ -11,9 +11,8 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
+    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional)
     {
-
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
@@ -40,9 +39,13 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
+            if($promocional === 'true'){
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templatePromocional.blade.php');
+            }else{
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
+            }
 
-            $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
+            $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional);
 
             if (!empty($optica) && isset($optica[0])) {
 
@@ -76,7 +79,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional);
             }
 
 
@@ -98,7 +101,7 @@ class email_service
 
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional)
     {
 
         $Citas = new CitasLandings();
@@ -121,15 +124,25 @@ class email_service
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
+            if($promocional === 'true'){
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templateClientePromocional.blade.php');
+                $palabrasBuscar = array(
+                    '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
+                    '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}', '{ORIGIN}'
+                );
+    
+                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $origen);
+            }else{
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
+                $palabrasBuscar = array(
+                    '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
+                    '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}'
+                );
+    
+                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
+            }
 
 
-            $palabrasBuscar = array(
-                '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}'
-            );
-
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;

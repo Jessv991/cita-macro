@@ -289,7 +289,7 @@ class Empresas extends Model
     // Functions ...
 
     // Relations ...
-    public $promocional;
+    /* public $promocional;
 
     public function __construct()
     {
@@ -298,7 +298,7 @@ class Empresas extends Model
 
         // Almacenar el valor de 'promocional' en la sesión para futuras solicitudes.
         Session::put('promocional', $this->promocional);
-    }
+    } */
 
 
     /* 
@@ -313,7 +313,7 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS================
 
-    public function getStore()
+    public function getStore($promocional)
     {
         $datos = DB::table('empresas')
             ->where('d22', 'si')
@@ -323,7 +323,7 @@ class Empresas extends Model
             });
 
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -333,7 +333,7 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS CON EL MISMO WEBLOGIN================
 
-    public function getStoreByCodeAndWeblogin($weblogin)
+    public function getStoreByCodeAndWeblogin($weblogin, $promocional)
     {
 
         $datos = DB::table('empresas')
@@ -344,7 +344,7 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -353,9 +353,8 @@ class Empresas extends Model
 
 
     //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA================
-    public function getStoreByWebloginAndCode($weblogin, $tienda)
+    public function getStoreByWebloginAndCode($weblogin, $tienda, $promocional)
     {
-
         $datos = DB::table('empresas')
             ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
@@ -366,7 +365,7 @@ class Empresas extends Model
             });
 
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 
@@ -385,11 +384,7 @@ class Empresas extends Model
             ->where(function ($query) {
                 $query->where('d9', '-9');
             });
-
-        // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($this->promocional !== 'true') {
             $datos->where('CRM', 'si');
-        }
 
         return $datos->get();
     }
@@ -407,11 +402,7 @@ class Empresas extends Model
             ->where(function ($query) {
                 $query->where('d9', '-9');
             });
-
-        // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($this->promocional !== 'true') {
-            $datos->where('CRM', 'si');
-        }
+        $datos->where('CRM', 'si');
 
         return $datos->get();
     }
@@ -427,7 +418,7 @@ class Empresas extends Model
     */
 
 
-    public function getLogos($weblogin)
+    public function getLogos($weblogin, $promocional)
     {
         $datos = DB::table("empresas as e")
             ->select("e.f1")
@@ -440,7 +431,7 @@ class Empresas extends Model
             });
 
         // Solo incluir esta condición si promocional NO es 'true'
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where("e.crm", "=", 'si');
         }
 
@@ -463,12 +454,12 @@ class Empresas extends Model
     */
 
 
-    public function getCityByProvincia($codigoProvincia)
+    public function getCityByProvincia($codigoProvincia, $promocional)
     {
         $datos = DB::table("empresas as e")
 
-            ->select('e.d3', 'weblogin', 'tienda')
-            ->distinct()
+            ->select('e.d3')
+            ->distinct('e.d3')
             ->join("zonas as z", 'z.id', '=', 'e.d2')
             ->where('z.id', $codigoProvincia)
             ->where("e.d22", "=", 'si')
@@ -478,7 +469,7 @@ class Empresas extends Model
             })
             ->orderBy('e.d3', 'asc');
 
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where("e.crm", "=", 'si');
         }
 
@@ -486,10 +477,10 @@ class Empresas extends Model
         return $datos->get();
     }
 
-    public function getStoresByProvincia($localidad)
+    public function getStoresByProvincia($localidad, $promocional)
     {
-
         $datos = DB::table("empresas")
+            ->distinct()
             ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
             ->where('d3', $localidad)
             ->where("d22", "=", 'si')
@@ -498,7 +489,7 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        if ($this->promocional !== 'true') {
+        if ($promocional !== 'true') {
             $datos->where('CRM', 'si');
         }
 

@@ -11,6 +11,7 @@
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
+        <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">
@@ -217,9 +218,9 @@
 
             <div class="d-flex flex-column text-center w-100">
 
-                <span class="">{{ __('form_translation.titol-gracias') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
+                <span class="">{{ __('contactologia.titol-gracias') }}</span>
+                <span class="mt-4">{{ __('contactologia.parrafo-1') }}</span>
+                <span class="mt-4">{{ __('contactologia.parrafo-2') }}</span>
 
                 <hr>
 

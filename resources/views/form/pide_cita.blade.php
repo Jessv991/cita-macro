@@ -11,6 +11,7 @@
         <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
+        <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">
