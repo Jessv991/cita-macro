@@ -6,6 +6,7 @@ use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\Empresas;
 use App\Models\CitasLandings;
+use App\Models\sorteoLc;
 
 use Illuminate\Support\Facades\Mail;
 
@@ -81,6 +82,7 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
                 $mail->addCC('j.vasquez@naturalopticsgroup.com');
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing);
             } else {
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
@@ -111,7 +113,12 @@ class email_service
     function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing)
     {
 
-        $Citas = new CitasLandings();
+        if($landing==='contactologia'){
+            $Citas = new sorteoLc();
+        }else{
+            $Citas = new CitasLandings();
+        }
+
         $mail = new PHPMailer(true);
 
         try {
