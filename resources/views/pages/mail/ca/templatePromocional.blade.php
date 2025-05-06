@@ -888,14 +888,14 @@
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#050606">
-                                                T'hem aconseguit una nova cita!
+                                                Un altre client ha participat!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
                                               <p style="color:#050606;font-size:16px;line-height:150%">
-                                                Contacta amb el client per acordar-la:
+                                                Aquests són les dades del participant:
                                               </p>
                                             </td>
                                           </tr>
@@ -922,7 +922,7 @@
                                               </p>
                                               <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Aquesta cita s'ha aconseguit a través de:
+                                                  Aquesta participació s'ha aconseguit a través de:
                                                 </em>
                                                 <br>
                                               </p>

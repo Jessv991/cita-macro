@@ -916,14 +916,14 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#050606">
-                                                ¡Te hemos conseguido una nueva cita!
+                                                ¡Otro cliente ha participado!
                                               </h3>
                                             </td>
                                           </tr>
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t">
                                               <p style="color:#050606;font-size:16px;line-height:150%">
-                                                Contacta con el cliente para acordarla:
+                                                Estos son los datos del participante:
                                               </p>
                                             </td>
                                           </tr>
@@ -950,7 +950,7 @@ li {
                                               </p>
                                               <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Esta cita se ha conseguido a través de:
+                                                  Esta participación se ha conseguido a través de:
                                                 </em>
                                                 <br>
                                               </p>

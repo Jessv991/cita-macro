@@ -847,7 +847,7 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">¡Tu participación en nuesto sorteo ha quedado registrada!</h3></td>
+                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">La teva participació en el nostre sorteig ha quedat registrada!</h3></td>
                      </tr>
                      <tr style="border-collapse:collapse">
                       <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">Recuerda que anunciaremos a los 10 ganadores el 30 de junio. En caso de ser tú uno de los ganadores, nos pondremos en contacto contigo para que puedas pasar a recoger tu bono de vuelo en tu centro más cercano. Estate atento a nuestras redes sociales para más novedades y sorteos.</p></td>
