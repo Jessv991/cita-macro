@@ -39,7 +39,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
 
-            if($promocional === 'true'){
+            if($origen === 'contactologia'){
                 $archivo = resource_path('views/pages/mail/'.$locale.'/templatePromocional.blade.php');
             }else{
                 $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
@@ -124,7 +124,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
 
-            if($promocional === 'true'){
+            if($origen === 'contactologia'){
                 $archivo = resource_path('views/pages/mail/'.$locale.'/templateClientePromocional.blade.php');
                 $palabrasBuscar = array(
                     '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
