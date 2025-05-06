@@ -12,6 +12,7 @@
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
+        <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">

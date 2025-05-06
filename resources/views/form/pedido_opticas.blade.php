@@ -5,7 +5,8 @@
         @csrf
         <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
         <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
-        <input type="hidden" id="origen" name="origen" value="{{ $data['landing'] }}">
+        <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
+        <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">

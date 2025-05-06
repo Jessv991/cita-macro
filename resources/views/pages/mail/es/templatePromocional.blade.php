@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/{ORIGIN}.png" alt="" width="600" class="adapt-img">
+                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/{LANDING}.png" alt="" width="600" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>

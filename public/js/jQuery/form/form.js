@@ -108,6 +108,7 @@ function getCityBySelectState() {
                 data: {
                     provincias: provinciaId,
                     promocional: $('#promocional').val(),
+                    landing: $('#landing').val(),
                     _token: csrfToken // Token CSRF definido en el archivo Blade llamado foorte
                 },
                 success: function (data) {
@@ -165,6 +166,7 @@ function putOpticasByProvincia(city) {
         data: {
             ciudad: city,
             promocional: $('#promocional').val(),
+            landing: $('#landing').val(),
             _token: csrfToken
         },
         success: function (data) {
@@ -219,6 +221,7 @@ function getOpticaSelectCity() {
                 data: {
                     ciudad: ciudadId,
                     promocional: $('#promocional').val(),
+                    landing: $('#landing').val(),
                     _token: csrfToken // Token CSRF definido en el archivo Blade
                 },
                 success: function (data) {
@@ -274,6 +277,7 @@ function putOpticaByweblogin() {
         data: {
             'weblogin': $('#_weblogin').val(),
             promocional: $('#promocional').val(),
+            landing: $('#landing').val(),
             _token: csrfToken
         },
         success: function (response) {
@@ -330,6 +334,7 @@ function putOpticasByWeblogin() {
             'weblogin': $('#_weblogin').val(),
             'optica': $('#_optica').val(),
             promocional: $('#promocional').val(),
+            landing: $('#landing').val(),
             _token: csrfToken
         },
         success: function (response) {

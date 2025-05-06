@@ -12,6 +12,7 @@
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
+        <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">
@@ -46,7 +47,7 @@
             <div class="row">
                 <div class="d-flex align-items-center">
                     <div class="optica_div mt-1" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                        data-aos-offset="500" data-aos-duration="1800">
+                        data-aos-offset="500" data-aos-duration="900">
 
                         <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
                             <option value=""></option>

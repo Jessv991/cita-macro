@@ -11,19 +11,19 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional)
+    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing)
     {
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
         $movil = $validated['movil'];
-
-
+        
+        
         $empresas = new Empresas();
         $mail = new PHPMailer(true);
-
+        
         try {
-
+            
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
             $mail->isSMTP();
@@ -35,20 +35,15 @@ class email_service
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
 
-
+            
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
-
-            if($origen === 'contactologia'){
-                $archivo = resource_path('views/pages/mail/'.$locale.'/templatePromocional.blade.php');
-            }else{
-                $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
-            }
-
-            $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional);
-
+            
+            
+            $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $landing);
+            
             if (!empty($optica) && isset($optica[0])) {
-
+                
                 $tlf_optica = $optica[0]->d6;
                 $email_optica = $optica[0]->d5;
                 $direccion_optica = $optica[0]->d23;
@@ -56,16 +51,28 @@ class email_service
             } else {
                 echo "No se encontró la óptica.";
             }
+            
+            
+            if($promocional !== 'true' || $landing === 'contactologia'){
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templatePromocional.blade.php');
+                $palabrasBuscar = array(
+                    '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
+                    '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}, {LANDING}'
+                );
+    
+    
+                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $landing);
+            }else{
+                $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
+                $palabrasBuscar = array(
+                    '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
+                    '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}'
+                );
+    
+    
+                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
+            }
 
-
-
-            $palabrasBuscar = array(
-                '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}'
-            );
-
-
-            $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
@@ -79,7 +86,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing);
             }
 
 
@@ -101,7 +108,7 @@ class email_service
 
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing)
     {
 
         $Citas = new CitasLandings();
@@ -124,14 +131,14 @@ class email_service
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
 
-            if($origen === 'contactologia'){
+            if($promocional !== 'true' || $landing === 'contactologia'){
                 $archivo = resource_path('views/pages/mail/'.$locale.'/templateClientePromocional.blade.php');
                 $palabrasBuscar = array(
                     '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                    '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}', '{ORIGIN}'
+                    '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}', '{ORIGIN}', '{LANDING}'
                 );
     
-                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $origen);
+                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $origen, $landing);
             }else{
                 $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
                 $palabrasBuscar = array(

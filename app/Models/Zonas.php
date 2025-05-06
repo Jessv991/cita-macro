@@ -94,8 +94,9 @@ class Zonas extends Model
     ╚═╝     ╚═╝  ╚═╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝╚═╝╚═╝  ╚═╝╚══════╝
                                                                           
     */
-    public function getProvincias()
+    public function getProvincias($landing)
     {
+        //dd($landing);
         $datos = DB::table('zonas as z')
             ->select('z.a1', 'z.id')
             ->distinct()
@@ -108,11 +109,14 @@ class Zonas extends Model
             })
             ->orderBy('z.nombre', 'asc');
 
-        if ($this->promocional !== 'true') {
+
+        if (isset($this->promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        }else{
             $datos->where('e.CRM', 'si');
+            return $datos->get();
         }
 
 
-        return $datos->get();
     }
 }

@@ -85,6 +85,9 @@ class view_generator_controller extends Controller
 
         $weblogin = str_replace(' ', '', $weblogin);
 
+        //================LANDING NOMBRE CARPETA DE LA VISTA=================
+        $this->data['landing'] = $origen;
+
         $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
         $segments = request()->segments();
@@ -110,13 +113,13 @@ class view_generator_controller extends Controller
 
         if (isset($weblogin) && isset($tienda)) {
             //consulta cuando pasan weblogin y tienda
-            $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional);
+            $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $origen);
         } elseif (isset($weblogin)) {
             //consultaslas tiendas por weblogin
-            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $promocional);
+            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $promocional, $origen);
         } else {
             //consulta todas las tiendas
-            $this->data['centros'] = $empresas->getStore($promocional);
+            $this->data['centros'] = $empresas->getStore($promocional, $origen);
         }
 
         //=====================IDIOMA==========================
@@ -136,9 +139,6 @@ class view_generator_controller extends Controller
         
         $this->data['mapa'] = file_get_contents("https://www.plataformasit.com/mapasTiendasNOG/featuresNOG.json");
 
-        //================LANDING NOMBRE CARPETA DE LA VISTA=================
-        $this->data['landing'] = $origen;
-
         //================OPTICA=================
         $this->data['optica'] = $tienda;
 
@@ -149,7 +149,7 @@ class view_generator_controller extends Controller
 
         $this->data['weblogin'] = $weblogin;
 
-        $this->data['provincias'] = $zonas->getProvincias();
+        $this->data['provincias'] = $zonas->getProvincias($origen);
 
         //================ORIGEN NOMBRE SEGMENTOS URL====================
 
@@ -184,7 +184,7 @@ class view_generator_controller extends Controller
 
         //=====================LOGO=====================
 
-        $logo = $empresas->getLogos($weblogin, $promocional);
+        $logo = $empresas->getLogos($weblogin, $promocional, $origen);
 
         // Verificar que $logo no sea null antes de pasarlo a la vista
         if($logo){
@@ -231,8 +231,9 @@ class view_generator_controller extends Controller
 
         $codigoProvincia = $request->input('provincias');
         $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
         
-        $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional);
+        $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional, $landing);
         
         return response()->json($localidades);
     }
@@ -245,8 +246,9 @@ class view_generator_controller extends Controller
         
         $localidad = $request->input('ciudad');
         $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
         
-        $optica = $empresas->getStoresByProvincia($localidad, $promocional);
+        $optica = $empresas->getStoresByProvincia($localidad, $promocional, $landing);
         
         return response()->json($optica);
     }
@@ -257,10 +259,11 @@ class view_generator_controller extends Controller
     {
         $localidad = $request->input('weblogin');
         $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
         
         $empresas = new Empresas();
         
-        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $promocional);
+        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $promocional, $landing);
         
         return response()->json($optica);
     }
@@ -272,10 +275,11 @@ class view_generator_controller extends Controller
         $localidad = $request->input('weblogin');
         $tienda = $request->input('optica');
         $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
 
         $empresas = new Empresas();
 
-        $optica = $empresas->getStoreByWebloginAndCode($localidad, $tienda, $promocional);
+        $optica = $empresas->getStoreByWebloginAndCode($localidad, $tienda, $promocional, $landing);
 
         return response()->json($optica);
     }
@@ -307,6 +311,7 @@ class view_generator_controller extends Controller
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
         $ip = $this->data['ip'];
         App::setLocale($locale);
 
@@ -359,7 +364,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $promocional); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);

@@ -294,10 +294,10 @@ class Empresas extends Model
     public function __construct()
     {
         // Guardar el valor de 'promocional' en la sesión si no está presente.
-        $this->promocional = Session::get('promocional', request()->query('promocional')); // Si no hay 'promocional' en la sesión, usar el query string.
+        $promocional = Session::get('promocional', request()->query('promocional')); // Si no hay 'promocional' en la sesión, usar el query string.
 
         // Almacenar el valor de 'promocional' en la sesión para futuras solicitudes.
-        Session::put('promocional', $this->promocional);
+        Session::put('promocional', $promocional);
     } */
 
 
@@ -313,7 +313,7 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS================
 
-    public function getStore($promocional)
+    public function getStore($promocional, $landing)
     {
         $datos = DB::table('empresas')
             ->where('d22', 'si')
@@ -323,17 +323,18 @@ class Empresas extends Model
             });
 
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        } else {
             $datos->where('CRM', 'si');
+            return $datos->get();
         }
-
-        return $datos->get();
     }
 
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS CON EL MISMO WEBLOGIN================
 
-    public function getStoreByCodeAndWeblogin($weblogin, $promocional)
+    public function getStoreByCodeAndWeblogin($weblogin, $promocional, $landing)
     {
 
         $datos = DB::table('empresas')
@@ -344,16 +345,17 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        } else {
             $datos->where('CRM', 'si');
+            return $datos->get();
         }
-
-        return $datos->get();
     }
 
 
     //================OBTENER LOS DATOS DE LA TIENDA ESPECÍFICA================
-    public function getStoreByWebloginAndCode($weblogin, $tienda, $promocional)
+    public function getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $landing)
     {
         $datos = DB::table('empresas')
             ->where('weblogin', $weblogin)
@@ -365,11 +367,12 @@ class Empresas extends Model
             });
 
         // Si promocional no es exactamente 'true', agregar condición de CRM
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        } else {
             $datos->where('CRM', 'si');
+            return $datos->get();
         }
-
-        return $datos->get();
     }
 
     //================OBTENER TIENDA POR CÓDIGO PARA ENVÍO EMAIL=================
@@ -384,7 +387,7 @@ class Empresas extends Model
             ->where(function ($query) {
                 $query->where('d9', '-9');
             });
-            $datos->where('CRM', 'si');
+        $datos->where('CRM', 'si');
 
         return $datos->get();
     }
@@ -418,7 +421,7 @@ class Empresas extends Model
     */
 
 
-    public function getLogos($weblogin, $promocional)
+    public function getLogos($weblogin, $promocional, $landing)
     {
         $datos = DB::table("empresas as e")
             ->select("e.f1")
@@ -431,7 +434,8 @@ class Empresas extends Model
             });
 
         // Solo incluir esta condición si promocional NO es 'true'
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+        } else {
             $datos->where("e.crm", "=", 'si');
         }
 
@@ -454,7 +458,7 @@ class Empresas extends Model
     */
 
 
-    public function getCityByProvincia($codigoProvincia, $promocional)
+    public function getCityByProvincia($codigoProvincia, $promocional, $landing)
     {
         $datos = DB::table("empresas as e")
 
@@ -469,15 +473,15 @@ class Empresas extends Model
             })
             ->orderBy('e.d3', 'asc');
 
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        } else {
             $datos->where("e.crm", "=", 'si');
+            return $datos->get();
         }
-
-
-        return $datos->get();
     }
 
-    public function getStoresByProvincia($localidad, $promocional)
+    public function getStoresByProvincia($localidad, $promocional, $landing)
     {
         $datos = DB::table("empresas")
             ->distinct()
@@ -489,8 +493,11 @@ class Empresas extends Model
                 $query->where('d9', '-9');
             });
 
-        if ($promocional !== 'true') {
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        } else {
             $datos->where('CRM', 'si');
+            return $datos->get();
         }
 
         return $datos->get();
