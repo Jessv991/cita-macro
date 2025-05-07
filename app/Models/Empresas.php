@@ -346,21 +346,58 @@ class Empresas extends Model
     */
 
 
+    // public function getCityByProvincia($codigoProvincia)
+    // {
+
+    //     $datos = DB::table("empresas as e")
+
+    //             ->select('e.d3', 'weblogin', 'tienda')
+    //             ->distinct()
+    //             ->join("zonas as z", 'z.id', '=', 'e.d2')
+    //             ->where('z.id', $codigoProvincia)
+    //             ->where("e.d22", "=", 'si')
+    //             ->where("e.d20", "=", 'si')
+    //             ->where(function ($query) {
+    //                 $query->where('e.d9', '-9');
+    //             })
+    //             ->where("e.crm", "=", 'si')
+    //             ->orderBy('e.d3', 'asc')
+    //             ->get();
+
+    //     return $datos;
+
+    // }
+
+    // public function getStoresByProvincia($localidad){
+
+    //     $datos = DB::table("empresas")
+    //             ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
+    //             ->where('d3', $localidad)
+    //             ->where("d22", "=", 'si')
+    //             ->where("d20", "=", 'si')
+    //             ->where(function ($query) {
+    //                 $query->where('d9', '-9');
+    //             })
+    //             ->where("crm", "=", 'si')
+    //             ->get();
+    //     return $datos;
+
+    // }
+
     public function getCityByProvincia($codigoProvincia)
     {
 
         $datos = DB::table("empresas as e")
 
-                ->select('e.d3', 'weblogin', 'tienda')
-                ->distinct()
+                ->select('e.d3')
+                ->distinct('e.d3')
                 ->join("zonas as z", 'z.id', '=', 'e.d2')
                 ->where('z.id', $codigoProvincia)
                 ->where("e.d22", "=", 'si')
-                ->where("e.d20", "=", 'si')
+                ->where("e.d19", "=", 'si')
                 ->where(function ($query) {
                     $query->where('e.d9', '-9');
                 })
-                ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
                 ->get();
 
@@ -371,14 +408,14 @@ class Empresas extends Model
     public function getStoresByProvincia($localidad){
 
         $datos = DB::table("empresas")
+                ->distinct()
                 ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
                 ->where('d3', $localidad)
                 ->where("d22", "=", 'si')
-                ->where("d20", "=", 'si')
+                ->where("d19", "=", 'si')
                 ->where(function ($query) {
                     $query->where('d9', '-9');
                 })
-                ->where("crm", "=", 'si')
                 ->get();
         return $datos;
 
