@@ -16,14 +16,14 @@ $(document).ready(function () {
         putOpticaByweblogin();
     } else {
         getCityBySelectState();
-        getOpticaSelectCity()
+        getOpticaSelectCity();
     }
 
     //animación del icono de mapa
     $('#optica').on('change', function () {
         var opticaId = $(this).val();
         if (opticaId) {
-            $('#animationdivIcon').removeClass('d-none');
+            $('#animationdivIcon').removeClass('d-none');            
             $(".icon-map").removeClass("rotate-in-center");
         } else {
             $('#animationdivIcon').addClass('d-none');
@@ -39,7 +39,9 @@ $(document).ready(function () {
         if (value) {
             var address = text.split(' - ')[0];//lo spliteyamos y le quitamos los '-'
             $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + address);
-            $('#animationdivIcon').removeClass('d-none');
+            if($('#landing').val()!='practicasNOG'){
+                $('#animationdivIcon').removeClass('d-none');
+            }
             $(".icon-map").removeClass("rotate-in-center");
         } else {
             $('#animationdivIcon').addClass('d-none');
@@ -97,6 +99,10 @@ function getCityBySelectState() {
         var provinciaId = $(this).val();
 
         $('#optica').empty();//limpia el select ciudad
+        if($('#landing').val()=='practicasNOG'){
+            $('#optica2').empty();//limpia el select ciudad
+            $('#optica3').empty();//limpia el select ciudad
+        }
         $('#animationdivIcon').addClass('d-none');//aplica el d-none al icono de mapa
         $('#ciudad').removeClass('readonly-select');
         $('#optica').removeClass('readonly-select');
@@ -169,9 +175,29 @@ function putOpticasByProvincia(city) {
             landing: $('#landing').val(),
             _token: csrfToken
         },
-        success: function (data) {
+        success: function (data) {            
 
             $('#optica').empty();
+            if($('#landing').val()=='practicasNOG'){
+                $('#optica2').empty();
+                $('#optica3').empty();                
+                $('#optica').on('change', function () {
+                    const texto = $(this).find('option:selected').text();
+                    $('#optica_texto').val(texto);
+                    actualizarOpciones(data);
+                });    
+                $('#optica2').on('change', function () {
+                    const texto = $(this).find('option:selected').text();
+                    $('#optica2_texto').val(texto);
+                    actualizarOpciones(data);
+                });
+                $('#optica3').on('change', function () {
+                    actualizarOpciones(data);
+                    const texto = $(this).find('option:selected').text();
+                    $('#optica3_texto').val(texto);
+                });          
+            }        
+            
             if (data.length == 1) {
                 $.each(data, function (key, value) {
                     $('#_weblogin').val(value.weblogin);
@@ -179,21 +205,56 @@ function putOpticasByProvincia(city) {
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                     $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                     $('#optica').addClass('readonly-select');
+                    if($('#landing').val()=='practicasNOG'){
+                        $('#optica2').addClass('d-none');
+                        $('#optica3').addClass('d-none');
+                    }
+                    if($('#landing').val()=='practicasNOG'){
+                        $(".icon-map").removeClass("d-none");
+                    }
                     $('#animationdivIcon').removeClass('d-none');
                     $(".icon-map").removeClass("rotate-in-center");
                 });
-            } else {
+            } else {                             
+                if($('#landing').val()=='practicasNOG'){
+                    $(".icon-map").addClass('d-none');
+                }
                 $('#animationdivIcon').addClass('d-none');
+                if($('#landing').val()=='practicasNOG'){
+                    $('#optica2').removeClass('d-none');
+                    if (data.length == 2) {
+                        $('#optica3').addClass('d-none'); // o .hide()
+                    } else {
+                        $('#optica3').removeClass('d-none'); // por si se ocultó antes
+                    }
+                    $('#optica2').removeClass('readonly-select');
+                    $('#optica3').removeClass('readonly-select');
+                    $('#optica2').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                    $('#optica3').append('<option value="">' + seleccionaUnaOpticaText + '</option>');                 
+                }
+                $('#optica').removeClass('readonly-select');
                 // Agregar opción por defecto
                 $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
-                // Agregar opciones de ciudades obtenidas del servidor
+            
                 $.each(data, function (key, value) {
+                    const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
+                    $('#optica').append(optionHtml);
+                    if($('#landing').val()=='practicasNOG'){
+                        $('#optica2').append(optionHtml);
+                        $('#optica3').append(optionHtml);
+                    }
+            
                     $('#_weblogin').val(value.weblogin);
                     $('#_optica').val(value.tienda);
-                    $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                 });
-            }
-
+            
+                // Aplicar filtrado inicial si ya hay una selección
+                const seleccionada = $('#optica').val();
+                if (seleccionada && $('#landing').val()=='practicasNOG') {
+                    $('#optica2 option[value="' + seleccionada + '"]').hide();
+                    $('#optica3 option[value="' + seleccionada + '"]').hide();
+                }
+            }            
         }
     });
 }
@@ -209,11 +270,51 @@ function putOpticasByProvincia(city) {
                                                                                                                     
 */
 
+function actualizarOpciones(data) { 
+    const texto1 = $('#optica option:selected').text().trim();
+    const texto2 = $('#optica2 option:selected').text().trim();
+    const texto3 = $('#optica3 option:selected').text().trim();   
+
+    // Primero mostramos todas las opciones de todos los selects
+    $('#optica option, #optica2 option, #optica3 option').each(function () {
+        if ($(this).val()) $(this).show();
+    });
+
+    // Por cada item del array data, construimos el texto como está en los <option>
+    data.forEach(function(item) {
+        const textoOptica = `${item.d29} - ${item.d23} - ${item.d3}`.trim();
+
+        // Ocultamos este texto en los selects donde ya esté seleccionado en otro
+        if (textoOptica === texto1 || textoOptica === texto2 || textoOptica === texto3) {
+            // Ocultar en #optica si está seleccionado en 2 o 3
+            if (textoOptica === texto2 || textoOptica === texto3) {
+                $('#optica option').filter(function () {
+                    return $(this).text().trim() === textoOptica;
+                }).hide();
+            }
+
+            // Ocultar en #optica2 si está seleccionado en 1 o 3
+            if (textoOptica === texto1 || textoOptica === texto3) {
+                $('#optica2 option').filter(function () {
+                    return $(this).text().trim() === textoOptica;
+                }).hide();
+            }
+
+            // Ocultar en #optica3 si está seleccionado en 1 o 2
+            if (textoOptica === texto1 || textoOptica === texto2) {
+                $('#optica3 option').filter(function () {
+                    return $(this).text().trim() === textoOptica;
+                }).hide();
+            }
+        }
+    });
+}
+
 //las opticas aparecen si el cliente clica en la ciudad
 function getOpticaSelectCity() {
 
     $('#ciudad').on('change', function () {
-        var ciudadId = $(this).val();
+        var ciudadId = $(this).val();        
         if (ciudadId) {
             $.ajax({
                 url: getOpticasByProvinciaRoute, // Ruta definida en el archivo Blade
@@ -224,32 +325,86 @@ function getOpticaSelectCity() {
                     landing: $('#landing').val(),
                     _token: csrfToken // Token CSRF definido en el archivo Blade
                 },
-                success: function (data) {
+                success: function (data) {                    
 
                     $('#optica').empty();
+                    if($('#landing').val()=='practicasNOG'){
+                        $('#optica2').empty();
+                        $('#optica3').empty();
+                        $('#optica').on('change', function () {
+                            const texto = $(this).find('option:selected').text();
+                            $('#optica_texto').val(texto);
+                            actualizarOpciones(data);
+                        });                    
+                        $('#optica2').on('change', function () {
+                            const texto = $(this).find('option:selected').text();
+                            $('#optica2_texto').val(texto);
+                            actualizarOpciones(data);
+                        });
+                        $('#optica3').on('change', function () {
+                            const texto = $(this).find('option:selected').text();
+                            $('#optica3_texto').val(texto);
+                            actualizarOpciones(data);
+                        });                    
+                    }
+                    
                     if (data.length == 1) {
                         $.each(data, function (key, value) {
                             $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
                             $('#optica').addClass('readonly-select');
+                            if($('#landing').val()=='practicasNOG'){
+                                $('#optica2').addClass('d-none');
+                                $('#optica3').addClass('d-none');
+                            }
                             $('#animationdivIcon').removeClass('d-none');
+                            if($('#landing').val()=='practicasNOG'){
+                                $(".icon-map").removeClass("d-none");
+                            }
                             $(".icon-map").removeClass("rotate-in-center");
                             $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                             $('#_weblogin').val(value.weblogin);
                             $('#_optica').val(value.tienda);
                         });
-                    } else {
+                    } else {                      
+                        if($('#landing').val()=='practicasNOG'){
+                            $(".icon-map").addClass('d-none');
+                        }
                         $('#animationdivIcon').addClass('d-none');
+                        if($('#landing').val()=='practicasNOG'){
+                            $('#optica2').removeClass('d-none');
+                            if (data.length == 2) {
+                                $('#optica3').addClass('d-none');
+                            } else {
+                                $('#optica3').removeClass('d-none');
+                            } 
+                            $('#optica2').removeClass('readonly-select');
+                            $('#optica3').removeClass('readonly-select');
+                            $('#optica2').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                            $('#optica3').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                        }
+                        $('#optica').removeClass('readonly-select');
                         // Agregar opción por defecto
                         $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
-                        // Agregar opciones de ciudades obtenidas del servidor
+                    
                         $.each(data, function (key, value) {
-                            $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
+                            const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
+                            $('#optica').append(optionHtml);
+                            if($('#landing').val()=='practicasNOG'){
+                                $('#optica2').append(optionHtml);
+                                $('#optica3').append(optionHtml);
+                            }
+                    
                             $('#_weblogin').val(value.weblogin);
                             $('#_optica').val(value.tienda);
                         });
-
-                    }
-
+                    
+                        // Aplicar filtrado inicial si ya hay una selección
+                        const seleccionada = $('#optica').val();                        
+                        if (seleccionada && $('#landing').val()=='practicasNOG') {
+                            $('#optica2 option[value="' + seleccionada + '"]').hide();
+                            $('#optica3 option[value="' + seleccionada + '"]').hide();
+                        }
+                    }                   
                 }
             });
         }
@@ -283,6 +438,10 @@ function putOpticaByweblogin() {
         success: function (response) {
 
             $('#optica').empty();
+            if($('#landing').val()=='practicasNOG'){
+                $('#optica2').empty();
+                $('#optica3').empty();
+            }
             if (response.length == 1) {
                 $.each(response, function (key, value) {
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
@@ -341,6 +500,10 @@ function putOpticasByWeblogin() {
 
             console.log(response);
             $('#optica').empty();
+            if($('#landing').val()=='practicasNOG'){
+                $('#optica2').empty();
+                $('#optica3').empty();
+            }
             $('#_opticaAndWeblogin').val('true');
             if (response.length == 1) {
                 $.each(response, function (key, value) {

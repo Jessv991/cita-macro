@@ -301,10 +301,21 @@ class view_generator_controller extends Controller
 
     public function validatePideCita(Request $request)
     {
-
         $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
+        $optica1 = null;
+        $optica2 = null;
+        $optica3 = null;
+        if ($request->has('optica_texto') && !empty($request->input('optica_texto'))) {
+            $optica1 = $request->input('optica_texto');
+        }
+        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!='Selecciona una óptica') {
+            $optica2 = $request->input('optica2_texto');
+        }
+        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!='Selecciona una óptica') {
+            $optica3 = $request->input('optica3_texto');
+        }
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');
@@ -364,7 +375,11 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        if($landing=='practicasNOG'){
+            $this->Email_service->sendEmailPracticasOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        }else{
+            $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        }
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
