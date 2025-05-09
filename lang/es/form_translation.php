@@ -3,6 +3,7 @@
 return [
 
     'Pide_cita_rellenando' => 'Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
+    'Pide_practicas_rellenando' => 'Solicita tus empresas rellenando el formulario con tus datos y nos pondremos en contacto contigo.',
     'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
     'Selecciona_una_provincia' => 'Selecciona una provincia',
     'Selecciona_una_ciudad' => 'Selecciona una ciudad',
@@ -20,8 +21,10 @@ return [
     'Confirma_reserva' => 'Confirma tu reserva',
     'idioma' => 'es',
     'titol-gracias'=> "Solicitud de cita previa enviada",
+    'titol-practicas'=> "Solicitud enviada con exito",
     'parrafo-1'=> "Su solicitud ha sido enviada. Pronto uno de nuestros operadores se pondrá en contacto con usted.",
     'parrafo-2'=> "¡Muchas gracias!",
+    'parrafo-practica'=> "Agradecemos que hayas elegido las empresas donde te gustaría hacer tus prácticas. Tu elección nos ayuda a avanzar con el siguiente paso del proceso.",
     'titol-gracias-pedido'=> "Solicitud de pedido enviada",
     'parrafo-1-pedido'=> "Nuestro equipo ya lo está preparando para su entrega, nos pondremos en contacto contigo si hubiese algun problema.",
     'volver' => "Volver",

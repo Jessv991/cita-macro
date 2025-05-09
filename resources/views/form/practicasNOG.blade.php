@@ -19,7 +19,7 @@
 
 
         <div class="d-flex justify-content-center align-items-start mb-5">
-            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            <p class="text-top-form">{{ __('form_translation.Pide_practicas_rellenando') }}</p>
         </div>
 
 
@@ -214,8 +214,8 @@
 
             <div class="d-flex flex-column text-center w-100">
 
-                <span class="">{{ __('form_translation.titol-gracias') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>
+                <span class="">{{ __('form_translation.titol-practicas') }}</span>
+                <span class="mt-4">{{ __('form_translation.parrafo-practica') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
 
                 <hr>
