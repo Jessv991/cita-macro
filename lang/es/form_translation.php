@@ -18,6 +18,7 @@ return [
     'Aceptar_politicas_privacidad_3' => 'Políticas de cookies',
     'Politicas_privacidad' => 'De conformidad con el Reglamento (UE) 2016/679 del Parlamento y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos os recordamos que sus datos personales serán tratados por parte del centro remitente del comunicado. Puede ejercer los derechos de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición dirigiéndose a la dirección del remitente que aparece en esta comunicación, de la misma manera que en cualquier momento puede revocar el consentimiento que disteis para dejar de recibir publicidad.',
     'Pedir_cita' => 'Pide cita',
+    'Pedir_practicas' => 'Enviar',
     'Confirma_reserva' => 'Confirma tu reserva',
     'idioma' => 'es',
     'titol-gracias'=> "Solicitud de cita previa enviada",
