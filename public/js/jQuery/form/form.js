@@ -180,7 +180,7 @@ function putOpticasByProvincia(city) {
             $('#optica').empty();
             if($('#landing').val()=='practicasNOG'){
                 $('#optica2').empty();
-                $('#optica3').empty();                
+                $('#optica3').empty();     
                 $('#optica').on('change', function () {
                     const texto = $(this).find('option:selected').text();
                     $('#optica_texto').val(texto);
@@ -203,6 +203,7 @@ function putOpticasByProvincia(city) {
                     $('#_weblogin').val(value.weblogin);
                     $('#_optica').val(value.tienda);
                     $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
+                    $('#optica_texto').val(value.d29 + ' - ' + value.d23 + ' - ' + value.d3);
                     $('a[id=coordsGoogleMaps]').attr('href', 'https://www.google.com/maps/search/?api=1&query=' + value.d29 + ' ' + value.d3 + ' ' + value.d23);
                     $('#optica').addClass('readonly-select');
                     if($('#landing').val()=='practicasNOG'){
@@ -351,6 +352,7 @@ function getOpticaSelectCity() {
                     if (data.length == 1) {
                         $.each(data, function (key, value) {
                             $('#optica').append('<option name="optica" value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>');
+                            $('#optica_texto').val(value.d29 + ' - ' + value.d23 + ' - ' + value.d3);
                             $('#optica').addClass('readonly-select');
                             if($('#landing').val()=='practicasNOG'){
                                 $('#optica2').addClass('d-none');
@@ -395,7 +397,7 @@ function getOpticaSelectCity() {
                             }
                     
                             $('#_weblogin').val(value.weblogin);
-                            $('#_optica').val(value.tienda);
+                            $('#_optica').val(value.tienda);                 
                         });
                     
                         // Aplicar filtrado inicial si ya hay una selección
