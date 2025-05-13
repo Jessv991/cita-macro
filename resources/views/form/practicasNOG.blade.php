@@ -1,3 +1,5 @@
+<div class="contenedor-fondo">
+
 <div class="contenedor-form w-100 h-100 d-flex justify-content-center align-items-center">
 
     <form id="formMacroContactologia" class="w-100 p-0 m-0" action="" method="POST">
@@ -18,19 +20,60 @@
         <input type="hidden" name="optica3_texto" id="optica3_texto" />
 
 
-        <div class="d-flex justify-content-center align-items-start mb-5">
+        <div class="d-flex justify-content-center align-items-start">
             <p class="text-top-form">{{ __('form_translation.Pide_practicas_rellenando') }}</p>
         </div>
 
 
         <div>
+
+            <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                data-aos-offset="500" data-aos-duration="500">
+
+                <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
+                    id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
+
+            </div>
+
+            <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                data-aos-offset="500" data-aos-duration="500">
+
+                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
+                    id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
+
+            </div>
+
+            <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+               data-aos-duration="700">
+
+               <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
+                   id="movil" placeholder='{{ __('form_translation.Telefono_practicas') }}'>
+
+           </div>
+
+            <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="700">
+
+                <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
+                    id="email" placeholder='{{ __('form_translation.Email_practicas') }}'>
+
+            </div>
+
+            <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="700">
+
+                <input class="form-control @error('localidad') is-invalid @enderror" type="text" name="localidad"
+                    id="localidad" placeholder='{{ __('form_translation.Localidad_practicas') }}'>
+
+            </div>
+
             @if (!$data['weblogin'])
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                    data-aos-duration="500">
+                    data-aos-duration="900">
 
                     <select class="form-select @error('provincias') is-invalid @enderror" name="provincias"
                         id="provincias">
-                        <option value="" selected>{{ __('form_translation.Selecciona_una_provincia') }}</option>
+                        <option value="" selected>{{ __('form_translation.Practicas_provincia') }}</option>
                         @foreach ($data['provincias'] as $provincia)
                             <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
                         @endforeach
@@ -38,7 +81,7 @@
                 </div>
 
                 <div class="ciudad_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="700">
+                    data-aos-offset="500" data-aos-duration="900">
 
                     <select class="form-select @error('ciudad') is-invalid @enderror" name="ciudad"
                         id="ciudad"></select>
@@ -50,16 +93,16 @@
             <div class="row">
                 <div class="d-flex align-items-center">
                     <div class="optica_div mt-1" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                        data-aos-offset="500" data-aos-duration="900">
+                        data-aos-offset="500" data-aos-duration="1200">
 
                         <select class="form-select @error('optica') is-invalid @enderror" name="optica" id="optica">
-                            <option value=""></option>
+                            <option value="">{{ __('form_translation.optica') }}</option>
                         </select>
                         <select class="form-select @error('optica') is-invalid @enderror" name="optica2" id="optica2">
-                            <option value=""></option>
+                            <option value="">{{ __('form_translation.optica2') }}</option>
                         </select>
                         <select class="form-select @error('optica') is-invalid @enderror" name="optica3" id="optica3">
-                            <option value=""></option>
+                            <option value="">{{ __('form_translation.optica3') }}</option>
                         </select>
 
                     </div>
@@ -137,41 +180,7 @@
                         </a>
                     </div>
                 </div>
-            </div>
-
-
-
-            <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="1100">
-
-                <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
-                    id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
-
-            </div>
-
-            <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="1300">
-
-                <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
-                    id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
-
-            </div>
-
-            <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="1500">
-
-                <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                    id="email" placeholder='{{ __('form_translation.Email') }}'>
-
-            </div>
-
-            <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="1700">
-
-                <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
-                    id="movil" placeholder='{{ __('form_translation.Telefono') }}'>
-
-            </div>
+            </div>                                
 
             <div class="cont-botton-police">
 
@@ -189,7 +198,7 @@
                 </div>
 
                 <div class="b-pedir-citas mt-5">    
-                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_practicas') }}</button>
+                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
                 </div>
 
             </div>
@@ -230,6 +239,7 @@
 
     </div>
 
+</div>
 </div>
 
 

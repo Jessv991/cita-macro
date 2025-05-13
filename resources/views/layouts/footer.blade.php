@@ -46,7 +46,11 @@
         var getOpticasByWebloginAndOptica = '{{ route('getOpticaByWebloginAndOptica') }}';
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
+        var seleccionaUnaCiudadPracticasText = '{{ __('form_translation.Selecciona_una_ciudad_practicas') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
+        var seleccionaOptica1 = '{{ __('form_translation.optica') }}';
+        var seleccionaOptica2 = '{{ __('form_translation.optica2') }}';
+        var seleccionaOptica3 = '{{ __('form_translation.optica3') }}';
         var styleMap = '';
         var appData
 

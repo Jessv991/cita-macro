@@ -7,10 +7,11 @@
 
 <div class="background-container">
     <div class="background-item">
-        <div class="col-12" style="background-color: #276064">
+        <div class="col-12">
             <div class="row">
                 <div class="col-lg-8 col-12">
-                    {{-- <img class="w-100 h-100 active" src="{{ asset($data['revision']) }}"> --}}
+                    <img id="practicas" class="w-100 h-100 active practicas"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/practicasNOG/' . $data['tipo_dispositivo'] . '/'.$data['idioma'].'/practicas.png') }}">
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
                     @include('form.practicasNOG')

@@ -301,20 +301,25 @@ class view_generator_controller extends Controller
 
     public function validatePideCita(Request $request)
     {
+        $empresas = new Empresas();
         $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
         $optica1 = null;
         $optica2 = null;
         $optica3 = null;
+
+        $optica = $empresas->getCodigoByWeblogin($weblogin);
+        $codigo = $optica[0]->codigo;
+
         if ($request->has('optica_texto') && !empty($request->input('optica_texto'))) {
-            $optica1 = $request->input('optica_texto');
+            $optica1 = $codigo." - ".$request->input('optica_texto');
         }
-        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!='Selecciona una óptica') {
-            $optica2 = $request->input('optica2_texto');
+        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!=('form_translation.optica2')) {
+            $optica2 = $codigo." - ".$request->input('optica2_texto');
         }
-        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!='Selecciona una óptica') {
-            $optica3 = $request->input('optica3_texto');
+        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!=('form_translation.optica3')) {
+            $optica3 = $codigo." - ".$request->input('optica3_texto');
         }
         $origen = $request->input('origen');
         $test = $request->input('_test');
@@ -343,6 +348,15 @@ class view_generator_controller extends Controller
                 'movil' => 'bail|required|digits:9|integer',
                 'check-poli' => 'accepted',
                 'check-sorteo' => 'required',
+            ];
+        }else if ($origen=='practicasNOG') {
+            $baseRules = [
+                'nombre' => 'bail|required|max:20',
+                'localidad' => 'bail|required|max:20',
+                'apellidos' => 'bail|required|max:20',
+                'email' => 'bail|required|email:rfc,dns',
+                'movil' => 'bail|required|digits:9|integer',
+                'check-poli' => 'accepted',
             ];
         }
 

@@ -134,7 +134,11 @@ function getCityBySelectState() {
                         });
                     } else {
                         // Agregar opción por defecto
-                        $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
+                        if($('#landing').val()=='practicasNOG'){
+                            $('#ciudad').append('<option value="">' + seleccionaUnaCiudadPracticasText + '</option>');
+                        }else{
+                            $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
+                        }
 
                         // Agregar opciones de ciudades obtenidas del servidor
                         $.each(data, function (key, value) {
@@ -150,13 +154,20 @@ function getCityBySelectState() {
             // Si no se selecciona ninguna provincia, vaciar el select de ciudades
             $('#ciudad').empty();
             // Agregar opción por defecto
-            $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
+            if($('#landing').val()=='practicasNOG'){
+                $('#ciudad').append('<option value="">' + seleccionaUnaCiudadPracticasText + '</option>');
+            }else{
+                $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
+            }
         }
     });
 
     // Para agregar la opción por defecto cuando se carga la página por primera vez
-    $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
-
+    if($('#landing').val()=='practicasNOG'){
+        $('#ciudad').append('<option value="">' + seleccionaUnaCiudadPracticasText + '</option>');
+    }else{
+        $('#ciudad').append('<option value="">' + seleccionaUnaCiudadText + '</option>');
+    }
 
     $('#optica')
 
@@ -230,12 +241,16 @@ function putOpticasByProvincia(city) {
                     }
                     $('#optica2').removeClass('readonly-select');
                     $('#optica3').removeClass('readonly-select');
-                    $('#optica2').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
-                    $('#optica3').append('<option value="">' + seleccionaUnaOpticaText + '</option>');                 
+                    $('#optica2').append('<option value="">' + seleccionaOptica2 + '</option>');
+                    $('#optica3').append('<option value="">' + seleccionaOptica3 + '</option>');                 
                 }
                 $('#optica').removeClass('readonly-select');
                 // Agregar opción por defecto
-                $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                if($('#landing').val()=='practicasNOG'){
+                    $('#optica').append('<option value="">' + seleccionaOptica1 + '</option>');
+                }else{
+                    $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                }
             
                 $.each(data, function (key, value) {
                     const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
@@ -381,12 +396,16 @@ function getOpticaSelectCity() {
                             } 
                             $('#optica2').removeClass('readonly-select');
                             $('#optica3').removeClass('readonly-select');
-                            $('#optica2').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
-                            $('#optica3').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                            $('#optica2').append('<option value="">' + seleccionaOptica2 + '</option>');
+                            $('#optica3').append('<option value="">' + seleccionaOptica3 + '</option>');
                         }
                         $('#optica').removeClass('readonly-select');
                         // Agregar opción por defecto
-                        $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                        if($('#landing').val()=='practicasNOG'){
+                            $('#optica').append('<option value="">' + seleccionaOptica1 + '</option>');
+                        }else{
+                            $('#optica').append('<option value="">' + seleccionaUnaOpticaText + '</option>');
+                        }
                     
                         $.each(data, function (key, value) {
                             const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';

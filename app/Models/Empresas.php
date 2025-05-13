@@ -375,6 +375,14 @@ class Empresas extends Model
         }
     }
 
+    //================OBTENER EL CODIGO DE LA TIENDA================
+    public function getCodigoByWeblogin($weblogin)
+    {
+        $datos = DB::table('empresas')
+            ->where('weblogin', 'like', '%' . $weblogin . '%');
+            return $datos->get();        
+    }
+
     //================OBTENER TIENDA POR CÓDIGO PARA ENVÍO EMAIL=================
 
     public function getStoreByCodestrore($code_store)
