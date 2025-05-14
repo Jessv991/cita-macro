@@ -315,10 +315,10 @@ class view_generator_controller extends Controller
         if ($request->has('optica_texto') && !empty($request->input('optica_texto'))) {
             $optica1 = $codigo." - ".$request->input('optica_texto');
         }
-        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!=('form_translation.optica2')) {
+        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!=__('form_translation.optica2')) {
             $optica2 = $codigo." - ".$request->input('optica2_texto');
         }
-        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!=('form_translation.optica3')) {
+        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!=__('form_translation.optica3')) {
             $optica3 = $codigo." - ".$request->input('optica3_texto');
         }
         $origen = $request->input('origen');
