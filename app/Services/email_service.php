@@ -16,6 +16,12 @@ class email_service
 
     public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing)
     {
+      
+        // echo $weblogin . '<br>';
+        // echo $tienda . '<br>';
+        // echo $promocional . '<br>';
+        // echo $landing . '<br>';
+
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
         $email = $validated['email'];
