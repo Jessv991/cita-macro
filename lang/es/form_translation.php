@@ -16,6 +16,7 @@ return [
     'optica' => 'Óptica 1',
     'optica2' => 'Óptica 2',
     'optica3' => 'Óptica 3',
+    'postular' => 'Postularse',
     'Email' => 'Email',
     'Email_practicas' => 'Email de contacto',
     'Telefono' => 'Teléfono',

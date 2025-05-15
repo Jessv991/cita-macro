@@ -198,7 +198,7 @@
                 </div>
 
                 <div class="b-pedir-citas mt-5">    
-                    <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
+                    <button id="form" class="btn btn-color">{{ __('form_translation.postular') }}</button>
                 </div>
 
             </div>

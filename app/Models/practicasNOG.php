@@ -89,8 +89,9 @@ class practicasNOG extends Model
     // Relations ...
 
 
-    public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip, $optica1, $optica2, $optica3)
+    public function saveCustomerData($validated, $origen, $url, $tipo_dispositivo, $dispositivo, $ip, $optica1, $optica2, $optica3)
     {
+        
         try {
             $this->fill([
                 'nombre_cliente' => $validated['nombre'],
@@ -98,7 +99,6 @@ class practicasNOG extends Model
                 'email_cliente' => $validated['email'],
                 'telefono_cliente' => $validated['movil'],
                 'fecha_peticion' => date("Y-m-d H:i:s"),
-                'id_empresa' => $codigo,
                 'origin' => $origen,
                 'url_cita' => $url,
                 'ip' => $ip,

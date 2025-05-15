@@ -357,6 +357,8 @@ class view_generator_controller extends Controller
                 'email' => 'bail|required|email:rfc,dns',
                 'movil' => 'bail|required|digits:9|integer',
                 'check-poli' => 'accepted',
+                'provincias' => 'bail|required',
+                'ciudad' => 'bail|required',
             ];
         }
 
@@ -376,7 +378,6 @@ class view_generator_controller extends Controller
         $rules = array_merge($baseRules, $specificRules);
         $validated = $request->validate($rules);
 
-
         $url = $request->input('url_landing');
 
         $getLogo = $this->generadorImg->index($logo);
@@ -390,6 +391,7 @@ class view_generator_controller extends Controller
         }
 
         if($landing=='practicasNOG'){
+            
             $this->Email_service->sendEmailPracticasOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
         }else{
             $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
