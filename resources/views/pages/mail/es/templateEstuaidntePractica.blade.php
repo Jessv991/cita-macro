@@ -887,12 +887,6 @@ button.es-button {
                                                 </em>
                                                 <br>
                                               </p>
-                                              <p style="color:#050606;font-size:16px">
-                                                <em style="line-height:150%">
-                                                  {ORIGIN}
-                                                </em>
-                                                <br>
-                                              </p>
                                             </td>
                                           </tr>
                                         </tbody>

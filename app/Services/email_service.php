@@ -264,11 +264,10 @@ class email_service
                 '{OPTICAS_P}',
                 '{LOGO}',
                 '{LOCAL}',
-                '{ORIGIN}',
                 '{LANDING}'
             );
 
-            $palabrasReemplazar = array($nombre . ' ' . $apellidos, $movil, $email, $localidad_r, $provincia_r, $ciudad_r, $opticas, $logoOptica, $locale, $origen, $landing);
+            $palabrasReemplazar = array($nombre . ' ' . $apellidos, $movil, $email, $localidad_r, $provincia_r, $ciudad_r, $opticas, $logoOptica, $locale, $landing);
 
 
             $actual = file_get_contents($archivo);
