@@ -789,31 +789,7 @@ button.es-button {
        <table cellpadding="0" cellspacing="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" align="center" class="es-content-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:transparent;width:600px" role="none">
-             <tr style="border-collapse:collapse">
-              <td align="left" style="Margin:0;padding-top:15px;padding-right:20px;padding-bottom:15px;padding-left:20px"><!--[if mso]><table style="width:560px" cellpadding="0" cellspacing="0"><tr><td style="width:270px" valign="top"><![endif]-->
-               <table cellspacing="0" cellpadding="0" align="left" class="es-left" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:left">
-                 <tr style="border-collapse:collapse">
-                  <td align="left" style="padding:0;Margin:0;width:270px">
-                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td align="left" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px">UGO Optics</p></td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table><!--[if mso]></td><td style="width:20px"></td><td style="width:270px" valign="top"><![endif]-->
-               <table cellspacing="0" cellpadding="0" align="right" class="es-right" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;float:right">
-                 <tr style="border-collapse:collapse">
-                  <td align="left" style="padding:0;Margin:0;width:270px">
-                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td align="right" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px"><a href="https://www.naturalopticsgroup.com/" target="_blank" class="view" style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturalopticsgroup.com</a></p></td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table><!--[if mso]></td></tr></table><![endif]--></td>
-             </tr>
-           </table></td>
+           
          </tr>
        </table>
        <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important">
@@ -938,32 +914,14 @@ button.es-button {
           <td align="center" style="padding:0;Margin:0">
            <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
              <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #00a091;" align="left" bgcolor="#74cae7">
                 <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                 <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                     <tbody>
                         <tr>
                             <td class="es-m-p20b esd-container-frame" width="270" align="left">
                                 <table width="100%" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                <h3 style="color: #ffffff;">Siguenos</h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="esd-block-social" align="center" style="font-size:0">
-                                                <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
+                                    
                                 </table>
                             </td>
                         </tr>
