@@ -792,10 +792,10 @@ button.es-button {
            
          </tr>
        </table>
-       <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important">
+       <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important; ">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-content-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#9aaea6;width:600px" role="none">
+           <table cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-content-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#fff;width:600px" role="none">
              <tr style="border-collapse:collapse">
               <td align="left" style="padding:0;Margin:0">
                <table width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
