@@ -358,17 +358,16 @@ class Empresas extends Model
     public function getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $landing)
     {
         $datos = DB::table('empresas')
-        ->where('weblogin', $weblogin)
-        ->where('tienda', $tienda)
-        ->where('d22', 'si')
-        ->where("d19", "=", 'si')
-        ->where(function ($query) {
-            $query->where('d9', '-9');
-        });
-        
+            ->where('weblogin', $weblogin)
+            ->where('tienda', $tienda)
+            ->where('d22', 'si')
+            ->where("d19", "=", 'si')
+            ->where(function ($query) {
+                $query->where('d9', '-9');
+            });
+
         // Si promocional no es exactamente 'true', agregar condición de CRM
         if (isset($promocional) || $landing === 'contactologia') {
-            dd($weblogin, $tienda);
             return $datos->get();
         } else {
             $datos->where('CRM', 'si');
