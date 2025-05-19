@@ -197,6 +197,20 @@
                     </label>
                 </div>
 
+                <div class="form-check form-check-reverse mt-5 p-0">
+                    <input class="custom-checkbox" type="checkbox" value="1" name="check-gestion"
+                        id="reverseCheck2">
+
+                    <label class="form-check-label" for="reverseCheck2">
+                        <span>{{ __('form_translation.Aceptar_gestion_natural') }}</span>
+                        <a href="{{ route('politicas.gestion', app()->getLocale()) }}" target="_blank"
+                            style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
+                            {{ __('form_translation.Aceptar_gestion_natural2') }}
+                        </a>    
+                        <span>&nbsp;{{ __('form_translation.Aceptar_gestion_natural3') }}</span>                    
+                    </label>
+                </div>
+
                 <div class="b-pedir-citas mt-5">    
                     <button id="form" class="btn btn-color">{{ __('form_translation.postular') }}</button>
                 </div>

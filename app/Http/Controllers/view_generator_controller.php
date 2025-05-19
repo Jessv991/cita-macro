@@ -357,6 +357,7 @@ class view_generator_controller extends Controller
                 'email' => 'bail|required|email:rfc,dns',
                 'movil' => 'bail|required|digits:9|integer',
                 'check-poli' => 'accepted',
+                'check-gestion' => 'accepted',
                 'provincias' => 'bail|required',
                 'ciudad' => 'bail|required',
             ];
