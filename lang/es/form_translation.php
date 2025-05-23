@@ -33,4 +33,8 @@ return [
     'parrafo-piel' => "El sol no solo afecta tu piel, también daña tus ojos, ¡incluso en días nublados! La exposición prolongada a los rayos UV puede causar:",
     'soluciones' => "Soluciones para protegerte",
     'proteger' => "Protege tu mirada sin perder el estilo. Descubre nuestra colección de lentes diseñados para cuidar tu visión en todo momento.",
+    'parrafo-vision' => "Tu visión merece el mejor cuidado",
+    'parrafo2-vision' => "Con el paso del tiempo, nuestros ojos pueden experimentar cambios sin que lo notemos.",
+    'parrafo-salud' => "Pueden afectar la salud visual de manera silenciosa, al igual que condiciones como la sequedad ocular y la degeneración macular.",
+    'parrafo-chequeo' => "Un chequeo regular permite detectar a tiempo cualquer alteración y prevenir problemas que podrían afectar tu calidad de vida.",
 ];
