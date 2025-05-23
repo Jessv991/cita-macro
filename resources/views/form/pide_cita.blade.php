@@ -12,7 +12,7 @@
         <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
-        @if (isset($data['commodityLC']))
+        @if (isset($data['commodityLC']) && $data['commodityLC'] == 'lc')
             <input type="hidden" id="commodityLC" name="commodityLC" value="{{ $data['commodityLC'] }}">
             <div class="d-flex flex-column justify-content-center align-items-start mb-5">
                 <p class="text-top-form">{{ __('form_lc_translation.Pide_cita_rellenando') }}</p>
@@ -231,7 +231,7 @@
                 <div class="b-pedir-citas mt-5">
 
                     <button id="form" class="btn btn-color">
-                        @if (isset($data['commodityLC']))
+                        @if (isset($data['commodityLC']) && $data['commodityLC'] == 'lc')
                             {{ __('form_lc_translation.Pedir_cita') }}
                         @else
                             {{ __('form_translation.Pedir_cita') }}

@@ -17,7 +17,7 @@ return [
     'Aceptar_politicas_privacidad_3' => 'Políticas de cookies',
     'Politicas_privacidad' => 'De conformidad con el Reglamento (UE) 2016/679 del Parlamento y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos os recordamos que sus datos personales serán tratados por parte del centro remitente del comunicado. Puede ejercer los derechos de acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición dirigiéndose a la dirección del remitente que aparece en esta comunicación, de la misma manera que en cualquier momento puede revocar el consentimiento que disteis para dejar de recibir publicidad.',
     'Pedir_cita' => 'Pide cita',
-    'Confirma_reserva' => 'Confirma tu reserva',
+    'Confirma_reserva' => 'Pide Cita',
     'idioma' => 'es',
     'titol-gracias'=> "Solicitud de cita previa enviada",
     'parrafo-1'=> "Su solicitud ha sido enviada. Pronto uno de nuestros operadores se pondrá en contacto con usted.",
@@ -30,5 +30,7 @@ return [
     'kit' => 'Kit de implantación',
     'Pedir_kit' => "PEDIR KIT DE IMPLEMENTACIÓN",
     'contacto' => "Persona de contacto",
-
+    'parrafo-piel' => "El sol no solo afecta tu piel, también daña tus ojos, ¡incluso en días nublados! La exposición prolongada a los rayos UV puede causar:",
+    'soluciones' => "Soluciones para protegerte",
+    'proteger' => "Protege tu mirada sin perder el estilo. Descubre nuestra colección de lentes diseñados para cuidar tu visión en todo momento.",
 ];

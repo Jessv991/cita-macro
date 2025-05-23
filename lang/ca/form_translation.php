@@ -17,7 +17,7 @@ return [
     'Aceptar_politicas_privacidad_3' => "Polítiques de cookies",
     'Politicas_privacidad' => "De conformitat amb el Reglament (UE) 2016/679 del Parlament i del Consell, pel qual s'aprova el Reglament General de Protecció de Dades us recordem que les seves dades personals seran tractades per part del centre remitent del comunicat. Pot exercir els drets d'accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dirigint-se a l'adreça del remitent que apareix en aquesta comunicació, de la mateixa manera que en qualsevol moment pot revocar el consentiment que vau donar per deixar de rebre publicitat.",
     'Pedir_cita' => "Demanar cita",
-    'Confirma_reserva' => "Confirma la teva reserva",
+    'Confirma_reserva' => "Demanar Cita",
     'idioma' => "cat",
     'titol-gracias' => "Sol·licitud de cita prèvia enviada",
     'parrafo-1' => "La seva sol·licitud s'ha enviat. Aviat un dels nostres operadors es posarà a contacte amb vostè.",
