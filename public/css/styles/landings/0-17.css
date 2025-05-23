@@ -1,3 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: 'Raleway';
   src: url('/fonts/Raleway-Regular.ttf') format('truetype');
@@ -451,6 +459,21 @@ div#animationdivIcon {
 
 /* Adaptaciones para móviles */
 @media (max-width: 768px) {
+
+     body {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  .fixed-bottom-container {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .btn-bottom-center {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
 
     .text-header {
         padding-top: 30px;
