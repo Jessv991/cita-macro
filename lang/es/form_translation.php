@@ -37,4 +37,6 @@ return [
     'parrafo2-vision' => "Con el paso del tiempo, nuestros ojos pueden experimentar cambios sin que lo notemos.",
     'parrafo-salud' => "Pueden afectar la salud visual de manera silenciosa, al igual que condiciones como la sequedad ocular y la degeneración macular.",
     'parrafo-chequeo' => "Un chequeo regular permite detectar a tiempo cualquer alteración y prevenir problemas que podrían afectar tu calidad de vida.",
+    'parrafo-aprendiz' => "La visión influye en el aprendizaje. Muchos problemas visuales pueden pasar desapercibidos en niños y adolescentes, afectando su rendimineto escolar sin que lo notemos.",
+    'parrafo-revision' => "Una revisión visual a tiempo puede marcar la diferencia en su desarrollo y desempeño académico.",
 ];
