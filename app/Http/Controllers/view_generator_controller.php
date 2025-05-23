@@ -88,7 +88,7 @@ class view_generator_controller extends Controller
         //dd($segments);
 
         foreach ($segments as $segment) {
-            if ($segment == 'lc') {
+            if ($segment == 'lc' || $segment == '50' || $segment == '18' || $segment == '0-17') {
                 $lc = $segment;
                 $this->data['commodityLC'] = $lc;
             } elseif ($segment == 'email') {
@@ -101,15 +101,31 @@ class view_generator_controller extends Controller
         //dd($weblogin);
 
         if (isset($lc)) {
-            if (isset($segments[5]) && isset($segments[6])) {
-                $weblogin = $segments[5];
-                $tienda = str_replace('tiecodi_', '', $segments[6]);
-            } elseif (isset($segments[5])) {
-                $weblogin = $segments[5];
-            } else {
-                $weblogin = '';
+
+            if($lc == 'lc'){
+
+                if (isset($segments[5]) && isset($segments[6])) {
+                    $weblogin = $segments[5];
+                    $tienda = str_replace('tiecodi_', '', $segments[6]);
+                } elseif (isset($segments[5])) {
+                    $weblogin = $segments[5];
+                } else {
+                    $weblogin = '';
+                }
+            }else{
+                if (isset($segments[4]) && isset($segments[5])) {
+                    $weblogin = $segments[4];
+                    $tienda = $segments[5];
+                } elseif (isset($segments[4])) {
+                    $weblogin = $segments[4];
+                     $tienda = null;
+                } else {
+                    $weblogin = '';
+                }
             }
         }
+
+        //dd($weblogin, $tienda);
 
 
         //dd($locale, $origen, $weblogin, $tienda, $extra1, $extra2, $extra3, $extra4, $extra5, $extra6, $segments);
@@ -185,6 +201,8 @@ class view_generator_controller extends Controller
 
         //dd($this->data['centros']);
 
+        //dd($this->data['centros']);
+
         //=====================IDIOMA==========================
         $this->data['idioma'] = $locale;
 
@@ -198,7 +216,17 @@ class view_generator_controller extends Controller
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
 
         if (isset($lc)) {
-            $this->data['landing'] = 'lc';
+            
+            if($lc == 'lc'){
+                $this->data['landing'] = 'lc';
+            }elseif($lc === '50'){
+                $this->data['landing'] = '50';
+            }elseif($lc === '18'){
+                $this->data['landing'] = '18';
+            }elseif($lc === '0-17'){
+                $this->data['landing'] = '0-17';
+            }
+
         } else {
             $this->data['landing'] = $origen;
         }
@@ -251,7 +279,7 @@ class view_generator_controller extends Controller
         //dd($segments[3]);
 
 
-        if (isset($lc)) {
+        if (isset($lc) && $lc == 'lc') {
             if (isset($isEmail)) {
                 $this->data['typeLC'] = $isEmail;
                 $this->data['clicodi'] = str_replace('clicodi_', '', $segments[7]);
