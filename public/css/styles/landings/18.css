@@ -5,6 +5,39 @@
   font-style: normal;
 }
 
+#banner-participa {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   background-color: #f1f0ec88;
+   padding: 10px 20px;
+   z-index: 9999;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+   backdrop-filter: blur(6px);
+   transition: top 0.3s ease, bottom 0.3s ease;
+ }
+
+ #participa-btn {
+   background-color: #0085C5;
+   color: white;
+   text-decoration: none;
+   padding: 10px 20px;
+   font-size: 16px;
+   font-weight: bold;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+ }
+
+ #participa-btn:hover {
+   background-color: #75abc5;
+ }
+
+
 .text-header {
     text-align: center;
     align-items: center;
@@ -385,6 +418,8 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
+    
+
 }
 
 /* Adaptaciones para móviles */
@@ -468,4 +503,11 @@ div#animationdivIcon {
     .form-space{
         padding-bottom: 73px;
     }
+
+    #banner-participa {
+     top: auto;
+     bottom: 0;
+     justify-content: center;
+     /* centramos el botón en móviles */
+   }
 }
