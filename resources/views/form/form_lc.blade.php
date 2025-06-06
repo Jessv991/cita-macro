@@ -205,8 +205,8 @@
 
             <div class="d-flex flex-column text-center w-100">
 
-                <span class="">{{ __('form_lc_translation.titol-gracias') }}</span>
-                <span class="mt-4">{{ __('form_lc_translation.parrafo-1') }}</span>
+                <span class="">{{ __('form_lc_translation.titol-gracias-pedido') }}</span>
+                <span class="mt-4">{{ __('form_lc_translation.parrafo-1-pedido') }}</span>
                 <span class="mt-4">{{ __('form_lc_translation.parrafo-2') }}</span>
 
                 <hr>
