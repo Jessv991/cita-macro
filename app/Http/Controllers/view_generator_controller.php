@@ -561,7 +561,7 @@ class view_generator_controller extends Controller
         $test = $request->input('_test');
         $logo = $request->input('_logo');
         $locale = $request->input('language');
-        $url = $request->input('url_landing');
+        $url = 'https://optica.naturaloptics.com/cita-macro/es/cita-commodity/lc/email/';
         $typeLC = $request->input('typeLC');
         $tlfFijo = $request->input('fijo');
         $clicodi = $request->input('clicodi');
