@@ -23,22 +23,23 @@
     <script>
         function detectarOrientacion() {
             const esVertical = window.innerHeight > window.innerWidth;
-    
+
             document.body.classList.toggle('mobile', esVertical);
             document.body.classList.toggle('desktop', !esVertical);
-    
+
             document.cookie = `orientacion=${esVertical ? 'mobile' : 'desktop'}; path=/;`;
-    
+
             if (localStorage.getItem('orientacionGuardada') !== (esVertical ? 'mobile' : 'desktop')) {
                 localStorage.setItem('orientacionGuardada', esVertical ? 'mobile' : 'desktop');
                 location.reload();
             }
         }
-    
+
         window.addEventListener('load', detectarOrientacion);
         window.addEventListener('resize', detectarOrientacion);
     </script>
 
+    <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
     <script>
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
@@ -58,10 +59,8 @@
         };
 
         AOS.init();
-        
     </script>
 
-    <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/landings/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>
