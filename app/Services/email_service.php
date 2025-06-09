@@ -16,7 +16,7 @@ class email_service
 
     public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing)
     {
-      
+
         // echo $weblogin . '<br>';
         // echo $tienda . '<br>';
         // echo $promocional . '<br>';
@@ -46,7 +46,6 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
 
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $landing);
@@ -63,6 +62,8 @@ class email_service
 
 
             if ($promocional !== 'true' || $landing === 'contactologia') {
+                $mail->Subject = 'Nuevo participante en sorteo: ' . $nombre . ' ' . $apellidos;
+
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templatePromocional.blade.php');
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
@@ -79,6 +80,7 @@ class email_service
 
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $landing);
             } else {
+                $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
@@ -156,9 +158,10 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
-            $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
+
 
             if ($promocional !== 'true' || $landing === 'contactologia') {
+                $mail->Subject = 'Gracias por participar con ' . $nombre_optica;
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateClientePromocional.blade.php');
                 $palabrasBuscar = array(
                     '{DIRECIONOPTICA}',
@@ -173,6 +176,7 @@ class email_service
 
                 $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $origen, $landing);
             } else {
+                $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
                 $palabrasBuscar = array(
                     '{DIRECIONOPTICA}',
@@ -224,13 +228,13 @@ class email_service
         $provincia_r = $validated['provincias'];
         $ciudad_r = $validated['ciudad'];
 
-        $opticas='';
+        $opticas = '';
 
-        if(isset($optica3)){
+        if (isset($optica3)) {
             $opticas = 'Óptica 1: ' . $optica1 . '<br>' . 'Óptica 2: ' . $optica2 . '<br>' . 'Óptica 3: ' . $optica3;
-        }elseif(isset($optica2)){
+        } elseif (isset($optica2)) {
             $opticas = 'Óptica 1: ' . $optica1 . '<br>' . 'Óptica 2: ' . $optica2;
-        }else{
+        } else {
             $opticas = 'Óptica 1: ' . $optica1;
         }
 
@@ -292,11 +296,5 @@ class email_service
 
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
         }
-
-
-
-
     }
-
-    
 }
