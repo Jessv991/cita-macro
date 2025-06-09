@@ -246,6 +246,7 @@
             data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
             success: function(response) {
                 $('#formMacroContactologia').addClass('d-none');
+                $('#form').prop('disabled', true);
                 $('#gracias').removeClass('d-none');
                 // Manejar la respuesta del servidor, por ejemplo, redirigir
             },
@@ -289,6 +290,7 @@
         $('#formMacroContactologia').removeClass('d-none');
 
         var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+        $('#form').prop('disabled', false);
 
         // Limpiar el checkbox
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);

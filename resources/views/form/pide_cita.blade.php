@@ -303,6 +303,7 @@
             data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
             success: function(response) {
                 $('#formMacroContactologia').addClass('d-none');
+                $('#form').prop('disabled', true);
                 $('#gracias').removeClass('d-none');
                 // Manejar la respuesta del servidor, por ejemplo, redirigir
             },
@@ -340,6 +341,7 @@
         e.preventDefault();
 
         $('#gracias').addClass('d-none');
+        $('#form').prop('disabled', false);
         $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
         $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
 
