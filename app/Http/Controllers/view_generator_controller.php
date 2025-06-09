@@ -611,8 +611,6 @@ class view_generator_controller extends Controller
         $rules = array_merge($baseValidated, $specificRules);
         $validated = $request->validate($rules);
 
-        dd($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC);
-
         $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
