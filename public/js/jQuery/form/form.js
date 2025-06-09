@@ -1,5 +1,17 @@
 var dispositivo = window.screen.width;
 
+var fullUrl = $('#url_landing').val(); // Paso 1: obtener valor del input
+
+// Paso 2: crear objeto URL
+var url = new URL(fullUrl);
+
+// Paso 3: obtener la ruta del path
+var pathname = url.pathname; // Ejemplo: "/cita-macro/es/cita-commodity/lc/email/ponferrada/tiecodi_1/..."
+
+// Paso 4: extraer el segmento deseado
+var parts = pathname.split('/'); // divide la ruta por '/'
+var valorDeseado = parts[4] + '/' + parts[5]; // lc/email está en índice 4 y 5
+
 $(document).ready(function () {
 
     var weblogin = $('#_weblogin').val();
@@ -72,6 +84,72 @@ $(document).ready(function () {
                 $('.cls-1').removeClass('cls-1-table');
             }, 1000); // Ajusta el tiempo que el hover permanece activo
         }, 5000); // Cada 5 segundos
+
+    }
+
+    if(valorDeseado === 'lc/email'){
+
+        $('#form').on('click', function(e) {
+        e.preventDefault();
+        var formData = $('#formMacroContactologia').serialize();
+
+        $.ajax({
+            url: validateFormLC, // Ruta de Laravel que maneja la validación
+            type: 'POST',
+            data: formData, // Agrega el token CSRF
+            _token: csrfToken,
+            success: function(response) {
+                $('#formMacroContactologia').addClass('d-none');
+                $('#form').prop('disabled', true);
+                $('#gracias').removeClass('d-none');
+                // Manejar la respuesta del servidor, por ejemplo, redirigir
+            },
+            error: function(xhr, status, error) {
+
+                // Manejar errores si es necesario
+                if (xhr.status === 422) {
+                    var errors = xhr.responseJSON.errors;
+
+                    // Limpiar mensajes de error anteriores
+                    $('#formMacroContactologia .error').remove(); //remueve los msj de error
+                    $('input').removeClass(
+                        'border-1 border-bottom border-danger'); //remueve el style de los input
+                    $('select').removeClass(
+                        'border-1 border-bottom border-danger'); //remueve el style de los select
+
+                    // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
+                    $.each(errors, function(key, value) {
+                        var $input = $('#formMacroContactologia').find('[name="' + key +
+                            '"]');
+                        $input.addClass('border-1 border-bottom border-danger');
+                        $input.next('.error').remove();
+                        $input.after(
+                            '<span class="error text-danger" style="font-size: 12px;">' +
+                            value[0] + '</span>'); //este es el msj de error
+                    });
+                } else {
+                    console.error(error); // Manejar otros tipos de errores si es necesario
+                }
+            }
+        });
+    });
+
+    $('#volver-form').on('click', function(e) {
+        e.preventDefault();
+
+        $('#gracias').addClass('d-none');
+        $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
+        $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
+
+        $('#formMacroContactologia').removeClass('d-none');
+
+        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+        $('#form').prop('disabled', false);
+
+        // Limpiar el checkbox
+        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
+
+    })
 
     }
 
