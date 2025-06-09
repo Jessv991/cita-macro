@@ -160,7 +160,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
 
 
-            if ($promocional !== 'true' || $landing === 'contactologia') {
+            if ($promocional === 'true' || $landing === 'contactologia') {
                 $mail->Subject = 'Gracias por participar con ' . $nombre_optica;
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateClientePromocional.blade.php');
                 $palabrasBuscar = array(
