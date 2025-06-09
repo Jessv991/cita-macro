@@ -87,7 +87,7 @@ $(document).ready(function () {
 
     }
 
-    if (valorDeseado === 'lc/email') {
+    /* if (valorDeseado === 'lc/email') {
 
         $('#form').on('click', function (e) {
             e.preventDefault();
@@ -153,7 +153,7 @@ $(document).ready(function () {
 
         })
 
-    }
+    } */
 
 });
 
