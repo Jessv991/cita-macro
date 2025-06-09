@@ -87,69 +87,59 @@ $(document).ready(function () {
 
     }
 
-    if(valorDeseado === 'lc/email'){
+    if (valorDeseado === 'lc/email') {
 
-        $('#form').on('click', function(e) {
-        e.preventDefault();
-        var formData = $('#formMacroContactologia').serialize();
+        $('#form').on('click', function (e) {
+            e.preventDefault();
+            var formData = $('#formMacroContactologia').serialize() + '&_token=' + csrfToken;
 
-        $.ajax({
-            url: validateFormLC, // Ruta de Laravel que maneja la validación
-            type: 'POST',
-            data: formData, // Agrega el token CSRF
-            _token: csrfToken,
-            success: function(response) {
-                $('#formMacroContactologia').addClass('d-none');
-                $('#form').prop('disabled', true);
-                $('#gracias').removeClass('d-none');
-                // Manejar la respuesta del servidor, por ejemplo, redirigir
-            },
-            error: function(xhr, status, error) {
+            $.ajax({
+                url: validateFormLC,
+                type: 'POST',
+                data: formData,
+                success: function (response) {
+                    $('#formMacroContactologia').addClass('d-none');
+                    $('#form').prop('disabled', true);
+                    $('#gracias').removeClass('d-none');
+                },
+                error: function (xhr, status, error) {
+                    if (xhr.status === 422) {
+                        var errors = xhr.responseJSON.errors;
 
-                // Manejar errores si es necesario
-                if (xhr.status === 422) {
-                    var errors = xhr.responseJSON.errors;
+                        $('#formMacroContactologia .error').remove();
+                        $('input').removeClass('border-1 border-bottom border-danger');
+                        $('select').removeClass('border-1 border-bottom border-danger');
 
-                    // Limpiar mensajes de error anteriores
-                    $('#formMacroContactologia .error').remove(); //remueve los msj de error
-                    $('input').removeClass(
-                        'border-1 border-bottom border-danger'); //remueve el style de los input
-                    $('select').removeClass(
-                        'border-1 border-bottom border-danger'); //remueve el style de los select
-
-                    // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
-                    $.each(errors, function(key, value) {
-                        var $input = $('#formMacroContactologia').find('[name="' + key +
-                            '"]');
-                        $input.addClass('border-1 border-bottom border-danger');
-                        $input.next('.error').remove();
-                        $input.after(
-                            '<span class="error text-danger" style="font-size: 12px;">' +
-                            value[0] + '</span>'); //este es el msj de error
-                    });
-                } else {
-                    console.error(error); // Manejar otros tipos de errores si es necesario
+                        $.each(errors, function (key, value) {
+                            var $input = $('#formMacroContactologia').find('[name="' + key + '"]');
+                            $input.addClass('border-1 border-bottom border-danger');
+                            $input.next('.error').remove();
+                            $input.after('<span class="error text-danger" style="font-size: 12px;">' + value[0] + '</span>');
+                        });
+                    } else {
+                        console.error(error);
+                    }
                 }
-            }
+            });
         });
-    });
 
-    $('#volver-form').on('click', function(e) {
-        e.preventDefault();
 
-        $('#gracias').addClass('d-none');
-        $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
-        $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
+        $('#volver-form').on('click', function (e) {
+            e.preventDefault();
 
-        $('#formMacroContactologia').removeClass('d-none');
+            $('#gracias').addClass('d-none');
+            $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
+            $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
 
-        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
-        $('#form').prop('disabled', false);
+            $('#formMacroContactologia').removeClass('d-none');
 
-        // Limpiar el checkbox
-        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
+            var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+            $('#form').prop('disabled', false);
 
-    })
+            // Limpiar el checkbox
+            $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
+
+        })
 
     }
 
