@@ -91,38 +91,50 @@ $(document).ready(function () {
 
         $('#form').on('click', function (e) {
             e.preventDefault();
-            var formData = $('#formMacroContactologia').serialize() + '&_token=' + csrfToken;
+            var formData = $('#formMacroContactologia').serialize();
 
             $.ajax({
-                url: validateFormLC,
+                url: validateFormLC, // Ruta de Laravel que maneja la validación
                 type: 'POST',
-                data: formData,
+                data: formData, // Agrega el token CSRF
+                headers: {
+                    'X-CSRF-TOKEN': csrfToken
+                },
                 success: function (response) {
                     $('#formMacroContactologia').addClass('d-none');
                     $('#form').prop('disabled', true);
                     $('#gracias').removeClass('d-none');
+                    // Manejar la respuesta del servidor, por ejemplo, redirigir
                 },
                 error: function (xhr, status, error) {
+
+                    // Manejar errores si es necesario
                     if (xhr.status === 422) {
                         var errors = xhr.responseJSON.errors;
 
-                        $('#formMacroContactologia .error').remove();
-                        $('input').removeClass('border-1 border-bottom border-danger');
-                        $('select').removeClass('border-1 border-bottom border-danger');
+                        // Limpiar mensajes de error anteriores
+                        $('#formMacroContactologia .error').remove(); //remueve los msj de error
+                        $('input').removeClass(
+                            'border-1 border-bottom border-danger'); //remueve el style de los input
+                        $('select').removeClass(
+                            'border-1 border-bottom border-danger'); //remueve el style de los select
 
+                        // Iterar sobre los errores y mostrarlos junto a los campos correspondientes
                         $.each(errors, function (key, value) {
-                            var $input = $('#formMacroContactologia').find('[name="' + key + '"]');
+                            var $input = $('#formMacroContactologia').find('[name="' + key +
+                                '"]');
                             $input.addClass('border-1 border-bottom border-danger');
                             $input.next('.error').remove();
-                            $input.after('<span class="error text-danger" style="font-size: 12px;">' + value[0] + '</span>');
+                            $input.after(
+                                '<span class="error text-danger" style="font-size: 12px;">' +
+                                value[0] + '</span>'); //este es el msj de error
                         });
                     } else {
-                        console.error(error);
+                        console.error(error); // Manejar otros tipos de errores si es necesario
                     }
                 }
             });
         });
-
 
         $('#volver-form').on('click', function (e) {
             e.preventDefault();
