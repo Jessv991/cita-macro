@@ -61,7 +61,7 @@ class email_service
             }
 
 
-            if ($promocional !== 'true' || $landing === 'contactologia') {
+            if ($promocional === 'true' || $landing === 'contactologia') {
                 $mail->Subject = 'Nuevo participante en sorteo: ' . $nombre . ' ' . $apellidos;
 
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templatePromocional.blade.php');
