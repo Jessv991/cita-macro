@@ -398,6 +398,7 @@ class Empresas extends Model
                 ->where(function ($query) {
                     $query->where('e.d9', '-9');
                 })
+                ->where("e.crm", "=", 'si')
                 ->orderBy('e.d3', 'asc')
                 ->get();
 
