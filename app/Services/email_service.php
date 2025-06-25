@@ -65,10 +65,11 @@ class email_service
                 echo "No se encontró la óptica.";
             }
 
+            
             if ($typeLC === 'ordinario' && $commodityLC === null) {
-
+                
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
-
+                
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
                     '{EMAILCLIENTE}',
@@ -80,8 +81,8 @@ class email_service
                     '{LOGO}',
                     '{LOCAL}'
                 );
-
-
+                
+                
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             } elseif ($typeLC === 'email') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteOpticaLC.blade.php');
@@ -106,7 +107,7 @@ class email_service
                     '{LOCAL}'
                 );
 
-                $palabrasReemplazar = array($tienda, $nombre . " " . $apellidos, $clicodi, $comentario, $nombre . " " . $apellidos, $movil, $email, $opticaName, $direccion, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
+                $palabrasReemplazar = array($tienda, $nombre . " " . $apellidos, $clicodi, $comentario, $nombre . " " . $apellidos, $movil, $email, $opticaName, $direccion_optica, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
                 
             } elseif (isset($commodityLC)) {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteOpticaLCsms.blade.php');
