@@ -11,8 +11,12 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC)
+    public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC)
     {
+        $tienda = ''; 
+        $weblogin = '';
+
+        list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
 
         $nombre = $validated['nombre'];
         $email = $validated['email'];
