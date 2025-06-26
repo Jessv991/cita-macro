@@ -384,8 +384,10 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
 
         $codigoProvincia = $request->input('provincias');
+        $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
 
-        $localidades = $empresas->getCityByProvincia($codigoProvincia);
+        $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional, $landing);
 
         return response()->json($localidades);
     }
@@ -397,8 +399,10 @@ class view_generator_controller extends Controller
         $empresas = new Empresas();
 
         $localidad = $request->input('ciudad');
+        $promocional = $request->input('promocional');
+        $landing = $request->input('landing');
 
-        $optica = $empresas->getStoresByProvincia($localidad);
+        $optica = $empresas->getStoresByProvincia($localidad, $promocional, $landing);
 
         return response()->json($optica);
     }
