@@ -13,7 +13,10 @@ class email_service
 {
     public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
     {
-        
+        $tienda = ''; 
+        $weblogin = '';
+
+        list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
 
         $nombre = $validated['nombre'];
         $apellidos = $validated['apellidos'];
