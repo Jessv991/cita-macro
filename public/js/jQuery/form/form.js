@@ -253,7 +253,7 @@ function putOpticasByProvincia(city) {
                 }
             
                 $.each(data, function (key, value) {
-                    const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
+                    const optionHtml = '<option value="' + value.tienda + " " + value.weblogin + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
                     $('#optica').append(optionHtml);
                     if($('#landing').val()=='practicasNOG'){
                         $('#optica2').append(optionHtml);
@@ -408,7 +408,7 @@ function getOpticaSelectCity() {
                         }
                     
                         $.each(data, function (key, value) {
-                            const optionHtml = '<option value="' + value.tienda + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
+                            const optionHtml = '<option value="' + value.tienda + " " + value.weblogin + '">' + value.d29 + ' - ' + value.d23 + ' - ' + value.d3 + '</option>';
                             $('#optica').append(optionHtml);
                             if($('#landing').val()=='practicasNOG'){
                                 $('#optica2').append(optionHtml);

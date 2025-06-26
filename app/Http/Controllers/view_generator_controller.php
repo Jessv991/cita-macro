@@ -393,9 +393,9 @@ class view_generator_controller extends Controller
 
         if($landing=='practicasNOG'){
             
-            $this->Email_service->sendEmailPracticasOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+            $this->Email_service->sendEmailPracticasOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
         }else{
-            $this->Email_service->sendEmailOptica($validated, $origen, $tienda, $weblogin, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+            $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
         }
 
 
