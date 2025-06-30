@@ -62,6 +62,7 @@ class email_service
             if (!empty($optica) && isset($optica[0])) {
 
                 $tlf_optica = $optica[0]->d6;
+                $tienda_codigo = $optica[0]->codigo;
                 $email_optica = $optica[0]->d5;
                 $direccion_optica = $optica[0]->d23;
                 $nombre_optica = $optica[0]->d29;
@@ -152,7 +153,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
             }
 
 
