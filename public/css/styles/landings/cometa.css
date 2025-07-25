@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'KGPerfectPenmanship';
+    src: url(../../../fonts/KGPerfectPenmanship.ttf);
+}
+
+*{
+    font-family: 'KGPerfectPenmanship';
+}
+
+p{
+    font-size: 1.6rem;
+    align-items: center;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.logo-N {
+    width: 85px;
+    height: 85px;
+}
+
+
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
