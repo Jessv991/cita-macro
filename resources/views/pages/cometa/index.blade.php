@@ -7,52 +7,60 @@
     <div class="paso-card-div d-block mx-auto">
         <img class="materiales-board-image mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/MATERIALES-NECESARIOS.png')}}" alt="">
         <div class="d-flex w-100" style="height:15%;">
-            <div style="width:50%;">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_tijera.png')}}" alt="">
-                        <p>Tijeras</p>
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_tijera.png')}}" alt="">
+                            <p>Tijeras</p>
+                        </div>
                     </div>
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_regla.png')}}" alt="">
-                        <p>Regla</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_regla.png')}}" alt="">
+                            <p>Regla</p>
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_varillas.png')}}" alt="">
-                        <p>2 Varillas</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_varillas.png')}}" alt="">
+                            <p>2 Varillas</p>
+                        </div>
                     </div>
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_papel.png')}}" alt="">
-                        <p>Papel de seda</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_papel.png')}}" alt="">
+                            <p>Papel de seda</p>
+                        </div>
                     </div>
-                </div>
-            </div>
-            <div style="width:50%;">
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_pegamento.png')}}" alt="">
-                        <p>Pegamento</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_pegamento.png')}}" alt="">
+                            <p>Pegamento</p>
+                        </div>
                     </div>
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_lapiz.png')}}" alt="">
-                        <p>Lápiz</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_lapiz.png')}}" alt="">
+                            <p>Lápiz</p>
+                        </div>
                     </div>
-                </div>
-                <div class="d-flex flex-wrap justify-content-center">
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_hilo.png')}}" alt="">
-                        <p>Cuerda / hilo</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_hilo.png')}}" alt="">
+                            <p>Cuerda / hilo</p>
+                        </div>
                     </div>
-                    <div class="materiales-element-div mt-5">
-                        <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_cinta.png')}}" alt="">
-                        <p>Cinta adhesiva</p>
+                    <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="materiales-element-div mt-5">
+                            <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_cinta.png')}}" alt="">
+                            <p>Cinta adhesiva</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-            <img class="paso-board-image my-3 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/PASO-A-PASO.png')}}" alt="">
+        <img class="paso-board-image my-3 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/PASO-A-PASO.png')}}" alt="">
         <div class="paso-outer-image-text-div">
             <div class="paso-image-text-inner-div">
                 <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_1.png')}}" alt="">

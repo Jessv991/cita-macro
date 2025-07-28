@@ -16,12 +16,35 @@
         height:27vh; 
         width:100vw; 
         background-repeat:no-repeat; 
+        background-position: center;
         background-size:contain; 
         background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
     }
 
     .materiales-board-image {
         width: 50%;
+    }
+
+    .rectangle-opposite-border {
+        height: 10rem;
+        width: 100%;
+        margin-top: 1vh;
+    }
+
+    .inside-padding-rectangle-up {
+        height: 1rem;
+        width: 100%;
+        background-color: black;
+        border-radius: 1rem;
+        transform: translateY(-0.8rem);
+    }
+
+    .inside-padding-rectangle-down {
+        height: 1rem;
+        width: 100%;
+        background-color: black;
+        border-radius: 1rem;
+        transform: translateY(1.8rem);
     }
 
     .paso-card-div {
@@ -50,7 +73,7 @@
 
     .materiales-element-div {
         text-align: center; 
-        width: 50%
+        width: 100%
     }
 
     .materiales-image {
@@ -67,6 +90,7 @@
     .paso-image {
         width: 80%;
         display:block;
+        margin-left: 1rem;
     }
 
     .paso-image-text-inner-div {
@@ -118,11 +142,11 @@
 
     .materiales-element-div {
         text-align: center; 
-        width: 50%
+        width: 75%
     }
 
     .materiales-image {
-        width: 60%;
+        width: 100%;
         margin:auto;
     }
 
@@ -139,6 +163,8 @@
 
     .paso-image-text-inner-div {
         width: 50%;
+        margin-left: 5rem;
+        margin-top: 5rem;
     }
 
     .reto-board-image {
