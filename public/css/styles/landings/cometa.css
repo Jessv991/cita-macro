@@ -21,37 +21,30 @@
         background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
     }
 
-    .materiales-board-image {
-        width: 50%;
-    }
-
-    .rectangle-opposite-border {
-        height: 10rem;
-        width: 100%;
-        margin-top: 1vh;
-    }
-
-    .inside-padding-rectangle-up {
-        height: 1rem;
-        width: 100%;
-        background-color: black;
-        border-radius: 1rem;
-        transform: translateY(-0.8rem);
-    }
-
-    .inside-padding-rectangle-down {
-        height: 1rem;
-        width: 100%;
-        background-color: black;
-        border-radius: 1rem;
-        transform: translateY(1.8rem);
-    }
-
-    .paso-card-div {
+    .paso-card-div-mobile-top {
+        padding-top: 1rem;
         background:#fbf7f3;
         width:90vw;
         border-radius:2rem;
         padding-bottom: 3vh;
+        margin-bottom: 3rem;
+    }
+
+    .paso-card-div-mobile-bottom {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+    }
+
+    .materiales-board-image {
+        width: 50%;
+    }
+
+    .paso-card-div {
+        background: transparent;
+        
     }
 
     .paso-board-image {
@@ -108,6 +101,14 @@
         padding-bottom: 54vh;
     }
 
+    p{
+        font-size: 1.6rem;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
     .banner {
         height:100vh; width:100vw; 
         background-repeat:no-repeat; 
@@ -117,23 +118,23 @@
     }
 
     .materiales-board-image {
+        margin-top: 3rem;
         width: 50%;
     }
 
+    .paso-board-image{
+        margin-top: 5rem;
+    }
+
     .paso-card-div {
+        padding-top: 1rem;
         background:#fbf7f3;
         width:90vw;
         border-radius:7.5rem;
         padding-bottom: 25vh;
+        margin-top: 0;
     }
 
-    p{
-        font-size: 1.6rem;
-        align-items: center;
-        width: 50%;
-        margin: auto;
-        text-align: center;
-    }
 
     .logo-N {
         width: 85px;
