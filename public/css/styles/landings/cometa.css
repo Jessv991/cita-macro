@@ -20,6 +20,26 @@ p{
     height: 85px;
 }
 
+.materiales-element-div {
+    text-align: center; 
+    width: 50%
+}
+
+.materiales-image {
+    width: 60%;
+    margin:auto;
+}
+
+.paso-image-div {
+    display: flex;
+    height:18%; 
+    width:100%
+}
+
+.paso-image {
+    width: 80%;
+    display:block;
+}
 
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
