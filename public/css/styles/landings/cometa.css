@@ -7,38 +7,143 @@
     font-family: 'KGPerfectPenmanship';
 }
 
-p{
-    font-size: 1.6rem;
-    align-items: center;
-    width: 50%;
-    margin: auto;
-    text-align: center;
+@media only screen and (max-width: 1043px) {
+    .main-div{
+        padding-bottom: 10vh;
+    }
+
+    .banner {
+        height:27vh; 
+        width:100vw; 
+        background-repeat:no-repeat; 
+        background-size:contain; 
+        background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
+    }
+
+    .materiales-board-image {
+        width: 50%;
+    }
+
+    .paso-card-div {
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+    }
+
+    .paso-board-image {
+        width: 35%;
+    }
+
+    p{
+        font-size: 0.85rem;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo-N {
+        width: 45px;
+        height: 45px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 50%
+    }
+
+    .materiales-image {
+        width: 60%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: block;
+        height:17%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+    }
+
+    .paso-image-text-inner-div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .reto-board-image {
+        width: 75%;
+    }
 }
 
-.logo-N {
-    width: 85px;
-    height: 85px;
-}
+@media only screen and (min-width: 1044px) {
+    .main-div{
+        padding-bottom: 54vh;
+    }
 
-.materiales-element-div {
-    text-align: center; 
-    width: 50%
-}
+    .banner {
+        height:100vh; width:100vw; 
+        background-repeat:no-repeat; 
+        background-size:contain; 
+        background-position:center;
+        background-image: url('/assets/img/cometa/desktop/es/BANNER-COMETA-PC.png');
+    }
 
-.materiales-image {
-    width: 60%;
-    margin:auto;
-}
+    .materiales-board-image {
+        width: 50%;
+    }
 
-.paso-image-div {
-    display: flex;
-    height:18%; 
-    width:100%
-}
+    .paso-card-div {
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:7.5rem;
+        padding-bottom: 25vh;
+    }
 
-.paso-image {
-    width: 80%;
-    display:block;
+    p{
+        font-size: 1.6rem;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo-N {
+        width: 85px;
+        height: 85px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 50%
+    }
+
+    .materiales-image {
+        width: 60%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: flex;
+        height:18%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+    }
+
+    .paso-image-text-inner-div {
+        width: 50%;
+    }
+
+    .reto-board-image {
+        width: 30%;
+    }
 }
 
 /* 
