@@ -21,24 +21,54 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-
-/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
-
-a {
-    color: #1e151f !important;
+@font-face {
+    font-family: 'Darkline';
+    src: url('/fonts/Darkline.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
-a:hover {
-    color: #5a5e5f !important;
+.Darkline-text{
+    font-family: 'Darkline', sans-serif;
+    font-weight: 400;
+    font-size: 128px;
+    line-height: 0.2;
+    letter-spacing: -0.01em;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
-.btn-color {
-    background-color: #000 !important;
+.titol-hola-rutina{
+    font-size: 60px;
+    color: #BCCF88;
 }
 
-.btn-color:hover {
-    background-color: #fff !important;
-    color: #000;
+.primeros-parrafos{
+    font-size: 31.8px;
+}
+
+.cont-level-2{
+    background-color: #E2807B;
+}
+.titol-fatiga{
+    font-size: 50px;
+}
+
+.segundo-parrafo{
+    font-size: 38px;
+}
+
+.tercer-parrafo{
+    font-size: 29px;
+    font-weight: 300;
+}
+
+.gif-two {
+    width: 80%;   /* Más pequeño que el contenedor */
+    height: auto; /* Mantiene proporción */
+    display: block;
 }
 
 
@@ -135,148 +165,34 @@ div#animationdivIcon {
 
 @media (max-width: 2000px) {
 
-    .text-top-form {
-        font-size: 21px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-}
-
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
+   
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
 
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
+  
 }
+
+
+
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-        margin-top: 50px;
-    }
-
-    .mb-5 {
-        margin-bottom: 1rem !important;
-    }
 
 }
 
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    .text-top-form {
-        margin-top: 65px;
-    }
-
-    .mb-5 {
-        margin-bottom: 1rem !important;
-    }
-
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
-
-    .text-top-form {
-        margin-top: 65px;
-    }
-
-    .mb-5 {
-        margin-bottom: 1rem !important;
-    }
 
 }
 
