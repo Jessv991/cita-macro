@@ -1,3 +1,9 @@
+@font-face {
+    font-family: 'KGPerfectPenmanship';
+    src: url(../../../fonts/KGPerfectPenmanship.ttf);
+}
+
+
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -133,7 +139,81 @@ div#animationdivIcon {
                                            
  */
 
-@media (max-width: 2000px) {
+.interior-text {
+    font-family: 'KGPerfectPenmanship';
+}
+
+.bottom-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@media (min-width: 1500px) {
+    
+    .main-div{
+        padding-bottom: 10vh;
+    }
+
+    p{
+        font-size: 1.6rem;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .materiales-board-image {
+        margin-top: 3rem;
+        width: 50%;
+    }
+
+    .paso-board-image{
+        margin-top: 5rem;
+    }
+
+    .paso-card-div {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:7.5rem;
+        padding-bottom: 25vh;
+        margin-top: 0;
+    }
+
+    .logo-N {
+        width: 85px;
+        height: 85px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 75%
+    }
+
+    .materiales-image {
+        width: 100%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: flex;
+        height:18%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+    }
+
+    .paso-image-text-inner-div {
+        width: 50%;
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+
+    .reto-board-image {
+        width: 30%;
+    }
 
     .text-top-form {
         font-size: 21px;
@@ -158,35 +238,74 @@ div#animationdivIcon {
     }
 }
 
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
-}
-
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
+
+    .main-div{
+        padding-bottom: 54vh;
+    }
+
+    p{
+        font-size: 1.6rem;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .materiales-board-image {
+        margin-top: 3rem;
+        width: 50%;
+    }
+
+    .paso-board-image{
+        margin-top: 5rem;
+    }
+
+    .paso-card-div {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:4rem;
+        padding-bottom: 25vh;
+        margin-top: 0;
+    }
+
+    .logo-N {
+        width: 85px;
+        height: 85px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 75%
+    }
+
+    .materiales-image {
+        width: 100%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: flex;
+        height:18%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+    }
+
+    .paso-image-text-inner-div {
+        width: 50%;
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+
+    .reto-board-image {
+        width: 30%;
+    }
 
     .text-top-form {
         font-size: 20px;
@@ -214,6 +333,73 @@ div#animationdivIcon {
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+
+    .main-div{
+        padding-bottom: 30vh;
+    }
+
+    p{
+        font-size: 1rem;
+        align-items: center;
+        width: 75%;
+        margin: auto;
+        text-align: center;
+    }
+
+
+    .materiales-board-image {
+        margin-top: 3rem;
+        width: 50%;
+    }
+
+    .paso-board-image{
+        margin-top: 5rem;
+    }
+
+    .paso-card-div {
+        padding-top: 0.5rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:4.5rem;
+        padding-bottom: 25vh;
+        margin-top: 0;
+    }
+
+    .logo-N {
+        width: 85px;
+        height: 85px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 75%
+    }
+
+    .materiales-image {
+        width: 100%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: flex;
+        height:18%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+    }
+
+    .paso-image-text-inner-div {
+        width: 50%;
+        margin-left: 5rem;
+        margin-top: 5rem;
+    }
+
+    .reto-board-image {
+        width: 35%;
+    }
 
     .text-top-form {
         font-size: 20px;
@@ -242,6 +428,85 @@ div#animationdivIcon {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+    .main-div{
+        padding-bottom: 10vh;
+    }
+
+    .paso-card-div-mobile-top {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+        margin-bottom: 5rem;
+    }
+
+    .paso-card-div-mobile-bottom {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:3rem;
+        padding-bottom: 3vh;
+    }
+
+    .materiales-board-image {
+        width: 50%;
+    }
+
+    .paso-card-div {
+        background: transparent;
+        
+    }
+
+    .paso-board-image {
+        width: 35%;
+    }
+
+    p{
+        font-size: 1rem;
+        font-weight: 600;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo-N {
+        width: 60px;
+        height: 60px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 100%
+    }
+
+    .materiales-image {
+        width: 60%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: block;
+        height:17%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 75%;
+        display:block;
+        margin-left: 3.5rem;
+    }
+
+    .paso-image-text-inner-div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .reto-board-image {
+        width: 75%;
+    }
+
     .text-top-form {
         font-size: 20px;
         padding: 2%;
@@ -257,6 +522,84 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
+    .main-div{
+        padding-bottom: 10vh;
+    }
+
+    .paso-card-div-mobile-top {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+        margin-bottom: 3rem;
+    }
+
+    .paso-card-div-mobile-bottom {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+    }
+
+    .materiales-board-image {
+        width: 50%;
+    }
+
+    .paso-card-div {
+        background: transparent;
+        
+    }
+
+    .paso-board-image {
+        width: 35%;
+    }
+
+    p{
+        font-size: 0.85rem;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo-N {
+        width: 45px;
+        height: 45px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 100%
+    }
+
+    .materiales-image {
+        width: 60%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: block;
+        height:17%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+        margin-left: 1rem;
+    }
+
+    .paso-image-text-inner-div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .reto-board-image {
+        width: 75%;
+    }
+
     .text-top-form {
         margin-top: 65px;
     }
@@ -270,6 +613,84 @@ div#animationdivIcon {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
+    .main-div{
+        padding-bottom: 10vh;
+    }
+
+    .paso-card-div-mobile-top {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+        margin-bottom: 3rem;
+    }
+
+    .paso-card-div-mobile-bottom {
+        padding-top: 1rem;
+        background:#fbf7f3;
+        width:90vw;
+        border-radius:2rem;
+        padding-bottom: 3vh;
+    }
+
+    .materiales-board-image {
+        width: 50%;
+    }
+
+    .paso-card-div {
+        background: transparent;
+        
+    }
+
+    .paso-board-image {
+        width: 35%;
+    }
+
+    p{
+        font-size: 0.85rem;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .logo-N {
+        width: 45px;
+        height: 45px;
+    }
+
+    .materiales-element-div {
+        text-align: center; 
+        width: 100%
+    }
+
+    .materiales-image {
+        width: 60%;
+        margin:auto;
+    }
+
+    .paso-outer-image-text-div {
+        display: block;
+        height:17%; 
+        width:100%
+    }
+
+    .paso-image {
+        width: 80%;
+        display:block;
+        margin-left: 1rem;
+    }
+
+    .paso-image-text-inner-div {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .reto-board-image {
+        width: 75%;
+    }
+
     .text-top-form {
         margin-top: 65px;
     }
@@ -281,13 +702,13 @@ div#animationdivIcon {
 }
 
 /* 
-    ███████╗ ██████╗ ██████╗ ███╗   ███╗
-    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
-    █████╗  ██║   ██║██████╔╝██╔████╔██║
-    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
-    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
-    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
-    */
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+*/
 
 @media (min-width: 0px) and (max-width: 480px) {
 
