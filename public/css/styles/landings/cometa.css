@@ -150,7 +150,7 @@ div#animationdivIcon {
 @media (min-width: 1500px) {
     
     .main-div{
-        padding-bottom: 54vh;
+        padding-bottom: 10vh;
     }
 
     p{
@@ -159,14 +159,6 @@ div#animationdivIcon {
         width: 50%;
         margin: auto;
         text-align: center;
-    }
-
-    .banner {
-        height:102vh; 
-        width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/desktop/es/BANNER-COMETA-PC.png');
     }
 
     .materiales-board-image {
@@ -259,13 +251,6 @@ div#animationdivIcon {
         width: 50%;
         margin: auto;
         text-align: center;
-    }
-
-    .banner {
-        height:75vh; width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/desktop/es/BANNER-COMETA-PC.png');
     }
 
     .materiales-board-image {
@@ -361,13 +346,6 @@ div#animationdivIcon {
         text-align: center;
     }
 
-    .banner {
-        height:40vh;
-        width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/desktop/es/BANNER-COMETA-PC.png');
-    }
 
     .materiales-board-image {
         margin-top: 3rem;
@@ -452,14 +430,6 @@ div#animationdivIcon {
 
     .main-div{
         padding-bottom: 10vh;
-    }
-
-    .banner {
-        height: 43vh;
-        width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
     }
 
     .paso-card-div-mobile-top {
@@ -556,14 +526,6 @@ div#animationdivIcon {
         padding-bottom: 10vh;
     }
 
-    .banner {
-        height:45vh; 
-        width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
-    }
-
     .paso-card-div-mobile-top {
         padding-top: 1rem;
         background:#fbf7f3;
@@ -653,14 +615,6 @@ div#animationdivIcon {
 
     .main-div{
         padding-bottom: 10vh;
-    }
-
-    .banner {
-        height: 35vh;
-        width:100vw; 
-        background-repeat:no-repeat; 
-        background-size:contain; 
-        background-image: url('/assets/img/cometa/mobile/es/BANNER-COMETA-MOVIL.png');
     }
 
     .paso-card-div-mobile-top {

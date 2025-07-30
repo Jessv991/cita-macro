@@ -2,7 +2,8 @@
 @include('layouts.header')
 
 <div class="main-div" style="background-color:#f7f0e9;">
-    <div class="banner">
+    <div class="w-100 mb-5">
+            <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/cometa/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
     </div>
     <div class="paso-card-div d-block mx-auto">
         <div class="paso-card-div-mobile-top d-block mx-auto">
