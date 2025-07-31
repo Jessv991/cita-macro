@@ -2,10 +2,14 @@
 @include('layouts.header')
 
 <div class="main-div" style="background-color:#f7f0e9;">
-    <div class="w-100 mb-5">
+    <div class="w-100">
             <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/cometa/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
     </div>
-    <div class="paso-card-div d-block mx-auto">
+    <div class="mt-5">
+        <img class="reto-board-image mb-3 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/UNETE-AL-RETO.png')}}" alt="">
+        <p class="bottom-text">Comparte una foto volando tu cometa en Instagram con el <strong>hashtag #RetoSinPantallas.</strong> No te olvides de etiquetar a tu centro Natural Optics más cercano y a @naturalopticsoficial para entrar en el sorteo de un <strong>¡Pack de Vuelta al Cole!</strong></p>
+    </div>
+    <div class="paso-card-div d-block mx-auto mt-5">
         <div class="paso-card-div-mobile-top d-block mx-auto">
             <img class="materiales-board-image mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/MATERIALES-NECESARIOS.png')}}" alt="">
             <div class="d-flex w-100" style="height:15%;">
@@ -108,11 +112,9 @@
             </div>
         </div>
     </div>
-    <footer class="mt-5">
-        <img class="reto-board-image mb-3 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/UNETE-AL-RETO.png')}}" alt="">
-        <p class="bottom-text">Comparte una foto volando tu cometa en Instagram con el <strong>hashtag #RetoSinPantallas.</strong> No te olvides de etiquetar a tu centro Natural Optics más cercano y a @naturalopticsoficial para entrar en el sorteo de un <strong>¡Pack de Vuelta al Cole!</strong></p>
-        <div class="mt-5">
-            <img class="d-block mx-auto logo-N col-4" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
-        </div>
-    </footer>
+    
+    <div class="mt-5">
+        <img class="d-block mx-auto logo-N col-4" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+    </div>
+    
 @include('layouts.footer')

@@ -28,7 +28,7 @@ body::-webkit-scrollbar-track {
     font-style: normal;
 }
 
-.Darkline-text{
+.Darkline-text {
     font-family: 'Darkline', sans-serif;
     font-weight: 400;
     font-size: 128px;
@@ -40,35 +40,71 @@ body::-webkit-scrollbar-track {
     margin-bottom: 0;
 }
 
-.titol-hola-rutina{
+.titol-hola-rutina {
     font-size: 60px;
     color: #BCCF88;
 }
 
-.primeros-parrafos{
+.primeros-parrafos {
     font-size: 31.8px;
 }
 
-.cont-level-2{
+.cont-level-2 {
     background-color: #E2807B;
 }
-.titol-fatiga{
+
+.titol-fatiga {
     font-size: 50px;
 }
 
-.segundo-parrafo{
+.segundo-parrafo {
     font-size: 38px;
 }
 
-.tercer-parrafo{
+.tercer-parrafo {
     font-size: 29px;
     font-weight: 300;
 }
 
 .gif-two {
-    width: 80%;   /* Más pequeño que el contenedor */
-    height: auto; /* Mantiene proporción */
+    width: 80%;
+    /* Más pequeño que el contenedor */
+    height: auto;
+    /* Mantiene proporción */
     display: block;
+}
+
+.footer-contact {
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+}
+
+.p-privacity {
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #000;
+}
+
+.p-privacity:hover {
+    color: #BB6F3F;
+}
+
+.p-cookies {
+    font-size: 14px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #000;
+}
+
+.p-cookies:hover {
+    color: #BB6F3F;
+}
+
+.logo-N {
+    width: 85px;
+    height: 85px;
 }
 
 
@@ -81,13 +117,34 @@ body::-webkit-scrollbar-track {
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
 
+p.text-top-form {
+    text-align: center;
+    font-size: 30px !important;
+}
+
+.contenedor_form {
+    padding-left: 20%;
+    padding-right: 20%;
+    background-color: #BDD089;
+}
+
 .contenedor-form {
     padding: 4%;
     position: relative !important;
 }
 
-label>span {
-    color: #870b0b  !important;
+.btn-color {
+    background-color: #fff;
+    color: #BDD089;
+}
+
+.btn-color:hover {
+    background-color: #000;
+    color: #BDD089;
+}
+
+.form-check-label {
+    color: #000 !important;
 }
 
 .text-top-form {
@@ -148,7 +205,7 @@ div#animationdivIcon {
 
 .btn-color {
     width: 234px !important;
-    border-radius: 20px !important;
+    border-radius: 15px !important;
     font-size: 20px;
 }
 
@@ -163,20 +220,13 @@ div#animationdivIcon {
                                            
  */
 
-@media (max-width: 2000px) {
-
-   
-}
+@media (max-width: 2000px) {}
 
 /* Pantallas Grandes (1200px a 1499px) */
-@media (min-width: 1200px) and (max-width: 1499px) {
-
-}
+@media (min-width: 1200px) and (max-width: 1499px) {}
 
 /* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-  
-}
+@media (min-width: 992px) and (max-width: 1199px) {}
 
 
 
@@ -184,17 +234,50 @@ div#animationdivIcon {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+    .primeros-parrafos {
+        font-size: 19.8px !important;
+        margin-bottom: 6%;
+    }
+
+    .titol-hola-rutina {
+        font-size: 35px !important;
+    }
+
+    .Darkline-text {
+        font-size: 75px !important;
+    }
+
+    .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
+        width: 100% !important;
+    }
+
+    .w-25.d-flex.justify-content-center.align-items-center.p-5 {
+        width: 100% !important;
+    }
+
+    .gif-two {
+        width: 52% !important;
+    }
+
+    .titol-fatiga {
+        font-size: 37px !important;
+    }
+
+    .segundo-parrafo {
+        font-size: 30px !important;
+    }
+
+    .tercer-parrafo {
+        font-size: 23px !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
-@media (min-width: 576px) and (max-width: 767px) {
-
-}
+@media (min-width: 576px) and (max-width: 767px) {}
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
-@media (max-width: 575px) {
-
-}
+@media (max-width: 575px) {}
 
 /* 
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
