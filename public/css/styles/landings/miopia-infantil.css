@@ -147,7 +147,7 @@ div#animationdivIcon {
 }
 
 .btn-color-cita {
-    color: #C0D28E !important;
+    color: #E2807B !important;
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
@@ -155,16 +155,16 @@ div#animationdivIcon {
 }
 
 .btn-color-cita:hover {
-    background-color: #C0D28E !important;
+    background-color: #000 !important;
     border: 1px solid #fff;
-    color: #fff !important;
+    color: #C3D696 !important;
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
 }
 
 .banner-logo{
-    background-color: #D1DEAD;
+    background-color: #ffffff6b;
 }
 
 .btn-wrapper-fixed {
