@@ -107,6 +107,41 @@ body::-webkit-scrollbar-track {
     height: 85px;
 }
 
+.logo {
+    max-width: 150px !important;
+    height: auto !important;
+}
+
+
+.boton-flotante {
+    position: fixed; /* Esto fija el div en la pantalla */
+    top: 0; /* Se coloca en la parte superior */
+    left: 0; /* Se coloca en el borde izquierdo */
+    width: 100%; /* Asegura que el div ocupe todo el ancho de la pantalla */
+    z-index: 1000; /* Asegura que el div quede encima del resto del contenido */
+    background-color: #ffffff6b; /* Puedes poner el color de fondo que prefieras */
+    padding: 10px; /* Ajusta el padding según lo necesites */
+    height: 9%;
+}
+
+
+.btn-color2 {
+    width: 169px;
+    background-color: #E2807B;
+    color: #fff;
+    font-size: 21px;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center; 
+    align-items: center;
+    height: 50px; 
+}
+
+.btn-color2:hover {
+    background-color: #000;
+    color: #BCCF88;
+}
+
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -135,7 +170,7 @@ p.text-top-form {
 
 .btn-color {
     background-color: #fff;
-    color: #BDD089;
+    color: #000;
 }
 
 .btn-color:hover {
@@ -271,27 +306,138 @@ div#animationdivIcon {
         font-size: 23px !important;
     }
 
+    .contenedor_form {
+        padding-left: 12%;
+        padding-right: 12%;
+    }
+
+    p.text-top-form {
+        font-size: 22px !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
-@media (min-width: 576px) and (max-width: 767px) {}
-
-/* Teléfonos Muy Pequeños (hasta 575px) */
-@media (max-width: 575px) {}
-
-/* 
-    ███████╗ ██████╗ ██████╗ ███╗   ███╗
-    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
-    █████╗  ██║   ██║██████╔╝██╔████╔██║
-    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
-    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
-    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
-    */
-
-@media (min-width: 0px) and (max-width: 480px) {
-
-    .mb-5 {
-        margin-bottom: 1rem !important;
+@media (min-width: 576px) and (max-width: 767px) {
+    .primeros-parrafos {
+        font-size: 14.8px !important;
+        margin-bottom: 6%;
     }
 
+    .titol-hola-rutina {
+        font-size: 35px !important;
+    }
+
+    .Darkline-text {
+        font-size: 75px !important;
+    }
+
+    .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
+        width: 100% !important;
+    }
+
+    .w-25.d-flex.justify-content-center.align-items-center.p-5 {
+        width: 100% !important;
+    }
+
+    .gif-two {
+        width: 52% !important;
+    }
+
+    .titol-fatiga {
+        font-size: 27px !important;
+    }
+
+    .segundo-parrafo {
+        font-size: 30px !important;
+    }
+
+    .tercer-parrafo {
+        font-size: 19px !important;
+    }
+
+    .contenedor_form {
+        padding-left: 7% !important;
+        padding-right: 7% !important;
+    }
+
+    p.text-top-form {
+        font-size: 19px !important;
+    }
+
+    .btn-color2 {
+        width: 109px;
+        font-size: 17px;
+    }
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+    .primeros-parrafos {
+        font-size: 11.8px !important;
+        margin-bottom: 6%;
+    }
+
+    .titol-hola-rutina {
+        font-size: 22px !important;
+    }
+
+    .Darkline-text {
+        font-size: 50px !important;
+    }
+
+    .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
+        width: 100% !important;
+    }
+
+    .w-25.d-flex.justify-content-center.align-items-center.p-5 {
+        width: 100% !important;
+    }
+
+    .gif-two {
+        width: 65% !important;
+        padding-bottom: 9% !important;
+    }
+
+    .titol-fatiga {
+        font-size: 26px !important;
+    }
+
+    .segundo-parrafo {
+        font-size: 21px !important;
+    }
+
+    .tercer-parrafo {
+        font-size: 15px !important;
+    }
+
+    .contenedor_form {
+        padding-left: 11% !important;
+        padding-right: 11% !important;
+    }
+
+    p.text-top-form {
+        font-size: 16px !important;
+    }
+
+    .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+        padding-bottom: 14px !important;
+    }
+
+    .w-100.d-flex.justify-content-center.p-5 {
+        padding-left: 7% !important;
+        padding-right: 7% !important;
+        padding-bottom: 0% !important;
+    }
+
+    .form-check-label {
+        font-size: 14px !important;
+    }
+
+    .btn-color2 {
+        width: 109px;
+        font-size: 13px;
+    }
 }
