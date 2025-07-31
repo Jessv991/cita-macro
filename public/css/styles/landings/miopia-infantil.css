@@ -147,11 +147,11 @@ div#animationdivIcon {
 }
 
 .btn-color-cita {
-    color: #E2807B !important;
+    color: #fff !important;
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
-    background-color: #fff !important;
+    background-color: #E2807B !important;
 }
 
 .btn-color-cita:hover {
