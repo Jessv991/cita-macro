@@ -24,7 +24,7 @@
         <?php
                 if($data['tipo_dispositivo']!='mobile'){
             ?>
-        <img class="d-block mx-auto w-100 h-100"
+        <img class="d-block mx-auto w-75 h-75"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner_miopia_pc.jpg') }}">
         <?php
                 }else{
@@ -41,7 +41,7 @@
             ?>
         <p class="d-block mx-auto pt-5 mb-0 title-carousel">La <span
                 class="color">{{ __('miopia-infantil.miopia') }}</span> {{ __('miopia-infantil.problema') }}</p>
-        <img class="d-block mx-auto w-100 h-100"
+        <img class="d-block mx-auto w-75 h-75"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/datos_miopia_pc.png') }}">
         <?php
                 }else{
@@ -58,7 +58,7 @@
         <?php
                 if($data['tipo_dispositivo']!='mobile'){
             ?>
-        <img class="d-block mx-auto w-75 h-75 pt-5"
+        <img class="d-block mx-auto w-50 h-50 pt-5"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo_causas.png') }}"
             alt="titulo causas">
         <div class="text-start btn-area d-flex">
@@ -66,21 +66,21 @@
                 <p id="toggleCarousel1" class="option-btn w-100">{{ __('miopia-infantil.geneticos') }}</p>
                 <p id="toggleCarousel2" class="option-btn w-100">{{ __('miopia-infantil.socioculturales') }}</p>
             </div>
-            <div class="w-75 images-btn-section" style="height: 600px; overflow: hidden;">
+            <div class="w-75 images-btn-section" style="height: 450px; overflow: hidden;">
                 <div id="carouselExample1" class="carousel slide" style="display: none;">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/22.png') }}"
                                 alt="Imagen 1">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/31.png') }}"
                                 alt="Imagen 2">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/46.png') }}"
                                 alt="Imagen 3">
                         </div>
@@ -99,17 +99,17 @@
                 <div id="carouselExample2" class="carousel slide" style="display: none;">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/academica.png') }}"
                                 alt="Imagen 1">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/aire_libre.png') }}"
                                 alt="Imagen 2">
                         </div>
                         <div class="carousel-item">
-                            <img class="d-block mx-auto p-1"
+                            <img class="d-block mx-auto p-1 w-50"
                                 src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/movil.png') }}"
                                 alt="Imagen 2">
                         </div>
@@ -203,10 +203,10 @@
         <?php
                 if($data['tipo_dispositivo']!='mobile'){
             ?>
-        <img class="d-block mx-auto w-75 h-75 pt-5"
+        <img class="d-block mx-auto w-50 h-50 pt-5"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo_frenar_miopia.png') }}">
         <p class="cuidar-vision">{{ __('miopia-infantil.cuidar-vision') }}</p>
-        <img class="d-block mx-auto w-100 h-75"
+        <img class="d-block mx-auto w-75 h-75"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/prevencion_pc.png') }}">
         <?php
                 } else {

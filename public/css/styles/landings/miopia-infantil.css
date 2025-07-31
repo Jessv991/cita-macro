@@ -156,8 +156,7 @@ div#animationdivIcon {
 
 .btn-color-cita:hover {
     background-color: #000 !important;
-    border: 1px solid #fff;
-    color: #C3D696 !important;
+    color: #fff !important;
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
@@ -188,8 +187,12 @@ div#animationdivIcon {
     display: inline-block;
 }
 
+.banner-pide-cita {
+    background-color: #C3D696;
+}
+
 .title-carousel {
-    font-size: 40px;
+    font-size: 30px;
     padding-left: 30%;
     padding-right: 30%;
     color: #3f3f3f;
@@ -371,8 +374,8 @@ div#animationdivIcon {
 
 .contenedor-form {
     padding: 4%;
-    padding-left: 28%;
-    padding-right: 28%;
+    padding-left: 27%;
+    padding-right: 27%;
     position: relative;
     height: 100% !important;
 }
