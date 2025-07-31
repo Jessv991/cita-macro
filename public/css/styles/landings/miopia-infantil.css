@@ -155,8 +155,9 @@ div#animationdivIcon {
 }
 
 .btn-color-cita:hover {
-    background-color: #fff !important;
-    color: #C0D28E !important;
+    background-color: #C0D28E !important;
+    border: 1px solid #fff;
+    color: #fff !important;
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
@@ -391,7 +392,7 @@ label>a{
 }
 
 label>a:hover{
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .btn-color {
@@ -400,6 +401,11 @@ label>a:hover{
     border-radius: 20px !important;
     width: 200px !important;
     font-size: x-large !important;
+}
+
+.btn-color:hover {
+    background-color: #000 !important;
+    color: #fff;
 }
 
 .text-mobile {
