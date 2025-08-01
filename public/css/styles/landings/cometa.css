@@ -154,7 +154,7 @@ div#animationdivIcon {
     }
 
     p{
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         align-items: center;
         width: 50%;
         margin: auto;
@@ -163,11 +163,12 @@ div#animationdivIcon {
 
     .materiales-board-image {
         margin-top: 3rem;
-        width: 50%;
+        width: 33%;
     }
 
     .paso-board-image{
         margin-top: 5rem;
+        width: 21%;
     }
 
     .paso-card-div {
@@ -190,7 +191,7 @@ div#animationdivIcon {
     }
 
     .materiales-image {
-        width: 100%;
+        width: 70%;
         margin:auto;
     }
 
@@ -201,14 +202,12 @@ div#animationdivIcon {
     }
 
     .paso-image {
-        width: 80%;
+        width: 55%;
         display:block;
     }
 
     .paso-image-text-inner-div {
-        width: 50%;
-        margin-left: 5rem;
-        margin-top: 5rem;
+        width: 44%;
     }
 
     .reto-board-image {

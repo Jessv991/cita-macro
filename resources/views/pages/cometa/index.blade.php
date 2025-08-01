@@ -70,42 +70,42 @@
         <div class="paso-card-div-mobile-bottom d-block mx-auto">
             <img class="paso-board-image mb-1 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/PASO-A-PASO.png')}}" alt="">
             <div class="paso-outer-image-text-div">
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_1.png')}}" alt="">
                     <p class="interior-text mt-4">Coloca las varillas en cruz dejando un margen superior de 5cm en la varilla vertical y 25cm a cada lado en la varilla horizontal. Únelas bien con cuerda o cinta adhesiva.</p>
                 </div>
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_2.png')}}" alt="">
                     <p class="interior-text mt-4">Ata un hilo a cada uno de los extremos de la cruz, pasándolo varias veces por cada extremo, hasta formar un rombo. Refuerza con cinta adhesiva si fuera necesario.</p>
                 </div>
             </div>
             <div class="paso-outer-image-text-div">
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_3.png')}}" alt="">
                     <p class="interior-text mt-4">Dibuja la forma de la cometa en el papel de seda dejando un margen de 4–5 cm y recorta la forma con ayuda de las tijeras.</p>
                 </div>
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_4.png')}}" alt="">
                     <p class="interior-text mt-4">Pega el papel sobrante por encima de los hilos. Utiliza cinta adhesiva para reforzar la unión con las varillas en ambas caras de la cometa.</p>
                 </div>
             </div>
             <div class="paso-outer-image-text-div">
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_5.png')}}" alt="">
                     <p class="interior-text mt-4">Haz pequeños agujeros en los extremos de la cometa y pasa una cuerda de 60cm por el eje vertical y una de 50cm por el horizontal.</p>
                 </div>
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_6.png')}}" alt="">
                     <p class="mt-4">Haz un nudo para unir ambas cuerdas con la bobina de cuerda</p>
                     <p class="interior-text interior-text">El nudo debe quedar centrado, a la altura del eje central de la cometa.</p>
                 </div>
             </div>
             <div class="paso-outer-image-text-div">
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_7.png')}}" alt="">
                     <p class="interior-text mt-4">Crea una cola de aproximadamente 3m y pégala bien con pegamento al extremo inferior de la cometa.</p>
                 </div>
-                <div class="paso-image-text-inner-div">
+                <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_8.png')}}" alt="">
                     <p class="interior-text mt-4">Termina de decorar la cometa al gusto y ya estará lista para sacarla a volar!</p>
                 </div>
