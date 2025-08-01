@@ -63,7 +63,7 @@ a:hover {
 }
 
 label>span {
-    color: #870b0b  !important;
+    color: #870b0b !important;
 }
 
 .text-top-form {
@@ -148,12 +148,12 @@ div#animationdivIcon {
 }
 
 @media (min-width: 1500px) {
-    
-    .main-div{
+
+    .main-div {
         padding-bottom: 10vh;
     }
 
-    p{
+    p {
         font-size: 1.3rem;
         align-items: center;
         width: 50%;
@@ -166,16 +166,16 @@ div#animationdivIcon {
         width: 33%;
     }
 
-    .paso-board-image{
+    .paso-board-image {
         margin-top: 5rem;
         width: 21%;
     }
 
     .paso-card-div {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:7.5rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 7.5rem;
         padding-bottom: 25vh;
         margin-top: 0;
     }
@@ -186,24 +186,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 75%
     }
 
     .materiales-image {
         width: 70%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: flex;
-        height:18%; 
-        width:100%
+        height: 18%;
+        width: 100%
     }
 
     .paso-image {
         width: 55%;
-        display:block;
+        display: block;
     }
 
     .paso-image-text-inner-div {
@@ -240,11 +240,11 @@ div#animationdivIcon {
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
 
-    .main-div{
+    .main-div {
         padding-bottom: 54vh;
     }
 
-    p{
+    p {
         font-size: 1.6rem;
         align-items: center;
         width: 50%;
@@ -257,15 +257,15 @@ div#animationdivIcon {
         width: 50%;
     }
 
-    .paso-board-image{
+    .paso-board-image {
         margin-top: 5rem;
     }
 
     .paso-card-div {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:4rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 4rem;
         padding-bottom: 25vh;
         margin-top: 0;
     }
@@ -276,24 +276,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 75%
     }
 
     .materiales-image {
         width: 100%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: flex;
-        height:18%; 
-        width:100%
+        height: 18%;
+        width: 100%
     }
 
     .paso-image {
         width: 80%;
-        display:block;
+        display: block;
     }
 
     .paso-image-text-inner-div {
@@ -333,11 +333,11 @@ div#animationdivIcon {
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    .main-div{
+    .main-div {
         padding-bottom: 30vh;
     }
 
-    p{
+    p {
         font-size: 1rem;
         align-items: center;
         width: 75%;
@@ -351,15 +351,15 @@ div#animationdivIcon {
         width: 50%;
     }
 
-    .paso-board-image{
+    .paso-board-image {
         margin-top: 5rem;
     }
 
     .paso-card-div {
         padding-top: 0.5rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:4.5rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 4.5rem;
         padding-bottom: 25vh;
         margin-top: 0;
     }
@@ -370,24 +370,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 75%
     }
 
     .materiales-image {
         width: 100%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: flex;
-        height:18%; 
-        width:100%
+        height: 18%;
+        width: 100%
     }
 
     .paso-image {
         width: 80%;
-        display:block;
+        display: block;
     }
 
     .paso-image-text-inner-div {
@@ -427,24 +427,24 @@ div#animationdivIcon {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    .main-div{
+    .main-div {
         padding-bottom: 10vh;
     }
 
     .paso-card-div-mobile-top {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:2rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 2rem;
         padding-bottom: 3vh;
         margin-bottom: 5rem;
     }
 
     .paso-card-div-mobile-bottom {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:3rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 3rem;
         padding-bottom: 3vh;
     }
 
@@ -454,20 +454,22 @@ div#animationdivIcon {
 
     .paso-card-div {
         background: transparent;
-        
+
     }
 
     .paso-board-image {
         width: 35%;
     }
 
-    p{
+    p {
         font-size: 1rem;
         font-weight: 600;
         align-items: center;
         width: 85%;
         margin: auto;
         text-align: center;
+        padding-left: 10% !important;
+        padding-right: 10% !important;
     }
 
     .logo-N {
@@ -476,24 +478,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 100%
     }
 
     .materiales-image {
         width: 60%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: block;
-        height:17%; 
-        width:100%
+        height: 17%;
+        width: 100%
     }
 
     .paso-image {
-        width: 75%;
-        display:block;
+        width: 43%;
+        display: block;
         margin-left: 3.5rem;
     }
 
@@ -521,24 +523,24 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    .main-div{
+    .main-div {
         padding-bottom: 10vh;
     }
 
     .paso-card-div-mobile-top {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:2rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 2rem;
         padding-bottom: 3vh;
         margin-bottom: 3rem;
     }
 
     .paso-card-div-mobile-bottom {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:2rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 2rem;
         padding-bottom: 3vh;
     }
 
@@ -548,14 +550,14 @@ div#animationdivIcon {
 
     .paso-card-div {
         background: transparent;
-        
+
     }
 
     .paso-board-image {
         width: 35%;
     }
 
-    p{
+    p {
         font-size: 0.85rem;
         align-items: center;
         width: 85%;
@@ -569,24 +571,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 100%
     }
 
     .materiales-image {
         width: 60%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: block;
-        height:17%; 
-        width:100%
+        height: 17%;
+        width: 100%
     }
 
     .paso-image {
-        width: 80%;
-        display:block;
+        width: 55%;
+        display: block;
         margin-left: 1rem;
     }
 
@@ -612,24 +614,24 @@ div#animationdivIcon {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
-    .main-div{
+    .main-div {
         padding-bottom: 10vh;
     }
 
     .paso-card-div-mobile-top {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:2rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 2rem;
         padding-bottom: 3vh;
         margin-bottom: 3rem;
     }
 
     .paso-card-div-mobile-bottom {
         padding-top: 1rem;
-        background:#fbf7f3;
-        width:90vw;
-        border-radius:2rem;
+        background: #fbf7f3;
+        width: 90vw;
+        border-radius: 2rem;
         padding-bottom: 3vh;
     }
 
@@ -639,14 +641,14 @@ div#animationdivIcon {
 
     .paso-card-div {
         background: transparent;
-        
+
     }
 
     .paso-board-image {
         width: 35%;
     }
 
-    p{
+    p {
         font-size: 0.85rem;
         align-items: center;
         width: 85%;
@@ -660,24 +662,24 @@ div#animationdivIcon {
     }
 
     .materiales-element-div {
-        text-align: center; 
+        text-align: center;
         width: 100%
     }
 
     .materiales-image {
         width: 60%;
-        margin:auto;
+        margin: auto;
     }
 
     .paso-outer-image-text-div {
         display: block;
-        height:17%; 
-        width:100%
+        height: 17%;
+        width: 100%
     }
 
     .paso-image {
-        width: 80%;
-        display:block;
+        width: 65%;
+        display: block;
         margin-left: 1rem;
     }
 

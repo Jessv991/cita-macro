@@ -96,7 +96,7 @@
                 </div>
                 <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_6.png')}}" alt="">
-                    <p class="mt-4">Haz un nudo para unir ambas cuerdas con la bobina de cuerda</p>
+                    <p class="mt-4 interior-text interior-text">Haz un nudo para unir ambas cuerdas con la bobina de cuerda</p>
                     <p class="interior-text interior-text">El nudo debe quedar centrado, a la altura del eje central de la cometa.</p>
                 </div>
             </div>
