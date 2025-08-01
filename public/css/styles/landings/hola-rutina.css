@@ -61,13 +61,11 @@ body::-webkit-scrollbar-track {
 
 .segundo-parrafo {
     font-size: 25px;
-    margin-left: 2.5%;
 }
 
 .tercer-parrafo {
     font-size: 26px;
     font-weight: 300;
-    margin-left: 3.5%;
     padding-right: 24%;
 }
 
@@ -351,11 +349,6 @@ div#animationdivIcon {
     .titulo_consejos {
         width: 73%;
     }
-
-    .w-100.d-flex.justify-content-center.p-5.text-center {
-        padding-bottom: 0% !important;
-    }
-
 }
 
 /* Teléfonos (576px a 767px) */
@@ -439,9 +432,6 @@ div#animationdivIcon {
         width: 76%;
     }
 
-    .w-100.d-flex.justify-content-center.p-5.text-center {
-        padding-bottom: 0% !important;
-    }
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -507,7 +497,6 @@ div#animationdivIcon {
     .w-100.d-flex.justify-content-center.p-5 {
         padding-left: 7% !important;
         padding-right: 7% !important;
-        padding-bottom: 0% !important;
     }
 
     .form-check-label {

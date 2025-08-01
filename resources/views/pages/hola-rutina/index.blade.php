@@ -3,24 +3,6 @@
 <div class="background-container">
     <div class="background-item">
 
-        {{--  @if ($data['tipo_dispositivo'] == 'mobile')
-            <div class="banner-logo text-center">
-                <img class="d-block mx-auto logo"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
-            </div>
-        @else
-            <div class="banner-logo sticky-top d-flex justify-content-between align-items-center">
-                <div class="img-logo">
-                    <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}"
-                        alt="Logo">
-                </div>
-                <div class="btn-position">
-                    <button id="btn-flotante"
-                        class="btn btn-color-cita">{{ __('form_translation.Pedir_cita') }}</button>
-                </div>
-            </div>
-        @endif --}}
-
         <div class="boton-flotante d-flex justify-content-end">
 
             <div class="w-100 d-flex flex-row">
@@ -71,7 +53,7 @@
             <img class="titulo_consejos" src="{{ asset($data['rutaAsset'] . 'assets/img/hola-rutina/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo_consejos.png') }}">
         </div>
 
-        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center mt-5">
+        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/hola-rutina/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/consejos1.png') }}">
@@ -81,7 +63,7 @@
                     src="{{ asset($data['rutaAsset'] . 'assets/img/hola-rutina/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/consejos2.png') }}">
             </div>
         </div>
-        <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center mt-5">
+        <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/hola-rutina/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/consejosM1.png') }}">
