@@ -69,7 +69,7 @@
         </div>
         <div class="paso-card-div-mobile-bottom d-block mx-auto">
             <img class="paso-board-image mb-1 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/PASO-A-PASO.png')}}" alt="">
-            <div class="paso-outer-image-text-div d-flex flex-row justify-content-center align-items-center text-center">
+            <div class="paso-outer-image-text-div d-flex flex-row justify-content-center align-items-center text-center mt-3">
                 <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_1.png')}}" alt="">
                     <p class="interior-text mt-4">Coloca las varillas en cruz dejando un margen superior de 5cm en la varilla vertical y 25cm a cada lado en la varilla horizontal. Únelas bien con cuerda o cinta adhesiva.</p>
