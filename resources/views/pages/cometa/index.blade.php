@@ -15,49 +15,49 @@
             <div class="d-flex w-100" style="height:15%;">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_tijera.png')}}" alt="">
                                 <p class="interior-text">Tijeras</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_regla.png')}}" alt="">
                                 <p class="interior-text">Regla</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_varillas.png')}}" alt="">
                                 <p class="interior-text">2 Varillas</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_papel.png')}}" alt="">
                                 <p class="interior-text">Papel de seda</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_pegamento.png')}}" alt="">
                                 <p class="interior-text">Pegamento</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_lapiz.png')}}" alt="">
                                 <p class="interior-text">Lápiz</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_hilo.png')}}" alt="">
                                 <p class="interior-text">Cuerda / hilo</p>
                             </div>
                         </div>
-                        <div class="col-4 col-md-3 d-flex justify-content-center">
+                        <div class="col-4 col-lg-3 d-flex justify-content-center">
                             <div class="materiales-element-div mt-5">
                                 <img class="materiales-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/icono-_cinta.png')}}" alt="">
                                 <p class="interior-text">Cinta adhesiva</p>
@@ -69,7 +69,7 @@
         </div>
         <div class="paso-card-div-mobile-bottom d-block mx-auto">
             <img class="paso-board-image mb-1 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/PASO-A-PASO.png')}}" alt="">
-            <div class="paso-outer-image-text-div d-flex flex-row justify-content-center align-items-center text-center mt-3">
+            <div class="paso-outer-image-text-div d-flex flex-column flex-lg-row justify-content-center align-items-center text-center mt-3">
                 <div class="paso-image-text-inner-div d-flex flex-column justify-content-center align-items-center text-center">
                     <img class="paso-image" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/paso_1.png')}}" alt="">
                     <p class="interior-text mt-4">Coloca las varillas en cruz dejando un margen superior de 5cm en la varilla vertical y 25cm a cada lado en la varilla horizontal. Únelas bien con cuerda o cinta adhesiva.</p>
