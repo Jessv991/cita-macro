@@ -46,24 +46,33 @@ body::-webkit-scrollbar-track {
 }
 
 .primeros-parrafos {
-    font-size: 31.8px;
+    font-size: 23.8px;
+    padding-left: 15% !important;
+    padding-right: 15% !important;
 }
 
 .cont-level-2 {
     background-color: #E2807B;
 }
 
-.titol-fatiga {
-    font-size: 50px;
+.titulo_fatiga {
+    width: 50%;
 }
 
 .segundo-parrafo {
-    font-size: 38px;
+    font-size: 25px;
+    margin-left: 2.5%;
 }
 
 .tercer-parrafo {
-    font-size: 29px;
+    font-size: 26px;
     font-weight: 300;
+    margin-left: 3.5%;
+    padding-right: 24%;
+}
+
+.titulo_consejos {
+    width: 34%;
 }
 
 .gif-two {
@@ -114,13 +123,20 @@ body::-webkit-scrollbar-track {
 
 
 .boton-flotante {
-    position: fixed; /* Esto fija el div en la pantalla */
-    top: 0; /* Se coloca en la parte superior */
-    left: 0; /* Se coloca en el borde izquierdo */
-    width: 100%; /* Asegura que el div ocupe todo el ancho de la pantalla */
-    z-index: 1000; /* Asegura que el div quede encima del resto del contenido */
-    background-color: #ffffff6b; /* Puedes poner el color de fondo que prefieras */
-    padding: 10px; /* Ajusta el padding según lo necesites */
+    position: fixed;
+    /* Esto fija el div en la pantalla */
+    top: 0;
+    /* Se coloca en la parte superior */
+    left: 0;
+    /* Se coloca en el borde izquierdo */
+    width: 100%;
+    /* Asegura que el div ocupe todo el ancho de la pantalla */
+    z-index: 1000;
+    /* Asegura que el div quede encima del resto del contenido */
+    background-color: #ffffff6b;
+    /* Puedes poner el color de fondo que prefieras */
+    padding: 10px;
+    /* Ajusta el padding según lo necesites */
     height: 9%;
 }
 
@@ -132,14 +148,18 @@ body::-webkit-scrollbar-track {
     font-size: 21px;
     font-weight: bold;
     display: inline-flex;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
-    height: 50px; 
+    height: 50px;
 }
 
 .btn-color2:hover {
     background-color: #000;
     color: #BCCF88;
+}
+
+.titulo_tu_vista {
+    width: 34%;
 }
 
 
@@ -239,7 +259,7 @@ div#animationdivIcon {
 }
 
 .btn-color {
-    width: 234px !important;
+    width: 183px !important;
     border-radius: 15px !important;
     font-size: 20px;
 }
@@ -272,6 +292,8 @@ div#animationdivIcon {
     .primeros-parrafos {
         font-size: 19.8px !important;
         margin-bottom: 6%;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
     }
 
     .titol-hola-rutina {
@@ -300,10 +322,13 @@ div#animationdivIcon {
 
     .segundo-parrafo {
         font-size: 30px !important;
+        margin-left: 0% !important;
     }
 
     .tercer-parrafo {
         font-size: 23px !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
     }
 
     .contenedor_form {
@@ -315,6 +340,22 @@ div#animationdivIcon {
         font-size: 22px !important;
     }
 
+    .titulo_tu_vista {
+        width: 61% !important;
+    }
+
+    .titulo_fatiga {
+        width: 100%;
+    }
+
+    .titulo_consejos {
+        width: 73%;
+    }
+
+    .w-100.d-flex.justify-content-center.p-5.text-center {
+        padding-bottom: 0% !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -322,6 +363,8 @@ div#animationdivIcon {
     .primeros-parrafos {
         font-size: 14.8px !important;
         margin-bottom: 6%;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
     }
 
     .titol-hola-rutina {
@@ -334,6 +377,8 @@ div#animationdivIcon {
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
         width: 100% !important;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
     }
 
     .w-25.d-flex.justify-content-center.align-items-center.p-5 {
@@ -369,6 +414,34 @@ div#animationdivIcon {
         width: 109px;
         font-size: 17px;
     }
+
+    .titulo_tu_vista {
+        width: 75%;
+    }
+
+    .titulo_fatiga {
+        width: 100%;
+    }
+
+    .segundo-parrafo {
+        font-size: 24px !important;
+        margin-left: 0% !important;
+        margin-bottom: 0% !important;
+    }
+
+    .tercer-parrafo {
+        font-size: 26px;
+        padding-right: 9% !important;
+        padding-left: 9% !important;
+    }
+
+    .titulo_consejos {
+        width: 76%;
+    }
+
+    .w-100.d-flex.justify-content-center.p-5.text-center {
+        padding-bottom: 0% !important;
+    }
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -376,6 +449,8 @@ div#animationdivIcon {
     .primeros-parrafos {
         font-size: 11.8px !important;
         margin-bottom: 6%;
+        padding-left: 0% !important;
+        padding-right: 0% !important;
     }
 
     .titol-hola-rutina {
@@ -404,11 +479,14 @@ div#animationdivIcon {
     }
 
     .segundo-parrafo {
-        font-size: 21px !important;
+        font-size: 17px !important;
+        margin-left: 0% !important;
     }
 
     .tercer-parrafo {
         font-size: 15px !important;
+        margin-left: 0% !important;
+        padding-right: 0% !important;
     }
 
     .contenedor_form {
@@ -439,5 +517,17 @@ div#animationdivIcon {
     .btn-color2 {
         width: 109px;
         font-size: 13px;
+    }
+
+    .titulo_tu_vista {
+        width: 80%;
+    }
+
+    .titulo_fatiga {
+        width: 100%;
+    }
+
+    .titulo_consejos {
+        width: 74%;
     }
 }
