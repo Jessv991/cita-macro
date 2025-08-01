@@ -166,6 +166,10 @@ div#animationdivIcon {
     background-color: #ffffff6b;
 }
 
+.banner-logo-mobile{
+    background-color: #C3D696;
+}
+
 .btn-wrapper-fixed {
     position: fixed;
     width: 100%;

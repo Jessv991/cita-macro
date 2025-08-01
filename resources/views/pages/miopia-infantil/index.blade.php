@@ -3,7 +3,7 @@
 <div class="background-container">
     <div class="background-item">
         @if ($data['tipo_dispositivo'] == 'mobile')
-            <div class="banner-logo text-center">
+            <div class="banner-logo-mobile text-center">
                 <img class="d-block mx-auto logo"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}">
             </div>
