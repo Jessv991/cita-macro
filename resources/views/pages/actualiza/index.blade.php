@@ -17,7 +17,7 @@
         </div>
 
         <div class="w-100">
-            <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/hola-rutina/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.gif') }}">
+            <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/actualiza/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.gif') }}">
         </div>
         
         <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
