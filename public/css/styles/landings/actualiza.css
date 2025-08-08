@@ -47,12 +47,8 @@ body::-webkit-scrollbar-track {
 
 .primeros-parrafos {
     font-size: 23.8px;
-    padding-left: 15% !important;
-    padding-right: 15% !important;
-}
-
-.cont-level-2 {
-    background-color: #E2807B;
+    padding-left: 16.5% !important;
+    padding-right: 16.5% !important;
 }
 
 .titulo_fatiga {
@@ -71,14 +67,6 @@ body::-webkit-scrollbar-track {
 
 .titulo_consejos {
     width: 34%;
-}
-
-.gif-two {
-    width: 80%;
-    /* Más pequeño que el contenedor */
-    height: auto;
-    /* Mantiene proporción */
-    display: block;
 }
 
 .footer-contact {
@@ -115,7 +103,7 @@ body::-webkit-scrollbar-track {
 }
 
 .logo {
-    max-width: 150px !important;
+    max-width: 100% !important;
     height: auto !important;
 }
 
@@ -141,7 +129,7 @@ body::-webkit-scrollbar-track {
 
 .btn-color2 {
     width: 169px;
-    background-color: #E2807B;
+    background-color: #889cc4;
     color: #fff;
     font-size: 21px;
     font-weight: bold;
@@ -152,8 +140,8 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color2:hover {
-    background-color: #000;
-    color: #BCCF88;
+    background-color: #f8b87d;
+    color: #fff;
 }
 
 .titulo_tu_vista {
@@ -178,7 +166,7 @@ p.text-top-form {
 .contenedor_form {
     padding-left: 20%;
     padding-right: 20%;
-    background-color: #BDD089;
+    background-color: #f8b87d;
 }
 
 .contenedor-form {
@@ -187,13 +175,13 @@ p.text-top-form {
 }
 
 .btn-color {
-    background-color: #fff;
-    color: #000;
+    background-color: #889cc4;
+    color: #fff;
 }
 
 .btn-color:hover {
-    background-color: #000;
-    color: #BDD089;
+    background-color: #d6d8e0;
+    color: #000;
 }
 
 .form-check-label {
