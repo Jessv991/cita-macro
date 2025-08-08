@@ -5,5 +5,6 @@ return [
     'sub-2' => "Natural Audio",
     'sub-3' => "te ayudamos a encontrar la solución auditiva que mejor se adapta a tus necesidades. La tecnología actual ofrece opciones avanzadas que combinan",
     'sub-4' => "comodidad, discreción y calidad de sonido.",
-
+    'Politicas-privacidad' => 'Políticas de privacidad y aviso legal',
+    'Politicas-cookies' => 'Política de cookies'
 ];
