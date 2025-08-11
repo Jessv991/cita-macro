@@ -103,8 +103,8 @@ body::-webkit-scrollbar-track {
 }
 
 .logo {
-    max-width: 100% !important;
-    height: auto !important;
+    width: 14% !important;
+    height: 77% !important;
 }
 
 
@@ -146,6 +146,10 @@ body::-webkit-scrollbar-track {
 
 .titulo_tu_vista {
     width: 38%;
+}
+
+img.img-circle {
+    width: 60%;
 }
 
 
@@ -427,10 +431,16 @@ div#animationdivIcon {
         width: 65% !important;
     }
 
+    .logo {
+        width: 42% !important;
+        height: 53% !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
     .primeros-parrafos {
         font-size: 11.8px !important;
         margin-bottom: 6%;
@@ -517,5 +527,10 @@ div#animationdivIcon {
 
     img.w-75 {
         width: 60% !important;
+    }
+
+    .logo {
+        width: 42% !important;
+        height: 61% !important;
     }
 }

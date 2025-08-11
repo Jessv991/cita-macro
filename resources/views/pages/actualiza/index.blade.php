@@ -5,13 +5,11 @@
 
         <div class="boton-flotante d-flex justify-content-end">
 
-            <div class="w-100 d-flex flex-row">
-                <div class="w-50 d-flex justify-content-start">
-                    <img class="logo"
-                        src="{{ asset($data['rutaAsset'] . 'assets\logos\basicos\logo-audio-violet.png') }}"
-                        alt="Logo">
+            <div class="w-100 d-flex flex-row align-items-center">
+                <div class="w-50 d-flex justify-content-start align-items-center">
+                    <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets\logos\basicos\logo-audio-violet.png') }}" alt="Logo">
                 </div>
-                <div class="w-50 d-flex justify-content-end">
+                <div class="w-50 d-flex justify-content-end align-items-center">
                     <a href="#contAllForm" id="diret-form"
                         class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
                 </div>
@@ -34,15 +32,15 @@
         </div class="w-100">
         <div class="row d-flex justify-content-center mt-5 mb-5">
             <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end">
-                <img class="w-75"
+                <img class="img-circle"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/actualiza/desktop/' . $data['idioma'] . '/conexion.png') }}">
             </div>
             <div class="col-12 col-lg-4 d-flex justify-content-center">
-                <img class="w-75"
+                <img class="img-circle"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/actualiza/desktop/' . $data['idioma'] . '/libertad.png') }}">
             </div>
             <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start">
-                <img class="w-75"
+                <img class="img-circle"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/actualiza/desktop/' . $data['idioma'] . '/recargable.png') }}">
             </div>
         </div>
