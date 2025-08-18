@@ -140,7 +140,7 @@ class view_generator_controller extends Controller
 
 
         $weblogin = str_replace(' ', '', $weblogin);
-
+        
         $test = request()->query('test'); //(esto está recibiendo test por get)  //hacer test en ruta: ?test=true
 
         $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
@@ -361,21 +361,7 @@ class view_generator_controller extends Controller
             $ruta = 'pages.' . $origen . '.index';
         }
 
-        $currentUrl = '';
-
-        $urlHolaRutina = $segments[1] . '/' . $segments[2] . '/' . ($segments[3] ?? '');
-
-        
-        if($urlHolaRutina === "public/es/hola-rutina"){
-            $currentUrl = $baseUrl . '/cita-macro/public/es/hola-rutina/';
-        }
-        
-        
-        
-        
-        if($currentUrl === $baseUrl . '/cita-macro/public/es/hola-rutina/'){
-             return redirect($baseUrl . '/cita-macro/es/hola-rutina/' . $segments[4] . '?utm_source=email&utm_medium=email&utm_campaign=crm-macrovuelta2025-email&origin=crm-macrovuelta2025-email');
-        }else if (view()->exists($ruta)) { //verificamos si la ruta existe
+        if (view()->exists($ruta)) { //verificamos si la ruta existe
             return view($ruta, ['data' => $this->data]);
         } else { //redirigimos a vista principal si no existe la ruta
             return redirect('https://optica.naturaloptics.com/cita-macro/es/cita-commodity');
