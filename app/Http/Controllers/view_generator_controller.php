@@ -363,7 +363,7 @@ class view_generator_controller extends Controller
 
         $currentUrl = '';
 
-        $urlHolaRutina = $segments[1] . '/' . $segments[2] . '/' . isset($segments[3]);
+        $urlHolaRutina = $segments[1] . '/' . $segments[2] . '/' . ($segments[3] ?? '');
 
         
         if($urlHolaRutina === "public/es/hola-rutina"){
@@ -373,8 +373,8 @@ class view_generator_controller extends Controller
         
         
         
-        if(isset($currentUrl) === $baseUrl . '/cita-macro/public/es/hola-rutina/'){
-             return redirect($baseUrl . '/cita-macro/es/hola-rutina/' . $weblogin . '?utm_source=email&utm_medium=email&utm_campaign=crm-macrovuelta2025-email&origin=crm-macrovuelta2025-email');
+        if($currentUrl === $baseUrl . '/cita-macro/public/es/hola-rutina/'){
+             return redirect($baseUrl . '/cita-macro/es/hola-rutina/' . $segments[4] . '?utm_source=email&utm_medium=email&utm_campaign=crm-macrovuelta2025-email&origin=crm-macrovuelta2025-email');
         }else if (view()->exists($ruta)) { //verificamos si la ruta existe
             return view($ruta, ['data' => $this->data]);
         } else { //redirigimos a vista principal si no existe la ruta
