@@ -141,6 +141,10 @@ class view_generator_controller extends Controller
 
         $weblogin = str_replace(' ', '', $weblogin);
 
+        if($origen === 'hola-rutina'){
+            $weblogin = rtrim($weblogin, '/');
+        }
+
         $test = request()->query('test'); //(esto está recibiendo test por get)  //hacer test en ruta: ?test=true
 
         $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
