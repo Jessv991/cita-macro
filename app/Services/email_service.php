@@ -145,14 +145,14 @@ class email_service
 
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
+                //$this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
             } else {
                 //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                // $mail->addAddress($email_optica);
-                // $mail->addCC('crm@naturalopticsgroup.com');
+                $mail->addAddress($email_optica);
+                $mail->addCC('crm@naturalopticsgroup.com');
 
-                // //función que envía email al cliente 
-                // $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
+                //función que envía email al cliente 
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
             }
 
 
