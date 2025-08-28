@@ -13,14 +13,14 @@ class email_service
 {
     public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC)
     {
-        $tienda = ''; 
+        $tienda = '';
         $weblogin = '';
 
         list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
 
         $nombre = $validated['nombre'];
         $email = $validated['email'];
-        
+
         if ($typeLC === 'ordinario' || $typeLC === 'sms') {
             $apellidos = $validated['apellidos'];
             $movil = $validated['movil'];
@@ -28,10 +28,10 @@ class email_service
             $apellidos = $validated['apellido'] . ' ' . $validated['apellido2'];
             $clicodi = $validated['clicodi'];
             $comentario = $validated['productoHidden'];
-            $direccion= $validated['direccion']. ' ' . $validated['poblacion']. ' - ' . $validated['prov_cli']. ' ' . $validated['cp_cli'];
-            if(isset($validated['fijo'])){
+            $direccion = $validated['direccion'] . ' ' . $validated['poblacion'] . ' - ' . $validated['prov_cli'] . ' ' . $validated['cp_cli'];
+            if (isset($validated['fijo'])) {
                 $movil = $validated['movil'] . '/' . $validated['fijo'];
-            }else{
+            } else {
                 $movil = $validated['movil'];
             }
         }
@@ -56,7 +56,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
 
-            
+
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
 
             if (!empty($optica) && isset($optica[0])) {
@@ -70,11 +70,11 @@ class email_service
                 echo "No se encontró la óptica.";
             }
 
-            
+
             if ($typeLC === 'ordinario' && $commodityLC === null) {
-                
+
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
-                
+
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
                     '{EMAILCLIENTE}',
@@ -86,8 +86,8 @@ class email_service
                     '{LOGO}',
                     '{LOCAL}'
                 );
-                
-                
+
+
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
             } elseif ($typeLC === 'email') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteOpticaLC.blade.php');
@@ -113,7 +113,6 @@ class email_service
                 );
 
                 $palabrasReemplazar = array($tienda, $nombre . " " . $apellidos, $clicodi, $comentario, $nombre . " " . $apellidos, $movil, $email, $opticaName, $direccion_optica, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
-                
             } elseif (isset($commodityLC)) {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteOpticaLCsms.blade.php');
 
@@ -145,15 +144,15 @@ class email_service
             $tienda = $optica[0]->codigo;
 
             if ($test == 'true') {
-                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                //$this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
+                $mail->addAddress('l.vigna@naturalopticsgroup.com');
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
             } else {
                 //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                $mail->addAddress($email_optica);
-                $mail->addCC('crm@naturalopticsgroup.com');
+                // $mail->addAddress($email_optica);
+                // $mail->addCC('crm@naturalopticsgroup.com');
 
-                //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
+                // //función que envía email al cliente 
+                // $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
             }
 
 
@@ -176,12 +175,12 @@ class email_service
 
     function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC)
     {
-        
+
         $Citas = new CitasLandings();
         $mail = new PHPMailer(true);
-        
+
         try {
-            
+
             // SMTP configuration
             $mail->CharSet = 'UTF-8';
             $mail->isSMTP();
@@ -192,30 +191,37 @@ class email_service
             $mail->Port = config('mail.mailers.smtp.port');
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
-            
-            
+
+
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
 
-            if($typeLC === 'email' || $typeLC === 'sms' || $commodityLC === 'lc'){
+            if ($typeLC === 'email' || $typeLC === 'sms' || $commodityLC === 'lc') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteLC.blade.php');
-            }elseif($typeLC === 'ordinario'){
+            } elseif ($typeLC === 'ordinario') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
-            }else{
+            } else {
                 return response()->json(['message' => 'Tipo de solicitud no válido.'], 400);
-            }  
-            
-            
+            }
+
+            if ($email_optica === "ribes@naturaloptics.com") {
+                $salud = "salud ocular";
+            } else {
+                $salud = "salud";
+            }
+
+
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}',
                 '{TELEFONOPTICA}',
                 '{EMAILOPTICA}',
                 '{NOMBREOPTICA}',
                 '{LOGO}',
-                '{LOCAL}'
+                '{LOCAL}',
+                '{SALUD}'
             );
-            
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
+
+            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $salud);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
