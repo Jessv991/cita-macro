@@ -12,7 +12,7 @@
 
     <div class="w-100 text-center mt-5">
         <p class="frase-atencion">Sigue las instrucciones que te dejamos a continuación para crear la cometa o 
-            <a href="https://vimeo.com/user214910581/cometa-pasos?ts=0&share=copy" target="_blank" class="text-danger">haz clic en este link</a> para ver el tutorial.
+            <a href="https://vimeo.com/user214910581/cometa-pasos?ts=0&share=copy" target="_blank" style="color: #c76f6f !important;">haz clic en este link</a> para ver el tutorial.
         </p>
     </div>
 
