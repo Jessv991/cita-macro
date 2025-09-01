@@ -9,6 +9,14 @@
         <img class="reto-board-image mb-3 mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/UNETE-AL-RETO.png')}}" alt="">
         <p class="bottom-text">Comparte una foto volando tu cometa en Instagram con el <strong>hashtag #RetoSinPantallas.</strong> No te olvides de etiquetar a tu centro Natural Optics más cercano y a @naturalopticsoficial para entrar en el sorteo de un <strong>¡Pack de Vuelta al Cole!</strong></p>
     </div>
+
+    <div class="w-100 text-center mt-5">
+        <p class="frase-atencion">Sigue las instrucciones que te dejamos a continuación para crear la cometa o 
+            <a href="https://vimeo.com/user214910581/cometa-pasos?ts=0&share=copy" target="_blank" class="text-danger">haz clic en este link</a> para ver el tutorial.
+        </p>
+    </div>
+
+
     <div class="paso-card-div d-block mx-auto mt-5">
         <div class="paso-card-div-mobile-top d-block mx-auto">
             <img class="materiales-board-image mx-auto d-block" src="{{ asset($data['rutaAsset'] . '/assets/img/cometa/desktop/es/MATERIALES-NECESARIOS.png')}}" alt="">
@@ -116,5 +124,18 @@
     <div class="mt-5">
         <img class="d-block mx-auto logo-N col-4" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
     </div>
+
+    <script>
+  const frase = document.querySelector('.frase-atencion');
+
+  setInterval(() => {
+    frase.style.animationPlayState = 'running';
+
+    setTimeout(() => {
+      frase.style.animationPlayState = 'paused';
+    }, 1000); // Dura 1s la animación
+  }, 10000); // Se repite cada 10s
+</script>
+
     
 @include('layouts.footer')

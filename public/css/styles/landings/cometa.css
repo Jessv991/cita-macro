@@ -3,6 +3,26 @@
     src: url(../../../fonts/KGPerfectPenmanship.ttf);
 }
 
+.frase-atencion {
+  font-family: 'KGPerfectPenmanship';
+  display: inline-block;
+  font-size: 24px;
+  font-weight: bold;
+  animation: mover 1s ease-in-out infinite;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+
+@keyframes mover {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+
 
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
@@ -328,6 +348,10 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
+    .frase-atencion{
+        font-size: 18px;
+    }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -518,6 +542,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    .frase-atencion{
+        font-size: 18px;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -609,6 +637,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    .frase-atencion{
+        font-size: 16px;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -698,6 +730,10 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    .frase-atencion{
+        font-size: 14px;
     }
 
 }
