@@ -51,7 +51,7 @@
             <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/actualiza/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/beneficios.png') }}">
         </div>
 
-        <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
+        <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form" id="contAllForm">
             @include('form.pide_cita')
         </div>
 
