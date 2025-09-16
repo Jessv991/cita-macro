@@ -438,7 +438,7 @@ class Empresas extends Model
     */
 
 
-    public function getCityByProvincia($codigoProvincia, $promocional, $landing)
+    public function getCityByProvincia($codigoProvincia)
     {
         $datos = DB::table("empresas as e")
 

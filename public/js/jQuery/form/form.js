@@ -17,7 +17,6 @@ $(document).ready(function () {
     var weblogin = $('#_weblogin').val();
     var optica = $('#_optica').val();
 
-
     //condicional según la ruta que se pase
 
     if (weblogin && optica) {
@@ -26,8 +25,12 @@ $(document).ready(function () {
         putOpticaByweblogin();
         //getOpticaSelectCity();
     } else {
+
         getCityBySelectState();
-        getOpticaSelectCity()
+        if ($('#origen').val() === 'promo-exclusiva') {
+            $('#provincias').val('25').trigger('change'); // <-- Esto sí ejecutará el on('change')
+        }
+        getOpticaSelectCity();
     }
 
     //animación del icono de mapa
@@ -173,6 +176,7 @@ $(document).ready(function () {
 function getCityBySelectState() {
 
     $('#provincias').on('change', function () {
+        console.log('entró');
         var provinciaId = $(this).val();
 
         $('#optica').empty();//limpia el select ciudad
@@ -237,6 +241,7 @@ function getCityBySelectState() {
 
 //En caso que haya una unica tienda se ejecuta esta función llamada en la función getCityBySelectState()
 function putOpticasByProvincia(city) {
+
     $.ajax({
         url: getOpticasByProvinciaRoute, // Ruta definida en el archivo Blade
         type: 'POST',

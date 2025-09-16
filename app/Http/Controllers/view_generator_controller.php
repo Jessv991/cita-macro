@@ -102,7 +102,7 @@ class view_generator_controller extends Controller
 
         if (isset($lc)) {
 
-            if($lc == 'lc'){
+            if ($lc == 'lc') {
 
                 if (isset($segments[5]) && isset($segments[6])) {
                     $weblogin = $segments[5];
@@ -112,13 +112,13 @@ class view_generator_controller extends Controller
                 } else {
                     $weblogin = '';
                 }
-            }else{
+            } else {
                 if (isset($segments[4]) && isset($segments[5])) {
                     $weblogin = $segments[4];
                     $tienda = $segments[5];
                 } elseif (isset($segments[4])) {
                     $weblogin = $segments[4];
-                     $tienda = null;
+                    $tienda = null;
                 } else {
                     $weblogin = '';
                 }
@@ -140,7 +140,7 @@ class view_generator_controller extends Controller
 
 
         $weblogin = str_replace(' ', '', $weblogin);
-        
+
         $test = request()->query('test'); //(esto está recibiendo test por get)  //hacer test en ruta: ?test=true
 
         $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
@@ -216,17 +216,16 @@ class view_generator_controller extends Controller
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
 
         if (isset($lc)) {
-            
-            if($lc == 'lc'){
+
+            if ($lc == 'lc') {
                 $this->data['landing'] = 'lc';
-            }elseif($lc === '50'){
+            } elseif ($lc === '50') {
                 $this->data['landing'] = '50';
-            }elseif($lc === '18'){
+            } elseif ($lc === '18') {
                 $this->data['landing'] = '18';
-            }elseif($lc === '0-17'){
+            } elseif ($lc === '0-17') {
                 $this->data['landing'] = '0-17';
             }
-
         } else {
             $this->data['landing'] = $origen;
         }
@@ -323,7 +322,7 @@ class view_generator_controller extends Controller
 
         $this->data['logoOptica'] = $logoOptica;
 
-        
+
         if (isset($isEmail) && $weblogin && $tienda && $this->data['clicodi']) {
 
             $response = Http::asForm()->post('http://tienda.naturaloptics.com/Mailings/Contactologia/dbquery/index.php/?query=mail', [
@@ -387,7 +386,7 @@ class view_generator_controller extends Controller
         $promocional = $request->input('promocional');
         $landing = $request->input('landing');
 
-        $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional, $landing);
+        $localidades = $empresas->getCityByProvincia($codigoProvincia);
 
         return response()->json($localidades);
     }
@@ -490,7 +489,7 @@ class view_generator_controller extends Controller
 
         if ($typeLC === 'sms') {
             $rules = array_merge($baseRules);
-        }else{
+        } else {
             $rules = array_merge($baseRules, $specificRules);
         }
 
@@ -566,7 +565,7 @@ class view_generator_controller extends Controller
         $logo = $request->input('_logo');
         $locale = $request->input('language');
         $typeLC = $request->input('typeLC');
-        $url = 'https://optica.naturaloptics.com/cita-macro/es/cita-commodity/lc/'. $typeLC . '/';
+        $url = 'https://optica.naturaloptics.com/cita-macro/es/cita-commodity/lc/' . $typeLC . '/';
         $tlfFijo = $request->input('fijo');
         $clicodi = $request->input('clicodi');
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
