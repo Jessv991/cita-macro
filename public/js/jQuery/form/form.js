@@ -28,7 +28,7 @@ $(document).ready(function () {
 
         getCityBySelectState();
         if ($('#origen').val() === 'promo-exclusiva') {
-            $('#provincias').val('25').trigger('change'); // <-- Esto sí ejecutará el on('change')
+            $('#provincias').val('25').prop('disabled', true).trigger('change'); // <-- Esto sí ejecutará el on('change')
         }
         getOpticaSelectCity();
     }
