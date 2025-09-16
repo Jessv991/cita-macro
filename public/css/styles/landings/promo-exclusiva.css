@@ -11,6 +11,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #d8d5cf94;
 }
 
 body::-webkit-scrollbar {
@@ -80,7 +81,7 @@ a:hover {
 
 .text-top-form {
     color: #141414;
-    font-family: 'fangsong';
+    font-family: 'Playfair Display', serif;
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
@@ -112,7 +113,7 @@ div#animationdivIcon {
 
 #gracias {
     color: #7e7676;
-    font-family: 'fangsong';
+    font-family: 'Playfair Display', serif;
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -273,10 +274,7 @@ div#animationdivIcon {
     .text-top-form {
         font-size: 22px;
         padding: 2%;
-    }
-
-    .text-top-form {
-        margin-top: 65px;
+        margin-top: 85px;
     }
 
     .mb-5 {
@@ -291,10 +289,7 @@ div#animationdivIcon {
     .text-top-form {
         font-size: 22px;
         padding: 2%;
-    }
-
-    .text-top-form {
-        margin-top: 65px;
+        margin-top: 98px;
     }
 
     .mb-5 {
