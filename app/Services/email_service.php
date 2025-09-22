@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC)
+    public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda)
     {
-        $tienda = '';
-        $weblogin = '';
-
-        list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
+        
+        if ($typeLC === 'ordinario') {
+            list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
+        }
 
         $nombre = $validated['nombre'];
         $email = $validated['email'];
@@ -69,7 +69,6 @@ class email_service
             } else {
                 echo "No se encontró la óptica.";
             }
-
 
             if ($typeLC === 'ordinario' && $commodityLC === null) {
 

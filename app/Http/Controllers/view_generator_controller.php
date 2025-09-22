@@ -508,7 +508,7 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
 
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
@@ -547,7 +547,6 @@ class view_generator_controller extends Controller
 
     public function validateLC(Request $request)
     {
-
         /* $nombre= $request->input('nombre');
         $apellido= $request->input('apellido');
         $apellido2= $request->input('apellido2');
@@ -572,7 +571,6 @@ class view_generator_controller extends Controller
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
         $commodityLC = null;
-
         $getLogo = $this->generadorImg->index($logo);
 
         if ($getLogo) {
@@ -614,7 +612,7 @@ class view_generator_controller extends Controller
         $rules = array_merge($baseValidated, $specificRules);
         $validated = $request->validate($rules);
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC);
+        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
