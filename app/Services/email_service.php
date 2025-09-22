@@ -54,7 +54,11 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
+            if ($typeLC === 'ordinario') {
+                $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
+            }else{
+                $mail->Subject = 'Reposición pack LC de ' . $nombre . ' ' . $apellidos;
+            }
 
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
@@ -193,7 +197,11 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
-            $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
+            if ($typeLC === 'ordinario') {
+                $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
+            }else{
+                $mail->Subject = 'Confirmada su reposición de pack LC con ' . $nombre_optica;
+            }
 
             if ($typeLC === 'email' || $typeLC === 'sms' || $commodityLC === 'lc') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteLC.blade.php');
