@@ -132,6 +132,12 @@ div#animationdivIcon {
     font-size: 20px;
 }
 
+.rcentreopticdelbagesclass1 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+
 /* 
 ███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
 ██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
