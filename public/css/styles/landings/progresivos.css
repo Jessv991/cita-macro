@@ -141,8 +141,8 @@ body::-webkit-scrollbar-track {
 
 .btn-color2 {
     width: 169px;
-    background-color: #fff;
-    color: #252424;
+    background-color: #363E31;
+    color: #fff;
     font-size: 21px;
     font-weight: bold;
     display: inline-flex;
@@ -152,8 +152,8 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color2:hover {
-    background-color: #000;
-    color: #BCCF88;
+    background-color: #a6ac88;
+    color: #fff;
 }
 
 .titulo_tu_vista {
@@ -448,8 +448,8 @@ div#animationdivIcon {
     .primeros-parrafos {
         font-size: 16.8px !important;
         margin-bottom: 6%;
-        padding-left: 8% !important;
-        padding-right: 8% !important;
+        padding-left: 6% !important;
+        padding-right: 6% !important;
     }
 
     .titol-hola-rutina {
