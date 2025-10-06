@@ -168,12 +168,12 @@ body::-webkit-scrollbar-track {
 }
 
 .titulo_tu_vista2 {
-    width: 69%;
+    width: 76%;
     /* 34% */
 }
 
 .m-banner {
-    margin-top: 9%;
+    margin-top: 4%;
 }
 
 
@@ -378,7 +378,24 @@ div#animationdivIcon {
 @media (max-width: 2000px) {}
 
 /* Pantallas Grandes (1200px a 1499px) */
-@media (min-width: 1200px) and (max-width: 1499px) {}
+@media (min-width: 1200px) and (max-width: 1499px) {
+    .primeros-parrafos1 {
+        padding-left: 13% !important;
+        padding-right: 13% !important;
+    }
+
+    .m-banner {
+        margin-top: 3%;
+    }
+
+    .titulo_tu_vista2 {
+        width: 83%;
+    }
+
+    .titulo_tu_vista {
+        width: 41%;
+    }
+}
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {}
