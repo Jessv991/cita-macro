@@ -462,6 +462,7 @@ div#animationdivIcon {
 
     p.text-top-form {
         font-size: 22px !important;
+        margin-top: 8%;
     }
 
     .titulo_tu_vista {
@@ -474,6 +475,10 @@ div#animationdivIcon {
 
     .titulo_consejos {
         width: 73%;
+    }
+
+    div#contAllForm {
+        margin-bottom: 8%;
     }
 }
 
@@ -534,6 +539,7 @@ div#animationdivIcon {
 
     p.text-top-form {
         font-size: 19px !important;
+        margin-top: 8%;
     }
 
     .btn-color2 {
@@ -571,6 +577,10 @@ div#animationdivIcon {
 
     .m-banner {
         margin-top: 12%;
+    }
+
+    div#contAllForm {
+        margin-bottom: 8%;
     }
 
 }
@@ -633,12 +643,13 @@ div#animationdivIcon {
     }
 
     .contenedor_form {
-        padding-left: 11% !important;
-        padding-right: 11% !important;
+        padding-left: 3% !important;
+        padding-right: 3% !important;
     }
 
     p.text-top-form {
         font-size: 16px !important;
+        margin-top: 8%;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -675,5 +686,9 @@ div#animationdivIcon {
 
     .titulo_tu_vista2 {
         width: 90%;
+    }
+
+    div#contAllForm {
+        margin-bottom: 8%;
     }
 }
