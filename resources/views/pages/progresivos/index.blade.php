@@ -17,13 +17,13 @@
 
             </div>
 
-            <div class="w-100">
+            <div class="w-100 m-banner">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.jpg') }}">
             </div>
 
             <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-                <div class="w-75 p-1 p-lg-5 primeros-parrafos">
+                <div class="w-75 p-1 p-lg-5 primeros-parrafos1">
                     <p>{{ __('progresivos.parrafo-1') }}<span class="fw-bold">{{ __('progresivos.parrafo-1.1') }}</span><span>{{ __('progresivos.parrafo-1.2') }}</span>
                     </p>
                 </div>
