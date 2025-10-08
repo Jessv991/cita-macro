@@ -321,13 +321,34 @@ class Empresas extends Model
     public function getStoreByCodeAndWeblogin($weblogin)
     {
 
-        $datos = DB::table('empresas')
+        /* $datos = DB::table('empresas')
             ->where('weblogin', $weblogin)
             ->where('d22', 'si')
             ->where('d19', 'si')
             ->where(function ($query) {
                 $query->where('d9', '0')
                     ->orWhere('d9', '1');
+            })
+            ->where('CRM', 'si')
+            ->get();
+
+        return $datos; */
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', $weblogin)
+            ->where('d22', 'si')
+            ->where('d19', 'si')
+            ->where(function ($query) use ($weblogin) {
+                if ($weblogin == 'pruebas') {
+                    $query->where(function ($q) {
+                        $q->where('d9', '-9');
+                    });
+                } else {
+                    $query->where(function ($q) {
+                        $q->where('d9', '0')
+                            ->orWhere('d9', '1');
+                    });
+                }
             })
             ->where('CRM', 'si')
             ->get();
