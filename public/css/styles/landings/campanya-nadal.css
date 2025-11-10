@@ -21,70 +21,20 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-@font-face {
-    font-family: 'Darkline';
-    src: url('/fonts/Darkline.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-}
-
-.Darkline-text {
-    font-family: 'Darkline', sans-serif;
-    font-weight: 400;
-    font-size: 128px;
-    line-height: 0.2;
-    letter-spacing: -0.01em;
-    text-align: center;
-    vertical-align: middle;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.titol-hola-rutina {
-    font-size: 60px;
-    color: #BCCF88;
-}
-
 .primeros-parrafos {
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
+    font-family: 'Lemance', sans-serif;
 }
 
 .primeros-parrafos1 {
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
-}
-
-.cont-level-2 {
-    background-color: #E2807B;
-}
-
-.titulo_fatiga {
-    width: 50%;
-}
-
-.segundo-parrafo {
-    font-size: 25px;
-}
-
-.tercer-parrafo {
-    font-size: 26px;
-    font-weight: 300;
-    padding-right: 24%;
-}
-
-.titulo_consejos {
-    width: 34%;
-}
-
-.gif-two {
-    width: 80%;
-    /* Más pequeño que el contenedor */
-    height: auto;
-    /* Mantiene proporción */
-    display: block;
+    font-family: 'Lemance', sans-serif;
+    font-weight: 200;
+    line-height: 1;
 }
 
 .footer-contact {
@@ -170,8 +120,8 @@ body::-webkit-scrollbar-track {
 }
 
 .texto-elegante {
-    font-style: italic;
-    font-weight: 500;
+  font-style: italic;
+  font-weight: 700; /* negrita real */
 }
 
 .subtitle {
@@ -224,7 +174,7 @@ p.text-top-form {
 
 .text-top-form {
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lemance', sans-serif;
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
@@ -267,7 +217,7 @@ div#animationdivIcon {
 
 #gracias {
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Lemance', sans-serif;
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -498,14 +448,14 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     .primeros-parrafos {
-        font-size: 16.8px !important;
+        font-size: 19px !important;
         margin-bottom: 6%;
         padding-left: 6% !important;
         padding-right: 6% !important;
     }
 
     .primeros-parrafos1 {
-        font-size: 16.8px !important;
+        font-size: 19px !important;
         margin-bottom: 6%;
         padding-left: 0% !important;
         padding-right: 0% !important;
@@ -618,14 +568,14 @@ div#animationdivIcon {
     }
 
     .primeros-parrafos {
-        font-size: 13.8px !important;
+        font-size: 16px !important;
         margin-bottom: 6%;
         padding-left: 7% !important;
         padding-right: 7% !important;
     }
 
     .primeros-parrafos1 {
-        font-size: 13.8px !important;
+        font-size: 16px !important;
         margin-bottom: 6%;
         padding-left: 0% !important;
         padding-right: 0% !important;
