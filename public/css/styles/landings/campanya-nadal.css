@@ -489,6 +489,10 @@ div#animationdivIcon {
     .slides {
         height: 347px;
     }
+
+    .subtitle {
+        font-size: 26px;
+    }
 }
 
 /* Teléfonos (576px a 767px) */
@@ -594,6 +598,14 @@ div#animationdivIcon {
 
     .slide {
         width: 60%;
+    }
+
+    .subtitle {
+        font-size: 24px;
+    }
+
+    .slides {
+        height: 348px;
     }
 
 }
@@ -707,5 +719,9 @@ div#animationdivIcon {
 
     .slide {
         width: 55%;
+    }
+
+    .subtitle {
+        font-size: 20px;
     }
 }
