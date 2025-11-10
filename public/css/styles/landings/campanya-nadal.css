@@ -22,14 +22,14 @@ body::-webkit-scrollbar-track {
 }
 
 .primeros-parrafos {
-    font-family: 'Lemance', sans-serif;
+    font-family: 'Lemance', sans-serif !important;
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
 }
 
 .primeros-parrafos1 {
-    font-family: 'Lemance', sans-serif;
+    font-family: 'Lemance', sans-serif !important;
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
@@ -142,6 +142,7 @@ body::-webkit-scrollbar-track {
                                      */
 
 p.text-top-form {
+    font-family: 'Lemance', sans-serif !important;
     text-align: center;
     font-size: 30px !important;
 }
@@ -173,9 +174,7 @@ p.text-top-form {
 
 .text-top-form {
     color: #fff;
-    font-family: 'Lemance', sans-serif;
     font-weight: 200;
-    line-height: 1;
     font-size: 25px;
 
 }
@@ -216,7 +215,7 @@ div#animationdivIcon {
 
 #gracias {
     color: #fff;
-    font-family: 'Lemance', sans-serif;
+    font-family: 'Lemance', sans-serif !important;
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -334,20 +333,13 @@ div#animationdivIcon {
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
     .primeros-parrafos1 {
+        font-family: 'Lemance', sans-serif !important;
         padding-left: 13% !important;
         padding-right: 13% !important;
     }
 
     .m-banner {
         margin-top: 3%;
-    }
-
-    .titulo_tu_vista2 {
-        width: 83%;
-    }
-
-    .titulo_tu_vista {
-        width: 41%;
     }
 
     .btn-color2 {
@@ -365,6 +357,7 @@ div#animationdivIcon {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .primeros-parrafos {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 20.8px !important;
         margin-bottom: 6%;
         padding-left: 8% !important;
@@ -372,18 +365,11 @@ div#animationdivIcon {
     }
 
     .primeros-parrafos1 {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 19.8px !important;
         margin-bottom: 6%;
         padding-left: 0% !important;
         padding-right: 0% !important;
-    }
-
-    .titol-hola-rutina {
-        font-size: 35px !important;
-    }
-
-    .Darkline-text {
-        font-size: 75px !important;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -394,45 +380,15 @@ div#animationdivIcon {
         width: 100% !important;
     }
 
-    .gif-two {
-        width: 52% !important;
-    }
-
-    .titol-fatiga {
-        font-size: 37px !important;
-    }
-
-    .segundo-parrafo {
-        font-size: 30px !important;
-        margin-left: 0% !important;
-    }
-
-    .tercer-parrafo {
-        font-size: 23px !important;
-        margin-left: 0% !important;
-        margin-right: 0% !important;
-    }
-
     .contenedor_form {
         padding-left: 12%;
         padding-right: 12%;
     }
 
     p.text-top-form {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 22px !important;
         margin-top: 8%;
-    }
-
-    .titulo_tu_vista {
-        width: 61% !important;
-    }
-
-    .titulo_fatiga {
-        width: 100%;
-    }
-
-    .titulo_consejos {
-        width: 73%;
     }
 
     div#contAllForm {
@@ -451,6 +407,7 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     .primeros-parrafos {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 19px !important;
         margin-bottom: 6%;
         padding-left: 6% !important;
@@ -459,17 +416,10 @@ div#animationdivIcon {
     }
 
     .primeros-parrafos1 {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 19px !important;
         padding-left: 0% !important;
         padding-right: 0% !important;
-    }
-
-    .titol-hola-rutina {
-        font-size: 35px !important;
-    }
-
-    .Darkline-text {
-        font-size: 75px !important;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -482,22 +432,6 @@ div#animationdivIcon {
         width: 100% !important;
     }
 
-    .gif-two {
-        width: 52% !important;
-    }
-
-    .titol-fatiga {
-        font-size: 27px !important;
-    }
-
-    .segundo-parrafo {
-        font-size: 30px !important;
-    }
-
-    .tercer-parrafo {
-        font-size: 19px !important;
-    }
-
     .contenedor_form {
         padding-left: 7% !important;
         padding-right: 7% !important;
@@ -506,39 +440,12 @@ div#animationdivIcon {
     p.text-top-form {
         font-size: 19px !important;
         margin-top: 8%;
+        font-family: 'Lemance', sans-serif !important;
     }
 
     .btn-color2 {
         width: 109px;
         font-size: 17px;
-    }
-
-    .titulo_tu_vista {
-        width: 75%;
-    }
-
-    .titulo_fatiga {
-        width: 100%;
-    }
-
-    .segundo-parrafo {
-        font-size: 24px !important;
-        margin-left: 0% !important;
-        margin-bottom: 0% !important;
-    }
-
-    .tercer-parrafo {
-        font-size: 26px;
-        padding-right: 9% !important;
-        padding-left: 9% !important;
-    }
-
-    .titulo_consejos {
-        width: 76%;
-    }
-
-    .titulo_tu_vista2 {
-        width: 85%;
     }
 
     .m-banner {
@@ -571,6 +478,7 @@ div#animationdivIcon {
     }
 
     .primeros-parrafos {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 16px !important;
         padding-left: 7% !important;
         padding-right: 7% !important;
@@ -578,19 +486,13 @@ div#animationdivIcon {
     }
 
     .primeros-parrafos1 {
+        font-family: 'Lemance', sans-serif !important;
         font-size: 16px !important;
         margin-bottom: 6%;
         padding-left: 0% !important;
         padding-right: 0% !important;
     }
 
-    .titol-hola-rutina {
-        font-size: 22px !important;
-    }
-
-    .Darkline-text {
-        font-size: 50px !important;
-    }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
         width: 100% !important;
@@ -598,26 +500,6 @@ div#animationdivIcon {
 
     .w-25.d-flex.justify-content-center.align-items-center.p-5 {
         width: 100% !important;
-    }
-
-    .gif-two {
-        width: 65% !important;
-        padding-bottom: 9% !important;
-    }
-
-    .titol-fatiga {
-        font-size: 26px !important;
-    }
-
-    .segundo-parrafo {
-        font-size: 17px !important;
-        margin-left: 0% !important;
-    }
-
-    .tercer-parrafo {
-        font-size: 15px !important;
-        margin-left: 0% !important;
-        padding-right: 0% !important;
     }
 
     .contenedor_form {
@@ -628,6 +510,7 @@ div#animationdivIcon {
     p.text-top-form {
         font-size: 16px !important;
         margin-top: 8%;
+        font-family: 'Lemance', sans-serif !important;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -648,22 +531,6 @@ div#animationdivIcon {
     .btn-color2 {
         width: 109px;
         font-size: 13px;
-    }
-
-    .titulo_tu_vista {
-        width: 80%;
-    }
-
-    .titulo_fatiga {
-        width: 100%;
-    }
-
-    .titulo_consejos {
-        width: 74%;
-    }
-
-    .titulo_tu_vista2 {
-        width: 90%;
     }
 
     div#contAllForm {
