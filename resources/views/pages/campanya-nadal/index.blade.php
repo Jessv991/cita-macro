@@ -1,6 +1,6 @@
 @include('layouts.header')
 <div class="background-container">
-    <div class="background-item">
+    <div class="background-item d-flex flex-column align-items-center text-center">
 
         <div class="boton-flotante d-flex justify-content-end">
 
@@ -76,7 +76,7 @@
             @include('form.pide_cita')
         </div>
 
-        <footer class="row w-100">
+        <footer class="row w-100 p-0">
             <?php
                 if($data['tipo_dispositivo']!='mobile') {            
             ?>
