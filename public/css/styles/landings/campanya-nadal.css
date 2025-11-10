@@ -22,19 +22,17 @@ body::-webkit-scrollbar-track {
 }
 
 .primeros-parrafos {
+    font-family: 'Lemance', sans-serif;
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
-    font-family: 'Lemance', sans-serif;
 }
 
 .primeros-parrafos1 {
+    font-family: 'Lemance', sans-serif;
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
-    font-family: 'Lemance', sans-serif;
-    font-weight: 200;
-    line-height: 1;
 }
 
 .footer-contact {
@@ -120,8 +118,9 @@ body::-webkit-scrollbar-track {
 }
 
 .texto-elegante {
-  font-style: italic;
-  font-weight: 700; /* negrita real */
+    font-style: italic;
+    font-weight: 700;
+    /* negrita real */
 }
 
 .subtitle {
@@ -350,6 +349,10 @@ div#animationdivIcon {
     .titulo_tu_vista {
         width: 41%;
     }
+
+    .btn-color2 {
+        height: 37px;
+    }
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -452,11 +455,11 @@ div#animationdivIcon {
         margin-bottom: 6%;
         padding-left: 6% !important;
         padding-right: 6% !important;
+        margin-top: 36px;
     }
 
     .primeros-parrafos1 {
         font-size: 19px !important;
-        margin-bottom: 6%;
         padding-left: 0% !important;
         padding-right: 0% !important;
     }
@@ -569,9 +572,9 @@ div#animationdivIcon {
 
     .primeros-parrafos {
         font-size: 16px !important;
-        margin-bottom: 6%;
         padding-left: 7% !important;
         padding-right: 7% !important;
+        margin-top: 36px;
     }
 
     .primeros-parrafos1 {
