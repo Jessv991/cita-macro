@@ -128,19 +128,12 @@ body::-webkit-scrollbar-track {
 
 .boton-flotante {
     position: fixed;
-    /* Esto fija el div en la pantalla */
     top: 0;
-    /* Se coloca en la parte superior */
     left: 0;
-    /* Se coloca en el borde izquierdo */
     width: 100%;
-    /* Asegura que el div ocupe todo el ancho de la pantalla */
     z-index: 1000;
-    /* Asegura que el div quede encima del resto del contenido */
-    background-color: #363E31;
-    /* Puedes poner el color de fondo que prefieras */
+    background-color: #7d9685;
     padding: 10px;
-    /* Ajusta el padding según lo necesites */
     height: 9%;
 }
 
@@ -148,7 +141,7 @@ body::-webkit-scrollbar-track {
 .btn-color2 {
     width: 169px;
     background-color: #fff;
-    color: #363E31;
+    color: #7d9685;
     font-size: 21px;
     font-weight: bold;
     display: inline-flex;
@@ -158,8 +151,8 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color2:hover {
-    background-color: #a6ac88;
-    color: #fff;
+    background-color: #e9ebe2;
+    color: #7d9685;
 }
 
 .titulo_tu_vista {
@@ -175,6 +168,19 @@ body::-webkit-scrollbar-track {
 .m-banner {
     margin-top: 4%;
 }
+
+.texto-elegante {
+    font-style: italic;
+    font-weight: 500;
+}
+
+.subtitle {
+    font-style: italic;
+    color: #7d9685;
+    font-weight: 700;
+    font-size: 33px;
+}
+
 
 
 /* 
@@ -194,7 +200,7 @@ p.text-top-form {
 .contenedor_form {
     padding-left: 20%;
     padding-right: 20%;
-    background-color: #363e31;
+    background-color: #7d9685;
 }
 
 .contenedor-form {
@@ -297,51 +303,50 @@ div#animationdivIcon {
 
 .simple-carousel {
     position: relative;
-    max-width: 600px;
+    width: 100%;
     margin: auto;
     overflow: hidden;
 }
 
 .slides {
     position: relative;
-    height: 80%;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 45%;
+    height: auto;
+    border-radius: 50%;
+    transition: all 0.5s ease;
     opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+    transform: scale(0.8);
+    z-index: 0;
 }
 
+/* Imagen central (activa) */
 .slide.active {
     opacity: 1;
-    position: relative;
+    transform: scale(1);
+    z-index: 2;
 }
 
-.prev,
-.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: #fff;
-    color: #ada7a7;
-    border: none;
-    font-size: 4rem;
-    padding: 0 10px;
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
+/* Imagen anterior (izquierda) */
+.slide.prev {
+    opacity: 0.6;
+    transform: translateX(-100%) scale(0.8);
+    z-index: 1;
 }
 
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
+/* Imagen siguiente (derecha) */
+.slide.next {
+    opacity: 0.6;
+    transform: translateX(100%) scale(0.8);
+    z-index: 1;
 }
 
 .indicators {
@@ -357,12 +362,12 @@ div#animationdivIcon {
     border: none;
     margin: 0 5px;
     cursor: pointer;
-    display: inline-block;
 }
 
 .indicator.active {
     background: #797676;
 }
+
 
 
 /* 
@@ -480,6 +485,10 @@ div#animationdivIcon {
     div#contAllForm {
         margin-bottom: 8%;
     }
+
+    .slides {
+        height: 347px;
+    }
 }
 
 /* Teléfonos (576px a 767px) */
@@ -581,6 +590,10 @@ div#animationdivIcon {
 
     div#contAllForm {
         margin-bottom: 8%;
+    }
+
+    .slide {
+        width: 60%;
     }
 
 }
@@ -690,5 +703,9 @@ div#animationdivIcon {
 
     div#contAllForm {
         margin-bottom: 8%;
+    }
+
+    .slide {
+        width: 55%;
     }
 }

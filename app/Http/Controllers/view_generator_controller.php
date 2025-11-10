@@ -145,6 +145,8 @@ class view_generator_controller extends Controller
 
         $sorteo = request()->query('sorteo'); //(esto está recibiendo SORTEO por get)
 
+        $this->data['regal'] = request()->query('regal'); //(esto está recibiendo SORTEO por get)
+
         $empresas = new Empresas();
         $zonas = new Zonas();
         $baseUrl = url('/');
