@@ -44,7 +44,7 @@
 }
 
 @font-face {
-  font-family: 'Lemance2' !;
+  font-family: 'Lemance2';
   src: url('/fonts/Lemance_Trial_BdIt.ttf') format('truetype');
   font-weight: 700;
   font-style: italic;
@@ -145,16 +145,6 @@ body::-webkit-scrollbar-track {
     color: #7d9685;
 }
 
-.titulo_tu_vista {
-    width: 36%;
-    /* 34% */
-}
-
-.titulo_tu_vista2 {
-    width: 76%;
-    /* 34% */
-}
-
 .m-banner {
     margin-top: 4%;
 }
@@ -168,7 +158,7 @@ body::-webkit-scrollbar-track {
 .subtitle {
     font-style: italic;
     color: #7d9685;
-    font-weight: 700;
+    font-weight: 800;
     font-size: 33px;
 }
 
