@@ -9,45 +9,45 @@
 */
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_Rg.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_Rg.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_It.ttf') format('truetype');
-  font-weight: 400;
-  font-style: italic;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_It.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_Lt.ttf') format('truetype');
-  font-weight: 300;
-  font-style: normal;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_Lt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_LtIt.ttf') format('truetype');
-  font-weight: 300;
-  font-style: italic;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_LtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_Bd.ttf') format('truetype');
-  font-weight: 700;
-  font-style: normal;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_Bd.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: 'Lemance2';
-  src: url('/fonts/Lemance_Trial_BdIt.ttf') format('truetype');
-  font-weight: 700;
-  font-style: italic;
+    font-family: 'Lemance2';
+    src: url('/fonts/Lemance_Trial_BdIt.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
 }
 
 body {
@@ -156,11 +156,14 @@ body::-webkit-scrollbar-track {
 }
 
 .subtitle {
+    font-family: 'Lemance2';
     font-style: italic;
-    color: #7d9685;
     font-weight: 700;
     font-size: 33px;
+    color: #7d9685;
+    text-shadow: 0.1px 0 #7d9685, -0.1px 0 #7d9685, 0 0.1px #7d9685, 0 -0.1px #7d9685;
 }
+
 
 
 
