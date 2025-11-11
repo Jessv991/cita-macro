@@ -194,11 +194,12 @@ p.text-top-form {
 .btn-color {
     background-color: #fff;
     color: #000;
+    font-weight: bold;
 }
 
 .btn-color:hover {
-    background-color: #000;
-    color: #BDD089;
+    background-color: #e9ebe2;
+    color: #7d9685;
 }
 
 .form-check-label {

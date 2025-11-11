@@ -1,6 +1,6 @@
 @include('layouts.header')
 <div class="background-container">
-    <div class="background-item d-flex flex-column align-items-center text-center">
+    <div class="background-item d-flex flex-column align-items-center">
 
         <div class="boton-flotante d-flex justify-content-end">
 
