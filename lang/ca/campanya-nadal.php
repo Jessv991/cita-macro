@@ -1,11 +1,8 @@
 <?php
 
 return [
-
-    'parrafo-1' => 'Les ',
-    'parrafo-1.1' => 'lents progressives ',
-    'parrafo-1.2' => "són la millor solució per corregir la presbícia o vista cansada. Et permeten veure-hi bé de prop i continuar veient bé de lluny, sense necessitat de canviar d’ulleres.",
-    'parrafo-2' => 'Perquè no totes les progressives són iguals. Coneix com cada tipus de lent respon en diferents moments del teu dia i tria l’opció perfecta per a tu.',
-    'parrafo-3' => 'Amb aquesta guia podràs entendre com respon cada lent en diferents situacions i identificar fàcilment quina s’adapta millor a les teves necessitats i estil de vida.',
-
+    'parrafo-1' => 'Des de ',
+    'parrafo-1.1' => 'Natural Optics ',
+    'parrafo-1.2' => 'et desitgem unes festes plenes de moments que no necessiten paraules.',
+    'parrafo-2' => "La màgia no sempre es troba en l'extraordinari. A vegades està en el més quotidià: en una mirada que ho diu tot sense parlar, en els ulls que s'il·luminen en retrobar-se, en la tendresa de veure a algú que trobaves a faltar.",
 ];

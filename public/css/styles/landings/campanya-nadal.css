@@ -54,7 +54,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
-    font-family: 'Lemance2';
+    font-family: 'Lemance2', sans-serif;
 }
 
 body::-webkit-scrollbar {
@@ -69,6 +69,7 @@ body::-webkit-scrollbar-track {
     font-size: 25.8px;
     padding-left: 17% !important;
     padding-right: 17% !important;
+    margin-bottom: 5%;
 }
 
 .primeros-parrafos1 {
@@ -164,7 +165,10 @@ body::-webkit-scrollbar-track {
 }
 
 
-
+.titulo_tu_vista2 {
+    width: 76%;
+    margin-top: 3%;
+}
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -377,6 +381,14 @@ div#animationdivIcon {
     .btn-color2 {
         height: 37px;
     }
+
+    .titulo_tu_vista2 {
+        width: 1314px;
+    }
+
+    .primeros-parrafos {
+        font-size: 21.8px;
+    }
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -390,7 +402,7 @@ div#animationdivIcon {
 
     .primeros-parrafos {
         font-size: 20.8px !important;
-        margin-bottom: 6%;
+        margin-bottom: 8%;
         padding-left: 8% !important;
         padding-right: 8% !important;
     }
@@ -431,16 +443,20 @@ div#animationdivIcon {
     .subtitle {
         font-size: 26px;
     }
+
+    .titulo_tu_vista2 {
+        width: 625px;
+        margin-top: 6%;
+    }
 }
 
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     .primeros-parrafos {
         font-size: 19px !important;
-        margin-bottom: 6%;
+        margin-bottom: 9%;
         padding-left: 6% !important;
         padding-right: 6% !important;
-        margin-top: 36px;
     }
 
     .primeros-parrafos1 {
@@ -494,6 +510,11 @@ div#animationdivIcon {
         height: 348px;
     }
 
+    .titulo_tu_vista2 {
+        width: 556px;
+        margin-top: 36px;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -507,7 +528,7 @@ div#animationdivIcon {
         font-size: 16px !important;
         padding-left: 7% !important;
         padding-right: 7% !important;
-        margin-top: 36px;
+        margin-bottom: 13%;
     }
 
     .primeros-parrafos1 {
@@ -566,5 +587,10 @@ div#animationdivIcon {
 
     .subtitle {
         font-size: 20px;
+    }
+
+    .titulo_tu_vista2 {
+        width: 411px;
+        margin-top: 36px;
     }
 }

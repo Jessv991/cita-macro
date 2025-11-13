@@ -58,15 +58,17 @@
 
         </div>
 
-        <div class="w-100 d-flex flex-column align-items-center text-center mt-3">
-            <div class="w-100 p-1 p-lg-5 primeros-parrafos">
-                <h2 class="subtitle">{{ __('campanya-nadal.subtitle') }}</h2>
-                <p>{{ __('campanya-nadal.parrafo-2') }}</p>
+        <div class="w-100 d-flex justify-content-center mt-4">
+                <img class="titulo_tu_vista2"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
             </div>
+
+        <div class="w-100 d-flex flex-column align-items-center text-center primeros-parrafos">
+            <p>{{ __('campanya-nadal.parrafo-2') }}</p>
         </div>
 
         @if ($data['regal'] === 'true')
-            <div class="w-100 mb-5">
+            <div class="w-100">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/regalo.png') }}">
             </div>
