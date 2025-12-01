@@ -19,13 +19,13 @@
 
         <div class="w-100 m-banner">
             <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+                src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
         </div>
 
         <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
             <div class="w-75 p-1 p-lg-5 primeros-parrafos1">
-                <p>{{ __('campanya-nadal.parrafo-1') }}<span
-                        class="texto-elegante">{{ __('campanya-nadal.parrafo-1.1') }}</span><span>{{ __('campanya-nadal.parrafo-1.2') }}</span>
+                <p>{{ __('navidad_2025.parrafo-1') }}<span
+                        class="texto-elegante">{{ __('navidad_2025.parrafo-1.1') }}</span><span>{{ __('navidad_2025.parrafo-1.2') }}</span>
                 </p>
             </div>
         </div>
@@ -34,18 +34,18 @@
         <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/familia.png') }}">
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/familia.png') }}">
             </div>
         </div>
 
         <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center">
             <div class="simple-carousel">
                 <div class="slides">
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}"
+                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}"
                         class="slide active" alt="Slide 1" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}"
+                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}"
                         class="slide" alt="Slide 2" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}"
+                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}"
                         class="slide" alt="Slide 3" />
                 </div>
 
@@ -60,17 +60,17 @@
 
         <div class="w-100 d-flex justify-content-center mt-4">
                 <img class="titulo_tu_vista2"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
             </div>
 
         <div class="w-100 d-flex flex-column align-items-center text-center primeros-parrafos">
-            <p>{{ __('campanya-nadal.parrafo-2') }}</p>
+            <p>{{ __('navidad_2025.parrafo-2') }}</p>
         </div>
 
         @if ($data['regal'] === 'true')
             <div class="w-100">
                 <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/regalo.png') }}">
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/navidad_2025/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/regalo.png') }}">
             </div>
         @endif
 
