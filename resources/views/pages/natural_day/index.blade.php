@@ -19,60 +19,27 @@
 
         <div class="w-100 m-banner">
             <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+                src="{{ asset($data['rutaAsset'] . 'assets/img/natural_day/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.gif') }}">
         </div>
 
-        <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-            <div class="w-75 p-1 p-lg-5 primeros-parrafos1">
-                <p>{{ __('campanya-nadal.parrafo-1') }}<span
-                        class="texto-elegante">{{ __('campanya-nadal.parrafo-1.1') }}</span><span>{{ __('campanya-nadal.parrafo-1.2') }}</span>
-                </p>
+        <div class="w-100 d-flex justify-content-center">
+            <img class="titulo_tu_vista2"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/natural_day/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
+        </div>
+
+        <div class="w-100 d-flex flex-column align-items-center text-center">
+            <div class="w-75 p-1 p-lg-5 pt-lg-1 primeros-parrafos1">
+                <p>{{ __('natural_day.parrafo-1') }}</p>
             </div>
         </div>
 
 
-        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
+        <div class="w-100 flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/familia.png') }}">
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/natural_day/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/descuentos.png') }}">
             </div>
         </div>
-
-        <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center">
-            <div class="simple-carousel">
-                <div class="slides">
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}"
-                        class="slide active" alt="Slide 1" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}"
-                        class="slide" alt="Slide 2" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}"
-                        class="slide" alt="Slide 3" />
-                </div>
-
-                <div class="indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="w-100 d-flex justify-content-center mt-4">
-                <img class="titulo_tu_vista2"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
-            </div>
-
-        <div class="w-100 d-flex flex-column align-items-center text-center primeros-parrafos">
-            <p>{{ __('campanya-nadal.parrafo-2') }}</p>
-        </div>
-
-        @if ($data['regal'] === 'true')
-            <div class="w-100">
-                <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/campanya-nadal/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/regalo.png') }}">
-            </div>
-        @endif
 
         <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
             @include('form.pide_cita')
