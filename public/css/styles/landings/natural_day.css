@@ -166,7 +166,7 @@ body::-webkit-scrollbar-track {
 
 
 .titulo_tu_vista2 {
-    width: 76%;
+    width: 34%;
     margin-top: 3%;
 }
 
@@ -445,7 +445,7 @@ div#animationdivIcon {
     }
 
     .titulo_tu_vista2 {
-        width: 625px;
+        width: 100%;
         margin-top: 6%;
     }
 }
