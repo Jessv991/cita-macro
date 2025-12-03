@@ -9,7 +9,7 @@
                     <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}"
                         alt="Logo">
                 </div>
-                <div class="w-50 d-flex justify-content-end align-items-center">
+                <div class="w-50 d-flex justify-content-end align-items-center me-3">
                     <a href="#contAllForm" id="diret-form"
                         class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
                 </div>
