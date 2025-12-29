@@ -850,7 +850,7 @@ button.es-button {
                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#141516;font-weight: bold;">Reserva de lents de contacte</h3></td>
                     </tr>
                     <tr style="border-collapse:collapse">
-                     <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">La teva reserva de lents de contacte s'ha tramitat correctament. Pots recollir-les en la nostra òptica d'aquí a <span style="font-weight: bold;">5 dies laborables.</span>
+                     <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">La teva reserva de lents de contacte s'ha tramitat correctament. Pots recollir-les en la nostra òptica d'aquí a <span style="font-weight: bold;">{LABORALES}.</span>
                        <br>
                        <br>
                        <span>Gràcies per confiar en el nostre centre per a cuidar la teva salut visual!</span></p></td>

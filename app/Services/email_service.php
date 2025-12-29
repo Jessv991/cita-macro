@@ -155,7 +155,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC, $weblogin);
             }
 
 
@@ -176,7 +176,7 @@ class email_service
         }
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC, $weblogin)
     {
 
         $Citas = new CitasLandings();
@@ -217,6 +217,19 @@ class email_service
                 $salud = "salud";
             }
 
+            $textLaborale = '5 días laborables';
+            
+            if($locale === 'ca')
+            {
+                $textLaborale = '5 dies laborables';
+            }elseif($weblogin === 'perederibes' && $locale === 'es')
+            {
+                $textLaborale = 'Te informamos cuando las recibamos';
+            } elseif($weblogin === 'perederibes' && $locale === 'ca')
+            {
+                $textLaborale = "T'informem quan les rebem";
+            }
+
 
             $palabrasBuscar = array(
                 '{DIRECIONOPTICA}',
@@ -225,10 +238,11 @@ class email_service
                 '{NOMBREOPTICA}',
                 '{LOGO}',
                 '{LOCAL}',
-                '{SALUD}'
+                '{SALUD}',
+                '{LABORALES}'
             );
 
-            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $salud);
+            $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $salud, $textLaborale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
