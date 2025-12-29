@@ -850,7 +850,7 @@ button.es-button {
                       <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#141516;font-weight: bold;">Reserva de lentes de contacto</h3></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">Tu reserva de lentes de contacto se ha tramitado correctamente. Puedes recogerlas en nuestra óptica dentro de <span style="font-weight: bold;">{LABORALES}.</span>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#141516;font-size:16px">Tu reserva de lentes de contacto se ha tramitado correctamente. Puedes recogerlas en nuestra óptica<span style="font-weight: bold;">{LABORALES}.</span>
                         <br>
                         <br>
                         <span>¡Gracias por confiar en nuestro centro para cuidar de tu salud visual!</span></p></td>

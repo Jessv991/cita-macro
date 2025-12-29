@@ -13,7 +13,7 @@ class email_service
 {
     public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda)
     {
-        
+
         if ($typeLC === 'ordinario') {
             list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
         }
@@ -56,7 +56,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             if ($typeLC === 'email' || $typeLC === 'sms') {
                 $mail->Subject = 'Reposición pack LC de ' . $nombre . ' ' . $apellidos;
-            }else{
+            } else {
                 $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
             }
 
@@ -151,7 +151,7 @@ class email_service
                 //$this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
             } else {
                 //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                $mail->addAddress($email_optica);
+                //$mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
@@ -199,7 +199,7 @@ class email_service
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
             if ($typeLC === 'email' || $typeLC === 'sms') {
                 $mail->Subject = 'Confirmada su reposición de pack LC con ' . $nombre_optica;
-            }else{
+            } else {
                 $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
             }
 
@@ -217,18 +217,16 @@ class email_service
                 $salud = "salud";
             }
 
-            $textLaborale = '5 días laborables';
-            
-            if($locale === 'ca')
-            {
-                $textLaborale = '5 dies laborables';
-            }elseif($weblogin === 'perederibes' && $locale === 'es')
-            {
-                $textLaborale = 'Te informamos cuando las recibamos';
-            } elseif($weblogin === 'perederibes' && $locale === 'ca')
-            {
-                $textLaborale = "T'informem quan les rebem";
+            $textLaborale = ' dentro de 5 días laborables';
+
+            if ($weblogin === 'perederibes' && $locale === 'es') {
+                $textLaborale = '. Te informamos cuando las recibamos';
+            } elseif ($weblogin === 'perederibes' && $locale === 'ca') {
+                $textLaborale = ". T'informem quan les rebem";
+            } elseif ($locale === 'ca') {
+                $textLaborale = " d'aquí a 5 dies laborables";
             }
+
 
 
             $palabrasBuscar = array(
