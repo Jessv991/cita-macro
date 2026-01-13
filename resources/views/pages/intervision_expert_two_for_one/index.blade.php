@@ -13,7 +13,7 @@
                     <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_two_for_one/' . $data['tipo_dispositivo'] . '/es/sorteo.png') }}">
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
-                    @include('form.pide_cita')
+                    @include('form.pide_cita_intervision')
 
                     @if ($logoOptica)
                         <div class="w-100 {{ $data['weblogin'] }}class1">
