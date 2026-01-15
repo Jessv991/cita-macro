@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\App;
 
 //ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
     App::setLocale($locale);
@@ -28,7 +28,7 @@ Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
 
 //ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-gestion/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
     App::setLocale($locale);
@@ -38,7 +38,7 @@ Route::get('cita-macro/politicas-de-gestion/{locale}', function ($locale) {
 
 //ruta politcas de privacidad
 Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
     App::setLocale($locale);
@@ -49,7 +49,7 @@ Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
 //ruta cookies
 Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
 
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
 
@@ -61,7 +61,7 @@ Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
 Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($locale, $origen, $weblogin = null, $tienda = null) {
 
 
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
     }
 

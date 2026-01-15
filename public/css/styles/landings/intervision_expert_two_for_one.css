@@ -26,15 +26,20 @@ body::-webkit-scrollbar-track {
     width: 100%;
 }
 
+.btn-color {
+    background-color: #ee903b;
+    color: #f0f0f0;
+}
+
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #44c8f1 !important;
+    color: #ee903b !important;
 }
 
 a:hover {
-    color: #34aace !important;
+    color: #fff !important;
 }
 
 /* 
@@ -71,8 +76,25 @@ label > span {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
-    font-size: 25px;
+    font-size: 15px;
 
+}
+
+.text-top-form-anniversary {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.text-top-form-anniversary2 {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 25px;
 }
 
 input {
@@ -186,8 +208,7 @@ div#animationdivIcon {
  @media (max-width: 2000px) {
     
     .text-top-form {
-        font-size: 20px;
-        padding: 2%;
+        font-size: 15px;
     }
 
     input {
@@ -203,7 +224,7 @@ div#animationdivIcon {
     }
 
     .btn-color {
-        width: 219px !important;
+        width: 350px !important;
         border-radius: 5px !important;
     }
 
@@ -211,8 +232,8 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
+        font-size: 15px;
+        padding: 0% !important;
     }
 
     input {
@@ -230,6 +251,15 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 21px !important;
+        padding: 0px !important;
+    }
+    
+    .text-top-form-anniversary2 {
+        font-size: 18px !important;
     }
     
 }
@@ -238,8 +268,8 @@ div#animationdivIcon {
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
-        font-size: 20px;
-        padding: 2%;
+        font-size: 15px;
+        padding: 0% !important;
     }
 
     input {
@@ -258,43 +288,34 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
+
+    .text-top-form-anniversary {
+        font-size: 25px !important;
+        padding: 0px !important;
+    }
+    
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
+    }
     
 }
 
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-    
-}
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
         font-size: 20px;
-        padding: 2%;
-        margin-top: 50px;
+        padding: 0% !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 39px !important;
+        padding: 0px !important;
+    }
+    
+    .text-top-form-anniversary2 {
+        font-size: 26px !important;
     }
 
     .mb-5 {
@@ -306,12 +327,18 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    .text-top-form {
-        margin-top: 65px;
-    }
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 30px !important;
+        padding: 0px !important;
+    }
+    
+    .text-top-form-anniversary2 {
+        font-size: 20px !important;
     }
     
 }
@@ -319,8 +346,13 @@ div#animationdivIcon {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
-    .text-top-form {
-        margin-top: 65px;
+    .text-top-form-anniversary {
+        font-size: 27px !important;
+        padding: 0px !important;
+    }
+    
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
     }
 
     .mb-5 {

@@ -15,7 +15,10 @@
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
 
-        <div class="d-flex justify-content-center align-items-start mb-5">
+        <div class="text-center mb-5">
+            <p class="text-top-form-anniversary">{{ __('form_translation.anniversary') }}</p>
+            <p class="text-top-form-anniversary2">{{ __('form_translation.anniversary2') }}</p>
+            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
             <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
         </div>
 
