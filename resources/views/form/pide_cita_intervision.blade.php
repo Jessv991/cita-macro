@@ -179,11 +179,11 @@
                         <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                             {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
-                        </a>                        
+                        </a>
                     </label>
                 </div>
 
-                <div class="b-pedir-citas mt-5">    
+                <div class="b-pedir-citas mt-5">
                     <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
                 </div>
 
@@ -212,9 +212,9 @@
                 <span class="">{{ __('form_translation.titol-gracias_2') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-1_2') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-2_2') }}</span>
-                
+
                 <hr>
-                
+
                 <span class="">{{ __('form_translation.titol-gracias') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
@@ -306,7 +306,17 @@
 
             // Limpiar selects de ciudad y óptica
             $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
-            $('#optica').html('<option value="">Selecciona una óptica</option>');
+            var opticaSelect = $('#optica');
+            var opciones = opticaSelect.find('option');
+
+            if (opciones.length > 1) {
+                // Más de una opción → limpiar
+                opticaSelect.html('<option value="">Selecciona una óptica</option>');
+            } else if (opciones.length === 1) {
+                // Solo una opción → dejarla seleccionada
+                opciones.prop('selected', true);
+                opticaSelect.addClass('readonly-select').prop('disabled', true);
+            }
 
             // Quita la invalidación del select cuando es un solo campo
             $('#optica').removeClass('readonly-select');
@@ -319,5 +329,4 @@
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
-
 </script>
