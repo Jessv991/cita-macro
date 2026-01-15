@@ -983,42 +983,14 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="center" bgcolor="#74cae7">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
-                              <table class="es-left" cellspacing="0" cellpadding="0" align="left">
-                                  <tbody>
-                                      <tr>
-                                          <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                              <table width="100%" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                      <tr>
-                                                          <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">Siguenos</h3>
-                                                          </td>
-                                                      </tr>
-                                                      <tr>
-                                                          <td class="esd-block-social" align="center" style="font-size:0">
-                                                              <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                                  <tbody>
-                                                                      <tr>
-                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                                      </tr>
-                                                                  </tbody>
-                                                              </table>
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
+                              
                               <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
-                              <table class="es-right" cellspacing="0" cellpadding="0" align="right">
+                              <table class="es-right" cellspacing="0" cellpadding="0" align="center">
                                   <tbody>
                                       <tr>
-                                          <td class="esd-container-frame" width="270" align="left">
+                                          <td class="esd-container-frame" width="270" align="center">
                                               <table width="100%" cellspacing="0" cellpadding="0">
                                                   <tbody>
                                                       <tr>

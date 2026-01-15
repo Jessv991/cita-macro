@@ -106,7 +106,7 @@ label > span {
     font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
-    font-size: 15px;
+    font-size: 17px;
 
 }
 
@@ -126,6 +126,15 @@ label > span {
     line-height: 1;
     font-size: 25px;
 }
+
+.divider-line {
+    width: 100%;              /* de izquierda a derecha */
+    height: 1px;              /* línea fina */
+    background-color: #fff;   /* blanca */
+    margin: 20px 0;           /* separación arriba y abajo */
+    opacity: 0.6;             /* un poco elegante */
+}
+
 
 input {
     margin-top: 3% !important;
@@ -236,10 +245,6 @@ div#animationdivIcon {
  */
 
  @media (max-width: 2000px) {
-    
-    .text-top-form {
-        font-size: 15px;
-    }
 
     input {
         font-size: 15px !important;
