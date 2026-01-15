@@ -311,7 +311,8 @@
 
             if (opciones.length > 1) {
                 // Más de una opción → limpiar
-                opticaSelect.html('<option value="">Selecciona una óptica</option>');
+                opciones.first().prop('selected', true);
+                opticaSelect.removeClass('readonly-select').prop('disabled', false);
             } else if (opciones.length === 1) {
                 // Solo una opción → dejarla seleccionada
                 opciones.prop('selected', true);
