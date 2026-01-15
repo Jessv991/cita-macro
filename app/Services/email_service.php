@@ -60,12 +60,12 @@ class email_service
                 $tlf_optica = $optica[0]->d6;
                 $tienda_codigo = $optica[0]->codigo;
                 $email_optica = $optica[0]->d5;
+                $web_optica = $optica[0]->d7;
                 $direccion_optica = $optica[0]->d23;
                 $nombre_optica = $optica[0]->d29;
             } else {
                 echo "No se encontró la óptica.";
             }
-
 
             if ($promocional === 'true' || $landing === 'contactologia') {
                 $mail->Subject = 'Nuevo participante en sorteo: ' . $nombre . ' ' . $apellidos;
@@ -80,7 +80,8 @@ class email_service
                     '{EMAILOPTICO}',
                     '{DIRECIONOPTICA}',
                     '{LOGO}',
-                    '{LOCAL}, {LANDING}'
+                    '{LOCAL}', 
+                    '{LANDING}'
                 );
 
 
@@ -97,11 +98,13 @@ class email_service
                     '{EMAILOPTICO}',
                     '{DIRECIONOPTICA}',
                     '{LOGO}',
-                    '{LOCAL}'
+                    '{LOCAL}',
+                    '{EMAILOPTICA}',
+                    '{WEB}'
                 );
 
 
-                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale);
+                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica);
             }
 
             $actual = file_get_contents($archivo);
@@ -112,14 +115,13 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
                 $mail->addCC('j.vasquez@naturalopticsgroup.com');
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica);
             } else {
-                //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica);
             }
 
 
@@ -140,7 +142,7 @@ class email_service
         }
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing, $web_optica)
     {
         if ($landing === 'contactologia') {
             $Citas = new sorteoLc();
@@ -191,10 +193,11 @@ class email_service
                     '{EMAILOPTICA}',
                     '{NOMBREOPTICA}',
                     '{LOGO}',
-                    '{LOCAL}'
+                    '{LOCAL}',
+                    '{WEB}'
                 );
 
-                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
+                $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale, $web_optica);
             }
 
 

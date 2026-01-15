@@ -976,72 +976,54 @@ li {
                   </tr>
                 </tbody>
               </table>
-              <table cellpadding="0" cellspacing="0" align="center" class="es-footer">
-                <tbody>
-                  <tr>
-                    <td align="center" class="esd-stripe">
-                      <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
-                        <tbody>
-                          <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="center" bgcolor="#74cae7">
-                              <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
-                              
-                              <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
-                              <table class="es-right" cellspacing="0" cellpadding="0" align="center">
-                                  <tbody>
-                                      <tr>
-                                          <td class="esd-container-frame" width="270" align="center">
-                                              <table width="100%" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                      <tr>
-                                                          <td class="esd-block-text es-p10b" align="center">
-                                                              <p style="color: #ffffff;"><br></p>
-                                                              <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
-                                                              <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
-                                                              <p style="color: #ffffff;">{EMAILOPTICO}</p>
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                              <!--[if mso]></td></tr></table><![endif]-->
-                          </td>
-                          </tr>
-                          <tr>
-                            <td esd-general-paddings-checked="false" bgcolor="#ffffff" align="left" class="esd-structure" style="background-color:#ffffff">
-                              <table width="100%" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                  <tr>
-                                    <td width="600" valign="top" align="center" class="esd-container-frame">
-                                      <table width="100%" cellspacing="0" cellpadding="0">
-                                        <tbody>
-                                          <tr>
-                                            <td esdev-links-color="#666666" align="center" class="es-m-txt-с esd-block-text es-p10t es-p20b">
-                                              <p style="color:#050606;line-height:120%;font-size:12px">
-                                                Este correo electrónico es conforme a la legislación vigente sobre el tratamiento de datos con multas promocionales y publicitarias. De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.
-                                              </p>
-                                              <p style="color:#050606;line-height:120%">
-                                                <a target="_blank" href="" class="unsubscribe" style="color:#050606;font-size:12px;line-height:150%"></a>
-                                              </p>
+              <table cellpadding="0" cellspacing="0" align="center" class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
+         <tr style="border-collapse:collapse">
+          <td align="center" style="padding:0;Margin:0">
+           <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
+             <tr style="border-collapse:collapse">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="center" bgcolor="#74cae7">
+                <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
+                <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
+                <table class="es-right" cellspacing="0" cellpadding="0" align="center" width="100%">
+                    <tbody>
+                        <tr>
+                            <td class="esd-container-frame" width="270" align="center">
+                                <table width="100%" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+                                            <td class="esd-block-text es-p10b" align="center">
+                                                <h3 style="color: #ffffff;">¡Visítanos! / Visit us!</h3>
+                                                <p style="color: #ffffff;"><br></p>
+                                                <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
+                                                <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
+                                                <p style="color: #ffffff;">{EMAILOPTICA}</p>
+                                                <p style="color: #ffffff;"><a target="_blank" href="{WEB}" style="mso-line-height-rule:exactly;text-decoration:underline;color:#fff;font-size:12px">{WEB}</a></p>
                                             </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--[if mso]></td></tr></table><![endif]-->
+            </td>
+             <tr style="border-collapse:collapse">
+              <td bgcolor="#ffffff" align="left" style="padding:0;Margin:0;background-color:#ffffff">
+               <table width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                 <tr style="border-collapse:collapse">
+                  <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
+                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
+                     <tr style="border-collapse:collapse">
+                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural {DIRECIONOPTICA} o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
+                     </tr>
+                   </table></td>
+                 </tr>
+               </table></td>
+             </tr>
+           </table></td>
+         </tr>
+       </table>
               <table cellspacing="0" cellpadding="0" align="center" class="esd-footer-popover es-content">
                 <tbody>
                   <tr>

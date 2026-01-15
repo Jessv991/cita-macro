@@ -773,6 +773,8 @@ button.es-button {
     .h-auto {
         height: auto !important;
     }
+
+   
 }
 
 </style>
@@ -846,16 +848,58 @@ button.es-button {
                  <tr style="border-collapse:collapse">
                   <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">Solicitud de cita previa recibida</h3></td>
-                     </tr>
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">Gracias por confiar en nuestro centro para cuidar de tu salud. Apreciamos tu elección y nos comprometemos a ofrecerte el mejor servicio posible. En breve, uno de nuestros especialistas se pondrá en contacto contigo para concertar una cita que se ajuste a tus necesidades y horarios. Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos. Estamos aquí para ayudarte en todo lo que necesites.</p></td>
-                     </tr>
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
-                     </tr>
-                   </table></td>
+                    <!-- Bloque en español -->
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                        <h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">
+                            SOLICITUD DE CITA PREVIA RECIBIDA
+                        </h3>
+                        </td>
+                    </tr>
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0;padding-top:15px">
+                        <p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">
+                            Gracias por confiar en Intervisión Expert. En breve, uno de nuestros especialistas se pondrá en contacto contigo para concertar el día y la hora que mejor se ajuste a tus necesidades. Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos. Estamos aquí para ayudarte en todo lo que necesites.
+                        </p>
+                        </td>
+                    </tr>
+
+                    <!-- Separador seguro -->
+                    <tr style="border-collapse:collapse">
+                        <td style="padding:20px 0;">
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                            <td style="border-top:1px solid #000; font-size:0; line-height:0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+
+                    <!-- Bloque en inglés -->
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0">
+                        <h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606">
+                            APPOINTMENT REQUEST RECEIVED
+                        </h3>
+                        </td>
+                    </tr>
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0;padding-top:15px">
+                        <p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">
+                            Thank you for trusting Intervisión Expert. One of our specialists will contact you shortly to schedule the day and time that best suit your needs. If you have any questions or require additional assistance, please do not hesitate to contact us. We are here to help you with anything you need.
+                        </p>
+                        </td>
+                    </tr>
+                    <tr style="border-collapse:collapse">
+                        <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px">
+                        <p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">
+                            <i>{NOMBREOPTICA}</i>
+                        </p>
+                        </td>
+                    </tr>
+                    </table>
+
+                </td>
                  </tr>
                </table></td>
              </tr>
@@ -867,51 +911,23 @@ button.es-button {
           <td align="center" style="padding:0;Margin:0">
            <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
              <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="left" bgcolor="#74cae7">
+              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #1b5b4b;" align="center" bgcolor="#74cae7">
                 <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
-                <table class="es-left" cellspacing="0" cellpadding="0" align="left">
-                    <tbody>
-                        <tr>
-                            <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                <table width="100%" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                <h3 style="color: #ffffff;">Siguenos</h3>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td class="esd-block-social" align="center" style="font-size:0">
-                                                <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
                 <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
-                <table class="es-right" cellspacing="0" cellpadding="0" align="right">
+                <table class="es-right" cellspacing="0" cellpadding="0" align="center" width="100%">
                     <tbody>
                         <tr>
-                            <td class="esd-container-frame" width="270" align="left">
+                            <td class="esd-container-frame" width="270" align="center">
                                 <table width="100%" cellspacing="0" cellpadding="0">
                                     <tbody>
                                         <tr>
                                             <td class="esd-block-text es-p10b" align="center">
-                                                <h3 style="color: #ffffff;">o encuéntranos</h3>
+                                                <h3 style="color: #ffffff;">¡Visítanos! / Visit us!</h3>
                                                 <p style="color: #ffffff;"><br></p>
                                                 <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
                                                 <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
                                                 <p style="color: #ffffff;">{EMAILOPTICA}</p>
+                                                <p style="color: #ffffff;"><a target="_blank" href="{WEB}" style="mso-line-height-rule:exactly;text-decoration:underline;color:#fff;font-size:12px">{WEB}</a></p>
                                             </td>
                                         </tr>
                                     </tbody>
@@ -929,7 +945,22 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural {DIRECIONOPTICA} o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
+                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural, {DIRECIONOPTICA}, o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
+                     </tr>
+                     
+                     <!-- Separador seguro -->
+                    <tr style="border-collapse:collapse">
+                        <td style="padding:20px 0;">
+                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
+                            <tr>
+                            <td style="border-top:1px solid #000; font-size:0; line-height:0;">&nbsp;</td>
+                            </tr>
+                        </table>
+                        </td>
+                    </tr>
+
+                     <tr style="border-collapse:collapse">
+                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">This commercial email complies with current legislation on the processing of personal data for promotional and advertising purposes. You are receiving this email as a customer of Natural, {DIRECIONOPTICA}, or because you registered on our website, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . In accordance with Article 22 of Law 34/2002 on Information Society Services and Electronic Commerce, as well as Regulation (EU) 2016/679 of the European Parliament and of the Council (General Data Protection Regulation – GDPR), you have the right to access, rectify, erase, restrict the processing of, transfer, and object to the processing of your personal data.</p></td>
                      </tr>
                    </table></td>
                  </tr>
