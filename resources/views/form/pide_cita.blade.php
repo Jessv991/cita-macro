@@ -298,6 +298,10 @@
 
             // Limpiar selects de ciudad y óptica
             $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
+            var opticaSelect = $('#optica');
+            var opciones = opticaSelect.find('option');
+            var webloginVacio = <?php echo empty($data['weblogin']) ? 'true' : 'false'; ?>;
+
             if(webloginVacio){
                 $('#optica').html('<option value="">Selecciona una óptica</option>');
             }else{
