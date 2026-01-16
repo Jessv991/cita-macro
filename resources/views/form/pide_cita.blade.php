@@ -298,7 +298,20 @@
 
             // Limpiar selects de ciudad y óptica
             $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
-            $('#optica').html('<option value="">Selecciona una óptica</option>');
+            if(webloginVacio){
+                $('#optica').html('<option value="">Selecciona una óptica</option>');
+            }else{
+
+                if (opciones.length > 1) {
+                    // Más de una opción → limpiar
+                    opciones.first().prop('selected', true);
+                    opticaSelect.removeClass('readonly-select').prop('disabled', false);
+                } else if (opciones.length === 1) {
+                    // Solo una opción → dejarla seleccionada
+                    opciones.prop('selected', true);
+                    opticaSelect.addClass('readonly-select').prop('disabled', true);
+                }
+            }
 
             // Quita la invalidación del select cuando es un solo campo
             $('#optica').removeClass('readonly-select');

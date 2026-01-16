@@ -117,7 +117,6 @@ class email_service
                 $mail->addCC('j.vasquez@naturalopticsgroup.com');
                 $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica);
             } else {
-                die();
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
