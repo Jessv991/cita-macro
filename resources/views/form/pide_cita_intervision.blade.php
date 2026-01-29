@@ -14,15 +14,20 @@
         <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
-
-        <div class="text-start mb-5">
-            <p class="text-top-form-anniversary">{{ __('form_translation.anniversary') }}</p>
-            <p class="text-top-form-anniversary2">{{ __('form_translation.anniversary2') }}</p>
-            <div class="divider-line"></div>
-            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
-            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
-        </div>
-
+        @if($data['landing'] === 'intervision_expert_two_for_one')
+            <div class="text-start mb-5">
+                <p class="text-top-form-anniversary">{{ __('form_translation.anniversary') }}</p>
+                <p class="text-top-form-anniversary2">{{ __('form_translation.anniversary2') }}</p>
+                <div class="divider-line"></div>
+                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
+                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            </div>
+        @else
+            <div class="text-start mb-5 mt-3">
+                <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
+                <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            </div>
+        @endif
 
         <div>
             @if (!$data['weblogin'])
