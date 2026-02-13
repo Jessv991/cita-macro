@@ -6,7 +6,7 @@
 
             <div class="w-100 d-flex flex-row">
                 <div class="w-50 d-flex justify-content-start align-items-center">
-                    <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}"
+                    <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/logos/basicos/logo.png') }}"
                         alt="Logo">
                 </div>
                 <div class="w-50 d-flex justify-content-end align-items-center">
