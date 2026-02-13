@@ -23,10 +23,12 @@
         </div>
 
         <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-            <div class="w-75 p-1 p-lg-5 primeros-parrafos1">
-                <p>{{ __('mes-audio.parrafo-1') }}<span
-                        class="texto-elegante">{{ __('mes-audio.parrafo-1.1') }}</span><span>{{ __('mes-audio.parrafo-1.2') }}</span>
-                </p>
+            <div class="w-100 d-flex justify-content-center mt-4">
+                <img class="titulo_tu_vista2"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto1.png') }}">
+            </div>
+            <div class="w-75 p-1 primeros-parrafos1">
+                <p>{{ __('mes-audio.parrafo-1') }}</p>
             </div>
         </div>
 
@@ -34,42 +36,21 @@
         <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/familia.png') }}">
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/puzzle.png') }}">
             </div>
         </div>
-
-        <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center">
-            <div class="simple-carousel">
-                <div class="slides">
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}"
-                        class="slide active" alt="Slide 1" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}"
-                        class="slide" alt="Slide 2" />
-                    <img src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}"
-                        class="slide" alt="Slide 3" />
-                </div>
-
-                <div class="indicators">
-                    <button class="indicator active" data-slide="0"></button>
-                    <button class="indicator" data-slide="1"></button>
-                    <button class="indicator" data-slide="2"></button>
-                </div>
+        
+        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
+            <div class="w-100">
+                <img class="w-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/bolas.png') }}">
             </div>
-
         </div>
-
-        <div class="w-100 d-flex justify-content-center mt-4">
-            <img class="titulo_tu_vista2"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/frase.png') }}">
-        </div>
-
-        <div class="w-100 d-flex flex-column align-items-center text-center primeros-parrafos">
-            <p>{{ __('mes-audio.parrafo-2') }}</p>
-        </div>
-
-        <div class="w-100">
-            <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/regalo.png') }}">
+        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
+            <div class="w-100">
+                <img class="w-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/actividades.png') }}">
+            </div>
         </div>
 
         <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
@@ -84,7 +65,7 @@
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
                     class="p-privacity col-4 fw-bold">{{ __('contactologia.Politicas-privacidad') }}</a>
                 <img class="d-block mx-auto logo-N col-4"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
                     class="p-cookies col-4 fw-bold">{{ __('contactologia.Politicas-cookies') }}</a>
             </div>
@@ -93,7 +74,7 @@
             ?>
             <div class="d-flex flex-column align-items-center footer-contact text-center mb-5">
                 <img class="d-block mx-auto logo-N mt-5"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
                     {{ __('contactologia.Politicas-privacidad') }}
                 </a>
