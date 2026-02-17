@@ -10,7 +10,7 @@
                         alt="Logo">
                 </div>
                 <div class="w-50 d-flex justify-content-end align-items-center">
-                    <a href="#contAllForm" id="diret-form"
+                    <a href="#formMacroContactologia" id="diret-form"
                         class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
                 </div>
             </div>
