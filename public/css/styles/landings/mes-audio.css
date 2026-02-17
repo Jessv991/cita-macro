@@ -96,7 +96,7 @@ body::-webkit-scrollbar-track {
 }
 
 .p-privacity:hover {
-    color: #a6ac88;
+    color: #909dca;
 }
 
 .p-cookies {
@@ -107,7 +107,7 @@ body::-webkit-scrollbar-track {
 }
 
 .p-cookies:hover {
-    color: #a6ac88;
+    color: #909dca;
 }
 
 .logo-N {
@@ -211,22 +211,22 @@ p.text-top-form {
 }
 
 .form-check-label {
-    color: #fff !important;
+    color: #1b2646 !important;
 }
 
 .text-top-form {
-    color: #fff;
+    color: #1b2646;
     font-weight: 200;
     font-size: 25px;
 
 }
 
 a {
-    color: #fff;
+    color: #1b2646;
 }
 
 a:hover {
-    color: #a6ac88;
+    color: #fff;
 }
 
 input {

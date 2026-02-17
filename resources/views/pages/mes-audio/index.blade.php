@@ -83,11 +83,11 @@
             ?>
             <div class="d-flex footer-contact text-center col-12">
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
-                    class="p-privacity col-4 fw-bold">{{ __('contactologia.Politicas-privacidad') }}</a>
+                    class="p-privacity col-4 fw-bold">{{ __('mes-audio.Politicas-privacidad') }}</a>
                 <img class="d-block mx-auto logo-N col-4"
                     src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
-                    class="p-cookies col-4 fw-bold">{{ __('contactologia.Politicas-cookies') }}</a>
+                    class="p-cookies col-4 fw-bold">{{ __('mes-audio.Politicas-cookies') }}</a>
             </div>
             <?php
                 }else{               
@@ -96,10 +96,10 @@
                 <img class="d-block mx-auto logo-N mt-5"
                     src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
-                    {{ __('contactologia.Politicas-privacidad') }}
+                    {{ __('mes-audio.Politicas-privacidad') }}
                 </a>
                 <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
-                    {{ __('contactologia.Politicas-cookies') }}
+                    {{ __('mes-audio.Politicas-cookies') }}
                 </a>
             </div>
             <?php
