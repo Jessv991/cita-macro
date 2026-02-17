@@ -22,8 +22,8 @@
                 src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
         </div>
 
-        <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-            <div class="w-100 d-flex justify-content-center mt-4">
+        <div class="w-100 d-flex flex-column align-items-center text-center prim-text">
+            <div class="w-100 d-flex justify-content-center">
                 <img class="titulo_tu_vista2"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto1.png') }}">
             </div>
@@ -41,30 +41,34 @@
         </div>
 
         <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-            <div class="w-100 d-flex justify-content-center mt-4">
-                <img class="titulo_tu_vista1"
+            <div class="w-100 d-flex justify-content-center mt-5">
+                <img class="titulo_tu_vista1 mt-3"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto2.png') }}">
             </div>
             <div class="w-75 p-1 primeros-parrafos1">
                 <p>{{ __('mes-audio.parrafo-1.1') }}</p>
             </div>
         </div>
-        
+
         <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/bolas.png') }}">
             </div>
         </div>
-        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
+
+        <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center img-pdf">
             <div class="w-100">
-                <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/actividades.png') }}">
+                <a href="{{ asset('assets/media/landings/mes-audio/LIBRO ACTIVIDADES_NATURAL AUDIO.pdf') }}" download>
+                    <img class="w-100"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/actividades.png') }}">
+                </a>
             </div>
         </div>
 
-        <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-            <div class="w-100 d-flex justify-content-center mt-4">
+
+        <div class="w-100 d-flex flex-column align-items-center text-center">
+            <div class="w-100 d-flex justify-content-center">
                 <img class="titulo_tu_vista1"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto3.png') }}">
             </div>
@@ -73,7 +77,7 @@
             </div>
         </div>
 
-        <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
+        <div  id="startForm" class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
             @include('form.pide_cita')
         </div>
 

@@ -59,6 +59,8 @@ body {
     overflow-y: auto;
     overflow-x: hidden;
     font-family: 'Lemance2', sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 body::-webkit-scrollbar {
@@ -67,6 +69,10 @@ body::-webkit-scrollbar {
 
 body::-webkit-scrollbar-track {
     background: transparent;
+}
+
+.prim-text {
+    margin-bottom: 3%;
 }
 
 .primeros-parrafos {
@@ -119,7 +125,6 @@ body::-webkit-scrollbar-track {
     max-width: 150px !important;
     height: auto !important;
 }
-
 
 .boton-flotante {
     position: fixed;
@@ -189,9 +194,13 @@ p.text-top-form {
 }
 
 .contenedor_form {
-    padding-left: 20%;
-    padding-right: 20%;
+    padding-left: 28.8%;
+    padding-right: 28.8%;
     background-color: #909dca;
+}
+
+.img-pdf{
+    cursor: pointer;
 }
 
 .contenedor-form {

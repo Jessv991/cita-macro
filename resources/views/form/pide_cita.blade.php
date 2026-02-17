@@ -1,4 +1,4 @@
-<div id="startForm" class="contenedor-form w-100 h-75 d-flex justify-content-center align-items-center">
+<div class="contenedor-form w-100 h-75 d-flex justify-content-center align-items-center">
 
     <form id="formMacroContactologia" class="w-100 p-0 m-0" action="" method="POST">
 
