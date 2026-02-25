@@ -59,7 +59,7 @@
 
         <div class="w-100 d-lg-flex flex-column align-items-center text-center img-pdf mt-5 mt-lg-0">
             <div class="w-100">
-                <a href="{{ asset('assets/media/landings/mes-audio/LIBRO ACTIVIDADES_NATURAL AUDIO.pdf') }}" download>
+                <a href="{{ asset('assets/media/landings/mes-audio/LIBRO ACTIVIDADES_NATURAL_AUDIO.pdf') }}" download>
                     <img class="w-100"
                         src="{{ asset($data['rutaAsset'] . 'assets/img/mes-audio/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/actividades.png') }}">
                 </a>
