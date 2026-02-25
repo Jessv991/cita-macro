@@ -199,7 +199,7 @@ p.text-top-form {
     background-color: #909dca;
 }
 
-.img-pdf{
+.img-pdf {
     cursor: pointer;
 }
 
@@ -423,8 +423,8 @@ div#animationdivIcon {
     .primeros-parrafos1 {
         font-size: 19.8px !important;
         margin-bottom: 6%;
-        padding-left: 0% !important;
-        padding-right: 0% !important;
+        padding-left: 2% !important;
+        padding-right: 2% !important;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -458,8 +458,12 @@ div#animationdivIcon {
     }
 
     .titulo_tu_vista2 {
-        width: 625px;
+        width: 424px;
         margin-top: 6%;
+    }
+
+    .titulo_tu_vista1 {
+        width: 42%;
     }
 }
 
@@ -474,8 +478,8 @@ div#animationdivIcon {
 
     .primeros-parrafos1 {
         font-size: 19px !important;
-        padding-left: 0% !important;
-        padding-right: 0% !important;
+        padding-left: 9% !important;
+        padding-right: 9% !important;
     }
 
     .w-50.d-flex.flex-column.align-items-center.mt-0.mt-lg-5.p-5.text-white {
@@ -524,8 +528,16 @@ div#animationdivIcon {
     }
 
     .titulo_tu_vista2 {
-        width: 556px;
+        width: 385px;
         margin-top: 36px;
+    }
+
+    .titulo_tu_vista1 {
+        width: 53%;
+    }
+
+    .text-width {
+        width: 100% !important;
     }
 
 }
@@ -547,8 +559,8 @@ div#animationdivIcon {
     .primeros-parrafos1 {
         font-size: 16px !important;
         margin-bottom: 6%;
-        padding-left: 0% !important;
-        padding-right: 0% !important;
+        padding-left: 7.5% !important;
+        padding-right: 7.5% !important;
     }
 
 
@@ -603,7 +615,15 @@ div#animationdivIcon {
     }
 
     .titulo_tu_vista2 {
-        width: 500px;
+        width: 292px;
         margin-top: 36px;
+    }
+
+    .titulo_tu_vista1 {
+        width: 55%;
+    }
+
+    .text-width {
+        width: 100% !important;
     }
 }
