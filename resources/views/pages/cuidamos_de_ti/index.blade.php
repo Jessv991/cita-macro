@@ -4,7 +4,7 @@
 
 @include('layouts.header')
 
-<div class="col-12" style="background-color: #1b5b4b">
+<div class="col-12" style="background-color: #1b5b4b, height: 100vh;">
     <div class="row">
         <div class="col-lg-8 col-12">
             <img class="w-100 h-100 active"
