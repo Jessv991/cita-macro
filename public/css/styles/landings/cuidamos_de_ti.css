@@ -1,4 +1,3 @@
-
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -22,7 +21,7 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#icon{
+#icon {
     width: 100%;
 }
 
@@ -97,7 +96,7 @@ a:hover {
     position: relative !important;
 }
 
-label > span {
+label>span {
     color: #fff !important;
 }
 
@@ -128,11 +127,16 @@ label > span {
 }
 
 .divider-line {
-    width: 100%;              /* de izquierda a derecha */
-    height: 1px;              /* línea fina */
-    background-color: #fff;   /* blanca */
-    margin: 20px 0;           /* separación arriba y abajo */
-    opacity: 0.6;             /* un poco elegante */
+    width: 100%;
+    /* de izquierda a derecha */
+    height: 1px;
+    /* línea fina */
+    background-color: #fff;
+    /* blanca */
+    margin: 20px 0;
+    /* separación arriba y abajo */
+    opacity: 0.6;
+    /* un poco elegante */
 }
 
 
@@ -196,9 +200,9 @@ div#animationdivIcon {
 /* DISEÑO EXCLUSIVO AL LOGO POR WEBLOGIN */
 
 .rcentreopticdelbagesclass1 {
-  display: flex;
-  justify-content: center;
-  align-items: center; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .rcentreopticdelbagesclass {
@@ -244,7 +248,7 @@ div#animationdivIcon {
                                            
  */
 
- @media (max-width: 2000px) {
+@media (max-width: 2000px) {
 
     input {
         font-size: 15px !important;
@@ -263,7 +267,13 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
-    /* Pantallas Medianas (992px a 1199px) */
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+}
+
+/* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
@@ -292,11 +302,15 @@ div#animationdivIcon {
         font-size: 21px !important;
         padding: 0px !important;
     }
-    
+
     .text-top-form-anniversary2 {
         font-size: 18px !important;
     }
-    
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -328,11 +342,15 @@ div#animationdivIcon {
         font-size: 25px !important;
         padding: 0px !important;
     }
-    
+
     .text-top-form-anniversary2 {
         font-size: 21px !important;
     }
-    
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 
@@ -348,7 +366,7 @@ div#animationdivIcon {
         font-size: 39px !important;
         padding: 0px !important;
     }
-    
+
     .text-top-form-anniversary2 {
         font-size: 26px !important;
     }
@@ -371,11 +389,11 @@ div#animationdivIcon {
         font-size: 30px !important;
         padding: 0px !important;
     }
-    
+
     .text-top-form-anniversary2 {
         font-size: 20px !important;
     }
-    
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -385,7 +403,7 @@ div#animationdivIcon {
         font-size: 27px !important;
         padding: 0px !important;
     }
-    
+
     .text-top-form-anniversary2 {
         font-size: 21px !important;
     }
@@ -393,10 +411,10 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
-    /* 
+/* 
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
     ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
     █████╗  ██║   ██║██████╔╝██╔████╔██║
@@ -405,13 +423,11 @@ div#animationdivIcon {
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
     */
 
-}
 
 @media (min-width: 0px) and (max-width: 480px) {
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    }    
+    }
 
 }
-
