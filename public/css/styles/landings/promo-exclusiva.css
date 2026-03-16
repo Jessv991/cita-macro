@@ -148,7 +148,7 @@ div#animationdivIcon {
                                            
  */
 
-@media (max-width: 2000px) {
+@media (min-width: 1499px) and (max-width: 2000px) {
 
     .text-top-form {
         font-size: 22px;
@@ -170,6 +170,10 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 }
 
@@ -196,6 +200,10 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
@@ -225,33 +233,12 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 25px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
+
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {

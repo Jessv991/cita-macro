@@ -145,7 +145,7 @@ img.icon-map {
                                            
  */
 
-@media (max-width: 2000px) {
+@media (min-width: 1499px) and (max-width: 2000px) {
 
     .text-top-form {
         font-size: 20px;
@@ -167,6 +167,10 @@ img.icon-map {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 }
 
@@ -193,6 +197,10 @@ img.icon-map {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
@@ -222,31 +230,8 @@ img.icon-map {
         border-radius: 5px !important;
     }
 
-}
-
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
@@ -255,13 +240,13 @@ img.icon-map {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 29px;
         padding: 2%;
-        margin-top: 50px;
+        margin-top: 0px;
     }
 
     .mb-5 {
-        margin-bottom: 1rem !important;
+        margin-bottom: 0px !important;
     }
 
 }
@@ -270,7 +255,7 @@ img.icon-map {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .text-top-form {
-        margin-top: 65px;
+        margin-top: 14px;
     }
 
     .mb-5 {
@@ -283,7 +268,7 @@ img.icon-map {
 @media (max-width: 575px) {
 
     .text-top-form {
-        margin-top: 65px;
+        margin-top: 14px;
     }
 
     .mb-5 {
