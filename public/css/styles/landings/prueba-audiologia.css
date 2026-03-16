@@ -142,6 +142,12 @@ div#animationdivIcon {
                                            
  */
 
+ @media (min-width: 1499px) and (max-width: 2000px) {
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+ }
+
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
 
@@ -166,6 +172,10 @@ div#animationdivIcon {
         width: 63%;
     }
 
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -182,6 +192,10 @@ div#animationdivIcon {
 
     .img-form{
         width: 63%;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 

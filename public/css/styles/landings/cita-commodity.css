@@ -126,7 +126,7 @@ div#animationdivIcon {
                                            
  */
 
-@media (max-width: 2000px) {
+@media (min-width: 1499px) and (max-width: 2000px) {
 
     .text-top-form {
         font-size: 25px;
@@ -152,6 +152,10 @@ div#animationdivIcon {
 
     .style-form {
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
@@ -181,6 +185,10 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -208,31 +216,8 @@ div#animationdivIcon {
         border-radius: 5px !important;
     }
 
-}
-
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 25px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
 }
