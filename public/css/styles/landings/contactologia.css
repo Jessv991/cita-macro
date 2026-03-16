@@ -1,4 +1,3 @@
-
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -22,7 +21,7 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#icon{
+#icon {
     width: 100%;
 }
 
@@ -62,7 +61,7 @@ a:hover {
     position: relative !important;
 }
 
-label > span {
+label>span {
     color: #000000 !important;
 }
 
@@ -207,8 +206,8 @@ div#animationdivIcon {
                                            
  */
 
- @media (max-width: 2000px) {
-    
+@media (min-width: 1499px) and (max-width: 2000px) {
+
     .text-top-form {
         font-size: 20px;
         padding: 2%;
@@ -230,7 +229,12 @@ div#animationdivIcon {
         width: 219px !important;
     }
 
-    /* Pantallas Medianas (992px a 1199px) */
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+}
+
+/* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
@@ -254,7 +258,11 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-    
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -281,7 +289,11 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-    
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -309,7 +321,7 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-    
+
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
@@ -351,7 +363,7 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -371,10 +383,10 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
-    /* 
+/* 
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
     ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
     █████╗  ██║   ██║██████╔╝██╔████╔██║
@@ -383,14 +395,12 @@ div#animationdivIcon {
     ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
     */
 
-}
-
 @media (min-width: 0px) and (max-width: 480px) {
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    } 
-    
+    }
+
     #formMacroContactologia {
         height: 140% !important;
         overflow-y: auto;
@@ -404,4 +414,3 @@ div#animationdivIcon {
     }
 
 }
-
