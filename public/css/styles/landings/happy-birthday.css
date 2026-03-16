@@ -319,7 +319,7 @@ div#animationdivIcon {
                                            
  */
 
- @media (max-width: 2000px) {
+ @media (min-width: 1499px) and (max-width: 2000px) {
     
     .text-top-form {
         font-size: 20px;
@@ -359,84 +359,10 @@ div#animationdivIcon {
         font-size: 45px;
     }
 
-    /* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
 
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
-    .cont-text-black {
-        color: #000;
-        font-size: 18px;
-        margin-top: 4%;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-
-    .fz-1 {
-        font-size: 55px;
-    }
-
-    .fz-2 {
-        font-size: 45px;
-    }
-
-    .cuerpo {
-        margin-top: 5%;
-    }
-
-    .redes-style {
-        width: 6.5% !important;
-    }
-
-    .blog-style {
-        width: 5% !important;
-    }
-
-    .logo-natural-optic {
-        width: 100% !important;
-    }
-
-    .cuerpo-poli {
-        font-size: 84%;
-    }
-
-    .line-center {
-        height: 20px;
-    }
-
-    .text-sub {
-        padding-left: 27%;
-        padding-right: 27%;
-    }
-
-    .color-line {
-        width: 31%;
-    }
-
-    .content-poli {
-        font-size: 17px;
-    }
-    
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -511,6 +437,10 @@ div#animationdivIcon {
 
     .content-poli {
         font-size: 17px;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
     }
     
 }
@@ -593,15 +523,18 @@ div#animationdivIcon {
         font-size: 17px;
     }
     
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 23px;
         padding: 2%;
-        margin-top: 50px;
+        margin-top: 87px;
     }
     
     .fz-1 {
@@ -771,7 +704,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .text-top-form {
-        margin-top: 65px;
+        margin-top: 93px;
     }
 
     .fz-1 {
@@ -851,8 +784,7 @@ div#animationdivIcon {
         padding-left: 10%;
         padding-right: 10%;
     }
-    
-}
+
     /* 
     ███████╗ ██████╗ ██████╗ ███╗   ███╗
     ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
