@@ -139,8 +139,8 @@ body::-webkit-scrollbar-track {
 
 .btn-color2 {
     width: 169px;
-    background-color: #742b01;
-    color: #fff;
+    background-color: #fff;
+    color: #742b01;
     font-size: 21px;
     font-weight: bold;
     display: inline-flex;
@@ -151,7 +151,7 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color2:hover {
-    background-color: #fff;
+    background-color: #FBE8D9;
     color: #8d4d27;
 }
 
@@ -209,22 +209,22 @@ p.text-top-form {
 }
 
 .btn-color {
-    background-color: #742b01;
-    color: #fff;
+    background-color: #fff;
+    color: #742b01;
     font-weight: bold;
 }
 
 .btn-color:hover {
-    background-color: #fff;
+    background-color: #FBE8D9;
     color: #8d4d27;
 }
 
 .form-check-label {
-    color: #502207 !important;
+    color: #000 !important;
 }
 
 .text-top-form {
-    color: #000;
+    color: #742b01;
     font-weight: 400;
     font-size: 25px;
 
