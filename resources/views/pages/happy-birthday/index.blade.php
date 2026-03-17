@@ -8,7 +8,7 @@
                     <img class="w-100 h-100 active" src="{{ asset($data['cumple']) }}">
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
-                    @include('form.sorteo_viaje')
+                    @include('form.pide_cita')
                 </div>
             </div>
         </div>
