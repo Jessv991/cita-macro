@@ -55,7 +55,7 @@
             @include('form.pide_cita')
         </div>
 
-        <footer class="row w-100 p-0">
+        <footer class="row w-100 p-0 footer_class">
             <?php
                 if($data['tipo_dispositivo']!='mobile') {            
             ?>

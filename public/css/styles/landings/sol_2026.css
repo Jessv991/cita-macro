@@ -479,7 +479,7 @@ div#animationdivIcon {
         width: 100%;
     }
 
-    .background-item.d-flex.flex-column.align-items-center {
+    .footer_class {
         margin-bottom: 20%;
     }
 
@@ -576,7 +576,7 @@ div#animationdivIcon {
         width: 100% !important;
     }
 
-    .background-item.d-flex.flex-column.align-items-center {
+    .footer_class {
         margin-bottom: 20%;
     }
 
@@ -674,7 +674,7 @@ div#animationdivIcon {
         width: 100% !important;
     }
 
-    .background-item.d-flex.flex-column.align-items-center {
+    .footer_class {
         margin-bottom: 20%;
     }
 }
