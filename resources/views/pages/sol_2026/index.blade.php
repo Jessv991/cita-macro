@@ -28,7 +28,7 @@
                     src="{{ asset($data['rutaAsset'] . 'assets/img/sol_2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto1.png') }}">
             </div>
             <div class="w-75 p-1 primeros-parrafos1 text-width">
-                <p>{{ __('sol_2026.parrafo-1') }}</p>
+                <p>{{ __('sol_2026.parrafo-1') }}<span class="fw-bold">{{ __('sol_2026.parrafo-1.1') }}</span>{{ __('sol_2026.parrafo-1.2') }}</p>
             </div>
         </div>
 
