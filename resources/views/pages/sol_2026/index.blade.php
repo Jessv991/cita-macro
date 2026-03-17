@@ -52,7 +52,7 @@
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
                     class="p-privacity col-4 fw-bold">{{ __('sol_2026.Politicas-privacidad') }}</a>
                 <img class="d-block mx-auto logo-N col-4"
-                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
                     class="p-cookies col-4 fw-bold">{{ __('sol_2026.Politicas-cookies') }}</a>
             </div>
@@ -61,7 +61,7 @@
             ?>
             <div class="d-flex flex-column align-items-center footer-contact text-center mb-5">
                 <img class="d-block mx-auto logo-N mt-5"
-                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N.png') }}" alt="Logo footer">
                 <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
                     {{ __('sol_2026.Politicas-privacidad') }}
                 </a>
@@ -79,37 +79,3 @@
 
 @include('layouts.footer')
 
-<script>
-    const slides = document.querySelectorAll('.simple-carousel .slide');
-    const indicators = document.querySelectorAll('.simple-carousel .indicator');
-
-    let current = 0;
-
-    function updateSlides() {
-        slides.forEach((slide, i) => {
-            slide.classList.remove('active', 'prev', 'next');
-
-            if (i === current) {
-                slide.classList.add('active');
-            } else if (i === (current - 1 + slides.length) % slides.length) {
-                slide.classList.add('prev');
-            } else if (i === (current + 1) % slides.length) {
-                slide.classList.add('next');
-            }
-        });
-
-        indicators.forEach((ind, i) => {
-            ind.classList.toggle('active', i === current);
-        });
-    }
-
-    indicators.forEach((indicator, i) => {
-        indicator.addEventListener('click', () => {
-            current = i;
-            updateSlides();
-        });
-    });
-
-    // Inicializa la vista
-    updateSlides();
-</script>
