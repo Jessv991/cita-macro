@@ -1,199 +1,115 @@
 @include('layouts.header')
+<div class="background-container">
+    <div class="background-item d-flex flex-column align-items-center">
 
-<div class="background-container w-100">
-    <div class="background-item w-100">
-        <div class="col-12 p-0 m-0 w-100">
-            <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
-                <div class="boton-flotante d-flex justify-content-end">
+        <div class="boton-flotante d-flex justify-content-end">
 
-                    <a href="#contAllForm" id="diret-form" class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
-
-
+            <div class="w-100 d-flex flex-row">
+                <div class="w-50 d-flex justify-content-start align-items-center">
+                    <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/logos/basicos/logo.png') }}"
+                        alt="Logo">
                 </div>
-            <div class="row p-0 m-0 mt-5">
-                <!-- Columna para la primera imagen -->
-                <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-regalo"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/regalo.png') }}">
-                </div>
-
-                <!-- Columna para la segunda imagen -->
-                <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-promo"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/promo.png') }}">
-                </div>
-            </div>
-
-            <div class="w-90 d-flex flex-column align-items-center d-none d-md-flex">
-                <div class="linea mb-3" data-aos="fade-right"></div>
-            </div>
-
-            <div class="w-90 d-flex flex-column align-items-center d-md-none d-flex">
-                <div class="linea mb-3"></div>
-            </div>
-
-
-            <div class="w-100 d-flex flex-column align-items-center d-none d-lg-flex">
-                <img class="w-75"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/filtro.png') }}">
-            </div>
-
-            <div class="row p-0 m-0 mt-5 d-lg-none d-flex justify-content-center">
-                <div class="col-12 col-lg-5 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-descubre"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/descubre.png') }}">
-                </div>
-
-                <div class="col-12 col-lg-7 p-0 m-0 d-flex justify-content-center">
-                    <img class="w-75 img-cards"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/cards.png') }}">
-                </div>
-            </div>
-
-
-            <div class="col-12 w-100 p-0 m-0 mt-lg-5 d-flex justify-content-center">
-                <div class="row w-100 d-flex justify-content-center mt-5">
-
-                    <div class="col-6 col-lg-2 p-0 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="orang1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang1.png') }}">
-                        </div>
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="orang2" class="w-75 d-none"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/orang2.png') }}">
-                        </div>
-                    </div>
-
-
-                    <!-- Segunda columna -->
-                    <div class="col-6 col-lg-2 p-0 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="yell1" class="w-75" 
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell1.png') }}">
-                        </div>
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="yell2" class="w-75 d-none" 
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/yell2.png') }}">
-                        </div>
-                    </div>
-                    
-
-
-                    <!-- Tercera columna -->
-                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="red1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/red1.png') }}">
-                        </div>
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="red2" class="w-75 d-none"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/red2.png') }}">
-                        </div>
-                    </div>
-
-                    <!-- Cuarta columna -->
-                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="green1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/green1.png') }}">
-                        </div>
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="green2" class="w-75 d-none"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/green2.png') }}">
-                        </div>
-                    </div>
-
-                    <!-- Quinta columna -->
-                    <div class="col-6 col-lg-2 p-0 m-0 mt-lg-0 mt-3">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="blu1" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/blu1.png') }}">
-                        </div>
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center mt-3 w-100">
-                            <img id="blu2" class="w-75 d-none"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/blu2.png') }}">
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5 filtre-text">
-                <p>{{ __('sol.filtro-1') }}</p>
-                <p>{{ __('sol.filtro-2') }}</p>
-            </div>
-
-            <div class="w-90 d-flex flex-column align-items-center d-none d-md-flex">
-                <div class="linea2 mb-3" data-aos="fade-right"></div>
-            </div>
-
-            <div class="w-90 d-flex flex-column align-items-center d-md-none d-flex">
-                <div class="linea2 mb-3"></div>
-            </div>
-
-            <div class="text-center mt-5">
-                <p class="filtre-text">{{ __('sol.proteger-1') }}<span class="text-darkline">
-                        {{ __('sol.proteger-2') }}</span><span class="filtre-text">
-                        {{ __('sol.proteger-3') }}</span></p>
-            </div>
-
-            <div class="col-12 w-100 p-0 m-0 mt-lg-5 mt-md-0 d-flex justify-content-center">
-                <div class="row w-100 d-flex justify-content-center mt-5">
-                    <div class="col-12 col-lg-3 p-5 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="girl" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/girl.png') }}">
-                        </div>
-                        <div class="col-12 p-5 m-0 mt-3 w-100 p-table">
-                            <h4 class="t-circle">{{ __('sol.infancia') }}</h4>
-                            <p class="t-p-circle">{{ __('sol.infancia-1') }}</p>
-                            <p class="t-p-circle">{{ __('sol.infancia-2') }}</p>
-                            <p class="t-p-circle">{{ __('sol.infancia-3') }}</p>
-                            <p class="t-p-circle">{{ __('sol.infancia-4') }}</p>
-                        </div>
-                    </div>
-
-                    <!-- Segunda columna -->
-                    <div class="col-12 col-lg-3 p-5 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="man" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/man.png') }}">
-                        </div>
-                        <div class="col-12 p-5 m-0 mt-3 w-100 p-table">
-                            <h4 class="t-circle">{{ __('sol.joven') }}</h4>
-                            <p class="t-p-circle">{{ __('sol.joven-1') }}</p>
-                            <p class="t-p-circle">{{ __('sol.joven-2') }}</p>
-                            <p class="t-p-circle">{{ __('sol.joven-3') }}</p>
-                            <p class="t-p-circle">{{ __('sol.joven-4') }}</p>
-                            <p class="t-p-circle">{{ __('sol.joven-5') }}</p>
-                        </div>
-                    </div>
-
-                    <!-- Tercera columna -->
-                    <div class="col-12 col-lg-3 p-5 m-0">
-                        <div class="col-12 p-0 m-0 d-flex justify-content-center w-100" data-aos="flip-left">
-                            <img id="grandmom" class="w-75"
-                                src="{{ asset($data['rutaAsset'] . 'assets/img/sol/desktop/' . $data['idioma'] . '/grandmom.png') }}">
-                        </div>
-                        <div class="col-12 p-5 m-0 mt-3 w-100 p-table">
-                            <h4 class="t-circle">{{ __('sol.senior') }}</h4>
-                            <p class="t-p-circle">{{ __('sol.senior-1') }}</p>
-                            <p class="t-p-circle">{{ __('sol.senior-2') }}</p>
-                            <p class="t-p-circle">{{ __('sol.senior-3') }}</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="cont-form w-100 col-12 p-0 m-0 d-flex justify-content-center align-items-center">
-                <div class="w-lg-50 w-md-100">
-                    @include('form.pide_cita')
+                <div class="w-50 d-flex justify-content-end align-items-center">
+                    <a href="#startForm" id="diret-form"
+                        class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
                 </div>
             </div>
 
         </div>
+
+        <div class="w-100 m-banner">
+            <img class="w-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/sol_2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+        </div>
+
+        <div class="w-100 d-flex flex-column align-items-center text-center prim-text">
+            <div class="w-100 d-flex justify-content-center">
+                <img class="titulo_tu_vista2"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol_2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/texto1.png') }}">
+            </div>
+            <div class="w-75 p-1 primeros-parrafos1 text-width">
+                <p>{{ __('sol_2026.parrafo-1') }}</p>
+            </div>
+        </div>
+
+
+        <div class="w-100 d-lg-flex flex-column align-items-center text-center">
+            <div class="w-100">
+                <img class="w-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/sol_2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/gafas.png') }}">
+            </div>
+        </div>
+
+        <div  id="startForm" class="w-100  d-flex align-items-center justify-content-center mt-lg-5 contenedor_form">
+            @include('form.pide_cita')
+        </div>
+
+        <footer class="row w-100 p-0">
+            <?php
+                if($data['tipo_dispositivo']!='mobile') {            
+            ?>
+            <div class="d-flex footer-contact text-center col-12">
+                <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
+                    class="p-privacity col-4 fw-bold">{{ __('sol_2026.Politicas-privacidad') }}</a>
+                <img class="d-block mx-auto logo-N col-4"
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
+                <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
+                    class="p-cookies col-4 fw-bold">{{ __('sol_2026.Politicas-cookies') }}</a>
+            </div>
+            <?php
+                }else{               
+            ?>
+            <div class="d-flex flex-column align-items-center footer-contact text-center mb-5">
+                <img class="d-block mx-auto logo-N mt-5"
+                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_Violet.png') }}" alt="Logo footer">
+                <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
+                    {{ __('sol_2026.Politicas-privacidad') }}
+                </a>
+                <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
+                    {{ __('sol_2026.Politicas-cookies') }}
+                </a>
+            </div>
+            <?php
+                }
+            ?>
+        </footer>
+
     </div>
 </div>
 
 @include('layouts.footer')
+
+<script>
+    const slides = document.querySelectorAll('.simple-carousel .slide');
+    const indicators = document.querySelectorAll('.simple-carousel .indicator');
+
+    let current = 0;
+
+    function updateSlides() {
+        slides.forEach((slide, i) => {
+            slide.classList.remove('active', 'prev', 'next');
+
+            if (i === current) {
+                slide.classList.add('active');
+            } else if (i === (current - 1 + slides.length) % slides.length) {
+                slide.classList.add('prev');
+            } else if (i === (current + 1) % slides.length) {
+                slide.classList.add('next');
+            }
+        });
+
+        indicators.forEach((ind, i) => {
+            ind.classList.toggle('active', i === current);
+        });
+    }
+
+    indicators.forEach((indicator, i) => {
+        indicator.addEventListener('click', () => {
+            current = i;
+            updateSlides();
+        });
+    });
+
+    // Inicializa la vista
+    updateSlides();
+</script>
