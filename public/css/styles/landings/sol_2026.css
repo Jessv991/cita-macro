@@ -137,6 +137,19 @@ body::-webkit-scrollbar-track {
     height: 9%;
 }
 
+.boton-flotante2 {
+    position: fixed;
+    top: 91%;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #f39a66;
+    padding: 10px;
+    height: 9%;
+    border-start-end-radius: 61px;
+    border-start-start-radius: 61px;
+}
+
 .btn-color2 {
     width: 169px;
     background-color: #fff;
@@ -465,6 +478,22 @@ div#animationdivIcon {
     .titulo_tu_vista1 {
         width: 100%;
     }
+
+    .background-item.d-flex.flex-column.align-items-center {
+        margin-bottom: 20%;
+    }
+
+    .btn-color2 {
+        width: 109px;
+        font-size: 26px;
+    }
+
+    .btn-color2 {
+        width: 169px;
+        background-color: #f39a66;
+        color: #742b01;
+        border-radius: 15px;
+    }
 }
 
 /* Teléfonos (576px a 767px) */
@@ -504,7 +533,14 @@ div#animationdivIcon {
 
     .btn-color2 {
         width: 109px;
-        font-size: 17px;
+        font-size: 26px;
+    }
+
+    .btn-color2 {
+        width: 169px;
+        background-color: #f39a66;
+        color: #742b01;
+        border-radius: 15px;
     }
 
     .m-banner {
@@ -540,10 +576,26 @@ div#animationdivIcon {
         width: 100% !important;
     }
 
+    .background-item.d-flex.flex-column.align-items-center {
+        margin-bottom: 20%;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    .btn-color2 {
+        width: 289px;
+        font-size: 23px;
+    }
+    
+    .btn-color2 {
+        width: 169px;
+        background-color: #f39a66;
+        color: #742b01;
+        border-radius: 15px;
+    }
 
     .m-banner {
         margin-top: 16%;
@@ -597,11 +649,6 @@ div#animationdivIcon {
         font-size: 14px !important;
     }
 
-    .btn-color2 {
-        width: 109px;
-        font-size: 13px;
-    }
-
     div#contAllForm {
         margin-bottom: 8%;
     }
@@ -625,5 +672,9 @@ div#animationdivIcon {
 
     .text-width {
         width: 100% !important;
+    }
+
+    .background-item.d-flex.flex-column.align-items-center {
+        margin-bottom: 20%;
     }
 }

@@ -5,11 +5,22 @@
         <div class="boton-flotante d-flex justify-content-end">
 
             <div class="w-100 d-flex flex-row">
-                <div class="w-50 d-flex justify-content-start align-items-center">
+                <div class="col-12 col-lg-6 d-flex justify-content-center justify-content-lg-start align-items-center">
                     <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/logos/basicos/logo.png') }}"
                         alt="Logo">
                 </div>
-                <div class="w-50 d-flex justify-content-end align-items-center">
+                <div class="col-12 col-lg-6 d-none d-md-flex d-flex justify-content-end align-items-center">
+                    <a href="#startForm" id="diret-form"
+                        class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="boton-flotante2 d-flex justify-content-end d-lg-none">
+
+            <div class="w-100 d-flex flex-row">
+                <div class="col-12 d-flex justify-content-center align-items-center">
                     <a href="#startForm" id="diret-form"
                         class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
                 </div>
