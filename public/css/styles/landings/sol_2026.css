@@ -146,8 +146,8 @@ body::-webkit-scrollbar-track {
     background-color: #f39a66;
     padding: 10px;
     height: 9%;
-    border-start-end-radius: 61px;
-    border-start-start-radius: 61px;
+    /* border-start-end-radius: 61px;
+    border-start-start-radius: 61px; */
 }
 
 .btn-color2 {
@@ -544,7 +544,7 @@ div#animationdivIcon {
     }
 
     .m-banner {
-        margin-top: 12%;
+        margin-top: 11%;
     }
 
     div#contAllForm {
@@ -598,7 +598,7 @@ div#animationdivIcon {
     }
 
     .m-banner {
-        margin-top: 16%;
+        margin-top: 15%;
     }
 
     .primeros-parrafos {
