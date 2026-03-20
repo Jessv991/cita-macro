@@ -482,6 +482,7 @@ div#animationdivIcon {
     }
 
     .btn-color2 {
+        width: 200px;
         font-size: 26px;
         background-color: #f39a66;
         color: #742b01;
