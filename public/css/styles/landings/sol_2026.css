@@ -139,7 +139,8 @@ body::-webkit-scrollbar-track {
 
 .boton-flotante2 {
     position: fixed;
-    bottom: 0;   /* 👈 clave */
+    bottom: 0;
+    /* 👈 clave */
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -481,12 +482,7 @@ div#animationdivIcon {
     }
 
     .btn-color2 {
-        width: 109px;
         font-size: 26px;
-    }
-
-    .btn-color2 {
-        width: 169px;
         background-color: #f39a66;
         color: #742b01;
         border-radius: 15px;
@@ -529,15 +525,11 @@ div#animationdivIcon {
     }
 
     .btn-color2 {
-        width: 109px;
-        font-size: 26px;
-    }
-
-    .btn-color2 {
-        width: 169px;
+        width: 200px;
         background-color: #f39a66;
         color: #742b01;
         border-radius: 15px;
+        font-size: 26px;
     }
 
     .m-banner {
@@ -583,15 +575,11 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .btn-color2 {
-        width: 289px;
-        font-size: 23px;
-    }
-    
-    .btn-color2 {
-        width: 169px;
+        width: 192px;
         background-color: #f39a66;
         color: #742b01;
         border-radius: 15px;
+        font-size: 23px;
     }
 
     .m-banner {
