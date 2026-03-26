@@ -7,6 +7,13 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+.contenedor-form.w-100.h-75.d-flex.justify-content-center.align-items-center {
+    background-color: #1a3238;
+    height: 100% !important;
+    width: 98% !important;
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;
