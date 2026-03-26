@@ -4,8 +4,14 @@
 ███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
 ╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
 ███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
-╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝                                                                                          
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
 */
+body {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 body::-webkit-scrollbar {
     width: 1px;
@@ -15,16 +21,17 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-body{
-    background-color: #7595A9;
-}
-
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
-.lad-izq{
-    background-color: #7595A9;
+a {
+    color: #0e0cea !important;
 }
+
+a:hover {
+    color: #34aace !important;
+}
+
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗
@@ -33,14 +40,11 @@ body{
 ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
-*/
+                                     */
 
 .contenedor-form {
-    padding-left: 20%;
-    padding-right: 20%;
-    padding-top: 10%;
+    padding: 4%;
     position: relative !important;
-    height: auto !important;
 }
 
 label>span {
@@ -48,7 +52,7 @@ label>span {
 }
 
 .text-top-form {
-    color: #fff;
+    color: #454242;
     font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
@@ -64,8 +68,8 @@ input {
 }
 
 /* input:hover {
-    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
-} */
+                                        box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+                                    } */
 
 select {
     margin-top: 3% !important;
@@ -74,16 +78,12 @@ select {
     /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
 
-/* select:hover {
-    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
-} */
-
 div#animationdivIcon {
     margin-top: 3% !important;
 }
 
 #gracias {
-    color: #fff;
+    color: #454242;
     font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
@@ -104,33 +104,17 @@ div#animationdivIcon {
 }
 
 .btn-color {
-    background-color: #A3C1B5 !important;
+    background-color: #0086C4 !important;
     width: 234px !important;
     border-radius: 20px !important;
     font-size: 20px;
-    color: #383636;
-    font-weight: bold;
+
 }
 
 .btn-color:hover {
-    background-color: #c2cdd3 !important;
+    background-color: #5D6569 !important;
     font-size: 20px;
-    font-weight: bold;
-    color: #454242;
 }
-
-.img-form{
-    width: 63%;
-}
-
-.form-check-label a{
-    color: #111010;
-}
-
-.form-check-label a:hover{
-    color: #eef3f5;
-}
-
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -142,34 +126,32 @@ div#animationdivIcon {
                                            
  */
 
- @media (min-width: 1499px) and (max-width: 2000px) {
-    .background-container .background-item .col-12 {
-        height: 100vh;
-    }
- }
+@media (min-width: 1499px) and (max-width: 2000px) {
 
-/* Pantallas Grandes (1200px a 1499px) */
-@media (min-width: 1200px) and (max-width: 1499px) {
-
-    body {
-        margin: 0;
-        padding: 0;
-        height: 150vh;
-        width: auto;
-        background-size: cover;
-        background-position: center;
-    } 
-    
-    .eso {
-        margin: 0;
-        height: 105vh;
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat; 
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
     }
 
-    .img-form{
-        width: 63%;
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
 
     .background-container .background-item .col-12 {
@@ -181,47 +163,81 @@ div#animationdivIcon {
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
-        width: auto !important;
-        background-size: 100% 100% !important;
-        background-position: center;
+    .text-top-form {
+        font-size: 25px;
+        padding: 2% !important;
     }
 
-    .img-form{
-        width: 63%;
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
     }
 
     .background-container .background-item .col-12 {
         height: 100vh;
     }
 
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .text-top-form {
+        font-size: 25px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
 
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
-    body {
-        height: auto !important;
-        width: auto 0 !important;
-        background-size: 100% 100% !important;
-        background-position: center;
-    }
-
-    .contenedor-form {
-        padding-left: 16%;
-        padding-right: 16%;
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
     }
 
     .text-top-form {
-        font-size: 24px;
+        font-size: 25px;
+        padding: 2%;
+        margin-top: 50px;
     }
 
-    .img-form{
-        width: 50%;
+    .mb-5 {
+        margin-bottom: 1rem !important;
     }
 
 }
@@ -229,28 +245,17 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
-        width: auto 0 !important;
-        background-size: 100% 100% !important;
-        background-position: center;
-    }
-
-    .contenedor-form {
-        padding: 3rem !important;
-        position: relative !important;
-        height: auto !important;
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
     }
 
     .text-top-form {
-        font-size: 23px;
-        text-align: center;
+        margin-top: 65px;
     }
 
-    .img-form{
-        width: 69%;
+    .mb-5 {
+        margin-bottom: 1rem !important;
     }
 
 }
@@ -258,38 +263,35 @@ div#animationdivIcon {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
-    body {
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
-        width: auto 0 !important;
-        background-size: 100% 100% !important;
-        background-position: center;
-    }
-
-    .contenedor-form {
-        padding: 3rem !important;
-        position: relative !important;
-        height: auto !important;
+    .text-top-form {
+        font-size: 22px;
+        padding: 2%;
     }
 
     .text-top-form {
-        font-size: 23px;
-        text-align: center;
+        margin-top: 65px;
     }
 
-    .img-form{
-        width: 69%;
+    .mb-5 {
+        margin-bottom: 1rem !important;
     }
 
 }
 
 /* 
-███████╗ ██████╗ ██████╗ ███╗   ███╗
-██╔════╝██╔═══██╗██╔══██╗████╗ ████║
-█████╗  ██║   ██║██████╔╝██╔████╔██║
-██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
-██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
-╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
-*/
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
 
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
