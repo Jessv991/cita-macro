@@ -79,11 +79,11 @@ body::-webkit-scrollbar-track {
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #77c898 !important;
+    color: #fff !important;
 }
 
 a:hover {
-    color: #fff !important;
+    color: #77c898 !important;
 }
 
 
