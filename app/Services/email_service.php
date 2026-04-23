@@ -22,7 +22,7 @@ class email_service
         // echo $promocional . '<br>';
         // echo $landing . '<br>';
 
-        $tienda = ''; 
+        $tienda = '';
         $weblogin = '';
 
         list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
@@ -39,18 +39,37 @@ class email_service
         try {
 
             // SMTP configuration
-            $mail->CharSet = 'UTF-8';
+            if ($weblogin === 'rjavea') {
+                $host = 'smtp.office365.com';
+                $user = 'recall@seepointopticas.com';
+                $pass = 'BldYw_2025#Spnt';
+                $port = 587;
+                $secure = 'tls';
+            } else {
+                $host = config('mail.mailers.smtp.host');
+                $user = config('mail.mailers.smtp.username');
+                $pass = config('mail.mailers.smtp.password');
+                $port = config('mail.mailers.smtp.port');
+                $secure = config('mail.mailers.smtp.encryption');
+            }
+
             $mail->isSMTP();
+            $mail->Host = $host;
+            $mail->Username = $user;
+            $mail->Password = $pass;
+            $mail->Port = $port;
+            $mail->SMTPSecure = $secure;
             $mail->SMTPAuth = true;
-            $mail->Host = config('mail.mailers.smtp.host');
-            $mail->Username = config('mail.mailers.smtp.username');
-            $mail->Password = config('mail.mailers.smtp.password');
-            $mail->Port = config('mail.mailers.smtp.port');
-            $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+            $mail->Encoding = 'base64';
 
 
-            $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
+            if ($weblogin === 'rjavea') {
+                $mail->setFrom($user, 'Óptica Seepoint');
+            } else {
+                $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
+            }
 
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $landing);
@@ -80,7 +99,7 @@ class email_service
                     '{EMAILOPTICO}',
                     '{DIRECIONOPTICA}',
                     '{LOGO}',
-                    '{LOCAL}', 
+                    '{LOCAL}',
                     '{LANDING}'
                 );
 
@@ -115,13 +134,13 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
                 $mail->addCC('j.vasquez@naturalopticsgroup.com');
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin);
             } else {
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin);
             }
 
 
@@ -142,7 +161,7 @@ class email_service
         }
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing, $web_optica)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing, $web_optica, $weblogin)
     {
         if ($landing === 'contactologia') {
             $Citas = new sorteoLc();
@@ -155,18 +174,37 @@ class email_service
         try {
 
             // SMTP configuration
-            $mail->CharSet = 'UTF-8';
+            if ($weblogin === 'rjavea') {
+                $host = 'smtp.office365.com';
+                $user = 'recall@seepointopticas.com';
+                $pass = 'BldYw_2025#Spnt';
+                $port = 587;
+                $secure = 'tls';
+            } else {
+                $host = config('mail.mailers.smtp.host');
+                $user = config('mail.mailers.smtp.username');
+                $pass = config('mail.mailers.smtp.password');
+                $port = config('mail.mailers.smtp.port');
+                $secure = config('mail.mailers.smtp.encryption');
+            }
+
             $mail->isSMTP();
+            $mail->Host = $host;
+            $mail->Username = $user;
+            $mail->Password = $pass;
+            $mail->Port = $port;
+            $mail->SMTPSecure = $secure;
             $mail->SMTPAuth = true;
-            $mail->Host = config('mail.mailers.smtp.host');
-            $mail->Username = config('mail.mailers.smtp.username');
-            $mail->Password = config('mail.mailers.smtp.password');
-            $mail->Port = config('mail.mailers.smtp.port');
-            $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->isHTML(true);
+            $mail->CharSet = 'UTF-8';
+            $mail->Encoding = 'base64';
 
 
-            $mail->setFrom(config('mail.from.address'), $nombre_optica);
+            if ($weblogin === 'rjavea') {
+                $mail->setFrom($user, 'Óptica Seepoint');
+            } else {
+                $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
+            }
 
 
             if ($promocional === 'true' || $landing === 'contactologia') {
