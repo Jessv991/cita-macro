@@ -44,13 +44,11 @@ class email_service
                 $user = 'recall@seepointopticas.com';
                 $pass = 'BldYw_2025#Spnt';
                 $port = 587;
-                $secure = 'tls';
             } else {
                 $host = config('mail.mailers.smtp.host');
                 $user = config('mail.mailers.smtp.username');
                 $pass = config('mail.mailers.smtp.password');
                 $port = config('mail.mailers.smtp.port');
-                $secure = config('mail.mailers.smtp.encryption');
             }
 
             $mail->isSMTP();
@@ -58,7 +56,7 @@ class email_service
             $mail->Username = $user;
             $mail->Password = $pass;
             $mail->Port = $port;
-            $mail->SMTPSecure = $secure;
+            $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->SMTPAuth = true;
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
@@ -179,13 +177,11 @@ class email_service
                 $user = 'recall@seepointopticas.com';
                 $pass = 'BldYw_2025#Spnt';
                 $port = 587;
-                $secure = 'tls';
             } else {
                 $host = config('mail.mailers.smtp.host');
                 $user = config('mail.mailers.smtp.username');
                 $pass = config('mail.mailers.smtp.password');
                 $port = config('mail.mailers.smtp.port');
-                $secure = config('mail.mailers.smtp.encryption');
             }
 
             $mail->isSMTP();
@@ -193,7 +189,7 @@ class email_service
             $mail->Username = $user;
             $mail->Password = $pass;
             $mail->Port = $port;
-            $mail->SMTPSecure = $secure;
+            $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
             $mail->SMTPAuth = true;
             $mail->isHTML(true);
             $mail->CharSet = 'UTF-8';
