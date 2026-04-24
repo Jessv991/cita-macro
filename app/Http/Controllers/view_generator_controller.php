@@ -154,8 +154,6 @@ class view_generator_controller extends Controller
         //=====================VARIABLES DE FORM_LC==========================
         $mktid = "";
 
-
-
         /* if ($type == "sms") {
             if ($weblogin != '' && $tiecodi != '') {
                 $ch = curl_init();
