@@ -182,7 +182,7 @@ body::-webkit-scrollbar-track {
 
 
 .titulo_tu_vista2 {
-    width: 100%;
+    width: 95%;
 }
 
 /* 
@@ -216,13 +216,13 @@ p.text-top-form {
 
 .btn-color {
     background-color: #fff;
-    color: #742b01;
+    color: #000000;
     font-weight: bold;
 }
 
 .btn-color:hover {
-    background-color: #FBE8D9;
-    color: #8d4d27;
+    background-color: #72a5a1;
+    color: #fff;
 }
 
 .form-check-label {
@@ -401,10 +401,6 @@ div#animationdivIcon {
         height: 37px;
     }
 
-    .titulo_tu_vista2 {
-        width: 100%;
-    }
-
     .primeros-parrafos {
         font-size: 21.8px;
     }
@@ -461,10 +457,6 @@ div#animationdivIcon {
 
     .subtitle {
         font-size: 26px;
-    }
-
-    .titulo_tu_vista2 {
-        width: 100%;
     }
 
     .titulo_tu_vista1 {
@@ -545,10 +537,6 @@ div#animationdivIcon {
 
     .slides {
         height: 348px;
-    }
-
-    .titulo_tu_vista2 {
-        width: 100%;
     }
 
     .titulo_tu_vista1 {
@@ -638,10 +626,6 @@ div#animationdivIcon {
 
     .subtitle {
         font-size: 20px;
-    }
-
-    .titulo_tu_vista2 {
-        width: 100%;
     }
 
     .titulo_tu_vista1 {
