@@ -27,13 +27,13 @@ $(document).ready(function () {
         //getOpticaSelectCity();
     } else {
         getCityBySelectState();
-        if ($('#origen').val() === 'promo-exclusiva' || $('#origen').val() === 'lleida_aplec') {
+        if ($('#origen').val() === 'promo-exclusiva' || $('#origen').val() === 'lleida_aplec' || $('#origen').val() === 'RAY-BAN') {
             $('#provincias').val('25').prop('disabled', true).trigger('change'); // <-- Esto sí ejecutará el on('change')
         }
         getOpticaSelectCity()
 
         // Quitar opciones no deseadas
-        if ($('#origen').val() === 'lleida_aplec') {
+        if ($('#origen').val() === 'lleida_aplec' || $('#origen').val() === 'RAY-BAN') {
             setTimeout(function () {
                 $('#ciudad option[value="Tremp"], #ciudad option[value="Alfarras"]').remove();
             }, 300);
