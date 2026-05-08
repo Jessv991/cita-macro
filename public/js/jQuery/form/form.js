@@ -32,9 +32,11 @@ $(document).ready(function () {
         }
         getOpticaSelectCity()
 
-         // Quitar opciones no deseadas
-        $('#opticas option[value="Alfarras"]').remove();
-        $('#opticas option[value="Tremp"]').remove();
+        // Quitar opciones no deseadas
+        if ($('#origen').val() === 'lleida_aplec') {
+            $('#opticas option[value="Alfarras"]').remove();
+            $('#opticas option[value="Tremp"]').remove();
+        }
     }
 
     //animación del icono de mapa
