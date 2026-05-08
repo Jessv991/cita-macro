@@ -27,7 +27,7 @@ $(document).ready(function () {
         //getOpticaSelectCity();
     } else {
         getCityBySelectState();
-        if ($('#origen').val() === 'promo-exclusiva') {
+        if ($('#origen').val() === 'promo-exclusiva' || $('#origen').val() === 'lleida_aplec') {
             $('#provincias').val('25').prop('disabled', true).trigger('change'); // <-- Esto sí ejecutará el on('change')
         }
         getOpticaSelectCity()
