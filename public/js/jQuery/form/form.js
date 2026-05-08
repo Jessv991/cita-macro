@@ -31,6 +31,10 @@ $(document).ready(function () {
             $('#provincias').val('25').prop('disabled', true).trigger('change'); // <-- Esto sí ejecutará el on('change')
         }
         getOpticaSelectCity()
+
+         // Quitar opciones no deseadas
+        $('#opticas option[value="Alfarras"]').remove();
+        $('#opticas option[value="Tremp"]').remove();
     }
 
     //animación del icono de mapa
