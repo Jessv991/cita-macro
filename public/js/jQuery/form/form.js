@@ -34,8 +34,9 @@ $(document).ready(function () {
 
         // Quitar opciones no deseadas
         if ($('#origen').val() === 'lleida_aplec') {
-            $('#opticas option[value="Alfarras"]').remove();
-            $('#opticas option[value="Tremp"]').remove();
+            setTimeout(function () {
+                $('#ciudad option[value="Tremp"], #ciudad option[value="Alfarras"]').remove();
+            }, 300);
         }
     }
 
