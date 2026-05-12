@@ -140,7 +140,7 @@ body::-webkit-scrollbar-track {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #f39a66;
+    background-color: #c7acc1;
     padding: 10px;
 }
 
@@ -513,8 +513,8 @@ div#animationdivIcon {
 
     .btn-color2 {
         width: 200px;
-        background-color: #f39a66;
-        color: #742b01;
+        background-color: #c7acc1;
+        color: #fff;
         border-radius: 15px;
         font-size: 26px;
     }
@@ -558,8 +558,8 @@ div#animationdivIcon {
 
     .btn-color2 {
         width: 192px;
-        background-color: #f39a66;
-        color: #742b01;
+        background-color: #c7acc1;
+        color: #fff;
         border-radius: 15px;
         font-size: 23px;
     }
