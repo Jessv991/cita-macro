@@ -1,4 +1,4 @@
-<div id="contAllForm" class="contenedor-form w-100 h-75 d-flex justify-content-center align-items-center">
+<div id="contAllForm" class="contenedor-form w-100 d-flex justify-content-center align-items-center">
 
     <form id="formMacroContactologia" class="w-100 p-0 m-0" action="" method="POST">
 
@@ -17,6 +17,10 @@
             <div class="d-flex flex-column justify-content-center align-items-start mb-5">
                 <p class="text-top-form">{{ __('form_lc_translation.Pide_cita_rellenando') }}</p>
                 <p class="text-top-form">{{ __('form_lc_translation.Producto_adquirido') }}</p>
+            </div>
+        @elseif (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+            <div class="d-flex justify-content-center align-items-start mb-5">
+                <p class="text-top-form">Omple el formulari amb les teves dades per entrar al sorteig</p>
             </div>
         @else
             <div class="d-flex justify-content-center align-items-start mb-5">
@@ -81,8 +85,8 @@
                                             <g class="ldl-layer">
                                                 <g style="transform-origin: 24px 0px; transform: rotate(0deg); animation: 3.22581s linear -3.17742s infinite normal forwards running jingle-3d825006-3cda-4950-a58b-3018f9321a57;"
                                                     class="ldl-ani">
-                                                    <path d="M9,42h30c1.657,0-15-16-15-16S7.343,42,9,42z" fill="#3e7bf1"
-                                                        style="fill: rgb(62, 123, 241);"></path>
+                                                    <path d="M9,42h30c1.657,0-15-16-15-16S7.343,42,9,42z"
+                                                        fill="#3e7bf1" style="fill: rgb(62, 123, 241);"></path>
                                                 </g>
                                             </g>
                                             <g class="ldl-layer">
@@ -191,6 +195,21 @@
                     </label>
                 </div>
 
+                @if (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+                    <div class="form-check form-check-reverse p-0">
+                        <input class="custom-checkbox" type="checkbox" value="1" name="check_baseLegal"
+                            id="reverseCheck2">
+
+                        <label class="form-check-label" for="reverseCheck2">
+                            <span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span>
+                            <a href="{{ route('politicas.bases', app()->getLocale()) }}" target="_blank"
+                                style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
+                                {{ __('form_translation.Aceptar_base_legal') }}
+                            </a>
+                        </label>
+                    </div>
+                @endif
+
                 @if ($data['typeLC'] === 'sms')
                     <table class="table-optica-map mt-5">
                         <tr>
@@ -233,6 +252,8 @@
                     <button id="form" class="btn btn-color">
                         @if (isset($data['commodityLC']) && $data['commodityLC'] == 'lc')
                             {{ __('form_lc_translation.Pedir_cita') }}
+                        @elseif (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+                            INSCRIU-TE
                         @else
                             {{ __('form_translation.Pedir_cita') }}
                         @endif
@@ -262,9 +283,27 @@
 
             <div class="d-flex flex-column text-center w-100">
 
-                <span class="">{{ __('form_translation.titol-gracias') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
+                <span class="">
+                    @if (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+                        Gràcies per participar!
+                    @else
+                        {{ __('form_translation.titol-gracias') }}
+                    @endif
+                </span>
+                <span class="mt-4">
+                    @if (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+                        El guanyador/a del sorteig s’anunciarà a través del compte oficial d’Instagram de Natural Optics l’1 de juny de 2026.
+                    @else
+                        {{ __('form_translation.parrafo-1') }}
+                    @endif
+                </span>
+                <span class="mt-4">
+                    @if (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+                        Molta sort!
+                    @else
+                        {{ __('form_translation.parrafo-2') }}
+                    @endif
+                </span>
 
                 <hr>
 
@@ -361,9 +400,9 @@
             var opciones = opticaSelect.find('option');
             var webloginVacio = <?php echo empty($data['weblogin']) ? 'true' : 'false'; ?>;
 
-            if(webloginVacio){
+            if (webloginVacio) {
                 $('#optica').html('<option value="">Selecciona una óptica</option>');
-            }else{
+            } else {
 
                 if (opciones.length > 1) {
                     // Más de una opción → limpiar

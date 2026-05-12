@@ -57,11 +57,11 @@ a:hover {
 }
 
 label>span {
-    color: #cce5d6 !important;
+    color: #fff !important;
 }
 
 .text-top-form {
-    color: #000;
+    color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
@@ -118,7 +118,6 @@ div#animationdivIcon {
 
 .btn-color {
     width: 234px !important;
-    border-radius: 20px !important;
     font-size: 20px;
 }
 

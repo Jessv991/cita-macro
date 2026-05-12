@@ -16,6 +16,17 @@ use Illuminate\Support\Facades\App;
                                                                            
 */
 
+//ruta Bases del sorteo
+Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es', 'ca'])) {
+        $locale = 'es';
+    }
+    App::setLocale($locale);
+    return view('pages.bases_sorteo.index');
+    
+})->name('politicas.bases');
+
+
 //ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'es', 'ca'])) {
@@ -36,7 +47,7 @@ Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
 
     App::setLocale($locale);
 
-    return view('pages/cookies/index');
+    return view('pages.cookies.index');
 })->name('politicas.cookies');
 
 Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}/{extra1?}/{extra2?}/{extra3?}/{extra4?}/{extra5?}/{extra6?}', function ($locale, $origen, $weblogin = null, $tienda = null, $extra1 = null, $extra2 = null, $extra3 = null, $extra4 = null, $extra5 = null, $extra6 = null) {

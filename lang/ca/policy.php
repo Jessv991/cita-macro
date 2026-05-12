@@ -7,12 +7,12 @@ return [
     'Política-cookies' => 'Política de cookies',
     'Policy-cookies-QueEs' => '<h5 class="display-6 fw-thin">Què és una cookie?</h5>',
 
-    // POLICY
+    // Cookies
     'Policy-cookies-1' => "
     <p class='lead'> Una cookie és un petit fitxer que es descarrega al vostre ordinador o un altre dispositiu (smartphone, tablet, etc.) que utilitzeu quan visiteu <a class='link-primary' href='https://www.naturaloptics.com/cita-macro'>Cita-macro</a>. Entre altres finalitats, les cookies us permeten personalitzar els continguts als quals accedeix i a nosaltres obtenir estadístiques per millorar els nostres serveis i també oferir publicitat. </p>
     <p class='lead'> Amb caràcter general, es pot utilitzar diversos criteris per classificar les cookies, en funció de qui les gestioni (pròpies o de tercers), el termini de temps durant el qual romanen activitats (de sessió o persistents) o la seva finalitat (tècnica, de personalització), d'anàlisi, etc.). En el darrer cas, depenent de quina sigui la finalitat concreta poden requerir, o no, obtenir el consentiment de l’usuari. </p>
     <p class='lead'> A continuació, s'explica amb caràcter general les cookies que hi pot haver amb caràcter general de manera que això permeti entendre posteriorment quines cookies utilitza GESTIÓ NATURAL ÒPTICS SL a <a class='link-primary' href='https://www.naturaloptics.com/cita-macro'>Cita-macro</a> </p>",
-        
+
     'Policy-cookies-2' => "<div class='row lead mb-5 mt-5'>
     <div class='row'>
         <div class='col-xl-2 col-lg-2 col-12 text-center text-lg-start fw-normal border-end border-bottom'>De qui són?</div>
@@ -76,7 +76,7 @@ return [
         </div>
     </div>
     </div>",
-    
+
     'Policy-cookies-3' => "
     <h5 class='display-6 fw-thin'>Quines cookies s'utilitzen a <a class='link-primary' href='https://www.naturaloptics.com/cita-macro'>Cita-macro</a>?</h5>
     <p class='lead'> En concret, GESTIÓ NATURAL ÒPTICS SL a <a class='link-primary' href='https://www.naturaloptics.com/cita-macro'>Cita-macro</a>, utilitza les següents cookies tant pròpies com de tercers: </p>
@@ -138,7 +138,7 @@ return [
     <p class='lead'> Aquesta Política de Cookies està actualitzada el 14 d'abril de 2022. </p>",
 
 
-    //LEGAL
+    //Politicas
     'Legal-titulo' =>  '<h1 class="display-2">Polítiques de privacitat i Avís legal</h1>',
 
     'Legal-aviso-1' => "
@@ -159,13 +159,13 @@ return [
     <p class='lead'> El mer accés a aquest Lloc Web no suposa entaular cap mena de relació de caràcter comercial entre <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> i l'usuari. </p>
     <p class='lead'> L'Usuari declara que és més gran i disposar de la capacitat jurídica suficient per vincular-se a les presents Condicions. Per tant, aquest Lloc Web de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> no s'adreça a menors. <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> declina qualsevol responsabilitat per l´incompliment d´aquest requisit. </p>
     <p class='lead'> Aquest Lloc Web està dirigit principalment a Usuaris residents a Espanya. <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> no assegura que el Lloc Web compleixi amb legislacions d'altres països, ja sigui totalment o parcialment. Si l'Usuari resideix o té el domicili en un altre lloc i decideix accedir i/o navegar al Lloc Web ho farà sota la seva pròpia responsabilitat, assegureu-vos que aquest accés i navegació compleix amb la legislació local que us és aplicable, no assumint <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> cap responsabilitat que se'n pugui derivar. </p>",
-    
+
     'Legal-aviso-3' => "
     <h3 class='display-6 fw-thin'>III. ACCÉS I NAVEGACIÓ AL LLOC WEB: EXCLUSIÓ DE GARANTIES I RESPONSABILITAT.</h3>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> no garanteix la continuïtat, disponibilitat i utilitat del Lloc Web, ni dels Continguts o Serveis. <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> farà tot el possible pel bon funcionament del Lloc Web, però, no es responsabilitza ni garanteix que l'accés a aquest Lloc Web no sigui interromput o que estigui lliure d'error. </p>
     <p class='lead'> Tampoc no es responsabilitza o garanteix que el contingut o programari al qual es pugui accedir a través d'aquest Lloc Web, estigui lliure d'error o causi un dany al sistema informàtic (programari i maquinari) de l'Usuari. En cap cas <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> serà responsable per les pèrdues, danys o perjudicis de qualsevol mena que sorgeixin per l'accés, la navegació i l'ús del Lloc Web, incloent-hi, però no limitant-se, els ocasionats als sistemes informàtics o els provocats per la introducció de virus. </p>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> tampoc no es fa responsable dels danys que poguessin ocasionar-se als usuaris per un ús inadequat d'aquest Lloc Web. A Particular, no es fa responsable de cap manera de les caigudes, interrupcions, falta o defecte de les telecomunicacions que poguessin ocórrer. </p>",
-    
+
     'Legal-aviso-4' => "
     <h3 class='display-6 fw-thin'>IV. POLÍTICA DE PRIVACITAT I PROTECCIÓ DE DADES.</h3>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> es compromet a adoptar les mesures tècniques i organitzatives necessàries, segons el nivell de seguretat adequat al risc de les dades recollides. </p>
@@ -201,7 +201,7 @@ return [
     <p class='lead'> Acceptació i canvis en aquesta política de privadesa. Cal que l'Usuari hagi llegit i estigui conforme amb les condicions sobre la protecció de dades de caràcter personal contingudes en aquesta Política de Privadesa, així com que accepti el tractament de les seves dades personals perquè el Responsable del tractament pugui procedir-hi a la forma, durant els terminis i per a les finalitats indicades. L'ús del Lloc Web implicarà l'acceptació de la Política de Privadesa d’aquest. </p>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> es reserva el dret a modificar la seva Política de Privadesa, d'acord amb el seu propi criteri, o motivat per un canvi legislatiu, jurisprudencial o doctrinal de l'Agència Espanyola de Protecció de Dades. Els canvis o actualitzacions d'aquesta Política de Privadesa no seran notificats de manera explícita a l'Usuari. Es recomana a l'Usuari consultar aquesta pàgina de forma periòdica per estar al corrent dels darrers canvis o actualitzacions. </p>
     <p class='lead'> Aquesta Política de Privadesa va ser actualitzada el dia 14 d'abril de 2022 per adaptar-se al Reglament (UE) 2016/579 del Parlament Europeu i del Consell, de 27 d'abril de 2016, relatiu a la protecció de les persones físiques pel que fa al tractament de dades personals i la lliure circulació d'aquestes dades (RGPD). </p>",
-    
+
     'Legal-aviso-5' => "
     <h3 class='display-6 fw-thin'>V. POLÍTICA DE COOKIES.</h3>
     <p class='lead'> L'accés a aquest Lloc Web pot implicar la utilització de cookies. Les cookies són petites quantitats d'informació que s'emmagatzemen al navegador utilitzat per cada Usuari -en els diferents dispositius que pugui utilitzar per navegar- perquè el servidor recordi certa informació que posteriorment i únicament el servidor que la va implementar llegirà. Les cookies faciliten la navegació, la fan més amigable, i no fan malbé el dispositiu de navegació. </p>
@@ -226,7 +226,7 @@ return [
     <p class='lead'> Canvis a la Política de Cookies. És possible que la política de Cookies del Lloc Web canviï o s'actualitzi, per això és recomanable que l'Usuari revisi aquesta política cada vegada que accedeixi al Lloc Web amb l'objectiu d'estar adequadament informat sobre com i perquè fem servir les cookies. </p> </p>
     <p class='lead'> 
     Aquesta Política de Privacitat va ser actualitzada el dia 14 d'abril de 2022 per a adaptar-se al Reglament (UE) 2016/579 del Parlament europeu i del Consell, de 27 d'abril de 2016, relatiu a la protecció de les persones físiques pel que fa al tractament de dades personals i a la lliure circulació d'aquestes dades (RGPD). </p>",
-    
+
     'Legal-aviso-6' => "
     <h3 class='display-6 fw-thin'>VI. POLÍTICA D'ENLLAÇOS.</h3>
     <p class='lead'> S'informa que el Lloc Web de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> posa o pot posar a disposició dels usuaris mitjans d'enllaç (com, entre d'altres, enllaços, bàners, botons), directoris i motors de cerca que permeten als usuaris accedir a llocs web pertanyents i/o gestionats per tercers. </p>
@@ -237,15 +237,73 @@ return [
     <p class='lead'> L'Usuari o tercer que faci un hiperenllaç des d'una pàgina web d'un altre, diferent, lloc web al Lloc Web de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> haurà de saber que: - No es permet la reproducció –totalment o parcialment- de cap dels Continguts i/o Serveis del Lloc Web sense autorització expressa de <span class='fw-thin'>GESTIÓ NATURAL ÒPTICS S.L.</span> -No es permet tampoc cap manifestació falsa, inexacta o incorrecta sobre el Lloc Web de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span>, ni sobre els continguts i/o serveis del mateix. </p>
     <p class='lead'> A excepció de l'hiperenllaç, el lloc web on s'estableixi aquest hiperenllaç no contindrà cap element, d'aquest Lloc Web, protegit com a propietat intel·lectual per l'ordenament jurídic espanyol, llevat d'autorització expressa de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> </p>
     <p class='lead'> L'establiment de l'enllaç no implicarà l'existència de relacions entre <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> i el titular del lloc web des del qual es realitzi, ni el coneixement i l'acceptació de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> dels continguts, serveis i/o activitats oferts en aquest lloc web, i viceversa.",
-    
+
     'Legal-aviso-7' => "
     <h3 class='display-6 fw-thin'>VII. PROPIETAT INTEL·LECTUAL I INDUSTRIAL.</h3>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> per si o com a part cessionària, és titular de tots els drets de propietat intel·lectual i industrial del Lloc Web, així com dels elements continguts en aquest (a títol enunciatiu i no exhaustiu: imatges, so, àudio, vídeo, programari o textos , marques o logotips, combinacions de colors, estructura i disseny, selecció de materials usats, programes d’ordinador necessaris per al seu funcionament, accés i ús, etc.). Seran, per tant, obres protegides com a propietat intel·lectual per l'ordenament jurídic espanyol, i els seran aplicables tant la normativa espanyola i comunitària en aquest camp, com els tractats internacionals relatius a la matèria i subscrits per Espanya. </p>
     <p class='lead'> Tots els drets reservats. En virtut del que disposa la Llei de Propietat Intel·lectual, queden expressament prohibides: la reproducció, la distribució i la comunicació pública, inclosa la seva modalitat de posada a disposició, de la totalitat o part dels continguts d'aquesta pàgina web, amb finalitats comercials, a qualsevol suport i per qualsevol mitjà tècnic, sense l'autorització de <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> </p>
     <p class='lead'> En cas que l'Usuari o tercer consideri que qualsevol dels Continguts del Lloc Web suposi una violació dels drets de protecció de la propietat intel·lectual, ho haurà de comunicar immediatament a <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> a través de les dades de contacte de l'apartat d'INFORMACIÓ GENERAL d'aquest Avís Legal i Condicions Generals d'Ús. </p>",
-    
+
     'Legal-aviso-8' => "
     <h3 class='display-6 fw-thin'>VIII. ACCIONS LEGALS, LEGISLACIÓ APLICABLE I JURISDICCIÓ.</h3>
     <p class='lead'> <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> es reserva la facultat de presentar les accions civils o penals que consideri necessàries per a la utilització indeguda del Lloc Web i Continguts, o per l'incompliment de les presents Condicions. La relació entre l'Usuari i la <span class='fw-normal'>GESTIÓ NATURAL ÒPTICS S.L.</span> es regirà per la normativa vigent i d’aplicació en el territori espanyol. Si sorgeix qualsevol controvèrsia en relació amb la interpretació i/o l'aplicació d'aquestes Condicions, les parts sotmetran els seus conflictes a la jurisdicció ordinària sotmetent-se als jutges i tribunals que corresponguin conforme a dret. </p><small class='lead'>Última modificació: 14 d'abril del 2022.</small>",
+
+
+    //bases sorteo
+    'bases-titulo' =>  "<h1 class='display-2 mb-5'>Bases legals del sorteig RAY-BAN Metal</h1>
+    <p class='lead text-start'>Gestión Natural Optics, con CIF B25514019 y domicilio social en Calle de la Variant, 21, Torrefarrera – 25123, en su compromiso por premiar la fidelidad de sus clientes, lanza una nueva promoción destinada a incentivar la realización de revisiones visuales y pruebas de lentes de contacto en los centros Natural Optics adheridos en España y Canarias. A continuación, se detallan las bases legales que regirán esta acción promocional.</p>",
+
+    'bases-aviso-1' => "
+    <h3 class='display-6 fw-thin'>I. OBJETO DE LA PROMOCIÓN.</h3>
+    <p class='lead'> El objetivo de la promoción es sortear 2 gafas Ray-Ban Meta, resultando 2 personas ganadoras, entre todos los usuarios que se hayan realizado una revisión visual o una prueba de lentes de contacto durante la vigencia de la campaña.</p>",
+
+    'bases-aviso-2' => "
+    <h3 class='display-6 fw-thin'>II. DURACIÓN.</h3>
+    <p class='lead'>La promoción se llevará a cabo desde las 09:00 horas del día 13/05/2026 hasta las 12:00 horas del día 31/05/2026.</p>",
+
+    'bases-aviso-3' => "
+    <h3 class='display-6 fw-thin'>III. PARTICIPANTES.</h3>
+    <p class='lead'>Podrán participar en el sorteo todas aquellas personas físicas mayores de edad, residentes en el territorio español y/o Canarias, que se hayan realizado una revisión visual o una prueba de lentes de contacto en alguno de los centros Natural Optics adheridos a la promoción (Lleida, Mollerussa, Tàrrega y Balaguer).</p>",
+
+    'bases-aviso-4' => "
+    <h3 class='display-6 fw-thin'>IV. SORTEO Y ELECCIÓN DE GANADORES.</h3>
+    <p class='lead'>Las dos personas ganadoras se anunciarán el día 01/06/2026 a través de nuestras redes sociales.</p>
+    <p class='lead'>Gestión Natural Optics realizará el sorteo a las 12:30 horas del día 01/06/2026 mediante la plataforma Easypromos.</p>",
+
+    'bases-aviso-5' => "
+    <h3 class='display-6 fw-thin'>V. SUPLENTES.</h3>
+    <p class='lead'>En el caso de que no se localice a alguna de las personas ganadoras en un plazo de 48 horas desde su anuncio, o no cumpla los requisitos establecidos en estas Bases, Gestión Natural Optics se reserva el derecho a entregar el premio a una persona suplente.</p>
+    <p class='lead'>En caso de repetirse la misma circunstancia, el premio correspondiente se declarará desierto.</p>",
+
+    'bases-aviso-6' => "
+    <h3 class='display-6 fw-thin'>VI. ENTREGA DEL PREMIO.</h3>
+    <p class='lead'>El premio se entregará únicamente a las personas ganadoras cuyos datos coincidan con los facilitados en la participación, o a una tercera persona autorizada, siempre que acredite su identidad y cuente con la autorización previa de la persona ganadora.</p>
+    <p class='lead'>Las gafas deberán recogerse presencialmente en el centro Natural Optics más cercano acordado con la organización.</p>",
+
+    'bases-aviso-7' => "
+    <h3 class='display-6 fw-thin'>VII. COMUNICACIÓN DE LOS GANADORES .</h3>
+    <p class='lead'> <span class='fw-normal'>Gestión Natural Optics publicará el nombre de las personas ganadoras en las cuentas de Instagram (@naturalopticsoficial, @naturalopticslleida y @naturalopticsbalaguer) y Facebook (@naturaloptics) el día 01/06/2026. Posteriormente, también se contactará personalmente con las personas ganadoras.</p>",
+
+    'bases-aviso-8' => "
+    <h3 class='display-6 fw-thin'>VIII. PARTICIPACIONES FRAUDULENTAS.</h3>
+    <p class='lead'>Gestión Natural Optics se reserva el derecho de anular cualquier participación o excluir a cualquier participante que realice un uso fraudulento o manipule el mecanismo de la promoción, perdiendo automáticamente el derecho a recibir el premio.</p>",
+
+    'bases-aviso-9' => "
+    <h3 class='display-6 fw-thin'>IX. PREMIO.</h3>
+    <p class='lead'>El premio objeto de la presente promoción no podrá ser objeto de canje, cambio, alteración o compensación económica a petición de las personas ganadoras, ni sustituirse por otros productos o servicios distintos a los establecidos.</p>",
+
+    'bases-aviso-10' => "
+    <h3 class='display-6 fw-thin'>X. RESPONSABILIDAD.</h3>
+    <p class='lead'>Gestión Natural Optics queda exenta de cualquier responsabilidad por los daños o perjuicios que pudieran derivarse del uso y disfrute del premio por parte de las personas ganadoras o de terceros.</p>",
+
+    'bases-aviso-11' => "
+    <h3 class='display-6 fw-thin'>XI. PROTECCIÓN DE DATOS.</h3>
+    <p class='lead'>Los datos personales facilitados por los participantes serán tratados por Gestión Natural Optics con la única finalidad de gestionar la participación en la presente promoción. Los datos no se cederán a terceros salvo obligación legal.</p>
+    <p class='lead'>Los participantes podrán ejercer sus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad mediante solicitud escrita dirigida al organizador o por correo electrónico a <a href='mailto:info@naturaloptics.com'>info@naturaloptics.com</a>.</p>
+    <p class='lead'>Para más información, puede consultarse la política de privacidad en: <a href='https://www.naturaloptics.com/politica-privacidad' target='_blank' rel='noopener noreferrer'>www.naturaloptics.com/politica-privacidad</a></p>",
+
+    'bases-aviso-12' => "
+    <h3 class='display-6 fw-thin'>XII. ACEPTACIÓN DE LAS BASES.</h3>
+    <p class='lead'>La participación en esta promoción implica la aceptación íntegra de las presentes bases legales. Cualquier manifestación en sentido contrario implicará la exclusión del participante.</p>",
 
 ];

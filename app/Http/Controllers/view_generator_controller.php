@@ -480,11 +480,20 @@ class view_generator_controller extends Controller
             ];
         } else {
 
-            $specificRules = [
-                'provincias' => 'bail|required',
-                'ciudad' => 'bail|required',
-                'optica' => 'bail|required',
-            ];
+            if ($origen === 'RAY-BAN') {
+                $specificRules = [
+                    'provincias' => 'bail|required',
+                    'ciudad' => 'bail|required',
+                    'optica' => 'bail|required',
+                    'check_baseLegal' => 'bail|present|accepted', // present = debe existir, accepted = debe estar checkeado
+                ];
+            } else {
+                $specificRules = [
+                    'provincias' => 'bail|required',
+                    'ciudad' => 'bail|required',
+                    'optica' => 'bail|required',
+                ];
+            }
         }
 
         if ($typeLC === 'sms') {

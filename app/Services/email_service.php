@@ -76,7 +76,11 @@ class email_service
 
             if ($typeLC === 'ordinario' && $commodityLC === null) {
 
-                $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
+                if ($origen !== 'RAY-BAN') {
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
+                } else {
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteRayBan.blade.php');
+                }
 
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
@@ -147,7 +151,7 @@ class email_service
             $tienda = $optica[0]->codigo;
 
             if ($test == 'true') {
-                $mail->addAddress('l.vigna@naturalopticsgroup.com');
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
                 //$this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC);
             } else {
                 //$mail->addAddress('j.vasquez@naturalopticsgroup.com');
@@ -206,7 +210,13 @@ class email_service
             if ($typeLC === 'email' || $typeLC === 'sms' || $commodityLC === 'lc') {
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteLC.blade.php');
             } elseif ($typeLC === 'ordinario') {
-                $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
+
+                if ($origen !== 'RAY-BAN') {
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
+                } else {
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteRayBan.blade.php');
+                }
+
             } else {
                 return response()->json(['message' => 'Tipo de solicitud no válido.'], 400);
             }
