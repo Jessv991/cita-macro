@@ -1,4 +1,3 @@
-
 @php
     $logoOptica = $data['logoOptica'];
 @endphp
@@ -9,20 +8,21 @@
     <div class="background-item">
         <div class="col-12">
             <div class="row">
-                <div class="col-lg-8 col-12" style="background-color: #E7E7E7">
-                    <div class="row">
-                        <div class="col-8">
-                            <img class="w-100 h-100 active" src="{{ asset($data['revision']) }}">
-                        </div>
-                        <div class="col-4"></div>
-                    </div>
+                <div class="col-lg-8 col-12 d-flex justify-content-center al">
+                    <video autoplay muted playsinline loop id="video2">
+                        <source
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/optica_LaCasita/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/video.mp4') }}"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
                     @include('form.pide_cita')
 
                     @if ($logoOptica)
                         <div class="w-100 {{ $data['weblogin'] }}class1">
-                            <img class="logo-optica-data w-25 {{ $data['weblogin'] }}class" src="{{ __($data['logoOptica']) }}" alt="">
+                            <img class="logo-optica-data w-25 {{ $data['weblogin'] }}class"
+                                src="{{ __($data['logoOptica']) }}" alt="">
                         </div>
                     @endif
                 </div>

@@ -8,6 +8,11 @@
                                                                                        
 */
 
+#video2 {
+    width        : 100%;
+    border-radius: 40px;
+}
+
 .form-check-label::before{
     border: 1px solid black;
 }
