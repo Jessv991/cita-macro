@@ -57,7 +57,7 @@
             </div>
         </div>
 
-        <div class="w-100 d-flex justify-content-center mb-5">
+        <div class="w-100 d-none d-lg-flex justify-content-center mb-5">
             <img class="titulo_tu_vista2"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titol1.png') }}">
         </div>
@@ -69,7 +69,7 @@
             </div>
         </div>
 
-        <div class="w-100 d-flex justify-content-center mt-5 mb-5">
+        <div class="w-100 d-none d-lg-flex justify-content-center mt-5 mb-5">
             <img class="titulo_tu_vista2"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titol2.png') }}">
         </div>
