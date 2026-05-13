@@ -75,7 +75,7 @@
         </div>
 
 
-        <div class="w-100 d-lg-flex flex-column align-items-center text-center">
+        <div class="w-100 d-lg-flex flex-column align-items-center text-center mb-3 mb-lg-0">
             <div class="w-100">
                 <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
