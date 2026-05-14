@@ -105,7 +105,14 @@ class email_service
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $landing);
             } else {
                 $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
+                
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
+
+                if ($landing === 'intervision_expert_two_for_one_godella' || $landing === 'intervision_expert_lentillas') {
+
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
+                }
+
                 $palabrasBuscar = array(
                     '{NOMBRECLIENTE}',
                     '{EMAILCLIENTE}',
@@ -221,6 +228,12 @@ class email_service
             } else {
                 $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
+
+                if ($landing === 'intervision_expert_two_for_one_godella' || $landing === 'intervision_expert_lentillas') {
+
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobanteGodella.blade.php');
+                }
+
                 $palabrasBuscar = array(
                     '{DIRECIONOPTICA}',
                     '{TELEFONOPTICA}',
