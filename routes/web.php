@@ -45,6 +45,7 @@ Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($loca
         $locale = 'es';
     }
     App::setLocale($locale);
+    
 
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
 })->name('vistaLanding');
