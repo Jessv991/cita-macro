@@ -11,9 +11,9 @@
             <div class="row h-100">
                 <div class="col-lg-8 col-12">
                     @if($data['lentillas'] === true)
-                        <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_two_for_one/' . $data['tipo_dispositivo'] . '/es/img2.png') }}">
+                        <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_two_for_one_godella/' . $data['tipo_dispositivo'] . '/es/img2.png') }}">
                     @else
-                        <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_two_for_one/' . $data['tipo_dispositivo'] . '/es/img.png') }}">
+                        <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_two_for_one_godella/' . $data['tipo_dispositivo'] . '/es/img.png') }}">
                     @endif
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
