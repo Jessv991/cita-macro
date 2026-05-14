@@ -47,7 +47,6 @@ class email_service
             $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
 
             if ($landing === 'intervision_expert_two_for_one_godella') {
-
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
             }
 
@@ -86,7 +85,7 @@ class email_service
 
 
             if ($test == 'true') {
-                $mail->addAddress('l.vigna@naturalopticsgroup.com');
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
                 // $mail->addAddress('j.vasquez@naturalopticsgroup.com');
                 $mail->addAddress($email_optica);
@@ -141,7 +140,7 @@ class email_service
 
             if ($landing === 'intervision_expert_two_for_one_godella') {
 
-                $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
+                $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobanteGodella.blade.php');
             }
 
             $palabrasBuscar = array(
