@@ -22,7 +22,6 @@ Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
         $locale = 'es';
     }
     App::setLocale($locale);
-    App::setLocale($locale);
     return view('pages.policy.index');
     
 })->name('politicas.privacidad');
@@ -36,18 +35,15 @@ Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
     }
     App::setLocale($locale);
 
-    App::setLocale($locale);
-
     return view('pages/cookies/index');
 })->name('politicas.cookies');
 
 Route::get('cita-macro/{locale}/{origen}/{weblogin?}/{tienda?}', function ($locale, $origen, $weblogin = null, $tienda = null) {
 
 
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
-        $locale = 'es'; //si el diferente a los del arry, locale cambia su valor a 'es'
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
+        $locale = 'es';
     }
-
     App::setLocale($locale);
 
     return app(view_generator_controller::class)->index($locale, $origen, $weblogin, $tienda);
