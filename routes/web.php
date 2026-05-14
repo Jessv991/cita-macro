@@ -18,9 +18,10 @@ use Illuminate\Support\Facades\App;
 
 //ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
+    App::setLocale($locale);
     App::setLocale($locale);
     return view('pages.policy.index');
     
@@ -30,9 +31,10 @@ Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
 //ruta cookies
 Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
 
-    if (!in_array($locale, ['en', 'es', 'ca'])) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
     }
+    App::setLocale($locale);
 
     App::setLocale($locale);
 
