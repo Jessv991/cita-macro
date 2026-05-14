@@ -13,7 +13,7 @@ class email_service
 {
     public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip)
     {
-        $tienda = ''; 
+        $tienda = '';
         $weblogin = '';
 
         list($tienda, $weblogin) = explode(' ', $validated['optica'], 2);
@@ -42,9 +42,14 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Cita previa de '. $nombre . ' ' . $apellidos;
+            $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateOpticaComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
+
+            if ($landing === 'intervision_expert_two_for_one_godella') {
+
+                $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
+            }
 
             $optica = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
 
@@ -62,8 +67,15 @@ class email_service
 
 
             $palabrasBuscar = array(
-                '{NOMBRECLIENTE}', '{EMAILCLIENTE}', '{TELEFONOCLIENTE}', '{ORIGIN}',
-                '{TELEFONOPTICA}', '{EMAILOPTICO}', '{DIRECIONOPTICA}', '{LOGO}', '{LOCAL}'
+                '{NOMBRECLIENTE}',
+                '{EMAILCLIENTE}',
+                '{TELEFONOCLIENTE}',
+                '{ORIGIN}',
+                '{TELEFONOPTICA}',
+                '{EMAILOPTICO}',
+                '{DIRECIONOPTICA}',
+                '{LOGO}',
+                '{LOCAL}'
             );
 
 
@@ -100,7 +112,6 @@ class email_service
 
             echo "No se pudo enviar el email. Error: {$mail->ErrorInfo}";
         }
-
     }
 
     function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen)
@@ -124,21 +135,29 @@ class email_service
 
 
             $mail->setFrom(config('mail.from.address'), $nombre_optica);
-            $mail->Subject = 'Confirmación de solicitud de cita previa con '. $nombre_optica;
+            $mail->Subject = 'Confirmación de solicitud de cita previa con ' . $nombre_optica;
 
-            $archivo = resource_path('views/pages/mail/'.$locale.'/templateCitaClienteComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
 
+            if ($landing === 'intervision_expert_two_for_one_godella') {
+
+                $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
+            }
 
             $palabrasBuscar = array(
-                '{DIRECIONOPTICA}', '{TELEFONOPTICA}', '{EMAILOPTICA}',
-                '{NOMBREOPTICA}', '{LOGO}', '{LOCAL}'
+                '{DIRECIONOPTICA}',
+                '{TELEFONOPTICA}',
+                '{EMAILOPTICA}',
+                '{NOMBREOPTICA}',
+                '{LOGO}',
+                '{LOCAL}'
             );
 
             $palabrasReemplazar = array($direccion_optica, $tlf_optica, $email_optica, $nombre_optica, $logoOptica, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
-            
+
             $mail->addAddress($email);
             $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
 
