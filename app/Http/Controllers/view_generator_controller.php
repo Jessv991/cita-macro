@@ -93,7 +93,6 @@ class view_generator_controller extends Controller
         $segments = request()->segments();
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
-        $this->data['lentillas'] = request()->query('lentillas'); //(esto está recibiendo test por get)
         $promocional = request()->query('promocional'); //(esto está recibiendo test por get)
 
         $empresas = new Empresas();
