@@ -11,7 +11,7 @@
     @endphp
 
     @if ($baseUrl !== 'https://optica.naturaloptics.com')
-       {{-- si es difernte a  optica.naturaloptics.com --}} 
+        {{-- si es difernte a  optica.naturaloptics.com --}}
 
         @php
             $rutaAsset = '';
@@ -26,7 +26,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Natural Optics</title>
     <link rel="icon" href="{{ asset($rutaAsset . '/assets/iconos_landings/N.png') }}">
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
     <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
@@ -37,7 +37,8 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
 
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
@@ -45,6 +46,12 @@
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/landings/' . $landing . '.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
+
+    @if ($landing === 'contactologia2026')
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    @endif
 </head>
 
 <body>
