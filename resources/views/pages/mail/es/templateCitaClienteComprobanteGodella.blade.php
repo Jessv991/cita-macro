@@ -920,21 +920,6 @@ button.es-button {
                      <tr style="border-collapse:collapse">
                       <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Este correo electrónico comercial es conforme a la legislación vigente sobre el tratamiento de datos con fines promocionales y publicitarios. Recibe este correo en calidad de cliente de Natural, {DIRECIONOPTICA}, o bien por haberte registrado en nuestra página web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.</p></td>
                      </tr>
-                     
-                     <!-- Separador seguro -->
-                    <tr style="border-collapse:collapse">
-                        <td style="padding:20px 0;">
-                        <table width="100%" cellpadding="0" cellspacing="0" role="presentation">
-                            <tr>
-                            <td style="border-top:1px solid #000; font-size:0; line-height:0;">&nbsp;</td>
-                            </tr>
-                        </table>
-                        </td>
-                    </tr>
-
-                     <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">This commercial email complies with current legislation on the processing of personal data for promotional and advertising purposes. You are receiving this email as a customer of Natural, {DIRECIONOPTICA}, or because you registered on our website, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . In accordance with Article 22 of Law 34/2002 on Information Society Services and Electronic Commerce, as well as Regulation (EU) 2016/679 of the European Parliament and of the Council (General Data Protection Regulation – GDPR), you have the right to access, rectify, erase, restrict the processing of, transfer, and object to the processing of your personal data.</p></td>
-                     </tr>
                    </table></td>
                  </tr>
                </table></td>
