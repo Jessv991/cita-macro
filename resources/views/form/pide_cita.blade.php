@@ -186,7 +186,7 @@
                 @if ($data['origin'] === 'optica_LaCasita')
                     <div class="whatpB text start d-flex flex-column justify-sm-content-center mt-3 p-3">
                         <p class="m-1 mb-md-4 text pt-1 pr-4 text-whiter">{{ __('form_translation.wsp_preferencia') }}</p>
-                        <a href="https://wa.me/+34673403836" title="Pedir cita" class="btn-form">{{ __('form_translation.wsp_chat') }}</a>
+                        <a href="https://wa.me/+34613397109" title="Pedir cita" class="btn-form">{{ __('form_translation.wsp_chat') }}</a>
                     </div>
                 @endif
 
