@@ -18,13 +18,6 @@
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex justify-content-center align-items-center p-0">
                     @include('form.pide_cita')
-
-                    @if ($logoOptica)
-                        <div class="w-100 {{ $data['weblogin'] }}class1">
-                            <img class="logo-optica-data w-25 {{ $data['weblogin'] }}class"
-                                src="{{ __($data['logoOptica']) }}" alt="">
-                        </div>
-                    @endif
                 </div>
             </div>
         </div>

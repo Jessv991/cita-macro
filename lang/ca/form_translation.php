@@ -42,5 +42,7 @@ return [
     'kit' => "Kit d'implantació",
     'Pedir_kit' => "DEMANAR KIT D'IMPLEMENTACIÓ",
     'contacto' => "Persona de contacte",
+    'wsp_preferencia' => "O contacta'ns per WhatsApp!",
+    'wsp_chat' => "Xatejar",
 
 ];

@@ -175,13 +175,27 @@
                         <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                             {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
-                        </a>                        
+                        </a>
                     </label>
                 </div>
 
-                <div class="b-pedir-citas mt-5">    
+                <div class="b-pedir-citas mt-5">
                     <button id="form" class="btn btn-color">{{ __('form_translation.Pedir_cita') }}</button>
                 </div>
+
+                @if ($data['origin'] === 'optica_LaCasita')
+                    <div class="whatpB text start d-flex flex-column justify-sm-content-center mt-3 p-3">
+                        <p class="m-1 mb-md-4 text pt-1 pr-4 text-whiter">{{ __('form_translation.wsp_preferencia') }}</p>
+                        <a href="https://wa.me/+34673403836" title="Pedir cita" class="btn-form">{{ __('form_translation.wsp_chat') }}</a>
+                    </div>
+                @endif
+
+                @if ($logoOptica)
+                    <div class="mt-5 w-100 {{ $data['weblogin'] }}class1">
+                        <img class="logo-optica-data w-25 {{ $data['weblogin'] }}class"
+                            src="{{ __($data['logoOptica']) }}" alt="">
+                    </div>
+                @endif
 
             </div>
         </div>
@@ -302,9 +316,9 @@
             var opciones = opticaSelect.find('option');
             var webloginVacio = <?php echo empty($data['weblogin']) ? 'true' : 'false'; ?>;
 
-            if(webloginVacio){
+            if (webloginVacio) {
                 $('#optica').html('<option value="">Selecciona una óptica</option>');
-            }else{
+            } else {
 
                 if (opciones.length > 1) {
                     // Más de una opción → limpiar
@@ -328,5 +342,4 @@
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
     })
-
 </script>

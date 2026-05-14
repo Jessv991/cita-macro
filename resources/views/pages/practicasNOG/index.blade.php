@@ -15,12 +15,6 @@
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
                     @include('form.practicasNOG')
-
-                    @if ($logoOptica)
-                        <div class="w-25">
-                            <img class="logo-optica-data w-100" src="{{ __($data['logoOptica']) }}" alt="">
-                        </div>
-                    @endif
                 </div>
             </div>
         </div>

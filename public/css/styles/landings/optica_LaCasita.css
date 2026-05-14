@@ -9,11 +9,11 @@
 */
 
 #video2 {
-    width        : 100%;
+    width: 100%;
     border-radius: 40px;
 }
 
-.form-check-label::before{
+.form-check-label::before {
     border: 1px solid black;
 }
 
@@ -36,7 +36,7 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color {
-    background-color: #EF8018 !important;
+    background-color: #EF8019 !important;
     color: #f0f0f0 !important;
     font-weight: bold !important;
 }
@@ -56,7 +56,7 @@ a {
 }
 
 a:hover {
-    color: #EF8018 !important;
+    color: #EF8019 !important;
 }
 
 /* 
@@ -78,6 +78,36 @@ a:hover {
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+.whatpB.text.start.d-flex.flex-column.justify-sm-content-center.mt-3 {
+    background-color: #f08019;
+    font-weight: bold;
+    height: 145px;
+    margin-top: 12% !important;
+}
+
+a.btn-form {
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    width: 240px;
+    border: none;
+    text-shadow: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    padding-top: 6px;
+}
+
+.btn-form {
+    color: #081121;
+    background-color: #fff;
+}
+
+.btn-form:hover {
+    color: #fff;
+    background-color: #bebebe;
+}
 
 .contenedor-form {
     padding: 4%;
@@ -377,6 +407,10 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.mt-3 {
+        height: 120px;
     }
 
 }
