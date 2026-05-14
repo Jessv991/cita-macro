@@ -106,7 +106,7 @@ label > span {
     font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
-    font-size: 17px;
+    font-size: 23px;
 
 }
 
@@ -273,7 +273,7 @@ div#animationdivIcon {
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 15px;
+        font-size: 23px;
         padding: 0% !important;
     }
 
@@ -313,7 +313,7 @@ div#animationdivIcon {
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
-        font-size: 15px;
+        font-size: 23px;
         padding: 0% !important;
     }
 
@@ -377,6 +377,11 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
 
+    .text-top-form {
+        font-size: 20px;
+        padding: 0% !important;
+    }
+
     .mb-5 {
         margin-bottom: 1rem !important;
     }
@@ -394,6 +399,11 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 0% !important;
+    }
 
     .text-top-form-anniversary {
         font-size: 27px !important;
