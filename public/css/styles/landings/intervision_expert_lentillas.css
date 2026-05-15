@@ -8,6 +8,11 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+.d-flex.justify-content-center.align-items-start.mb-5 {
+    margin-top: 2rem !important;
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;
