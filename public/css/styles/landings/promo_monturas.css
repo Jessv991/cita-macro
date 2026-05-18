@@ -90,33 +90,37 @@ body::-webkit-scrollbar-track {
                                      */
 
 .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
-    background-color: #fff;
     font-weight: bold;
-    height: 335px;
-    width: 80%;
+    height: 272px;
+    width: 67%;
     border-radius: 20px;
+    border: solid #fff;
+    justify-content: center;
+    padding: 12% !important;
 }
 
 a.btn-form {
     font-size: 18px;
     height: 40px;
     text-align: center;
-    width: 240px;
+    width: 170px;
     border: none;
     text-shadow: 0;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease;
     padding-top: 6px;
+    text-decoration: none;
+    border-radius: 7px;
 }
 
 .btn-form {
-    color: #fff;
-    background-color: #282828;
+    color: #282828;
+    background-color: #fff;
 }
 
 .btn-form:hover {
-    color: #fff;
+    color: #282828;
     background-color: #bebebe;
 }
 
@@ -124,6 +128,13 @@ a.btn-form {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a {
+    color: #fff;
+}
+a:hover {
+    color: #bebebe;
 }
 
 .contenedor-form {

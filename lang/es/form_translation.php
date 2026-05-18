@@ -40,6 +40,6 @@ return [
     'parrafo-chequeo' => "Un chequeo regular permite detectar a tiempo cualquer alteración y prevenir problemas que podrían afectar tu calidad de vida.",
     'parrafo-aprendiz' => "La visión influye en el aprendizaje. Muchos problemas visuales pueden pasar desapercibidos en niños y adolescentes, afectando su rendimineto escolar sin que lo notemos.",
     'parrafo-revision' => "Una revisión visual a tiempo puede marcar la diferencia en su desarrollo y desempeño académico.",
-    'wsp_preferencia' => "Contactando con nostros por WhatsApp y déjate asesorar por nuestros especialistas.",
+    'wsp_preferencia' => "¡Pide cita a través de nuestro número de WhatsApp!",
     'wsp_chat' => "Chatear",
 ];
