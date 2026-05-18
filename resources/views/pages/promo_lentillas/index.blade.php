@@ -19,7 +19,7 @@
                                 {{ __('form_translation.wsp_preferencia') }}</p>
                             <div class="d-flex justify-content-center">
                                 <a href="https://wa.me/+34688772399" title="Pedir cita"
-                                    class="btn-form">{{ __('form_translation.Confirma_reserva') }}</a>
+                                    class="btn-form d-flex justify-content-center align-items-center">{{ __('form_translation.Confirma_reserva') }}</a>
                             </div>
                         </div>
                     @else
