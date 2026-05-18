@@ -10,7 +10,7 @@
             <div class="row h-100">
                 <div class="col-lg-8 col-12">
                     <img class="w-100 h-100 active"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/intervision_expert_lentillas/' . $data['tipo_dispositivo'] . '/es/img_' . $data['weblogin'] . '.png') }}">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/' . $data['landing'] . '/' . $data['tipo_dispositivo'] . '/es/img_' . $data['weblogin'] . '.png') }}">
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3 <?= $data['weblogin']; ?>">
                     @if ($data['weblogin'] === 'reguren')
