@@ -100,18 +100,20 @@ body::-webkit-scrollbar-track {
 }
 
 a.btn-form {
-    font-size: 18px;
+    font-size: 23px;
+    line-height: 1;
     height: 40px;
     text-align: center;
     width: 170px;
     border: none;
     text-shadow: 0;
-    font-weight: bold;
+    font-weight: 200;
     cursor: pointer;
     transition: all 0.5s ease;
     padding-top: 6px;
     text-decoration: none;
     border-radius: 7px;
+    font-family: 'IvyStyleSans', sans-serif;
 }
 
 .btn-form {
