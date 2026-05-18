@@ -22,7 +22,7 @@
             <div class="d-flex justify-content-center align-items-start mb-5">
                 <p class="text-top-form">Omple el formulari amb les teves dades per entrar al sorteig</p>
             </div>
-        @elseif (isset($data['origin']) && $data['origin'] == 'promo_monturas')
+        @elseif (isset($data['origin']) && $data['origin'] == 'promo_monturas' || $data['origin'] == 'promo_lentillas')
             <div class="d-flex justify-content-center align-items-start mb-5 text-center">
                 <p class="text-top-form">Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día</p>
             </div>
