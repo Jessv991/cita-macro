@@ -32,8 +32,8 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color {
-    background-color: #ee903b;
-    color: #f0f0f0;
+    background-color: #fff;
+    color: #000;
 }
 
 @font-face {
@@ -68,14 +68,6 @@ body::-webkit-scrollbar-track {
 
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
-
-a {
-    color: #ee903b !important;
-}
-
-a:hover {
-    color: #fff !important;
-}
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
@@ -119,8 +111,8 @@ a.btn-form {
 }
 
 .btn-form {
-    color: #081121;
-    background-color: #fff;
+    color: #fff;
+    background-color: #282828;
 }
 
 .btn-form:hover {
@@ -128,7 +120,7 @@ a.btn-form {
     background-color: #bebebe;
 }
 
-.col-lg-4.col-12.mt-lg-0.mt-3 {
+.col-lg-4.col-12.mt-lg-0.mt-3.reguren {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -301,7 +293,7 @@ div#animationdivIcon {
     }
 
     .btn-color {
-        width: 350px !important;
+        width: 250px !important;
         border-radius: 5px !important;
     }
 
