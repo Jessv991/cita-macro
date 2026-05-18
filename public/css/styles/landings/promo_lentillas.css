@@ -90,30 +90,31 @@ body::-webkit-scrollbar-track {
                                      */
 
 .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
-    font-weight: bold;
+    font-weight: 200;
+    line-height: 1;
     height: 272px;
     width: 67%;
     border-radius: 20px;
     border: solid #fff;
     justify-content: center;
     padding: 12% !important;
-}
+    font-family: 'IvyStyleSans', sans-serif;
+    font-size: 23px;
+} 
 
 a.btn-form {
     font-size: 23px;
-    line-height: 1;
     height: 40px;
     text-align: center;
     width: 170px;
     border: none;
     text-shadow: 0;
-    font-weight: 200;
+    font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease;
     padding-top: 6px;
     text-decoration: none;
     border-radius: 7px;
-    font-family: 'IvyStyleSans', sans-serif;
 }
 
 .btn-form {
