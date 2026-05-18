@@ -97,10 +97,10 @@ body::-webkit-scrollbar-track {
     border-radius: 20px;
     border: solid #fff;
     justify-content: center;
-    padding: 12% !important;
+    padding: 11% !important;
     font-family: 'IvyStyleSans', sans-serif;
     font-size: 23px;
-} 
+}
 
 a.btn-form {
     font-size: 23px;
