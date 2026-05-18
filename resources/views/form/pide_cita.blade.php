@@ -22,6 +22,10 @@
             <div class="d-flex justify-content-center align-items-start mb-5">
                 <p class="text-top-form">Omple el formulari amb les teves dades per entrar al sorteig</p>
             </div>
+        @elseif (isset($data['origin']) && $data['origin'] == 'promo_monturas')
+            <div class="d-flex justify-content-center align-items-start mb-5 text-center">
+                <p class="text-top-form">Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día</p>
+            </div>
         @else
             <div class="d-flex justify-content-center align-items-start mb-5">
                 <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
