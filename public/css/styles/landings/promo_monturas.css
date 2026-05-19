@@ -128,7 +128,7 @@ a.btn-form {
     background-color: #bebebe;
 }
 
-.col-lg-4.col-12.mt-lg-0.mt-3.reguren {
+.col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
     display: flex;
     justify-content: center;
     align-items: center;
