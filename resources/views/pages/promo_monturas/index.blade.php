@@ -6,7 +6,7 @@
 
 <div class="background-container">
     <div class="background-item">
-        <div class="col-12" style="background-color: #282828">
+        <div class="col-12">
             <div class="row h-100">
                 <div class="col-lg-8 col-12">
                     <img class="w-100 h-100 active"

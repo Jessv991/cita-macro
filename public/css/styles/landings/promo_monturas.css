@@ -17,6 +17,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #282828;
 }
 
 body::-webkit-scrollbar {
