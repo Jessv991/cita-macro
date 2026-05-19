@@ -112,7 +112,6 @@ a.btn-form {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease;
-    padding-top: 6px;
     text-decoration: none;
     border-radius: 7px;
 }
@@ -457,6 +456,10 @@ div#animationdivIcon {
         height: 60vh;
     }
 
+    a.btn-form {
+        margin-top: 5%;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -482,6 +485,16 @@ div#animationdivIcon {
 
     .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
         height: 60vh;
+    }
+
+    .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
+        padding: 0% !important;
+        font-size: 21px;
+    }
+
+    a.btn-form {
+        font-size: 16px;
+        margin-top: 5%;
     }
 
 }
