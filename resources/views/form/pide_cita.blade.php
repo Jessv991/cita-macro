@@ -12,11 +12,17 @@
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
+        
 
-
-        <div id="titol-pide-cita" class="d-flex justify-content-center align-items-start mb-5">
-            <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
-        </div>
+        @if (isset($data['customText']) && $data['customText'] === 'true')
+            <div class="d-flex justify-content-center align-items-start mb-5 text-center">
+                <p class="text-top-form">{{ __('form_translation.' . $data['landing'] . '_' . $data['weblogin']) }}</p>
+            </div>
+        @else
+            <div class="d-flex justify-content-center align-items-start mb-5">
+                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+            </div>
+        @endif
 
 
         <div>
