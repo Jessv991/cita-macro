@@ -126,12 +126,6 @@ a.btn-form {
     background-color: #bebebe;
 }
 
-.col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 a {
     color: #fff;
 }
@@ -424,10 +418,6 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
-    }
-
 }
 
 /* Teléfonos (576px a 767px) */
@@ -450,10 +440,6 @@ div#animationdivIcon {
 
     .text-top-form-anniversary2 {
         font-size: 20px !important;
-    }
-
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
     }
 
     a.btn-form {
@@ -481,10 +467,6 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    }
-
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
     }
 
     .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {

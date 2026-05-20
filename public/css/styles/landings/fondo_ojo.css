@@ -16,7 +16,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #282828;
+    background-color: #b4d3ce;
 }
 
 body::-webkit-scrollbar {
@@ -126,18 +126,12 @@ a.btn-form {
     background-color: #bebebe;
 }
 
-.col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 a {
-    color: #fff;
+    color: #000;
 }
 
 a:hover {
-    color: #bebebe;
+    color: #696b6b;
 }
 
 .contenedor-form {
@@ -146,11 +140,11 @@ a:hover {
 }
 
 label>span {
-    color: #fff !important;
+    color: #000 !important;
 }
 
 .text-top-form {
-    color: #fff;
+    color: #000;
     font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
@@ -208,19 +202,15 @@ select {
     margin-top: 3% !important;
     font-size: 19px !important;
     border-color: #fff !important;
-    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
 
-/* select:hover {
-    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
-} */
 
 div#animationdivIcon {
     margin-top: 3% !important;
 }
 
 #gracias {
-    color: #fff;
+    color: #000;
     font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
@@ -258,34 +248,7 @@ div#animationdivIcon {
     width: 206px !important;
 }
 
-/* 
-███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
-██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
-█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
-██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
-██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
-╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
-                                                   
-*/
 
-/* 
-███╗   ███╗ █████╗ ██████╗  █████╗ 
-████╗ ████║██╔══██╗██╔══██╗██╔══██╗
-██╔████╔██║███████║██████╔╝███████║
-██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
-██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
-╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
-*/
-
-/* 
-████████╗███████╗███████╗████████╗
-╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
-   ██║   █████╗  ███████╗   ██║   
-   ██║   ██╔══╝  ╚════██║   ██║   
-   ██║   ███████╗███████║   ██║   
-   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
-                                  
-*/
 
 /* 
  ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
@@ -424,10 +387,6 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
-    }
-
 }
 
 /* Teléfonos (576px a 767px) */
@@ -450,10 +409,6 @@ div#animationdivIcon {
 
     .text-top-form-anniversary2 {
         font-size: 20px !important;
-    }
-
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
     }
 
     a.btn-form {
@@ -481,10 +436,6 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    }
-
-    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
-        height: 60vh;
     }
 
     .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {

@@ -42,4 +42,7 @@ return [
     'parrafo-revision' => "Una revisión visual a tiempo puede marcar la diferencia en su desarrollo y desempeño académico.",
     'wsp_preferencia' => "¡Pide cita a través de nuestro número de WhatsApp!",
     'wsp_chat' => "Chatear",
+    'promo_monturas_luyando' => "Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.",
+    'promo_lentillas_luyando' => "Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.",
+    'fondo_ojo_novelda' => "Pide cita para una revisión visual completa rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.",
 ];
