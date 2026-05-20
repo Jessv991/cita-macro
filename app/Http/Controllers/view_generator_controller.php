@@ -87,6 +87,7 @@ class view_generator_controller extends Controller
 
         //================LANDING NOMBRE CARPETA DE LA VISTA=================
         $this->data['landing'] = $origen;
+        $this->data['customText'] = request()->query('customText'); //(esto está recibiendo texto personalizado del formulario por get)
 
         $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
 
