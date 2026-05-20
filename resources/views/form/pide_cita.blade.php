@@ -12,19 +12,21 @@
         <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
+        <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
+
         @if (isset($data['commodityLC']) && $data['commodityLC'] == 'lc')
             <input type="hidden" id="commodityLC" name="commodityLC" value="{{ $data['commodityLC'] }}">
             <div class="d-flex flex-column justify-content-center align-items-start mb-5">
                 <p class="text-top-form">{{ __('form_lc_translation.Pide_cita_rellenando') }}</p>
                 <p class="text-top-form">{{ __('form_lc_translation.Producto_adquirido') }}</p>
             </div>
-        @elseif (isset($data['origin']) && $data['origin'] == 'RAY-BAN')
+        @elseif (isset($data['landing']) && $data['landing'] == 'RAY-BAN')
             <div class="d-flex justify-content-center align-items-start mb-5">
                 <p class="text-top-form">Omple el formulari amb les teves dades per entrar al sorteig</p>
             </div>
         @elseif (isset($data['customText']) && $data['customText'] === 'true')
             <div class="d-flex justify-content-center align-items-start mb-5 text-center">
-                <p class="text-top-form">{{ __('form_translation.' . $data['origin'] . '_' . $data['weblogin']) }}</p>
+                <p class="text-top-form">{{ __('form_translation.' . $data['landing'] . '_' . $data['weblogin']) }}</p>
             </div>
         @else
             <div class="d-flex justify-content-center align-items-start mb-5">
