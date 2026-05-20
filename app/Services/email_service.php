@@ -180,7 +180,7 @@ class email_service
         }
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC, $weblogin)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $typeLC, $commodityLC, $weblogin, $landing)
     {
 
         $Citas = new CitasLandings();

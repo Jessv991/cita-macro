@@ -584,6 +584,7 @@ class view_generator_controller extends Controller
         $ip = $this->data['ip'];
         $commodityLC = null;
         $getLogo = $this->generadorImg->index($logo);
+        $landing = $request->input('landing');
 
         if ($getLogo) {
 
@@ -624,7 +625,7 @@ class view_generator_controller extends Controller
         $rules = array_merge($baseValidated, $specificRules);
         $validated = $request->validate($rules);
 
-        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda);
+        $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda, $landing);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
