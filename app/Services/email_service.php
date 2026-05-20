@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Mail;
 
 class email_service
 {
-    public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda)
+    public function sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $typeLC, $commodityLC, $weblogin, $tienda, $landing)
     {
 
         if ($typeLC === 'ordinario') {
@@ -76,7 +76,7 @@ class email_service
 
             if ($typeLC === 'ordinario' && $commodityLC === null) {
 
-                if ($origen !== 'RAY-BAN') {
+                if ($landing !== 'RAY-BAN') {
                     $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
                 } else {
                     $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteRayBan.blade.php');
@@ -159,7 +159,7 @@ class email_service
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC, $weblogin);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC, $weblogin, $landing);
             }
 
 
@@ -211,7 +211,7 @@ class email_service
                 $archivo = resource_path('views/pages/mail/' . $locale . '/ComprobanteLC.blade.php');
             } elseif ($typeLC === 'ordinario') {
 
-                if ($origen !== 'RAY-BAN') {
+                if ($landing !== 'RAY-BAN') {
                     $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteComprobante.blade.php');
                 } else {
                     $archivo = resource_path('views/pages/mail/' . $locale . '/templateCitaClienteRayBan.blade.php');
