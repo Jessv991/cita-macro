@@ -138,6 +138,7 @@ class view_generator_controller extends Controller
             $origin = request()->has('utm_campaign') ? request()->input('utm_campaign') : $origen;
         }
 
+        $this->data['landing'] = $origen;
 
         $weblogin = str_replace(' ', '', $weblogin);
 
