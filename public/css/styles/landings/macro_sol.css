@@ -16,7 +16,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #282828;
+    background-color: #dd9360;
 }
 
 body::-webkit-scrollbar {
@@ -88,6 +88,11 @@ body::-webkit-scrollbar-track {
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+.d-flex.justify-content-center.align-items-start.mb-5 {
+    text-align: center !important;
+}
+
 
 .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
     font-weight: 200;
