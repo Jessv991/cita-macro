@@ -13,7 +13,6 @@
                         <source
                             src="{{ asset($data['rutaAsset'] . 'assets/img/' . $data['landing'] . '/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/video.mp4') }}"
                             type="video/mp4">
-                        Your browser does not support the video tag.
                     </video>
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex justify-content-center align-items-center p-0">
