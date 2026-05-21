@@ -11,7 +11,7 @@
                 <div class="col-lg-8 col-12 d-flex justify-content-center align-items-center p-0">
                     <video autoplay muted playsinline loop id="video2">
                         <source
-                            src="{{ asset($data['rutaAsset'] . 'assets/img/optica_LaCasita/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/video.mp4') }}"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/' . $data['landing'] . '/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/video.mp4') }}"
                             type="video/mp4">
                         Your browser does not support the video tag.
                     </video>

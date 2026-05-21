@@ -18,9 +18,10 @@
 }
 
 body {
-    height: 104% !important;
+    height: 100% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #f6f6f6;
 }
 
 body::-webkit-scrollbar {
@@ -36,13 +37,13 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color {
-    background-color: #EF8019 !important;
+    background-color: #424242 !important;
     color: #f0f0f0 !important;
     font-weight: bold !important;
 }
 
 .btn-color:hover {
-    background-color: #000 !important;
+    background-color: #a0a0a0 !important;
 }
 
 .b-pedir-citas {
@@ -78,6 +79,10 @@ a:hover {
 ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
+
+.d-flex.justify-content-center.align-items-start.mb-5 {
+    text-align: center !important;
+}
 
 .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.mt-3 {
     background-color: #f08019;
@@ -119,7 +124,7 @@ label>span {
 }
 
 .text-top-form {
-    color: #000;
+    color: #424242;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
