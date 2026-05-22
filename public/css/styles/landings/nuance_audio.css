@@ -372,7 +372,7 @@ div#animationdivIcon {
     }
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 27px;
         padding: 2%;
     }
 
@@ -409,6 +409,10 @@ div#animationdivIcon {
         padding: 8%;
     }
 
+    .text-top-form {
+        font-size: 24px;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -428,6 +432,10 @@ div#animationdivIcon {
 
     .contenedor-form {
         padding: 8%;
+    }
+
+    .text-top-form {
+        font-size: 19px;
     }
 
 }
