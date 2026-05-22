@@ -10,7 +10,13 @@
 
 #video2 {
     width: 100%;
-    border-radius: 40px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    touch-action: pan-y;
+    -webkit-touch-callout: none;
+    user-select: none;
+    object-fit: cover;
 }
 
 .form-check-label::before {
