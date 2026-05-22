@@ -8,19 +8,19 @@
                                                                                        
 */
 
+.col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
+    padding: .25rem !important;
+}
+
 #video2 {
     width: 100%;
     max-width: 100%;
-    /* Evita que exceda el contenedor */
     height: auto;
-    /* Mantiene proporción */
     display: block;
     touch-action: pan-y;
-    /* Permite scroll vertical pero bloquea zoom */
     -webkit-touch-callout: none;
     user-select: none;
     object-fit: cover;
-    /* Ajusta el contenido al espacio disponible */
 }
 
 .form-check-label::before {
