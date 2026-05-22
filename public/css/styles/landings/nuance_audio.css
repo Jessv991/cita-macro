@@ -368,13 +368,12 @@ div#animationdivIcon {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
-        padding: .25rem !important;
+        padding: 1rem !important;
     }
 
     .text-top-form {
         font-size: 20px;
         padding: 2%;
-        margin-top: 50px;
     }
 
     .mb-5 {
@@ -383,6 +382,10 @@ div#animationdivIcon {
 
     .b-pedir-citas {
         justify-content: center !important;
+    }
+
+    .contenedor-form {
+        padding: 8%;
     }
 
 }
@@ -391,11 +394,7 @@ div#animationdivIcon {
 @media (min-width: 576px) and (max-width: 767px) {
 
     .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
-        padding: .25rem !important;
-    }
-
-    .text-top-form {
-        margin-top: 65px;
+        padding: 1rem !important;
     }
 
     .mb-5 {
@@ -404,6 +403,10 @@ div#animationdivIcon {
 
     .b-pedir-citas {
         justify-content: center !important;
+    }
+
+    .contenedor-form {
+        padding: 8%;
     }
 
 }
@@ -412,11 +415,7 @@ div#animationdivIcon {
 @media (max-width: 575px) {
 
     .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
-        padding: .25rem !important;
-    }
-
-    .text-top-form {
-        margin-top: 65px;
+        padding: 1rem !important;
     }
 
     .mb-5 {
@@ -425,6 +424,10 @@ div#animationdivIcon {
 
     .b-pedir-citas {
         justify-content: center !important;
+    }
+
+    .contenedor-form {
+        padding: 8%;
     }
 
 }
