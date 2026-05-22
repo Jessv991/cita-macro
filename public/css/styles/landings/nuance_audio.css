@@ -10,13 +10,17 @@
 
 #video2 {
     width: 100%;
-    max-width: 100%;        /* Evita que exceda el contenedor */
-    height: auto;            /* Mantiene proporción */
+    max-width: 100%;
+    /* Evita que exceda el contenedor */
+    height: auto;
+    /* Mantiene proporción */
     display: block;
-    touch-action: pan-y;    /* Permite scroll vertical pero bloquea zoom */
+    touch-action: pan-y;
+    /* Permite scroll vertical pero bloquea zoom */
     -webkit-touch-callout: none;
     user-select: none;
-    object-fit: cover;      /* Ajusta el contenido al espacio disponible */
+    object-fit: cover;
+    /* Ajusta el contenido al espacio disponible */
 }
 
 .form-check-label::before {
@@ -377,6 +381,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    .b-pedir-citas {
+        justify-content: center !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -390,6 +398,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    .b-pedir-citas {
+        justify-content: center !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -401,6 +413,10 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    .b-pedir-citas {
+        justify-content: center !important;
     }
 
 }
