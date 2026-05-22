@@ -25,3 +25,14 @@
 </div>
 
 @include('layouts.footer')
+
+<script>
+    document.getElementById('video2').addEventListener('touchmove', function(e) {
+        // Permite el gesto de scroll peroprevent zoom
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, {
+        passive: false
+    });
+</script>
