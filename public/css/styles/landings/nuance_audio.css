@@ -8,10 +8,6 @@
                                                                                        
 */
 
-.col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
-    padding: .25rem !important;
-}
-
 #video2 {
     width: 100%;
     max-width: 100%;
@@ -371,6 +367,10 @@ div#animationdivIcon {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
+    .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
+        padding: .25rem !important;
+    }
+
     .text-top-form {
         font-size: 20px;
         padding: 2%;
@@ -390,6 +390,10 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
+    .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
+        padding: .25rem !important;
+    }
+
     .text-top-form {
         margin-top: 65px;
     }
@@ -406,6 +410,10 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    .col-lg-8.col-12.d-flex.justify-content-center.align-items-center.p-0 {
+        padding: .25rem !important;
+    }
 
     .text-top-form {
         margin-top: 65px;
