@@ -8,14 +8,12 @@
                                                                                        
 */
 
-.row {
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-
 #video2 {
     width: 100%;
     display: block;
+    touch-action: none; /* Esta línea evita el zoom y gestures táctiles en el vidéo */
+    -webkit-touch-callout: none; /* Opcional: evita el menú contextual en iOS al mantener presionado */
+    user-select: none; /* Opcional: evita que se seleccione el contenido al hacer doble tap */
 }
 
 .form-check-label::before {
