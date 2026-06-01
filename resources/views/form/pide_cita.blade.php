@@ -196,7 +196,7 @@
                     </div>
                 @endif
 
-                @if ($logoOptica)
+                @if (!empty($data['logoOptica']))
                     <div class="mt-5 w-100 {{ $data['weblogin'] }}class1">
                         <img class="logo-optica-data w-25 {{ $data['weblogin'] }}class"
                             src="{{ __($data['logoOptica']) }}" alt="">
