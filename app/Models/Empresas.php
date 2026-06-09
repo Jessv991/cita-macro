@@ -380,7 +380,7 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS CON EL MISMO WEBLOGIN================
 
-    public function getStoreByCodeAndWeblogin($weblogin)
+    public function getStoreByCodeAndWeblogin($weblogin, $allStore)
     {
 
         $datos = DB::table('empresas')
