@@ -344,22 +344,22 @@ class Empresas extends Model
             ->where(function ($query) {
                 $query->where('d9', '-9');
             });
+
+        if (!empty($allStore)) {
+            $datos->where('weblogin', 'like', $allStore . '%');
+        } else {
+            $datos->where('weblogin', $weblogin);
+        }
+
         // Si promocional no es exactamente 'true', agregar condición de CRM
         if (isset($promocional) || $landing === 'contactologia') {
             return $datos->get();
-        }elseif(!empty($allStore)){
-
-            $datos->where('weblogin', 'like', $allStore . '%');
-            $datos->where('CRM', 'si');
-            return $datos->get();
-        }
-         else {
-            $datos->where('weblogin', $weblogin);
+        } else {
             $datos->where('CRM', 'si');
             return $datos->get();
         }
     }
-    
+
     public function getAllStoreByCodeAndWeblogin($weblogin, $promocional, $landing)
     {
 
@@ -406,7 +406,7 @@ class Empresas extends Model
     {
         $datos = DB::table('empresas')
             ->where('weblogin', 'like', '%' . $weblogin . '%');
-            return $datos->get();        
+        return $datos->get();
     }
 
     //================OBTENER TIENDA POR CÓDIGO PARA ENVÍO EMAIL=================

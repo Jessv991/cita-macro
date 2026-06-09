@@ -9,13 +9,12 @@
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_allStore" name="_allStore" value="{{ $data['allStore'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
-        <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
-        @if($data['landing'] === 'intervision_expert_two_for_one')
+        @if ($data['landing'] === 'intervision_expert_two_for_one')
             <div class="text-start mb-5">
                 <p class="text-top-form-anniversary">{{ __('form_translation.anniversary') }}</p>
                 <p class="text-top-form-anniversary2">{{ __('form_translation.anniversary2') }}</p>
@@ -31,7 +30,7 @@
         @endif
 
         <div>
-            @if (!empty($data['weblogin']) && !empty($data['allStore']))
+            @if (empty($data['weblogin']) && empty($data['allStore']))
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="500">
 
@@ -302,10 +301,13 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+        var weblogin = $('#_weblogin').val();
+        var allStore = $('#_allStore').val();
+
+        var tieneContexto = (weblogin && weblogin !== '') || (allStore && allStore !== '');
 
         // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true') {
+        if (tieneContexto) {
             $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
@@ -316,9 +318,9 @@
             var opciones = opticaSelect.find('option');
             var webloginVacio = <?php echo empty($data['weblogin']) ? 'true' : 'false'; ?>;
 
-            if(webloginVacio){
+            if (webloginVacio) {
                 $('#optica').html('<option value="">Selecciona una óptica</option>');
-            }else{
+            } else {
 
                 if (opciones.length > 1) {
                     // Más de una opción → limpiar
@@ -330,7 +332,7 @@
                     opticaSelect.addClass('readonly-select').prop('disabled', true);
                 }
             }
-            
+
             // Quita la invalidación del select cuando es un solo campo
             $('#optica').removeClass('readonly-select');
 
