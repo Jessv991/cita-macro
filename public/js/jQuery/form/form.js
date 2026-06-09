@@ -3,6 +3,7 @@ var dispositivo = window.screen.width;
 $(document).ready(function () {
 
     var weblogin = $('#_weblogin').val();
+    var allStore = $('#_allStore').val();
     var optica = $('#_optica').val();
 
 
