@@ -29,7 +29,7 @@
         @endif
 
         <div>
-            @if (!$data['weblogin'])
+            @if (empty($data['weblogin']) && empty($data['allStore']))
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="500">
 
