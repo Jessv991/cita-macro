@@ -92,6 +92,9 @@ class view_generator_controller extends Controller
 
         $segments = request()->segments();
 
+        $allStore = request()->query('allStore'); //(esto está recibiendo test por get)
+        $this->data['allStore'] = $allStore;
+
         $test = request()->query('test'); //(esto está recibiendo test por get)
 
         $empresas = new Empresas();
