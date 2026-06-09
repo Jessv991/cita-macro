@@ -103,7 +103,79 @@ class Empresas extends Model
      * @var array
      */
     protected $fillable = [
-        'd1', 'd2', 'd3', 'd4', 'd5', 'd6', 'd7', 'd8', 'd9', 'd10', 'd11', 'd12', 'd13', 'd14', 'd15', 'd16', 'd17', 'd18', 'd19', 'd20', 'd21', 'd22', 'd23', 'd24', 'd25', 'd26', 'd27', 'd28', 'd29', 'd30', 'd31', 'd32', 'd33', 'd34', 'd35', 'd36', 'd37', 'd38', 'd39', 'd40', 'd41', 'd42', 'd43', 'd44', 'd45', 'd46', 'd47', 'd48', 'd49', 'd50', 'd51', 'd52', 'd53', 'd54', 'd55', 'd56', 'd57', 'd58', 'd59', 'f1', 'f2', 'f3', 'f4', 'f5', 'f6', 'f7', 'f8', 'f9', 'f10', 'naturalAudio', 'weblogin', 'tienda', 'CRM'
+        'd1',
+        'd2',
+        'd3',
+        'd4',
+        'd5',
+        'd6',
+        'd7',
+        'd8',
+        'd9',
+        'd10',
+        'd11',
+        'd12',
+        'd13',
+        'd14',
+        'd15',
+        'd16',
+        'd17',
+        'd18',
+        'd19',
+        'd20',
+        'd21',
+        'd22',
+        'd23',
+        'd24',
+        'd25',
+        'd26',
+        'd27',
+        'd28',
+        'd29',
+        'd30',
+        'd31',
+        'd32',
+        'd33',
+        'd34',
+        'd35',
+        'd36',
+        'd37',
+        'd38',
+        'd39',
+        'd40',
+        'd41',
+        'd42',
+        'd43',
+        'd44',
+        'd45',
+        'd46',
+        'd47',
+        'd48',
+        'd49',
+        'd50',
+        'd51',
+        'd52',
+        'd53',
+        'd54',
+        'd55',
+        'd56',
+        'd57',
+        'd58',
+        'd59',
+        'f1',
+        'f2',
+        'f3',
+        'f4',
+        'f5',
+        'f6',
+        'f7',
+        'f8',
+        'f9',
+        'f10',
+        'naturalAudio',
+        'weblogin',
+        'tienda',
+        'CRM'
     ];
 
     /**
@@ -119,7 +191,80 @@ class Empresas extends Model
      * @var array
      */
     protected $casts = [
-        'codigo' => 'int', 'd1' => 'string', 'd2' => 'string', 'd3' => 'string', 'd4' => 'string', 'd5' => 'string', 'd6' => 'string', 'd7' => 'string', 'd8' => 'string', 'd9' => 'string', 'd10' => 'string', 'd11' => 'string', 'd12' => 'string', 'd13' => 'string', 'd14' => 'string', 'd15' => 'string', 'd16' => 'string', 'd17' => 'string', 'd18' => 'string', 'd19' => 'string', 'd20' => 'string', 'd21' => 'string', 'd22' => 'string', 'd23' => 'string', 'd24' => 'string', 'd25' => 'string', 'd26' => 'string', 'd27' => 'string', 'd28' => 'string', 'd29' => 'string', 'd30' => 'string', 'd31' => 'string', 'd32' => 'string', 'd33' => 'string', 'd34' => 'string', 'd35' => 'string', 'd36' => 'string', 'd37' => 'string', 'd38' => 'string', 'd39' => 'string', 'd40' => 'string', 'd41' => 'string', 'd42' => 'string', 'd43' => 'string', 'd44' => 'string', 'd45' => 'string', 'd46' => 'string', 'd47' => 'string', 'd48' => 'string', 'd49' => 'string', 'd50' => 'string', 'd51' => 'string', 'd52' => 'string', 'd53' => 'string', 'd54' => 'string', 'd55' => 'string', 'd56' => 'string', 'd57' => 'string', 'd58' => 'string', 'd59' => 'string', 'f1' => 'string', 'f2' => 'string', 'f3' => 'string', 'f4' => 'string', 'f5' => 'string', 'f6' => 'string', 'f7' => 'string', 'f8' => 'string', 'f9' => 'string', 'f10' => 'string', 'naturalAudio' => 'int', 'weblogin' => 'string', 'tienda' => 'string', 'CRM' => 'string'
+        'codigo' => 'int',
+        'd1' => 'string',
+        'd2' => 'string',
+        'd3' => 'string',
+        'd4' => 'string',
+        'd5' => 'string',
+        'd6' => 'string',
+        'd7' => 'string',
+        'd8' => 'string',
+        'd9' => 'string',
+        'd10' => 'string',
+        'd11' => 'string',
+        'd12' => 'string',
+        'd13' => 'string',
+        'd14' => 'string',
+        'd15' => 'string',
+        'd16' => 'string',
+        'd17' => 'string',
+        'd18' => 'string',
+        'd19' => 'string',
+        'd20' => 'string',
+        'd21' => 'string',
+        'd22' => 'string',
+        'd23' => 'string',
+        'd24' => 'string',
+        'd25' => 'string',
+        'd26' => 'string',
+        'd27' => 'string',
+        'd28' => 'string',
+        'd29' => 'string',
+        'd30' => 'string',
+        'd31' => 'string',
+        'd32' => 'string',
+        'd33' => 'string',
+        'd34' => 'string',
+        'd35' => 'string',
+        'd36' => 'string',
+        'd37' => 'string',
+        'd38' => 'string',
+        'd39' => 'string',
+        'd40' => 'string',
+        'd41' => 'string',
+        'd42' => 'string',
+        'd43' => 'string',
+        'd44' => 'string',
+        'd45' => 'string',
+        'd46' => 'string',
+        'd47' => 'string',
+        'd48' => 'string',
+        'd49' => 'string',
+        'd50' => 'string',
+        'd51' => 'string',
+        'd52' => 'string',
+        'd53' => 'string',
+        'd54' => 'string',
+        'd55' => 'string',
+        'd56' => 'string',
+        'd57' => 'string',
+        'd58' => 'string',
+        'd59' => 'string',
+        'f1' => 'string',
+        'f2' => 'string',
+        'f3' => 'string',
+        'f4' => 'string',
+        'f5' => 'string',
+        'f6' => 'string',
+        'f7' => 'string',
+        'f8' => 'string',
+        'f9' => 'string',
+        'f10' => 'string',
+        'naturalAudio' => 'int',
+        'weblogin' => 'string',
+        'tienda' => 'string',
+        'CRM' => 'string'
     ];
 
     /**
@@ -225,7 +370,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where(function ($query) {     
+            ->where(function ($query) {
                 $query->where('d9', '-9');
             })
             ->get();
@@ -240,13 +385,19 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where(function ($query) {     
+            ->where(function ($query) {
                 $query->where('d9', '-9');
-            })
-            ->where('weblogin', $weblogin)
-            ->get();
+            });
 
-        return $datos;
+        if (!empty($allStore)) {
+            $datos->where('weblogin', 'like', $allStore . '%');
+        } else {
+            $datos->where('weblogin', $weblogin);
+        }
+
+
+
+        return $datos->get();
     }
 
 
@@ -256,14 +407,14 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where(function ($query) {     
+            ->where(function ($query) {
                 $query->where('d9', '-9');
             })
             ->where('weblogin', $weblogin)
             ->where('tienda', $tienda)
             ->get();
 
-        
+
 
         return $datos;
     }
@@ -275,7 +426,7 @@ class Empresas extends Model
 
         $datos = DB::table('empresas')
             ->where('d20', "=", 'si')
-            ->where(function ($query) {     
+            ->where(function ($query) {
                 $query->where('d9', '-9');
             })
             ->where('tienda', $code_store)
@@ -286,21 +437,21 @@ class Empresas extends Model
 
     //================OBTENER CIUDAD POR LA TIENDA================
 
-    public function getCityByoptica($optica){
+    public function getCityByoptica($optica)
+    {
 
         $datos = DB::table('empresas')
             ->select('d3')
             ->where('codigo', $optica)
-            ->where('d22', 'si')  
-            ->where('d20', "=", 'si')         
-            ->where(function ($query) {     
+            ->where('d22', 'si')
+            ->where('d20', "=", 'si')
+            ->where(function ($query) {
                 $query->where('d9', '-9');
             })
             ->where('CRM', 'si')
             ->get();
 
         return $datos;
-
     }
 
 
@@ -389,37 +540,35 @@ class Empresas extends Model
 
         $datos = DB::table("empresas as e")
 
-                ->select('e.d3')
-                ->distinct('e.d3')
-                ->join("zonas as z", 'z.id', '=', 'e.d2')
-                ->where('z.id', $codigoProvincia)
-                ->where("e.d22", "=", 'si')
-                ->where("e.d19", "=", 'si')
-                ->where(function ($query) {
-                    $query->where('e.d9', '-9');
-                })
-                ->where("e.crm", "=", 'si')
-                ->orderBy('e.d3', 'asc')
-                ->get();
+            ->select('e.d3')
+            ->distinct('e.d3')
+            ->join("zonas as z", 'z.id', '=', 'e.d2')
+            ->where('z.id', $codigoProvincia)
+            ->where("e.d22", "=", 'si')
+            ->where("e.d19", "=", 'si')
+            ->where(function ($query) {
+                $query->where('e.d9', '-9');
+            })
+            ->where("e.crm", "=", 'si')
+            ->orderBy('e.d3', 'asc')
+            ->get();
 
         return $datos;
-
     }
 
-    public function getStoresByProvincia($localidad){
+    public function getStoresByProvincia($localidad)
+    {
 
         $datos = DB::table("empresas")
-                ->distinct()
-                ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
-                ->where('d3', $localidad)
-                ->where("d22", "=", 'si')
-                ->where("d19", "=", 'si')
-                ->where(function ($query) {
-                    $query->where('d9', '-9');
-                })
-                ->get();
+            ->distinct()
+            ->select('tienda', 'd29', 'd23', 'd3', 'weblogin', 'tienda')
+            ->where('d3', $localidad)
+            ->where("d22", "=", 'si')
+            ->where("d19", "=", 'si')
+            ->where(function ($query) {
+                $query->where('d9', '-9');
+            })
+            ->get();
         return $datos;
-
     }
-
 }
