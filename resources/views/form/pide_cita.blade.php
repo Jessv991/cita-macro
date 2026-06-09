@@ -8,7 +8,7 @@
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
-        <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
+        <input type="hidden" id="_allStore" name="_allStore" value="{{ $data['allStore'] }}">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
         <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
@@ -27,7 +27,7 @@
 
 
         <div>
-            @if (!$data['weblogin'])
+            @if (empty($data['weblogin']) && empty($data['allStore']))
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="500">
 
@@ -308,10 +308,13 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+        var weblogin = $('#_weblogin').val();
+        var allStore = $('#_allStore').val();
+
+        var tieneContexto = (weblogin && weblogin !== '') || (allStore && allStore !== '');
 
         // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true') {
+        if (tieneContexto) {
             $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
