@@ -254,9 +254,10 @@ class view_generator_controller extends Controller
     {
         $localidad = $request->input('weblogin');
 
-        $empresas = new Empresas();
+        $allStore = $request->input('allStore');
 
-        $optica = $empresas->getStoreByCodeAndWeblogin($localidad);
+        $empresas = new Empresas();
+        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $allStore);
 
         return response()->json($optica);
     }
