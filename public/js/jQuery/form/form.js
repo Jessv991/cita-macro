@@ -11,7 +11,7 @@ $(document).ready(function () {
 
     if (weblogin && optica) {
         putOpticasByWeblogin();
-    } else if (weblogin) {
+    } else if (weblogin || allStore) {
         putOpticaByweblogin();
         //getOpticaSelectCity();
     } else {
