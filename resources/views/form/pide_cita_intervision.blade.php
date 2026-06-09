@@ -300,10 +300,13 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
+        var weblogin = $('#_weblogin').val();
+        var allStore = $('#_allStore').val();
+
+        var tieneContexto = (weblogin && weblogin !== '') || (allStore && allStore !== '');
 
         // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true') {
+        if (tieneContexto) {
             $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
         } else {
             $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
