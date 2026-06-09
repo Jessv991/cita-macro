@@ -11,6 +11,7 @@
         <input type="hidden" id="_allStore" name="_allStore" value="{{ $data['allStore'] }}">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
         <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
+        
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
 
         @if($data['landing'] === 'intervision_expert_two_for_one')
