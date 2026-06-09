@@ -7,6 +7,7 @@
         <input type="hidden" id="url_landing" name="url_landing" value="{{ $data['url'] }}">
         <input type="hidden" id="origen" name="origen" value="{{ $data['origin'] }}">
         <input type="hidden" id="_weblogin" name="_weblogin" value="{{ $data['weblogin'] }}">
+        <input type="hidden" id="_allStore" name="_allStore" value="{{ $data['allStore'] }}">
         <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
         <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
         <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
@@ -30,7 +31,7 @@
         @endif
 
         <div>
-            @if (!$data['weblogin'])
+            @if (!empty($data['weblogin']) && !empty($data['allStore']))
                 <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="500">
 

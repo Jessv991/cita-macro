@@ -334,11 +334,37 @@ class Empresas extends Model
 
     //================OBTENER LOS DATOS DE TODAS LAS TIENDAS CON EL MISMO WEBLOGIN================
 
-    public function getStoreByCodeAndWeblogin($weblogin, $promocional, $landing)
+    public function getStoreByCodeAndWeblogin($weblogin, $promocional, $landing, $allStore)
     {
 
         $datos = DB::table('empresas')
-            ->where('weblogin', $weblogin)
+            //->where('weblogin', $weblogin)
+            ->where('d22', 'si')
+            ->where("d19", "=", 'si')
+            ->where(function ($query) {
+                $query->where('d9', '-9');
+            });
+        // Si promocional no es exactamente 'true', agregar condición de CRM
+        if (isset($promocional) || $landing === 'contactologia') {
+            return $datos->get();
+        }elseif(!empty($allStore)){
+
+            $datos->where('weblogin', 'like', $allStore . '%');
+            $datos->where('CRM', 'si');
+            return $datos->get();
+        }
+         else {
+            $datos->where('weblogin', $weblogin);
+            $datos->where('CRM', 'si');
+            return $datos->get();
+        }
+    }
+    
+    public function getAllStoreByCodeAndWeblogin($weblogin, $promocional, $landing)
+    {
+
+        $datos = DB::table('empresas')
+            ->where('weblogin', 'like', $weblogin . '%')
             ->where('d22', 'si')
             ->where("d19", "=", 'si')
             ->where(function ($query) {

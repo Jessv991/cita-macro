@@ -3,6 +3,7 @@ var dispositivo = window.screen.width;
 $(document).ready(function () {
 
     var weblogin = $('#_weblogin').val();
+    var allStore = $('#_allStore').val();
     var optica = $('#_optica').val();
 
     console.log(promocional);
@@ -12,7 +13,7 @@ $(document).ready(function () {
 
     if (weblogin && optica) {
         putOpticasByWeblogin();
-    } else if (weblogin) {
+    } else if (weblogin || allStore) {
         putOpticaByweblogin();
     } else {
         getCityBySelectState();
@@ -452,6 +453,7 @@ function putOpticaByweblogin() {
         method: 'POST',
         data: {
             'weblogin': $('#_weblogin').val(),
+            'allStore': $('#_allStore').val(),
             promocional: $('#promocional').val(),
             landing: $('#landing').val(),
             _token: csrfToken

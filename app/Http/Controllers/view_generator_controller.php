@@ -52,7 +52,7 @@ class view_generator_controller extends Controller
         } else {
             $tipo_dispositivo = 'desktop';
         }
-  
+
         $this->data['tipo_dispositivo'] = $tipo_dispositivo;
 
         //tipo de dispositivo me da el navegador que se está usando
@@ -94,6 +94,8 @@ class view_generator_controller extends Controller
         $segments = request()->segments();
 
         $test = request()->query('test'); //(esto está recibiendo test por get)
+        $allStore = request()->query('allStore'); //(esto está recibiendo test por get)
+        $this->data['allStore'] = $allStore;
         $promocional = request()->query('promocional'); //(esto está recibiendo test por get)
 
         $empresas = new Empresas();
@@ -115,19 +117,19 @@ class view_generator_controller extends Controller
         if (isset($weblogin) && isset($tienda)) {
             //consulta cuando pasan weblogin y tienda
             $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda, $promocional, $origen);
-        } elseif (isset($weblogin)) {
+        } elseif (isset($weblogin) || !empty($allStore)) {
             //consultaslas tiendas por weblogin
-            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $promocional, $origen);
+            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $promocional, $origen, $allStore);
         } else {
             //consulta todas las tiendas
             $this->data['centros'] = $empresas->getStore($promocional, $origen);
         }
 
         //=====================IDIOMA==========================
-        if(isset($promocional)){
+        if (isset($promocional)) {
 
             $this->data['promocional'] = $promocional;
-        }else{
+        } else {
             $this->data['promocional'] = false;
         }
 
@@ -137,7 +139,7 @@ class view_generator_controller extends Controller
         $this->data['url'] = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
 
         //=====================MAPAS=====================
-        
+
         $this->data['mapa'] = file_get_contents("https://www.plataformasit.com/mapasTiendasNOG/featuresNOG.json");
 
         //================OPTICA=================
@@ -161,11 +163,9 @@ class view_generator_controller extends Controller
         if ($baseUrl !== 'https://optica.naturalopticsgroup.com') {
 
             $rutaAsset = '';
-
         } else {
 
             $rutaAsset = 'cita-macro/';
-
         }
 
         $this->data['rutaAsset'] = $rutaAsset;
@@ -188,30 +188,28 @@ class view_generator_controller extends Controller
         $logo = $empresas->getLogos($weblogin, $promocional, $origen);
 
         // Verificar que $logo no sea null antes de pasarlo a la vista
-        if($logo){
+        if ($logo) {
             $this->data['logo'] = $logo->f1;
-        }else {
-            $this->data['logo'] = ''; 
+        } else {
+            $this->data['logo'] = '';
         }
 
         $getLogo = $this->generadorImg->index($this->data['logo']);
 
         if ($getLogo) {
-            $logoOptica = asset($rutaAsset.'/assets/logos/opticas/' . $getLogo);
-        }else{
+            $logoOptica = asset($rutaAsset . '/assets/logos/opticas/' . $getLogo);
+        } else {
             $logoOptica = null;
         }
-        
+
         $this->data['logoOptica'] = $logoOptica;
 
 
-        if (view()->exists('pages.' . $origen . '.index')) {//verificamos si la ruta existe
+        if (view()->exists('pages.' . $origen . '.index')) { //verificamos si la ruta existe
             return view('pages.' . $origen . '.index', ['data' => $this->data]);
-        } else {//redirigimos a vista principal si no existe la ruta
-            return redirect('https://optica.naturalopticsgroup.com/cita-macro/es/cita-commodity');//ESTO SE DEBE ACTUALIZAR
+        } else { //redirigimos a vista principal si no existe la ruta
+            return redirect('https://optica.naturalopticsgroup.com/cita-macro/es/cita-commodity'); //ESTO SE DEBE ACTUALIZAR
         }
-
-
     }
 
 
@@ -233,46 +231,47 @@ class view_generator_controller extends Controller
         $codigoProvincia = $request->input('provincias');
         $promocional = $request->input('promocional');
         $landing = $request->input('landing');
-        
+
         $localidades = $empresas->getCityByProvincia($codigoProvincia, $promocional, $landing);
-        
+
         return response()->json($localidades);
     }
-    
+
     //esta función da las opticas o la optica de la ciudad seleccionada
     public function getOpticasByProvincia(Request $request)
     {
-        
+
         $empresas = new Empresas();
-        
+
         $localidad = $request->input('ciudad');
         $promocional = $request->input('promocional');
         $landing = $request->input('landing');
-        
+
         $optica = $empresas->getStoresByProvincia($localidad, $promocional, $landing);
-        
+
         return response()->json($optica);
     }
-    
-    
-    
+
+
+
     public function getOpticasByWeblogin(Request $request)
     {
         $localidad = $request->input('weblogin');
         $promocional = $request->input('promocional');
         $landing = $request->input('landing');
-        
+        $allStore = $request->input('allStore');
+
         $empresas = new Empresas();
-        
-        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $promocional, $landing);
-        
+        $optica = $empresas->getStoreByCodeAndWeblogin($localidad, $promocional, $landing, $allStore);
+
+
         return response()->json($optica);
     }
-    
-    
+
+
     public function getOpticaByWebloginAndOptica(Request $request)
     {
-        
+
         $localidad = $request->input('weblogin');
         $tienda = $request->input('optica');
         $promocional = $request->input('promocional');
@@ -314,13 +313,13 @@ class view_generator_controller extends Controller
         $codigo = $optica[0]->codigo;
 
         if ($request->has('optica_texto') && !empty($request->input('optica_texto'))) {
-            $optica1 = $codigo." - ".$request->input('optica_texto');
+            $optica1 = $codigo . " - " . $request->input('optica_texto');
         }
-        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto')!=__('form_translation.optica2')) {
-            $optica2 = $codigo." - ".$request->input('optica2_texto');
+        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto') != __('form_translation.optica2')) {
+            $optica2 = $codigo . " - " . $request->input('optica2_texto');
         }
-        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto')!=__('form_translation.optica3')) {
-            $optica3 = $codigo." - ".$request->input('optica3_texto');
+        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto') != __('form_translation.optica3')) {
+            $optica3 = $codigo . " - " . $request->input('optica3_texto');
         }
         $origen = $request->input('origen');
         $test = $request->input('_test');
@@ -341,7 +340,7 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ];
 
-        if($origen=='contactologia') {
+        if ($origen == 'contactologia') {
             $baseRules = [
                 'nombre' => 'bail|required|max:20',
                 'apellidos' => 'bail|required|max:20',
@@ -350,7 +349,7 @@ class view_generator_controller extends Controller
                 'check-poli' => 'accepted',
                 'check-sorteo' => 'required',
             ];
-        }else if ($origen=='practicasNOG') {
+        } else if ($origen == 'practicasNOG') {
             $baseRules = [
                 'nombre' => 'bail|required|max:20',
                 'localidad' => 'bail|required|max:20',
@@ -392,10 +391,10 @@ class view_generator_controller extends Controller
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
-        if($landing=='practicasNOG'){
-            
+        if ($landing == 'practicasNOG') {
+
             $this->Email_service->sendEmailPracticasOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
-        }else{
+        } else {
             $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
         }
 
@@ -403,8 +402,9 @@ class view_generator_controller extends Controller
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
 
-    public function validateKit(Request $request){
-        
+    public function validateKit(Request $request)
+    {
+
         $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         $origen = $request->input('origen');
         $locale = $request->input('language');
@@ -431,7 +431,5 @@ class view_generator_controller extends Controller
         $this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
-
     }
-
 }
