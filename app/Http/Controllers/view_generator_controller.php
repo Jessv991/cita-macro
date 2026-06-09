@@ -116,9 +116,9 @@ class view_generator_controller extends Controller
         if (isset($weblogin) && isset($tienda)) {
             //consulta cuando pasan weblogin y tienda
             $this->data['centros'] = $empresas->getStoreByWebloginAndCode($weblogin, $tienda);
-        } elseif (isset($weblogin)) {
+        } elseif (isset($weblogin) || !empty($allStore)) {
             //consultaslas tiendas por weblogin
-            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin);
+            $this->data['centros'] = $empresas->getStoreByCodeAndWeblogin($weblogin, $allStore);
         } else {
             //consulta todas las tiendas
             $this->data['centros'] = $empresas->getStore();
