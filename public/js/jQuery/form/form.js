@@ -270,6 +270,7 @@ function putOpticaByweblogin() {
         method: 'POST',
         data: {
             'weblogin': $('#_weblogin').val(),
+            'allStore': $('#_allStore').val(),
             _token: csrfToken
         },
         success: function (response) {
