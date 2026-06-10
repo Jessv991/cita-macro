@@ -19,7 +19,7 @@ class email_service
         }
 
         $nombre = $validated['nombre'];
-        $email = $validated['email'];
+        $email = $validated['email'] ?? null;
 
         if ($typeLC === 'ordinario' || $typeLC === 'sms') {
             $apellidos = $validated['apellidos'];
@@ -158,8 +158,10 @@ class email_service
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
-                //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC, $weblogin, $landing);
+                //función que envía email al cliente
+                if(!empty($email)){
+                    $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $typeLC, $commodityLC, $weblogin, $landing);
+                }
             }
 
 

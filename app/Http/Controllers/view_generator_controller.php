@@ -465,16 +465,23 @@ class view_generator_controller extends Controller
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
         $ip = $this->data['ip'];
+        $validateMail = [];
         App::setLocale($locale);
 
 
         $baseRules = [
             'nombre' => 'bail|required|max:20',
             'apellidos' => 'bail|required|max:20',
-            'email' => 'bail|required|email:rfc,dns',
             'movil' => 'bail|required|digits:9|integer',
             'check-poli' => 'accepted',
         ];
+
+        if ($landing !== 'fondo_ojo') {
+            $validateMail = [
+                'email' => 'bail|required|email:rfc,dns',
+            ];
+        }
+
 
         if ($weblogin) {
 
@@ -483,7 +490,7 @@ class view_generator_controller extends Controller
             ];
         } else {
 
-            if ($origen === 'RAY-BAN') {
+            if ($landing === 'RAY-BAN') {
                 $specificRules = [
                     'provincias' => 'bail|required',
                     'ciudad' => 'bail|required',
@@ -500,9 +507,9 @@ class view_generator_controller extends Controller
         }
 
         if ($typeLC === 'sms') {
-            $rules = array_merge($baseRules);
+            $rules = array_merge($baseRules, $validateMail);
         } else {
-            $rules = array_merge($baseRules, $specificRules);
+            $rules = array_merge($baseRules, $specificRules, $validateMail);
         }
 
         $validated = $request->validate($rules);
