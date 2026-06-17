@@ -572,6 +572,7 @@ class Empresas extends Model
             ->where("d22", "=", 'si')
             ->where("d19", "=", 'si')
             ->where('CRM', 'si')
+            ->where('tienda', '>', 0)
             ->where('weblogin', $weblogin)
             ->orderBy('tienda', 'asc')
             ->get();
