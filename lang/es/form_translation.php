@@ -3,6 +3,7 @@
 return [
 
     'Pide_cita_rellenando' => 'Pide cita rellenando el formulario con tus datos y nos pondremos en contacto contigo para concertar día.',
+    'form_cooper' => 'Envío de códigos Cooper a la central corporativa.',
     'Pide_practicas_rellenando' => 'Rellena el formulario con tus datos y nos pondremos en contacto contigo para que puedas realizar tus prácticas profesionales en uno de nuestros centros:',
     'pedido_cliente_rellenando' => 'Pide ya tu kit de implantación rellenando el siguiente formulario con tus datos:',
     'Selecciona_una_provincia' => 'Selecciona una provincia',

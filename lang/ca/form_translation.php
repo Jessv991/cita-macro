@@ -3,6 +3,7 @@
 return [
 
     'Pide_cita_rellenando' => "Demana cita emplenant el formulari amb les teves dades i ens posarem en contacte amb tu per a concertar dia.",
+    'form_cooper' => 'Enviament de codis Cooper a la central corporativa.',
     'Pide_practicas_rellenando' => 'Omple el formulari amb les teves dades i ens posarem en contacte amb tu perquè puguis fer les teves pràctiques professionals en un dels nostres centres:',
     'pedido_cliente_rellenando' => "Demana el teu kit d'implantació omplint el següent formulari amb les teves dades:",
     'Selecciona_una_provincia' => "Selecciona una província",

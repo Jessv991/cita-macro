@@ -3,6 +3,7 @@
 return [
 
     'Pide_cita_rellenando' => "Request an appointment by filling out the form with your details and we will contact you to schedule a day.",
+    'form_cooper' => 'Sending Cooper codes to the corporate headquarters.',
     'pedido_cliente_rellenando' => 'Order your implementation kit now by filling out the following form with your information:',
     'Selecciona_una_provincia' => "Select a stated",
     'Selecciona_una_ciudad' => "Select a city",

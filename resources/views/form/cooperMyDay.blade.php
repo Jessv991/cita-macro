@@ -11,7 +11,7 @@
             </div>
         @else
             <div class="d-flex justify-content-center align-items-start mb-5">
-                <p class="text-top-form">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+                <p class="text-top-form">{{ __('form_translation.form_cooper') }}</p>
             </div>
         @endif
 
