@@ -40,12 +40,14 @@
     </script>
 
     <script>
+        var getWebloginByGroup = '{{ route('getWeblogin') }}';
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
         var getOpticasByWeblogin = '{{ route('getOpticasByWeblogin') }}';
         var getOpticasByWebloginAndOptica = '{{ route('getOpticaByWebloginAndOptica') }}';
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
+        var selectGrupo = '{{ __('form_translation.group') }}';
         var seleccionaUnaCiudadPracticasText = '{{ __('form_translation.Selecciona_una_ciudad_practicas') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
         var seleccionaOptica1 = '{{ __('form_translation.optica') }}';
@@ -62,6 +64,7 @@
     </script>
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
+    <script src="{{ asset($rutaAsset . 'js/jQuery/form/form_cooper.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/landings/' . $landing . '.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/cookieconsent.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/cookies/Cookie_Templates/cookies-' . $locale . '.js') }}"></script>

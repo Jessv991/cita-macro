@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\view_generator_controller;
+use App\Http\Controllers\FormValidator;
 use App\Http\Controllers\imageGenerator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
@@ -99,3 +100,9 @@ Route::post('cita-macro/postValidateKit', [view_generator_controller::class, 'va
 
 //===============================POST GENERADOR DE IMAGENES===============================
 Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name('imageGenerator');
+
+//===============================POST FORM COOPER===============================
+Route::post('cita-macro/postValidateCooper', [FormValidator::class, 'validateCooper'])->name('validateFormCooper');
+
+//===============================POST WEBLOGIN===============================
+Route::post('cita-macro/get-weblogin', [FormValidator::class, 'getWeblogin'])->name('getWeblogin');
