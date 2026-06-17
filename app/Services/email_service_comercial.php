@@ -156,6 +156,19 @@ class email_service_comercial
 
         $weblogin = strtoupper($validated['weblogin']);
         $code_optica = $validated['code_optica'];
+        $titleTienda = '';
+        $titleCodigo = '';
+
+        if ($locale === 'es') {
+            $titleTienda = 'Tiendas';
+            $titleCodigo = 'Código Cooper';
+        } elseif ($locale === 'ca') {
+            $titleTienda = 'Botigues';
+            $titleCodigo = 'Codi Cooper';
+        } else {
+            $titleTienda = 'Stores';
+            $titleCodigo = 'Copper Code';
+        }
 
 
         $rows = '';
@@ -175,8 +188,8 @@ class email_service_comercial
                         <th colspan='2'>{$weblogin}</th>
                     </tr>
                     <tr>
-                        <th>Tienda</th>
-                        <th>Código</th>
+                        <th>{$titleTienda}</th>
+                        <th>{$titleCodigo}</th>
                     </tr>
                 </thead>
                 <tbody>
