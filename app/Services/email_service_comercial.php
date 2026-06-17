@@ -230,7 +230,7 @@ class email_service_comercial
 
 
 
-            $mail->addAddress('d.hernandez@naturalopticsgroup.com');
+            $mail->addAddress('j.vasquez@naturalopticsgroup.com');
 
 
 
