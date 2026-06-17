@@ -537,24 +537,46 @@ class Empresas extends Model
         return $datos->get();
     }
 
-    public function getWeblogin(string $grupo){
+    public function getWeblogin(string $grupo)
+    {
+        $sub = DB::table('empresas')
+            ->select('weblogin', DB::raw('MIN(tienda) as tienda'))
+            ->where("d22", "si")
+            ->where("d19", "si")
+            ->where('CRM', 'si')
+            ->where('tienda', '>', 0)
+            ->when($grupo === 'nsl', function ($q) {
+                $q->whereIn('d9', ['0', '1']);
+            }, function ($q) {
+                $q->where('d9', '-9');
+            })
+            ->groupBy('weblogin');
 
+        $datos = DB::table('empresas as e')
+            ->joinSub($sub, 't', function ($join) {
+                $join->on('e.weblogin', '=', 't.weblogin')
+                    ->on('e.tienda', '=', 't.tienda');
+            })
+            ->select('e.weblogin', 'e.d29', 'e.tienda')
+            ->orderBy('e.d29', 'asc')
+            ->get();
+
+        return $datos;
+    }
+
+    public function getStoresByWeblogin(string $weblogin)
+    {
         $datos = DB::table("empresas")
             ->distinct()
-            ->select('weblogin', 'tienda')
+            ->select('tienda','d29')
             ->where("d22", "=", 'si')
             ->where("d19", "=", 'si')
-            ->where('CRM', 'si');
+            ->where('CRM', 'si')
+            ->where('weblogin', $weblogin)
+            ->orderBy('tienda', 'asc')
+            ->get();
 
-        if ($grupo === 'nsl') {
-            return $datos->get();
-        } else {
-            $datos->where(function ($query) {
-                $query->where('d9', '-9');
-            });
-            return $datos->get();
-        }
 
-        return $datos->get();
+        return $datos;
     }
 }

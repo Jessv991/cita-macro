@@ -3,6 +3,7 @@
     <form id="formMacroContactologia" class="w-100 p-0 m-0" action="" method="POST">
 
         @csrf
+        <input type="hidden" id="language" name="language" value="{{ $data['idioma'] }}">
 
         @if (isset($data['customText']) && $data['customText'] === 'true')
             <div class="d-flex justify-content-center align-items-start mb-5 text-center">
@@ -21,8 +22,7 @@
 
                 <div class="row">
                     <div class="col-4 col-md-3 align-self-end">
-                        <select class="form-select @error('group') is-invalid @enderror" name="group"
-                            id="group">
+                        <select class="form-select @error('group') is-invalid @enderror" name="group" id="group">
                             <option value="" selected>{{ __('form_translation.group') }}</option>
                             <option value="nsl">NSL</option>
                             <option value="red">UGO</option>
@@ -31,11 +31,7 @@
                     <div class="col-8 col-md-9">
                         <select class="form-select @error('weblogin') is-invalid @enderror" name="weblogin"
                             id="weblogin">
-                            <option value="" selected>{{ __('form_translation.weblogin') }}
-                            </option>
-                            @foreach ($data['provincias'] as $provincia)
-                                <option value="{{ $provincia->id }}">{{ $provincia->a1 }}</option>
-                            @endforeach
+                            <option value="" selected>{{ __('form_translation.weblogin') }}</option>
                         </select>
                     </div>
                 </div>
@@ -43,19 +39,7 @@
             </div>
 
 
-            <div class="optica_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="1100">
-                <div class="row">
-                    <div class="col-7 align-self-end">
-                        <p class="m-0 text-white">Optica equis</p>
-                    </div>
-                    <div class="col-5">
-                        <input class="form-control @error('code_optica') is-invalid @enderror" type="text" name="code_optica"
-                            id="code_optica" placeholder='{{ __('form_translation.code') }}'>
-                    </div>
-                </div>
-
-            </div>
+            <div id="stores_container"></div>
 
 
             <div class="cont-botton-police">
@@ -170,47 +154,10 @@
 
         $('#formMacroContactologia').removeClass('d-none');
 
-        var weblogin = $('#_weblogin').val();
-        var allStore = $('#_allStore').val();
+        $('#weblogin').html('<option value="">' + selectWeblogin + '</option>');
+        $('#group').val('');
 
-        var tieneContexto = (weblogin && weblogin !== '') || (allStore && allStore !== '');
-
-        // Limpiar los campos del formulario
-        if (tieneContexto) {
-            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
-        } else {
-            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-
-            // Limpiar selects de ciudad y óptica
-            $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
-            var opticaSelect = $('#optica');
-            var opciones = opticaSelect.find('option');
-            var webloginVacio = <?php echo empty($data['weblogin']) ? 'true' : 'false'; ?>;
-
-            if (webloginVacio) {
-                $('#optica').html('<option value="">Selecciona una óptica</option>');
-            } else {
-
-                if (opciones.length > 1) {
-                    // Más de una opción → limpiar
-                    opciones.first().prop('selected', true);
-                    opticaSelect.removeClass('readonly-select').prop('disabled', false);
-                } else if (opciones.length === 1) {
-                    // Solo una opción → dejarla seleccionada
-                    opciones.prop('selected', true);
-                    opticaSelect.addClass('readonly-select').prop('disabled', true);
-                }
-            }
-
-            // Quita la invalidación del select cuando es un solo campo
-            $('#optica').removeClass('readonly-select');
-
-            // Oculta el icono del mapa
-            $('#animationdivIcon').addClass('d-none');
-        }
-
-        // Limpiar el checkbox
-        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
+        $('#stores_container').empty();
 
     })
 </script>

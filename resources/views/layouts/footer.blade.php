@@ -41,13 +41,16 @@
 
     <script>
         var getWebloginByGroup = '{{ route('getWeblogin') }}';
+        var getStoreByWeblogin = '{{ route('getStoreByWeblogin') }}';
         var getLocalidadByProvinciaRoute = '{{ route('getLocalidadByProvincia') }}';
         var getOpticasByProvinciaRoute = '{{ route('getOpticasByProvincia') }}';
         var getOpticasByWeblogin = '{{ route('getOpticasByWeblogin') }}';
         var getOpticasByWebloginAndOptica = '{{ route('getOpticaByWebloginAndOptica') }}';
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
-        var selectGrupo = '{{ __('form_translation.group') }}';
+        var selectWeblogin = '{{ __('form_translation.weblogin') }}';
+        var placeholderCode = '{{ __('form_translation.code') }}';
+        var selectGroup = '{{ __('form_translation.group') }}';
         var seleccionaUnaCiudadPracticasText = '{{ __('form_translation.Selecciona_una_ciudad_practicas') }}';
         var seleccionaUnaOpticaText = '{{ __('form_translation.Selecciona_una_optica') }}';
         var seleccionaOptica1 = '{{ __('form_translation.optica') }}';

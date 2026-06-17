@@ -4,18 +4,22 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empresas;
+use App\Services\email_service_comercial;
 
 class FormValidator extends Controller
 {
     public function validateCooper(Request $request)
     {
+        $sendEmail = new email_service_comercial();
+        $locale = $request->input('language');
         $validated = $request->validate([
             'group' => 'bail|required',
             'weblogin' => 'bail|required',
-            'code_optica' => 'bail|required|max:25',
+            'code_optica' => 'bail|required|array',
+            'code_optica.*' => 'bail|required|max:25',
         ]);
 
-        //$this->Email_service_comercial->sendEmailComercial($validated, $test, $locale, $origen, $logoOptica, $telefono_optica, $mail_optica);
+        $sendEmail->sendEmailCooperCode($validated, $locale);
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
@@ -29,5 +33,16 @@ class FormValidator extends Controller
         $weblogin = $empresas->getWeblogin($grupo);
 
         return response()->json($weblogin);
+    }
+
+    public function getStoreByWeblogin(Request $request)
+    {
+        $empresas = new Empresas();
+
+        $weblogin = $request->input('weblogin');
+
+        $tiendas = $empresas->getStoresByWeblogin($weblogin);
+
+        return response()->json($tiendas);
     }
 }
