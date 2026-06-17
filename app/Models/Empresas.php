@@ -537,21 +537,23 @@ class Empresas extends Model
         return $datos->get();
     }
 
-    public function getWeblogin(string $grupo)
-    {
-        if ($grupo === 'nsl') {
-            $d9 = '0';
-        } else {
-            $d9 = '-9';
-        }
+    public function getWeblogin(string $grupo){
 
         $datos = DB::table("empresas")
             ->distinct()
-            ->select('weblogin')
-            ->where("d22", "si")
-            ->where("d19", "si")
-            ->where('CRM', 'si')
-            ->where('d9', $d9);
+            ->select('weblogin', 'tienda')
+            ->where("d22", "=", 'si')
+            ->where("d19", "=", 'si')
+            ->where('CRM', 'si');
+
+        if ($grupo === 'nsl') {
+            return $datos->get();
+        } else {
+            $datos->where(function ($query) {
+                $query->where('d9', '-9');
+            });
+            return $datos->get();
+        }
 
         return $datos->get();
     }
