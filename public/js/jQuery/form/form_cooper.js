@@ -4,6 +4,7 @@ $(document).ready(function () {
 
     //animación del icono de mapa
     $('#group').on('change', function () {
+        $('#stores_container').empty();
         var grupoId = $(this).val();
 
         if (grupoId) {
