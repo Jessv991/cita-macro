@@ -836,11 +836,11 @@
                   </tr>
                 </tbody>
               </table>
-              <table cellspacing="0" cellpadding="0" align="center" class="es-content" style="background-color: #fff;">
+              <table cellspacing="0" cellpadding="0" align="center" class="es-content">
                 <tbody>
                   <tr>
                     <td align="center" class="esd-stripe">
-                      <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-content-body" style="background-color:#9aaea6">
+                      <table width="600" cellspacing="0" cellpadding="0" bgcolor="#000" align="center" class="es-content-body" style="background-color:#000">
                         <tbody>
                           <tr>
                             <td align="left" class="esd-structure">
