@@ -60,7 +60,7 @@ $(document).ready(function () {
 
                             <div class="row">
                                 <div class="col-7 align-self-end">
-                                    <p class="m-0 text-white">
+                                    <p class="m-0 text-dark">
                                         Tienda ${value.tienda} - ${value.d29}
                                     </p>
                                 </div>

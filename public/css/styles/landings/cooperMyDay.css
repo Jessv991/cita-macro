@@ -7,10 +7,22 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+.btn-color {
+    background-color: #682462;
+    color: #f0f0f0;
+}
+
+.btn-color:hover {
+    background-color: #d8ced7;
+    color: #686767;
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #BDA3C3;
 }
 
 body::-webkit-scrollbar {
@@ -66,7 +78,7 @@ label>span {
 }
 
 .text-top-form {
-    color: #fff;
+    color: #000;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
