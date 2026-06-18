@@ -566,15 +566,15 @@ class Empresas extends Model
 
     public function getStoresByWeblogin(string $weblogin)
     {
-        $datos = DB::table("empresas")
+        $datos = DB::table('empresas')
             ->distinct()
-            ->select('tienda','d29')
-            ->where("d22", "=", 'si')
-            ->where("d19", "=", 'si')
+            ->select('tienda', 'd29')
+            ->where('d22', 'si')
+            ->where('d19', 'si')
             ->where('CRM', 'si')
             ->where('tienda', '>', 0)
             ->where('weblogin', $weblogin)
-            ->orderBy('tienda', 'asc')
+            ->orderByRaw('CAST(tienda AS UNSIGNED)')
             ->get();
 
 

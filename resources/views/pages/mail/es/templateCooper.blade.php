@@ -946,7 +946,7 @@ li {
                       <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
                         <tbody>
                           <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #006ec8;" align="left" bgcolor="#74cae7">
+                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #BDA3C3;" align="left" bgcolor="#74cae7">
                               <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
                               <table class="es-left" cellspacing="0" cellpadding="0" align="left">
                                   <tbody>
@@ -956,7 +956,7 @@ li {
                                                   <tbody>
                                                       <tr>
                                                           <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">Siguenos</h3>
+                                                              <h3 style="color: #000;">Siguenos</h3>
                                                           </td>
                                                       </tr>
                                                       <tr>
@@ -986,9 +986,9 @@ li {
                                                   <tbody>
                                                       <tr>
                                                           <td class="esd-block-text es-p10b" align="center">
-                                                              <p style="color: #ffffff;"><br></p>
-                                                              <p style="color: #ffffff;">Carrer de la Variant, 21, 25123 Torrefarrera, Lleida</p>
-                                                              <p style="color: #ffffff;">911 59 93 91 &nbsp;</p>
+                                                              <p style="color: #000;"><br></p>
+                                                              <p style="color: #000;">Carrer de la Variant, 21, 25123 Torrefarrera, Lleida</p>
+                                                              <p style="color: #000;">911 59 93 91 &nbsp;</p>
                                                           </td>
                                                       </tr>
                                                   </tbody>
