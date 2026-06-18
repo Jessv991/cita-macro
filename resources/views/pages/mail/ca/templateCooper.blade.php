@@ -836,7 +836,7 @@
                   </tr>
                 </tbody>
               </table>
-              <table cellspacing="0" cellpadding="0" align="center" class="es-content">
+              <table cellspacing="0" cellpadding="0" align="center" class="es-content" style="background-color: #fff;">
                 <tbody>
                   <tr>
                     <td align="center" class="esd-stripe">
@@ -853,7 +853,7 @@
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/nog-logo.png" alt="" width="300" class="adapt-img">
+                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/nog-logo.png" alt="" width="100" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
