@@ -795,7 +795,7 @@
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                UGO Optics
+                                                NOG
                                               </p>
                                             </td>
                                           </tr>
@@ -888,7 +888,7 @@
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#050606">
-                                                Aquí tens més codis Copper!
+                                                Aquí tens més codis Cooper!
                                               </h3>
                                             </td>
                                           </tr>

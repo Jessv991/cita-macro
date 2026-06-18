@@ -823,7 +823,7 @@ li {
                                           <tr>
                                             <td align="left" class="es-infoblock esd-block-text">
                                               <p>
-                                                UGO Optics
+                                                NOG
                                               </p>
                                             </td>
                                           </tr>
@@ -916,7 +916,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#050606">
-                                                ¡Aquí tienes más códigos Copper!
+                                                ¡Aquí tienes más códigos Cooper!
                                               </h3>
                                             </td>
                                           </tr>

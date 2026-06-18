@@ -230,9 +230,10 @@ class email_service_comercial
 
 
 
-            $mail->addAddress('d.hernandez@naturalopticsgroup.com', 'David Hernández');
+            $mail->addAddress('j.vasquez@naturalopticsgroup.com', 'David Hernández');
+            /* $mail->addAddress('d.hernandez@naturalopticsgroup.com', 'David Hernández');
             $mail->addCC('g.bernaus@naturalopticsgroup.com', 'Gerard Bernaus');
-            $mail->addCC('g.vall@naturalopticsgroup.com', 'Gemma Vall');
+            $mail->addCC('g.vall@naturalopticsgroup.com', 'Gemma Vall'); */
 
 
             try {
