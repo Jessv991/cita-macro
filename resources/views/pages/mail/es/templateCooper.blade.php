@@ -881,7 +881,7 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-banner" style="position:relative">
                                               <a target="_blank">
-                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/email_cooper.png" alt="" width="600" class="adapt-img">
+                                                <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/email/{LOCAL}/nog-logo.png" alt="" width="300" class="adapt-img">
                                               </a>
                                             </td>
                                           </tr>
@@ -923,99 +923,6 @@ li {
                                           <tr>
                                             <td align="center" class="esd-block-text es-p15t es-p15b">
                                               {TABLET}
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </td>
-                                  </tr>
-                                </tbody>
-                              </table>
-                            </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-              <table cellpadding="0" cellspacing="0" align="center" class="es-footer">
-                <tbody>
-                  <tr>
-                    <td align="center" class="esd-stripe">
-                      <table width="600" cellspacing="0" cellpadding="0" bgcolor="#9aaea6" align="center" class="es-footer-body" style="background-color:#9aaea6">
-                        <tbody>
-                          <tr>
-                            <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #BDA3C3;" align="left" bgcolor="#74cae7">
-                              <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
-                              <table class="es-left" cellspacing="0" cellpadding="0" align="left">
-                                  <tbody>
-                                      <tr>
-                                          <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                              <table width="100%" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                      <tr>
-                                                          <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #000;">Siguenos</h3>
-                                                          </td>
-                                                      </tr>
-                                                      <tr>
-                                                          <td class="esd-block-social" align="center" style="font-size:0">
-                                                              <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                                  <tbody>
-                                                                      <tr>
-                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                                      </tr>
-                                                                  </tbody>
-                                                              </table>
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                              <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
-                              <table class="es-right" cellspacing="0" cellpadding="0" align="right">
-                                  <tbody>
-                                      <tr>
-                                          <td class="esd-container-frame" width="270" align="left">
-                                              <table width="100%" cellspacing="0" cellpadding="0">
-                                                  <tbody>
-                                                      <tr>
-                                                          <td class="esd-block-text es-p10b" align="center">
-                                                              <p style="color: #000;"><br></p>
-                                                              <p style="color: #000;">Carrer de la Variant, 21, 25123 Torrefarrera, Lleida</p>
-                                                              <p style="color: #000;">911 59 93 91 &nbsp;</p>
-                                                          </td>
-                                                      </tr>
-                                                  </tbody>
-                                              </table>
-                                          </td>
-                                      </tr>
-                                  </tbody>
-                              </table>
-                              <!--[if mso]></td></tr></table><![endif]-->
-                          </td>
-                          </tr>
-                          <tr>
-                            <td esd-general-paddings-checked="false" bgcolor="#ffffff" align="left" class="esd-structure" style="background-color:#ffffff">
-                              <table width="100%" cellspacing="0" cellpadding="0">
-                                <tbody>
-                                  <tr>
-                                    <td width="600" valign="top" align="center" class="esd-container-frame">
-                                      <table width="100%" cellspacing="0" cellpadding="0">
-                                        <tbody>
-                                          <tr>
-                                            <td esdev-links-color="#666666" align="center" class="es-m-txt-с esd-block-text es-p10t es-p20b">
-                                              <p style="color:#050606;line-height:120%;font-size:12px">
-                                                Este correo electrónico es conforme a la legislación vigente sobre el tratamiento de datos con multas promocionales y publicitarias. De acuerdo con lo dispuesto en el artículo 22 de la Ley 34/2002 de Servicios de la Sociedad de la Información y de Comercio Electrónico, así como en el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, por el que se aprueba el Reglamento General de Protección de Datos, dispone de los derechos de: acceso, rectificación, supresión, limitación del tratamiento, portabilidad y oposición de sus datos.
-                                              </p>
-                                              <p style="color:#050606;line-height:120%">
-                                                <a target="_blank" href="" class="unsubscribe" style="color:#050606;font-size:12px;line-height:150%"></a>
-                                              </p>
                                             </td>
                                           </tr>
                                         </tbody>
