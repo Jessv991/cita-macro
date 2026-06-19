@@ -5,6 +5,7 @@ namespace App\Services;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\solicitudes_comerciales;
+use App\Models\Empresas;
 
 use Illuminate\Support\Facades\Mail;
 
@@ -158,27 +159,51 @@ class email_service_comercial
         $code_optica = $validated['code_optica'];
         $titleTienda = '';
         $titleCodigo = '';
+        $titleOptica = '';
+        $titleDireccion = '';
+
+        $empresas = new Empresas();
+        $tiendas = $empresas->getStoresByWeblogin($weblogin);
+
+
 
         if ($locale === 'es') {
             $titleTienda = 'Tiendas';
             $titleCodigo = 'Código Cooper';
+            $titleOptica = 'Óptica';
+            $titleDireccion = 'Dirección';
         } elseif ($locale === 'ca') {
             $titleTienda = 'Botigues';
             $titleCodigo = 'Codi Cooper';
+            $titleOptica = 'Òptica';
+            $titleDireccion = 'Direcció';
         } else {
             $titleTienda = 'Stores';
             $titleCodigo = 'Copper Code';
+            $titleOptica = 'Optics';
+            $titleDireccion = 'Address';
         }
 
 
         $rows = '';
 
+        $tiendasPorId = $tiendas->keyBy('tienda');
+
         foreach ($code_optica as $tienda => $codigo) {
+
+            if (!isset($tiendasPorId[$tienda])) {
+                continue;
+            }
+
+            $datosTienda = $tiendasPorId[$tienda];
+
             $rows .= "
-                <tr>
-                    <td>{$tienda}</td>
-                    <td>{$codigo}</td>
-                </tr>";
+                    <tr>
+                        <td>{$tienda}</td>
+                        <td>{$datosTienda->d29}</td>
+                        <td>{$datosTienda->d23}, {$datosTienda->d3}, {$datosTienda->a1}</td>
+                        <td>{$codigo}</td>
+                    </tr>";
         }
 
         $tabla = "
@@ -189,6 +214,8 @@ class email_service_comercial
                     </tr>
                     <tr>
                         <th>{$titleTienda}</th>
+                        <th>{$titleOptica}</th>
+                        <th>{$titleDireccion}</th>
                         <th>{$titleCodigo}</th>
                     </tr>
                 </thead>
