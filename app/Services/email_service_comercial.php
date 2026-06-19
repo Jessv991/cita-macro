@@ -210,7 +210,7 @@ class email_service_comercial
             <table border='1' cellpadding='5' cellspacing='0' width='100%'>
                 <thead>
                     <tr>
-                        <th colspan='2'>{$weblogin}</th>
+                        <th colspan='4'>{$weblogin}</th>
                     </tr>
                     <tr>
                         <th>{$titleTienda}</th>
