@@ -16,6 +16,7 @@ return [
     'group' => 'Group',
     'Pedir_practicas' => 'Send',
     'weblogin' => 'Select Optical Center',
+    'comercial' => 'Select a commercial',
     'code' => 'Cooper Code',
     'Aceptar_politicas_privacidad_1' => "I accept the",
     'Aceptar_politicas_privacidad_2' => "Privacy Policies",

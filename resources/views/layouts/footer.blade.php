@@ -49,6 +49,7 @@
         var csrfToken = '{{ csrf_token() }}';
         var seleccionaUnaCiudadText = '{{ __('form_translation.Selecciona_una_ciudad') }}';
         var selectWeblogin = '{{ __('form_translation.weblogin') }}';
+        var selectComercial = '{{ __('form_translation.comercial') }}';
         var placeholderCode = '{{ __('form_translation.code') }}';
         var selectGroup = '{{ __('form_translation.group') }}';
         var seleccionaUnaCiudadPracticasText = '{{ __('form_translation.Selecciona_una_ciudad_practicas') }}';

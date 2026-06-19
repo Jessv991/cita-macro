@@ -157,14 +157,23 @@ class email_service_comercial
 
         $weblogin = strtoupper($validated['weblogin']);
         $code_optica = $validated['code_optica'];
+        $comercial = $validated['comercial'];
+        $grupo_comercial = '';
         $titleTienda = '';
         $titleCodigo = '';
         $titleOptica = '';
         $titleDireccion = '';
+        $titleGrupoCom = '';
+        $titleComercial = '';
 
         $empresas = new Empresas();
         $tiendas = $empresas->getStoresByWeblogin($weblogin);
 
+        if ($validated['tipo_comercial'] === 'comercial_nog') {
+            $grupo_comercial = 'NOG';
+        } elseif ($validated['tipo_comercial'] === 'comercial_cooper') {
+            $grupo_comercial = 'Cooper';
+        }
 
 
         if ($locale === 'es') {
@@ -172,16 +181,22 @@ class email_service_comercial
             $titleCodigo = 'Código Cooper';
             $titleOptica = 'Óptica';
             $titleDireccion = 'Dirección';
+            $titleGrupoCom = 'Grupo';
+            $titleComercial = 'Comercial';
         } elseif ($locale === 'ca') {
             $titleTienda = 'Botigues';
             $titleCodigo = 'Codi Cooper';
             $titleOptica = 'Òptica';
             $titleDireccion = 'Direcció';
+            $titleGrupoCom = 'Grup';
+            $titleComercial = 'Comercial';
         } else {
             $titleTienda = 'Stores';
             $titleCodigo = 'Copper Code';
             $titleOptica = 'Optics';
             $titleDireccion = 'Address';
+            $titleGrupoCom = 'Group';
+            $titleComercial = 'Commercial';
         }
 
 
@@ -211,6 +226,14 @@ class email_service_comercial
                 <thead>
                     <tr>
                         <th colspan='4'>{$weblogin}</th>
+                    </tr>
+                    <tr>
+                        <th colspan='2'>
+                            <span style='color:#00A091;'>{$titleGrupoCom}</span>: {$grupo_comercial}
+                        </th>
+                        <th colspan='2'>
+                            <span style='color:#00A091;'>{$titleComercial}</span>: {$comercial}
+                        </th>
                     </tr>
                     <tr>
                         <th>{$titleTienda}</th>
@@ -257,6 +280,7 @@ class email_service_comercial
 
 
 
+            //$mail->addAddress('j.vasquez@naturalopticsgroup.com', 'David Hernández');
             $mail->addAddress('d.hernandez@naturalopticsgroup.com', 'David Hernández');
             $mail->addCC('g.bernaus@naturalopticsgroup.com', 'Gerard Bernaus');
             $mail->addCC('g.vall@naturalopticsgroup.com', 'Gemma Vall');

@@ -33,6 +33,7 @@ return [
     'Pedir_cita' => 'Pide cita',
     'Pedir_practicas' => 'Enviar',
     'weblogin' => 'Seleccione Centro Óptico',
+    'comercial' => 'Seleccione un comercial',
     'code' => 'Código Cooper',
     'group' => 'Grupo',
     'Confirma_reserva' => 'Confirma tu reserva',

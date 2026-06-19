@@ -8,6 +8,46 @@
                                                                                        
 */
 
+.radio-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.radio-item input[type="radio"]{
+    display:none;
+}
+
+/* Label */
+.radio-item label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    font-size:19px;
+    color:#222;
+}
+
+/* Círculo blanco */
+.radio-item label::before{
+    content:'';
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#fff;
+    border:2px solid #fff;
+    transition:.2s;
+}
+
+/* Radio seleccionado */
+.radio-item input[type="radio"]:checked + label::before{
+    background:#fff;
+    border:6px solid #682462;
+    box-sizing:border-box;
+}
+
+
+
 .btn-color {
     background-color: #682462;
     color: #f0f0f0;

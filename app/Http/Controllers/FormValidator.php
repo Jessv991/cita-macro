@@ -13,10 +13,12 @@ class FormValidator extends Controller
         $sendEmail = new email_service_comercial();
         $locale = $request->input('language');
         $validated = $request->validate([
+            'tipo_comercial' => 'bail|required|in:comercial_nog,comercial_cooper',
+            'comercial' => 'bail|required',
             'group' => 'bail|required',
             'weblogin' => 'bail|required',
             'code_optica' => 'bail|required|array',
-            'code_optica.*' => 'bail|required|max:25',
+            'code_optica.*' => 'bail|required|string|regex:/^[0-9]{9}$/',
         ]);
 
         $sendEmail->sendEmailCooperCode($validated, $locale);

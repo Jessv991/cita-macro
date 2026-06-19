@@ -15,8 +15,33 @@
             </div>
         @endif
 
-
         <div>
+            <div class="radio-container">
+
+                <div class="radio-item">
+                    <input type="radio" name="tipo_comercial" id="comercial_nog" value="comercial_nog" checked>
+
+                    <label for="comercial_nog">
+                        Comercial NOG
+                    </label>
+                </div>
+
+                <div class="radio-item">
+                    <input type="radio" name="tipo_comercial" id="comercial_cooper" value="comercial_cooper">
+
+                    <label for="comercial_cooper">
+                        Comercial Cooper
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="comercial_cont">
+                <select class="form-select @error('comercial') is-invalid @enderror" name="comercial" id="comercial">
+                    <option value="" selected>Selecciona comercial</option>
+                </select>
+            </div>
+
             <div class="provincias_div" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                 data-aos-duration="500">
 

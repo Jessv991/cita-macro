@@ -29,6 +29,7 @@ return [
     'Pedir_cita' => "Demanar cita",
     'Pedir_practicas' => 'Enviar',
     'weblogin' => 'Seleccioni Centre Òptic',
+    'comercial' => 'Seleccioni un comercial',
     'code' => 'Codi Cooper',
     'group' => 'Grup',
     'Confirma_reserva' => "Confirma la teva reserva",
