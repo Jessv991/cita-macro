@@ -153,8 +153,6 @@ class email_service_comercial
 
     public function sendEmailCooperCode(array $validated, string $locale)
     {
-
-
         $weblogin = strtoupper($validated['weblogin']);
         $code_optica = $validated['code_optica'];
         $comercial = $validated['comercial'];
