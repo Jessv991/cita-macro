@@ -181,6 +181,7 @@
 
         $('#weblogin').html('<option value="">' + selectWeblogin + '</option>');
         $('#group').val('');
+        $('#comercial').val('');
 
         $('#stores_container').empty();
 
