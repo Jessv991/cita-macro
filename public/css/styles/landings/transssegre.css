@@ -160,6 +160,10 @@ div#animationdivIcon {
     .background-container .background-item .col-12 {
         height: 100vh;
     }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -191,6 +195,10 @@ div#animationdivIcon {
         height: 100vh;
     }
 
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -220,6 +228,10 @@ div#animationdivIcon {
 
     .background-container .background-item .col-12 {
         height: 100vh;
+    }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
     }
 
 }
