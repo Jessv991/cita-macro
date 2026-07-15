@@ -49,20 +49,20 @@
 
 
 .btn-color {
-    background-color: #682462;
-    color: #f0f0f0;
+    background-color: #fff;
+    color: #012c58;
 }
 
 .btn-color:hover {
-    background-color: #d8ced7;
-    color: #686767;
+    background-color: #eef6ff;
+    color: #012c58;
 }
 
 body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
-    background-color: #BDA3C3;
+    background-color: #012c58;
 }
 
 body::-webkit-scrollbar {
@@ -81,11 +81,11 @@ body::-webkit-scrollbar-track {
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #44c8f1 !important;
+    color: #fff !important;
 }
 
 a:hover {
-    color: #34aace !important;
+    color: #d1e2f7 !important;
 }
 
 /* 
@@ -118,7 +118,7 @@ label>span {
 }
 
 .text-top-form {
-    color: #000;
+    color: #fff;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
