@@ -36,6 +36,11 @@ body::-webkit-scrollbar-track {
     color: #000;
 }
 
+.btn-color:hover {
+    background-color: #a7d1d1;
+    color: #000;
+}
+
 @font-face {
     font-family: 'IvyStyleSans';
     src: url('/font/fonnts.com-IvyStyle_Sans_Thin.otf') format('opentype');
