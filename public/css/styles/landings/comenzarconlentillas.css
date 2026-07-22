@@ -1,0 +1,397 @@
+/* 
+███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
+██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
+╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
+███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
+*/
+
+.radio-container{
+    display:flex;
+    gap:40px;
+    align-items:center;
+}
+
+.radio-item input[type="radio"]{
+    display:none;
+}
+
+/* Label */
+.radio-item label{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    cursor:pointer;
+    font-size:19px;
+    color:#222;
+}
+
+/* Círculo blanco */
+.radio-item label::before{
+    content:'';
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#fff;
+    border:2px solid #fff;
+    transition:.2s;
+}
+
+/* Radio seleccionado */
+.radio-item input[type="radio"]:checked + label::before{
+    background:#fff;
+    border:6px solid #682462;
+    box-sizing:border-box;
+}
+
+
+
+.btn-color {
+    background-color: #fff;
+    color: #012c58;
+}
+
+.btn-color:hover {
+    background-color: #eef6ff;
+    color: #012c58;
+}
+
+body {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #012c58;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#icon {
+    width: 100%;
+}
+
+
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+a {
+    color: #fff !important;
+}
+
+a:hover {
+    color: #d1e2f7 !important;
+}
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                             
+*/
+
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+.contenedor-form {
+    padding: 4%;
+    position: relative !important;
+}
+
+label>span {
+    color: #fff !important;
+}
+
+.text-top-form {
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 25px;
+    text-align: center;
+}
+
+input {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+.form-check-reverse {
+    text-align: left;
+}
+
+/* input:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+select {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* select:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+div#animationdivIcon {
+    margin-top: 3% !important;
+}
+
+#gracias {
+    color: #000;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
+.b-pedir-citas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+}
+
+/* DISEÑO EXCLUSIVO AL LOGO POR WEBLOGIN */
+
+.rcentreopticdelbagesclass1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rcentreopticdelbagesclass {
+    width: 206px !important;
+}
+
+/* 
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                   
+*/
+
+/* 
+███╗   ███╗ █████╗ ██████╗  █████╗ 
+████╗ ████║██╔══██╗██╔══██╗██╔══██╗
+██╔████╔██║███████║██████╔╝███████║
+██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
+██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+*/
+
+/* 
+████████╗███████╗███████╗████████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+   ██║   █████╗  ███████╗   ██║   
+   ██║   ██╔══╝  ╚════██║   ██║   
+   ██║   ███████╗███████║   ██║   
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                  
+*/
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+@media (min-width: 1499px) and (max-width: 2000px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+    .style-form {
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 2%;
+        margin-top: 50px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+
+    .text-top-form {
+        margin-top: 65px;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* 
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
