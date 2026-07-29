@@ -8,6 +8,21 @@
                                                                                        
 */
 
+.boton-flotante2 {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px;
+}
+
+#diret-form {
+    color: #1b5b4b !important;
+    font-weight: bold;
+}
+
 .scroll-hidden {
     overflow-y: auto;
     scrollbar-width: none;
@@ -392,6 +407,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    #startForm {
+        padding-bottom: 60px !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -416,6 +435,10 @@ div#animationdivIcon {
         font-size: 20px !important;
     }
 
+    #startForm {
+        padding-bottom: 60px !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -437,6 +460,10 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    #startForm {
+        padding-bottom: 60px !important;
     }
 
 }
