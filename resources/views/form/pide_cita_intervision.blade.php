@@ -24,7 +24,9 @@
             </div>
         @else
             <div class="text-start mb-5 mt-3">
-                <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
+                @if ($data['landing'] !== 'promo_progresivas')
+                    <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
+                @endif
                 <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando') }}</p>
             </div>
         @endif
@@ -213,12 +215,13 @@
         <div class="">
 
             <div class="d-flex flex-column text-center w-100">
-
-                <span class="">{{ __('form_translation.titol-gracias_2') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-1_2') }}</span>
-                <span class="mt-4">{{ __('form_translation.parrafo-2_2') }}</span>
-
-                <hr>
+                @if ($data['landing'] !== 'promo_progresivas')
+                    <span class="">{{ __('form_translation.titol-gracias_2') }}</span>
+                    <span class="mt-4">{{ __('form_translation.parrafo-1_2') }}</span>
+                    <span class="mt-4">{{ __('form_translation.parrafo-2_2') }}</span>
+    
+                    <hr>
+                @endif
 
                 <span class="">{{ __('form_translation.titol-gracias') }}</span>
                 <span class="mt-4">{{ __('form_translation.parrafo-1') }}</span>

@@ -15,7 +15,7 @@
                     <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/promo_progresivas/' . $data['tipo_dispositivo'] . '/es/img4.png') }}">
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3 p-0">
-                    @include('form.pide_cita')
+                    @include('form.pide_cita_intervision')
                 </div>
             </div>
         </div>
