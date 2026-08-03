@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                 </div>
-                <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex align-items-center">
+                <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex align-items-center justify-content-center">
                     <div class="whatpB text start d-flex flex-column justify-sm-content-center p-3">
                         <p class="m-1 mb-md-4 text pt-1 pr-4 text-white text-center">
                             {{ __('form_translation.wsp_preferencia') }}</p>
