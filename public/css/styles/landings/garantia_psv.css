@@ -86,17 +86,17 @@
 }
 
 .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
-    font-weight: 200;
     line-height: 1;
     height: 272px;
     width: 67%;
     border-radius: 20px;
     border: solid #fff;
     justify-content: center;
-    padding: 11% !important;
-    font-family: 'IvyStyleSans', sans-serif;
+    padding: 8% !important;
+    font-family: "Inter";
     font-size: 23px;
     background-color: #000000a6;
+    font-weight: 100;
 }
 
 a.btn-form {
@@ -105,12 +105,13 @@ a.btn-form {
     text-align: center;
     width: 170px;
     border: none;
-    text-shadow: 0;
+    text-shadow: 300;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease;
     text-decoration: none;
     border-radius: 7px;
+    font-family: "Inter";
 }
 
 .btn-form {
