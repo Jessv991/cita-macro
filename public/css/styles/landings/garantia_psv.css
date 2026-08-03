@@ -7,10 +7,56 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+.whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
+    font-weight: 200;
+    line-height: 1;
+    height: 272px;
+    width: 67%;
+    border-radius: 20px;
+    border: solid #fff;
+    justify-content: center;
+    padding: 11% !important;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-size: 23px;
+    background-color: #000000a6;
+}
+
+a.btn-form {
+    font-size: 18px;
+    height: 40px;
+    text-align: center;
+    width: 170px;
+    border: none;
+    text-shadow: 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.btn-form {
+    color: #282828;
+    background-color: #fff;
+}
+
+.btn-form:hover {
+    color: #282828;
+    background-color: #bebebe;
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-image: url("../../../assets/img/garantia_psv/desktop/es/img.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
