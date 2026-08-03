@@ -2,6 +2,9 @@
 
 <div class="background-container">
     <div class="background-item">
+        <div class="w-100 d-flex justify-content-end p-5 pb-0">
+            <img class="logo_mung" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/logoMungia.png') }}">
+        </div>
         <div class="col-12">
             <div class="row">
                 <div class="col-lg-8 col-12 cont-r p-0">
