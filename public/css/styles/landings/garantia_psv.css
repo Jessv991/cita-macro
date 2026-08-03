@@ -47,9 +47,6 @@ a.btn-form {
 }
 
 body {
-    height: 104% !important;
-    overflow-y: auto;
-    overflow-x: hidden;
     background-image: url("../../../assets/img/garantia_psv/desktop/es/img.png");
     background-size: cover;
     background-position: center;
