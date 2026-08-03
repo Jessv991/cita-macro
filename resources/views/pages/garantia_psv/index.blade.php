@@ -12,7 +12,7 @@
                             <span class="text2">PROGRESIVO</span>
                         </div>
                         <div class="col-6 ps-5 d-flex flex-column">
-                            <div class=" d-flex align-items-center"><img class="icon-lente" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/lentes.svg') }}"><span class="text_lent">LENTE OFTÁLMICA</span></div>
+                            <div class=" d-flex align-items-center"><img class="icon-lente" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/lentes.svg') }}"><span class="text_lent ps-2">LENTE OFTÁLMICA</span></div>
                             <div class=" d-flex flex-column pt-4">
                                 <div class=" d-flex align-items-center">
                                     <img class="icon_num" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/1.svg') }}"><span class="text_punt ps-2 pe-5">Adaptación garantizada</span>
@@ -27,7 +27,7 @@
                                 <span class="resp_punt">100% de cobertura durante los 2 primeros años. Sin coste adicional.</span>
                             </div>
                             <hr class="linea">
-                            <div class=" d-flex flex-column pt-3 mb-3">
+                            <div class=" d-flex flex-column pt-3">
                                 <div class=" d-flex align-items-center">
                                     <img class="icon_num" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/3.svg') }}"><span class="text_punt ps-2 pe-5">Garantía por fallo de tratamiento</span>
                                 </div>
@@ -35,12 +35,12 @@
                             </div>
                         </div>
                         <div class="col-6 d-flex flex-column">
-                            <div class=" d-flex align-items-center w-100"><img class="icon-gafa" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/gafas.svg') }}"><span class="text_lent">MONTURAS</span></div>
-                            <div class=" d-flex flex-column pt-3 mb-3">
+                            <div class=" d-flex align-items-center w-100"><img class="icon-gafa" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/gafas.svg') }}"><span class="text_lent ps-2">MONTURAS</span></div>
+                            <div class=" d-flex flex-column pt-3 marg_t">
                                 <div class=" d-flex align-items-center">
                                     <img class="icon_num" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/1.svg') }}"><span class="text_punt ps-2 pe-5">Cobertura por defectos de fabricación</span>
                                 </div>
-                                <span class="resp_punt">Cambios bajo garantía hastab 2 años, sujetos a la valoración del fabricante.</span>
+                                <span class="resp_punt">Cambios bajo garantía hasta 2 años, sujetos a la valoración del fabricante.</span>
                             </div>
                             <hr class="linea">
                             <div class=" d-flex flex-column pt-3">

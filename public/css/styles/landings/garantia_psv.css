@@ -8,6 +8,10 @@
                                                                                        
 */
 
+.marg_t {
+    margin-bottom: 5.5%;
+}
+
 .linea {
     border: 0;
     height: 2px !important;
@@ -20,20 +24,20 @@
 }
 
 .icon-lente {
-    width: 80px;
+    width: 58px;
 }
 
 .icon_num {
-    width: 50px;
+    width: 40px;
 }
 
 .icon-gafa {
-    width: 117px;
+    width: 112px;
 }
 
 .resp_punt_r {
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     font-weight: 200;
     padding-left: 9%;
@@ -41,7 +45,7 @@
 }
 .resp_punt {
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 18px;
     color: #fff;
     font-weight: 200;
     padding-left: 9%;
@@ -50,14 +54,14 @@
 
 .text_punt {
     font-family: "Inter";
-    font-size: 28px;
+    font-size: 25px;
     color: #fff;
     line-height: normal;
 }
 
 .text_lent {
     font-family: "Inter";
-    font-size: 39px;
+    font-size: 35px;
     color: #936f3f;
 }
 
