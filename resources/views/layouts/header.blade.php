@@ -46,6 +46,11 @@
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/footer/footer.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/landings/' . $landing . '.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100..900&display=swap"
+        rel="stylesheet">
 
     @if ($landing === 'contactologia2026')
         <link rel="preconnect" href="https://fonts.googleapis.com">
