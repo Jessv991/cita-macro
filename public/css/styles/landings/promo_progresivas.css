@@ -412,6 +412,10 @@ div#animationdivIcon {
         padding-bottom: 60px !important;
     }
 
+    .contenedor-form {
+        padding: 6% !important;
+    }
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -440,6 +444,10 @@ div#animationdivIcon {
         padding-bottom: 60px !important;
     }
 
+    .contenedor-form {
+        padding: 6% !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -465,6 +473,10 @@ div#animationdivIcon {
 
     #startForm {
         padding-bottom: 60px !important;
+    }
+
+    .contenedor-form {
+        padding: 6% !important;
     }
 
 }
