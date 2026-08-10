@@ -151,7 +151,7 @@ div#animationdivIcon {
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
-    background-color: #688B93 !important;
+    background-color: #578087 !important;
 }
 
 .btn-color-cita:hover {
@@ -167,7 +167,7 @@ div#animationdivIcon {
 }
 
 .banner-logo-mobile{
-    background-color: #688B93;
+    background-color: #578087;
 }
 
 .mb-5-wrapper {
@@ -276,7 +276,7 @@ div#animationdivIcon {
 }
 
 .form-section {
-    background-color: #688B93 !important;
+    background-color: #578087 !important;
 }
 
 @keyframes fadeIn {
@@ -427,12 +427,12 @@ label>a:hover{
 }
 
 .btn-participa {
-    background-color: #688B93;
+    background-color: #578087;
     color: white;
 }
 
 .btn-bottom-center {
-  background-color: #688B93;
+  background-color: #578087;
   color: #fff;
   border: none;
   padding: 12px 30px;
