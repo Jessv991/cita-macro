@@ -127,38 +127,6 @@
         });
     }
 
-    const carousel1 = document.getElementById("carouselExample1");
-    const carousel2 = document.getElementById("carouselExample2");
-    const toggleButton1 = document.getElementById("toggleCarousel1");
-    const toggleButton2 = document.getElementById("toggleCarousel2");
-
-    toggleButton1.style.fontWeight = "500";
-    toggleButton2.style.fontWeight = "100";
-
-    carousel1.style.display = "block";
-    carousel2.style.display = "none";
-
-    carousel1.classList.remove('fade-out', 'slide-out-left');
-    carousel1.classList.add('fade-in', 'slide-in-left');
-
-    toggleButton1.addEventListener("click", function() {
-        carousel1.style.display = "block";
-        carousel2.style.display = "none";
-        toggleButton1.style.fontWeight = "500";
-        toggleButton2.style.fontWeight = "100";
-        carousel1.classList.remove('fade-out', 'slide-out-left');
-        carousel1.classList.add('fade-in', 'slide-in-left');
-    });
-
-    toggleButton2.addEventListener("click", function() {
-        toggleButton1.style.fontWeight = "100";
-        toggleButton2.style.fontWeight = "500";
-        carousel2.style.display = "block";
-        carousel1.style.display = "none";
-        carousel2.classList.remove('fade-out', 'slide-out-left');
-        carousel2.classList.add('fade-in', 'slide-in-left');
-    });
-
     $('#btn-flotante').on('click', function(e) {
         e.preventDefault();
 
