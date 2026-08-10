@@ -20,6 +20,13 @@
 
 @font-face {
     font-family: "Lemance";
+    src: url("/fonts/Lemance_Trial_It.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Lemance";
     src: url("/fonts/Lemance_Trial_Lt.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
@@ -27,9 +34,9 @@
 
 @font-face {
     font-family: "Lemance";
-    src: url("/fonts/Lemance_Trial_Ltlt.ttf") format("truetype");
-    font-weight: 200;
-    font-style: normal;
+    src: url("/fonts/Lemance_Trial_LtIt.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
 }
 
 @font-face {
@@ -41,14 +48,7 @@
 
 @font-face {
     font-family: "Lemance";
-    src: url("/fonts/Lemance_Trial_lt.ttf") format("truetype");
-    font-weight: 300;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: "Lemance";
-    src: url("/fonts/Lemance_Trial_Bdlt.ttf") format("truetype");
+    src: url("/fonts/Lemance_Trial_BdIt.ttf") format("truetype");
     font-weight: 700;
     font-style: italic;
 }
