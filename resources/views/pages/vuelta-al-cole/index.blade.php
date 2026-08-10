@@ -71,7 +71,7 @@
     <img class="d-block w-100"
         src="{{ asset($data['rutaAsset'] . 'assets/img/vuelta-al-cole/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner2.png') }}">
 </div>
-<div class="h-100 pt-5">
+<div class="h-100">
     <div class="form-section">
         @include('form.pide_cita')
     </div>
@@ -87,7 +87,7 @@
         }
     ?>
 
-<footer class="row w-100">
+<footer class="w-100">
     <?php
             if($data['tipo_dispositivo']!='mobile') {            
         ?>

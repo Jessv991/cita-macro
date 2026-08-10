@@ -12,24 +12,45 @@
 }
 
 @font-face {
-    font-family: "Lemance";
-    src:
-        url("/assets/fonts/Lemance-Regular.woff2") format("woff2"),
-        url("/assets/fonts/Lemance-Regular.woff") format("woff"),
-        url("/assets/fonts/Lemance-Regular.ttf") format("truetype");
-    font-weight: normal;
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_Rg.ttf') format('truetype');
+    font-weight: 400;
     font-style: normal;
-    font-display: swap;
 }
 
 @font-face {
-    font-family: "Lemance";
-    src:
-        url("/assets/fonts/Lemance-Bold.woff2") format("woff2"),
-        url("/assets/fonts/Lemance-Bold.ttf") format("truetype");
-    font-weight: bold;
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_It.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_Lt.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
-    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_LtIt.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_Bd.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Lemance';
+    src: url('/fonts/Lemance_Trial_BdIt.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
 }
 
 html,
@@ -156,8 +177,8 @@ div#animationdivIcon {
 }
 
 .logo-N {
-    width: 85px;
-    height: 85px;
+    width: 55px;
+    height: 60px;
 }
 
 .footer-contact {
