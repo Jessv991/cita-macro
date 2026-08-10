@@ -151,7 +151,7 @@ div#animationdivIcon {
     border-radius: 10px !important;
     margin: 25px !important;
     width: 150px !important;
-    background-color: #E2807B !important;
+    background-color: #688B93 !important;
 }
 
 .btn-color-cita:hover {
@@ -163,17 +163,24 @@ div#animationdivIcon {
 }
 
 .banner-logo{
-    background-color: #ffffff6b;
+    background-color: #fff;
 }
 
 .banner-logo-mobile{
-    background-color: #C3D696;
+    background-color: #688B93;
+}
+
+.mb-5-wrapper {
+    margin-bottom: 5rem !important;
 }
 
 .btn-wrapper-fixed {
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     z-index: 1050;
+    background-color: #ffffff;
 }
 
 .logo {
@@ -269,7 +276,7 @@ div#animationdivIcon {
 }
 
 .form-section {
-    background-color: #BDD089 !important;
+    background-color: #688B93 !important;
 }
 
 @keyframes fadeIn {
@@ -420,12 +427,12 @@ label>a:hover{
 }
 
 .btn-participa {
-    background-color: #D1DEAD;
+    background-color: #688B93;
     color: white;
 }
 
 .btn-bottom-center {
-  background-color: #D1DEAD;
+  background-color: #688B93;
   color: #fff;
   border: none;
   padding: 12px 30px;
@@ -445,7 +452,7 @@ label>a:hover{
   bottom: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(196, 214, 149, 0.7); /* 0.5 es 50% de opacidad */
+  background-color: rgba(104, 139, 147, 0.7); /* 0.5 es 50% de opacidad */
   display: flex;
   justify-content: center;
   align-items: center;
