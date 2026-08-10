@@ -146,7 +146,7 @@ div#animationdivIcon {
 
 .btn-color {
     width: 234px !important;
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     font-size: 20px;
 }
 
@@ -433,7 +433,7 @@ label > a:hover {
 .btn-color {
     background-color: #fff !important;
     color: #000;
-    border-radius: 20px !important;
+    border-radius: 10px !important;
     width: 170px !important;
     font-size: 18px !important;
 }
@@ -460,7 +460,7 @@ label > a:hover {
     font-size: 18px;
     font-style: italic;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 10px;
     cursor: pointer;
     border: 1px solid #fff;
     transition: background-color 0.3s ease;
