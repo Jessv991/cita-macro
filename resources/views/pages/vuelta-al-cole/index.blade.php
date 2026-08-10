@@ -45,12 +45,12 @@
             ?>
     <div class="row ps-5 pe-5 mt-5 mb-5">
         <div class="col-6">
-            <img class="d-block mx-auto w-100 h-100"
+            <img class="d-block mx-auto w-auto"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/vuelta-al-cole/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/tu_vista.png') }}">
         </div>
         <div class="col-6 text-start pt-4">
             <span class="text-dark d-block mb-3 fs-4"
-                style="margin-right: 25%;">{{ __('vuelta-al-cole.nuevos-horarios') }}</span>
+                style="margin-right: 25%;">{!! __('vuelta-al-cole.nuevos-horarios') !!}</span>
             <img class="d-block w-75"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/vuelta-al-cole/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/empieza.png') }}">
         </div>
@@ -60,7 +60,7 @@
             ?>
                 <img class="d-block mx-auto w-100 h-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/vuelta-al-cole/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/tu_vista.png') }}">
-                <span class="text-dark text-center d-block mb-3 fs-5 ps-5 pe-5">{{ __('vuelta-al-cole.nuevos-horarios') }}</span>
+                <span class="text-dark text-center d-block mb-3 fs-5 ps-5 pe-5">{!! __('vuelta-al-cole.nuevos-horarios') !!}</span>
                 <img class="d-block w-100 mb-4"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/vuelta-al-cole/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/empieza.png') }}">
                 <?php
