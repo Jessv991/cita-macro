@@ -19,15 +19,6 @@ html, body {
     /* Remove height: 104%! Use min-height: 100vh so it only grows if content demands it */
 }
 
-/* body {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    /* Use mobile background as default (Mobile-First approach) */
-    /* background-image: url("../../../assets/img/garantia_psv/mobile/es/img.png");
-} */
-
 body {
     margin: 0;                   /* Removes default browser spacing */
     padding: 0;
@@ -144,15 +135,6 @@ body {
     width: 95%;
     margin: 1rem 0;
 }
-/* @media (min-width: 992px) {
-    .linea {
-    }
-}
-@media (max-width: 991px) {
-    .linea {
-        width: 100%;
-    }
-} */
 
 .pad_bott {
     padding-bottom: 1.5rem;
@@ -319,20 +301,12 @@ input {
     /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
 
-/* input:hover {
-    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
-} */
-
 select {
     margin-top: 3% !important;
     font-size: 19px !important;
     border-color: #fff !important;
     /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
-
-/* select:hover {
-    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
-} */
 
 div#animationdivIcon {
     margin-top: 3% !important;
@@ -398,10 +372,6 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-
-    /* .cont-r {
-        height: 100vh;
-    } */
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -428,11 +398,6 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-
-    /* .cont-r {
-        height: 100vh;
-    } */
-
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -459,11 +424,6 @@ div#animationdivIcon {
         width: 219px !important;
         border-radius: 5px !important;
     }
-
-    /* .cont-r {
-        height: 100vh;
-    } */
-
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
