@@ -1,15 +1,60 @@
-
 @include('layouts.header')
+<div class="container-fluid">
+    <div class="background-container">
+        <div class="background-item d-flex flex-column min-vh-100">
+            <div class="w-100 d-flex justify-content-center justify-content-md-end p-5 pb-0">
+                <img class="logo_mung" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/logoMungia.png') }}">
+            </div>
+            <div class="col-12 my-auto">
+                <div class="row g-0">
+                    <div class="col-lg-8 col-12 cont-r p-0">
+                        <div class="row ms-auto ps-md-5 d-block d-md-flex">
+                            <div class="col-12 textTop text-center text-sm-start mt-5 mt-md-auto ps-md-5 pad_bott">
+                                <span class="text1">Seguro de sol exclusivo</span>
+                                <br>
+                                <span class="text2">OPTIKA MUNGIA</span>
+                            </div>
+                            <div class="col-12 col-md-6 px-5 px-md-3 ps-md-5 my-5 pb-5 d-flex flex-column">
+                                <div class=" d-flex flex-column pt-4">
+                                    <div class=" d-flex align-items-center">
+                                        <img class="icon_num" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/1.svg') }}"><span class="text_punt ps-2 pe-5">Cobertura por uso</span>
+                                    </div>
+                                    <span class="resp_punt_r">Hasta el primer año, ofrecemos un 50% de dto. en reposición por desgaste, rayaduras o roturas ocasionadas por el uso*.</span>
+                                    <span class="font-sm mt-3">*Aplicable a la gafa completa o al repuesto específico necesario (montura, lentes, etc...).</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 px-5 px-md-3 ps-sm-auto my-5 pb-5 pb-sm-auto d-flex flex-column">
+                                <div class=" d-flex flex-column pt-3 marg_t">
+                                    <div class=" d-flex align-items-center">
+                                        <img class="icon_num" src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/2.svg') }}"><span class="text_punt ps-2 pe-5">Garantía por fallo de tratamiento</span>
+                                    </div>
+                                    <span class="resp_punt">Esta garantía recoge la normativa legal vigente.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if ($data['tipo_dispositivo'] == 'mobile')
+                    <div class="whatsapp-sticky-container">
+                        <a href="https://wa.me/+34688772399?text= !Hola! me gustaría obtener información acerca de su promoción "Seguro visual plan PROGRESIVO"."
+                            target="_blank" 
+                            rel="noopener noreferrer" 
+                            aria-label="Chat on WhatsApp">
+                        <img src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/' . $data['landing'] . '/whatsapp-icon.png') }}" 
+                            alt="WhatsApp">
+                        </a>
+                    </div>
 
-<div class="background-container">
-    <div class="background-item">
-        <div class="col-12" style="background-color: #00A091">
-            <div class="row">
-                <div class="col-lg-8 col-12">
-                    <img class="w-100 h-100 active" src="{{ asset($data['rutaAsset'] . 'assets/img/RAY-BAN/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img.jpg') }}">
-                </div>
-                <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex align-items-center">
-                    @include('form.pide_cita')
+                    @else
+                        <div class="col-lg-4 col-12 mt-lg-0 mt-3 d-flex align-items-center justify-content-center">
+                            <div class="whatpB text start d-flex flex-column justify-sm-content-center p-3">
+                                <p class="m-1 mb-md-4 text pt-1 pr-4 text-white text-center">Si tienes cualquier consulta, ¡escríbenos a través de WhatsApp!</p>
+                                <div class="d-flex justify-content-center">
+                                    <a href='https://wa.me/+34688772399?text= !Hola! me gustaría obtener información acerca de su promoción "Seguro visual plan PROGRESIVO".' title="Pedir cita"
+                                        class="btn-form d-flex justify-content-center align-items-center">Enviar mensaje</a>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
                 </div>
             </div>
         </div>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 134.96 114.35">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #936f3f;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+      }
+    </style>
+  </defs>
+  <g id="LANDING_2" data-name="LANDING 2">
+    <g>
+      <ellipse class="cls-1" cx="63.94" cy="56.63" rx="74.4" ry="37.42" transform="translate(-21.39 52.87) rotate(-39.01)"/>
+      <path class="cls-1" d="M107.85,37.32c-3.47,11.96-13.2,25.77-27.43,37.29-10.49,8.5-21.69,14.35-31.83,17.2"/>
+      <polygon class="cls-1" points="114.98 108.6 111.96 97.4 100.76 94.38 111.96 91.35 114.98 80.16 118.01 91.35 129.2 94.38 118.01 97.4 114.98 108.6"/>
+    </g>
+  </g>
+</svg>
