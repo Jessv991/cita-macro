@@ -112,10 +112,14 @@ label > span {
 
 .text-top-form {
     color: #000;
-    font-family: "Lemance2", serif;
+    font-family: "Lemance2", serif !important;
     font-weight: 200;
     line-height: 1;
     font-size: 25px;
+}
+
+.w-90{
+    width: 90%;
 }
 
 input {

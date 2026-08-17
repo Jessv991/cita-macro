@@ -28,7 +28,7 @@
     <?php
                 if($data['tipo_dispositivo']!='mobile'){
             ?>
-    <img class="d-block mx-auto w-75 h-75"
+    <img class="d-block mx-auto w-90 h-75"
         src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
     <?php
                 }else{
