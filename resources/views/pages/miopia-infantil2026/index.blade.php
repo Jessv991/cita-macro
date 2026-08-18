@@ -46,7 +46,6 @@
         <p class="ps-4 pe-4">{!! __('miopia-infantil2026.revision-visual-mobil') !!}</p>
         <img class="d-block mx-auto w-100 h-100"
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
-
     </div>
 @else
     <div class="container mt-4">
@@ -56,7 +55,6 @@
                     src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
                 <p class="fs-5">{!! __('miopia-infantil2026.revision-visual') !!}</p>
             </div>
-
             <div class="col-6 d-flex">
                 <img class="d-block mx-auto w-100 h-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
