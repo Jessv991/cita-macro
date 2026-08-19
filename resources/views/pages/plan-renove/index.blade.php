@@ -43,7 +43,7 @@
 
         <div class="w-100 d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
-                <img class="w-auto"
+                <img class="w-100"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
             </div>
         </div>
