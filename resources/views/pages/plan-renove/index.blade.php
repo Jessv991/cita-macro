@@ -54,7 +54,7 @@
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
             </div>
             <div class="w-100 text-width">
-                <img class="{{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3 w-auto' : 'mb-3 titulo_tu_vista1' }}"
+                <img class="titulo_tu_vista1 {{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
             </div>
         </div>
