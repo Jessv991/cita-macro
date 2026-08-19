@@ -2,7 +2,8 @@
 <div class="background-container">
     <div class="background-item d-flex flex-column align-items-center">
 
-        <div class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
+        <div
+            class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
             @if ($data['tipo_dispositivo'] == 'mobile')
                 <div class="banner-logo-mobile d-flex justify-content-center align-items-center">
                     <img class="logo p-2"
@@ -49,11 +50,11 @@
 
         <div class="w-100 d-flex flex-column align-items-center text-center">
             <div class="w-100 d-flex justify-content-center">
-                <img class="mt-3"
+                <img class="titulo_tu_vista1 mt-3"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
             </div>
             <div class="w-50 text-width">
-                <img class="{{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
+                <img class="titulo_tu_vista1 {{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
             </div>
         </div>
@@ -63,50 +64,38 @@
         </div>
 
         <footer class="row w-100 p-0">
-            <?php
-                if($data['tipo_dispositivo']!='mobile') {            
-            ?>
-            <div class="d-flex footer-contact text-center col-12">
-                <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
-                    class="p-privacity col-4 fw-bold">{{ __('plan-renove.Politicas-privacidad') }}</a>
-                <img class="d-block mx-auto logo-N col-4"
-                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
-                <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
-                    class="p-cookies col-4 fw-bold">{{ __('plan-renove.Politicas-cookies') }}</a>
-            </div>
-            <?php
-                }else{               
-            ?>
-            <div class="d-flex flex-column align-items-center footer-contact text-center m-bottom">                
-                <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
-                    {{ __('plan-renove.Politicas-privacidad') }}
-                </a>
-                <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
-                    {{ __('plan-renove.Politicas-cookies') }}
-                </a>
-                <img class="d-block mx-auto logo-N"
-                    src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
-            </div>
-            <?php
-                }
-            ?>
+            @if ($data['tipo_dispositivo'] != 'mobile')
+                <div class="d-flex footer-contact text-center col-12">
+                    <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
+                        class="p-privacity col-4 fw-bold">{{ __('plan-renove.Politicas-privacidad') }}</a>
+                    <img class="d-block mx-auto logo-N col-4"
+                        src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
+                    <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
+                        class="p-cookies col-4 fw-bold">{{ __('plan-renove.Politicas-cookies') }}</a>
+                </div>
+            @else
+                <div class="d-flex flex-column align-items-center footer-contact text-center m-bottom">
+                    <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
+                        {{ __('plan-renove.Politicas-privacidad') }}
+                    </a>
+                    <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
+                        {{ __('plan-renove.Politicas-cookies') }}
+                    </a>
+                    <img class="d-block mx-auto logo-N"
+                        src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
+                </div>
+            @endif
         </footer>
 
     </div>
 </div>
 
-<?php
-        if($data['tipo_dispositivo']=='mobile') {
-    ?>
-
-<div class="fixed-bottom-container justify-content-center align-items-center"
-    onclick="document.getElementById('formMacroContactologia').scrollIntoView({ behavior: 'smooth' });">
-    <button id="btn-flotante" class="btn-bottom-center">{{ __('form_translation.Pedir_cita') }}</button>
-</div>
-
-<?php
-        }
-    ?>
+@if ($data['tipo_dispositivo'] == 'mobile')
+    <div class="fixed-bottom-container justify-content-center align-items-center"
+        onclick="document.getElementById('formMacroContactologia').scrollIntoView({ behavior: 'smooth' });">
+        <button id="btn-flotante" class="btn-bottom-center">{{ __('form_translation.Pedir_cita') }}</button>
+    </div>
+@endif
 
 @include('layouts.footer')
 
