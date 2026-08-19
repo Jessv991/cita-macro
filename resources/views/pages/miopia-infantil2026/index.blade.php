@@ -3,8 +3,8 @@
 <div class="background-container">
     @if ($data['tipo_dispositivo'] == 'mobile')
         <div class="background-item">
-        @else
-            <div class="background-item mb-5-wrapper">
+    @else
+        <div class="background-item mb-5-wrapper">
     @endif
     @if ($data['tipo_dispositivo'] == 'mobile')
         <div class="banner-logo-mobile text-center">
@@ -25,19 +25,13 @@
     @endif
 </div>
 <div class="banner-pide-cita">
-    <?php
-                if($data['tipo_dispositivo']!='mobile'){
-            ?>
-    <img class="d-block mx-auto w-90 h-75"
-        src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
-    <?php
-                }else{
-            ?>
-    <img class="d-block mx-auto w-100 h-100"
-        src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
-    <?php
-                }
-            ?>
+    @if ($data['tipo_dispositivo'] != 'mobile')
+        <img class="d-block mx-auto w-90 h-75"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+    @else
+        <img class="d-block mx-auto w-100 h-100"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+    @endif
 </div>
 @if ($data['tipo_dispositivo'] == 'mobile')
     <div class="text-center">
@@ -107,45 +101,35 @@
             src="{{ asset($data['rutaAsset'] . 'assets/img/miopia-infantil2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img6.png') }}">
     </div>
 @endif
-<?php
-        if($data['tipo_dispositivo']=='mobile') {
-    ?>
-<div class="fixed-bottom-container justify-content-center align-items-center"
-    onclick="document.getElementById('formMacroContactologia').scrollIntoView({ behavior: 'smooth' });">
-    <button class="btn-bottom-center">{{ __('form_translation.Pedir_cita') }}</button>
-</div>
-<?php
-        }
-    ?>
+@if ($data['tipo_dispositivo'] == 'mobile')
+    <div class="fixed-bottom-container justify-content-center align-items-center"
+        onclick="document.getElementById('formMacroContactologia').scrollIntoView({ behavior: 'smooth' });">
+        <button class="btn-bottom-center">{{ __('form_translation.Pedir_cita') }}</button>
+    </div>
+@endif
 
 <footer class="w-100">
-    <?php
-            if($data['tipo_dispositivo']!='mobile') {            
-        ?>
-    <div class="d-flex footer-contact text-center col-12">
-        <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
-            class="p-privacity col-4">{{ __('contactologia.Politicas-privacidad') }}</a>
-        <img class="d-block mx-auto logo-N col-4"
-            src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
-        <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
-            class="p-cookies col-4">{{ __('contactologia.Politicas-cookies') }}</a>
-    </div>
-    <?php
-            }else{               
-        ?>
-    <div class="d-flex flex-column align-items-center footer-contact text-center m-footer">
-        <img class="d-block mx-auto logo-N mt-5"
-            src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
-        <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2">
-            {{ __('contactologia.Politicas-privacidad') }}
-        </a>
-        <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1">
-            {{ __('contactologia.Politicas-cookies') }}
-        </a>
-    </div>
-    <?php
-            }
-        ?>
+    @if ($data['tipo_dispositivo'] != 'mobile')
+        <div class="d-flex footer-contact text-center col-12">
+            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
+                class="p-privacity col-4">{{ __('contactologia.Politicas-privacidad') }}</a>
+            <img class="d-block mx-auto logo-N col-4"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
+                class="p-cookies col-4">{{ __('contactologia.Politicas-cookies') }}</a>
+        </div>
+    @else
+        <div class="d-flex flex-column align-items-center footer-contact text-center m-footer">
+            <img class="d-block mx-auto logo-N mt-5"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2">
+                {{ __('contactologia.Politicas-privacidad') }}
+            </a>
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1">
+                {{ __('contactologia.Politicas-cookies') }}
+            </a>
+        </div>
+    @endif
 </footer>
 </div>
 
