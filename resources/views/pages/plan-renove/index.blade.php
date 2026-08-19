@@ -40,12 +40,9 @@
             </div>
         </div>
 
-
-        <div class="w-100 d-lg-flex flex-column align-items-center text-center">
-            <div class="w-100">
-                <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
-            </div>
+        <div class="d-lg-flex flex-column align-items-center text-center">
+            <img class="{{ $data['tipo_dispositivo'] != 'mobile' ? 'w-auto' : 'w-100' }}"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
         </div>
 
         <div class="w-100 d-flex flex-column align-items-center text-center">
