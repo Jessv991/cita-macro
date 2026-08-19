@@ -1,9 +1,7 @@
 @include('layouts.header')
 <div class="background-container">
     <div class="background-item d-flex flex-column align-items-center">
-
-        <div
-            class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
+        <div class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
             @if ($data['tipo_dispositivo'] == 'mobile')
                 <div class="banner-logo-mobile d-flex justify-content-center align-items-center">
                     <img class="logo p-2"
@@ -83,7 +81,6 @@
                 </div>
             @endif
         </footer>
-
     </div>
 </div>
 
@@ -134,6 +131,5 @@
         });
     });
 
-    // Inicializa la vista
     updateSlides();
 </script>
