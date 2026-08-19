@@ -50,11 +50,11 @@
 
         <div class="w-100 d-flex flex-column align-items-center text-center">
             <div class="w-100 d-flex justify-content-center">
-                <img class="titulo_tu_vista1 mt-3"
+                <img class="mt-3 {{ $data['tipo_dispositivo'] != 'mobile' ? 'w-auto' : 'titulo_tu_vista1' }}"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
             </div>
             <div class="w-100 text-width">
-                <img class="titulo_tu_vista1 {{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
+                <img class="{{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3 w-auto' : 'mb-3 titulo_tu_vista1' }}"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
             </div>
         </div>
