@@ -43,7 +43,7 @@
 
         <div class="w-100 d-lg-flex flex-column align-items-center text-center">
             <div class="w-100">
-                <img class="w-100"
+                <img class="w-auto"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
             </div>
         </div>
@@ -53,7 +53,7 @@
                 <img class="titulo_tu_vista1 mt-3"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
             </div>
-            <div class="w-50 text-width">
+            <div class="w-100 text-width">
                 <img class="titulo_tu_vista1 {{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
                     src="{{ asset($data['rutaAsset'] . 'assets/img/plan-renove/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
             </div>
