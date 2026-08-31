@@ -15,7 +15,7 @@
                             alt="Logo">
                     </div>
                     <div class="btn-position me-5">
-                        <button id="btn-flotante" class="btn btn-color-cita">
+                        <button id="btn-flotante" class="btn btn-color-cita" style="white-space: nowrap; padding: 10px;">
                             {{ __('form_translation.Pedir_cita') }}
                         </button>
                     </div>
