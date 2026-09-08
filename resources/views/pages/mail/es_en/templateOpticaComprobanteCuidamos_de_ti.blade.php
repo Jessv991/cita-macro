@@ -946,7 +946,7 @@ li {
                                               </p>
                                               <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Motivo: {TIPO}
+                                                  Motivo: {MOTIVO}
                                                 </em>
                                               </p>
                                               <p style="color:#050606;font-size:16px">

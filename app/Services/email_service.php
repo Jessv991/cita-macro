@@ -150,12 +150,12 @@ class email_service
                         '{LOCAL}',
                         '{EMAILOPTICA}',
                         '{WEB}',
-                        '{TIPO}',
+                        '{MOTIVO}',
                         '{FECHA}',
                         '{HORA}'
                     );
 
-                    $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica, $fechaCita, $horaCita, $motivo);
+                    $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica, $motivo, $fechaCita, $horaCita);
                 } else {
                     $palabrasBuscar = array(
                         '{NOMBRECLIENTE}',
@@ -199,7 +199,6 @@ class email_service
                 $mail->send();
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
-                dd('falló: ', $mail->ErrorInfo);
                 // Manejo de errores
                 return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
             }
