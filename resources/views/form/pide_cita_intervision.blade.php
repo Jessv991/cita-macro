@@ -174,24 +174,16 @@
                 </div>
 
 
-                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="1900">
-
-                    <label for="fecha" class="form-label">
-                        Seleccionar fecha / Select date
-                    </label>
+                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="1900">
 
                     <input class="form-control @error('fecha') is-invalid @enderror" type="date" name="fecha"
                         id="fecha">
 
                 </div>
 
-                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="2100">
-
-                    <label for="hora" class="form-label">
-                        Seleccionar hora / Select time
-                    </label>
+                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="2100">
 
                     <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
                         id="hora">
@@ -246,7 +238,7 @@
                         <span> / I accept the</span>
                         <a href="{{ route('politicas.privacidad_en', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
-                            Privacy Policies
+                             Privacy Policies
                         </a>
                     </label>
                 </div>
