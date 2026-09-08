@@ -141,54 +141,55 @@
                 </div>
             </div>
 
-            <div class="motivo_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                data-aos-offset="500" data-aos-duration="1900">
+            @if ($data['landing'] === 'cuidamos_de_ti')
+                <div class="motivo_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="1900">
 
-                <select class="form-select @error('motivo') is-invalid @enderror" name="motivo" id="motivo">
-                    <option value="" selected disabled>
-                        Selecciona el motivo de la cita
-                    </option>
+                    <select class="form-select @error('motivo') is-invalid @enderror" name="motivo" id="motivo">
+                        <option value="" selected disabled>
+                            Selecciona el motivo de la cita
+                        </option>
 
-                    <option value="examen_visual">
-                        Examen visual / Eye test
-                    </option>
+                        <option value="examen_visual">
+                            Examen visual / Eye test
+                        </option>
 
-                    <option value="gafas">
-                        Gafas / Glasses
-                    </option>
+                        <option value="gafas">
+                            Gafas / Glasses
+                        </option>
 
-                    <option value="lentes_contacto">
-                        Lentes de contacto / Contact lenses
-                    </option>
+                        <option value="lentes_contacto">
+                            Lentes de contacto / Contact lenses
+                        </option>
 
-                    <option value="audiologia">
-                        Audiología / Hearing care
-                    </option>
+                        <option value="audiologia">
+                            Audiología / Hearing care
+                        </option>
 
-                    <option value="otra_consulta">
-                        Otra consulta / Other
-                    </option>
-                </select>
+                        <option value="otra_consulta">
+                            Otra consulta / Other
+                        </option>
+                    </select>
 
-            </div>
+                </div>
 
 
-            <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="1900">
+                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="1900">
 
-                <input class="form-control @error('fecha') is-invalid @enderror" type="date" name="fecha"
-                    id="fecha">
+                    <input class="form-control @error('fecha') is-invalid @enderror" type="date" name="fecha"
+                        id="fecha">
 
-            </div>
+                </div>
 
-            <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                data-aos-duration="2100">
+                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                    data-aos-duration="2100">
 
-                <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
-                    id="hora">
+                    <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
+                        id="hora">
 
-            </div>
-
+                </div>
+            @endif
 
             <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                 data-aos-offset="500" data-aos-duration="1100">
@@ -233,6 +234,11 @@
                         <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                             {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
+                        </a>
+                        <span> / I accept the</span>
+                        <a href="{{ route('politicas.privacidad_en', app()->getLocale()) }}" target="_blank"
+                            style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
+                             Privacy Policies
                         </a>
                     </label>
                 </div>

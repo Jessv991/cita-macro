@@ -17,6 +17,16 @@ use Illuminate\Support\Facades\App;
                                                                            
 */
 
+//ruta politcas de privacidad en inglés
+Route::get('cita-macro/politicas-de-privacidad_en/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
+        $locale = 'es';
+    }
+    App::setLocale($locale);
+    return view('pages.policy.index_en');
+    
+})->name('politicas.privacidad_en');
+
 //ruta politcas de privacidad
 Route::get('cita-macro/politicas-de-privacidad/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {

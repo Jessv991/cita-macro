@@ -183,13 +183,13 @@ class email_service
             if ($test == 'true') {
                 $mail->addAddress('l.vigna@naturalopticsgroup.com');
                 $mail->addCC('j.vasquez@naturalopticsgroup.com');
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin, $motivo, $fechaCita, $horaCita);
             } else {
                 $mail->addAddress($email_optica);
                 $mail->addCC('crm@naturalopticsgroup.com');
 
                 //función que envía email al cliente 
-                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin);
+                $this->sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda_codigo, $origen, $promocional, $landing, $web_optica, $weblogin, $motivo, $fechaCita, $horaCita);
             }
 
 
@@ -210,7 +210,7 @@ class email_service
         }
     }
 
-    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing, $web_optica, $weblogin)
+    function sendMessageClient($tlf_optica, $email_optica, $direccion_optica, $email, $nombre_optica, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $validated, $tienda, $origen, $promocional, $landing, $web_optica, $weblogin, $motivo, $fechaCita, $horaCita)
     {
         if ($landing === 'contactologia') {
             $Citas = new sorteoLc();
@@ -297,7 +297,7 @@ class email_service
             $mail->Body = $actual;
 
             $mail->addAddress($email);
-            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip);
+            $Citas->saveCustomerData($validated, $url, $tienda, $origen, $tipo_dispositivo, $dispositivo, $ip, $motivo, $fechaCita, $horaCita);
 
 
             try {

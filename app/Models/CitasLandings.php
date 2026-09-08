@@ -89,7 +89,7 @@ class CitasLandings extends Model
     // Relations ...
 
 
-    public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip)
+    public function saveCustomerData($validated, $url, $codigo, $origen, $tipo_dispositivo, $dispositivo, $ip, $motivo, $fechaCita, $horaCita)
     {
         try {
             $this->fill([
@@ -104,6 +104,9 @@ class CitasLandings extends Model
                 'ip' => $ip,
                 'tipo_dispositivo' => $tipo_dispositivo,
                 'dispositivo' => $dispositivo,
+                'tipo_peticion' => $motivo,
+                'fecha_cita' => $fechaCita,
+                'hora_cita' => $horaCita,
             ]);
             $this->save();
         } catch (\Exception $e) {
