@@ -3,6 +3,7 @@
 return [
 
     'Pide_cita_rellenando' => "Request an appointment by filling out the form and we will contact you.",
+    'fecha' => "eso",
     'Pide_cita_rellenando2' => 'Pide cita rellenando el formulario y nos pondremos en contacto contigo.',
     'anniversary' => '¡Cumplimos 1 año y queremos celebrarlo contigo!',
     'anniversary2' => "1st anniversary, let's celebrate together!",

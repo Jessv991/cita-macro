@@ -32,6 +32,26 @@ class email_service
         $email = $validated['email'];
         $movil = $validated['movil'];
 
+        $fechaCita = $validated['fecha'] ?? null;
+        $horaCita = $validated['hora'] ?? null;
+        $motivo = $validated['motivo'] ?? null;
+
+
+        if (!empty($motivo)) {
+
+            if ($motivo === 'examen_visual') {
+                $motivo = 'Examen visual / Eye test';
+            } elseif ($motivo === 'gafas') {
+                $motivo = 'Gafas / Glasses';
+            } elseif ($motivo === 'lentes_contacto') {
+                $motivo = 'Lentes de contacto / Contact lenses';
+            } elseif ($motivo === 'audiologia') {
+                $motivo = 'Audiología / Hearing care';
+            } elseif ($motivo === 'otra_consulta') {
+                $motivo = 'Otra consulta / Other';
+            }
+        }
+
 
         $empresas = new Empresas();
         $mail = new PHPMailer(true);
@@ -105,30 +125,54 @@ class email_service
                 $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $landing);
             } else {
                 $mail->Subject = 'Cita previa de ' . $nombre . ' ' . $apellidos;
-                
+
                 $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobante.blade.php');
 
                 if ($landing === 'intervision_expert_two_for_one_godella' || $landing === 'intervision_expert_lentillas') {
 
                     $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteGodella.blade.php');
+                } else if ($landing === 'cuidamos_de_ti') {
+                    $archivo = resource_path('views/pages/mail/' . $locale . '/templateOpticaComprobanteCuidamos_de_ti.blade.php');
                 }
 
-                $palabrasBuscar = array(
-                    '{NOMBRECLIENTE}',
-                    '{EMAILCLIENTE}',
-                    '{TELEFONOCLIENTE}',
-                    '{ORIGIN}',
-                    '{TELEFONOPTICA}',
-                    '{EMAILOPTICO}',
-                    '{DIRECIONOPTICA}',
-                    '{LOGO}',
-                    '{LOCAL}',
-                    '{EMAILOPTICA}',
-                    '{WEB}'
-                );
+                $palabrasReemplazar = [];
 
+                if ($landing === 'cuidamos_de_ti') {
+                    $palabrasBuscar = array(
+                        '{NOMBRECLIENTE}',
+                        '{EMAILCLIENTE}',
+                        '{TELEFONOCLIENTE}',
+                        '{ORIGIN}',
+                        '{TELEFONOPTICA}',
+                        '{EMAILOPTICO}',
+                        '{DIRECIONOPTICA}',
+                        '{LOGO}',
+                        '{LOCAL}',
+                        '{EMAILOPTICA}',
+                        '{WEB}',
+                        '{TIPO}',
+                        '{FECHA}',
+                        '{HORA}'
+                    );
 
-                $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica);
+                    $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica, $fechaCita, $horaCita, $motivo);
+                } else {
+                    $palabrasBuscar = array(
+                        '{NOMBRECLIENTE}',
+                        '{EMAILCLIENTE}',
+                        '{TELEFONOCLIENTE}',
+                        '{ORIGIN}',
+                        '{TELEFONOPTICA}',
+                        '{EMAILOPTICO}',
+                        '{DIRECIONOPTICA}',
+                        '{LOGO}',
+                        '{LOCAL}',
+                        '{EMAILOPTICA}',
+                        '{WEB}'
+                    );
+
+                    $palabrasReemplazar = array($nombre . " " . $apellidos, $email, $movil, $origen, $tlf_optica, $email_optica, $direccion_optica, $logoOptica, $locale, $email_optica, $web_optica);
+                }
             }
 
             $actual = file_get_contents($archivo);
@@ -155,6 +199,7 @@ class email_service
                 $mail->send();
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
+                dd('falló: ', $mail->ErrorInfo);
                 // Manejo de errores
                 return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
             }

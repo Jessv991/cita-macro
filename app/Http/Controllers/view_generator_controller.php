@@ -302,9 +302,11 @@ class view_generator_controller extends Controller
     public function validatePideCita(Request $request)
     {
         $empresas = new Empresas();
+
         $weblogin = $request->input('_weblogin');
         $locale = $request->input('language');
         $tienda = $request->input('optica');
+
         $optica1 = null;
         $optica2 = null;
         $optica3 = null;
@@ -315,22 +317,43 @@ class view_generator_controller extends Controller
         if ($request->has('optica_texto') && !empty($request->input('optica_texto'))) {
             $optica1 = $codigo . " - " . $request->input('optica_texto');
         }
-        if ($request->has('optica2_texto') && !empty($request->input('optica2_texto')) && $request->input('optica2_texto') != __('form_translation.optica2')) {
+
+        if (
+            $request->has('optica2_texto') &&
+            !empty($request->input('optica2_texto')) &&
+            $request->input('optica2_texto') != __('form_translation.optica2')
+        ) {
             $optica2 = $codigo . " - " . $request->input('optica2_texto');
         }
-        if ($request->has('optica3_texto') && !empty($request->input('optica3_texto')) && $request->input('optica3_texto') != __('form_translation.optica3')) {
+
+        if (
+            $request->has('optica3_texto') &&
+            !empty($request->input('optica3_texto')) &&
+            $request->input('optica3_texto') != __('form_translation.optica3')
+        ) {
             $optica3 = $codigo . " - " . $request->input('optica3_texto');
         }
+
         $origen = $request->input('origen');
         $test = $request->input('_test');
         $logo = $request->input('_logo');
+
         $tipo_dispositivo = $this->data['tipo_dispositivo'];
         $dispositivo = $this->data['dispositivo'];
+
         $promocional = $request->input('promocional');
         $landing = $request->input('landing');
+
         $ip = $this->data['ip'];
+
         App::setLocale($locale);
 
+
+        /*
+        |--------------------------------------------------------------------------
+        | Reglas base
+        |--------------------------------------------------------------------------
+        */
 
         $baseRules = [
             'nombre' => 'bail|required|max:20',
@@ -340,7 +363,15 @@ class view_generator_controller extends Controller
             'check-poli' => 'accepted',
         ];
 
+
+        /*
+        |--------------------------------------------------------------------------
+        | Reglas según origen
+        |--------------------------------------------------------------------------
+        */
+
         if ($origen == 'contactologia') {
+
             $baseRules = [
                 'nombre' => 'bail|required|max:20',
                 'apellidos' => 'bail|required|max:20',
@@ -349,7 +380,8 @@ class view_generator_controller extends Controller
                 'check-poli' => 'accepted',
                 'check-sorteo' => 'required',
             ];
-        } else if ($origen == 'practicasNOG') {
+        } elseif ($origen == 'practicasNOG') {
+
             $baseRules = [
                 'nombre' => 'bail|required|max:20',
                 'localidad' => 'bail|required|max:20',
@@ -364,11 +396,19 @@ class view_generator_controller extends Controller
         }
 
 
+        /*
+        |--------------------------------------------------------------------------
+        | Reglas según weblogin
+        |--------------------------------------------------------------------------
+        */
+
         if ($weblogin) {
+
             $specificRules = [
                 'optica' => 'bail|required',
             ];
         } else {
+
             $specificRules = [
                 'provincias' => 'bail|required',
                 'ciudad' => 'bail|required',
@@ -376,31 +416,117 @@ class view_generator_controller extends Controller
             ];
         }
 
+
+        /*
+        |--------------------------------------------------------------------------
+        | Combinar reglas
+        |--------------------------------------------------------------------------
+        */
+
         $rules = array_merge($baseRules, $specificRules);
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Reglas específicas para la landing cuidamos_de_ti
+        |--------------------------------------------------------------------------
+        */
+
+        if ($landing === 'cuidamos_de_ti') {
+
+            $rules = array_merge($rules, [
+
+                'fecha' => 'bail|required|date|after_or_equal:today',
+
+                'hora' => 'bail|required|date_format:H:i',
+
+                'motivo' => 'bail|required|in:examen_visual,gafas,lentes_contacto,audiologia,otra_consulta',
+
+            ]);
+        }
+
+
+        /*
+        |--------------------------------------------------------------------------
+        | Validar formulario
+        |--------------------------------------------------------------------------
+        */
+
         $validated = $request->validate($rules);
 
         $url = $request->input('url_landing');
 
-        $getLogo = $this->generadorImg->index($logo);
 
+        /*
+        |--------------------------------------------------------------------------
+        | Obtener logo
+        |--------------------------------------------------------------------------
+        */
+
+        $getLogo = $this->generadorImg->index($logo);
 
         if ($getLogo) {
 
             $logoOptica = asset('cita-macro/assets/logos/opticas/' . $getLogo);
         } else {
+
             $logoOptica = asset('cita-macro/assets/logos/basicos/audio_white.png');
         }
 
+
+        /*
+        |--------------------------------------------------------------------------
+        | Enviar email
+        |--------------------------------------------------------------------------
+        */
+
         if ($landing == 'practicasNOG') {
 
-            $this->Email_service->sendEmailPracticasOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing, $optica1, $optica2, $optica3); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+            $this->Email_service->sendEmailPracticasOptica(
+                $validated,
+                $origen,
+                $test,
+                $logoOptica,
+                $locale,
+                $url,
+                $tipo_dispositivo,
+                $dispositivo,
+                $ip,
+                $promocional,
+                $landing,
+                $optica1,
+                $optica2,
+                $optica3
+            );
         } else {
-            $this->Email_service->sendEmailOptica($validated, $origen, $test, $logoOptica, $locale, $url, $tipo_dispositivo, $dispositivo, $ip, $promocional, $landing); //SERVICIO QUE SE ENCARGA DE ENVIAR EL EMAIL
+
+            $this->Email_service->sendEmailOptica(
+                $validated,
+                $origen,
+                $test,
+                $logoOptica,
+                $locale,
+                $url,
+                $tipo_dispositivo,
+                $dispositivo,
+                $ip,
+                $promocional,
+                $landing
+            );
         }
 
 
-        return response()->json(['message' => 'Formulario validado correctamente.']);
+        /*
+        |--------------------------------------------------------------------------
+        | Respuesta
+        |--------------------------------------------------------------------------
+        */
+
+        return response()->json([
+            'message' => 'Formulario validado correctamente.'
+        ]);
     }
+
 
     public function validateKit(Request $request)
     {
@@ -432,5 +558,4 @@ class view_generator_controller extends Controller
 
         return response()->json(['message' => 'Formulario validado correctamente.']);
     }
-
 }
