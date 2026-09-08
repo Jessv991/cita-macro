@@ -178,7 +178,7 @@
                     data-aos-duration="1900">
 
                     <input class="form-control @error('fecha') is-invalid @enderror" type="date" name="fecha"
-                        id="fecha">
+                        id="fecha" placeholder="Seleccionar fecha / Select date">
 
                 </div>
 
