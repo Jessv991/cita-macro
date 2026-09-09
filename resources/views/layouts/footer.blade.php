@@ -9,7 +9,7 @@
     @endphp
 
     @if ($baseUrl !== 'https://optica.naturalopticsgroup.com')
-       {{-- si es difernte a  www.audio.naturaloptics.com --}} 
+        {{-- si es difernte a  www.audio.naturaloptics.com --}}
 
         @php
             $rutaAsset = '';
@@ -20,21 +20,24 @@
         @endphp
     @endif
 
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/es.js"></script>
+
     <script>
         function detectarOrientacion() {
             const esVertical = window.innerHeight > window.innerWidth;
-    
+
             document.body.classList.toggle('mobile', esVertical);
             document.body.classList.toggle('desktop', !esVertical);
-    
+
             document.cookie = `orientacion=${esVertical ? 'mobile' : 'desktop'}; path=/;`;
-    
+
             if (localStorage.getItem('orientacionGuardada') !== (esVertical ? 'mobile' : 'desktop')) {
                 localStorage.setItem('orientacionGuardada', esVertical ? 'mobile' : 'desktop');
                 location.reload();
             }
         }
-    
+
         window.addEventListener('load', detectarOrientacion);
         window.addEventListener('resize', detectarOrientacion);
     </script>

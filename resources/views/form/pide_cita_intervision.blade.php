@@ -172,28 +172,25 @@
                 </div>
 
                 <!-- Fecha -->
-                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
-                    data-aos-offset="500" data-aos-duration="1900">
-
-                    <div class="input-fecha-wrapper position-relative">
-                        <input class="form-control @error('fecha') is-invalid @enderror" type="date"
-                            name="fecha" id="fecha">
-                        <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
-                    </div>
-
+                <div class="input-fecha-wrapper position-relative">
+                    <input class="form-control @error('fecha') is-invalid @enderror" type="text" name="fecha"
+                        id="fecha" placeholder=" " readonly>
+                    <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
                 </div>
+
 
                 <!-- Hora -->
                 <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                     data-aos-offset="500" data-aos-duration="2100">
 
                     <div class="input-hora-wrapper position-relative">
-                        <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
-                            id="hora">
+                        <input class="form-control @error('hora') is-invalid @enderror" type="text" name="hora"
+                            id="hora" placeholder=" " readonly>
                         <span class="hora-placeholder">🕐 Seleccionar hora / Select time</span>
                     </div>
 
                 </div>
+
             @endif
 
             <div class="nombre_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
@@ -311,17 +308,53 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const inputFecha = document.getElementById('fecha');
         const inputHora = document.getElementById('hora');
 
-        inputFecha.addEventListener('change', function() {
-            if (this.value) {
-                this.setAttribute('data-filled', 'true');
-            } else {
-                this.removeAttribute('data-filled');
+        // --- Calcular la fecha mínima (3 días, saltando domingos) ---
+        function calcularFechaMinima() {
+            let fecha = new Date();
+            let diasSumados = 0;
+
+            while (diasSumados < 3) {
+                fecha.setDate(fecha.getDate() + 1);
+                if (fecha.getDay() !== 0) {
+                    diasSumados++;
+                }
+            }
+
+            return fecha;
+        }
+
+        // --- Inicializar Flatpickr ---
+        flatpickr('#fecha', {
+            locale: 'es',
+            dateFormat: 'Y-m-d',
+            minDate: calcularFechaMinima(),
+            disable: [
+                function(date) {
+                    return date.getDay() === 0; // ✅ Deshabilita domingos
+                }
+            ],
+            onDayCreate: function(dObj, dStr, fp, dayElem) {
+                if (dayElem.dateObj.getDay() === 0) {
+                    dayElem.style.color = 'red'; // ✅ Pinta domingos de rojo
+                    dayElem.style.textDecoration = 'line-through';
+                    dayElem.title = 'No disponible / Not available';
+                }
+            },
+            onChange: function(selectedDates, dateStr, instance) {
+                const input = document.getElementById('fecha');
+                if (dateStr) {
+                    input.setAttribute('data-filled', 'true'); // ✅ Oculta placeholder
+                } else {
+                    input.removeAttribute('data-filled');
+                }
             }
         });
 
+        // =============================================
+        // HORA — solo placeholder
+        // =============================================
         inputHora.addEventListener('change', function() {
             if (this.value) {
                 this.setAttribute('data-filled', 'true');
@@ -329,7 +362,28 @@
                 this.removeAttribute('data-filled');
             }
         });
+
+        // --- Inicializar Flatpickr HORA ---
+        flatpickr('#hora', {
+            enableTime: true,
+            noCalendar: true, // ✅ Solo muestra el selector de hora, sin calendario
+            dateFormat: 'H:i',
+            time_24hr: true, // ✅ Formato 24h
+            minuteIncrement: 15, // ✅ Saltos de 15 minutos (ajústalo a tu gusto)
+            minTime: '09:00', // ✅ Hora mínima (ajústala a tu horario)
+            maxTime: '21:00', // ✅ Hora máxima (ajústala a tu horario)
+            onChange: function(selectedDates, dateStr) {
+                const input = document.getElementById('hora');
+                if (dateStr) {
+                    input.setAttribute('data-filled', 'true'); // ✅ Oculta placeholder
+                } else {
+                    input.removeAttribute('data-filled');
+                }
+            }
+        });
+
     });
+
 
     $('#form').off().on('click', function(e) {
         e.preventDefault();
