@@ -7,6 +7,31 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+/* Wrapper para el placeholder personalizado */
+.input-fecha-wrapper,
+.input-hora-wrapper {
+    position: relative;
+}
+
+.fecha-placeholder,
+.hora-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #6c757d;
+    font-size: 0.95rem;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+/* Ocultar el placeholder cuando el input tiene valor */
+#fecha:valid~.fecha-placeholder,
+#hora:valid~.hora-placeholder {
+    display: none;
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;

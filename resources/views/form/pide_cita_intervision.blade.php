@@ -142,30 +142,28 @@
             </div>
 
             @if ($data['landing'] === 'cuidamos_de_ti')
+                <!-- Motivo / Tipo de cita -->
                 <div class="motivo_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                     data-aos-offset="500" data-aos-duration="1900">
 
                     <select class="form-select @error('motivo') is-invalid @enderror" name="motivo" id="motivo">
                         <option value="" selected disabled>
-                            Selecciona el motivo de la cita
+                            Tipo de cita / Appointment type
                         </option>
-
                         <option value="examen_visual">
                             Examen visual / Eye test
                         </option>
-
                         <option value="gafas">
                             Gafas / Glasses
                         </option>
-
                         <option value="lentes_contacto">
                             Lentes de contacto / Contact lenses
                         </option>
-
-                        <option value="audiologia">
-                            Audiología / Hearing care
-                        </option>
-
+                        @if($data['weblogin'] !== 'expertcalpe')
+                            <option value="audiologia" class="opcion-audiologia">
+                                Audiología / Hearing care
+                            </option>
+                        @endif
                         <option value="otra_consulta">
                             Otra consulta / Other
                         </option>
@@ -173,20 +171,27 @@
 
                 </div>
 
+                <!-- Fecha -->
+                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="1900">
 
-                <div class="fecha_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                    data-aos-duration="1900">
-
-                    <input class="form-control @error('fecha') is-invalid @enderror" type="date" name="fecha"
-                        id="fecha">
+                    <div class="input-fecha-wrapper position-relative">
+                        <input class="form-control @error('fecha') is-invalid @enderror" type="date"
+                            name="fecha" id="fecha">
+                        <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
+                    </div>
 
                 </div>
 
-                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                    data-aos-duration="2100">
+                <!-- Hora -->
+                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="2100">
 
-                    <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
-                        id="hora">
+                    <div class="input-hora-wrapper position-relative">
+                        <input class="form-control @error('hora') is-invalid @enderror" type="time" name="hora"
+                            id="hora">
+                        <span class="hora-placeholder">🕐 Seleccionar hora / Select time</span>
+                    </div>
 
                 </div>
             @endif
@@ -238,7 +243,7 @@
                         <span> / I accept the</span>
                         <a href="{{ route('politicas.privacidad_en', app()->getLocale()) }}" target="_blank"
                             style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
-                             Privacy Policies
+                            Privacy Policies
                         </a>
                     </label>
                 </div>
