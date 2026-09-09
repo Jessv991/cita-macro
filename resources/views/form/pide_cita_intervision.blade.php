@@ -375,6 +375,8 @@
             minuteIncrement: 15, // ✅ Saltos de 15 minutos (ajústalo a tu gusto)
             minTime: '09:00', // ✅ Hora mínima (ajústala a tu horario)
             maxTime: '21:00', // ✅ Hora máxima (ajústala a tu horario)
+            defaultHour: 9, // ✅ Abre siempre en las 9h
+            defaultMinute: 0, // ✅ Abre siempre en los :00
             onChange: function(selectedDates, dateStr) {
                 const input = document.getElementById('hora');
                 if (dateStr) {
