@@ -159,7 +159,7 @@
                         <option value="lentes_contacto">
                             Lentes de contacto / Contact lenses
                         </option>
-                        @if($data['weblogin'] !== 'expertcalpe')
+                        @if ($data['weblogin'] !== 'expertcalpe')
                             <option value="audiologia" class="opcion-audiologia">
                                 Audiología / Hearing care
                             </option>
@@ -310,6 +310,27 @@
 --}}
 
 <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const inputFecha = document.getElementById('fecha');
+        const inputHora = document.getElementById('hora');
+
+        inputFecha.addEventListener('change', function() {
+            if (this.value) {
+                this.setAttribute('data-filled', 'true');
+            } else {
+                this.removeAttribute('data-filled');
+            }
+        });
+
+        inputHora.addEventListener('change', function() {
+            if (this.value) {
+                this.setAttribute('data-filled', 'true');
+            } else {
+                this.removeAttribute('data-filled');
+            }
+        });
+    });
+
     $('#form').off().on('click', function(e) {
         e.preventDefault();
         var formData = $('#formMacroContactologia').serialize();

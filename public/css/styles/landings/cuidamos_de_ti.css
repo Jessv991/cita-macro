@@ -8,10 +8,21 @@
                                                                                        
 */
 
-/* Wrapper para el placeholder personalizado */
 .input-fecha-wrapper,
 .input-hora-wrapper {
     position: relative;
+}
+
+/* Hacer el input transparente cuando está vacío */
+#fecha:not([data-filled]),
+#hora:not([data-filled]) {
+    color: transparent;
+}
+
+/* En algunos navegadores también hay que ocultar el texto nativo */
+#fecha:not([data-filled])::-webkit-datetime-edit,
+#hora:not([data-filled])::-webkit-datetime-edit {
+    color: transparent;
 }
 
 .fecha-placeholder,
@@ -23,14 +34,17 @@
     color: #6c757d;
     font-size: 0.95rem;
     pointer-events: none;
-    transition: opacity 0.2s;
+    z-index: 10;
+    background: white;
+    padding: 0 4px;
 }
 
-/* Ocultar el placeholder cuando el input tiene valor */
-#fecha:valid~.fecha-placeholder,
-#hora:valid~.hora-placeholder {
+/* Ocultar placeholder cuando tiene valor */
+#fecha[data-filled]~.fecha-placeholder,
+#hora[data-filled]~.hora-placeholder {
     display: none;
 }
+
 
 body {
     height: 104% !important;
