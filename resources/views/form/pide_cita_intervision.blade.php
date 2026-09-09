@@ -172,10 +172,13 @@
                 </div>
 
                 <!-- Fecha -->
-                <div class="input-fecha-wrapper position-relative">
-                    <input class="form-control @error('fecha') is-invalid @enderror" type="text" name="fecha"
-                        id="fecha" placeholder=" " readonly>
-                    <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
+                <div class="hora_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="2100">
+                    <div class="input-fecha-wrapper position-relative">
+                        <input class="form-control @error('fecha') is-invalid @enderror" type="text"
+                            name="fecha" id="fecha" placeholder=" " readonly>
+                        <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
+                    </div>
                 </div>
 
 
