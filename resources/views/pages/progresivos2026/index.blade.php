@@ -1,163 +1,131 @@
 @include('layouts.header')
-    <div class="background-container">
+
+<div class="background-container">
+    @if ($data['tipo_dispositivo'] == 'mobile')
         <div class="background-item">
-
-            <div class="boton-flotante d-flex justify-content-end">
-
-                <div class="w-100 d-flex flex-row">
-                    <div class="w-50 d-flex justify-content-start">
-                        <img class="logo" src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo.png') }}"
-                            alt="Logo">
-                    </div>
-                    <div class="w-50 d-flex justify-content-end">
-                        <a href="#contAllForm" id="diret-form"
-                            class="btn btn-color2">{{ __('form_translation.Pedir_cita') }}</a>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="w-100 m-banner">
-                <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.jpg') }}">
-            </div>
-
-            <div class="w-100 d-flex flex-column align-items-center text-center mt-5">
-                <div class="w-75 p-1 p-lg-5 primeros-parrafos1">
-                    <p>{{ __('progresivos.parrafo-1') }}<span class="fw-bold">{{ __('progresivos.parrafo-1.1') }}</span><span>{{ __('progresivos.parrafo-1.2') }}</span>
-                    </p>
-                </div>
-            </div>
-
-            <div class="w-100">
-                <img class="w-100"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/beneficios.png') }}">
-            </div>
-
-            <div class="w-100 d-flex justify-content-center mt-4">
-                <img class="titulo_tu_vista"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo2.png') }}">
-            </div>
-
-            <div class="w-100 d-flex flex-column align-items-center text-center mt-3">
-                <div class="w-100 p-1 p-lg-5 primeros-parrafos">
-                    <p>{{ __('progresivos.parrafo-2') }}</p>
-                </div>
-            </div>
-
-            <div class="w-100 d-none d-lg-flex flex-column align-items-center text-center">
-                <div class="w-100">
-                    <img class="w-100"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/lentes.png') }}">
-                </div>
-            </div>
-
-            <div class="w-100 d-lg-none d-flex flex-column align-items-center text-center">
-                <div class="simple-carousel">
-                    <div class="slides">
-                        <img src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}" class="slide active" alt="Slide 1" />
-                        <img src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}" class="slide" alt="Slide 2" />
-                        <img src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}" class="slide" alt="Slide 3" />
-                        <img src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img4.png') }}" class="slide" alt="Slide 4" />
-                    </div>
-                    <button class="prev">‹</button>
-                    <button class="next">›</button>
-                    <div class="indicators">
-                        <button class="indicator active" data-slide="0"></button>
-                        <button class="indicator" data-slide="1"></button>
-                        <button class="indicator" data-slide="2"></button>
-                        <button class="indicator" data-slide="3"></button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-100 d-flex flex-column align-items-center text-center mt-3">
-                <div class="w-100 p-1 p-lg-5 primeros-parrafos">
-                    <p>{{ __('progresivos.parrafo-3') }}</p>
-                </div>
-            </div>
-
-            <div class="w-100  d-flex align-items-center justify-content-center mt-5 contenedor_form">
-                @include('form.pide_cita')
-            </div>
-
-            <div class="w-100 d-flex justify-content-center mt-4">
-                <img class="titulo_tu_vista2"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo3.png') }}">
-            </div>
-
-            <footer class="row w-100">
-                <?php
-                if($data['tipo_dispositivo']!='mobile') {            
-            ?>
-                <div class="d-flex footer-contact text-center col-12">
-                    <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
-                        class="p-privacity col-4 fw-bold">{{ __('contactologia.Politicas-privacidad') }}</a>
-                    <img class="d-block mx-auto logo-N col-4"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}"
-                        alt="Logo footer">
-                    <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
-                        class="p-cookies col-4 fw-bold">{{ __('contactologia.Politicas-cookies') }}</a>
-                </div>
-                <?php
-                }else{               
-            ?>
-                <div class="d-flex flex-column align-items-center footer-contact text-center mb-5">
-                    <img class="d-block mx-auto logo-N mt-5"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}"
-                        alt="Logo footer">
-                    <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
-                        {{ __('contactologia.Politicas-privacidad') }}
-                    </a>
-                    <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
-                        {{ __('contactologia.Politicas-cookies') }}
-                    </a>
-                </div>
-                <?php
-                }
-            ?>
-            </footer>
-
+        @else
+            <div class="background-item mb-5-wrapper">
+    @endif
+    @if ($data['tipo_dispositivo'] == 'mobile')
+        <div class="banner-logo text-center">
+            <img class="d-block mx-auto logo p-3"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/logo_natural.png') }}">
         </div>
+    @else
+        <div class="banner-logo d-flex justify-content-between align-items-center btn-wrapper-fixed">
+            <div class="img-logo ms-5">
+                <img class="logo"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/logo_natural.png') }}"
+                    alt="Logo">
+            </div>
+            <div class="btn-position">
+                <button id="btn-flotante" class="btn btn-color-cita">{{ __('form_translation.Pedir_cita') }}</button>
+            </div>
+        </div>
+    @endif
+</div>
+<div class="banner-pide-cita">
+    @if ($data['tipo_dispositivo'] != 'mobile')
+        <img class="d-block mx-auto w-100 h-75"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+    @else
+        <img class="d-block mx-auto w-100 h-100"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+    @endif
+</div>
+<div class="w-100 d-lg-flex flex-column align-items-center text-center">
+    <div class="w-100">
+        <img class="w-100"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo1.png') }}">
     </div>
+    <div class="text_title">
+        <p><span class="fw-light">{{ __('progresivos2026.parrafo-1') }}<br>{{ __('progresivos2026.parrafo-1.1') }}</span><span class="fw-bold">{{ __('progresivos2026.parrafo-1.2') }}</span></p>
+    </div>
+</div>
+<div class="text-center">
+    @if ($data['tipo_dispositivo'] != 'mobile')
+        <div class="row ps-5 pe-5 mt-5 mb-5">
+            <div class="col-6 justify-content-center align-items-center d-flex">
+                <img class="d-block mx-auto w-auto"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner_gif.png') }}">
+            </div>
+            <div class="col-6 pt-4 justify-content-center align-items-center d-flex">
+                <img class="d-block img_gif"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/gafas.gif') }}">
+            </div>
+        </div>
+    @else
+        <img class="d-block mx-auto w-100 h-100"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/tu_vista.png') }}">
+        <span class="text-dark text-center d-block mb-3 fs-5 ps-5 pe-5">{!! __('vuelta-a-la-rutina.nuevos-horarios') !!}</span>
+        <img class="d-block w-100 mb-4"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/empieza.png') }}">
+    @endif
+</div>
+<div>
+    <img class="d-block w-100"
+        src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner2.png') }}">
+</div>
 
-    @include('layouts.footer')
+<div class="w-100 d-lg-flex flex-column align-items-center text-center">
+    <div class="w-100">
+        <img class="w-100"
+            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo2.png') }}">
+    </div>
+</div>
 
-    <script>
-        const slides = document.querySelectorAll('.simple-carousel .slide');
-        const prevBtn = document.querySelector('.simple-carousel .prev');
-        const nextBtn = document.querySelector('.simple-carousel .next');
-        const indicators = document.querySelectorAll('.simple-carousel .indicator');
+<div class="h-100">
+    <div class="form-section">
+        @include('form.pide_cita')
+    </div>
+</div>
+@if ($data['tipo_dispositivo'] == 'mobile')
+    <div class="fixed-bottom-container justify-content-center align-items-center"
+        onclick="document.getElementById('formMacroContactologia').scrollIntoView({ behavior: 'smooth' });">
+        <button class="btn-bottom-center">{{ __('form_translation.Pedir_cita') }}</button>
+    </div>
+@endif
 
-        let current = 0;
+<footer class="w-100">
+    @if ($data['tipo_dispositivo'] != 'mobile')
+        <div class="d-flex footer-contact text-center col-12">
+            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
+                class="p-privacity col-4">{{ __('contactologia.Politicas-privacidad') }}</a>
+            <img class="d-block mx-auto logo-N col-4"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
+                class="p-cookies col-4">{{ __('contactologia.Politicas-cookies') }}</a>
+        </div>
+    @else
+        <div class="d-flex flex-column align-items-center footer-contact text-center m-footer">
+            <img class="d-block mx-auto logo-N mt-5"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/contactologia/logo-N.png') }}" alt="Logo footer">
+            <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2">
+                {{ __('contactologia.Politicas-privacidad') }}
+            </a>
+            <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1">
+                {{ __('contactologia.Politicas-cookies') }}
+            </a>
+        </div>
+    @endif
+</footer>
+</div>
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-            slide.classList.toggle('active', i === index);
-            indicators[i].classList.toggle('active', i === index);
-            });
-            current = index;
-        }
-
-        prevBtn.addEventListener('click', () => {
-            let nextIndex = (current - 1 + slides.length) % slides.length;
-            showSlide(nextIndex);
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function scrollToForm() {
+        const form = document.getElementById("formMacroContactologia");
+        form.scrollIntoView({
+            behavior: "smooth"
         });
+    }
 
-        nextBtn.addEventListener('click', () => {
-            let nextIndex = (current + 1) % slides.length;
-            showSlide(nextIndex);
-        });
+    $('#btn-flotante').on('click', function(e) {
+        e.preventDefault();
 
-        indicators.forEach((indicator, i) => {
-            indicator.addEventListener('click', () => {
-            showSlide(i);
-            });
-        });
-
-        // Opcional: auto avance cada 5 segundos
-        /* setInterval(() => {
-            let nextIndex = (current + 1) % slides.length;
-            showSlide(nextIndex);
-        }, 5000); */
-    </script>
+        $('html, body').animate({
+            scrollTop: $('#formMacroContactologia').offset().top
+        }, 300);
+    });
+</script>
+@include('layouts.footer')

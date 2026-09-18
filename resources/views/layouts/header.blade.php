@@ -37,9 +37,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js'></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-language/v1.0.0/mapbox-gl-language.js'></script>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
-        rel="stylesheet">
-
+    
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/form/form.css') }}">
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/test/test.css') }}">
@@ -48,7 +46,9 @@
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:wght@100..900&display=swap"
         rel="stylesheet">
 
