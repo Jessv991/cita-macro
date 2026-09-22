@@ -18,7 +18,7 @@
     width: 60% !important;
 }
 
-.row.ps-5.pe-5.mt-5.mb-5 {
+.background_bannerGif {
     background-color: #f2ddc4;
 }
 
@@ -166,10 +166,11 @@ div#animationdivIcon {
     margin: 25px !important;
     width: 150px !important;
     background-color: #e1ba8b !important;
+    font-weight: bold;
 }
 
 .btn-color-cita:hover {
-    background-color: #000 !important;
+    background-color: #f2ddc4 !important;
     color: #fff !important;
     border-radius: 10px !important;
     margin: 25px !important;
@@ -446,7 +447,7 @@ label>a:hover {
 }
 
 .btn-bottom-center {
-    background-color: #578087;
+    background-color: #e1ba8b;
     color: #fff;
     border: none;
     padding: 12px 30px;
@@ -466,7 +467,7 @@ label>a:hover {
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(104, 139, 147, 0.7);
+    background-color: #e1ba8b91;
     /* 0.5 es 50% de opacidad */
     display: flex;
     justify-content: center;
@@ -493,7 +494,7 @@ label>a:hover {
 
 @media (max-width: 2000px) {
     .text-top-form {
-        font-size: 24px !important;
+        font-size: 28px !important;
         padding: 2%;
     }
 
@@ -517,7 +518,7 @@ label>a:hover {
     }
 
     .text-top-form {
-        font-size: 20px;
+        font-size: 28px;
         padding: 2% !important;
     }
 
@@ -542,7 +543,7 @@ label>a:hover {
 /* Pantallas Grandes (1200px a 1499px) */
 @media (min-width: 1200px) and (max-width: 1499px) {
     .text-top-form {
-        font-size: 20px;
+        font-size: 28px;
         padding: 2%;
     }
 
@@ -567,7 +568,7 @@ label>a:hover {
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
     .text-top-form {
-        font-size: 20px;
+        font-size: 28px;
         padding: 2%;
     }
 
@@ -593,7 +594,7 @@ label>a:hover {
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
     .text-top-form {
-        font-size: 1.2em !important;
+        font-size: 25px;
         margin: 0 !important;
     }
 
@@ -616,12 +617,19 @@ label>a:hover {
     .contenedor-form {
         padding: 12%;
     }
+
+    .text_title {
+        font-size: 25px;
+        line-height: 1.1;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
 
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
     .text-top-form {
-        font-size: 1.2em !important;
+        font-size: 23px;
         margin: 0 !important;
     }
 
@@ -637,13 +645,19 @@ label>a:hover {
 
     .contenedor-form {
         padding: 12%;
+    }
+
+    .text_title {
+        font-size: 23px;
+        padding-left: 12%;
+        padding-right: 12%;
     }
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
     .text-top-form {
-        font-size: 1.2em !important;
+        font-size: 17px !important;
         margin: 0 !important;
     }
 
@@ -659,6 +673,12 @@ label>a:hover {
 
     .contenedor-form {
         padding: 12%;
+    }
+
+    .text_title {
+        font-size: 17px;
+        padding-left: 12%;
+        padding-right: 12%;
     }
 }
 

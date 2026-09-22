@@ -39,10 +39,12 @@
             src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo1.png') }}">
     </div>
     <div class="text_title">
-        <p><span class="fw-light">{{ __('progresivos2026.parrafo-1') }}<br>{{ __('progresivos2026.parrafo-1.1') }}</span><span class="fw-bold">{{ __('progresivos2026.parrafo-1.2') }}</span></p>
+        <p><span
+                class="fw-light">{{ __('progresivos2026.parrafo-1') }}<br>{{ __('progresivos2026.parrafo-1.1') }}</span><span
+                class="fw-bold">{{ __('progresivos2026.parrafo-1.2') }}</span></p>
     </div>
 </div>
-<div class="text-center">
+<div class="text-center background_bannerGif">
     @if ($data['tipo_dispositivo'] != 'mobile')
         <div class="row ps-5 pe-5 mt-5 mb-5">
             <div class="col-6 justify-content-center align-items-center d-flex">
@@ -55,11 +57,14 @@
             </div>
         </div>
     @else
-        <img class="d-block mx-auto w-100 h-100"
-            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/tu_vista.png') }}">
-        <span class="text-dark text-center d-block mb-3 fs-5 ps-5 pe-5">{!! __('vuelta-a-la-rutina.nuevos-horarios') !!}</span>
-        <img class="d-block w-100 mb-4"
-            src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/empieza.png') }}">
+        <div class="w-100 justify-content-center align-items-center d-flex flex-column">
+            <img class="d-block mx-auto w-75 h-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo_banner.png') }}">
+            <img class="d-block w-75 mb-4"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/gafas.gif') }}">
+            <img class="d-block w-100 mb-4"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/progresivos2026/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner_gif.png') }}">
+        </div>
     @endif
 </div>
 <div>
