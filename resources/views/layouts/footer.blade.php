@@ -69,6 +69,12 @@
             mapa: {!! $data['mapa'] !!}
         };
     </script>
+    
+    <script src="{{ asset($rutaAsset . 'game/pink/js/wheel_config_6.js') }}"></script>
+    <script src="{{ asset($rutaAsset . 'game/js/animCoins.js') }}"></script>
+    <script src="{{ asset($rutaAsset . 'game/js/wheelGame.js') }}"></script>
+
+
 
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'js/jQuery/form/form_cooper.js') }}"></script>

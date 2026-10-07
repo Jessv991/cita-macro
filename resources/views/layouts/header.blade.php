@@ -63,6 +63,8 @@
     <link rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/landings/' . $landing . '.css') }}">
     <link type="text/css" rel="stylesheet" href="{{ asset($rutaAsset . 'css/styles/cookies/cookieconsent.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="{{ asset($data['rutaAsset'] . 'game/js/phaser.js') }}"></script>
+
 
 </head>
 

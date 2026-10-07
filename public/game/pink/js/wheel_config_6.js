@@ -1,7 +1,7 @@
 // 6 sectors pink
 
 var wheelConfig = {
-    assetPath : 'pink/',
+    assetPath : 'pink/png/',
     fontName: 'coiny_54',
     centerOffsetX: 0,
     centerOffsetY: -160,

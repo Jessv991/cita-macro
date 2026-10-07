@@ -8,6 +8,16 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+canvas {
+    display: block;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+}
+
 body {
     height: 104% !important;
     overflow-y: auto;
