@@ -69,7 +69,11 @@
             mapa: {!! $data['mapa'] !!}
         };
     </script>
-    
+
+    <script>
+        window.wheelAssetPath = "{{ asset($rutaAsset . 'game/pink') }}/";
+    </script>
+
     <script src="{{ asset($rutaAsset . 'game/pink/js/wheel_config_6.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'game/js/animCoins.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'game/js/wheelGame.js') }}"></script>
