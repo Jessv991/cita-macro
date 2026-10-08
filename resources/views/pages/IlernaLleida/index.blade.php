@@ -9,7 +9,6 @@
         <div class="col-12">
             <div class="row">
                 <div class="col-lg-8 col-12">
-                    
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
                     @include('form.practicasNOG')
