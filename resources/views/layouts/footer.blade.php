@@ -71,7 +71,9 @@
     </script>
 
     <script>
-        window.wheelAssetPath = "{{ asset($rutaAsset . 'game/pink') }}/";
+        // Aseguramos que termine en / de forma limpia
+        var basePath = "{{ asset($rutaAsset . 'game/pink') }}";
+        window.wheelAssetPath = basePath.endsWith('/') ? basePath : basePath + '/';
     </script>
 
     <script src="{{ asset($rutaAsset . 'game/pink/js/wheel_config_6.js') }}"></script>
