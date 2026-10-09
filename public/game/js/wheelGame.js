@@ -9,7 +9,8 @@ window.onload = function () {
         type: Phaser.WEBGL,          // render type
         width: 1537,                 // game width, in pixels
         height: 1537,                // game height, in pixels    
-        backgroundColor: 0x383838,   // game background color
+        //backgroundColor: 0x383838,   // game background color
+        transparent: true,
         scene: [FortuneWheel],       // scenes used by the game  
         audio:
         {
@@ -76,13 +77,14 @@ class FortuneWheel extends Phaser.Scene {
 
         // setup spin button
         this.spinbutton = this.addSprite('spinbutton');
+        this.spinbutton.setDisplaySize(400, this.spinbutton.height);
         this.spinbutton.on('pointerdown', this.spinDown, this);
         this.spinbutton.on('pointerup', this.spinUp, this);
         this.spinbutton.on('pointerover', this.spinOver, this);
         this.spinbutton.on('pointerout', this.spinOut, this);
         this.spinbutton.setInteractive();
         // adding the text field for button
-        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', 'Play', 54, 1).setOrigin(0.5);
+        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', 'Comencem!', 54, 1).setOrigin(0.5);
         this.prizeText.tint = wheelConfig.prizeTextTint;
 
         this.pointer = this.addSprite('pointer');
