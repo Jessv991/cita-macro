@@ -72,11 +72,11 @@
 
     <script>
         // Aseguramos que termine en / de forma limpia
-        var basePath = "{{ asset($rutaAsset . 'game/pink') }}";
+        var basePath = "{{ asset($rutaAsset . 'game/lime') }}";
         window.wheelAssetPath = basePath.endsWith('/') ? basePath : basePath + '/';
     </script>
 
-    <script src="{{ asset($rutaAsset . 'game/pink/js/wheel_config_6.js') }}"></script>
+    <script src="{{ asset($rutaAsset . 'game/lime/js/wheel_config_6.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'game/js/animCoins.js') }}"></script>
     <script src="{{ asset($rutaAsset . 'game/js/wheelGame.js') }}"></script>
 

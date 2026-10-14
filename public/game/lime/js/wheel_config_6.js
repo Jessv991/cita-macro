@@ -1,55 +1,54 @@
 // 6 sectors lime
 
 var wheelConfig = {
-    assetPath : 'lime/',
+    assetPath: window.wheelAssetPath || '/game/lime/',
     fontName: 'coiny_54',
     centerOffsetX: 0,
     centerOffsetY: -160,
-    prizeTextTint : 0xFFFFFF,
-    sectorsTextTint : 0xFFFFFF,
-    offsetSectText : 130,
-    offsetSectIcon : 210,
+    prizeTextTint: 0xFFFFFF,
+    sectorsTextTint: 0xFFFFFF,
+    offsetSectText: 130,
+    offsetSectIcon: 210,
 
     // sectors config
     sectors: [
         {
-            win: '30 minutes infinite life',
-            text: '30m',
-            isBigWin : false,
-            icon:'heart'
+            win: 'Samarreta de l\'Ilerna Lleida',
+            text: '', // Vacío para que no pinte texto flotante
+            isBigWin: false,
+            icon: null // Sin icono superpuesto
         },
         {
-            win: 'Brush booster x1',
-            text: 'x1',
-            isBigWin : false,
-            icon:'brush'
+            win: 'Revisió visual gratis',
+            text: '',
+            isBigWin: false,
+            icon: null
         },
         {
-            win: 'Color bomb booster x1',
-            text: 'x1',
-            isBigWin : false,
-            icon:'color_bomb'
+            win: '20€ de descompte en la teva compra a Natural Optics',
+            text: '',
+            isBigWin: false,
+            icon: null
         },
         {
-            win: 'Cannon booster x1',
-            text: 'x1',
-            isBigWin : false,
-            icon:'cannon'
+            win: 'Bufanda de l\'Ilerna Lleida',
+            text: '',
+            isBigWin: false,
+            icon: null
         },
         {
-            win: '200 coins',
-            text: '200',
-            isBigWin : false,
-            icon:'coin'
+            win: '50€ de descompte en la teva compra a Natural Optics',
+            text: '',
+            isBigWin: false,
+            icon: null
         },
         {
-            win: 'TNT booster x1',
-            text: 'x2',
-            isBigWin : false,
-            icon:'tnt'
-        },
+            win: 'No hi ha premi',
+            text: '',
+            isBigWin: false,
+            icon: null
+        }
     ],
-
     sprites: [
         {
             fileName: null,   // filename or null
@@ -200,9 +199,9 @@ var wheelConfig = {
         },
     ],
 
-    lamps:{
-        count : 10,
-        offset : 340,
+    lamps: {
+        count: 10,
+        offset: 340,
     },
 
     // wheel spin duration range, in milliseconds
@@ -222,23 +221,22 @@ var wheelConfig = {
         min: 1,
         max: 4
     },
-    lightTweenDuration : 500,
+    lightTweenDuration: 500,
 
-    createLamps: function(scene){
-       
-        scene.lampsArray = []; 
+    createLamps: function (scene) {
+
+        scene.lampsArray = [];
         var angle = Math.PI * 2 / this.lamps.count;
         var piD2 = Math.PI / 2;
 
-        for(var i = 1; i < this.lamps.count; i++)
-        {
+        for (var i = 1; i < this.lamps.count; i++) {
             var _angle = -angle * i - piD2;
-            var _cos = Math.cos (_angle);
-            var _sin = Math.sin (_angle)
+            var _cos = Math.cos(_angle);
+            var _sin = Math.sin(_angle)
 
             var posX = this.lamps.offset * _cos;
             var posY = this.lamps.offset * _sin;
-            scene.lamp = new Lamp (scene, posX, posY);
+            scene.lamp = new Lamp(scene, posX, posY);
             scene.lamp.on();
             scene.lampsArray.push(scene.lamp);
         }
@@ -249,5 +247,5 @@ var wheelConfig = {
 
 
 
-   
+
 

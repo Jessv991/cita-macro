@@ -106,7 +106,7 @@ class FortuneWheel extends Phaser.Scene {
             var _cos = Math.cos(_angle);
             var _sin = Math.sin(_angle)
 
-            var posX = wheelConfig.offsetSectText * _cos;
+            /* var posX = wheelConfig.offsetSectText * _cos;
             var posY = wheelConfig.offsetSectText * _sin;
             this.sectorText = this.add.bitmapText(posX, posY, 'sectorFont', wheelConfig.sectors[i].text, 36, 1).setOrigin(0.5, 0.5);
             this.sectorText.tint = wheelConfig.sectorsTextTint;
@@ -116,8 +116,8 @@ class FortuneWheel extends Phaser.Scene {
             posY = wheelConfig.offsetSectIcon * _sin;
             this.sectorIcon = this.add.sprite(posX, posY, wheelConfig.sectors[i].icon).setOrigin(0.5, 0.5);
             this.sectorIcon.angle = _textAngle;
-            this.wCont.add(this.sectorText);            // wheel container
-            this.wCont.add(this.sectorIcon);
+            this.wCont.add(this.sectorText);  */           // wheel container
+            /* this.wCont.add(this.sectorIcon); */
         }
 
         if (this.useSpinArrow) this.spinArrow = this.addSprite('spinarrow').setAlpha(0);
