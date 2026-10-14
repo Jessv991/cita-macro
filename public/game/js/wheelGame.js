@@ -91,7 +91,7 @@ class FortuneWheel extends Phaser.Scene {
         this.centerpin = this.addSprite('centerpin');
 
         // adding the text field
-        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 820, 'sectorFont', 'Spin the wheel', 36, 1).setOrigin(0.5);
+        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 820, 'sectorFont', 'Gira la roda', 36, 1).setOrigin(0.5);
         this.prizeText.tint = wheelConfig.prizeTextTint;
 
         // create wheel with sectors
@@ -102,11 +102,11 @@ class FortuneWheel extends Phaser.Scene {
         var piD2 = Math.PI / 2;
         for (var i = 0; i < this.sectorsCount; i++) {
             var _angle = -sectAngle * i - piD2;
-            var _textAngle = (-sectAngle * i) * 180 / Math.PI
+            /* var _textAngle = (-sectAngle * i) * 180 / Math.PI
             var _cos = Math.cos(_angle);
             var _sin = Math.sin(_angle)
 
-            /* var posX = wheelConfig.offsetSectText * _cos;
+            var posX = wheelConfig.offsetSectText * _cos;
             var posY = wheelConfig.offsetSectText * _sin;
             this.sectorText = this.add.bitmapText(posX, posY, 'sectorFont', wheelConfig.sectors[i].text, 36, 1).setOrigin(0.5, 0.5);
             this.sectorText.tint = wheelConfig.sectorsTextTint;
@@ -183,7 +183,7 @@ class FortuneWheel extends Phaser.Scene {
             this.win_clip.stop(); // this.wheel_spin_clip.setLoop(true); this.wheel_spin_clip.play();
 
             // resetting text field
-            this.prizeText.setText("wait ...");
+            this.prizeText.setText("Espera ...");
 
             // the wheel will spin round for some times. 
             var rounds = Phaser.Math.Between(wheelConfig.wheelRounds.min, wheelConfig.wheelRounds.max);
