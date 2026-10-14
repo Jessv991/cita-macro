@@ -12,7 +12,7 @@
                     
                 </div>
                 <div class="col-lg-4 col-12 mt-lg-0 mt-3">
-                    @include('form.practicasNOG')
+                    @include('form.ilernalleida')
                 </div>
             </div>
         </div>
