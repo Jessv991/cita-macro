@@ -13,6 +13,12 @@ var wheelConfig = {
     // sectors config
     sectors: [
         {
+            win: 'Samarreta de l\'Ilerna Lleida',
+            text: '', // Vacío para que no pinte texto flotante
+            isBigWin: false,
+            icon: null // Sin icono superpuesto
+        },
+        {
             win: 'No hi ha premi',
             text: '',
             isBigWin: false,
@@ -41,12 +47,6 @@ var wheelConfig = {
             text: '',
             isBigWin: false,
             icon: null
-        },
-        {
-            win: 'Samarreta de l\'Ilerna Lleida',
-            text: '', // Vacío para que no pinte texto flotante
-            isBigWin: false,
-            icon: null // Sin icono superpuesto
         }
     ],
     sprites: [
