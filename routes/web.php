@@ -115,3 +115,6 @@ Route::post('cita-macro/imageGenerator', [imageGenerator::class, 'index'])->name
 Route::post('cita-macro/postValidateCooper', [FormValidator::class, 'validateCooper'])->name('validateFormCooper');
 Route::post('cita-macro/get-weblogin', [FormValidator::class, 'getWeblogin'])->name('getWeblogin');
 Route::post('cita-macro/get-store-weblogin', [FormValidator::class, 'getStoreByWeblogin'])->name('getStoreByWeblogin');
+
+//===============================POST FORM COOPER===============================
+Route::post('cita-macro/rulet-validar-email', [FormValidator::class, 'validarEmailRulet'])->name('validarEmailRulet');

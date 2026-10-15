@@ -14,7 +14,7 @@ canvas {
     margin: 0;
     position: absolute;
     top: 50%;
-    left: 33.3%;
+    left: 50%;
     transform: translate(-50%, -50%);
 }
 
@@ -44,6 +44,19 @@ input#apellidos {
     border-width: 2px;
 }
 input#email {
+    border-color: #009E8E !important;
+    border-width: 2px;
+}
+
+input#nombre1 {
+    border-color: #009E8E !important;
+    border-width: 2px;
+}
+input#apellidos1 {
+    border-color: #009E8E !important;
+    border-width: 2px;
+}
+input#email1 {
     border-color: #009E8E !important;
     border-width: 2px;
 }

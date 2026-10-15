@@ -84,7 +84,7 @@ class FortuneWheel extends Phaser.Scene {
         this.spinbutton.on('pointerout', this.spinOut, this);
         this.spinbutton.setInteractive();
         // adding the text field for button
-        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', 'Comencem!', 54, 1).setOrigin(0.5);
+        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', 'Comencem!', 50, 1).setOrigin(0.5, 0.7);
         this.prizeText.tint = wheelConfig.prizeTextTint;
 
         this.pointer = this.addSprite('pointer');
@@ -206,24 +206,30 @@ class FortuneWheel extends Phaser.Scene {
                 duration: Phaser.Math.Between(wheelConfig.rotationTimeRange.min, wheelConfig.rotationTimeRange.max),    // tween duration             
                 ease: "Cubic.easeOut",                          // tween easing               
                 callbackScope: this,                            // callback scope           
-                onComplete: function (tween) {                    // function to be executed once the tween has been completed
-                    this.showCoins();
-                    this.tweens.add({                           // another tween to rotate a bit in the opposite direction
-                        targets: [this.wCont],
-                        angle: this.wCont.angle - backDegrees,
-                        duration: Phaser.Math.Between(wheelConfig.rotationTimeRange.min, wheelConfig.rotationTimeRange.max) / 8,
-                        ease: "Cubic.easeIn",
-                        callbackScope: this,
-                        onComplete: function (tween_1) {
-                            this.prizeText.setText(wheelConfig.sectors[rand_sector].win);  // displaying prize text  
+                onComplete: function (tween_1) {
+                    this.prizeText.setText(wheelConfig.sectors[rand_sector].win);  // displaying prize text  
 
-                            // insert here yuor win event handler
-                            console.log('spin complete');
-                            this.canSpin = true;                                            // player can spin again                      
-                            this.animLightSector();                                         // this.wheel_spin_clip.stop();
-                            this.win_clip.play();
+                    var premioGanador = wheelConfig.sectors[rand_sector].win;
+
+                    // 1. Guardar el premio en el input hidden de tu formulario
+                    var inputPremio = document.getElementById('premio_obtenido'); // Asegúrate de que tu input hidden tenga este ID
+                    if (inputPremio) {
+                        inputPremio.value = premioGanador;
+                    }
+
+                    console.log('spin complete');
+                    this.canSpin = true;                                                    // player can spin again                     
+                    this.animLightSector();                                                 // this.wheel_spin_clip.stop();
+                    this.win_clip.play();
+
+                    // 2. Mostrar el modal 'landingModal2' con un retraso de 3 segundos (3000 milisegundos)
+                    setTimeout(function () {
+                        var modalElement = document.getElementById('landingModal2');
+                        if (modalElement) {
+                            var miModal = new bootstrap.Modal(modalElement);
+                            miModal.show();
                         }
-                    })
+                    }, 3000); // 3000ms = 3 segundos
                 },
                 onUpdate: function (tween) {
                     var dValue = tween.getValue([0]) - oldValue;

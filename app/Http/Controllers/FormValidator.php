@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Empresas;
+use App\Models\CitasLandings;
 use App\Services\email_service_comercial;
 
 class FormValidator extends Controller
@@ -46,5 +47,28 @@ class FormValidator extends Controller
         $tiendas = $empresas->getStoresByWeblogin($weblogin);
 
         return response()->json($tiendas);
+    }
+
+    public function validarEmailRulet(Request $request)
+    {
+        $validated = $request->validate([
+            'nombre1' => ['required', 'string', 'max:20'],
+            'apellidos1' => ['required', 'string', 'max:20'],
+            'email1' => ['required', 'email', 'max:255'],
+        ]);
+
+        $citaLandings = new CitasLandings();
+
+        $existe = $citaLandings->getCustomerRegistration(
+            $validated['email1']
+        );
+
+        return response()->json([
+            'ok' => $existe,
+            'message' => $existe
+                ? 'Email validado correctamente.'
+                : 'Este email no figura en nuestros registros.',
+            'data' => $validated,
+        ], 200);
     }
 }

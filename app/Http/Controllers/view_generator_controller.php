@@ -125,6 +125,10 @@ class view_generator_controller extends Controller
             $this->data['centros'] = $empresas->getStore($promocional, $origen);
         }
 
+        if($origen == 'ilernalleida'){
+
+        }
+
         //=====================IDIOMA==========================
         if (isset($promocional)) {
 

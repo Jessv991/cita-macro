@@ -2,7 +2,7 @@
 
 var wheelConfig = {
     assetPath: window.wheelAssetPath || '/game/lime/',
-    fontName: 'coiny_54',
+    fontName: 'IvyStyleSans-Bold',
     centerOffsetX: 0,
     centerOffsetY: -160,
     prizeTextTint: 0xFFFFFF,
