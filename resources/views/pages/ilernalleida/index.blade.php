@@ -4,22 +4,34 @@
 
 @include('layouts.header')
 
+<div class="pelota-superior">
+    <img class="imgBall" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/pelota_superior.png') }}">
+</div>
+
+<div class="justify-content-end d-flex pelota-inferior">
+    <img class="imgBall" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/pelota_inferior.png') }}">
+</div>
+
 {{-- Modal inicial --}}
 <div class="modal fade" id="landingModal" tabindex="-1" aria-labelledby="landingModalLabel" aria-hidden="true"
     data-bs-backdrop="static" data-bs-keyboard="false">
 
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow contenedor-fondo">
+            <div class="pelota-modal-superior">
+                <img class="imgBall2"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/pelota_superior.png') }}">
+            </div>
 
-            <div class="modal-header border-0 pb-0">
+            <div class="modal-header border-0 pb-0 d-flex flex-column align-items-center">
                 <h5 class="modal-title fw-bold" id="landingModalLabel">
-                    Prova la teva sort!
+                    IMG
                 </h5>
             </div>
 
-            <div class="modal-body p-4">
-                <p class="text-muted mb-4">
-                    Deixa'ns les teves dades per a continuar.
+            <div class="modal-body p-4 d-flex flex-column align-items-center">
+                <p class="mb-4">
+                    Omple les teves dades per participar i descobrir el teu premi!
                 </p>
 
                 <form id="landingForm" method="POST" action="">
@@ -46,9 +58,12 @@
                             id="email1" placeholder='{{ __('form_translation.Email_practicas') }}'>
                     </div>
 
-                    <button type="submit" class="btn btn-color w-100 mt-3">
-                        Continuar
-                    </button>
+                    <div class="d-flex justify-content-center w-100">
+                        <button type="submit" class="btn btn-color w-100 mt-3">
+                            CONTINUAR ➜
+                        </button>
+                    </div>
+
                 </form>
 
                 <div id="divAgain" class="text-center d-none">
@@ -62,12 +77,17 @@
 
             </div>
 
+            <div class="justify-content-end d-flex pelota-modal-inferior">
+                <img class="imgBall2"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/pelota_inferior.png') }}">
+            </div>
+
         </div>
     </div>
 </div>
 
-<div class="modal fade" id="landingModal2" tabindex="-1" aria-labelledby="landingModalLabel" aria-hidden="true"
-    data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade contenedor-fondo" id="landingModal2" tabindex="-1" aria-labelledby="landingModalLabel"
+    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
 
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">

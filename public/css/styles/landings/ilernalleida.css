@@ -1,4 +1,3 @@
-
 /* 
 ███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
 ██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
@@ -8,6 +7,29 @@
 ╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
                                                                                        
 */
+
+.contenedor-fondo {
+    position: relative;
+    overflow: hidden;
+}
+
+.pelota-modal-superior {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.pelota-modal-inferior {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#landingForm {
+    width: 50%;
+}
 
 canvas {
     display: block;
@@ -22,13 +44,36 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #7c142e !important;
+}
+
+.imgBall {
+    max-width: 50%;
+    height: auto;
+}
+
+.pelota-inferior {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.pelota-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.imgBall2 {
+    max-width: 22%;
+    height: auto;
 }
 
 .contenedor-fondo {
-    background-color: #fff !important;
-    border-radius: 15px;
-    margin: 10px;
-    margin-top: 25px;
+    background-color: #7c142e;
+    color: #fff;
 }
 
 .col-lg-4.col-12.mt-lg-0.mt-3 {
@@ -39,10 +84,12 @@ input#nombre {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#apellidos {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#email {
     border-color: #009E8E !important;
     border-width: 2px;
@@ -52,38 +99,47 @@ input#nombre1 {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#apellidos1 {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#email1 {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#localidad {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 input#movil {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 select#provincias {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 select#ciudad {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 select#optica {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 select#optica2 {
     border-color: #009E8E !important;
     border-width: 2px;
 }
+
 select#optica3 {
     border-color: #009E8E !important;
     border-width: 2px;
@@ -97,7 +153,7 @@ body::-webkit-scrollbar-track {
     background: transparent;
 }
 
-#icon{
+#icon {
     width: 100%;
 }
 
@@ -137,7 +193,7 @@ a:hover {
     position: relative !important;
 }
 
-label > span {
+label>span {
     color: #000 !important;
 }
 
@@ -201,8 +257,9 @@ div#animationdivIcon {
 }
 
 .btn-color {
+    background-color: #fff;
+    color: #7c142e;
     width: 234px !important;
-    border-radius: 20px !important;
     font-size: 20px;
 }
 
@@ -249,8 +306,8 @@ div#animationdivIcon {
                                            
  */
 
- @media (max-width: 2000px) {
-    
+@media (max-width: 2000px) {
+
     .text-top-form {
         font-size: 20px;
         padding: 2%;
@@ -270,20 +327,10 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 25px !important;
     }
+}
 
-    .btn-color {
-        background-color: #009E8E;
-        color: #fff;
-    }
-    
-    .btn-color:hover {
-        background-color: #004740;
-        color: #fff;
-    }
-
-    /* Pantallas Medianas (992px a 1199px) */
+/* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
@@ -305,9 +352,8 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
-    
+
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -332,9 +378,8 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
-    
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -359,9 +404,8 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
-    
+
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
@@ -389,7 +433,7 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -402,25 +446,8 @@ div#animationdivIcon {
     .mb-5 {
         margin-bottom: 1rem !important;
     }
-    
+
+    #landingForm {
+        width: 100%;
+    }
 }
-
-    /* 
-    ███████╗ ██████╗ ██████╗ ███╗   ███╗
-    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
-    █████╗  ██║   ██║██████╔╝██╔████╔██║
-    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
-    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
-    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
-    */
-
-}
-
-@media (min-width: 0px) and (max-width: 480px) {
-
-    .mb-5 {
-        margin-bottom: 1rem !important;
-    }    
-
-}
-

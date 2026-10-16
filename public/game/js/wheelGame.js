@@ -52,7 +52,7 @@ class FortuneWheel extends Phaser.Scene {
 
         // 2. Carga de sonidos (añadiendo basePath)
         this.load.audio('pointer_hit_clip', [basePath + 'audio/pointer_hit.ogg', basePath + 'audio/pointer_hit.mp3']);
-        this.load.audio('win_clip', [basePath + 'audio/win_sound.ogg', basePath + 'audio/win_sound.mp3']);
+        this.load.audio('win_clip', [basePath + 'audio/sonido_ruleta.ogg', basePath + 'audio/sonido_ruleta.mp3']);
 
         // 3. Carga de fuentes bitmap (añadiendo basePath)
         this.load.bitmapFont('sectorFont', basePath + 'fonts/' + wheelConfig.fontName + '.png', basePath + 'fonts/' + wheelConfig.fontName + '.xml');
@@ -84,7 +84,7 @@ class FortuneWheel extends Phaser.Scene {
         this.spinbutton.on('pointerout', this.spinOut, this);
         this.spinbutton.setInteractive();
         // adding the text field for button
-        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', 'Comencem!', 50, 1).setOrigin(0.5, 0.7);
+        this.prizeText = this.add.bitmapText(this.centerX, this.centerY + 545, 'sectorFont', '', 50, 1).setOrigin(0.5, 0.7);
         this.prizeText.tint = wheelConfig.prizeTextTint;
 
         this.pointer = this.addSprite('pointer');
