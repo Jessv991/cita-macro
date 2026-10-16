@@ -10,21 +10,36 @@
 
 .contenedor-fondo {
     position: relative;
-    overflow: hidden;
+    overflow: visible;
+}
+
+.pelota-modal-superior,
+.pelota-modal-inferior {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .pelota-modal-superior {
-    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
 .pelota-modal-inferior {
-    position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 1;
+}
+
+.imgBall2 {
+    max-width: 22%;
+    height: auto;
+    pointer-events: none;
+}
+
+.contenedor-fondo .modal-header,
+.contenedor-fondo .modal-body {
+    position: relative;
+    z-index: 2;
 }
 
 #landingForm {
@@ -64,11 +79,6 @@ body {
     top: 0;
     left: 0;
     z-index: 10;
-}
-
-.imgBall2 {
-    max-width: 22%;
-    height: auto;
 }
 
 .contenedor-fondo {
