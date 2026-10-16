@@ -229,7 +229,7 @@ class FortuneWheel extends Phaser.Scene {
                             var miModal = new bootstrap.Modal(modalElement);
                             miModal.show();
                         }
-                    }, 3000); // 3000ms = 3 segundos
+                    }, 8000); // 3000ms = 3 segundos
                 },
                 onUpdate: function (tween) {
                     var dValue = tween.getValue([0]) - oldValue;
