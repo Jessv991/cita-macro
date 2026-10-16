@@ -7,8 +7,8 @@ window.onload = function () {
     // phaser game configuration object
     var gameConfig = {
         type: Phaser.WEBGL,          // render type
-        width: 1537,                 // game width, in pixels
-        height: 1537,                // game height, in pixels    
+        width: 1067,                 // game width, in pixels
+        height: 1067,                // game height, in pixels    
         //backgroundColor: 0x383838,   // game background color
         transparent: true,
         scene: [FortuneWheel],       // scenes used by the game  

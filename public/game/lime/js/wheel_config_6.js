@@ -112,7 +112,7 @@ var wheelConfig = {
             originX: 0.5,
             originY: 0.5,
             offsetX: 0,
-            offsetY: 0
+            offsetY: 0,
         },
         {
             fileName: 'WheelBorder.png',
@@ -120,7 +120,7 @@ var wheelConfig = {
             originX: 0.5,
             originY: 0.5,
             offsetX: 0,
-            offsetY: 3
+            offsetY: 3,
         },
         {
             fileName: 'Lamp.png',

@@ -460,4 +460,9 @@ div#animationdivIcon {
     #landingForm {
         width: 100%;
     }
+
+    .imgBall {
+        max-width: 32%;
+        height: auto;
+    }
 }
