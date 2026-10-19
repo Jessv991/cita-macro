@@ -8,6 +8,10 @@
                                                                                        
 */
 
+.modal-content.border-0.shadow {
+    border-radius: 79px !important;
+}
+
 .font-t{
     font-size: 11px;
 }
