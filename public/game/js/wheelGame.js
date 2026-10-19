@@ -249,8 +249,8 @@ class FortuneWheel extends Phaser.Scene {
                     if (imgPremio) {
                         // Asumiendo que las imágenes se llaman '50.png', 'revision.png', 'lentillas.png', etc.
                         // Mantenemos la base de la ruta reemplazando únicamente el nombre de la imagen al final
-                        var rutaBase = "assets/img/ilernalleida";
-                        imgPremio.src = window.wheelAssetPath + rutaBase + '/' + premioGanador + '.png';
+                        var rutaBase = "https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida";
+                        imgPremio.src = rutaBase + '/' + premioGanador + '.png';
                     }
 
                     console.log('spin complete');
