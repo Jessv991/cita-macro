@@ -108,6 +108,20 @@
 {{-- Apertura automática del modal --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
+
+        // 1. OBTENER STOCK DE LA TABLA 'materia' AL CARGAR LA PÁGINA
+        $.ajax({
+            url: '{{ route('obtenerStockRuleta') }}', // O la URL '/obtener-stock-ruleta'
+            type: 'GET',
+            success: function(stock) {
+                window.stockRuleta = stock;
+                console.log('Stock cargado:', window.stockRuleta);
+            },
+            error: function() {
+                console.error('Error al obtener el stock de la ruleta.');
+            }
+        });
+
         const modalElement = document.getElementById('landingModal');
         const form = document.getElementById('landingForm');
         const divAgain = document.getElementById('divAgain');

@@ -34,6 +34,28 @@ class FortuneWheel extends Phaser.Scene {
         super("FortuneWheel"); // scene key FortuneWheel
     }
 
+    calcularSectorGanador(stock) {
+        let peso50 = stock.descuento50 > 0 ? 50 : 0;
+        let pesoRevision = stock.revision > 0 ? 30 : 0;
+        let pesoLentillas = stock.lentillas > 0 ? 20 : 0;
+
+        let totalPeso = peso50 + pesoRevision + pesoLentillas;
+
+        if (totalPeso === 0) {
+            return 3; // Índice por defecto de 'no_premio' si se agotase todo
+        }
+
+        let randomNum = Math.random() * totalPeso;
+
+        if (randomNum < peso50) {
+            return 4; // Índice de '50' (50% de probabilidad)
+        } else if (randomNum < (peso50 + pesoRevision)) {
+            return 1; // Índice de 'revision' (30% de probabilidad)
+        } else {
+            return 0; // Índice de 'lentillas' (20% de probabilidad)
+        }
+    }
+
     // method to be executed when the scene preloads
     preload() {
 
@@ -61,7 +83,7 @@ class FortuneWheel extends Phaser.Scene {
 
     // method to be executed once the scene has been created
     create() {
-        
+
         // --- REGISTRAMOS LA ESCENA GLOBALMENTE ---
         window.gameScene = this;
         // ----------------------------------------
@@ -163,8 +185,92 @@ class FortuneWheel extends Phaser.Scene {
         }
     }
 
-    // function to spin the wheel
     spinWheel() {
+        var oldTime;    // spin tween elapsed time 
+        var oldValue;   // spin tween last value  
+
+        // can we spin the wheel?
+        if (this.canSpin) {
+            if (this.lightTween != null) {
+                this.lightTween.stop();
+                this.lightsector.setAlpha(0);
+            }
+
+            if (this.arrowTween != null) {
+                this.arrowTween.stop();
+                this.spinArrow.setAlpha(0);
+            }
+
+            if (this.coinsEmitter != null) {
+                this.coinsEmitter.stop();
+            }
+
+            this.win_clip.stop();
+
+            // resetting text field
+            this.prizeText.setText("Espera ...");
+
+            // the wheel will spin round for some times. 
+            var rounds = Phaser.Math.Between(wheelConfig.wheelRounds.min, wheelConfig.wheelRounds.max);
+
+            // --- AQUÍ APLICAMOS EL CÁLCULO DINÁMICO BASADO EN EL STOCK PRECARGADO ---
+            var stockData = window.stockRuleta || { descuento50: 1500, revision: 900, lentillas: 600 };
+            var rand_sector = this.calcularSectorGanador(stockData);
+            // ------------------------------------------------------------------------
+
+            var rand_degrees = rand_sector * 360 / wheelConfig.sectors.length;
+
+            // then will rotate back by a random amount of degrees
+            var backDegrees = Phaser.Math.Between(wheelConfig.backSpin.min, wheelConfig.backSpin.max);
+
+            // now the wheel cannot spin because it's already spinning
+            this.canSpin = false;
+
+            // animation tween for the spin
+            this.tweens.add({
+                targets: [this.wCont],
+                angle: 360 * rounds + rand_degrees + backDegrees,
+                duration: Phaser.Math.Between(wheelConfig.rotationTimeRange.min, wheelConfig.rotationTimeRange.max),
+                ease: "Cubic.easeOut",
+                callbackScope: this,
+                onComplete: function (tween_1) {
+                    this.prizeText.setText(wheelConfig.sectors[rand_sector].win);
+
+                    var premioGanador = wheelConfig.sectors[rand_sector].win;
+
+                    // 1. Guardar el premio en el input hidden de tu formulario
+                    var inputPremio = document.getElementById('premio_obtenido');
+                    if (inputPremio) {
+                        inputPremio.value = premioGanador;
+                    }
+
+                    console.log('spin complete');
+                    this.canSpin = true;
+                    this.animLightSector();
+                    this.win_clip.play();
+
+                    // 2. Mostrar el modal 'landingModal2' con un retraso de 8 segundos
+                    setTimeout(function () {
+                        var modalElement = document.getElementById('landingModal2');
+                        if (modalElement) {
+                            var miModal = new bootstrap.Modal(modalElement);
+                            miModal.show();
+                        }
+                    }, 8000);
+                },
+                onUpdate: function (tween) {
+                    var dValue = tween.getValue([0]) - oldValue;
+                    var dTime = tween.elapsed - oldTime;
+                    this.wheelSpeed = (dTime != null) ? dValue / dTime : 0;
+                    oldTime = tween.elapsed;
+                    oldValue = tween.getValue([0]);
+                }
+            });
+        }
+    }
+
+    // function to spin the wheel
+    /* spinWheel() {
 
         var oldTime;    // spin tween elapsed time 
         var oldValue;   // spin tween last value  
@@ -245,7 +351,7 @@ class FortuneWheel extends Phaser.Scene {
                 }
             });
         }
-    }
+    } */
 
     animPointer() {
         this.animPointerComplete = false;

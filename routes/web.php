@@ -5,6 +5,7 @@ use App\Http\Controllers\FormValidator;
 use App\Http\Controllers\imageGenerator;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\DB;
 
 /* 
 
@@ -118,3 +119,12 @@ Route::post('cita-macro/get-store-weblogin', [FormValidator::class, 'getStoreByW
 
 //===============================POST FORM COOPER===============================
 Route::post('cita-macro/rulet-validar-email', [FormValidator::class, 'validarEmailRulet'])->name('validarEmailRulet');
+
+//===============================POST FORM COOPER===============================
+Route::get('/obtener-stock-ruleta', function() {
+    return response()->json([
+        'descuento50' => DB::table('materia')->where('materia', 'descuento50')->value('cantidad') ?? 0,
+        'revision'    => DB::table('materia')->where('materia', 'revision')->value('cantidad') ?? 0,
+        'lentillas'   => DB::table('materia')->where('materia', 'lentillas')->value('cantidad') ?? 0,
+    ]);
+})->name('obtenerStockRuleta');

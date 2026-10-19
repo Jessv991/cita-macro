@@ -156,4 +156,7 @@ class CitasLandings extends Model
             ->where('origin', 'ilernalleida')
             ->exists();
     }
+
+
+    
 }
