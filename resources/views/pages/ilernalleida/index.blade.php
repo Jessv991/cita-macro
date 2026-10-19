@@ -24,13 +24,12 @@
             </div>
 
             <div class="modal-header border-0 pb-0 d-flex flex-column align-items-center">
-                <h5 class="modal-title fw-bold" id="landingModalLabel">
-                    IMG
-                </h5>
+                <img class="img_logo" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/logo.png') }}">
+                <img class="img_frase w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/frase.png') }}">
             </div>
 
             <div class="modal-body p-4 d-flex flex-column align-items-center">
-                <p class="mb-4">
+                <p class="mb-4 fst-italic">
                     Omple les teves dades per participar i descobrir el teu premi!
                 </p>
 
@@ -58,10 +57,13 @@
                             id="email1" placeholder='{{ __('form_translation.Email_practicas') }}'>
                     </div>
 
-                    <div class="d-flex justify-content-center w-100">
-                        <button type="submit" class="btn btn-color w-100 mt-3">
+                    <div class="d-flex flex-column align-items-center w-100">
+                        <button type="submit" class="btn btn-color2 w-100 mt-3">
                             CONTINUAR ➜
                         </button>
+                        <p class="mb-4 aviso">
+                            Una participació per persona. Consulta les bases legals.
+                        </p>
                     </div>
 
                 </form>
@@ -86,8 +88,8 @@
     </div>
 </div>
 
-<div class="modal fade contenedor-fondo" id="landingModal2" tabindex="-1" aria-labelledby="landingModalLabel"
-    aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+<div class="modal fade" id="landingModal2" tabindex="-1" aria-labelledby="landingModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
 
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
@@ -105,7 +107,7 @@
 {{-- Apertura automática del modal --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const modalElement = document.getElementById('landingModal');
+        const modalElement = document.getElementById('landingModal2');
         const form = document.getElementById('landingForm');
         const divAgain = document.getElementById('divAgain');
 
@@ -139,6 +141,28 @@
                         if (modalInstance) {
                             modalInstance.hide();
                         }
+
+                        if (window.gameScene) {
+                            window.gameScene.canSpin = true;
+                        }
+
+                        // Función de reintento seguro por si Phaser tarda una fracción de segundo más
+                        function habilitarRuletaConReintentos(intentos = 0) {
+                            if (window.gameScene) {
+                                window.gameScene.canSpin =
+                                    true; // Ahora sí se permite girar la ruleta
+                            } else if (intentos < 15) {
+                                // Reintentar cada 100ms (hasta 1.5 segundos)
+                                setTimeout(() => habilitarRuletaConReintentos(intentos + 1),
+                                    100);
+                            } else {
+                                console.warn(
+                                    'Advertencia: No se encontró la escena de Phaser activa.'
+                                );
+                            }
+                        }
+
+                        habilitarRuletaConReintentos();
 
                         // Rellenar el segundo formulario
                         document.getElementById('nombre').value =

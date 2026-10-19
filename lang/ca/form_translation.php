@@ -52,5 +52,8 @@ return [
     'contacto' => "Persona de contacte",
     'wsp_preferencia' => "O contacta'ns per WhatsApp!",
     'wsp_chat' => "Xatejar",
+    'Aceptar_gestion_natural2' => 'GESTIÓN NATURAL SL',
+    'Aceptar_gestion_natural' => 'Accepto que',
+    'Aceptar_gestion_natural3' => 'pugui usar les meves dades',
 
 ];

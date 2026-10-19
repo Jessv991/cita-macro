@@ -61,6 +61,11 @@ class FortuneWheel extends Phaser.Scene {
 
     // method to be executed once the scene has been created
     create() {
+        
+        // --- REGISTRAMOS LA ESCENA GLOBALMENTE ---
+        window.gameScene = this;
+        // ----------------------------------------
+
         this.sectorsCount = wheelConfig.sectors.length;
         this.centerX = (fortuneWheelGame.config.width / 2) + wheelConfig.centerOffsetX;
         this.centerY = (fortuneWheelGame.config.height / 2) + wheelConfig.centerOffsetY;
@@ -140,7 +145,7 @@ class FortuneWheel extends Phaser.Scene {
         wheelConfig.createLamps(this);
 
         // the game has just started and we can spin the wheel
-        this.canSpin = true;
+        this.canSpin = false;
         this.animPointerComplete = true;
         if (this.useSpinArrow) this.animSpinArrow();
 

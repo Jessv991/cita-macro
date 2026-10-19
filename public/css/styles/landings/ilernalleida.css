@@ -8,6 +8,59 @@
                                                                                        
 */
 
+.font-t{
+    font-size: 11px;
+}
+
+.text-b {
+    font-size: 17px;
+    color: #7c142e;
+}
+
+.form-check-label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 0%;
+}
+
+.custom-checkbox:checked+.form-check-label::after {
+    content: "";
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    width: 7px;
+    height: 14px;
+    border: solid #555;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.img_logo {
+    width: 433px;
+}
+
+p.mb-4.aviso {
+    padding: 8px;
+    font-size: 12px;
+}
+
+.modal-body.p-4.d-flex.flex-column.align-items-center {
+    margin-bottom: 20%;
+}
+
+#landingModal {
+    z-index: 1055 !important;
+}
+
+#landingModal2 {
+    z-index: 1055 !important;
+}
+
 .contenedor-fondo {
     position: relative;
     overflow: visible;
@@ -53,6 +106,8 @@ canvas {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
+    /* Capa baja */
 }
 
 body {
@@ -91,68 +146,58 @@ body {
 }
 
 input#nombre {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 input#apellidos {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 input#email {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 input#nombre1 {
-    border-color: #009E8E !important;
+    border-color: #7c142e !important;
     border-width: 2px;
 }
 
 input#apellidos1 {
-    border-color: #009E8E !important;
+    border-color: #7c142e !important;
     border-width: 2px;
 }
 
 input#email1 {
-    border-color: #009E8E !important;
+    border-color: #7c142e !important;
     border-width: 2px;
 }
 
 input#localidad {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 input#movil {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 select#provincias {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 select#ciudad {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 select#optica {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 select#optica2 {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 select#optica3 {
-    border-color: #009E8E !important;
-    border-width: 2px;
+    background-color: #f0d7dd !important;
 }
 
 body::-webkit-scrollbar {
@@ -171,11 +216,11 @@ body::-webkit-scrollbar-track {
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #009E8E !important;
+    color: #7c142e !important;
 }
 
 a:hover {
-    color: #027e71 !important;
+    color: #f0d7dd  !important;
 }
 
 /* 
@@ -208,11 +253,11 @@ label>span {
 }
 
 .text-top-form {
-    color: #000;
+    color: #7c142e;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 200;
     line-height: 1;
-    font-size: 25px;
+    font-size: 50px;
 
 }
 
@@ -267,6 +312,13 @@ div#animationdivIcon {
 }
 
 .btn-color {
+    background-color: #7c142e;
+    color: #fff;
+    width: 234px !important;
+    font-size: 20px;
+}
+
+.btn-color2 {
     background-color: #fff;
     color: #7c142e;
     width: 234px !important;
@@ -274,7 +326,7 @@ div#animationdivIcon {
 }
 
 .form-check-label::before {
-    border: 1px solid #009E8E !important;
+    border: 1px solid #000 !important;
 }
 
 /* 
@@ -444,6 +496,10 @@ div#animationdivIcon {
         margin-bottom: 1rem !important;
     }
 
+    .btn-color {
+        width: 219px !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -464,5 +520,9 @@ div#animationdivIcon {
     .imgBall {
         max-width: 32%;
         height: auto;
+    }
+
+    .btn-color {
+        width: 219px !important;
     }
 }
