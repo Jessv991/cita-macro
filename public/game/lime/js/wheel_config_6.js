@@ -13,37 +13,37 @@ var wheelConfig = {
     // sectors config
     sectors: [
         {
-            win: 'Samarreta de l\'Ilerna Lleida',
+            win: 'lentillas',
             text: '', // Vacío para que no pinte texto flotante
             isBigWin: false,
             icon: null // Sin icono superpuesto
         },
         {
-            win: 'No hi ha premi',
+            win: 'revision',
             text: '',
             isBigWin: false,
             icon: null
         },
         {
-            win: '50 euros de descompte en la teva compra a Natural Optics',
+            win: 'samarreta',
             text: '',
             isBigWin: false,
             icon: null
         },
         {
-            win: 'Bufanda de l\'Ilerna Lleida',
+            win: 'no_premio',
             text: '',
             isBigWin: false,
             icon: null
         },
         {
-            win: '20 euros de descompte en la teva compra a Natural Optics',
+            win: '50',
             text: '',
             isBigWin: false,
             icon: null
         },
         {
-            win: 'Revisió visual gratis',
+            win: 'bufanda',
             text: '',
             isBigWin: false,
             icon: null

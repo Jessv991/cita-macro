@@ -25,7 +25,8 @@
 
             <div class="modal-header border-0 pb-0 d-flex flex-column align-items-center">
                 <img class="img_logo" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/logo.png') }}">
-                <img class="img_frase w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/frase.png') }}">
+                <img class="img_frase w-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/frase.png') }}">
             </div>
 
             <div class="modal-body p-4 d-flex flex-column align-items-center">
@@ -107,7 +108,7 @@
 {{-- Apertura automática del modal --}}
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const modalElement = document.getElementById('landingModal2');
+        const modalElement = document.getElementById('landingModal');
         const form = document.getElementById('landingForm');
         const divAgain = document.getElementById('divAgain');
 
@@ -143,12 +144,15 @@
                         }
 
                         if (window.gameScene) {
-                            window.gameScene.canSpin = true;
+                            console.log('entró');
+                            window.gameScene.canSpin =
+                                true; // Ahora sí se permite girar la ruleta
                         }
 
                         // Función de reintento seguro por si Phaser tarda una fracción de segundo más
                         function habilitarRuletaConReintentos(intentos = 0) {
                             if (window.gameScene) {
+                                console.log('¡Phaser detectado y habilitado con éxito!');
                                 window.gameScene.canSpin =
                                     true; // Ahora sí se permite girar la ruleta
                             } else if (intentos < 15) {
@@ -163,6 +167,8 @@
                         }
 
                         habilitarRuletaConReintentos();
+
+                        console.log('no entró', window.gameScene);
 
                         // Rellenar el segundo formulario
                         document.getElementById('nombre').value =
