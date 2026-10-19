@@ -93,7 +93,7 @@
     data-bs-backdrop="static" data-bs-keyboard="false">
 
     <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow">
+        <div class="modal-content border-0 shadow radiumModal">
 
             <div class="modal-body p-4">
                 @include('form.ilernalleida')
