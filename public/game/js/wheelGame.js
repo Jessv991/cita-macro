@@ -244,6 +244,15 @@ class FortuneWheel extends Phaser.Scene {
                         inputPremio.value = premioGanador;
                     }
 
+                    // 2. Actualizar la imagen del premio dinámicamente
+                    var imgPremio = document.getElementById('img_premio');
+                    if (imgPremio) {
+                        // Asumiendo que las imágenes se llaman '50.png', 'revision.png', 'lentillas.png', etc.
+                        // Mantenemos la base de la ruta reemplazando únicamente el nombre de la imagen al final
+                        var rutaBase = "{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/') }}";
+                        imgPremio.src = rutaBase + '/' + premioGanador + '.png';
+                    }
+
                     console.log('spin complete');
                     this.canSpin = true;
                     this.animLightSector();

@@ -22,8 +22,8 @@
 
 
             <div class="d-flex flex-column align-items-center">
-                <p class="text-top-form">ENHORABONA!</p>
-                <P></P>
+                <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/enhorabuena.png') }}">
+                <img id="img_premio" class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/no_premio.png') }}">
             </div>
 
 
