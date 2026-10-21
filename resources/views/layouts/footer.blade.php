@@ -76,9 +76,11 @@
         window.wheelAssetPath = basePath.endsWith('/') ? basePath : basePath + '/';
     </script>
 
-    <script src="{{ asset($rutaAsset . 'game/lime/js/wheel_config_6.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'game/js/animCoins.js') }}"></script>
-    <script src="{{ asset($rutaAsset . 'game/js/wheelGame.js') }}"></script>
+    @if ($landing == 'ilernalleida')
+        <script src="{{ asset($rutaAsset . 'game/lime/js/wheel_config_6.js') }}"></script>
+        <script src="{{ asset($rutaAsset . 'game/js/animCoins.js') }}"></script>
+        <script src="{{ asset($rutaAsset . 'game/js/wheelGame.js') }}"></script>
+    @endif
 
 
 
