@@ -5,6 +5,7 @@ namespace App\Services;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 use App\Models\solicitudes_comerciales;
+use App\Models\sorteoLc;
 use App\Models\Empresas;
 
 use Illuminate\Support\Facades\Mail;
@@ -12,11 +13,10 @@ use Illuminate\Support\Facades\Mail;
 class email_ocasional_comercial
 {
 
-    public function sendEmailComercial($validated, $premio, $landing, $ip, $locale)
+    public function sendEmailComercial($validated, $premio, $landing, $ip, $locale, $test)
     {
-        
-        $nombre = $validated['nombre'];
-        $apellidos = $validated['apellidos'];
+
+        $nombre = $validated['nombre'] . ' ' . $validated['apellidos'];
         $email_cliente = $validated['email'];
         $movil = $validated['movil'];
         $fecha = date("Y-m-d");
@@ -37,37 +37,34 @@ class email_ocasional_comercial
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Kit solicitado por ' . $optica;
-            $archivo = resource_path('views/pages/mail/' . $locale . '/kitOpticaComprobante.blade.php');
+            $mail->Subject = 'Participación Ilerna Lleida';
+            $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaComprobante.blade.php');
+
+            dd($archivo);
 
             $palabrasBuscar = array(
-                '{NOMBREOPTICA}',
                 '{CONTACTO}',
                 '{ORIGIN}',
-                '{CODIGO}',
-                '{UNIDAD}',
                 '{FECHA}',
                 '{EMAILOPTICO}',
-                '{LOGO}',
                 '{LOCAL}'
             );
 
 
-            $palabrasReemplazar = array($optica, $nombre, $origen, $codigo, $unidad, $fecha, $email_cliente, $logoOptica, $locale);
+            $palabrasReemplazar = array($nombre, $landing, $fecha, $email_cliente, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
 
             if ($test == 'true') {
-                $mail->addAddress('l.vigna@naturalopticsgroup.com');
+                $mail->addAddress('j.vasquez@naturalopticsgroup.com');
             } else {
-                $mail->addAddress($mail_optica);
-                $mail->addCC('crm@naturalopticsgroup.com');
+                $mail->addAddress('g.vall@naturalopticsgroup.com');
+                //$mail->addCC('crm@naturalopticsgroup.com');
                 //función que envía email al cliente 
-                $this->sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica);
+                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing);
             }
-
 
 
             try {
@@ -76,6 +73,7 @@ class email_ocasional_comercial
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
                 // Manejo de errores
+                dd('entró', $mail->ErrorInfo);
                 return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
             }
 
@@ -86,10 +84,10 @@ class email_ocasional_comercial
         }
     }
 
-    function sendMessageClient($optica, $nombre, $email_cliente, $unidad, $locale, $fecha, $codigo, $origen, $logoOptica, $telefono_optica, $mail_optica)
+    function sendMessageClient($nombre, $apellidos, $email_cliente, $locale, $fecha, $origen)
     {
 
-        $pedido = new solicitudes_comerciales();
+        $participacion = new sorteoLc();
         $mail = new PHPMailer(true);
         $fechaBD = date("Y-m-d H:i:s");
 
@@ -109,31 +107,24 @@ class email_ocasional_comercial
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
             $mail->Subject = 'Confirmación de su pedido';
-            $archivo = resource_path('views/pages/mail/' . $locale . '/kitClienteComprobante.blade.php');
+            $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaClienteComprobante.blade.php');
 
 
             $palabrasBuscar = array(
-                '{NOMBREOPTICA}',
                 '{CONTACTO}',
                 '{EMAIL}',
-                '{CODIGO}',
                 '{FECHA}',
-                '{UNIDAD}',
                 '{ORIGIN}',
-                '{TELEFONOPTICA}',
-                '{EMAILOPTICA}',
-                '{LOGO}',
                 '{LOCAL}'
             );
 
-            $palabrasReemplazar = array($optica, $nombre, $email_cliente, $codigo, $fecha, $unidad, $origen, $telefono_optica, $mail_optica, $logoOptica, $locale);
+            $palabrasReemplazar = array($nombre . ' ' . $apellidos, $email_cliente, $fecha, $origen, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
             $mail->addAddress($email_cliente);
-            $pedido->saveCustomerData($optica, $nombre, $email_cliente, $unidad, $fechaBD, $codigo, $origen);
-
+            //$participacion->saveCustomerData($optica, $nombre, $email_cliente, $fechaBD, $origen);
 
             try {
                 // Enviar el correo

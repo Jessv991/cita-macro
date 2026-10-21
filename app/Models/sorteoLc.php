@@ -112,4 +112,11 @@ class sorteoLc extends Model
         }
     }
 
+    public function getCustomerRegistration(string $email)
+    {
+        return self::where('email_cliente', trim($email))
+            ->where('origin', 'ilernalleida')
+            ->exists();
+    }
+
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\CitasLandings;
+use App\Models\sorteoLc;
 use App\Services\email_service_comercial;
 use App\Services\email_ocasional_comercial;
 
@@ -58,9 +59,9 @@ class FormValidator extends Controller
             'email1' => ['required', 'email', 'max:255'],
         ]);
 
-        $citaLandings = new CitasLandings();
+        $sorteoLc = new sorteoLc();
 
-        $existe = $citaLandings->getCustomerRegistration(
+        $existe = $sorteoLc->getCustomerRegistration(
             $validated['email1']
         );
 
@@ -76,7 +77,6 @@ class FormValidator extends Controller
     public function ValidateRuleta(Request $request)
     {
         $sendEmail = new email_ocasional_comercial();
-        dd($request->input('premio_obtenido'));
 
         $validated = $request->validate([
             'nombre' => ['required', 'string', 'max:20'],
@@ -92,6 +92,7 @@ class FormValidator extends Controller
             $request->input('premio_obtenido'),
             $request->input('landing'), 
             $request->input('_ip'),
-            $request->input('language'));
+            $request->input('language'),
+            $request->input('_test'));
     }
 }
