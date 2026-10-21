@@ -917,12 +917,17 @@
                                                 </em>
                                               </p>
                                               <p style="color:#050606;font-size:16px">
+                                                <em style="line-height:150%">
+                                                  <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="600" class="adapt-img">
+                                                </em>
+                                              </p>
+                                              <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%"></em>
                                                 <br>
                                               </p>
                                               <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  Aquesta cita s'ha aconseguit a través de:
+                                                  Aquesta participació s'ha aconseguit a través de:
                                                 </em>
                                                 <br>
                                               </p>
@@ -996,9 +1001,9 @@
                                                       <tr>
                                                           <td class="esd-block-text es-p10b" align="center">
                                                               <p style="color: #ffffff;"><br></p>
-                                                              <p style="color: #ffffff;">{DIRECIONOPTICA}</p>
-                                                              <p style="color: #ffffff;">{TELEFONOPTICA} &nbsp;</p>
-                                                              <p style="color: #ffffff;">{EMAILOPTICO}</p>
+                                                              <p style="color: #ffffff;"></p>
+                                                              <p style="color: #ffffff;"> &nbsp;</p>
+                                                              <p style="color: #ffffff;"></p>
                                                           </td>
                                                       </tr>
                                                   </tbody>

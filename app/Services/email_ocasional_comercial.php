@@ -41,15 +41,16 @@ class email_ocasional_comercial
             $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaComprobante.blade.php');
 
             $palabrasBuscar = array(
-                '{CONTACTO}',
+                '{NOMBRECLIENTE}',
+                '{TELEFONOCLIENTE}',
+                '{EMAILCLIENTE}',
                 '{ORIGIN}',
-                '{FECHA}',
-                '{EMAILOPTICO}',
-                '{LOCAL}'
+                '{LOCAL}',
+                '{PREMIO}'
             );
 
 
-            $palabrasReemplazar = array($nombre, $landing, $fecha, $email_cliente, $locale);
+            $palabrasReemplazar = array($nombre, $email_cliente, $validated['movil'], $landing, $locale, $premio);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
