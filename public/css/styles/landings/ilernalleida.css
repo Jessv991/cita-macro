@@ -12,7 +12,7 @@
     border-radius: 79px !important;
 }
 
-.font-t{
+.font-t {
     font-size: 11px;
 }
 
@@ -224,7 +224,7 @@ a {
 }
 
 a:hover {
-    color: #f0d7dd  !important;
+    color: #f0d7dd !important;
 }
 
 /* 
@@ -394,32 +394,18 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
     }
-}
 
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
+    .img_frase {
+        width: 66% !important
     }
 
-    input {
-        font-size: 15px !important;
+    .btn-color2 {
+        width: 100% !important;
     }
 
-    select {
-        font-size: 15px !important;
+    .modal-body.p-4.d-flex.flex-column.align-items-center {
+        margin-bottom: 2%;
     }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-    }
-
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -446,6 +432,26 @@ div#animationdivIcon {
         width: 219px !important;
     }
 
+    .img_frase {
+        width: 66% !important
+    }
+
+    .img_logo {
+        width: 61%;
+    }
+
+    .img_logo {
+        width: 61%;
+    }
+
+    .btn-color2 {
+        width: 100% !important;
+    }
+
+    .modal-body.p-4.d-flex.flex-column.align-items-center {
+        margin-bottom: 2%;
+    }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
@@ -472,6 +478,22 @@ div#animationdivIcon {
         width: 219px !important;
     }
 
+    .img_logo {
+        width: 61%;
+    }
+
+    .img_logo {
+        width: 61%;
+    }
+
+    .btn-color2 {
+        width: 100% !important;
+    }
+
+    .modal-body.p-4.d-flex.flex-column.align-items-center {
+        margin-bottom: 2%;
+    }
+
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
@@ -485,6 +507,10 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
+    }
+
+    .form-check-label {
+        font-size: 10px !important;
     }
 
 }
@@ -502,6 +528,22 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
+    }
+
+    .form-check-label {
+        font-size: 10px !important;
+    }
+
+    #landingForm {
+        width: 75% !important;
+    }
+
+    .btn-color2 {
+        width: 331px !important;
+    }
+
+    .imgBall {
+        max-width: 33% !important;
     }
 
 }
@@ -528,5 +570,9 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
+    }
+
+    .form-check-label {
+        font-size: 10px !important;
     }
 }

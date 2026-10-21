@@ -12,6 +12,7 @@
             <input type="hidden" id="_optica" name="_optica" value="{{ $data['optica'] }}">
             <input type="hidden" id="_opticaAndWeblogin" name="_opticaAndWeblogin" value="">
             <input type="hidden" id="_logo" name="_logo" value="{{ $data['logo'] }}">
+            <input type="hidden" id="_ip" name="_ip" value="{{ $data['ip'] }}">
             <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
             <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
             <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
@@ -165,7 +166,7 @@
         var formData = $('#formMacroContactologia').serialize();
 
         $.ajax({
-            url: '{{ route('validateForm') }}', // Ruta de Laravel que maneja la validación
+            url: '{{ route('ValidateRuleta') }}', // Ruta de Laravel que maneja la validación
             type: 'POST',
             data: formData + '&_token={{ csrf_token() }}', // Agrega el token CSRF
             success: function(response) {

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Empresas;
 use App\Models\CitasLandings;
 use App\Services\email_service_comercial;
+use App\Services\email_ocasional_comercial;
 
 class FormValidator extends Controller
 {
@@ -70,5 +71,27 @@ class FormValidator extends Controller
                 : 'Este email no figura en nuestros registros.',
             'data' => $validated,
         ], 200);
+    }
+
+    public function ValidateRuleta(Request $request)
+    {
+        $sendEmail = new email_ocasional_comercial();
+        dd($request->input('premio_obtenido'));
+
+        $validated = $request->validate([
+            'nombre' => ['required', 'string', 'max:20'],
+            'apellidos' => ['required', 'string', 'max:20'],
+            'email' => ['required', 'email', 'max:255'],
+            'movil' => ['bail', 'required', 'digits:9', 'integer'],
+            'check-poli' => ['accepted'],
+            'check-gestion' => ['accepted'],
+        ]);
+
+        $sendEmail->sendEmailComercial(
+            $validated,
+            $request->input('premio_obtenido'),
+            $request->input('landing'), 
+            $request->input('_ip'),
+            $request->input('language'));
     }
 }

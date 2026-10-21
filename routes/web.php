@@ -117,10 +117,11 @@ Route::post('cita-macro/postValidateCooper', [FormValidator::class, 'validateCoo
 Route::post('cita-macro/get-weblogin', [FormValidator::class, 'getWeblogin'])->name('getWeblogin');
 Route::post('cita-macro/get-store-weblogin', [FormValidator::class, 'getStoreByWeblogin'])->name('getStoreByWeblogin');
 
-//===============================POST FORM COOPER===============================
+//===============================POST FROM RULETA===============================
 Route::post('cita-macro/rulet-validar-email', [FormValidator::class, 'validarEmailRulet'])->name('validarEmailRulet');
+Route::post('cita-macro/ValidateFormRuleta', [FormValidator::class, 'ValidateRuleta'])->name('ValidateRuleta');
 
-//===============================POST FORM COOPER===============================
+//===============================POST GET PREMIOS RULETAS===============================
 Route::get('/obtener-stock-ruleta', function() {
     return response()->json([
         'descuento50' => DB::table('materia')->where('materia', 'descuento50')->value('cantidad') ?? 0,
