@@ -8,25 +8,15 @@
                                                                                        
 */
 
-#video2 {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    touch-action: pan-y;
-    -webkit-touch-callout: none;
-    user-select: none;
-    object-fit: cover;
-}
-
-.form-check-label::before {
-    border: 1px solid black;
+.d-flex.justify-content-center.align-items-start.mb-5 {
+    margin-top: 2rem !important;
 }
 
 body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #282828;
 }
 
 body::-webkit-scrollbar {
@@ -42,28 +32,42 @@ body::-webkit-scrollbar-track {
 }
 
 .btn-color {
-    background-color: #EF8019 !important;
-    color: #f0f0f0 !important;
-    font-weight: bold !important;
+    background-color: #fff;
+    color: #000;
 }
 
-.btn-color:hover {
-    background-color: #000 !important;
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
 }
 
-.b-pedir-citas {
-    justify-content: start !important;
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
 }
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Bold_Italic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
 
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
-
-a {
-    color: #000 !important;
-}
-
-a:hover {
-    color: #EF8019 !important;
-}
 
 /* 
 ███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
@@ -85,34 +89,55 @@ a:hover {
 ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
                                      */
 
-.whatpB.text.start.d-flex.flex-column.justify-sm-content-center.mt-3 {
-    background-color: #f08019;
-    font-weight: bold;
-    height: 145px;
-    margin-top: 12% !important;
+.whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
+    font-weight: 200;
+    line-height: 1;
+    height: 272px;
+    width: 67%;
+    border-radius: 20px;
+    border: solid #fff;
+    justify-content: center;
+    padding: 11% !important;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-size: 23px;
 }
 
 a.btn-form {
     font-size: 18px;
     height: 40px;
     text-align: center;
-    width: 240px;
+    width: 170px;
     border: none;
     text-shadow: 0;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease;
-    padding-top: 6px;
+    text-decoration: none;
+    border-radius: 7px;
 }
 
 .btn-form {
-    color: #081121;
+    color: #282828;
     background-color: #fff;
 }
 
 .btn-form:hover {
-    color: #fff;
+    color: #282828;
     background-color: #bebebe;
+}
+
+.col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: #fff;
+}
+
+a:hover {
+    color: #bebebe;
 }
 
 .contenedor-form {
@@ -121,22 +146,53 @@ a.btn-form {
 }
 
 label>span {
-    color: #000 !important;
+    color: #fff !important;
 }
 
 .text-top-form {
-    color: #000;
-    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
-    font-size: 25px;
+    font-size: 23px;
 
 }
+
+.text-top-form-anniversary {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.text-top-form-anniversary2 {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 25px;
+}
+
+.divider-line {
+    width: 100%;
+    /* de izquierda a derecha */
+    height: 1px;
+    /* línea fina */
+    background-color: #fff;
+    /* blanca */
+    margin: 20px 0;
+    /* separación arriba y abajo */
+    opacity: 0.6;
+    /* un poco elegante */
+}
+
 
 input {
     margin-top: 3% !important;
     font-size: 19px !important;
-    border-color: #000 !important;
+    border-color: #fff !important;
     /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
 }
 
@@ -165,7 +221,7 @@ div#animationdivIcon {
 
 #gracias {
     color: #fff;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'IvyStyleSans', sans-serif;
     font-weight: 200;
     line-height: 1;
     font-size: 30px;
@@ -243,11 +299,6 @@ div#animationdivIcon {
 
 @media (min-width: 1499px) and (max-width: 2000px) {
 
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
     input {
         font-size: 15px !important;
     }
@@ -261,21 +312,22 @@ div#animationdivIcon {
     }
 
     .btn-color {
-        width: 219px !important;
+        width: 250px !important;
         border-radius: 5px !important;
     }
 
     .background-container .background-item .col-12 {
         height: 100vh;
     }
+
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
 
     .text-top-form {
-        font-size: 20px;
-        padding: 2% !important;
+        font-size: 23px;
+        padding: 0% !important;
     }
 
     input {
@@ -293,6 +345,15 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 21px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 18px !important;
     }
 
     .background-container .background-item .col-12 {
@@ -305,8 +366,8 @@ div#animationdivIcon {
 @media (min-width: 1200px) and (max-width: 1499px) {
 
     .text-top-form {
-        font-size: 20px;
-        padding: 2%;
+        font-size: 23px;
+        padding: 0% !important;
     }
 
     input {
@@ -324,6 +385,15 @@ div#animationdivIcon {
     .btn-color {
         width: 219px !important;
         border-radius: 5px !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 25px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
     }
 
     .background-container .background-item .col-12 {
@@ -332,51 +402,30 @@ div#animationdivIcon {
 
 }
 
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-
-    .text-top-form {
-        font-size: 20px;
-        padding: 2%;
-    }
-
-    input {
-        font-size: 15px !important;
-    }
-
-    select {
-        font-size: 15px !important;
-    }
-
-    .form-check-label {
-        font-size: 15px !important;
-    }
-
-    .btn-color {
-        width: 219px !important;
-        border-radius: 5px !important;
-    }
-
-}
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
 
     .text-top-form {
-        font-size: 27px;
-        padding: 2%;
+        font-size: 20px;
+        padding: 0% !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 39px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 26px !important;
     }
 
     .mb-5 {
         margin-bottom: 1rem !important;
     }
 
-    .b-pedir-citas {
-        justify-content: center !important;
-    }
-
-    .contenedor-form {
-        padding: 8%;
+    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
+        height: 60vh;
     }
 
 }
@@ -384,20 +433,31 @@ div#animationdivIcon {
 /* Teléfonos (576px a 767px) */
 @media (min-width: 576px) and (max-width: 767px) {
 
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 0% !important;
+    }
+
     .mb-5 {
         margin-bottom: 1rem !important;
     }
 
-    .b-pedir-citas {
-        justify-content: center !important;
+    .text-top-form-anniversary {
+        font-size: 30px !important;
+        padding: 0px !important;
     }
 
-    .contenedor-form {
-        padding: 8%;
+    .text-top-form-anniversary2 {
+        font-size: 20px !important;
     }
 
-    .text-top-form {
-        font-size: 24px;
+    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
+        height: 60vh;
+    }
+
+    a.btn-form {
+        margin-top: 5%;
     }
 
 }
@@ -405,20 +465,36 @@ div#animationdivIcon {
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
 
+    .text-top-form {
+        font-size: 20px;
+        padding: 0% !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 27px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
+    }
+
     .mb-5 {
         margin-bottom: 1rem !important;
     }
 
-    .b-pedir-citas {
-        justify-content: center !important;
+    .col-lg-4.p-0.col-12.mt-lg-0.mt-3.reguren {
+        height: 60vh;
     }
 
-    .contenedor-form {
-        padding: 8%;
+    .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.p-3 {
+        padding: 0% !important;
+        font-size: 21px;
     }
 
-    .text-top-form {
-        font-size: 19px;
+    a.btn-form {
+        font-size: 16px;
+        margin-top: 5%;
     }
 
 }
@@ -436,10 +512,6 @@ div#animationdivIcon {
 
     .mb-5 {
         margin-bottom: 1rem !important;
-    }
-
-    .whatpB.text.start.d-flex.flex-column.justify-sm-content-center.mt-3 {
-        height: 120px;
     }
 
 }
