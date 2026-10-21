@@ -40,8 +40,6 @@ class email_ocasional_comercial
             $mail->Subject = 'Participación Ilerna Lleida';
             $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaComprobante.blade.php');
 
-            dd($archivo);
-
             $palabrasBuscar = array(
                 '{CONTACTO}',
                 '{ORIGIN}',
