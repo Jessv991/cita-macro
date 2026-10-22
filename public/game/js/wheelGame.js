@@ -260,7 +260,7 @@ class FortuneWheel extends Phaser.Scene {
                     }
 
                     console.log('spin complete');
-                    this.canSpin = true;
+                    this.canSpin = false;
                     this.animLightSector();
                     this.win_clip.play();
 
@@ -271,7 +271,7 @@ class FortuneWheel extends Phaser.Scene {
                             var miModal = new bootstrap.Modal(modalElement);
                             miModal.show();
                         }
-                    }, 3000);
+                    }, 1500);
                 },
                 onUpdate: function (tween) {
                     var dValue = tween.getValue([0]) - oldValue;
