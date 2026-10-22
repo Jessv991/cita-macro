@@ -260,7 +260,7 @@ class FortuneWheel extends Phaser.Scene {
                     }
 
                     console.log('spin complete');
-                    this.canSpin = true;
+                    this.canSpin = false;
                     this.animLightSector();
                     this.win_clip.play();
 
