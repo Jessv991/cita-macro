@@ -807,7 +807,7 @@ button.es-button {
                   <td align="left" style="padding:0;Margin:0;width:270px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="right" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px"><a href="https://www.naturaloptics.com/" target="_blank" class="view" style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturalopticsgroup.com</a></p></td>
+                      <td align="right" class="es-infoblock" style="padding:0;Margin:0"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#CCCCCC;font-size:12px"><a href="https://www.naturaloptics.com/" target="_blank" class="view" style="mso-line-height-rule:exactly;text-decoration:underline;color:#CCCCCC;font-size:12px">www.naturaloptics.com</a></p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -925,7 +925,7 @@ button.es-button {
                                                     
                                                     <tr>
                                                         <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 0 20px;text-align:center;">
-                                                            <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/tiendas_mail.png" alt="" width="400" class="adapt-img">
+                                                            <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/tiendas_mail.png" alt="" width="600" class="adapt-img">
                                                         </td>
                                                     </tr>
 
