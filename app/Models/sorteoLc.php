@@ -47,7 +47,24 @@ class sorteoLc extends Model
      * @var array
      */
     protected $fillable = [
-        'id_empresa', 'nombre_cliente', 'apellido1_cliente', 'apellido2_cliente', 'email_cliente', 'telefono_cliente', 'fecha_peticion', 'origin', 'url_cita', 'mensaje_comentario', 'tipo_peticion', 'fecha_cita', 'hora_cita', 'status', 'status_error', 'ip', 'tipo_dispositivo', 'dispositivo'
+        'id_empresa',
+        'nombre_cliente',
+        'apellido1_cliente',
+        'apellido2_cliente',
+        'email_cliente',
+        'telefono_cliente',
+        'fecha_peticion',
+        'origin',
+        'url_cita',
+        'mensaje_comentario',
+        'tipo_peticion',
+        'fecha_cita',
+        'hora_cita',
+        'status',
+        'status_error',
+        'ip',
+        'tipo_dispositivo',
+        'dispositivo'
     ];
 
     /**
@@ -63,7 +80,24 @@ class sorteoLc extends Model
      * @var array
      */
     protected $casts = [
-        'id_cita' => 'int', 'id_empresa' => 'string', 'nombre_cliente' => 'string', 'apellido1_cliente' => 'string', 'apellido2_cliente' => 'string', 'email_cliente' => 'string', 'telefono_cliente' => 'string', 'fecha_peticion' => 'datetime', 'origin' => 'string', 'url_cita' => 'string', 'mensaje_comentario' => 'string', 'tipo_peticion' => 'string', 'fecha_cita' => 'date', 'status' => 'string', 'status_error' => 'string', 'ip' => 'string', 'tipo_dispositivo' => 'string', 'dispositivo' => 'string'
+        'id_cita' => 'int',
+        'id_empresa' => 'string',
+        'nombre_cliente' => 'string',
+        'apellido1_cliente' => 'string',
+        'apellido2_cliente' => 'string',
+        'email_cliente' => 'string',
+        'telefono_cliente' => 'string',
+        'fecha_peticion' => 'datetime',
+        'origin' => 'string',
+        'url_cita' => 'string',
+        'mensaje_comentario' => 'string',
+        'tipo_peticion' => 'string',
+        'fecha_cita' => 'date',
+        'status' => 'string',
+        'status_error' => 'string',
+        'ip' => 'string',
+        'tipo_dispositivo' => 'string',
+        'dispositivo' => 'string'
     ];
 
     /**
@@ -72,7 +106,8 @@ class sorteoLc extends Model
      * @var array
      */
     protected $dates = [
-        'fecha_peticion', 'fecha_cita'
+        'fecha_peticion',
+        'fecha_cita'
     ];
 
     /**
@@ -108,7 +143,7 @@ class sorteoLc extends Model
             $this->save();
         } catch (\Exception $e) {
             // Manejo de la excepción
-            echo('No se han guardado los datos correctamente');
+            echo ('No se han guardado los datos correctamente');
         }
     }
 
@@ -119,4 +154,10 @@ class sorteoLc extends Model
             ->exists();
     }
 
+    public function restarCantidadMateria(string $nombreMateria, int $cantidadARestar): bool
+    {
+        return DB::table('materia')
+            ->where('materia', trim($nombreMateria))
+            ->decrement('cantidad', $cantidadARestar) > 0;
+    }
 }

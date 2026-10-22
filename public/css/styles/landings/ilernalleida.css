@@ -324,6 +324,7 @@ div#animationdivIcon {
 
 .btn-color:hover {
     background-color: #f0d7dd !important;
+    color: #7c142e;
 }
 
 .btn-color2 {
@@ -335,6 +336,7 @@ div#animationdivIcon {
 
 .btn-color2:hover {
     background-color: #f0d7dd !important;
+    color: #7c142e;
 }
 
 .form-check-label::before {

@@ -55,6 +55,18 @@ class email_ocasional_comercial
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
+            $premioDB = '';
+
+            if ($premio == '50'){
+                $premioDB = 'descuento50';
+            }elseif($premio == 'revision' || $premio == 'lentillas' ){
+                $premioDB = $premio;
+            }
+
+            $sorteoLc = new sorteoLc();
+
+            $sorteoLc->restarCantidadMateria($premioDB, 1);
+
 
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
