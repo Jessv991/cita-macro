@@ -157,9 +157,11 @@
                             modalInstance.hide();
                         }
 
+                        console.log('es así: ', window.gameScene);
+
                         if (window.gameScene) {
                             window.gameScene.canSpin =
-                                true; // Ahora sí se permite girar la ruleta
+                                true; 
                         }
 
                         // Función de reintento seguro por si Phaser tarda una fracción de segundo más
