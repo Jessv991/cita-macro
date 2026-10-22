@@ -223,24 +223,35 @@
         const modalElement = document.getElementById('landingModal');
         const modalElement2 = document.getElementById('landingModal2');
 
+        if (window.bootstrap) {
+            // 1. Cerrar el primer modal de forma segura
+            if (modalElement) {
+                const modalInstance1 = bootstrap.Modal.getInstance(modalElement);
+                if (modalInstance1) {
+                    modalInstance1.hide();
+                }
+            }
 
-
-        if (modalElement && window.bootstrap) {
-            const modal2 = new bootstrap.Modal(modalElement2);
-            modal2.hide();
-            const modal = new bootstrap.Modal(modalElement);
-            modal.show();
+            // 2. Abrir el segundo modal
+            if (modalElement2) {
+                // Obtenemos la instancia existente o creamos una nueva si nunca se ha abierto
+                const modalInstance2 = bootstrap.Modal.getOrCreateInstance(modalElement2);
+                modalInstance2.show();
+            }
         }
 
         const nombre = document.getElementById('nombre1');
         const apellidos = document.getElementById('apellidos1');
         const email = document.getElementById('email1');
+        const movil = document.getElementById('movil');
 
         nombre.value = '';
 
         apellidos.value = '';
 
         email.value = '';
+
+        movil.value = '';
 
         $('#gracias').addClass('d-none');
         $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
