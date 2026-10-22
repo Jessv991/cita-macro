@@ -33,21 +33,21 @@
                     data-aos-offset="500" data-aos-duration="500">
 
                     <input class="form-control @error('nombre') is-invalid @enderror" type="text" name="nombre"
-                        id="nombre" placeholder='{{ __('form_translation.Nombre') }}'>
+                        id="nombre" placeholder='{{ __('form_translation.Nombre') }}' readonly>
                 </div>
 
                 <div class="apellidos_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                     data-aos-offset="500" data-aos-duration="500">
 
                     <input class="form-control @error('apellidos') is-invalid @enderror" type="text" name="apellidos"
-                        id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}'>
+                        id="apellidos" placeholder='{{ __('form_translation.Apellidos') }}' readonly>
                 </div>
 
                 <div class="email_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
                     data-aos-duration="700">
 
                     <input class="form-control @error('email') is-invalid @enderror" type="text" name="email"
-                        id="email" placeholder='{{ __('form_translation.Email_practicas') }}'>
+                        id="email" placeholder='{{ __('form_translation.Email_practicas') }}' readonly>
                 </div>
 
                 <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
@@ -93,15 +93,15 @@
 
                             <div>
                                 <div class="row">
-                                    <div class="col-4 p-1 font-t">LLEIDA Concept Store<br>Prat de la Riba, 25<br>Tel. 973 222 435<br>Mbl. 689 219 917</div>
-                                    <div class="col-4 p-1 font-t">Next Vision<br>Rovira Roure, 5<br>Tel. 973 300 760<br>Mbl. 616 889 052</div>
-                                    <div class="col-4 p-1 font-t">La Bordeta<br>Av. de Flix, 22<br>Tel. 973 212 260<br>Mbl. 678 076 998</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/lleida_concept.svg') }}"><br>Prat de la Riba, 25<br>Tel. 973 222 435<br>Mbl. 689 219 917</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/next.svg') }}"><br>Rovira Roure, 5<br>Tel. 973 300 760<br>Mbl. 616 889 052</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/bordeta.svg') }}"><br>Av. de Flix, 22<br>Tel. 973 212 260<br>Mbl. 678 076 998</div>
                                 </div>
         
                                 <div class="row">
-                                    <div class="col-4 p-1 font-t">MOLLERUSSA<br>Ciutat de Lleida, 2<br>Tel. 973 710 369<br>Mbl. 609 718 076</div>
-                                    <div class="col-4 p-1 font-t">TÀRREGA<br>C/Sant Pelegrí, 29<br>Tel. 973 501 558<br>Mbl. 640 542 656</div>
-                                    <div class="col-4 p-1 font-t">BALAGUER<br>Pg. de l'Estació, 11<br>Tel. 973 443 691<br>Mbl. 608 412 585</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/mollerussa.svg') }}"><br>Ciutat de Lleida, 2<br>Tel. 973 710 369<br>Mbl. 609 718 076</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tarrega.svg') }}"><br>C/Sant Pelegrí, 29<br>Tel. 973 501 558<br>Mbl. 640 542 656</div>
+                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/baaguer.svg') }}"><br>Pg. de l'Estació, 11<br>Tel. 973 443 691<br>Mbl. 608 412 585</div>
                                 </div>
                             </div>
                     </div>
