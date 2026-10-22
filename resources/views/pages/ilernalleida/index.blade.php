@@ -161,23 +161,30 @@
 
                         if (window.gameScene) {
                             window.gameScene.canSpin =
-                                true; 
+                                true;
                         }
 
                         // Función de reintento seguro por si Phaser tarda una fracción de segundo más
                         function habilitarRuletaConReintentos(intentos = 0) {
                             if (window.gameScene) {
                                 console.log('¡Phaser detectado y habilitado con éxito!');
-                                window.gameScene.canSpin =
-                                    true; // Ahora sí se permite girar la ruleta
+
+                                // 1. Habilitamos el giro
+                                window.gameScene.canSpin = true;
+
+                                // 2. Forzamos a que el sprite del botón vuelva a la textura normal y sea interactivo por si acaso
+                                if (window.gameScene.spinbutton) {
+                                    window.gameScene.spinbutton.setTexture('spinbutton');
+                                    window.gameScene.spinbutton.setInteractive();
+                                }
+
                             } else if (intentos < 15) {
-                                // Reintentar cada 100ms (hasta 1.5 segundos)
                                 setTimeout(() => habilitarRuletaConReintentos(intentos + 1),
                                     100);
                             } else {
                                 console.warn(
                                     'Advertencia: No se encontró la escena de Phaser activa.'
-                                );
+                                    );
                             }
                         }
 
