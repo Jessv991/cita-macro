@@ -92,13 +92,13 @@
                             gaudeix del teu premi!</p>
 
                             <div>
-                                <div class="row">
+                                <div class="row p-2">
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/lleida_concept.svg') }}"><br>Prat de la Riba, 25<br>Tel. 973 222 435<br>Mbl. 689 219 917</div>
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/next.svg') }}"><br>Rovira Roure, 5<br>Tel. 973 300 760<br>Mbl. 616 889 052</div>
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/bordeta.svg') }}"><br>Av. de Flix, 22<br>Tel. 973 212 260<br>Mbl. 678 076 998</div>
                                 </div>
         
-                                <div class="row">
+                                <div class="row p-2">
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/mollerussa.svg') }}"><br>Ciutat de Lleida, 2<br>Tel. 973 710 369<br>Mbl. 609 718 076</div>
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tarrega.svg') }}"><br>C/Sant Pelegrí, 29<br>Tel. 973 501 558<br>Mbl. 640 542 656</div>
                                     <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/baaguer.svg') }}"><br>Pg. de l'Estació, 11<br>Tel. 973 443 691<br>Mbl. 608 412 585</div>
