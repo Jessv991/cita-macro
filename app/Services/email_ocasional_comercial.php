@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Mail;
 class email_ocasional_comercial
 {
 
-    public function sendEmailComercial($validated, $premio, $landing, $ip, $locale, $test)
+    public function sendEmailComercial($validated, $premio, $landing, $ip, $locale, $test, $dispositivo, $tipo_dispositivo, $url)
     {
 
         $nombre = $validated['nombre'] . ' ' . $validated['apellidos'];
@@ -58,12 +58,12 @@ class email_ocasional_comercial
 
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
-                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing, $validated);
+                $this->sendMessageClient($ip, $email_cliente, $locale, $landing, $validated, $premio, $dispositivo, $tipo_dispositivo, $url);
             } else {
                 $mail->addAddress('g.vall@naturalopticsgroup.com');
                 //$mail->addCC('crm@naturalopticsgroup.com');
                 //función que envía email al cliente 
-                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing, $validated);
+                $this->sendMessageClient($ip, $email_cliente, $locale, $landing, $validated, $premio, $dispositivo, $tipo_dispositivo, $url);
             }
 
 
@@ -84,7 +84,7 @@ class email_ocasional_comercial
         }
     }
 
-    function sendMessageClient($nombre, $apellidos, $email_cliente, $locale, $fecha, $origen, $validated)
+    function sendMessageClient($ip, $email_cliente, $locale, $origen, $validated, $premio, $dispositivo, $tipo_dispositivo, $url)
     {
 
         $participacion = new sorteoLc();
@@ -111,21 +111,18 @@ class email_ocasional_comercial
 
 
             $palabrasBuscar = array(
-                '{CONTACTO}',
-                '{EMAIL}',
-                '{FECHA}',
-                '{ORIGIN}',
+                '{PREMIO}',
                 '{LOCAL}'
             );
 
-            $palabrasReemplazar = array($nombre . ' ' . $apellidos, $email_cliente, $fecha, $origen, $locale);
+            $palabrasReemplazar = array($premio, $locale);
             $actual = file_get_contents($archivo);
             $actual = str_replace($palabrasBuscar, $palabrasReemplazar, $actual);
             $mail->Body = $actual;
 
             $mail->addAddress($email_cliente);
 
-            $participacion->saveCustomerData($validated, $validated['url_landing'], '3712', $origen, $validated['tipo_dispositivo'], $validated['dispositivo'], $validated['ip']);
+            $participacion->saveCustomerData($validated, $url, '3712', $origen, $tipo_dispositivo, $dispositivo, $ip);
 
             try {
                 // Enviar el correo

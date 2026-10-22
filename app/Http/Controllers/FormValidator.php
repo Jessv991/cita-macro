@@ -93,6 +93,9 @@ class FormValidator extends Controller
             $request->input('landing'), 
             $request->input('_ip'),
             $request->input('language'),
-            $request->input('_test'));
+            $request->input('_test'),
+            $request->input('dispositivo'),
+            $request->input('tipo_dispositivo'),
+            $request->input('url_landing'));
     }
 }
