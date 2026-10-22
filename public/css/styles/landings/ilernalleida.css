@@ -323,7 +323,7 @@ div#animationdivIcon {
 }
 
 .btn-color:hover {
-    color: #f0d7dd !important;
+    background-color: #f0d7dd !important;
 }
 
 .btn-color2 {
@@ -334,7 +334,7 @@ div#animationdivIcon {
 }
 
 .btn-color2:hover {
-    color: #f0d7dd !important;
+    background-color: #f0d7dd !important;
 }
 
 .form-check-label::before {

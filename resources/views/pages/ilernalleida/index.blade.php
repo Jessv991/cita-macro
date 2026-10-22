@@ -59,7 +59,7 @@
                     </div>
 
                     <div class="d-flex flex-column align-items-center w-100">
-                        <button type="submit" class="btn-color2 w-100 mt-3">
+                        <button type="submit" class="btn btn-color2 w-100 mt-3">
                             CONTINUAR ➜
                         </button>
                         <p class="mb-4 aviso">
@@ -73,7 +73,7 @@
                     <h5 class="modal-title fw-bold">
                         Aquest email ja ha participat, prova amb un altre!
                     </h5>
-                    <button id="again" class="btn-color2 w-100 mt-3">
+                    <button id="again" class=" btn-color2 w-100 mt-3">
                         Tornar a intentar
                     </button>
                 </div>
