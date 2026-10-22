@@ -4,12 +4,17 @@ let coinSpinAnim;
 // window loads event
 window.onload = function () {
 
+    // Detectar si es ordenador o móvil/tablet según el ancho de la pantalla
+    var esOrdenador = window.innerWidth > 1024;
+
+    var anchoCanvas = esOrdenador ? 1537 : 1067;
+    var altoCanvas = esOrdenador ? 1537 : 1067;
+
     // phaser game configuration object
     var gameConfig = {
-        type: Phaser.WEBGL,          // render type
-        width: 1067,                 // game width, in pixels
-        height: 1067,                // game height, in pixels    
-        //backgroundColor: 0x383838,   // game background color
+        type: Phaser.WEBGL,           // render type
+        width: anchoCanvas,           // ancho dinámico
+        height: altoCanvas,           // alto dinámico   
         transparent: true,
         scene: [FortuneWheel],       // scenes used by the game  
         audio:
@@ -17,13 +22,13 @@ window.onload = function () {
             // disableWebAudio: true
         },
         scale: {
-            mode: Phaser.Scale.FIT   // SHOW_ALL, RESIZE, FIT, //  autoCenter: Phaser.Scale.CENTER_BOTH   
+            mode: Phaser.Scale.FIT,   // Ajusta manteniendo proporciones
+            autoCenter: Phaser.Scale.CENTER_BOTH // Opcional: centra el canvas automáticamente
         }
     };
 
-    fortuneWheelGame = new Phaser.Game(gameConfig);     // game constructor
-    window.focus()                                      // pure javascript to give focus to the page/frame 
-    // scale  resize();  window.addEventListener("resize", resize, false); - not used
+    fortuneWheelGame = new Phaser.Game(gameConfig);
+    window.focus();
 }
 
 // FortuneWheel scene
