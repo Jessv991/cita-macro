@@ -16,14 +16,16 @@
             <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
             <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
             <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
-            <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
+            <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo"
+                value="{{ $data['tipo_dispositivo'] }}">
             <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">
             <input type="hidden" id="premio_obtenido" name="premio_obtenido" value="">
 
 
             <div class="d-flex flex-column align-items-center">
                 <img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/enhorabuena.png') }}">
-                <img id="img_premio" class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/no_premio.png') }}">
+                <img id="img_premio" class="w-100"
+                    src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/no_premio.png') }}">
             </div>
 
 
@@ -50,8 +52,8 @@
                         id="email" placeholder='{{ __('form_translation.Email_practicas') }}' readonly>
                 </div>
 
-                <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
-                    data-aos-duration="700">
+                <div class="movil_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
+                    data-aos-offset="500" data-aos-duration="700">
 
                     <input class="form-control @error('movil') is-invalid @enderror" type="text" name="movil"
                         id="movil" placeholder='{{ __('form_translation.Telefono_practicas') }}'>
@@ -91,19 +93,31 @@
                         <p class="fst-italic text-b fw-semibold">Visita el teu centre Natural Optics más proper i
                             gaudeix del teu premi!</p>
 
-                            <div>
-                                <div class="row p-2">
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/lleida_concept.svg') }}"><br>Prat de la Riba, 25<br>Tel. 973 222 435<br>Mbl. 689 219 917</div>
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/next.svg') }}"><br>Rovira Roure, 5<br>Tel. 973 300 760<br>Mbl. 616 889 052</div>
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/bordeta.svg') }}"><br>Av. de Flix, 22<br>Tel. 973 212 260<br>Mbl. 678 076 998</div>
-                                </div>
-        
-                                <div class="row p-2">
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/mollerussa.svg') }}"><br>Ciutat de Lleida, 2<br>Tel. 973 710 369<br>Mbl. 609 718 076</div>
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tarrega.svg') }}"><br>C/Sant Pelegrí, 29<br>Tel. 973 501 558<br>Mbl. 640 542 656</div>
-                                    <div class="col-4 p-1 font-t"><img class="w-100" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/baaguer.svg') }}"><br>Pg. de l'Estació, 11<br>Tel. 973 443 691<br>Mbl. 608 412 585</div>
-                                </div>
+                        <div>
+                            <div class="row p-2">
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/lleida_concept.svg') }}"><br>Prat
+                                    de la Riba, 25<br>Tel. 973 222 435<br>Mbl. 689 219 917</div>
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/next.svg') }}"><br>Rovira
+                                    Roure, 5<br>Tel. 973 300 760<br>Mbl. 616 889 052</div>
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/bordeta.svg') }}"><br>Av.
+                                    de Flix, 22<br>Tel. 973 212 260<br>Mbl. 678 076 998</div>
                             </div>
+
+                            <div class="row p-2">
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/mollerussa.svg') }}"><br>Ciutat
+                                    de Lleida, 2<br>Tel. 973 710 369<br>Mbl. 609 718 076</div>
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tarrega.svg') }}"><br>C/Sant
+                                    Pelegrí, 29<br>Tel. 973 501 558<br>Mbl. 640 542 656</div>
+                                <div class="col-4 p-1 font-t"><img class="w-100"
+                                        src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/baaguer.svg') }}"><br>Pg.
+                                    de l'Estació, 11<br>Tel. 973 443 691<br>Mbl. 608 412 585</div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
@@ -206,33 +220,25 @@
     $('#volver-form').on('click', function(e) {
         e.preventDefault();
 
-        $('#gracias').addClass('d-none');
-        $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
-        $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
+        const modalElement = document.getElementById('landingModal');
 
-        $('#formMacroContactologia').removeClass('d-none');
-
-        var opticaAndWeblogin = $('#_opticaAndWeblogin').val();
-
-        // Limpiar los campos del formulario
-        if (opticaAndWeblogin === 'true') {
-            $('#formMacroContactologia').find('input[type=text], input[type=email]').val('');
-        } else {
-            $('#formMacroContactologia').find('input[type=text], input[type=email], select').val('');
-
-            // Limpiar selects de ciudad y óptica
-            $('#ciudad').html('<option value="">Selecciona una ciudad</option>');
-            $('#optica').html('<option value="">Selecciona una óptica</option>');
-
-            // Quita la invalidación del select cuando es un solo campo
-            $('#optica').removeClass('readonly-select');
-
-            // Oculta el icono del mapa
-            $('#animationdivIcon').addClass('d-none');
+        if (modalElement && window.bootstrap) {
+            const modal = new bootstrap.Modal(modalElement);
+            modal.show();
         }
 
-        // Limpiar el checkbox
-        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
+        const nombre = document.getElementById('nombre1');
+        const apellidos = document.getElementById('apellidos1');
+        const email = document.getElementById('email1');
+
+        nombre.value = '';
+
+        apellidos.value = '';
+
+        email.value = '';
+
+        form.classList.remove('d-none');
+        divAgain.classList.add('d-none');
 
     })
 </script>
