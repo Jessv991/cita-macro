@@ -221,8 +221,13 @@
         e.preventDefault();
 
         const modalElement = document.getElementById('landingModal');
+        const modalElement2 = document.getElementById('landingModal2');
+
+
 
         if (modalElement && window.bootstrap) {
+            const modal2 = new bootstrap.Modal(modalElement2);
+            modal2.hide();
             const modal = new bootstrap.Modal(modalElement);
             modal.show();
         }
@@ -236,6 +241,14 @@
         apellidos.value = '';
 
         email.value = '';
+
+        $('#gracias').addClass('d-none');
+        $('#formMacroContactologia .error').remove(); //remuevo los msjs de error que hayan quedado
+        $('input').removeClass('border-1 border-bottom border-danger'); //remueve el style de los input
+
+        $('#formMacroContactologia').removeClass('d-none');
+
+        $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
         form.classList.remove('d-none');
         divAgain.classList.add('d-none');
