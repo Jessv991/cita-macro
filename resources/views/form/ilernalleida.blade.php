@@ -228,7 +228,7 @@
             if (modalElement) {
                 const modalInstance1 = bootstrap.Modal.getInstance(modalElement);
                 if (modalInstance1) {
-                    modalInstance1.hide();
+                    modalInstance1.show();
                 }
             }
 
@@ -236,7 +236,7 @@
             if (modalElement2) {
                 // Obtenemos la instancia existente o creamos una nueva si nunca se ha abierto
                 const modalInstance2 = bootstrap.Modal.getOrCreateInstance(modalElement2);
-                modalInstance2.show();
+                modalInstance2.hide();
             }
         }
 
