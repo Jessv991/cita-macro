@@ -122,7 +122,7 @@
             }
         });
 
-        const modalElement = document.getElementById('landingModal');
+        const modalElement = document.getElementById('landingModal2');
         const form = document.getElementById('landingForm');
         const divAgain = document.getElementById('divAgain');
 

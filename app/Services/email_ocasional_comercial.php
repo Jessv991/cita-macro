@@ -58,11 +58,12 @@ class email_ocasional_comercial
 
             if ($test == 'true') {
                 $mail->addAddress('j.vasquez@naturalopticsgroup.com');
+                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing, $validated);
             } else {
                 $mail->addAddress('g.vall@naturalopticsgroup.com');
                 //$mail->addCC('crm@naturalopticsgroup.com');
                 //función que envía email al cliente 
-                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing);
+                $this->sendMessageClient($validated['nombre'], $validated['apellidos'], $email_cliente, $locale, $fecha, $landing, $validated);
             }
 
 
@@ -83,7 +84,7 @@ class email_ocasional_comercial
         }
     }
 
-    function sendMessageClient($nombre, $apellidos, $email_cliente, $locale, $fecha, $origen)
+    function sendMessageClient($nombre, $apellidos, $email_cliente, $locale, $fecha, $origen, $validated)
     {
 
         $participacion = new sorteoLc();
@@ -123,7 +124,8 @@ class email_ocasional_comercial
             $mail->Body = $actual;
 
             $mail->addAddress($email_cliente);
-            //$participacion->saveCustomerData($optica, $nombre, $email_cliente, $fechaBD, $origen);
+
+            $participacion->saveCustomerData($validated, $validated['url_landing'], '3712', $origen, $validated['tipo_dispositivo'], $validated['dispositivo'], $validated['ip']);
 
             try {
                 // Enviar el correo

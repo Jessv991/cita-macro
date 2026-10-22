@@ -16,9 +16,8 @@
             <input type="hidden" id="_test" name="_test" value="{{ $data['test'] }}">
             <input type="hidden" id="promocional" name="promocional" value="{{ $data['promocional'] }}">
             <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
-            <input type="hidden" name="optica_texto" id="optica_texto" />
-            <input type="hidden" name="optica2_texto" id="optica2_texto" />
-            <input type="hidden" name="optica3_texto" id="optica3_texto" />
+            <input type="hidden" id="tipo_dispositivo" name="tipo_dispositivo" value="{{ $data['tipo_dispositivo'] }}">
+            <input type="hidden" id="dispositivo" name="dispositivo" value="{{ $data['dispositivo'] }}">
             <input type="hidden" id="premio_obtenido" name="premio_obtenido" value="">
 
 
