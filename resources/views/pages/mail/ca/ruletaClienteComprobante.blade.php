@@ -865,97 +865,85 @@ button.es-button {
        <table cellpadding="0" cellspacing="0" align="center" class="es-footer" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important;background-color:transparent;background-repeat:repeat;background-position:center top">
          <tr style="border-collapse:collapse">
           <td align="center" style="padding:0;Margin:0">
-           <table cellspacing="0" cellpadding="0" bgcolor="#74cae7" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#74cae7;width:600px" role="none">
-             <tr style="border-collapse:collapse">
-              <td class="esd-structure es-p20" esd-general-paddings-checked="false" esd-custom-block-id="2446" style="background-color: #7c142e;" align="left" bgcolor="#74cae7">
-                <!--[if mso]><table width="560" cellpadding="0" cellspacing="0"><tr><td width="270" valign="top"><![endif]-->
-                <table class="es-left" cellspacing="0" cellpadding="0" align="left">
-                    <tbody>
-                        <tr>
-                            <td class="es-m-p20b esd-container-frame" width="270" align="left">
-                                <table width="100%" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="esd-block-social" align="center" style="font-size:0">
-                                                <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                            <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!--[if mso]></td><td width="20"></td><td width="270" valign="top"><![endif]-->
-                <table class="es-right" cellspacing="0" cellpadding="0" align="right">
-                    <tbody>
-                        <tr>
-                            <td class="esd-container-frame" width="270" align="left">
-                                <table width="100%" cellspacing="0" cellpadding="0">
-                                    <tbody>
-                                        <tr>
-                                            <td class="esd-block-text es-p10b" align="center">
-                                                <h3 style="color: #ffffff;">I ARA, <span style="font-weight: bold;">QUÉ HAS DE FER</span></h3>
-                                                <p style="color: #ffffff;"><br></p>
-                                                <p style="color: #ffffff;">Visita el teu Natural Optics més proper i gaudeix del teu premi</p>
-                                                <p style="color: #ffffff;">Mostran aquest correu al nostre equip perquè pugui validar-ho &nbsp;</p>
-                                                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td align="center" style="padding-top: 10px;">
-                                                                <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
-                                                                    <tbody>
-                                                                        <tr>
-                                                                            <td align="center" bgcolor="#ffffff" style="border-radius: 10px; border: 1px solid #dddddd;">
-                                                                                <a href="https://optica.naturaloptics.com/cita-macro/ca/promo-exclusiva" target="_blank" style="display: block; padding: 12px 5px; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; color: #7c142e; text-decoration: none; text-align: center; border-radius: 10px;">
-                                                                                    DEMANAR CITA &nbsp; &rarr;
-                                                                                </a>
-                                                                            </td>
-                                                                        </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!--[if mso]></td></tr></table><![endif]-->
-            </td>
-             <tr style="border-collapse:collapse">
-              <td bgcolor="#ffffff" align="left" style="padding:0;Margin:0;background-color:#ffffff">
-               <table width="100%" cellspacing="0" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                 <tr style="border-collapse:collapse">
-                  <td valign="top" align="center" style="padding:0;Margin:0;width:600px">
-                   <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px">
-                        <p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Gràcies per jugar amb nosaltres. <span style="font-weight: bold;">Ens veiem a Natural Optics!</span></p>
-                      </td>
-                     </tr>
-                     <tr style="border-collapse:collapse">
-                      <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:0;Margin:0;padding-top:10px;padding-bottom:20px">
-                        <p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#0886c4;font-size:12px"><br></p><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px">Aquest correu electrònic comercial és conforme a la legislació vigent sobre el tractament de dades amb finalitats promocionals i publicitàries. Reps aquest correu en qualitat de client de Natural {DIRECIONOPTICA} o bé per haver-te registrat a la nostra pàgina web, <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px">www.naturaloptics.com</a> . D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposa dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició dels teus dades.</p>
-                      </td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table></td>
-             </tr>
-           </table></td>
+           <table cellspacing="0" cellpadding="0" bgcolor="#7c142e" align="center" class="es-footer-body" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0;width:600px;background-color:#7c142e;" role="none">
+                <tbody>
+                    <!-- Bloque granate: texto y botón centrados -->
+                    <tr style="border-collapse:collapse;">
+                        <td class="esd-structure es-p20" align="center" bgcolor="#7c142e" style="padding:20px;background-color:#7c142e;">
+                            <table cellspacing="0" cellpadding="0" border="0" align="center" width="100%" role="presentation" style="border-collapse:collapse;border-spacing:0;width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" style="padding:0 10px;text-align:center;">
+                                            <h3 style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:20px;">
+                                                I ARA, <span style="font-weight:bold;">QUÉ HAS DE FER</span>
+                                            </h3>
+
+                                            <p style="margin:20px 0 10px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">
+                                                Visita el teu Natural Optics més proper i gaudeix del teu premi
+                                            </p>
+
+                                            <p style="margin:0 0 15px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">
+                                                Mostra aquest correu al nostre equip perquè pugui validar-ho
+                                            </p>
+
+                                            <!-- Botón centrado -->
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="270" align="center" style="border-collapse:separate;width:270px;margin:0 auto;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td align="center" bgcolor="#ffffff" style="border-radius:10px;border:1px solid #dddddd;background-color:#ffffff;">
+                                                            <a href="https://optica.naturaloptics.com/cita-macro/ca/promo-exclusiva" target="_blank" style="display:block;padding:12px 5px;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:normal;color:#7c142e;text-decoration:none;text-align:center;border-radius:10px;">
+                                                                DEMANAR CITA &nbsp; &rarr;
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+
+                    <!-- Pie blanco -->
+                    <tr style="border-collapse:collapse;">
+                        <td bgcolor="#ffffff" align="left" style="padding:0;margin:0;background-color:#ffffff;">
+                            <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0;width:100%;">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" align="center" style="padding:0;margin:0;width:600px;">
+                                            <table width="100%" cellspacing="0" cellpadding="0" border="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0;width:100%;">
+                                                <tbody>
+                                                    <!-- Mensaje final -->
+                                                    <tr>
+                                                        <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 0 20px;text-align:center;">
+                                                            <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
+                                                                Gràcies per jugar amb nosaltres. <span style="font-weight:bold;">Ens veiem a Natural Optics!</span>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+
+                                                    <!-- Aviso legal -->
+                                                    <tr>
+                                                        <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 15px 20px;text-align:center;">
+                                                            <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
+                                                                Aquest correu electrònic comercial és conforme a la legislació vigent sobre el tractament de dades amb finalitats promocionals i publicitàries. Reps aquest correu en qualitat de client de Natural {DIRECIONOPTICA} o bé per haver-te registrat a la nostra pàgina web,
+                                                                <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px;">www.naturaloptics.com</a>.
+                                                                D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposa dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició de les teves dades.
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </td>
          </tr>
        </table>
        <table cellspacing="0" cellpadding="0" align="center" class="es-content" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;width:100%;table-layout:fixed !important">

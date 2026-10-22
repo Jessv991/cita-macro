@@ -888,7 +888,7 @@
                                           <tr>
                                             <td align="center" class="esd-block-text">
                                               <h3 style="color:#050606">
-                                                T'hem aconseguit una nova cita!
+                                                T'hem aconseguit un nou participant!
                                               </h3>
                                             </td>
                                           </tr>
