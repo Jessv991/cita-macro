@@ -85,7 +85,7 @@ class email_ocasional_comercial
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
                 // Manejo de errores
-                dd('entró', $mail->ErrorInfo);
+                dd('entró servicio', $mail->ErrorInfo);
                 return response()->json(['message' => "No se pudo enviar el email. Error: {$mail->ErrorInfo}"], 500);
             }
 

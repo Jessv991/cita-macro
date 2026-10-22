@@ -73,7 +73,7 @@
                     <h5 class="modal-title fw-bold">
                         Aquest email ja ha participat, prova amb un altre!
                     </h5>
-                    <button id="again" class=" btn-color2 w-100 mt-3">
+                    <button id="again" class="btn btn-color2 w-100 mt-3">
                         Tornar a intentar
                     </button>
                 </div>
@@ -158,7 +158,6 @@
                         }
 
                         if (window.gameScene) {
-                            console.log('entró');
                             window.gameScene.canSpin =
                                 true; // Ahora sí se permite girar la ruleta
                         }
@@ -181,8 +180,6 @@
                         }
 
                         habilitarRuletaConReintentos();
-
-                        console.log('no entró', window.gameScene);
 
                         // Rellenar el segundo formulario
                         document.getElementById('nombre').value =

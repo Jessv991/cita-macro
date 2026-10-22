@@ -122,7 +122,7 @@ Route::post('cita-macro/rulet-validar-email', [FormValidator::class, 'validarEma
 Route::post('cita-macro/ValidateFormRuleta', [FormValidator::class, 'ValidateRuleta'])->name('ValidateRuleta');
 
 //===============================POST GET PREMIOS RULETAS===============================
-Route::get('/obtener-stock-ruleta', function() {
+Route::get('cita-macro/obtener-stock-ruleta', function() {
     return response()->json([
         'descuento50' => DB::table('materia')->where('materia', 'descuento50')->value('cantidad') ?? 0,
         'revision'    => DB::table('materia')->where('materia', 'revision')->value('cantidad') ?? 0,
