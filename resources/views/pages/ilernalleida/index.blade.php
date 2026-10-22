@@ -73,7 +73,7 @@
                     <h5 class="modal-title fw-bold">
                         Aquest email ja ha participat, prova amb un altre!
                     </h5>
-                    <button id="again" class="btn btn-color w-100 mt-3">
+                    <button id="again" class="btn btn-color2 w-100 mt-3">
                         Tornar a intentar
                     </button>
                 </div>
