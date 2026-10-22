@@ -224,19 +224,18 @@
         const modalElement2 = document.getElementById('landingModal2');
 
         if (window.bootstrap) {
-            // 1. Cerrar el primer modal de forma segura
-            if (modalElement) {
-                const modalInstance1 = bootstrap.Modal.getInstance(modalElement);
-                if (modalInstance1) {
-                    modalInstance1.show();
+            // 1. Cerrar el segundo modal (landingModal2)
+            if (modalElement2) {
+                const modalInstance2 = bootstrap.Modal.getInstance(modalElement2);
+                if (modalInstance2) {
+                    modalInstance2.hide();
                 }
             }
 
-            // 2. Abrir el segundo modal
-            if (modalElement2) {
-                // Obtenemos la instancia existente o creamos una nueva si nunca se ha abierto
-                const modalInstance2 = bootstrap.Modal.getOrCreateInstance(modalElement2);
-                modalInstance2.hide();
+            // 2. Abrir el primer modal (landingModal)
+            if (modalElement) {
+                const modalInstance1 = bootstrap.Modal.getOrCreateInstance(modalElement);
+                modalInstance1.show();
             }
         }
 
