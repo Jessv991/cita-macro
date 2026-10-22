@@ -918,7 +918,7 @@
                                               </p>
                                               <p style="color:#050606;font-size:16px">
                                                 <em style="line-height:150%">
-                                                  <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="600" class="adapt-img">
+                                                  <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img">
                                                 </em>
                                               </p>
                                               <p style="color:#050606;font-size:16px">
@@ -970,7 +970,7 @@
                                                   <tbody>
                                                       <tr>
                                                           <td class="es-m-txt-с esd-block-text es-p10b" align="center">
-                                                              <h3 style="color: #ffffff;">Segueix-nos</h3>
+                                                              <h3 style="color: #ffffff;"></h3>
                                                           </td>
                                                       </tr>
                                                       <tr>
@@ -978,8 +978,7 @@
                                                               <table class="es-table-not-adapt es-social" cellspacing="0" cellpadding="0">
                                                                   <tbody>
                                                                       <tr>
-                                                                        <td class="es-p10r" valign="top" align="center"><a href="https://www.facebook.com/UGOuniongeneraldeoptica/?locale=es_ES" target="_blank"><img title="Facebook" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/facebook-circle-white.png" alt="Fb" width="32" height="32"></a></td>
-                                                                        <td valign="top" align="center" esd-tmp-icon-type="instagram" class="es-p10r"><a href="https://www.instagram.com/ugouniongeneraldeoptica/?hl=es/" target="_blank"><img title="Instagram" src="https://optica.naturalopticsgroup.com/cita-macro/assets/iconos/redes_sociales/instagram-circle-white.png" alt="Ig" width="32" height="32"></a></td>
+                                                                        
                                                                       </tr>
                                                                   </tbody>
                                                               </table>
