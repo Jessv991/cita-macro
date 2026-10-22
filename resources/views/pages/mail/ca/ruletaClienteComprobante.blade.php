@@ -847,13 +847,13 @@ button.es-button {
                   <td valign="top" align="center" style="padding:0;Margin:0;width:520px">
                    <table width="100%" cellspacing="0" cellpadding="0" role="presentation" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606"><img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/enhorabuena.png" alt="" width="400" class="adapt-img"></h3></td>
+                      <td align="center" style="padding:0;Margin:0"><h3 style="Margin:0;font-family:arial, 'helvetica neue', helvetica, sans-serif;mso-line-height-rule:exactly;letter-spacing:0;font-size:20px;font-style:normal;font-weight:normal;line-height:24px;color:#050606"><img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/enhorabona_mail.png" alt="" width="400" class="adapt-img"></h3></td>
                      </tr>
                      <tr style="border-collapse:collapse">
                       <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:'Lemance', Arial, sans-serif;line-height:24px;letter-spacing:0;color:#7c142e;font-size:20px;font-weight:bold;">AQUEST ÉS EL TEU PREMI</p></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">​<i>{NOMBREOPTICA}</i></p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">​<img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img"></p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -875,7 +875,7 @@ button.es-button {
                                     <tr>
                                         <td align="center" style="padding:0 10px;text-align:center;">
                                             <h3 style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:20px;">
-                                                I ARA, <span style="font-weight:bold;">QUÉ HAS DE FER</span>
+                                                I ARA, <span style="font-weight:bold;">QUÉ HAS DE FER?</span>
                                             </h3>
 
                                             <p style="margin:20px 0 10px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">
@@ -920,6 +920,12 @@ button.es-button {
                                                             <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
                                                                 Gràcies per jugar amb nosaltres. <span style="font-weight:bold;">Ens veiem a Natural Optics!</span>
                                                             </p>
+                                                        </td>
+                                                    </tr>
+                                                    
+                                                    <tr>
+                                                        <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 0 20px;text-align:center;">
+                                                            <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/tiendas_mail.png" alt="" width="400" class="adapt-img">
                                                         </td>
                                                     </tr>
 
