@@ -220,7 +220,7 @@
     $('#volver-form').on('click', function(e) {
         e.preventDefault();
 
-        const modalElement = document.getElementById('landingModal');
+        /* const modalElement = document.getElementById('landingModal');
         const modalElement2 = document.getElementById('landingModal2');
 
         if (window.bootstrap) {
@@ -263,7 +263,10 @@
         $('#formMacroContactologia').find('input[type=checkbox]').prop('checked', false);
 
         form.classList.remove('d-none');
-        divAgain.classList.add('d-none');
+        divAgain.classList.add('d-none'); */
+
+        // 🚀 Recarga la página por completo de forma limpia
+        location.reload();
 
     })
 </script>

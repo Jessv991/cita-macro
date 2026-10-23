@@ -260,7 +260,7 @@ class FortuneWheel extends Phaser.Scene {
                     }
 
                     console.log('spin complete');
-                    this.canSpin = true;
+                    this.canSpin = false;
                     this.animLightSector();
                     this.win_clip.play();
 
@@ -456,10 +456,7 @@ class FortuneWheel extends Phaser.Scene {
     }
 
     spinDown() {
-        if (this.canSpin) {
-            this.spinbutton.setTexture('spinbutton_hover');
-            this.spinWheel(); // <-- ¡FALTABA LLAMAR AL GIRO AQUÍ!
-        }
+        if (this.canSpin) this.spinbutton.setTexture('spinbutton_hover'); // console.log('button down', arguments);
     }
 
     spinOver() {
