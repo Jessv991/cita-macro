@@ -119,9 +119,8 @@
 
                 <div class="d-flex flex-column text-center w-100">
 
-                    <span class="">{{ __('form_translation.titol-practicas') }}</span>
-                    <span class="mt-4">{{ __('form_translation.parrafo-practica') }}</span>
-                    <span class="mt-4">{{ __('form_translation.parrafo-2') }}</span>
+                    <span class="">Gràcies per participar!</span>
+                    <span class="mt-4">No oblidis revisar el teu correu electrònic.</span>
 
                     <hr>
 

@@ -113,7 +113,7 @@ class email_ocasional_comercial
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
-            $mail->Username = config('mail.mailers.smtp.username');
+            $mail->Username = 'Natural Optics';
             $mail->Password = config('mail.mailers.smtp.password');
             $mail->Port = config('mail.mailers.smtp.port');
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
@@ -121,7 +121,7 @@ class email_ocasional_comercial
 
 
             $mail->setFrom(config('mail.from.address'), config('mail.from.name'));
-            $mail->Subject = 'Confirmación de su pedido';
+            $mail->Subject = 'Aquí tens el resultat de la ruleta 🏀';
             $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaClienteComprobante.blade.php');
 
 
