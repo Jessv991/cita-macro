@@ -456,7 +456,10 @@ class FortuneWheel extends Phaser.Scene {
     }
 
     spinDown() {
-        if (this.canSpin) this.spinbutton.setTexture('spinbutton_hover'); // console.log('button down', arguments);
+        if (this.canSpin) {
+            this.spinbutton.setTexture('spinbutton_hover');
+            this.spinWheel(); // <-- ¡FALTABA LLAMAR AL GIRO AQUÍ!
+        }
     }
 
     spinOver() {
