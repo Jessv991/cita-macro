@@ -856,7 +856,7 @@ button.es-button {
                       <td align="center" style="padding:0;Margin:0;padding-top:0px;padding-bottom:15px;display: flex;justify-content: center;"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px;display: flex;justify-content: center;">​<img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img"></p></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:'Lemance', Arial, sans-serif;line-height:24px;letter-spacing:0;color:#000;font-size:12px;font-weight:bold;">*El descompte s’aplicarà en compres iguals o superiors a 200€. No acumulable a altres promocions.</p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:'Lemance', Arial, sans-serif;line-height:24px;letter-spacing:0;color:#000;font-size:8px;">*El descompte s’aplicarà en compres iguals o superiors a 200€. No acumulable a altres promocions.</p></td>
                      </tr>
                    </table></td>
                  </tr>
@@ -916,7 +916,7 @@ button.es-button {
                                                     <!-- Mensaje final -->
                                                     <tr>
                                                         <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 0 20px;text-align:center;">
-                                                            <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
+                                                            <p style="padding:3%;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
                                                                 Gràcies per jugar amb nosaltres. <span style="font-weight:bold;">Ens veiem a Natural Optics!</span>
                                                             </p>
                                                         </td>
@@ -931,9 +931,9 @@ button.es-button {
                                                     <!-- Aviso legal -->
                                                     <tr>
                                                         <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 15px 20px;text-align:center;">
-                                                            <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:12px;">
+                                                            <p style="margin:0;mso-line-height-rule:exactly;font-family:Arial,'Helvetica Neue',Helvetica,sans-serif;line-height:18px;letter-spacing:0;color:#050606;font-size:8px;">
                                                                 Aquest correu electrònic comercial és conforme a la legislació vigent sobre el tractament de dades amb finalitats promocionals i publicitàries. Reps aquest correu en qualitat de client de Natural {DIRECIONOPTICA} o bé per haver-te registrat a la nostra pàgina web,
-                                                                <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:12px;">www.naturaloptics.com</a>.
+                                                                <a target="_blank" href="https://www.naturaloptics.com/" style="mso-line-height-rule:exactly;text-decoration:underline;color:#0886c4;font-size:8px;">www.naturaloptics.com</a>.
                                                                 D'acord amb el que disposa l'article 22 de la Llei 34/2002 de Serveis de la Societat de la Informació i del Comerç Electrònic, així com al Reglament (UE) 2016/679 del Parlament Europeu i del Consell, que aprova el Reglament General de Protecció de Dades, disposa dels drets de: accés, rectificació, supressió, limitació del tractament, portabilitat i oposició de les teves dades.
                                                             </p>
                                                         </td>
@@ -957,16 +957,7 @@ button.es-button {
            <table cellpadding="0" cellspacing="0" bgcolor="#ffffff" align="center" class="es-content-body" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px;background-color:#FFFFFF;width:600px">
              <tr style="border-collapse:collapse">
               <td align="left" style="padding:0;Margin:0;padding-right:20px;padding-left:20px;padding-top:20px">
-               <table cellspacing="0" width="100%" cellpadding="0" role="none" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                 <tr style="border-collapse:collapse">
-                  <td align="left" style="padding:0;Margin:0;width:560px">
-                   <table width="100%" role="presentation" cellpadding="0" cellspacing="0" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:collapse;border-spacing:0px">
-                     <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;font-size:0"><img src="{LOGO}" alt="" width="125" class="adapt-img" style="display:block;font-size:14px;border:0;outline:none;text-decoration:none"></td>
-                     </tr>
-                   </table></td>
-                 </tr>
-               </table></td>
+               </td>
              </tr>
            </table></td>
          </tr>
