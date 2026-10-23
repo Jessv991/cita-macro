@@ -87,14 +87,12 @@
                         </label>
                     </div>
 
-                    <div class="b-pedir-citas mt-3 d-flex flex-column align-items-center">
+                    <div class="b-pedir-citas mt-3 d-flex flex-column align-items-center p-3">
                         <button id="form" class="btn btn-color mb-3">ACCEPTAR ➜</button>
                         <p class="fst-italic text-b fw-semibold">Visita el teu centre Natural Optics més proper i
                             gaudeix del teu premi!</p>
 
-                        <div class="p-3">
-                            <img class="img_logo" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tiendas.png') }}">
-                        </div>
+                        <img class="img_logo" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tiendas.png') }}">
                     </div>
 
                 </div>
