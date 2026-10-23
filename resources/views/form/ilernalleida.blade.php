@@ -92,7 +92,7 @@
                         <p class="fst-italic text-b fw-semibold">Visita el teu centre Natural Optics més proper i
                             gaudeix del teu premi!</p>
 
-                        <div>
+                        <div class="p-3">
                             <img class="img_logo" src="{{ asset($data['rutaAsset'] . 'assets/img/ilernalleida/tiendas.png') }}">
                         </div>
                     </div>

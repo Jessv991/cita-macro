@@ -120,7 +120,7 @@ class email_ocasional_comercial
             $mail->isHTML(true);
 
 
-            $mail->setFrom(config('mail.from.address'), config('Natural Optics'));
+            $mail->setFrom(config('mail.from.address'), 'Natural Optics');
             $mail->Subject = 'Aquí tens el resultat de la ruleta 🏀';
             $archivo = resource_path('views/pages/mail/' . $locale . '/ruletaClienteComprobante.blade.php');
 

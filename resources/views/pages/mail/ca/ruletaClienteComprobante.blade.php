@@ -855,8 +855,8 @@ button.es-button {
                      <tr style="border-collapse:collapse">
                       <td align="center" style="padding:0;Margin:0;padding-top:0px;padding-bottom:15px;display: flex;justify-content: center;"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px;display: flex;justify-content: center;">​<img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img"></p></td>
                      </tr>
-                     <tr>
-                        <p style="margin:20px 0 10px;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">*El descompte s’aplicarà en compres iguals o superiors a 200€. No acumulable a altres promocions.</p>
+                     <tr style="border-collapse:collapse">
+                      <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:'Lemance', Arial, sans-serif;line-height:24px;letter-spacing:0;color:#000;font-size:12px;font-weight:bold;">*El descompte s’aplicarà en compres iguals o superiors a 200€. No acumulable a altres promocions.</p></td>
                      </tr>
                    </table></td>
                  </tr>
