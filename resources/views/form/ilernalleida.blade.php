@@ -90,7 +90,7 @@
 
                     <div class="b-pedir-citas mt-3 d-flex flex-column align-items-center">
                         <button id="form" class="btn btn-color mb-3">ACCEPTAR ➜</button>
-                        <p class="fst-italic text-b fw-semibold">Visita el teu centre Natural Optics más proper i
+                        <p class="fst-italic text-b fw-semibold">Visita el teu centre Natural Optics més proper i
                             gaudeix del teu premi!</p>
 
                         <div>
