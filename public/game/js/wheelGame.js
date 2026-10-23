@@ -219,10 +219,10 @@ class FortuneWheel extends Phaser.Scene {
             // the wheel will spin round for some times. 
             var rounds = Phaser.Math.Between(wheelConfig.wheelRounds.min, wheelConfig.wheelRounds.max);
 
-            // --- CÁLCULO DINÁMICO BASADO EN EL STOCK PRECARGADO ---
+            // --- AQUÍ APLICAMOS EL CÁLCULO DINÁMICO BASADO EN EL STOCK PRECARGADO ---
             var stockData = window.stockRuleta || { descuento50: 1500, revision: 900, lentillas: 600 };
             var rand_sector = this.calcularSectorGanador(stockData);
-            // -----------------------------------------------------
+            // ------------------------------------------------------------------------
 
             var rand_degrees = rand_sector * 360 / wheelConfig.sectors.length;
 
@@ -253,21 +253,18 @@ class FortuneWheel extends Phaser.Scene {
                     // 2. Actualizar la imagen del premio dinámicamente
                     var imgPremio = document.getElementById('img_premio');
                     if (imgPremio) {
+                        // Asumiendo que las imágenes se llaman '50.png', 'revision.png', 'lentillas.png', etc.
+                        // Mantenemos la base de la ruta reemplazando únicamente el nombre de la imagen al final
                         var rutaBase = "https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida";
                         imgPremio.src = rutaBase + '/' + premioGanador + '.png';
                     }
 
                     console.log('spin complete');
-
-                    // ⚠️ IMPORTANTE: No la dejes bloqueada aquí a false si quieres 
-                    // que el siguiente usuario pueda activarla mediante el formulario.
-                    // Lo ideal es que al terminar el giro se quede en true 
-                    // (o controlada puramente por el flujo del email).
-
+                    this.canSpin = true;
                     this.animLightSector();
                     this.win_clip.play();
 
-                    // 2. Mostrar el modal 'landingModal2' con un retraso de 1.5 segundos
+                    // 2. Mostrar el modal 'landingModal2' con un retraso de 8 segundos
                     setTimeout(function () {
                         var modalElement = document.getElementById('landingModal2');
                         if (modalElement) {
@@ -275,7 +272,6 @@ class FortuneWheel extends Phaser.Scene {
                             miModal.show();
                         }
                     }, 1500);
-                    this.canSpin = true;
                 },
                 onUpdate: function (tween) {
                     var dValue = tween.getValue([0]) - oldValue;

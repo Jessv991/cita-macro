@@ -57,9 +57,9 @@ class email_ocasional_comercial
 
             $premioDB = '';
 
-            if ($premio == '50'){
+            if ($premio == '50') {
                 $premioDB = 'descuento50';
-            }elseif($premio == 'revision' || $premio == 'lentillas' ){
+            } elseif ($premio == 'revision' || $premio == 'lentillas') {
                 $premioDB = $premio;
             }
 
@@ -81,7 +81,10 @@ class email_ocasional_comercial
 
             try {
                 // Enviar el correo
-                $mail->send();
+                if ($premio !== 'no_premio') {
+
+                    $mail->send();
+                }
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
                 // Manejo de errores
@@ -138,7 +141,9 @@ class email_ocasional_comercial
 
             try {
                 // Enviar el correo
-                $mail->send();
+                if ($premio !== 'no_premio') {
+                    $mail->send();
+                }
                 return response()->json(['message' => 'Email enviado correctamente.']);
             } catch (Exception $e) {
                 // Manejo de errores
