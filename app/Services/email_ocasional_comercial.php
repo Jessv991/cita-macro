@@ -113,7 +113,7 @@ class email_ocasional_comercial
             $mail->isSMTP();
             $mail->SMTPAuth = true;
             $mail->Host = config('mail.mailers.smtp.host');
-            $mail->Username = 'Natural Optics';
+            $mail->Username = config('mail.mailers.smtp.username');
             $mail->Password = config('mail.mailers.smtp.password');
             $mail->Port = config('mail.mailers.smtp.port');
             $mail->SMTPSecure = config('mail.mailers.smtp.encryption');
