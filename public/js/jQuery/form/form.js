@@ -33,7 +33,7 @@ $(document).ready(function () {
         getOpticaSelectCity()
 
         // Quitar opciones no deseadas
-        if ($('#landing').val() === 'lleida_aplec' || $('#landing').val() === 'RAY-BAN') {
+        if ($('#landing').val() === 'promo-exclusiva' || $('#landing').val() === 'lleida_aplec' || $('#landing').val() === 'RAY-BAN') {
             setTimeout(function () {
                 $('#ciudad option[value="Tremp"], #ciudad option[value="Alfarras"]').remove();
             }, 300);
