@@ -79,12 +79,11 @@
                             id="reverseCheck2">
 
                         <label class="form-check-label" for="reverseCheck2">
-                            <span>{{ __('form_translation.Aceptar_gestion_natural') }}</span>
-                            <a href="{{ route('politicas.gestion', app()->getLocale()) }}" target="_blank"
+                            <span>{{ __('contactologia.Aceptar_politicas_privacidad_1') }}</span>
+                            <a href="{{ route('sorteo.ruleta.bases', app()->getLocale()) }}" target="_blank"
                                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
-                                {{ __('form_translation.Aceptar_gestion_natural2') }}
+                                {{ __('contactologia.Aceptar_politicas_sorteo') }}
                             </a>
-                            <span>&nbsp;{{ __('form_translation.Aceptar_gestion_natural3') }}</span>
                         </label>
                     </div>
 

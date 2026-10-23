@@ -48,7 +48,7 @@ Route::get('cita-macro/politicas-de-gestion/{locale}', function ($locale) {
     
 })->name('politicas.gestion');
 
-//ruta politcas de privacidad
+//ruta sorteo
 Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
     if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
         $locale = 'es';
@@ -57,6 +57,16 @@ Route::get('cita-macro/bases-del-sorteo/{locale}', function ($locale) {
     return view('pages.sorteo.index');
     
 })->name('sorteo.bases');
+
+//ruta ruleta
+Route::get('cita-macro/sorteo-ruleta/{locale}', function ($locale) {
+    if (!in_array($locale, ['en', 'es', 'ca', 'es_en'])) {
+        $locale = 'es';
+    }
+    App::setLocale($locale);
+    return view('pages.sorteo.index-ruleta');
+    
+})->name('sorteo.ruleta.bases');
 
 //ruta cookies
 Route::get('cita-macro/politicas-de-cookies/{locale}', function ($locale) {
