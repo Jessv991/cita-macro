@@ -853,7 +853,10 @@ button.es-button {
                       <td align="center" style="padding:0;Margin:0;padding-top:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:'Lemance', Arial, sans-serif;line-height:24px;letter-spacing:0;color:#7c142e;font-size:20px;font-weight:bold;">AQUEST ÉS EL TEU PREMI</p></td>
                      </tr>
                      <tr style="border-collapse:collapse">
-                      <td align="center" style="padding:0;Margin:0;padding-top:15px;padding-bottom:15px"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px">​<img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img"></p></td>
+                      <td align="center" style="padding:0;Margin:0;padding-top:0px;padding-bottom:15px;display: flex;justify-content: center;"><p style="Margin:0;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;letter-spacing:0;color:#050606;font-size:16px;display: flex;justify-content: center;">​<img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/{PREMIO}.png" alt="" width="500" class="adapt-img"></p></td>
+                     </tr>
+                     <tr>
+                        <p style="margin:20px 0 10px;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">*El descompte s’aplicarà en compres iguals o superiors a 200€. No acumulable a altres promocions.</p>
                      </tr>
                    </table></td>
                  </tr>
@@ -875,15 +878,11 @@ button.es-button {
                                     <tr>
                                         <td align="center" style="padding:0 10px;text-align:center;">
                                             <h3 style="margin:0;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:20px;">
-                                                I ARA, <span style="font-weight:bold;">QUÉ HAS DE FER?</span>
+                                                I ARA, <span style="font-weight:bold;">QUÈ HAS DE FER?</span>
                                             </h3>
 
                                             <p style="margin:20px 0 10px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">
-                                                Visita el teu Natural Optics més proper i gaudeix del teu premi
-                                            </p>
-
-                                            <p style="margin:0 0 15px;color:#ffffff;font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:21px;">
-                                                Mostra aquest correu al nostre equip perquè pugui validar-ho
+                                                Visita el teu Natural Optics més proper i gaudeix del teu premi. Mostra aquest correu al nostre equip perquè pugui validar-ho.
                                             </p>
 
                                             <!-- Botón centrado -->
@@ -925,7 +924,7 @@ button.es-button {
                                                     
                                                     <tr>
                                                         <td esdev-links-color="#666666" align="center" class="es-m-txt-с" style="padding:10px 0 20px;text-align:center;">
-                                                            <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/tiendas_mail.png" alt="" width="600" class="adapt-img">
+                                                            <img src="https://optica.naturalopticsgroup.com/cita-macro/assets/img/ilernalleida/tiendas.png" alt="" width="600" class="adapt-img">
                                                         </td>
                                                     </tr>
 
