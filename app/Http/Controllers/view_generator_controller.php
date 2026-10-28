@@ -432,11 +432,11 @@ class view_generator_controller extends Controller
 
         /*
         |--------------------------------------------------------------------------
-        | Reglas específicas para la landing cuidamos_de_ti
+        | Reglas específicas para la landing cuidamos_de_ti y salud_visual_auditiva
         |--------------------------------------------------------------------------
         */
 
-        if ($landing === 'cuidamos_de_ti') {
+        if ($landing === 'cuidamos_de_ti' || $landing === 'salud_visual_auditiva') {
 
             $rules = array_merge($rules, [
 

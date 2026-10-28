@@ -13,7 +13,6 @@
     position: relative;
 }
 
-
 /* Hacer el input transparente cuando está vacío */
 #fecha:not([data-filled]),
 #hora:not([data-filled]) {

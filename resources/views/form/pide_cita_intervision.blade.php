@@ -143,7 +143,7 @@
                 </div>
             </div>
 
-            @if ($data['landing'] === 'cuidamos_de_ti')
+            @if ($data['landing'] === 'cuidamos_de_ti' || $data['landing'] === 'salud_visual_auditiva')
                 <!-- Motivo / Tipo de cita -->
                 <div class="motivo_div mt-2" data-aos="fade-left" data-aos-anchor="#example-anchor"
                     data-aos-offset="500" data-aos-duration="1900">
