@@ -38,5 +38,13 @@ return [
     'kit' => 'Implantation kit',
     'Pedir_kit' => "ORDER IMPLEMENTATION KIT",
     'contacto' => "Contact person",
+    'tipy' => "Appointment type",
+    'Eye_test' => "Eye test",
+    'glasses' => "Glasses",
+    'contact_lenses' => "Contact lenses",
+    'hearing_care' => "Hearing care",
+    'other' => "Other",
+    'select_date' => "Select date",
+    'select_time' => "Select time",
 
 ];

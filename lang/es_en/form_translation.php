@@ -36,5 +36,13 @@ return [
     'kit' => 'Implantation kit',
     'Pedir_kit' => "ORDER IMPLEMENTATION KIT",
     'contacto' => "Contact person",
+    'tipy' => "Tipo de cita / Appointment type",
+    'Eye_test' => "Examen visual / Eye test",
+    'glasses' => "Gafas / Glasses",
+    'contact_lenses' => "Lentes de contacto / Contact lenses",
+    'hearing_care' => "Audiología / Hearing care",
+    'other' => "Otra consulta / Other",
+    'select_date' => "Seleccionar fecha / Select date",
+    'select_time' => "Seleccionar hora / Select time",
 
 ];

@@ -1,0 +1,472 @@
+/* 
+███████╗ ██████╗██████╗  ██████╗ ██╗     ██╗         ██████╗  ██████╗ ██████╗ ██╗   ██╗
+██╔════╝██╔════╝██╔══██╗██╔═══██╗██║     ██║         ██╔══██╗██╔═══██╗██╔══██╗╚██╗ ██╔╝
+███████╗██║     ██████╔╝██║   ██║██║     ██║         ██████╔╝██║   ██║██║  ██║ ╚████╔╝ 
+╚════██║██║     ██╔══██╗██║   ██║██║     ██║         ██╔══██╗██║   ██║██║  ██║  ╚██╔╝  
+███████║╚██████╗██║  ██║╚██████╔╝███████╗███████╗    ██████╔╝╚██████╔╝██████╔╝   ██║   
+╚══════╝ ╚═════╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝╚══════╝    ╚═════╝  ╚═════╝ ╚═════╝    ╚═╝   
+                                                                                       
+*/
+
+.input-fecha-wrapper,
+.input-hora-wrapper {
+    position: relative;
+}
+
+/* Hacer el input transparente cuando está vacío */
+#fecha:not([data-filled]),
+#hora:not([data-filled]) {
+    color: transparent;
+}
+
+/* En algunos navegadores también hay que ocultar el texto nativo */
+#fecha:not([data-filled])::-webkit-datetime-edit,
+#hora:not([data-filled])::-webkit-datetime-edit {
+    color: transparent;
+}
+
+.fecha-placeholder,
+.hora-placeholder {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #000;
+    font-size: 0.95rem;
+    pointer-events: none;
+    z-index: 10;
+    background: white;
+    padding: 0 4px;
+}
+
+/* Ocultar placeholder cuando tiene valor */
+#fecha[data-filled]~.fecha-placeholder,
+#hora[data-filled]~.hora-placeholder {
+    display: none;
+}
+
+
+body {
+    height: 104% !important;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 1px;
+}
+
+body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#icon {
+    width: 100%;
+}
+
+.btn-color {
+    background-color: #ee903b;
+    color: #f0f0f0;
+}
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'IvyStyleSans';
+    src: url('/font/fonnts.com-IvyStyle_Sans_Bold_Italic.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
+
+/* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
+
+a {
+    color: #ee903b !important;
+}
+
+a:hover {
+    color: #fff !important;
+}
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗    ███████╗██╗      ██████╗ ████████╗ █████╗ ███╗   ██╗████████╗███████╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║    ██╔════╝██║     ██╔═══██╗╚══██╔══╝██╔══██╗████╗  ██║╚══██╔══╝██╔════╝
+█████╗  ██║   ██║██████╔╝██╔████╔██║    █████╗  ██║     ██║   ██║   ██║   ███████║██╔██╗ ██║   ██║   █████╗  
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║    ██╔══╝  ██║     ██║   ██║   ██║   ██╔══██║██║╚██╗██║   ██║   ██╔══╝  
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║    ██║     ███████╗╚██████╔╝   ██║   ██║  ██║██║ ╚████║   ██║   ███████╗
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝    ╚═╝     ╚══════╝ ╚═════╝    ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚══════╝
+                                                                                                             
+*/
+
+
+/* 
+███████╗ ██████╗ ██████╗ ███╗   ███╗
+██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+█████╗  ██║   ██║██████╔╝██╔████╔██║
+██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝
+                                     */
+
+.contenedor-form {
+    padding: 4%;
+    position: relative !important;
+}
+
+label>span {
+    color: #fff !important;
+}
+
+.text-top-form {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 17px;
+
+}
+
+.text-top-form-anniversary {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 35px;
+    padding: 10px;
+}
+
+.text-top-form-anniversary2 {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 22px;
+}
+
+.divider-line {
+    width: 100%;
+    /* de izquierda a derecha */
+    height: 1px;
+    /* línea fina */
+    background-color: #fff;
+    /* blanca */
+    margin: 20px 0;
+    /* separación arriba y abajo */
+    opacity: 0.6;
+    /* un poco elegante */
+}
+
+
+input {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+.form-check-reverse {
+    text-align: left;
+}
+
+/* input:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+select {
+    margin-top: 3% !important;
+    font-size: 19px !important;
+    border-color: #fff !important;
+    /* box-shadow: 1px 1px 10px #EBF2F1, -1px -1px 10px #f1f1f1; */
+}
+
+/* select:hover {
+    box-shadow: 0px 0px 0px #EBF2F1, 0px 0px 0px #f1f1f1;
+} */
+
+div#animationdivIcon {
+    margin-top: 3% !important;
+}
+
+#gracias {
+    color: #fff;
+    font-family: 'IvyStyleSans', sans-serif;
+    font-weight: 200;
+    line-height: 1;
+    font-size: 30px;
+    padding: 5%;
+}
+
+.b-pedir-citas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.b-volver {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-color {
+    width: 234px !important;
+    border-radius: 20px !important;
+    font-size: 20px;
+}
+
+/* DISEÑO EXCLUSIVO AL LOGO POR WEBLOGIN */
+
+.rcentreopticdelbagesclass1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rcentreopticdelbagesclass {
+    width: 206px !important;
+}
+
+/* 
+███████╗ ██████╗  ██████╗ ████████╗███████╗██████╗ 
+██╔════╝██╔═══██╗██╔═══██╗╚══██╔══╝██╔════╝██╔══██╗
+█████╗  ██║   ██║██║   ██║   ██║   █████╗  ██████╔╝
+██╔══╝  ██║   ██║██║   ██║   ██║   ██╔══╝  ██╔══██╗
+██║     ╚██████╔╝╚██████╔╝   ██║   ███████╗██║  ██║
+╚═╝      ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝╚═╝  ╚═╝
+                                                   
+*/
+
+/* 
+███╗   ███╗ █████╗ ██████╗  █████╗ 
+████╗ ████║██╔══██╗██╔══██╗██╔══██╗
+██╔████╔██║███████║██████╔╝███████║
+██║╚██╔╝██║██╔══██║██╔═══╝ ██╔══██║
+██║ ╚═╝ ██║██║  ██║██║     ██║  ██║
+╚═╝     ╚═╝╚═╝  ╚═╝╚═╝     ╚═╝  ╚═╝
+*/
+
+/* 
+████████╗███████╗███████╗████████╗
+╚══██╔══╝██╔════╝██╔════╝╚══██╔══╝
+   ██║   █████╗  ███████╗   ██║   
+   ██║   ██╔══╝  ╚════██║   ██║   
+   ██║   ███████╗███████║   ██║   
+   ╚═╝   ╚══════╝╚══════╝   ╚═╝   
+                                  
+*/
+
+/* 
+ ██████╗ ██╗   ██╗███████╗██████╗ ██╗   ██╗
+██╔═══██╗██║   ██║██╔════╝██╔══██╗╚██╗ ██╔╝
+██║   ██║██║   ██║█████╗  ██████╔╝ ╚████╔╝ 
+██║▄▄ ██║██║   ██║██╔══╝  ██╔══██╗  ╚██╔╝  
+╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
+ ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
+                                           
+ */
+
+@media (min-width: 1499px) and (max-width: 2000px) {
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 350px !important;
+        border-radius: 5px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+}
+
+/* Pantallas Medianas (992px a 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+
+    .text-top-form {
+        font-size: 15px;
+        padding: 0% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 21px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 18px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+}
+
+/* Pantallas Grandes (1200px a 1499px) */
+@media (min-width: 1200px) and (max-width: 1499px) {
+
+    .text-top-form {
+        font-size: 15px;
+        padding: 0% !important;
+    }
+
+    input {
+        font-size: 15px !important;
+    }
+
+    select {
+        font-size: 15px !important;
+    }
+
+    .form-check-label {
+        font-size: 15px !important;
+    }
+
+    .btn-color {
+        width: 219px !important;
+        border-radius: 5px !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 25px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
+    }
+
+    .background-container .background-item .col-12 {
+        height: 100vh;
+    }
+
+}
+
+
+/* Pantallas Pequeñas TABLET(768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+
+    .text-top-form {
+        font-size: 20px;
+        padding: 0% !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 39px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 26px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* Teléfonos (576px a 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+    .text-top-form-anniversary {
+        font-size: 30px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 20px !important;
+    }
+
+}
+
+/* Teléfonos Muy Pequeños (hasta 575px) */
+@media (max-width: 575px) {
+
+    .text-top-form-anniversary {
+        font-size: 27px !important;
+        padding: 0px !important;
+    }
+
+    .text-top-form-anniversary2 {
+        font-size: 21px !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}
+
+/* 
+    ███████╗ ██████╗ ██████╗ ███╗   ███╗
+    ██╔════╝██╔═══██╗██╔══██╗████╗ ████║
+    █████╗  ██║   ██║██████╔╝██╔████╔██║
+    ██╔══╝  ██║   ██║██╔══██╗██║╚██╔╝██║
+    ██║     ╚██████╔╝██║  ██║██║ ╚═╝ ██║
+    ╚═╝      ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝                                
+    */
+
+
+@media (min-width: 0px) and (max-width: 480px) {
+
+    .mb-5 {
+        margin-bottom: 1rem !important;
+    }
+
+}

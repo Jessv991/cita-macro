@@ -56,5 +56,14 @@ return [
     'contacto' => "Persona de contacto",
     'wsp_preferencia' => "¡O contáctanos por WhatsApp!",
     'wsp_chat' => "Chatear",
+    'Pide_cita_rellenando2' => 'Pide cita rellenando el formulario y nos pondremos en contacto contigo.',
+    'tipy' => "Tipo de cita",
+    'Eye_test' => "Examen visual",
+    'glasses' => "Gafas",
+    'contact_lenses' => "Contact lenses",
+    'hearing_care' => "Audiología",
+    'other' => "Otra consulta",
+    'select_date' => "Seleccionar fecha",
+    'select_time' => "Seleccionar hora",
 
 ];

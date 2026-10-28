@@ -24,10 +24,12 @@
             </div>
         @else
             <div class="text-start mb-5 mt-3">
-                @if ($data['landing'] !== 'promo_progresivas')
+                @if ($data['landing'] !== 'promo_progresivas' && $data['idioma'] === 'es_en' || $data['idioma'] === 'es')
                     <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando2') }}</p>
                 @endif
-                <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+                @if ($data['idioma'] === 'es_en' || $data['idioma'] === 'en')
+                    <p class="text-top-form-anniversary2">{{ __('form_translation.Pide_cita_rellenando') }}</p>
+                @endif
             </div>
         @endif
 
@@ -148,24 +150,24 @@
 
                     <select class="form-select @error('motivo') is-invalid @enderror" name="motivo" id="motivo">
                         <option value="" selected disabled>
-                            Tipo de cita / Appointment type
+                            {{ __('form_translation.tipy') }}
                         </option>
                         <option value="examen_visual">
-                            Examen visual / Eye test
+                            {{ __('form_translation.Eye_test') }}
                         </option>
                         <option value="gafas">
-                            Gafas / Glasses
+                            {{ __('form_translation.glasses') }}
                         </option>
                         <option value="lentes_contacto">
-                            Lentes de contacto / Contact lenses
+                            {{ __('form_translation.contact_lenses') }}
                         </option>
                         @if ($data['weblogin'] !== 'expertcalpe')
-                            <option value="audiologia" class="opcion-audiologia">
-                                Audiología / Hearing care
-                            </option>
+                        <option value="audiologia" class="opcion-audiologia">
+                            {{ __('form_translation.hearing_care') }}
+                        </option>
                         @endif
                         <option value="otra_consulta">
-                            Otra consulta / Other
+                            {{ __('form_translation.other') }}
                         </option>
                     </select>
 
@@ -177,7 +179,7 @@
                     <div class="input-fecha-wrapper position-relative">
                         <input class="form-control @error('fecha') is-invalid @enderror" type="text"
                             name="fecha" id="fecha" placeholder=" " readonly>
-                        <span class="fecha-placeholder">📅 Seleccionar fecha / Select date</span>
+                        <span class="fecha-placeholder">📅 {{ __('form_translation.select_date') }}</span>
                     </div>
                 </div>
 
@@ -189,7 +191,7 @@
                     <div class="input-hora-wrapper position-relative">
                         <input class="form-control @error('hora') is-invalid @enderror" type="text" name="hora"
                             id="hora" placeholder=" " readonly>
-                        <span class="hora-placeholder">🕐 Seleccionar hora / Select time</span>
+                        <span class="hora-placeholder">🕐 {{ __('form_translation.select_time') }}</span>
                     </div>
 
                 </div>
