@@ -237,15 +237,15 @@
                         id="reverseCheck1">
 
                     <label class="form-check-label" for="reverseCheck1">
-                        @if ($data['idioma'] === 'es_en' || $data['idioma'] === 'es')
+                        @if ($data['idioma'] === 'es_en' || $data['idioma'] === 'es' || $data['idioma'] === 'en')
                             <span>{{ __('form_translation.Aceptar_politicas_privacidad_1') }}</span>
                             <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" target="_blank"
                                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                                 {{ __('form_translation.Aceptar_politicas_privacidad_2') }}
                             </a>
                         @endif
-                        @if ($data['idioma'] === 'es_en' || $data['idioma'] === 'en')
-                            <span> / I accept the</span>
+                        @if ($data['idioma'] === 'es_en')
+                            <span> {{ __('form_translation.select_date') }}/ I accept the</span>
                             <a href="{{ route('politicas.privacidad_en', app()->getLocale()) }}" target="_blank"
                                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                                 Privacy Policies
