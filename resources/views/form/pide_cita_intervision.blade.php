@@ -245,7 +245,7 @@
                             </a>
                         @endif
                         @if ($data['idioma'] === 'es_en')
-                            <span> {{ __('form_translation.select_date') }}/ I accept the</span>
+                            <span>/ I accept the</span>
                             <a href="{{ route('politicas.privacidad_en', app()->getLocale()) }}" target="_blank"
                                 style="margin-left: 5px; text-decoration: underline; cursor: pointer;">
                                 Privacy Policies
