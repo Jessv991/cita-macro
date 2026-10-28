@@ -11,6 +11,7 @@ body {
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
+    background-color: #0984BB !important;
 }
 
 body::-webkit-scrollbar {
@@ -25,11 +26,11 @@ body::-webkit-scrollbar-track {
 /* ===============================EFECTO CARRUSEL DE IMAGENES====================== */
 
 a {
-    color: #0e0cea !important;
+    color: #fff !important;
 }
 
 a:hover {
-    color: #34aace !important;
+    color: #C9D2E0 !important;
 }
 
 
@@ -48,11 +49,11 @@ a:hover {
 }
 
 label>span {
-    color: #111010 !important;
+    color: #fff !important;
 }
 
 .text-top-form {
-    color: #454242;
+    color: #fff;
     font-family: 'fangsong';
     font-weight: 200;
     line-height: 1;
@@ -104,15 +105,16 @@ div#animationdivIcon {
 }
 
 .btn-color {
-    background-color: #0086C4 !important;
+    background-color: #fff !important;
     width: 234px !important;
-    border-radius: 20px !important;
+    border-radius: 22px !important;
     font-size: 20px;
-
+    color: #0984BB !important;
+    font-weight: bold;
 }
 
 .btn-color:hover {
-    background-color: #5D6569 !important;
+    background-color: #C9D2E0 !important;
     font-size: 20px;
 }
 
@@ -147,7 +149,6 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
 
     .style-form {
@@ -182,7 +183,6 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
 
     .background-container .background-item .col-12 {
@@ -213,7 +213,6 @@ div#animationdivIcon {
 
     .btn-color {
         width: 219px !important;
-        border-radius: 5px !important;
     }
 
     .background-container .background-item .col-12 {
