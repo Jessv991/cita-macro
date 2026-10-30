@@ -436,7 +436,7 @@ class view_generator_controller extends Controller
         |--------------------------------------------------------------------------
         */
 
-        if ($landing === 'cuidamos_de_ti' || $landing === 'salud_visual_auditiva') {
+        if ($landing === 'cuidamos_de_ti' || $landing === 'salud_visual_auditiva' || $landing === 'black_month') {
 
             $rules = array_merge($rules, [
 
