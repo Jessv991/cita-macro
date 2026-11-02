@@ -5,13 +5,13 @@
             @if ($data['tipo_dispositivo'] == 'mobile')
                 <div class="banner-logo-mobile d-flex justify-content-center align-items-center">
                     <img class="logo p-2"
-                        src="{{ asset($data['rutaAsset'] . 'assets/logos/basicos/logo-audio-white.png') }}">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo.png') }}">
                 </div>
             @else
                 <div class="banner-logo w-100 d-flex justify-content-between align-items-center btn-wrapper-fixed">
                     <div class="img-logo">
                         <img class="logo ms-5"
-                            src="{{ asset($data['rutaAsset'] . 'assets/logos/basicos/logo-audio-white.png') }}"
+                            src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo.png') }}"
                             alt="Logo">
                     </div>
                     <div class="btn-position me-5">
@@ -25,36 +25,18 @@
 
         <div class="w-100">
             <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/banner.png') }}">
+                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/banner.png') }}">
+        </div>
+        <div class="w-100">
+            <img class="w-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img2.png') }}">
+        </div>
+        <div class="w-100 d-none d-lg-flex">
+            <img class="w-100"
+                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img3.png') }}">
         </div>
 
-        <div class="w-100 d-flex flex-column align-items-center text-center prim-text">
-            <div class="w-100 d-flex justify-content-center">
-                <img class="titulo_tu_vista2"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/titulo1.png') }}">
-            </div>
-            <div class="p-1 primeros-parrafos1 text-width">
-                <p>{!! __('adopta-un-abuelo.parrafo-1') !!}</p>
-            </div>
-        </div>
-
-        <div class="d-lg-flex flex-column align-items-center text-center">
-            <img class="{{ $data['tipo_dispositivo'] != 'mobile' ? 'w-auto' : 'w-100' }}"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img1.png') }}">
-        </div>
-
-        <div class="w-100 d-flex flex-column align-items-center text-center">
-            <div class="w-100 d-flex justify-content-center">
-                <img class="mt-3 {{ $data['tipo_dispositivo'] != 'mobile' ? 'w-auto' : 'titulo_tu_vista1' }}"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img2.png') }}">
-            </div>
-            <div class="w-100 text-width">
-                <img class="titulo_tu_vista1 {{ $data['tipo_dispositivo'] != 'mobile' ? 'mt-3' : 'mb-3' }}"
-                    src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/' . $data['idioma'] . '/img3.png') }}">
-            </div>
-        </div>
-
-        <div id="startForm" class="w-100  d-flex align-items-center justify-content-center mt-lg-5 contenedor_form">
+        <div id="startForm" class="w-100  d-flex align-items-center justify-content-center pt-lg-5 contenedor_form">
             @include('form.pide_cita')
         </div>
 
@@ -62,22 +44,22 @@
             @if ($data['tipo_dispositivo'] != 'mobile')
                 <div class="d-flex footer-contact text-center col-12">
                     <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
-                        class="p-privacity col-4 fw-bold">{{ __('adopta-un-abuelo.Politicas-privacidad') }}</a>
+                        class="p-privacity col-4 fw-bold">{{ __('actualiza.Politicas-privacidad') }}</a>
                     <img class="d-block mx-auto logo-N col-4"
-                        src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}" alt="Logo footer">
                     <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
-                        class="p-cookies col-4 fw-bold">{{ __('adopta-un-abuelo.Politicas-cookies') }}</a>
+                        class="p-cookies col-4 fw-bold">{{ __('actualiza.Politicas-cookies') }}</a>
                 </div>
             @else
                 <div class="d-flex flex-column align-items-center footer-contact text-center m-bottom">
                     <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
-                        {{ __('adopta-un-abuelo.Politicas-privacidad') }}
+                        {{ __('actualiza.Politicas-privacidad') }}
                     </a>
                     <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
-                        {{ __('adopta-un-abuelo.Politicas-cookies') }}
+                        {{ __('actualiza.Politicas-cookies') }}
                     </a>
                     <img class="d-block mx-auto logo-N"
-                        src="{{ asset($data['rutaAsset'] . 'assets/iconos_landings/N_2.png') }}" alt="Logo footer">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}" alt="Logo footer">
                 </div>
             @endif
         </footer>
