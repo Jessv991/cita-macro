@@ -168,6 +168,11 @@ body::-webkit-scrollbar-track {
     height: auto !important;
 }
 
+.form-check-label::before {
+    background-color: #f7f4f2 !important; 
+    border: solid 2px #115a76 !important;
+}
+
 .btn-bottom-center {
     background-color: #115a76;
     color: #f7f4f2;
