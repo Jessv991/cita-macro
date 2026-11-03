@@ -28,18 +28,18 @@
             <img class="w-100"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/banner.png') }}">
         </div>
-        <div class="w-100" style="background-color: #f7f4f2;">
+        <div class="w-100 d-flex justify-content-center" style="background-color: #f7f4f2;">
             <div class="row w-100">
-                <div class="col-12 col-md-8">
+                <div class="col-12 col-md-8 p-0">
                     <img class="w-100"
                         src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img2.png') }}">
                 </div>
 
-                <div class="col-12 col-md-4 d-flex justify-content-start align-items-center">
-                    <video autoplay muted playsinline loop id="video2">
+                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-lg-start align-items-center p-0">
+                    <video id="video2" controls playsinline preload="metadata">
                         <source src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/video.mp4') }}"
                             type="video/mp4">
-                        Your browser does not support the video tag.
+                        Tu navegador no soporta vídeos HTML5.
                     </video>
                 </div>
             </div>
@@ -126,15 +126,6 @@
             behavior: 'smooth',
             block: 'start'
         });
-    });
-
-    document.getElementById('video2').addEventListener('touchmove', function(e) {
-        // Permite el gesto de scroll peroprevent zoom
-        if (e.touches.length > 1) {
-            e.preventDefault();
-        }
-    }, {
-        passive: false
     });
 
     updateSlides();

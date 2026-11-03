@@ -65,6 +65,7 @@
     object-fit: cover;
     border-radius: 65px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.418);
+    cursor: pointer;
 }
 
 body {
@@ -131,7 +132,7 @@ body::-webkit-scrollbar-track {
 }
 
 .background-banner-mobile {
-    background-color: #3b77a8;
+    background-color: #0f506d;
 }
 
 .m-bottom {
@@ -178,11 +179,10 @@ body::-webkit-scrollbar-track {
 
 .logo {
     max-width: 280px !important;
-    margin-left: 2rem !important;
 }
 
 .form-check-label::before {
-    background-color: #f7f4f2 !important; 
+    background-color: #f7f4f2 !important;
     border: solid 2px #0f506d !important;
 }
 
@@ -455,6 +455,9 @@ div#animationdivIcon {
  */
 
 @media (max-width: 2000px) {
+    .logo {
+        margin-left: 2rem !important;
+    }
 }
 
 /* Pantallas Grandes (1200px a 1499px) */
@@ -475,10 +478,17 @@ div#animationdivIcon {
     .primeros-parrafos {
         font-size: 21.8px;
     }
+
+    .logo {
+        margin-left: 2rem !important;
+    }
 }
 
 /* Pantallas Medianas (992px a 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
+    .logo {
+        margin-left: 2rem !important;
+    }
 }
 
 /* Pantallas Pequeñas TABLET(768px a 991px) */
@@ -609,6 +619,12 @@ div#animationdivIcon {
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
 @media (max-width: 575px) {
+
+    #video2 {
+        width: 73%;
+        margin: 20px;
+    }
+
     .m-banner {
         margin-top: 16%;
     }
