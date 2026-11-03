@@ -24,27 +24,34 @@
             @endif
         </div>
 
-        <div class="w-100">
+        <div class="w-100 marg-img">
             <img class="w-100"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/banner.png') }}">
         </div>
         <div class="w-100 d-flex justify-content-center" style="background-color: #f7f4f2;">
             <div class="row w-100">
-                <div class="col-12 col-md-8 p-0">
+                <div class="col-12 col-lg-8 p-0">
                     <img class="w-100"
                         src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img2.png') }}">
                 </div>
 
-                <div class="col-12 col-md-4 d-flex justify-content-center justify-content-lg-start align-items-center p-0">
-                    <video id="video2" controls playsinline preload="metadata">
-                        <source src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/video.mp4') }}"
-                            type="video/mp4">
-                        Tu navegador no soporta vídeos HTML5.
-                    </video>
+                <div
+                    class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-start align-items-center p-0 mb-5">
+                    <div class="video-container">
+                        <video id="video2" playsinline preload="metadata">
+                            <source src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/video.mp4') }}"
+                                type="video/mp4">
+                            Tu navegador no soporta vídeos HTML5.
+                        </video>
+
+                        <button id="playButton" class="video-play-button" aria-label="Reproducir vídeo">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="w-100 d-none d-lg-flex">
+        <div class="w-100">
             <img class="w-100"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img3.png') }}">
         </div>
@@ -126,6 +133,26 @@
             behavior: 'smooth',
             block: 'start'
         });
+    });
+
+    const video = document.getElementById('video2');
+    const playButton = document.getElementById('playButton');
+    const container = document.querySelector('.video-container');
+
+    playButton.addEventListener('click', function() {
+        video.play();
+    });
+
+    video.addEventListener('play', function() {
+        container.classList.add('playing');
+    });
+
+    video.addEventListener('ended', function() {
+        container.classList.remove('playing');
+    });
+
+    video.addEventListener('pause', function() {
+        container.classList.remove('playing');
     });
 
     updateSlides();

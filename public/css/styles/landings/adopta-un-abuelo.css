@@ -54,18 +54,49 @@
     width: 100%;
 }
 
-#video2 {
+.video-container {
+    position: relative;
     width: 59%;
     max-width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+}
+
+#video2 {
+    width: 100%;
     height: auto;
     display: block;
-    touch-action: pan-y;
-    -webkit-touch-callout: none;
-    user-select: none;
     object-fit: cover;
     border-radius: 65px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.418);
+}
+
+.video-play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: rgba(255, 255, 255, 0.85);
+    color: #555;
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
+    z-index: 2;
+}
+
+.video-play-button i {
+    margin-left: 5px;
+}
+
+.video-container.playing .video-play-button {
+    display: none;
 }
 
 body {
@@ -452,16 +483,10 @@ div#animationdivIcon {
 ╚██████╔╝╚██████╔╝███████╗██║  ██║   ██║   
  ╚══▀▀═╝  ╚═════╝ ╚══════╝╚═╝  ╚═╝   ╚═╝   
                                            
- */
-
-@media (max-width: 2000px) {
-    .logo {
-        margin-left: 2rem !important;
-    }
-}
+*/
 
 /* Pantallas Grandes (1200px a 1499px) */
-@media (min-width: 1200px) and (max-width: 1499px) {
+@media (min-width: 1200px) {
     .primeros-parrafos1 {
         padding-left: 13% !important;
         padding-right: 13% !important;
@@ -482,12 +507,9 @@ div#animationdivIcon {
     .logo {
         margin-left: 2rem !important;
     }
-}
 
-/* Pantallas Medianas (992px a 1199px) */
-@media (min-width: 992px) and (max-width: 1199px) {
-    .logo {
-        margin-left: 2rem !important;
+    .marg-img {
+        margin-top: 5%;
     }
 }
 
@@ -546,6 +568,8 @@ div#animationdivIcon {
     .titulo_tu_vista1 {
         width: 100%;
     }
+
+
 }
 
 /* Teléfonos (576px a 767px) */
@@ -615,6 +639,11 @@ div#animationdivIcon {
     .text-width {
         width: 100% !important;
     }
+
+    #video2 {
+        width: 73% !important;
+    }
+
 }
 
 /* Teléfonos Muy Pequeños (hasta 575px) */
@@ -699,5 +728,11 @@ div#animationdivIcon {
 
     .text-width {
         width: 100% !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .video-container {
+        width: 100%;
     }
 }
