@@ -1,11 +1,11 @@
 @include('layouts.header')
 <div class="background-container">
     <div class="background-item d-flex flex-column align-items-center">
-        <div class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
+        <div
+            class="w-100 d-flex justify-content-center align-items-center {{ $data['tipo_dispositivo'] != 'mobile' ? 'position-fixed background-banner' : 'background-banner-mobile' }}">
             @if ($data['tipo_dispositivo'] == 'mobile')
                 <div class="banner-logo-mobile d-flex justify-content-center align-items-center">
-                    <img class="logo p-2"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo.png') }}">
+                    <img class="logo p-2" src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo.png') }}">
                 </div>
             @else
                 <div class="banner-logo w-100 d-flex justify-content-between align-items-center btn-wrapper-fixed">
@@ -15,7 +15,8 @@
                             alt="Logo">
                     </div>
                     <div class="btn-position me-5">
-                        <button id="btn-flotante" class="btn btn-color-cita" style="white-space: nowrap; padding: 10px;">
+                        <button id="btn-flotante" class="btn btn-color-cita"
+                            style="white-space: nowrap; padding: 10px;">
                             {{ __('form_translation.Pedir_cita') }}
                         </button>
                     </div>
@@ -27,9 +28,21 @@
             <img class="w-100"
                 src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/banner.png') }}">
         </div>
-        <div class="w-100">
-            <img class="w-100"
-                src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img2.png') }}">
+        <div class="w-100" style="background-color: #f7f4f2;">
+            <div class="row w-100">
+                <div class="col-12 col-md-8">
+                    <img class="w-100"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/' . $data['tipo_dispositivo'] . '/img2.png') }}">
+                </div>
+
+                <div class="col-12 col-md-4 d-flex justify-content-start align-items-center">
+                    <video autoplay muted playsinline loop id="video2">
+                        <source src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/video.mp4') }}"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
         </div>
         <div class="w-100 d-none d-lg-flex">
             <img class="w-100"
@@ -46,7 +59,8 @@
                     <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
                         class="p-privacity col-4 fw-bold">{{ __('actualiza.Politicas-privacidad') }}</a>
                     <img class="d-block mx-auto logo-N col-4"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}" alt="Logo footer">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}"
+                        alt="Logo footer">
                     <a href="{{ route('politicas.cookies', app()->getLocale()) }}"
                         class="p-cookies col-4 fw-bold">{{ __('actualiza.Politicas-cookies') }}</a>
                 </div>
@@ -59,7 +73,8 @@
                         {{ __('actualiza.Politicas-cookies') }}
                     </a>
                     <img class="d-block mx-auto logo-N"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}" alt="Logo footer">
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}"
+                        alt="Logo footer">
                 </div>
             @endif
         </footer>
@@ -111,6 +126,15 @@
             behavior: 'smooth',
             block: 'start'
         });
+    });
+
+    document.getElementById('video2').addEventListener('touchmove', function(e) {
+        // Permite el gesto de scroll peroprevent zoom
+        if (e.touches.length > 1) {
+            e.preventDefault();
+        }
+    }, {
+        passive: false
     });
 
     updateSlides();
