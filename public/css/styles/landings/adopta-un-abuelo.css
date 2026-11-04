@@ -91,9 +91,16 @@
     z-index: 2;
 }
 
+.video-container.playing .video-play-button {
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    transition: all 0.3s ease;
+}
 
-
-
+.video-play-button {
+    transition: all 0.3s ease;
+}
 
 body {
     height: 104% !important;

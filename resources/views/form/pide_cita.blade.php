@@ -14,7 +14,7 @@
         <input type="hidden" id="landing" name="landing" value="{{ $data['landing'] }}">
         
 
-        @if (isset($data['customText']) && $data['customText'] === 'true')
+        @if (isset($data['customText']) && $data['customText'] === 'true' || $data['landing'] === 'adopta-un-abuelo')
             <div class="d-flex justify-content-center align-items-start mb-5 text-center">
                 <p class="text-top-form">{{ __('form_translation.' . $data['landing'] . '_' . $data['weblogin']) }}</p>
             </div>

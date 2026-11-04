@@ -30,5 +30,6 @@ return [
     'kit' => 'Kit de implantación',
     'Pedir_kit' => "PEDIR KIT DE IMPLEMENTACIÓN",
     'contacto' => "Persona de contacto",
+    'adopta-un-abuelo_' => "Visita tu centro Natural Audio más cercano rellenando el formulario a continuación. Nos pondremos en contacto contigo para concertar día.",
 
 ];
