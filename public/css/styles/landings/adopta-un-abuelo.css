@@ -80,9 +80,9 @@
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    border: 2px solid white;
-    background: rgba(255, 255, 255, 0.85);
-    color: #555;
+    border: 2px solid #ffffff00;
+    background: rgba(255 255 255 / 38%);
+    color: #555555bf;
     font-size: 28px;
     display: flex;
     justify-content: center;
@@ -91,13 +91,9 @@
     z-index: 2;
 }
 
-.video-play-button i {
-    margin-left: 5px;
-}
 
-.video-container.playing .video-play-button {
-    display: none;
-}
+
+
 
 body {
     height: 104% !important;
@@ -345,7 +341,7 @@ a:hover {
 
 input {
     margin-top: 3% !important;
-    font-size: 19px !important;
+    font-size: 16px !important;
     border-color: #0f506d !important;
     background-color: #f7f4f2 !important;
     color: #0f506d !important;
@@ -358,7 +354,7 @@ input {
 
 select {
     margin-top: 3% !important;
-    font-size: 19px !important;
+    font-size: 16px !important;
     border-color: #0f506d !important;
     background-color: #f7f4f2 !important;
     color: #0f506d !important;
@@ -549,7 +545,7 @@ div#animationdivIcon {
     }
 
     p.text-top-form {
-        font-size: 22px !important;
+        font-size: 25px !important;
         margin-top: 8%;
     }
 
@@ -686,7 +682,7 @@ div#animationdivIcon {
     }
 
     p.text-top-form {
-        font-size: 16px !important;
+        font-size: 20px !important;
         margin-top: 8%;
     }
 

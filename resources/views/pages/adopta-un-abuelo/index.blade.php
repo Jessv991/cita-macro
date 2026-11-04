@@ -140,19 +140,26 @@
     const container = document.querySelector('.video-container');
 
     playButton.addEventListener('click', function() {
-        video.play();
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
     });
 
     video.addEventListener('play', function() {
         container.classList.add('playing');
-    });
-
-    video.addEventListener('ended', function() {
-        container.classList.remove('playing');
+        playButton.innerHTML = '<i class="fas fa-pause"></i>';
     });
 
     video.addEventListener('pause', function() {
         container.classList.remove('playing');
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
+    });
+
+    video.addEventListener('ended', function() {
+        container.classList.remove('playing');
+        playButton.innerHTML = '<i class="fas fa-play"></i>';
     });
 
     updateSlides();
