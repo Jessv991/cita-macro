@@ -162,10 +162,6 @@ body::-webkit-scrollbar-track {
     background-color: #0f506d;
 }
 
-.m-bottom {
-    margin-bottom: 70px;
-}
-
 .p-privacity:hover {
     color: #909dca;
 }

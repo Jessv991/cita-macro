@@ -60,7 +60,7 @@
             @include('form.pide_cita')
         </div>
 
-        <footer class="row w-100 p-0">
+        <footer id="footerView" class="row w-100 p-0">
             @if ($data['tipo_dispositivo'] != 'mobile')
                 <div class="d-flex footer-contact text-center col-12">
                     <a href="{{ route('politicas.privacidad', app()->getLocale()) }}"
@@ -72,16 +72,16 @@
                         class="p-cookies col-4 fw-bold">{{ __('actualiza.Politicas-cookies') }}</a>
                 </div>
             @else
-                <div class="d-flex flex-column align-items-center footer-contact text-center m-bottom">
+                <div class="d-flex flex-column align-items-center footer-contact text-center">
+                    <img class="d-block mx-auto logo-N"
+                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}"
+                        alt="Logo footer">
                     <a href="{{ route('politicas.privacidad', app()->getLocale()) }}" class="p-privacity mt-2 fw-bold">
                         {{ __('actualiza.Politicas-privacidad') }}
                     </a>
                     <a href="{{ route('politicas.cookies', app()->getLocale()) }}" class="p-cookies mt-1 fw-bold">
                         {{ __('actualiza.Politicas-cookies') }}
                     </a>
-                    <img class="d-block mx-auto logo-N"
-                        src="{{ asset($data['rutaAsset'] . 'assets/img/adopta-un-abuelo/logo_colaborativo.png') }}"
-                        alt="Logo footer">
                 </div>
             @endif
         </footer>
@@ -160,6 +160,27 @@
     video.addEventListener('ended', function() {
         container.classList.remove('playing');
         playButton.innerHTML = '<i class="fas fa-play"></i>';
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const floatingButton = document.querySelector('.fixed-bottom-container');
+        const footerView = document.getElementById('footerView');
+
+        if (!floatingButton || !footerView) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    floatingButton.style.display = 'none';
+                } else {
+                    floatingButton.style.display = 'flex';
+                }
+            });
+        }, {
+            threshold: 0
+        });
+
+        observer.observe(footerView);
     });
 
     updateSlides();
