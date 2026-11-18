@@ -210,6 +210,12 @@ function getOpticaSelectCity() {
 
     $('#ciudad').on('change', function () {
         var ciudadId = $(this).val();
+
+        // Restablecer el select para que vuelva a ser manipulable
+        $('#optica').prop('disabled', false);
+        $('#optica').removeClass('readonly-select');
+        $('#animationdivIcon').addClass('d-none');
+        
         if (ciudadId) {
             $.ajax({
                 url: getOpticasByProvinciaRoute, // Ruta definida en el archivo Blade
