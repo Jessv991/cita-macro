@@ -8,7 +8,7 @@
                                                                                        
 */
 body {
-    font-family: var(--bs-font-sans-serif) !important;
+    font-family: 'Nunito', sans-serif !important;
     height: 104% !important;
     overflow-y: auto;
     overflow-x: hidden;
